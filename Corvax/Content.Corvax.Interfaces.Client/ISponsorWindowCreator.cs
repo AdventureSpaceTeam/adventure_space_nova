@@ -1,4 +1,4 @@
-﻿namespace Content.Corvax.Interfaces.Client;
+namespace Content.Corvax.Interfaces.Client;
 
 public interface ISponsorWindowCreator
 {
