@@ -6,6 +6,7 @@ using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Database;
+using Content.Server.Discord; // Adventure
 using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.GhostKick;
@@ -105,6 +106,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<ContentNetworkResourceManager>().Initialize();
                 IoCManager.Resolve<GhostKickManager>().Initialize();
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
+                IoCManager.Resolve<DiscordLink>().Initialize(); // Adventure
                 IoCManager.Resolve<ServerApi>().Initialize();
 
                 _voteManager.Initialize();
@@ -174,6 +176,7 @@ namespace Content.Server.Entry
         {
             _playTimeTracking?.Shutdown();
             _dbManager?.Shutdown();
+            IoCManager.Resolve<DiscordLink>().Shutdown(); // Adventure
             IoCManager.Resolve<ServerApi>().Shutdown();
         }
 
