@@ -14,6 +14,7 @@ public sealed partial class GhostGui : UIWidget
     public event Action? RequestWarpsPressed;
     public event Action? ReturnToBodyPressed;
     public event Action? GhostRolesPressed;
+    public event Action? RespawnPressed; // Alteros-Sponsors
 
     public GhostGui()
     {
@@ -26,6 +27,7 @@ public sealed partial class GhostGui : UIWidget
         GhostWarpButton.OnPressed += _ => RequestWarpsPressed?.Invoke();
         ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
         GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
+        RespawnButton.OnPressed += _ => RespawnPressed?.Invoke(); // Alteros-Sponsors
     }
 
     public void Hide()
@@ -34,7 +36,7 @@ public sealed partial class GhostGui : UIWidget
         Visible = false;
     }
 
-    public void Update(int? roles, bool? canReturnToBody)
+    public void Update(int? roles, bool? canReturnToBody, bool canRespawn) // Alteros-Sponsors
     {
         ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
 
@@ -50,6 +52,19 @@ public sealed partial class GhostGui : UIWidget
                 GhostRolesButton.StyleClasses.Remove(StyleBase.ButtonCaution);
             }
         }
+
+        // Alteros-Start
+        if (canRespawn)
+        {
+            RespawnButton.Disabled = false;
+            RespawnButton.Text = Loc.GetString("new-life-gui-button");
+        }
+        else
+        {
+            RespawnButton.Disabled = true;
+            RespawnButton.Text = Loc.GetString("new-life-gui-button-disable");
+        }
+        // Alteros-End
 
         TargetWindow.Populate();
     }

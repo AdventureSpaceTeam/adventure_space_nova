@@ -36,6 +36,10 @@ public static class ServerPackaging
 
     private static readonly List<string> ServerContentAssemblies = new()
     {
+        // Corvax-Secrets-Start
+        "Content.Alteros.Interfaces.Shared",
+        "Content.Alteros.Interfaces.Server",
+        // Corvax-Secrets-End
         "Content.Server.Database",
         "Content.Server",
         "Content.Shared",

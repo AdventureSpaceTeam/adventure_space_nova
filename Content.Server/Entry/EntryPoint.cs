@@ -33,6 +33,9 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Server.Adventure.Config;
+using Content.Alteros.Interfaces.Server;
+using Content.Alteros.Interfaces.Shared; // c4llv07e adventure config
 
 namespace Content.Server.Entry
 {
@@ -107,6 +110,14 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
                 IoCManager.Resolve<ServerApi>().Initialize();
 
+                // Alteros-Sponsors-Start: IoC
+                IoCManager.Resolve<ISharedSponsorsManager>().Initialize();
+                IoCManager.Resolve<IServerDiscordAuthManager>().Initialize();
+                IoCManager.Resolve<IServerJoinQueueManager>().Initialize();
+                // Alteros-Sponsors-End: IoC
+
+                IoCManager.Resolve<AdventureConfigManager>().Initialize(); // c4llv07e config manager
+
                 _voteManager.Initialize();
                 _updateManager.Initialize();
                 _playTimeTracking.Initialize();
@@ -147,6 +158,9 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<GameTicker>().PostInitialize();
                 IoCManager.Resolve<IBanManager>().Initialize();
                 IoCManager.Resolve<IConnectionManager>().PostInit();
+                // Alteros-Sponsors-Start: IoC
+                IoCManager.Resolve<IServerJoinQueueManager>().PostInitialize();
+                // Alteros-Sponsors-End: IoC
             }
         }
 

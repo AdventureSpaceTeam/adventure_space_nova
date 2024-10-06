@@ -1,15 +1,16 @@
 using System.Linq;
 using Content.Server.Database;
+using Content.Server.AdventurePrivate._Alteros.Greetings;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
+using Content.Alteros.Interfaces.Server;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -62,11 +63,22 @@ namespace Content.Server.GameTicking
 
                     // Make the player actually join the game.
                     // timer time must be > tick length
-                    Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Alteros-Queue-Start
+                    if (!IoCManager.Instance!.TryResolveType<IServerJoinQueueManager>(out _))
+                        Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Alteros-Queue-End
 
-                    var record = await _dbManager.GetPlayerRecordByUserId(args.Session.UserId);
+                    var record = await _db.GetPlayerRecordByUserId(args.Session.UserId);
                     var firstConnection = record != null &&
                                           Math.Abs((record.FirstSeenTime - record.LastSeenTime).TotalMinutes) < 1;
+
+                    // Alteros-Start
+                    if (firstConnection)
+                    {
+                        var ev = new GreetingsSystem.PlayerFirstConnectionEvent(args.Session);
+                        RaiseLocalEvent(ev);
+                    }
+                    // Alteros-End
 
                     _chatManager.SendAdminAnnouncement(firstConnection
                         ? Loc.GetString("player-first-join-message", ("name", args.Session.Name))
@@ -74,8 +86,8 @@ namespace Content.Server.GameTicking
 
                     RaiseNetworkEvent(GetConnectionStatusMsg(), session.Channel);
 
-                    if (firstConnection && _configurationManager.GetCVar(CCVars.AdminNewPlayerJoinSound))
-                        _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/newplayerping.ogg"),
+                    if (firstConnection && _cfg.GetCVar(CCVars.AdminNewPlayerJoinSound))
+                        _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/newplayerping.ogg"),
                             Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
                             audioParams: new AudioParams { Volume = -5f });
 
@@ -137,7 +149,8 @@ namespace Content.Server.GameTicking
                         mind.Session = null;
                     }
 
-                    _userDb.ClientDisconnected(session);
+                    if (_playerGameStatuses.ContainsKey(args.Session.UserId)) // Alteros-Queue: Delete data only if player was in game
+                        _userDb.ClientDisconnected(session);
                     break;
                 }
             }

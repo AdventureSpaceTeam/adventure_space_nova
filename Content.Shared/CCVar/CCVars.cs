@@ -2212,6 +2212,107 @@ namespace Content.Shared.CCVar
             CVarDef.Create("pointing.cooldown_seconds", 0.5f, CVar.SERVERONLY);
 
         /*
+         * News
+         */
+
+        /// <summary>
+        /// Maximum number of characters that can be specified in the news name
+        /// </summary>
+        public static readonly CVarDef<int> NewsNameLimit =
+            CVarDef.Create("news.name_limit", 25, CVar.SERVER | CVar.REPLICATED);
+
+        /// <summary>
+        /// Maximum number of characters that can be specified in the news content
+        /// </summary>
+        public static readonly CVarDef<int> NewsContentLimit =
+            CVarDef.Create("news.content_limit", 2048, CVar.SERVER | CVar.REPLICATED);
+
+        /*
+         * New Life
+         */
+
+        public static readonly CVarDef<bool> NewLifeEnable =
+            CVarDef.Create("newlife.enable", true, CVar.SERVER | CVar.REPLICATED);
+
+        public static readonly CVarDef<bool> NewLifeSponsorOnly =
+            CVarDef.Create("newlife.sponsor_only", false, CVar.SERVER | CVar.REPLICATED);
+
+        public static readonly CVarDef<int> NewLifeTimeout =
+            CVarDef.Create("newlife.timeout", 30, CVar.SERVERONLY);
+
+        /*
+         * Discord Auth
+         */
+
+        public static readonly CVarDef<bool> DiscordAuthEnabled =
+            CVarDef.Create("discord_auth.enabled", false, CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> DiscordAuthApiUrl =
+            CVarDef.Create("discord_auth.api_url", "", CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool> DiscordAuthCheckMember =
+            CVarDef.Create("discord_auth.check_member", false, CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> DiscordAuthApiToken =
+            CVarDef.Create("discord_auth.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+        /*
+         * Queue
+         */
+
+        public static readonly CVarDef<bool>
+            QueueEnabled = CVarDef.Create("queue.enabled", false, CVar.SERVERONLY);
+
+        /*
+         * Sponsor API
+         */
+
+        public static readonly CVarDef<string> SponsorApiUrl =
+            CVarDef.Create("sponsor.api_url", "", CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> SponsorApiToken =
+            CVarDef.Create("sponsor.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+        /*
+         *  Greetings
+         */
+
+        public static readonly CVarDef<bool> GreetingsEnable =
+            CVarDef.Create("greetings.enable", false);
+
+        public static readonly CVarDef<string> GreetingsMessage =
+            CVarDef.Create("greetings.message", "Привет");
+
+        public static readonly CVarDef<string> GreetingsAuthor =
+            CVarDef.Create("greetings.author", "Сервер");
+
+        /*
+         * c4llv07e
+         */
+
+        public static readonly CVarDef<string> VpnGuardApiUrl =
+            CVarDef.Create("vpnguard.api_url", "", CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> VpnGuardApiUserId =
+            CVarDef.Create("vpnguard.api_userid", "", CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> VpnGuardApiKey =
+            CVarDef.Create("vpnguard.api_key", "", CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> VpnGuardFilePath =
+            CVarDef.Create("vpnguard.file_path", "", CVar.SERVERONLY);
+
+        /*
+         * Adventure Space WL
+         */
+
+        public static readonly CVarDef<float> RnDPointsModifier =
+            CVarDef.Create("game.research_modifier", 1.0f, CVar.SERVER | CVar.REPLICATED);
+
+        public static readonly CVarDef<float> RnDTickSizeModifier =
+            CVarDef.Create("game.research_tick_size_modifier", 1.0f, CVar.SERVER | CVar.REPLICATED);
+
+        /*
          * DEBUG
          */
 

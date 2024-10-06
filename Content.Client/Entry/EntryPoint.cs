@@ -23,6 +23,8 @@ using Content.Client.Voting;
 using Content.Shared.Ame.Components;
 using Content.Shared.Gravity;
 using Content.Shared.Localizations;
+using Content.Alteros.Interfaces.Client;
+using Content.Alteros.Interfaces.Shared;
 using Robust.Client;
 using Robust.Client.Graphics;
 using Robust.Client.Input;
@@ -120,6 +122,8 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("alertLevels");
             _prototypeManager.RegisterIgnore("nukeopsRole");
             _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
+            _prototypeManager.RegisterIgnore("ertGroups"); // Alteros-ERTCALL
+            _prototypeManager.RegisterIgnore("sponsorLoadout"); // Alteros-Sponsors
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();
@@ -160,6 +164,12 @@ namespace Content.Client.Entry
             _userInterfaceManager.SetDefaultTheme("SS14DefaultTheme");
             _userInterfaceManager.SetActiveTheme(_configManager.GetCVar(CVars.InterfaceTheme));
             _documentParsingManager.Initialize();
+
+            // Alteros-Sponsors-Start: IoC
+            IoCManager.Resolve<ISharedSponsorsManager>().Initialize();
+            IoCManager.Resolve<IClientJoinQueueManager>().Initialize();
+            IoCManager.Resolve<IClientDiscordAuthManager>().Initialize();
+            // Alteros-Sponsors-Start: IoC
 
             _baseClient.RunLevelChanged += (_, args) =>
             {

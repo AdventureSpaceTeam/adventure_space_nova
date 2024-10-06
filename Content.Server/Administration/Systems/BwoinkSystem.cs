@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -24,6 +24,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Alteros.Interfaces.Shared; // Alteros-Sponsors
 
 namespace Content.Server.Administration.Systems
 {
@@ -42,6 +43,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly IAfkManager _afkManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly PlayerRateLimitManager _rateLimit = default!;
+        private ISharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
 
         [GeneratedRegex(@"^https://discord\.com/api/webhooks/(\d+)/((?!.*/).*)$")]
         private static partial Regex DiscordRegex();
@@ -564,6 +566,7 @@ namespace Content.Server.Administration.Systems
 
             var escapedText = FormattedMessage.EscapeText(message.Text);
 
+            // Alteros-Sponsors-Start
             string bwoinkText;
             string adminPrefix = "";
 
@@ -583,6 +586,20 @@ namespace Content.Server.Administration.Systems
             {
                 bwoinkText = $"[color=red]{adminPrefix}{senderSession.Name}[/color]";
             }
+            else if (_sponsorsManager != null)
+            {
+                _sponsorsManager.TryGetOocColor(message.UserId, out var oocColor);
+                _sponsorsManager.TryGetOocTitle(message.UserId, out var oocTitle);
+                var sponsorTitle = oocTitle is null ? "" : $"\\[{oocTitle}\\]";
+                if (oocColor != null)
+                {
+                    bwoinkText = $"[color={oocColor.Value.ToHex()}]{sponsorTitle} {senderSession.Name}[/color]";
+                }
+                else
+                {
+                    bwoinkText = $"{sponsorTitle} {senderSession.Name}";
+                }
+            }
             else
             {
                 bwoinkText = $"{senderSession.Name}";
@@ -590,9 +607,12 @@ namespace Content.Server.Administration.Systems
 
             bwoinkText = $"{(message.PlaySound ? "" : "(S) ")}{bwoinkText}: {escapedText}";
 
+            bwoinkText = $"{(message.PlaySound ? "" : "(S) ")}{bwoinkText}: {escapedText}";
+
             // If it's not an admin / admin chooses to keep the sound then play it.
             var playSound = !senderAHelpAdmin || message.PlaySound;
             var msg = new BwoinkTextMessage(message.UserId, senderSession.UserId, bwoinkText, playSound: playSound);
+            // Alteros-Sponsors-End
 
             LogBwoink(msg);
 

@@ -1,4 +1,6 @@
 using Content.Client.Administration.Managers;
+using Content.Client.AdventurePrivate._Alteros.DiscordAuth;
+using Content.Client.AdventurePrivate._Alteros.JoinQueue;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
 using Content.Client.Clickable;
@@ -20,6 +22,9 @@ using Content.Shared.Administration.Logs;
 using Content.Client.Lobby;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Players.PlayTimeTracking;
+using Content.Alteros.Interfaces.Client;
+using Content.Alteros.Interfaces.Shared;
+using Content.Client.AdventurePrivate._Alteros.Sponsors;
 
 namespace Content.Client.IoC
 {
@@ -51,6 +56,12 @@ namespace Content.Client.IoC
             collection.Register<ISharedPlaytimeManager, JobRequirementsManager>();
             collection.Register<MappingManager>();
             collection.Register<DebugMonitorManager>();
+
+            // Alteros-Sponsors-Start
+            collection.Register<ISharedSponsorsManager, ClientSponsorsManager>();
+            collection.Register<IClientJoinQueueManager, JoinQueueManager>();
+            collection.Register<IClientDiscordAuthManager, DiscordAuthManager>();
+            // Alteros-Sponsors-End
         }
     }
 }

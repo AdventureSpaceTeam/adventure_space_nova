@@ -14,7 +14,8 @@ public static class JobRequirements
         [NotNullWhen(false)] out FormattedMessage? reason,
         IEntityManager entManager,
         IPrototypeManager protoManager,
-        HumanoidCharacterProfile? profile)
+        HumanoidCharacterProfile? profile,
+        string[] sponsorPrototypes) // Alteros-Sponsors
     {
         var sys = entManager.System<SharedRoleSystem>();
         var requirements = sys.GetJobRequirement(job);
@@ -24,7 +25,7 @@ public static class JobRequirements
 
         foreach (var requirement in requirements)
         {
-            if (!requirement.Check(entManager, protoManager, profile, playTimes, out reason))
+            if (!requirement.Check(entManager, protoManager, profile, playTimes, job.ID, sponsorPrototypes, out reason)) // Alteros-Sponsors
                 return false;
         }
 
@@ -47,5 +48,7 @@ public abstract partial class JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
+        string? protoId, // Alteros-Sponsors
+        string[] sponsorPrototypes, // Alteros-Sponsors
         [NotNullWhen(false)] out FormattedMessage? reason);
 }

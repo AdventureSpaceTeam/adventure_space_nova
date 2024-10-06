@@ -2,6 +2,7 @@ using System.IO;
 using System.Linq;
 using Content.Shared.CCVar;
 using Content.Shared.Decals;
+using Content.Alteros.Interfaces.Shared;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -75,7 +76,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         var profile = export.Profile;
         var collection = IoCManager.Instance;
-        profile.EnsureValid(session, collection!);
+        var sponsorPrototypes = _sponsors?.GetClientPrototypes().ToArray() ?? []; // Alteros-Sponsors
+        profile.EnsureValid(session, collection!, sponsorPrototypes);
         return profile;
     }
 

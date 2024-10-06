@@ -14,20 +14,25 @@ using Content.Server.Mapping;
 using Content.Server.Maps;
 using Content.Server.MoMMI;
 using Content.Server.NodeContainer.NodeGroups;
-using Content.Server.Objectives;
-using Content.Server.Players;
 using Content.Server.Players.JobWhitelist;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;
 using Content.Server.ServerInfo;
 using Content.Server.ServerUpdates;
+using Content.Server.Corvax.TTS;
 using Content.Server.Voting.Managers;
 using Content.Server.Worldgen.Tools;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
+using Content.Server.Adventure.Config;
+using Content.Server.AdventurePrivate._Alteros.DiscordAuth;
+using Content.Server.AdventurePrivate._Alteros.JoinQueue;
+using Content.Server.AdventurePrivate._Alteros.Sponsors;
+using Content.Alteros.Interfaces.Server;
+using Content.Alteros.Interfaces.Shared; // c4llv07e adventure config
 
 namespace Content.Server.IoC
 {
@@ -69,6 +74,14 @@ namespace Content.Server.IoC
             IoCManager.Register<JobWhitelistManager>();
             IoCManager.Register<PlayerRateLimitManager>();
             IoCManager.Register<MappingManager>();
+
+            // Alteros-Sponsors-Start
+            IoCManager.Register<ISharedSponsorsManager, ServerSponsorsManager>();
+            IoCManager.Register<IServerDiscordAuthManager, DiscordAuthManager>();
+            IoCManager.Register<IServerJoinQueueManager, JoinQueueManager>();
+            // Alteros-Sponsors-End
+
+            IoCManager.Register<AdventureConfigManager>(); // c4llv07e config manager
         }
     }
 }

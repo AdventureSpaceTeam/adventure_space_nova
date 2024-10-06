@@ -33,6 +33,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
+using Content.Alteros.Interfaces.Shared; // Alteros-Sponsors
 
 namespace Content.Client.Lobby.UI
 {
@@ -103,6 +104,8 @@ namespace Content.Client.Lobby.UI
 
         private ISawmill _sawmill;
 
+        private ISharedSponsorsManager? _sponsorsMgr;  // Alteros-Sponsors
+
         public HumanoidProfileEditor(
             IClientPreferencesManager preferencesManager,
             IConfigurationManager configurationManager,
@@ -116,6 +119,7 @@ namespace Content.Client.Lobby.UI
             MarkingManager markings)
         {
             RobustXamlLoader.Load(this);
+            IoCManager.Instance!.TryResolveType(out _sponsorsMgr);  // Alteros-Sponsors
             _sawmill = logManager.GetSawmill("profile.editor");
             _cfgManager = configurationManager;
             _entManager = entManager;
@@ -209,6 +213,18 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Gender
+
+            // Alteros-TTS-Start
+            #region Voice
+
+            if (configurationManager.GetCVar(CCCVars.TTSEnabled))
+            {
+                TTSContainer.Visible = true;
+                InitializeVoice();
+            }
+
+            #endregion
+            // Alteros-TTS-End
 
             RefreshSpecies();
 
@@ -606,6 +622,17 @@ namespace Content.Client.Lobby.UI
                 {
                     SpeciesButton.SelectId(i);
                 }
+
+                // Alteros-Sponsors-Start
+                if (_sponsorsMgr is null)
+                    continue;
+                if (_species[i].SponsorOnly && _sponsorsMgr != null &&
+                    !_sponsorsMgr.GetClientPrototypes().Contains(_species[i].ID))
+                {
+                    SpeciesButton.SetItemDisabled(SpeciesButton.GetIdx(i), true);
+                    SpeciesButton.SetItemText(SpeciesButton.GetIdx(i), Loc.GetString("sponsor-marking", ("name", name))); // Alteros-edit
+                }
+                // Alteros-Sponsors-End
             }
 
             // If our species isn't available then reset it to default.
@@ -645,11 +672,11 @@ namespace Content.Client.Lobby.UI
 
                 var title = Loc.GetString(antag.Name);
                 var description = Loc.GetString(antag.Objective);
-                selector.Setup(items, title, 250, description, guides: antag.Guides);
+                selector.Setup(items, title, 300, description, guides: antag.Guides); // Alteros-edit
                 selector.Select(Profile?.AntagPreferences.Contains(antag.ID) == true ? 0 : 1);
 
                 var requirements = _entManager.System<SharedRoleSystem>().GetAntagRequirement(antag);
-                if (!_requirements.CheckRoleRequirements(requirements, (HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter, out var reason))
+                if (!_requirements.CheckRoleRequirements(requirements, antag.ID, (HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter, out var reason)) // Alteros-Sponsors
                 {
                     selector.LockRequirements(reason);
                     Profile = Profile?.WithAntagPreference(antag.ID, false);
@@ -827,6 +854,10 @@ namespace Content.Client.Lobby.UI
                 departments.Add(department);
             }
 
+            // Alteros-Start
+            var sponsorPrototypes = _sponsorsMgr?.GetClientPrototypes().ToArray() ?? [];
+            // Alteros-End
+
             departments.Sort(DepartmentUIComparer.Instance);
 
             var items = new[]
@@ -977,7 +1008,7 @@ namespace Content.Client.Lobby.UI
                             if (loadout == null)
                             {
                                 loadout = new RoleLoadout(roleLoadoutProto.ID);
-                                loadout.SetDefault(Profile, _playerManager.LocalSession, _prototypeManager);
+                                loadout.SetDefault(Profile, _playerManager.LocalSession, _prototypeManager, sponsorPrototypes);
                             }
 
                             OpenLoadout(job, loadout, roleLoadoutProto);
@@ -1006,9 +1037,9 @@ namespace Content.Client.Lobby.UI
             JobOverride = jobProto;
             var session = _playerManager.LocalSession;
 
-            _loadoutWindow = new LoadoutWindow(Profile, roleLoadout, roleLoadoutProto, _playerManager.LocalSession, collection)
+            _loadoutWindow = new LoadoutWindow(Profile, roleLoadout, roleLoadoutProto, _playerManager.LocalSession, collection, _sponsorsMgr)
             {
-                Title = jobProto?.ID + "-loadout",
+                Title = Loc.GetString($"{jobProto?.ID}-loadout"),
             };
 
             // Refresh the buttons etc.
@@ -1178,6 +1209,10 @@ namespace Content.Client.Lobby.UI
             }
 
             UpdateGenderControls();
+<<<<<<< HEAD
+=======
+            UpdateTTSVoicesControls(); // Alteros-TTS
+>>>>>>> 71d4ce8cd6 (Обновление моего дерьма)
             Markings.SetSex(newSex);
             ReloadPreview();
         }
@@ -1188,6 +1223,17 @@ namespace Content.Client.Lobby.UI
             ReloadPreview();
         }
 
+<<<<<<< HEAD
+=======
+        // Alteros-TTS-Start
+        private void SetVoice(string newVoice)
+        {
+            Profile = Profile?.WithVoice(newVoice);
+            IsDirty = true;
+        }
+        // Alteros-TTS-End
+
+>>>>>>> 71d4ce8cd6 (Обновление моего дерьма)
         private void SetSpecies(string newSpecies)
         {
             Profile = Profile?.WithSpecies(newSpecies);
@@ -1529,7 +1575,17 @@ namespace Content.Client.Lobby.UI
 
         private void RandomizeEverything()
         {
-            Profile = HumanoidCharacterProfile.Random();
+            // Alteros-Sponsors-Start
+            var ignoredSpecies = new HashSet<string>();
+            foreach (var speciesPrototype in _prototypeManager.EnumeratePrototypes<SpeciesPrototype>())
+            {
+                if (speciesPrototype.SponsorOnly &&
+                    _sponsorsMgr != null &&
+                    !_sponsorsMgr.GetClientPrototypes().Contains(speciesPrototype.ID))
+                    ignoredSpecies.Add(speciesPrototype.ID);
+            }
+            Profile = HumanoidCharacterProfile.Random(ignoredSpecies);
+            // Alteros-Sponsors-End
             SetProfile(Profile, CharacterSlot);
             SetDirty();
         }

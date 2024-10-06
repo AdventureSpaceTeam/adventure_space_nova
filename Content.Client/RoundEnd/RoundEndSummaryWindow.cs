@@ -1,6 +1,8 @@
 using System.Linq;
 using System.Numerics;
+using Content.Client._Alteros.StatsBoard;
 using Content.Client.Message;
+using Content.Shared.StatsBoard;
 using Content.Shared.GameTicking;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;

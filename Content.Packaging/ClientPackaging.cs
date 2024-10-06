@@ -65,11 +65,15 @@ public static class ClientPackaging
 
         var inputPass = graph.Input;
 
+        // Alteros-Sponsors-Start
+        var assemblies = new List<string> { "Content.Client", "Content.Shared", "Content.Shared.Database", "Content.Alteros.Interfaces.Client", "Content.Alteros.Interfaces.Shared" };
+        // Alteros-Sponsors-End
+
         await RobustSharedPackaging.WriteContentAssemblies(
             inputPass,
             contentDir,
             "Content.Client",
-            new[] { "Content.Client", "Content.Shared", "Content.Shared.Database" },
+            assemblies, // Alteros-Sponsors
             cancel: cancel);
 
         await RobustClientPackaging.WriteClientResources(contentDir, pass, cancel);

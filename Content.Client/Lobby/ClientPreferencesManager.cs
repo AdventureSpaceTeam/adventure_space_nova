@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Shared.Preferences;
+using Content.Alteros.Interfaces.Shared;
 using Robust.Client;
 using Robust.Client.Player;
 using Robust.Shared.Network;

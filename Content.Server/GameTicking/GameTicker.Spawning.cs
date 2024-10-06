@@ -2,9 +2,11 @@ using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration.Managers;
+using Content.Server.AdventurePrivate._Alteros.NewLife;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Shuttles.Components;
+using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Spawners.Components;
 using Content.Server.Speech.Components;
 using Content.Server.Station.Components;
@@ -29,6 +31,8 @@ namespace Content.Server.GameTicking
     {
         [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly SharedJobSystem _jobs = default!;
+        [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
+        [Dependency] private readonly NewLifeSystem _newLifeSystem = default!; // Alteros-Sponsors
 
         [ValidatePrototypeId<EntityPrototype>]
         public const string ObserverPrototypeName = "MobObserver";
@@ -130,7 +134,8 @@ namespace Content.Server.GameTicking
             EntityUid station,
             string? jobId = null,
             bool lateJoin = true,
-            bool silent = false)
+            bool silent = false,
+            bool canBeAntag = true) // Alteros-Sponsors
         {
             var character = GetPlayerProfile(player);
 
@@ -146,7 +151,7 @@ namespace Content.Server.GameTicking
                     return;
             }
 
-            SpawnPlayer(player, character, station, jobId, lateJoin, silent);
+            SpawnPlayer(player, character, station, jobId, lateJoin, silent, canBeAntag); // Alteros-Sponsors
         }
 
         private void SpawnPlayer(ICommonSession player,
@@ -154,7 +159,8 @@ namespace Content.Server.GameTicking
             EntityUid station,
             string? jobId = null,
             bool lateJoin = true,
-            bool silent = false)
+            bool silent = false,
+            bool canBeAntag = true) // Alteros-Sponsors
         {
             // Can't spawn players with a dummy ticker!
             if (DummyTicker)
@@ -175,6 +181,11 @@ namespace Content.Server.GameTicking
                 JoinAsObserver(player);
                 return;
             }
+
+            // Alteros-Start
+            _newLifeSystem.AddUsedCharactersForRespawn(player.UserId, _prefsManager.GetPreferences(player.UserId).SelectedCharacterIndex);
+            _newLifeSystem.SetNextAllowRespawn(player.UserId, _gameTiming.CurTime + TimeSpan.FromMinutes(_newLifeSystem.NewLifeTimeout));
+            // Alteros-End
 
             // We raise this event to allow other systems to handle spawning this player themselves. (e.g. late-join wizard, etc)
             var bev = new PlayerBeforeSpawnEvent(player, character, jobId, lateJoin, station);
@@ -299,7 +310,8 @@ namespace Content.Server.GameTicking
                 silent,
                 PlayersJoinedRoundNormally,
                 station,
-                character);
+                character,
+                canBeAntag); // Alteros-Sponsors
             RaiseLocalEvent(mob, aev, true);
         }
 
@@ -321,7 +333,7 @@ namespace Content.Server.GameTicking
         /// <param name="station">The station they're spawning on</param>
         /// <param name="jobId">An optional job for them to spawn as</param>
         /// <param name="silent">Whether or not the player should be greeted upon joining</param>
-        public void MakeJoinGame(ICommonSession player, EntityUid station, string? jobId = null, bool silent = false)
+        public void MakeJoinGame(ICommonSession player, EntityUid station, string? jobId = null, bool silent = false, bool canBeAntag = true) // Alteros-Sponsors
         {
             if (!_playerGameStatuses.ContainsKey(player.UserId))
                 return;
@@ -329,7 +341,7 @@ namespace Content.Server.GameTicking
             if (!_userDb.IsLoadComplete(player))
                 return;
 
-            SpawnPlayer(player, station, jobId, silent: silent);
+            SpawnPlayer(player, station, jobId, silent: silent, canBeAntag: canBeAntag); // Alteros-Sponsors
         }
 
         /// <summary>
@@ -498,6 +510,7 @@ namespace Content.Server.GameTicking
         public bool Silent { get; }
         public EntityUid Station { get; }
         public HumanoidCharacterProfile Profile { get; }
+        public bool CanBeAntag { get; } // Alteros-Sponsor
 
         // Ex. If this is the 27th person to join, this will be 27.
         public int JoinOrder { get; }
@@ -509,7 +522,8 @@ namespace Content.Server.GameTicking
             bool silent,
             int joinOrder,
             EntityUid station,
-            HumanoidCharacterProfile profile)
+            HumanoidCharacterProfile profile,
+            bool canBeAntag) // Alteros-Sponsor
         {
             Mob = mob;
             Player = player;
@@ -519,6 +533,7 @@ namespace Content.Server.GameTicking
             Station = station;
             Profile = profile;
             JoinOrder = joinOrder;
+            CanBeAntag = canBeAntag; // Alteros-Sponsor
         }
     }
 }
