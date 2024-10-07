@@ -18,8 +18,8 @@ public static class ServerPackaging
         new PlatformReg("linux-arm64", "Linux", true),
         new PlatformReg("osx-x64", "MacOS", true),
         new PlatformReg("osx-arm64", "MacOS", true),
-		// Non-default platforms (i.e. for Watchdog Git)
-		new PlatformReg("win-x86", "Windows", false),
+        // Non-default platforms (i.e. for Watchdog Git)
+        new PlatformReg("win-x86", "Windows", false),
         new PlatformReg("linux-x86", "Linux", false),
         new PlatformReg("linux-arm", "Linux", false),
         new PlatformReg("freebsd-x64", "FreeBSD", false),
@@ -44,8 +44,8 @@ public static class ServerPackaging
 
     private static readonly List<string> ServerExtraAssemblies = new()
     {
-		// Python script had Npgsql. though we want Npgsql.dll as well soooo
-		"Npgsql",
+        // Python script had Npgsql. though we want Npgsql.dll as well soooo
+        "Npgsql",
         "Microsoft",
         "Discord.Net" // Adventure
     };
@@ -57,8 +57,8 @@ public static class ServerPackaging
 
     private static readonly HashSet<string> BinSkipFolders = new()
     {
-		// Roslyn localization files, screw em.
-		"cs",
+        // Roslyn localization files, screw em.
+        "cs",
         "de",
         "es",
         "fr",
