@@ -2,6 +2,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared.CCVar;
 using Content.Shared.Corvax.TTS;
+using Content.Alteros.Interfaces.Shared;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
@@ -63,6 +64,7 @@ namespace Content.Shared.Preferences
         [DataField]
         private Dictionary<string, RoleLoadout> _loadouts = new();
 
+        private SharedSponsorsManager? _sponsorsMgr;  // Alteros-Sponsors
         [DataField]
         public string Name { get; set; } = "John Doe";
 
@@ -77,6 +79,9 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         public ProtoId<SpeciesPrototype> Species { get; set; } = SharedHumanoidAppearanceSystem.DefaultSpecies;
+
+        // [DataField]
+        // public string Voice { get; set; } = SharedHumanoidAppearanceSystem.DefaultVoice;
 
         [DataField]
         public int Age { get; set; } = 18;
@@ -130,7 +135,7 @@ namespace Content.Shared.Preferences
             string name,
             string flavortext,
             string species,
-            string voice, // Alteros-TTS
+            // string voice, // Alteros-TTS
             int age,
             Sex sex,
             Gender gender,
@@ -145,7 +150,7 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Species = species;
-            Voice = voice; // Alteros-TTS
+            // Voice = voice; // Alteros-TTS
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -177,6 +182,7 @@ namespace Content.Shared.Preferences
             : this(other.Name,
                 other.FlavorText,
                 other.Species,
+                // other.Voice,
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -241,10 +247,10 @@ namespace Content.Shared.Preferences
             }
 
             // Alteros-TTS-Start
-            var voiceId = random.Pick(prototypeManager
-                .EnumeratePrototypes<TTSVoicePrototype>()
-                .Where(o => CanHaveVoice(o, sex)).ToArray()
-            ).ID;
+            // var voiceId = random.Pick(prototypeManager
+            //     .EnumeratePrototypes<TTSVoicePrototype>()
+            //     .Where(o => CanHaveVoice(o, sex)).ToArray()
+            // ).ID;
             // Alteros-TTS-End
 
             var gender = Gender.Epicene;
@@ -268,7 +274,7 @@ namespace Content.Shared.Preferences
                 Age = age,
                 Gender = gender,
                 Species = species,
-                Voice = voiceId, // Alteros-TTS
+                // Voice = voiceId, // Alteros-TTS
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
             };
         }
@@ -304,10 +310,10 @@ namespace Content.Shared.Preferences
         }
 
         // Alteros-TTS-Start
-        public HumanoidCharacterProfile WithVoice(string voice)
-        {
-            return new(this) { Voice = voice };
-        }
+        // public HumanoidCharacterProfile WithVoice(string voice)
+        // {
+        //     return new(this) { Voice = voice };
+        // }
         // Alteros-TTS-End
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
@@ -382,7 +388,7 @@ namespace Content.Shared.Preferences
         {
             return new(this)
             {
-                _antagPreferences = new (antagPreferences),
+                _antagPreferences = new(antagPreferences),
             };
         }
 
@@ -643,9 +649,9 @@ namespace Content.Shared.Preferences
             _traitPreferences.UnionWith(GetValidTraits(traits, prototypeManager));
 
             // Alteros-TTS-Start
-            prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voice);
-            if (voice is null || !CanHaveVoice(voice, Sex))
-                Voice = SharedHumanoidAppearanceSystem.DefaultSexVoice[sex];
+            // prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voice);
+            // if (voice is null || !CanHaveVoice(voice, Sex))
+            //     Voice = SharedHumanoidAppearanceSystem.DefaultSexVoice[sex];
             // Alteros-TTS-End
 
             // Checks prototypes exist for all loadouts and dump / set to default if not.
@@ -708,16 +714,16 @@ namespace Content.Shared.Preferences
         }
 
         // Alteros-TTS-Start
-        public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
-        {
-            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
-        }
+        // public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
+        // {
+        //     return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+        // }
         // Alteros-TTS-End
 
         public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection, string[] sponsorPrototypes)
         {
             var profile = new HumanoidCharacterProfile(this);
-            profile.EnsureValid(session, collection);
+            profile.EnsureValid(session, collection, sponsorPrototypes);
             return profile;
         }
 
@@ -777,7 +783,7 @@ namespace Content.Shared.Preferences
             return profile;
         }
 
-        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, string [] sponsorPrototypes)
+        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, string[] sponsorPrototypes)
         {
             if (!_loadouts.TryGetValue(id, out var loadout))
             {

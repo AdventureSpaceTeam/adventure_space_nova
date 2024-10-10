@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server.Connection;
+using Content.Server.DiscordAuth;
 using Content.Shared.Alteros.JoinQueue;
 using Content.Shared.CCVar;
 using Prometheus;
@@ -12,7 +13,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.JoinQueue;
 
-public sealed class JoinQueueManager : Content.Corvax.Interfaces.Server.IServerJoinQueueManager
+public sealed class JoinQueueManager : ServerJoinQueueManager
 {
     private static readonly Gauge QueueCount = Metrics.CreateGauge(
         "join_queue_count",
@@ -27,7 +28,7 @@ public sealed class JoinQueueManager : Content.Corvax.Interfaces.Server.IServerJ
         "Timings of players in queue",
         new HistogramConfiguration()
         {
-            LabelNames = new[] {"type"},
+            LabelNames = new[] { "type" },
             Buckets = Histogram.ExponentialBuckets(1, 2, 14),
         });
 
@@ -35,16 +36,16 @@ public sealed class JoinQueueManager : Content.Corvax.Interfaces.Server.IServerJ
     [Dependency] private readonly IConnectionManager _connectionManager = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IServerNetManager _netManager = default!;
-    [Dependency] private readonly Content.Corvax.Interfaces.Server.IServerDiscordAuthManager _discordAuthManager = default!;
+    [Dependency] private readonly SharedDiscordAuthManager _discordAuthManager = default!;
 
     /// <summary>
     ///     Queue of active player sessions
     /// </summary>
     private readonly List<ICommonSession> _queue = new(); // Real Queue class can't delete disconnected users
 
-    private bool _isIsEnabled = false;
+    private bool _isEnabled = false;
 
-    public bool IsEnabled => _isIsEnabled;
+    public bool IsEnabled => _isEnabled;
     public int PlayerInQueueCount => _queue.Count;
     public int ActualPlayersCount => _playerManager.PlayerCount - PlayerInQueueCount; // Now it's only real value with actual players count that in game
 
@@ -59,12 +60,11 @@ public sealed class JoinQueueManager : Content.Corvax.Interfaces.Server.IServerJ
 
     public void PostInitialize()
     {
-
     }
 
     private void OnQueueCVarChanged(bool value)
     {
-        _isIsEnabled = value;
+        _isEnabled = value;
 
         if (!value)
         {
@@ -77,7 +77,7 @@ public sealed class JoinQueueManager : Content.Corvax.Interfaces.Server.IServerJ
 
     private async void OnPlayerVerified(object? sender, ICommonSession session)
     {
-        if (!_isIsEnabled)
+        if (!_isEnabled)
         {
             SendToGame(session);
             return;

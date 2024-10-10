@@ -1,4 +1,4 @@
-using Content.Corvax.Interfaces.Shared;
+using Content.Alteros.Interfaces.Shared;
 using Content.Server.GameTicking;
 using Content.Server.Hands.Systems;
 using Content.Server.Storage.EntitySystems;
@@ -17,7 +17,7 @@ public sealed class LoadoutSystem : EntitySystem
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly HandsSystem _handsSystem = default!;
     [Dependency] private readonly StorageSystem _storageSystem = default!;
-    private ISharedSponsorsManager? _sponsorsManager;
+    private SharedSponsorsManager? _sponsorsManager;
 
     public override void Initialize()
     {

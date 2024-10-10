@@ -1,5 +1,6 @@
 using System.IO;
-using Content.Client.DiscordMember;
+using Content.Alteros.Interfaces.Client;
+using Content.Alteros.Interfaces.Shared;
 using Content.Shared.DiscordAuth;
 using Content.Shared.DiscordMember;
 using Robust.Client.Graphics;
@@ -8,16 +9,33 @@ using Robust.Shared.Network;
 
 namespace Content.Client.DiscordAuth;
 
-public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Client.IClientDiscordAuthManager
+public sealed class DiscordAuthManager : SharedDiscordAuthManager
 {
     [Dependency] private readonly IClientNetManager _netManager = default!;
     [Dependency] private readonly IStateManager _stateManager = default!;
 
-    public string AuthUrl { get; private set; } = string.Empty;
-    public Texture? Qrcode { get; private set; }
-    public string DiscordUrl { get; private set; } = string.Empty;
-    public Texture? DiscordQrcode { get; private set; }
-    public string DiscordUsername { get; private set; } = string.Empty;
+    private string _authUrl = string.Empty;
+    private Texture? _qrcode;
+    private string _discordUrl = string.Empty;
+    private Texture? _discordQrcode;
+    private string _discordUsername = string.Empty;
+
+    public DiscordAuthManager(string authUrl, string discordUrl, string discordUsername)
+    {
+        _authUrl = authUrl;
+        _discordUrl = discordUrl;
+        _discordUsername = discordUsername;
+    }
+
+    public string AuthUrl => _authUrl;
+
+    public Texture? Qrcode => _qrcode;
+
+    public string DiscordUrl => _discordUrl;
+
+    public Texture? DiscordQrcode => _discordQrcode;
+
+    public string DiscordUsername => _discordUsername;
 
     public void Initialize()
     {
@@ -31,11 +49,11 @@ public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Client.IClien
     {
         if (_stateManager.CurrentState is not DiscordAuthState)
         {
-            AuthUrl = message.AuthUrl;
+            _authUrl = message.AuthUrl;
             if (message.QrCode.Length > 0)
             {
                 using var ms = new MemoryStream(message.QrCode);
-                Qrcode = Texture.LoadFromPNGStream(ms);
+                _qrcode = Texture.LoadFromPNGStream(ms);
             }
 
             _stateManager.RequestStateChange<DiscordAuthState>();
@@ -46,15 +64,31 @@ public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Client.IClien
     {
         if (_stateManager.CurrentState is not DiscordMemberState)
         {
-            DiscordUrl = message.AuthUrl;
-            DiscordUsername = message.DiscordUsername;
+            _discordUrl = message.AuthUrl;
+            _discordUsername = message.DiscordUsername;
             if (message.QrCode.Length > 0)
             {
                 using var ms = new MemoryStream(message.QrCode);
-                DiscordQrcode = Texture.LoadFromPNGStream(ms);
+                _discordQrcode = Texture.LoadFromPNGStream(ms);
             }
 
             _stateManager.RequestStateChange<DiscordMemberState>();
         }
+    }
+
+    public void UpdateQrcodes(Texture? qrcode, Texture? discordQrcode)
+    {
+        _qrcode = qrcode;
+        _discordQrcode = discordQrcode;
+    }
+
+    public void SetAuthUrl(string url)
+    {
+        _authUrl = url;
+    }
+
+    public void SetDiscordUsername(string username)
+    {
+        _discordUsername = username;
     }
 }

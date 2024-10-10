@@ -55,7 +55,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly PdaSystem _pdaSystem = default!;
     [Dependency] private readonly SharedAccessSystem _accessSystem = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
+    private SharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
 
     private bool _randomizeCharacters;
 
@@ -128,7 +128,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 // Alteros-Start
                 var session = _actors.GetSession(entity);
 
-                string [] sponsorsPrototypes = [];
+                string[] sponsorsPrototypes = [];
                 if (_sponsorsManager != null && session != null)
                 {
                     if (_sponsorsManager.TryGetPrototypes(session.UserId, out var prototypes))

@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using Content.Corvax.Interfaces.Shared;
+using Content.Alteros.Interfaces.Shared;
 using Content.Shared.CCVar;
 using Content.Shared.Sponsors;
 using Robust.Shared.Configuration;
@@ -14,7 +14,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server.Sponsors;
 
-public sealed class SponsorsManager : ISharedSponsorsManager
+public class SponsorsManager : SharedSponsorsManager
 {
     [Dependency] private readonly IServerNetManager _netMgr = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
@@ -159,7 +159,7 @@ public sealed class SponsorsManager : ISharedSponsorsManager
         return true;
     }
 
-    public bool TryGetServerPrototypes(NetUserId userId, [NotNullWhen(true)]  out List<string>? prototypes)
+    public bool TryGetServerPrototypes(NetUserId userId, [NotNullWhen(true)] out List<string>? prototypes)
     {
         prototypes = null;
         if (!TryGetInfo(userId, out var sponsor))
@@ -178,7 +178,7 @@ public sealed class SponsorsManager : ISharedSponsorsManager
     public List<string> GetClientPrototypes() => throw new NotImplementedException();
     public bool GetClientAllowedRespawn() => throw new NotImplementedException();
 
-    public bool TryGetPriorityAntags(NetUserId userId, [NotNullWhen(true)]  out List<string>? priorityAntags)
+    public bool TryGetPriorityAntags(NetUserId userId, [NotNullWhen(true)] out List<string>? priorityAntags)
     {
         priorityAntags = null;
         if (!TryGetInfo(userId, out var sponsor))
@@ -189,7 +189,7 @@ public sealed class SponsorsManager : ISharedSponsorsManager
         return true;
     }
 
-    public bool TryGetPriorityRoles(NetUserId userId, [NotNullWhen(true)]  out List<string>? priorityRoles)
+    public bool TryGetPriorityRoles(NetUserId userId, [NotNullWhen(true)] out List<string>? priorityRoles)
     {
         priorityRoles = null;
         if (!TryGetInfo(userId, out var sponsor))

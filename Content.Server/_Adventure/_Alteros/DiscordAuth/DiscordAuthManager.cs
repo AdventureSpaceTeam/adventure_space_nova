@@ -12,10 +12,11 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Content.Alteros.Interfaces.Shared;
 
 namespace Content.Server.DiscordAuth;
 
-public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Server.IServerDiscordAuthManager
+public sealed class DiscordAuthManager : SharedDiscordAuthManager
 {
     [Dependency] private readonly IServerNetManager _netMgr = default!;
     [Dependency] private readonly IPlayerManager _playerMgr = default!;
@@ -29,9 +30,6 @@ public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Server.IServe
     private string _apiKey = string.Empty;
     private string _discordLink = string.Empty;
 
-    /// <summary>
-    ///     Raised when player passed verification or if feature disabled
-    /// </summary>
     public event EventHandler<ICommonSession>? PlayerVerified;
 
     public void Initialize()
@@ -85,7 +83,6 @@ public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Server.IServe
         if (isDiscordMember)
         {
             var session = _playerMgr.GetSessionByUserId(message.MsgChannel.UserId);
-
             PlayerVerified?.Invoke(this, session);
         }
     }
@@ -223,5 +220,4 @@ public sealed class DiscordAuthManager : Content.Corvax.Interfaces.Server.IServe
     private sealed record DiscordMemberInfoResponse(bool IsMember);
     [UsedImplicitly]
     public sealed record DiscordUserResponse(string UserId, string Username);
-
 }

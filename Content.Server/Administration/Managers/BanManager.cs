@@ -27,7 +27,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Content.Shared.AdventureSpace;
+// using Content.Shared.AdventureSpace; TODO: Webhook
 using JetBrains.Annotations;
 using Robust.Shared;
 using Content.Alteros.Interfaces.Server;
@@ -495,17 +495,17 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
 
         var adminLink = "";
         var targetLink = "";
-        var mentions = new List<User>{};
+        var mentions = new List<User> { };
         if (adminDiscordId != null)
         {
             adminLink = $"<@{adminDiscordId}>";
-            mentions.Add(new User(){Id = adminDiscordId});
+            mentions.Add(new User() { Id = adminDiscordId });
         }
 
         if (targetDiscordId != null)
         {
             targetLink = $"<@{targetDiscordId}>";
-            mentions.Add(new User(){Id = targetDiscordId});
+            mentions.Add(new User() { Id = targetDiscordId });
         }
 
         var allowedMentions = new Dictionary<string, string[]>
@@ -628,17 +628,17 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
 
         var adminLink = "";
         var targetLink = "";
-        var mentions = new List<User>{};
+        var mentions = new List<User> { };
         if (adminDiscordId != null)
         {
             adminLink = $"<@{adminDiscordId}>";
-            mentions.Add(new User(){Id = adminDiscordId});
+            mentions.Add(new User() { Id = adminDiscordId });
         }
 
         if (targetDiscordId != null)
         {
             targetLink = $"<@{targetDiscordId}>";
-            mentions.Add(new User(){Id = targetDiscordId});
+            mentions.Add(new User() { Id = targetDiscordId });
         }
 
         var allowedMentions = new Dictionary<string, string[]>

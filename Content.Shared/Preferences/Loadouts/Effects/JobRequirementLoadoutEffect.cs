@@ -26,7 +26,7 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
 
         // Alteros-Sponsors-Start
         string[] sponsorPrototypes = [];
-        if (collection.TryResolveType<ISharedSponsorsManager>(out var sponsorsManager))
+        if (collection.TryResolveType<SharedSponsorsManager>(out var sponsorsManager))
         {
             sponsorPrototypes = sponsorsManager?.GetClientPrototypes().ToArray() ?? [];
         }
