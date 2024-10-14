@@ -259,6 +259,8 @@
 - type: emoteSounds
   id: UnisexDwarf
   sounds:
+    Bruh:
+      collection: BruhCollection # Adventure
     Scream:
       collection: MaleScreams
     Laugh:
@@ -300,6 +302,8 @@
 - type: emoteSounds
   id: FemaleDwarf
   sounds:
+    Bruh:
+      collection: BruhCollection # Adventure
     Scream:
       collection: FemaleScreams
     Laugh:
@@ -402,6 +406,8 @@
 - type: emoteSounds
   id: GeneralBodyEmotes
   sounds:
+    Crunch:
+      collection: CrunchCollection # Adventure
     Clap:
       collection: Claps
     Snap:

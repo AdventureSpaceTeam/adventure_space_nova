@@ -7,6 +7,10 @@
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
+  minAge: 18 # Adventure
+  youngAge: 30 # Adventure
+  oldAge: 60 # Adventure
+  maxAge: 100 # Adventure
 
 # The lack of a layer means that
 # this person cannot have round-start anything
@@ -23,6 +27,7 @@
     FacialHair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
     Chest: MobHumanTorso
+    Tail: MobHumanoidAnyMarking # Corvax-Sponsors
     Eyes: MobHumanoidEyes
     HeadTop: MobHumanoidAnyMarking
     LArm: MobHumanLArm
@@ -38,7 +43,7 @@
   id: MobHumanMarkingLimits
   points:
     Special: # the cat ear joke
-      points: 0
+      points: 1 # Corvax-Sponsors
       required: false
     Hair:
       points: 1
@@ -50,7 +55,7 @@
       points: 1
       required: false
     Tail: # the cat tail joke
-      points: 0
+      points: 1 # Corvax-Sponsors
       required: false
     HeadTop:
       points: 1

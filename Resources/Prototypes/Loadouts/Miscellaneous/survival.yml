@@ -6,6 +6,8 @@
     species:
     - SlimePerson
     - Vox
+    - Zerah # Adventure
+    
 
 - type: loadoutEffectGroup
   id: OxygenBreather
@@ -19,6 +21,8 @@
     - Moth
     - Reptilian
     - Vulpkanin # Corvax-MRP
+    - Skrell # Adventure
+    - PigMan # Adventure
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

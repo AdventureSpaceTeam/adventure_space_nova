@@ -1,0 +1,232 @@
+#Horns
+- type: marking
+  id: LizardHornsArgali2
+  name: Унатх, рожки (Толстый  Аргали)
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_argali2
+
+- type: marking
+  id: LizardHornsAyrshire2
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_ayrshire2
+
+- type: marking
+  id: LizardHornsBambi
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_bambi
+
+- type: marking
+  id: LizardHornsBig
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_big
+
+- type: marking
+  id: LizardHornsBighorn2
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_bighorn2
+
+- type: marking
+  id: LizardHornsCorkscrew
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_corkscrew
+
+- type: marking
+  id: LizardHornsDeathclaw
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_deathclaw
+
+- type: marking
+  id: LizardHornsDeathclawgreat
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_deathclawgreat
+
+- type: marking
+  id: LizardHornsDouble2
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_double2
+
+- type: marking
+  id: LizardHornsDragon
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_dragon
+
+- type: marking
+  id: LizardHornsMohawk
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_mohawk
+
+- type: marking
+  id: LizardHornsOlddragon
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_olddragon
+
+- type: marking
+  id: LizardHornsMyrsore2
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_myrsore2
+
+- type: marking
+  id: LizardHornsTrike
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/horns.rsi
+    state: horns_trike
+
+#Tails
+- type: marking
+  id: LizardTailCurved
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_curved
+
+- type: marking
+  id: LizardTailFlexible
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_flexible
+
+- type: marking
+  id: LizardTailSpiky
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_spiky
+
+- type: marking  
+  id: LizardTailRidge
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_ridge
+
+#Body
+- type: marking
+  id: LizardChestPrickly
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/body.rsi
+    state: body_prickly
+
+- type: marking
+  id: LizardChestRidge
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/body.rsi
+    state: body_ridge
+
+#Frills
+- type: marking
+  id: LizardFrillsCollar
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_collar
+
+- type: marking 
+  id: LizardFrillsFins
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_fins
+
+- type: marking 
+  id: LizardFrillsFinsKing
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_finsking
+
+#Snout
+- type: marking
+  id: LizardSnoutFlat
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/snout.rsi
+    state: snout_flat
+
+- type: marking
+  id: LizardSnoutHigh
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/snout.rsi
+    state: snout_high

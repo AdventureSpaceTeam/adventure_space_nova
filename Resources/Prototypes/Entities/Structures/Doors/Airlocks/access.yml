@@ -65,7 +65,7 @@
       board: [ DoorElectronicsBar ]
 
 - type: entity
-  parent: AirlockServiceLocked
+  parent: AirlockHydroponics
   id: AirlockHydroponicsLocked
   suffix: Hydroponics, Locked
   components:
@@ -286,6 +286,8 @@
   id: AirlockCaptainLocked
   suffix: Captain, Locked
   components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Standart/Captain.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]
@@ -531,7 +533,7 @@
       board: [ DoorElectronicsJanitor ]
 
 - type: entity
-  parent: AirlockServiceGlassLocked
+  parent: AirlockHydroponicsGlass
   id: AirlockHydroGlassLocked
   suffix: Hydroponics, Locked
   components:
@@ -670,6 +672,8 @@
   id: AirlockCaptainGlassLocked
   suffix: Captain, Locked
   components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Glass/Captain.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]

@@ -443,6 +443,7 @@
     - UniformPrinterMachineCircuitboard
     - FloorGreenCircuit
     - FloorBlueCircuit
+    - FloorRedCircuit
     - MicrowaveMachineCircuitboard
     - ReagentGrinderMachineCircuitboard
     - ElectricGrillMachineCircuitboard
@@ -952,6 +953,7 @@
       - BluespaceBeaker
       - SyringeBluespace
       - SyringeCryostasis
+      - ReusableMedipen #Adventure
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

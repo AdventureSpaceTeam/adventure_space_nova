@@ -15,6 +15,7 @@ using Content.Shared.Database;
 using Content.Shared.Mind;
 using Discord.WebSocket; // Adventure
 using Robust.Shared.Asynchronous; // Adventure
+using Content.Shared.Players.RateLimiting;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;

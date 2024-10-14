@@ -1,0 +1,43 @@
+# Имена солдат
+- type: dataset
+  id: FirstNamesSoldiers
+  values:
+  - Рядовой
+  - Ефрейтор
+  - Сержант
+  - Капрал
+
+- type: dataset
+  id: LastNamesSoldiers
+  values:
+  - Ястреб
+  - Ворон
+  - Бугор
+  - Браво
+  - Фокс
+  - Гроза
+  - Геварра
+  - Рекс
+  - Вольф
+  - Бизон
+  - Дефолт
+  - Фраск
+  - Кац
+
+# Имена офицеров
+- type: dataset
+  id: FirstNamesOfficers
+  values:
+  - Лейтенант
+  - Командир
+  - Капитан
+  - Майор
+
+- type: dataset
+  id: LastNamesOfficers
+  values:
+  - Хикс
+  - Каир
+  - Райт
+  - Фишер
+  - Найт

@@ -383,6 +383,10 @@
   name: evidence locker
   description: To store bags of bullet casings and detainee belongings.
   components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sec
+    stateDoorOpen: sec_open
+    stateDoorClosed: ulika_door # Adventure
   - type: AccessReader
     access: [["Security"]]
 

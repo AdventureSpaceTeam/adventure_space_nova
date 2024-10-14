@@ -1,0 +1,55 @@
+﻿- type: soundCollection
+  id: BruhCollection
+  files:
+  - /Audio/Adventure/Voice/Emotions/bruh1.ogg
+  - /Audio/Adventure/Voice/Emotions/bruh2.ogg
+  - /Audio/Adventure/Voice/Emotions/bruh3.ogg
+  - /Audio/Adventure/Voice/Emotions/bruh4.ogg
+
+- type: emote
+  id: Bruh
+  name: Рыгнуть
+  icon: Adventure/Interface/Emotes/bruh.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["Рыгает"]
+  chatTriggers:
+    - рыгает
+    - рыгает!
+    - рыгнул
+    - рыгнул!
+
+- type: soundCollection
+  id: CrunchCollection
+  files:
+  - /Audio/Adventure/Voice/Emotions/crunch1.ogg
+  - /Audio/Adventure/Voice/Emotions/crunch2.ogg
+  - /Audio/Adventure/Voice/Emotions/crunch3.ogg
+  - /Audio/Adventure/Voice/Emotions/crunch4.ogg
+  - /Audio/Adventure/Voice/Emotions/crunch5.ogg
+
+- type: emote
+  id: Crunch
+  name: Хрустеть костями
+  icon: Adventure/Interface/Emotes/crunch.png
+  category: Hands
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["Хрустит костями"]
+  chatTriggers:
+    - хрустит костями
+    - хрустит костяшками
+    - хрустит шеей
+    - хрустит пальцами
+    - хрустит спиной

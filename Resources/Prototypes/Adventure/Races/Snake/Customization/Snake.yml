@@ -1,0 +1,85 @@
+- type: marking
+  id: SnakeTailsBig
+  bodyPart: Tail
+  markingCategory: Tail
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/Tails48.rsi
+    state: Snake_tail_big
+
+- type: marking
+  id: SnakeCollarCobra
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: base
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: base_1
+
+- type: marking
+  id: SnakeCollarCobraSpike
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: base_spike
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: base_1
+
+- type: marking
+  id: SnakeCollarKing
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: king
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: king_1
+
+- type: marking
+  id: SnakeCollarKingSpike
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: king_spike
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: king_1
+
+- type: marking
+  id: SnakeCollarWide
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: wide
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: wide_1
+
+- type: marking
+  id: SnakeBodyF
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/body.rsi
+    state: body_f
+
+- type: marking
+  id: SnakeBodyM
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/body.rsi
+    state: body_m
+
+

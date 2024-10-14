@@ -79,12 +79,8 @@
     speechVerb: Robotic
     speechSounds: Vending
   - type: IntrinsicRadioReceiver
-  - type: IntrinsicRadioTransmitter
-    channels:
-    - Binary
   - type: ActiveRadio
     channels:
-    - Binary
     - Common
   - type: DoAfter
   - type: Electrified
@@ -157,7 +153,7 @@
     pack: GenericVendGoodbyes
   - type: Speech
   - type: Sprite
-    sprite: Structures/Machines/VendingMachines/ammo.rsi
+    sprite: Corvax/Structures/Machines/VendingMachines/ammo.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

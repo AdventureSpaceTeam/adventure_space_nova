@@ -1,0 +1,38 @@
+﻿- type: soundCollection
+  id: SynthDeadCollection
+  files:
+  - /Audio/Adventure/Voice/IPC/SynthDead1.ogg
+  - /Audio/Adventure/Voice/IPC/SynthDead2.ogg
+  - /Audio/Adventure/Voice/IPC/SynthDead3.ogg
+
+- type: soundCollection
+  id: DroidScreamCollection
+  files:
+  - /Audio/Adventure/Voice/IPC/Droid_Scream_1.ogg
+  - /Audio/Adventure/Voice/IPC/Droid_Scream_2.ogg
+  - /Audio/Adventure/Voice/IPC/Droid_Scream_3.ogg
+  - /Audio/Adventure/Voice/IPC/Droid_Scream_4.ogg
+  - /Audio/Adventure/Voice/IPC/Droid_Scream_5.ogg
+
+- type: soundCollection
+  id: SynthStepCollection
+  files:
+  - /Audio/Adventure/Voice/IPC/SynthSteep1.ogg
+  - /Audio/Adventure/Voice/IPC/SynthSteep2.ogg
+  - /Audio/Adventure/Voice/IPC/SynthSteep3.ogg
+  - /Audio/Adventure/Voice/IPC/SynthSteep4.ogg
+
+#эмоции
+- type: emoteSounds
+  id: SynthEmote
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: DroidScreamCollection
+    SynthDeathgasp:
+      collection: SynthDeadCollection
+    Whistle:
+      path: /Audio/Machines/twobeep.ogg
+    Crash:
+      path: /Audio/Adventure/Voice/IPC/SynthWindows.ogg

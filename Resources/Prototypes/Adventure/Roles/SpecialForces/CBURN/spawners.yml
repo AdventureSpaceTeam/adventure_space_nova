@@ -1,0 +1,83 @@
+- type: startingGear
+  id: ERTcburngear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitCBURN
+    eyes: ClothingEyesGlassesSecurity
+    id: CBURNPDA
+    belt: ClothingBeltBandolier
+    pocket1: Cburnuplink
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackDuffelCBURN
+
+- type: entity
+  parent: MobHuman
+  id: CburnoperativeADV
+  name: Оперативник РХБЗЗ
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+  - type: MindShield
+  - type: BibleUser
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTcburngear]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Оперативник РХБЗЗ
+    description: Выполняйте приказы своего лидера, и ЦК.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+- type: startingGear
+  id: ERTcburnleadergear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitCBURNLeader
+    eyes: ClothingEyesGlassesSecurity
+    id: CBURNPDA
+    belt: ClothingBeltBandolier
+    pocket1: Cburnuplinkleader
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackDuffelCBURN
+
+- type: entity
+  parent: MobHuman
+  id: CburnoperativeleaderADV
+  name: Лидер РХБЗЗ
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesOfficers
+    - LastNamesOfficers
+  - type: MindShield
+  - type: BibleUser
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTcburnleadergear]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Лидер РХБЗЗ
+    description: Выполняйте приказы ЦК и выполните зачистку станции от инородной фауны.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable

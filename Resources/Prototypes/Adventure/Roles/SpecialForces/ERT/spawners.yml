@@ -1,0 +1,247 @@
+#Created: raidgo Transferred:  depresh
+- type: startingGear
+  id: ERTofficerADV
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTSecurity
+    shoes: ClothingShoesBootsJackFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesCombat
+    eyes: ClothingEyesGlassesSecurity
+    outerClothing: ClothingOuterHardsuitERTSecurity
+    id: ERTSecurityPDA
+    belt: ClothingBeltSecurityFilled
+    pocket1: ERTuplink
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackERTSecurity
+
+- type: entity
+  parent: MobHuman
+  id: ERTADVofficer
+  name: Офицер ОБР
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+  - type: MindShield
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTofficerADV]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Офицер ОБР
+    description: Выполняйте приказы своего лидера, и ЦК.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+- type: startingGear
+  id: ERTmedicADV
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTMedic
+    shoes: ClothingShoesBootsJackFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesNitrile
+    eyes: ClothingEyesHudMedSec
+    outerClothing: ClothingOuterHardsuitERTMedical
+    id: ERTMedicPDA
+    belt: ClothingBeltMedicalFilled
+    pocket1: ERTuplinkMED
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackERTMedical
+
+- type: entity
+  parent: MobHuman
+  id: ERTADVmedic
+  name: Медик ОБР
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+  - type: MindShield
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTmedicADV]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Медик ОБР
+    description: Выполняйте приказы своего лидера, и ЦК.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+- type: startingGear
+  id: ERTEngineerADV
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTEngineer
+    shoes: ClothingShoesBootsJackFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesCombat
+    eyes: ClothingEyesGlassesMeson
+    outerClothing: ClothingOuterHardsuitERTEngineer
+    id: ERTEngineerPDA
+    belt: ClothingBeltUtilityEngineering
+    pocket1: ERTuplinkENGI
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackERTEngineer
+
+- type: entity
+  parent: MobHuman
+  id: ERTADVengi
+  name: Инженер ОБР
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+  - type: MindShield
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTEngineerADV]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Инженер ОБР
+    description: Выполняйте приказы своего лидера, и ЦК.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+- type: startingGear
+  id: ERTjanitorADV
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTJanitor
+    shoes: ClothingShoesBootsJackFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesColorPurple
+    outerClothing: ClothingOuterHardsuitERTJanitor
+    id: ERTJanitorPDA
+    belt: ClothingBeltJanitorFilled
+    pocket1: ERTuplinkоjanitor
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackERTJanitor
+
+- type: entity
+  parent: MobHuman
+  id: ERTADVjanitor
+  name: Уборщик ОБР
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+  - type: MindShield
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTjanitorADV]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Уборщик ОБР
+    description: Выполняйте приказы своего лидера, и ЦК.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+- type: startingGear
+  id: ERTChaplainADV
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTChaplain
+    shoes: ClothingShoesBootsJackFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTChaplain
+    eyes: ClothingEyesGlasses
+    id: ERTChaplainPDA
+    belt: ClothingBeltStorageWaistbag
+    pocket1: ERTuplinklight
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackERTChaplain
+
+- type: entity
+  parent: MobHuman
+  id: ERTADVchaplain
+  name: Священник ОБР
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+  - type: MindShield
+  - type: BibleUser
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTChaplainADV]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Священник ОБР
+    description: Выполняйте приказы своего лидера, и ЦК.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+- type: startingGear
+  id: ERTleaderADVgear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    shoes: ClothingShoesBootsJackFilled
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTLeader
+    eyes: ClothingEyesGlassesSecurity
+    id: ERTLeaderPDA
+    belt: ClothingBeltSecurityFilled
+    pocket1: ERTuplinkleader
+    suitstorage: DoubleEmergencyOxygenTankFilled
+    ears: ClothingHeadsetAltCentCom
+    back: ClothingBackpackERTLeader
+
+- type: entity
+  parent: MobHuman
+  id: ERTADVleader
+  name: Лидер ОБР
+  suffix: Adventure
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesOfficers
+    - LastNamesOfficers
+  - type: MindShield
+  - type: BibleUser
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [ERTleaderADVgear]
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Лидер ОБР
+    description: Выполняйте приказы ЦК и руководите отрядом.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable

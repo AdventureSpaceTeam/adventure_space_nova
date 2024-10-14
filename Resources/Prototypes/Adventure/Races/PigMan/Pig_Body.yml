@@ -1,0 +1,192 @@
+﻿- type: entity
+  id: OrganPigManStomach
+  parent: OrganHumanStomach
+  name: Желудок троттина
+  components:
+  - type: Sprite
+    state: stomach
+  - type: Organ
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 100
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 7
+  - type: Stomach
+  - type: Metabolizer
+    maxReagents: 5
+    metabolizerTypes: [Animal]
+
+#Тело Троттина
+- type: body
+  name: "Троттин"
+  id: PigMan
+  root: torso
+  slots:
+    head:
+      part: HeadPigMan
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoPigMan
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganPigManStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
+    right arm:
+      part: RightArmPigMan
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmPigMan
+      connections:
+      - left hand
+    right hand:
+      part: RightHandPigMan
+    left hand:
+      part: LeftHandPigMan
+    right leg:
+      part: RightLegPigMan
+    left leg:
+      part: LeftLegPigMan
+
+#Части Троттина
+
+- type: entity
+  id: PartPigMan
+  parent: [BaseItem, BasePart]
+  name: "часть тела троттина"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 10
+      - ReagentId: Fat
+        Quantity: 10
+
+- type: entity
+  id: TorsoPigMan
+  name: "Туловище троттина"
+  parent: [PartPigMan, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 20
+      - ReagentId: Fat
+        Quantity: 20
+
+- type: entity
+  id: HeadPigMan
+  name: "Голова троттина"
+  parent: [PartPigMan, BaseHead]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 10
+      - ReagentId: Fat
+        Quantity: 10
+
+- type: entity
+  id: LeftArmPigMan
+  name: "Левая рука троттина"
+  parent: [PartPigMan, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmPigMan
+  name: "Правая рука троттина"
+  parent: [PartPigMan, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandPigMan
+  name: "Левая рука троттина"
+  parent: [PartPigMan, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandPigMan
+  name: "Правая рука троттина"
+  parent: [PartPigMan, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegPigMan
+  name: "Левая нога троттина"
+  parent: [PartPigMan, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "l_leg"
+  - type: MovementBodyPart
+    walkSpeed : 2
+    sprintSpeed : 3.6
+
+- type: entity
+  id: RightLegPigMan
+  name: "Правая нога троттина"
+  parent: [PartPigMan, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "r_leg"
+  - type: MovementBodyPart
+    walkSpeed : 2
+    sprintSpeed : 3.6
+
+- type: entity
+  id: LeftFootPigMan
+  name: "Левая нога троттина"
+  parent: [PartPigMan, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootPigMan
+  name: "Правая нога троттина"
+  parent: [PartPigMan, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/Species/parts.rsi
+    state: "r_foot"

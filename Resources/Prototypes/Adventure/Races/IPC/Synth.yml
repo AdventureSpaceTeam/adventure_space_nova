@@ -1,0 +1,221 @@
+#Троичный
+- type: radioChannel
+  id: Trio
+  name: Троичный
+  keycode: '+'
+  frequency: 123
+  color: "#4df9ef"
+  longRange: true
+
+#Смерть
+- type: emote
+  id: SynthDeathgasp
+  name: chat-emote-name-deathgasp
+  icon: Interface/Emotes/deathgasp.png
+  chatMessages: ["Замирает, его сенсоры отключаются, а модули перестают работать"]
+
+- type: emote
+  id: Crash
+  name: Сбой
+  icon: Adventure/Interface/Emotes/crash.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    - BorgChassis
+  chatMessages: ["Сбой"]
+  chatTriggers:
+    - сбоит
+    - в шоке
+    - в ахуе
+    - завис
+    - зависает
+
+- type: entity
+  save: false
+  name: Урист макКПБ
+  parent: BaseMobSynth
+  id: MobSynth
+
+- type: entity
+  abstract: true
+  save: false
+  name: Урист макКПБ
+  parent:
+  - MobFlammable
+  - BaseMobSpeciesInorganicIPC
+  id: BaseMobSynth
+  components:
+  - type: Inventory
+    templateId: Synth
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 25
+  - type: AtmosExposed
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.30
+  - type: Temperature
+    heatDamageThreshold: 773.15
+    coldDamageThreshold: 173
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 0.1 
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage: 
+      types:
+        Heat: 0.75
+  - type: TemperatureSpeed
+    thresholds:
+      233: 0.8
+      228: 0.6
+      225: 0.4
+  - type: StatusEffects
+    allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Stutter
+      - Electrocution
+      - SlurredSpeech
+      - RatvarianLanguage
+      - PressureImmunity
+      - TemporaryBlindness
+      - Pacified
+      - Flashed
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 1000
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: Deathgasp
+    prototype: SynthDeathgasp
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: HumanoidAppearance
+    species: Synth
+  - type: Icon
+    sprite: Adventure/Races/IPC/Species/parts.rsi
+    state: full
+  - type: Body
+    prototype: Synth
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Synth
+    damageModifierSet: Synth
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#8a8a9e"
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: true
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+  - type: TransferMindOnGib
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:GibBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.9
+      80: 0.7
+  - type: Speech
+    speechSounds: SyndieBorg
+    allowedEmotes: ['Crash']
+  - type: ZombieImmune
+  - type: Vocal
+    sounds:
+      Male: SynthEmote
+      Female: SynthEmote
+      Unsexed: SynthEmote
+  - type: FireVisuals
+    alternateState: Standing
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: SynthStepCollection
+      params:
+        volume: -1
+  - type: TypingIndicator
+    proto: robot
+  - type: Repairable
+    doAfterDelay: 5
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+        Shock: -10
+    allowSelfRepair: true
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Trio
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Trio
+  - type: ActiveRadio
+    channels:
+      - Trio
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobSynthDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: Synth

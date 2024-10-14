@@ -15,6 +15,7 @@ using Content.Shared.Mind;
 using Discord;
 using Discord.Rest;
 using Discord.WebSocket;
+using Content.Shared.Players.RateLimiting;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared;
@@ -83,6 +84,14 @@ namespace Content.Server.Administration.Systems
 
             SubscribeLocalEvent<GameRunLevelChangedEvent>(OnGameRunLevelChanged);
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
+            SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
+
+        	_rateLimit.Register(
+                RateLimitKey,
+                new RateLimitRegistration(CCVars.AhelpRateLimitPeriod,
+                    CCVars.AhelpRateLimitCount,
+                    PlayerRateLimitedAction)
+                );
         }
 
         private void OnShowDiscordChanged(bool show)

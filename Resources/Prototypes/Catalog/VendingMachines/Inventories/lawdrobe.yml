@@ -17,6 +17,16 @@
     ClothingNeckLawyerbadge: 2
     BriefcaseBrown: 2
     BookSpaceLaw: 3
+    # Corvax-LawyerDrip-Start
+    ClothingHandsGlovesColorWhite: 1
+    ClothingHandsGlovesColorGray: 1
+    ClothingHandsGlovesColorBlack: 1
+    ClothingHandsGlovesColorRed: 1
+    ClothingHandsGlovesColorBlue: 1
+    ClothingHeadHatBowlerHat: 1
+    ClothingHeadHatOutlawHat: 1
+    ClothingHeadHatTophat: 1
+    # Corvax-LawyerDrip-End
     LuxuryPen: 2
     HandLabeler: 2
   contrabandInventory:

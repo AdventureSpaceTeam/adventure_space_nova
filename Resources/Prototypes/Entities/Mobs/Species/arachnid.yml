@@ -63,7 +63,7 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    allowedEmotes: ['Click', 'Chitter', 'Crunch'] # Adventure
   - type: Vocal
     sounds:
       Male: UnisexArachnid

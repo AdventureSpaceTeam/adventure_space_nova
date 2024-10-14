@@ -5,10 +5,8 @@ concurrency:
 
 on:
   workflow_dispatch:
-# c4llv07e disable automatic workflows
-# schedule:
-#   - cron: '0 10 * * *'
-# c4llv07e disable automatic workflows
+  # schedule:
+   # - cron: '0 10 * * *'
 
 jobs:
   build:

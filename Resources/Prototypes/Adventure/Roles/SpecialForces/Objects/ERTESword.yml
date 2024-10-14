@@ -1,0 +1,18 @@
+#Created: raidgo Transferred:  depresh
+- type: entity
+  name: Энергетический меч ОБР
+  parent: [BaseMeleeWeaponEnergy, BaseCentcommContraband]
+  id: EnergySwordERT
+  description: Энергетический меч созданный специально для отрядов быстрого реагирования.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/e_sword.rsi
+    layers:
+    - state: e_sword
+    - state: e_sword_blade
+      color: "#FFFFFF"
+      visible: false
+      shader: unshaded
+      map: [ "blade" ]
+  - type: Item
+    sprite: Objects/Weapons/Melee/e_sword-inhands.rsi

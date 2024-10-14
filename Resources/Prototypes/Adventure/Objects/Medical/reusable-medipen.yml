@@ -1,0 +1,33 @@
+- type: entity
+  name: Многоразовый медипен
+  parent: BaseItem
+  description: Учёные NT смогли создать новейшую медицинскую разработку! Медипен, но многоразовый.
+  id: ReusableMedipen
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/Medical/reusable-medipen.rsi
+    state: icon
+  - type: Item
+    sprite: Adventure/Objects/Specific/Medical/reusable-medipen.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 15
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.5
+
+# Рецепт
+- type: latheRecipe
+  id: ReusableMedipen
+  result: ReusableMedipen
+  completetime: 4
+  materials:
+    Steel: 400
+    Plastic: 100
+    Glass: 200

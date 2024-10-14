@@ -1,2 +1,15 @@
 [game]
 secret_weight_prototype = "AdventureSecretDefault"
+map_pool = "AdventureMapPool"
+lobbyenabled = true
+role_timers = true
+
+[server]
+rules_file = "AdventureRuleset"
+
+[vote]
+restart_required_ratio = 0.85
+same_type_timeout = 300.0
+timerrestart = 30
+preset_enabled = false
+map_enabled = false

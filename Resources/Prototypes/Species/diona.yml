@@ -13,6 +13,10 @@
   maleLastNames: DionaLast # Corvax-LastnameGender
   femaleLastNames: DionaLast # Corvax-LastnameGender
   naming: TheFirstofLast
+  minAge: 90 # Adventure
+  youngAge: 12000 # Adventure
+  oldAge: 24000 # Adventure
+  maxAge: 40000 # Adventure
 
 - type: speciesBaseSprites
   id: MobDionaSprites

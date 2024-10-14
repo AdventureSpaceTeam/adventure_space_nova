@@ -67,15 +67,3 @@
             JanitorBorg: [ 1, 1 ]
             MedicalBorg: [ 1, 1 ]
             ServiceBorg: [ 1, 1 ]
-        - type: StationGoal
-          goals:
-          - Shuttle
-          - Singularity
-          - SolarPanels
-          - Artifacts
-          - Bank
-          - Zoo
-          - MiningOutpost
-          - Tesla
-          - XenobiologyRepair
-          - VirusologyAmbusol

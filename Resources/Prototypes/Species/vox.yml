@@ -12,8 +12,12 @@
   femaleFirstNames: names_vox
   naming: First
   sexes:
-  - Unsexed
-
+  - Unsexed 
+  minAge: 11 # Adventure
+  youngAge: 18 # Adventure
+  oldAge: 36 # Adventure
+  maxAge: 60 # Adventure
+ 
 - type: speciesBaseSprites
   id: MobVoxSprites
   sprites:
@@ -51,13 +55,13 @@
       required: true
       defaultMarkings: [ VoxBeak ]
     Arms:
-      points: 2
+      points: 4
       required: true
-      defaultMarkings: [ VoxRHandScales, VoxLHandScales ] 
+      defaultMarkings: [ VoxLArmScales, VoxRArmScales, VoxRHandScales, VoxLHandScales ]
     Legs:
-      points: 2
+      points: 4
       required: true
-      defaultMarkings: [ VoxRFootScales, VoxLFootScales ]
+      defaultMarkings: [ VoxLLegScales, VoxRLegScales, VoxRFootScales, VoxLFootScales ]
     Chest:
       points: 1
       required: false

@@ -1,0 +1,136 @@
+# Аплинк солдата
+- type: entity
+  parent: BaseItem
+  id: Cburnuplink
+  name: Терминал РХБЗЗ
+  suffix: Adventure
+  description: Терминал который используют оперативники РХБЗЗ в специальных операциях.
+  components:
+  - type: Item
+    size: Small
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+    layers:
+    - state: CBURN
+  - type: Appearance
+  - type: StaticPrice
+    price: 100
+  - type: Store
+    categories:
+      - CBURNweapons
+      - CBURNammo
+      - ERTmore # В папке с ОБР
+      - ERTbombs # В папке с ОБР
+      - ERTmedicine # В папке с ОБР
+      - ERTnanit # В папке с ОБР
+    currencyWhitelist:
+      - CentCommCrystal
+    balance:
+      CentCommCrystal: 25
+
+# Аплинк Офицера
+- type: entity
+  parent: BaseItem
+  id: Cburnuplinkleader
+  name: Терминал командира РХБЗЗ
+  suffix: Adventure
+  description: Терминал который используют командиры РХБЗЗ в специальных операциях.
+  components:
+  - type: Item
+    size: Small
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+    layers:
+    - state: CBURN_L
+  - type: Appearance
+  - type: StaticPrice
+    price: 100
+  - type: Store
+    categories:
+      - CBURNweapons
+      - CBURNammo
+      - ERTmore # В папке с ОБР
+      - ERTbombs # В папке с ОБР
+      - ERTmedicine # В папке с ОБР
+      - ERTnanit # В папке с ОБР
+    currencyWhitelist:
+      - CentCommCrystal
+    balance:
+      CentCommCrystal: 30
+
+# Предметы аплинка - Оружие
+- type: storeCategory
+  id: CBURNweapons
+  name: Оружие
+
+- type: listing
+  id: WeaponShotgunKammererCburn
+  productEntity: WeaponShotgunKammerer
+  cost:
+    CentCommCrystal: 13
+  categories:
+  - CBURNweapons
+
+- type: listing
+  id: WeaponShotgunEnforcerCburn
+  productEntity: WeaponShotgunEnforcer
+  cost:
+    CentCommCrystal: 16
+  categories:
+  - CBURNweapons
+
+- type: listing
+  id: WeaponLaserGunCNURN
+  productEntity: WeaponLaserGun
+  cost:
+    CentCommCrystal: 8
+  categories:
+  - CBURNweapons
+# /Предметы аплинка - Оружие
+
+# Предметы аплинка - Патроны
+- type: storeCategory
+  id: CBURNammo
+  name: Боеприпасы
+
+- type: listing
+  id: MagazineShotgunIncendiaryCburn
+  productEntity: MagazineShotgunIncendiary
+  description: Патроны для дробовика, удобно лежащие в барабане.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CBURNammo
+
+- type: listing
+  id: MagazineShotgunCburn
+  productEntity: MagazineShotgun
+  description: Патроны для дробовика, удобно лежащие в барабане.
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CBURNammo
+
+- type: listing
+  id: MagazineShotgunSlugCburn
+  productEntity: MagazineShotgunSlug
+  description: Патроны для дробовика, удобно лежащие в барабане.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CBURNammo
+# /Предметы аплинка - Патроны

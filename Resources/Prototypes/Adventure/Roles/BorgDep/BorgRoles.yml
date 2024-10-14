@@ -32,6 +32,7 @@
   icon: JobIconCargoBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgMining
+  applyTraits: false
 
 #EngineerBorg
 - type: jobIcon
@@ -64,6 +65,7 @@
   icon: JobIconEngineerBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgEngineer
+  applyTraits: false
 
 #JanitorBorg
 - type: jobIcon
@@ -99,6 +101,7 @@
   icon: JobIconJanitorBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgJanitor
+  applyTraits: false
 
 #MedicalBorg
 - type: jobIcon
@@ -131,6 +134,7 @@
   icon: JobIconMedicalBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgMedical
+  applyTraits: false
 
 #ServiceBorg
 - type: jobIcon
@@ -163,3 +167,4 @@
   icon: JobIconServiceBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgService
+  applyTraits: false

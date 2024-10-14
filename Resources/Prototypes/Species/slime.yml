@@ -7,7 +7,11 @@
   defaultSkinTone: "#b8b8b8"
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
-  skinColoration: Hues
+  skinColoration: Hues 
+  minAge: 23 # Adventure 
+  youngAge: 39 # Adventure
+  oldAge: 78 # Adventure
+  maxAge: 130 # Adventure
 
 - type: speciesBaseSprites
   id: MobSlimeSprites
@@ -16,6 +20,8 @@
     Hair: MobSlimeMarkingFollowSkin
     FacialHair: MobSlimeMarkingFollowSkin
     Chest: MobSlimeTorso
+    HeadTop: MobHumanoidAnyMarking # Corvax Sponsors
+    Tail: MobHumanoidAnyMarking # Corvax Sponsors
     Eyes: MobHumanoidEyes
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
@@ -34,6 +40,12 @@
       required: false
     FacialHair:
       points: 1
+      required: false
+    Tail: # :despair:
+      points: 1 # Corvax Sponsors
+      required: false
+    HeadTop: # :skull:
+      points: 1 # Corvax Sponsors
       required: false
     Chest:
       points: 1

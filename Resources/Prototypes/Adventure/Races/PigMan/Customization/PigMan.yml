@@ -1,0 +1,71 @@
+- type: marking
+  id: PigBaki
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: baki
+
+- type: marking
+  id: BigPig
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: big_pig
+
+- type: marking
+  id: ElvisPig
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: elvis
+
+- type: marking
+  id: PigGoat
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: goat
+
+- type: marking
+  id: PigHippies
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: hipp
+
+- type: marking
+  id: PigLongHeir
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: long
+
+- type: marking
+  id: PigDwarf
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: pig_dwarf
+
+- type: marking
+  id: PigSkipper
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: shkeper
