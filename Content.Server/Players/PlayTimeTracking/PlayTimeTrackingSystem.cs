@@ -219,7 +219,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
             : [];
         // Alteros-Sponsors-End
 
-        return JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, (HumanoidCharacterProfile?) _preferencesManager.GetPreferences(player.UserId).SelectedCharacter, sponsorPrototypes); // Alteros-Sponsors
+        return JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, (HumanoidCharacterProfile?)_preferencesManager.GetPreferences(player.UserId).SelectedCharacter, sponsorPrototypes); // Alteros-Sponsors
     }
 
     public HashSet<ProtoId<JobPrototype>> GetDisallowedJobs(ICommonSession player)
@@ -242,7 +242,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
         foreach (var job in _prototypes.EnumeratePrototypes<JobPrototype>())
         {
-            if (JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, (HumanoidCharacterProfile?) _preferencesManager.GetPreferences(player.UserId).SelectedCharacter, sponsorPrototypes)) // Alteros-Sponsors
+            if (JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, (HumanoidCharacterProfile?)_preferencesManager.GetPreferences(player.UserId).SelectedCharacter, sponsorPrototypes)) // Alteros-Sponsors
                 roles.Add(job.ID);
         }
 
@@ -272,7 +272,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         {
 
             if (_prototypes.TryIndex(jobs[i], out var job)
-                && JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, (HumanoidCharacterProfile?) _preferencesManager.GetPreferences(userId).SelectedCharacter, sponsorPrototypes)) // Alteros-Sponsors
+                && JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, (HumanoidCharacterProfile?)_preferencesManager.GetPreferences(userId).SelectedCharacter, sponsorPrototypes)) // Alteros-Sponsors
             {
                 continue;
             }

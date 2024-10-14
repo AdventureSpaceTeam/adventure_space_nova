@@ -36,7 +36,7 @@ public sealed class JoinQueueManager : ServerJoinQueueManager
     [Dependency] private readonly IConnectionManager _connectionManager = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IServerNetManager _netManager = default!;
-    [Dependency] private readonly SharedDiscordAuthManager _discordAuthManager = default!;
+    [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!;
 
     /// <summary>
     ///     Queue of active player sessions

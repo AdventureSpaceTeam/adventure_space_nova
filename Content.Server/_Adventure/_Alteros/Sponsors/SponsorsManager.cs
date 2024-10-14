@@ -14,7 +14,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Server.Sponsors;
 
-public class SponsorsManager : SharedSponsorsManager
+public class SponsorsManager : SponsorsManager
 {
     [Dependency] private readonly IServerNetManager _netMgr = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
