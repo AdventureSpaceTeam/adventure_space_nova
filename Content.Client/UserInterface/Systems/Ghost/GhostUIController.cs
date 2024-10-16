@@ -17,7 +17,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
 {
     [Dependency] private readonly IEntityNetworkManager _net = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
+    private SharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
 

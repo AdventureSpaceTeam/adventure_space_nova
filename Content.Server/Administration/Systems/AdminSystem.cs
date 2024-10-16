@@ -66,7 +66,7 @@ public sealed class AdminSystem : EntitySystem
     public readonly PanicBunkerStatus PanicBunker = new();
     public readonly BabyJailStatus BabyJail = new();
 
-    private ISharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
+    private SharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
 
     public override void Initialize()
     {

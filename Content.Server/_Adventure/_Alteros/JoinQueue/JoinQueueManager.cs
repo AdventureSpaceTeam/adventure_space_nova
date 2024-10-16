@@ -13,7 +13,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Server.JoinQueue;
 
-public sealed class JoinQueueManager : ServerJoinQueueManager
+public sealed class JoinQueueManager : IJoinQueueManager
 {
     private static readonly Gauge QueueCount = Metrics.CreateGauge(
         "join_queue_count",

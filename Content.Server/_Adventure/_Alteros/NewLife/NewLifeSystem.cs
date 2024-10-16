@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
-using Content.Corvax.Interfaces.Shared;
+using Content._Alteros.Interfaces.Shared;
 using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.NewLife.UI;

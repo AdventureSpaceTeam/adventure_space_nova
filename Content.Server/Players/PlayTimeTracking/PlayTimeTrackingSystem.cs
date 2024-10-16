@@ -39,7 +39,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly PlayTimeTrackingManager _tracking = default!;
     [Dependency] private readonly IAdminManager _adminManager = default!;
     [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
+    private SharedSponsorsManager? _sponsorsManager; // Alteros-Sponsors
 
     public override void Initialize()
     {

@@ -33,9 +33,9 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Server.Adventure.Config;
-using Content.Alteros.Interfaces.Server;
-using Content.Alteros.Interfaces.Shared; // c4llv07e adventure config
+using Content.Server.Adventure.ACVar;
+using Content._Alteros.Interfaces.Server;
+using Content._Alteros.Interfaces.Shared; // c4llv07e adventure config
 
 namespace Content.Server.Entry
 {

@@ -1,7 +1,7 @@
 using System.Text.Json.Nodes;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
-using Content.Alteros.Interfaces.Server;
+using Content._Alteros.Interfaces.Server;
 using Robust.Server.ServerStatus;
 using Robust.Shared.Configuration;
 

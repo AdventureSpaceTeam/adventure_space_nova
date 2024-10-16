@@ -1,4 +1,4 @@
-using Content.Corvax.Interfaces.Shared;
+using Content._Alteros.Interfaces.Shared;
 using Content.Shared.Alteros.GhostTheme;
 using Content.Shared.Ghost;
 using Robust.Server.GameObjects;

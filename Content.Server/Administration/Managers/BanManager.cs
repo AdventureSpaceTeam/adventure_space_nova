@@ -51,7 +51,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     [Dependency] private readonly ITaskManager _taskManager = default!;
     [Dependency] private readonly UserDbDataManager _userDbData = default!;
 
-    private IServerDiscordAuthManager? _discordAuth; // Alteros-Sponsors
+    private ServerDiscordAuthManager? _discordAuth; // Alteros-Sponsors
 
     private ISawmill _sawmill = default!;
     public const string SawmillId = "admin.bans";

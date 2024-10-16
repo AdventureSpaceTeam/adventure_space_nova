@@ -7,7 +7,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
-using Content.Alteros.Interfaces.Server;
+using Content._Alteros.Interfaces.Server;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
@@ -23,7 +23,7 @@ namespace Content.Server.GameTicking
     {
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
-        [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
+        [Dependency] private readonly ISharedAudioSystem _audioSystem = default!;
 
         private void InitializePlayer()
         {

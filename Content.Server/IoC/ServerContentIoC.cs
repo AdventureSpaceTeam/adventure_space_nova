@@ -27,10 +27,10 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
-using Content.Server.Adventure.Config;
-using Content.Server.AdventurePrivate._Alteros.DiscordAuth;
-using Content.Server.AdventurePrivate._Alteros.JoinQueue;
-using Content.Server.AdventurePrivate._Alteros.Sponsors;
+using Content.Server.Adventure.ACVar;
+using Content.Server._Adventure._Alteros.DiscordAuth;
+using Content.Server._Adventure._Alteros.JoinQueue;
+using Content.Server._Adventure._Alteros.Sponsors;
 using Content.Alteros.Interfaces.Server;
 using Content.Alteros.Interfaces.Shared; // c4llv07e adventure config
 
