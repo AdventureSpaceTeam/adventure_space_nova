@@ -1,4 +1,5 @@
 [game]
+hostname = "Adventure Space"
 secret_weight_prototype = "AdventureSecretDefault"
 map_pool = "AdventureMapPool"
 lobbyenabled = true
