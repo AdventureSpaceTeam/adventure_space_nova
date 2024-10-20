@@ -77,7 +77,6 @@
                                        Description="{Loc 'pda-bound-user-interface-show-uplink-description'}"/>
                 <pda:PdaSettingsButton Name="LockUplinkButton"
                                        Access="Public"
-                                       Visible="False"
                                        Text="{Loc 'pda-bound-user-interface-lock-uplink-title'}"
                                        Description="{Loc 'pda-bound-user-interface-lock-uplink-description'}"/>
             </BoxContainer>
