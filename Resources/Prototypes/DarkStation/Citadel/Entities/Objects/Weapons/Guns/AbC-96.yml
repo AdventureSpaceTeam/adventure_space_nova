@@ -1,0 +1,17 @@
+- type: entity
+  id: WeaponSniperAbC
+  parent: [BaseWeaponSniper, BaseGunWieldable]
+  name: Аврора
+  description: Воплощение мощи и точности. Fires armor piercing 14.5mm shells.
+  suffix: Citadel
+  components:
+  - type: Sprite
+    sprite: DarkStation/Citadel/Objects/Weapons/Guns/Snipers/AbC-96.rsi
+  - type: Clothing
+    sprite: DarkStation/Citadel/Objects/Weapons/Guns/Snipers/AbC-96.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeAntiMateriel
+    capacity: 5
+    proto: CartridgeAntiMateriel

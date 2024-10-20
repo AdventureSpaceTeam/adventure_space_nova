@@ -1,0 +1,22 @@
+- type: entity
+  id: WeaponPistolSkP
+  parent: BaseWeaponPistol
+  name: Скорпион
+  description: Дешевый, прекрасный, эффективный пистолет, используемый бойцами НП для подавления беспорядков.
+  suffix: Citadel
+  components:
+  - type: Sprite
+    sprite: DarkStation/Citadel/Objects/Weapons/Guns/Pistols/SkP-18.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: DarkStation/Citadel/Objects/Weapons/Guns/Pistols/SkP-18.rsi
+  - type: Gun
+    fireRate: 5
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg

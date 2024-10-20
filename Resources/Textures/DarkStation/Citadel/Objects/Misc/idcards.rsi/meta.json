@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "license": "Собственная лицензия. Полный запрет на копирование и использование вне проекта Dark Station без одобрения текущего владельца проекта",
+    "copyright": "lukas DS",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "idcardSNAB"
+        },
+        {
+            "name": "idcardSER"
+        },
+        {
+            "name": "idcardRND"
+        },
+        {
+            "name": "idcardPAS"
+        },
+        {
+            "name": "idcardMIL"
+        },
+        {
+            "name": "idcardMED"
+        },
+        {
+            "name": "idcardENG"
+        },
+        {
+            "name": "idcardADM"
+        }
+    ]
+}

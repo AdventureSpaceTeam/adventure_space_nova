@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSolpoliceglav
+  name: Фуражка Начальника Военной Полиции "Нового порядка".
+  description: Фуражка, предназначенная для начальников военной полиции.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solpoliceglav.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solpoliceglav.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSolpolice
+  name: Фуражка Офицера Военной Полиции "Нового порядка".
+  description: Фуражка, предназначенная для офицеров военной полиции.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solpolice.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solpolice.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSolglav
+  name: Фуражка Начальника Военной Базы "Нового порядка".
+  description: Фуражка, предназначенная для начальника военной базы.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solglav.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solglav.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSolbasic
+  name: Фуражка Офицера Вооружённых Сил "Нового порядка".
+  description: Фуражка, предназначенная для офицеров вооружённых сил.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solbasic.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Head/Hats/Cap/cap-solbasic.rsi

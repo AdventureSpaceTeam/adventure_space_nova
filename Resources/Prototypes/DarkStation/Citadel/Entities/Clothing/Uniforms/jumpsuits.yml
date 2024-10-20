@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSolpolice
+  name: Униформа Офицера Военной Полиции "Нового порядка".
+  description: Прочная и надежная униформа, предназначенная для офицеров военной полиции.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-solpolice.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-solpolice.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSolpoliceglav
+  name: Униформа Начальника Военной Полиции "Нового порядка".
+  description: Прочная и надежная униформа, предназначенная для начальников военной полиции.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-solpoliceglav.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-solpoliceglav.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSolglav
+  name: Униформа Начальника Военной Базы "Нового порядка".
+  description: Прочная и надежная униформа, предназначенная для начальника военной базы.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-soleglav.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-soleglav.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSolbasic
+  name: Униформа Офицера Вооружённых Сил "Нового порядка".
+  description: Прочная и надежная униформа, предназначенная для офицеров вооружённых сил.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-solbasic.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/Uniforms/Jumpsuit/form-solbasic.rsiц

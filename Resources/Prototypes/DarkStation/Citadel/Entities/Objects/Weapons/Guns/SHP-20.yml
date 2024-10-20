@@ -1,0 +1,53 @@
+- type: entity
+  id: WeaponSubMachineGunSHP
+  parent: BaseWeaponSubMachineGun
+  name: Шмель
+  description: "Современный пистолет-пулемёт Шмель: компактный, мощный, надёжный, эффективный."
+  suffix: Citadel
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Objects/Weapons/Guns/SMGs/SHP-20.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: Clothing
+      sprite: DarkStation/Citadel/Objects/Weapons/Guns/SMGs/SHP-20.rsi
+    - type: Wieldable
+      unwieldOnUse: false
+    - type: GunWieldBonus
+      minAngle: -19
+      maxAngle: -16
+    - type: Gun
+      minAngle: 21
+      maxAngle: 32
+      fireRate: 6
+      selectedMode: FullAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      availableModes:
+        - FullAuto
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: MagazinePistolSubMachineGun
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - MagazinePistolSubMachineGun
+        gun_chamber:
+          name: Chamber
+          startingItem: CartridgePistol
+          priority: 1
+          whitelist:
+            tags:
+              - CartridgePistol
+    - type: MagazineVisuals
+      magState: mag
+      steps: 1
+      zeroVisible: true
+    - type: Appearance

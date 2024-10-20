@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "license": "Собственная лицензия. Полный запрет на копирование и использование вне проекта Dark Station без одобрения текущего владельца проекта",
+    "copyright": "By DarkStation Team",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "idCitadelSNAB"
+        },
+        {
+            "name": "idCitadelSER"
+        },
+        {
+            "name": "idCitadelRND"
+        },
+        {
+            "name": "idCitadelPAS"
+        },
+        {
+            "name": "idCitadelMIL"
+        },
+        {
+            "name": "idCitadelMED"
+        },
+        {
+            "name": "idCitadelENG"
+        },
+        {
+            "name": "idCitadelADM"
+        }
+    ]
+}

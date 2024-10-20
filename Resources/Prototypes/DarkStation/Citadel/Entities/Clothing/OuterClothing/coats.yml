@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingOuterCoatHoSGreatcoat
+  id: ClothingOuterArmorPolice
+  name: Шанель Офицера Военной Полиции "Нового порядка".
+  description: Шанель, предназначенная для офицеров военной полиции.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/OuterClothing/Coats/solpolice_chanel.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/OuterClothing/Coats/solpolice_chanel.rsi
+
+- type: entity
+  parent: ClothingOuterCoatHoSGreatcoat
+  id: ClothingOuterArmorOfficer
+  name: Шанель Офицера Вооружённых Сил "Нового порядка".
+  description: Шанель, предназначенная для офицеров вооружённых сил.
+  components:
+    - type: Sprite
+      sprite: DarkStation/Citadel/Clothing/OuterClothing/Coats/solbasic_chanel.rsi
+    - type: Clothing
+      sprite: DarkStation/Citadel/Clothing/OuterClothing/Coats/solbasic_chanel.rsi

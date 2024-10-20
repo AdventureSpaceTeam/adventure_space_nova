@@ -53,6 +53,11 @@ namespace Content.Client.PDA
                 SendPredictedMessage(new ItemSlotButtonPressedEvent(PdaComponent.PdaPaiSlotId));
             };
 
+            _menu.EjectPaperButton.OnPressed += _ =>
+            {
+                SendPredictedMessage(new ItemSlotButtonPressedEvent(PdaComponent.PdaPaperSlotId));
+            };
+
             _menu.ActivateMusicButton.OnPressed += _ =>
             {
                 SendMessage(new PdaShowMusicMessage());
@@ -98,7 +103,7 @@ namespace Content.Client.PDA
             {
                 _pdaSystem.Log.Error("PDA state received before menu was created.");
                 return;
-            }
+        }
 
             _menu.UpdateState(updateState);
         }
