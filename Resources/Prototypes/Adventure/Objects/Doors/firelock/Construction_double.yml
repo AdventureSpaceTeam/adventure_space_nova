@@ -144,19 +144,19 @@
               southRotation: true
 
 
-- type: construction
-  name: firelock double flass
-  id: DoubleFirelockGlass
-  graph: FirelockDouble
-  startNode: start
-  targetNode: DoubleFirelockGlass
-  category: construction-category-structures
-  description: Apply crowbar.
-  icon:
-    sprite: Adventure/Structures/Doors/Glass/double_firelock_glass.rsi
-    state: assembly
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+#- type: construction
+  #name: firelock double flass
+  #id: DoubleFirelockGlass
+  #graph: FirelockDouble
+  #startNode: start
+  #targetNode: DoubleFirelockGlass
+  #category: construction-category-structures
+  #description: Apply crowbar.
+  #icon:
+    #sprite: Adventure/Structures/Doors/Glass/double_firelock_glass.rsi
+    #state: assembly
+  #objectType: Structure
+  #placementMode: SnapgridCenter
+  #canBuildInImpassable: false
+  #conditions:
+    #- !type:TileNotBlocked

@@ -134,19 +134,19 @@
 
 # из-за того, что механика постройки не позволяет установить нужную физику установки двойного шлюза, то его сначала нужно построить в любом месте, а потом вручную перетащить на нужное место.
 
-- type: construction
-  name: airlock double
-  id: AirlockDouble
-  graph: AirlockDouble
-  startNode: start
-  targetNode: glassAirlockDouble
-  category: construction-category-structures
-  description: It opens, it closes, and maybe crushes you.
-  icon:
-    sprite: Adventure/Structures/Doors/Glass/double_glass.rsi
-    state: assembly
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+#- type: construction
+  #name: airlock double
+  #id: AirlockDouble
+  #graph: AirlockDouble
+  #startNode: start
+  #targetNode: glassAirlockDouble
+  #category: construction-category-structures
+  #description: It opens, it closes, and maybe crushes you.
+  #icon:
+    #sprite: Adventure/Structures/Doors/Glass/double_glass.rsi
+    #state: assembly
+  #objectType: Structure
+  #placementMode: SnapgridCenter
+  #canBuildInImpassable: false
+  #conditions:
+    #- !type:TileNotBlocked

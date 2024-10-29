@@ -144,19 +144,19 @@
               southRotation: true
 
 
-- type: construction
-  name: firelock triple flass
-  id: TripleFirelockGlass
-  graph: FirelockTriple
-  startNode: start
-  targetNode: TripleFirelockGlass
-  category: construction-category-structures
-  description: Apply crowbar.
-  icon:
-    sprite: Adventure/Structures/Doors/Glass/triple_firelock_glass.rsi
-    state: assembly
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+#- type: construction
+  #name: firelock triple flass
+  #id: TripleFirelockGlass
+  #graph: FirelockTriple
+  #startNode: start
+  #targetNode: TripleFirelockGlass
+  #category: construction-category-structures
+  #description: Apply crowbar.
+  #icon:
+    #sprite: Adventure/Structures/Doors/Glass/triple_firelock_glass.rsi
+    #state: assembly
+  #objectType: Structure
+  #placementMode: SnapgridCenter
+  #canBuildInImpassable: false
+  #conditions:
+    #- !type:TileNotBlocked

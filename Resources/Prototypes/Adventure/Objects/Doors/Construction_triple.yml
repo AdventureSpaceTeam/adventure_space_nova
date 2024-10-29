@@ -132,19 +132,19 @@
       - tool: Prying
         doAfter: 8
 
-- type: construction
-  name: airlock triple
-  id: AirlockTriple
-  graph: AirlockTriple
-  startNode: start
-  targetNode: glassAirlockTriple
-  category: construction-category-structures
-  description: It opens, it closes, and maybe crushes you.
-  icon:
-    sprite: Adventure/Structures/Doors/Glass/triple_glass.rsi
-    state: assembly
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+#- type: construction
+  #name: airlock triple
+  #id: AirlockTriple
+  #graph: AirlockTriple
+  #startNode: start
+  #targetNode: glassAirlockTriple
+  #category: construction-category-structures
+  #description: It opens, it closes, and maybe crushes you.
+  #icon:
+    #sprite: Adventure/Structures/Doors/Glass/triple_glass.rsi
+    #state: assembly
+  #objectType: Structure
+  #placementMode: SnapgridCenter
+  #canBuildInImpassable: false
+  #conditions:
+    #- !type:TileNotBlocked
