@@ -25,7 +25,7 @@
   production: 6
   yield: 3
   potency: 10
-  growstage: 6
+  growstage: 3
   idealLight: 8
   chemicals:
     Bananadine:
