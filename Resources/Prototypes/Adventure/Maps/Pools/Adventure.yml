@@ -2,10 +2,10 @@
   id: AdventureMapPool
   maps:
   - AdventureAspid      #min 20 max 55
-  - AdventureAvrite     #min 40 max N/A
+#  - AdventureAvrite     #min 40 max N/A
   - AdventureBagel      #min 30 max 120
   - AdventureBox        #min 25 max 120 #rework (too big, original min 50)
-  - AdventureCluster    #min 0 max 35
+#  - AdventureCluster    #min 0 max 35
   - AdventureDelta      #min 30 max N/A
   - AdventureMarathon   #min 25 max 70
   - AdventureMaus       #min 0  max 40
