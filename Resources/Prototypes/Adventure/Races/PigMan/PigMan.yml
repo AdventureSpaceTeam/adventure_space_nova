@@ -54,7 +54,7 @@
     damageModifierSet: PigArmIMBA
   - type: Speech
     speechSounds: PigManSpeach
-    allowedEmotes: ['Hru', 'Crunch', 'Bruh']
+    allowedEmotes: ['Hru', 'Bruh']
   - type: Vocal
     sounds:
       Male: MalePigMan

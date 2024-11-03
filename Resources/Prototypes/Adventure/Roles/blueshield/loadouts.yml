@@ -1,0 +1,123 @@
+# Комбез
+- type: loadout
+  id: BSJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBlueshield
+
+- type: loadout
+  id: BSJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformjumpskirtBlueshield
+
+- type: loadout
+  id: BSJumpsuitParade
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBlueshieldParade
+
+- type: loadoutGroup
+  id: BSJumpsuits
+  name: ОСЩ, комбинезон
+  loadouts:
+  - BSJumpsuit
+  - BSJumpskirt
+  - BSJumpsuitParade
+
+# шапки
+- type: loadout
+  id: BSBeret
+  equipment:
+    head: ClothingHeadHatBlueshieldBeret
+
+- type: loadout
+  id: BSCap
+  equipment:
+    head: ClothingHeadBlueshieldCap
+
+- type: loadout
+  id: BSCapBlue
+  equipment:
+    head: ClothingHeadBlueshieldCapBlue
+
+- type: loadoutGroup
+  id: BSHelmets
+  name: ОСЩ, голова
+  loadouts:
+  - BSBeret
+  - BSCap
+  - BSCapBlue
+
+# Верх. шмон
+- type: loadout
+  id: BSArmor
+  equipment:
+    outerClothing: ClothingOuterArmorBlueshield
+
+- type: loadout
+  id: BSArmorCoat
+  equipment:
+    outerClothing: ClothingOuterArmorCoatBlueshield
+
+- type: loadout
+  id: BSArmorCoatParade
+  equipment:
+    outerClothing: ClothingOuterArmorCoatBlueshieldParade
+
+- type: loadoutGroup
+  id: BSOuterClothing
+  name: ОСЩ, верхняя одежда
+  loadouts:
+  - BSArmor
+  - BSArmorCoat
+  - BSArmorCoatParade
+
+# Ботинки
+- type: loadout
+  id: BSBootsSwat
+  equipment:
+    shoes: ClothingShoesSwat
+
+- type: loadoutGroup
+  id: BSBoots
+  name: ОСЩ, обувь
+  loadouts:
+  - BSBootsSwat
+  - CombatBoots
+  - JackBoots
+
+# Сумки
+- type: loadout
+  id: BSBackpack
+  equipment:
+     back: ClothingBackpackBlueshield
+
+- type: loadout
+  id: BSSatchel
+  equipment:
+     back: ClothingBackpackSatchelBlueshield
+
+- type: loadout
+  id: BSDuffel
+  equipment:
+     back: ClothingBackpackDuffelBlueshield
+
+- type: loadoutGroup
+  id: BSBackpacks
+  name: ОСЩ, рюкзак
+  loadouts:
+  - BSBackpack
+  - BSSatchel
+  - BSDuffel
+
+# лодаут роли
+- type: roleLoadout
+  id: JobBlueshield
+  groups:
+  - BSHelmets
+  - BSJumpsuits
+  - BSBackpacks
+  - BSOuterClothing
+  - BSBoots
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity

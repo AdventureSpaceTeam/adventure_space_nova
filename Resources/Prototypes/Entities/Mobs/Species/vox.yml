@@ -17,7 +17,6 @@
   - type: Speech
     speechVerb: Vox
     speechSounds: Vox
-    allowedEmotes: ['Crunch'] # Adventure
   - type: TypingIndicator
     proto: vox
   - type: Vocal

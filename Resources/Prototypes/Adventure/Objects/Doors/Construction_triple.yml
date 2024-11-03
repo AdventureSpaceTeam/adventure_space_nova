@@ -1,0 +1,150 @@
+- type: constructionGraph
+  id: AirlockTriple
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: assembly
+      completed:
+      - !type:SetAnchor
+        value: false
+      steps:
+      - material: Steel
+        amount: 10
+        doAfter: 6
+
+  - node: assembly
+    entity: AirlockAssemblyTriple
+    actions:
+    - !type:SnapToGrid {}
+    - !type:SetAnchor {}
+    edges:
+    - to: wired
+      conditions:
+      - !type:EntityAnchored {}
+      steps:
+      - material: Cable
+        amount: 12
+        doAfter: 7
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 8
+      - !type:DeleteEntity {}
+      steps:
+      - tool: Welding
+        doAfter: 8
+
+  - node: wired
+    entity: AirlockAssemblyTriple
+    edges:
+    - to: electronics
+      conditions:
+      - !type:EntityAnchored {}
+      steps:
+      - component: DoorElectronics
+        store: board
+        name: "door electronics circuit board"
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "door_electronics"
+        doAfter: 8
+    - to: assembly
+      completed:
+      - !type:SpawnPrototype
+        prototype: CableApcStack1
+        amount: 12
+      steps:
+      - tool: Cutting
+        doAfter: 7
+
+  - node: electronics
+    edges:
+    - to: glassElectronics
+      conditions:
+      - !type:EntityAnchored {}
+      steps:
+      - material: ReinforcedGlass
+        amount: 4
+        doAfter: 6
+    - to: wired
+      conditions:
+      - !type:EntityAnchored {}
+      completed:
+      - !type:EmptyAllContainers
+        pickup: true
+        emptyAtUser: true
+      steps:
+      - tool: Prying
+        doAfter: 12
+
+  - node: glassElectronics
+    entity: AirlockAssemblyTriple
+    edges:
+    - to: glassAirlockTriple
+      conditions:
+      - !type:EntityAnchored {}
+      steps:
+      - material: ReinforcedGlass
+        amount: 4
+        doAfter: 6
+      - tool: Screwing
+        doAfter: 7
+    - to: wired
+      conditions:
+      - !type:EntityAnchored {}
+      completed:
+      - !type:EmptyAllContainers
+        pickup: true
+        emptyAtUser: true
+      - !type:SpawnPrototype
+        prototype: SheetRGlass1
+        amount: 4
+      steps:
+      - tool: Prying
+        doAfter: 12
+
+## Glass airlock
+  - node: glassAirlockTriple
+    entity: TripleGlassAirlock
+    doNotReplaceInheritingEntities: true
+    actions:
+    - !type:SetWiresPanelSecurity
+      wiresAccessible: true
+    edges:
+    - to: glassElectronics
+      conditions:
+      - !type:EntityAnchored {}
+      - !type:DoorWelded {}
+      - !type:DoorBolted
+        value: false
+      - !type:WirePanel {}
+      - !type:AllWiresCut
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetRGlass1
+        amount: 6
+      steps:
+      - tool: Prying
+        doAfter: 8
+
+- type: construction
+  name: airlock triple
+  id: AirlockTriple
+  graph: AirlockTriple
+  startNode: start
+  targetNode: glassAirlockTriple
+  category: construction-category-structures
+  description: It opens, it closes, and maybe crushes you.
+  icon:
+    sprite: Adventure/Structures/Doors/Glass/triple_glass.rsi
+    state: assembly
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

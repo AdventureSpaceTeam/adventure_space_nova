@@ -5,6 +5,7 @@
   supportedTypes:
   - Heat
   - Shock
+  - Cold
 
 - type: damageModifierSet
   id: Synth
@@ -14,4 +15,4 @@
     Piercing: 0.93
     Heat: 0.93
     Shock: 1.3
-    Cold: 0.0
+    Cold: 0.93

@@ -66,23 +66,3 @@
             # silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
-        - type: StationGoal
-          goals:
-          - Singularity
-          - SolarPanels
-          - Artifacts
-          - Bank
-          - MiningOutpost
-          - Tesla
-          - SecurityTraining
-          - ShuttleMed
-          - ShuttleSec
-          - ShuttleRnd
-          - ShuttleSrv
-          - ShuttleEmergency
-          - Theatre
-          - CellAI
-          - Botany
-          - Bunker
-          - VirusologyAmbusol
-          - AstraRepair

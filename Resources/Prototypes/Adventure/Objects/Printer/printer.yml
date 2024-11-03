@@ -9,6 +9,7 @@
   id: Printer
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: принтер
+  suffix: AdvPrinter, AdvMapping
   description: Позволяет печатать документы.
   components:
   - type: Sprite
@@ -29,7 +30,7 @@
       tags:
         - Document
     storage:
-      SheetPrinter: 0
+      Paper: 0
   - type: Machine
     board: PrinterMachineCircuitboard
   - type: Lathe

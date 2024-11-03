@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from CEV-Eris at commit https://github.com/discordia-space/CEV-Eris/commit/14517938186858388656a6aee14bf47af9e9649f - then modified by 20kdc & AJCM-git, glass by Peptide90, modified by brainfood1183 (github)",
+  "copyright": "made by borkroman",
   "size": {
     "x": 32,
     "y": 32
@@ -20,6 +20,9 @@
       "name": "closed_unlit"
     },
     {
+      "name": "open_unlit"
+    },
+    {
       "name": "closing",
       "delays": [
         [
@@ -35,30 +38,12 @@
     ]
     },
     {
-      "name": "closing_unlit",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2
-      ]
-    ]
+      "name": "closing_unlit"
     },
     {
       "name": "deny_unlit",
       "delays": [
         [
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
           0.2,
           0.2
       ]
@@ -83,19 +68,7 @@
     ]
     },
     {
-      "name": "opening_unlit",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2
-      ]
-    ]
+      "name": "opening_unlit"
     },
     {
       "name": "panel_closing",

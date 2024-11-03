@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.ACVar; // c4llv07e tts
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -209,6 +210,15 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Gender
+
+            // c4llv07e tts begin
+            if (configurationManager.GetCVar(ACVars.TTSEnabled))
+            {
+                TTSContainer.Visible = true;
+                InitializeVoice();
+            }
+            // c4llv07e tts end
+
 
             RefreshSpecies();
 
@@ -743,6 +753,8 @@ namespace Content.Client.Lobby.UI
             IsDirty = false;
             JobOverride = null;
 
+            UpdateTTSVoicesControls(); // c4llv07e tts
+
             UpdateNameEdit();
             UpdateFlavorTextEdit();
             UpdateSexControls();
@@ -1176,6 +1188,8 @@ namespace Content.Client.Lobby.UI
                     Profile = Profile?.WithGender(Gender.Epicene);
                     break;
             }
+
+            UpdateTTSVoicesControls(); // c4llv07e tts
 
             UpdateGenderControls();
             Markings.SetSex(newSex);

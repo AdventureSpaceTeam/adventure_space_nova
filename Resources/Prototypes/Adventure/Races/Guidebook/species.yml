@@ -1,0 +1,24 @@
+- type: guideEntry
+  id: IPC
+  name: КПБ
+  text: "/ServerInfo/Adventure/Guidebook/Races/IPC.xml"
+
+- type: guideEntry
+  id: PigMan
+  name: Троттин
+  text: "/ServerInfo/Adventure/Guidebook/Races/PigMan.xml"
+
+- type: guideEntry
+  id: Skrell
+  name: Скрелл
+  text: "/ServerInfo/Adventure/Guidebook/Races/Skrell.xml"
+
+- type: guideEntry
+  id: Snake
+  name: Зерах
+  text: "/ServerInfo/Adventure/Guidebook/Races/Snake.xml"  
+  
+- type: guideEntry
+  id: Resomi
+  name: Резоми
+  text: "/ServerInfo/Adventure/Guidebook/Races/Resomi.xml"  

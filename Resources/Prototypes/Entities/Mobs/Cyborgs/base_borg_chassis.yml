@@ -99,8 +99,12 @@
     - Common
     - Science
   - type: ZombieImmune
-  - type: Repairable
+  - type: Repairable # Adventure
     doAfterDelay: 10
+    damage:
+      types:
+        Slash: -10
+        Piercing: -10
     allowSelfRepair: false
   - type: BorgChassis
   - type: LockingWhitelist
@@ -240,6 +244,8 @@
     damageProtection:
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voice
 
 - type: entity
   abstract: true

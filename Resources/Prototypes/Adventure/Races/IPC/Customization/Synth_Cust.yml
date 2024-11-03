@@ -7,7 +7,7 @@
   speciesRestriction: [Synth]
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: Altron-unshaded
+    state: Altron
 
 - type: marking
   id: SynthBigEyes
@@ -17,7 +17,7 @@
   speciesRestriction: [Synth]
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: Bigeyes-unshaded
+    state: Bigeyes
 
 - type: marking
   id: SynthCyclops
@@ -28,8 +28,6 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: Cyclops
-  - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: Cyclops-unshaded
 
 - type: marking
   name: КПБ, морда (Двойной Циклоп)
@@ -40,8 +38,6 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: DoubleCyclops
-  - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state:  DoubleCyclops-unshaded
 
 - type: marking
   id: SynthEyes
@@ -52,8 +48,6 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: eyes
-  - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state:  eyes-unshaded
 
 - type: marking
   id: SynthLens
@@ -64,8 +58,6 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: lens
-  - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state:  lens-unshaded
 
 - type: marking
   id: SynthScreen
@@ -76,8 +68,6 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: screen
-  - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: screen-unshaded
 
 - type: marking
   id: SynthScreenFase
@@ -98,8 +88,6 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: Spider
-  - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: Spider-unshaded
 
 - type: marking
   id: SynthVisor
@@ -110,8 +98,64 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: Visor
+
+- type: marking
+  id: SynthScreenNo
+  name: КПБ, морда (Крест)
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: Visor-unshaded
+    state: screen
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: no
+
+- type: marking
+  id: SynthScreenBacklight
+  name: КПБ, морда (Подсветка)
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: screen
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: backlight
+
+- type: marking
+  id: SynthEyesScreen
+  name: КПБ, морда (Экран с глазами)
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: screen
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: eyesScreen
+
+- type: marking
+  id: SynthScreenNoise
+  name: КПБ, морда (Помехи)
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: noiseScreen
+
+- type: marking
+  id: SynthScreenDoubleCyclops
+  name: КПБ, морда (Двойной циклоп на экране)
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: screen
+  - sprite: Adventure/Races/IPC/Customization/Face.rsi
+    state: DoubleCyclops
 
 #Head
 - type: marking

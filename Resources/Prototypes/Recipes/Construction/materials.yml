@@ -82,7 +82,7 @@
   startNode: start
   targetNode: MaterialDurathread
   category: construction-category-materials
-  description: A high-quality thread used to make durable clothes.
+  description: Высококачественная нить, используемая для изготовления прочной одежды.
   icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
   objectType: Item
 

@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS;
 using System.IO;
 using System.Linq;
 using Content.Shared.CCVar;
@@ -378,6 +379,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         EnsureDefaultMarkings(uid, humanoid);
+        SetTTSVoice(uid, profile.Voice, humanoid); // c4llv07e tts
 
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))
@@ -491,4 +493,16 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         return Loc.GetString("identity-age-old");
     }
+
+    // c4llv07e tts begin
+    // ReSharper disable once InconsistentNaming
+    public void SetTTSVoice(EntityUid uid, string voiceId, HumanoidAppearanceComponent humanoid)
+    {
+        if (!TryComp<TTSComponent>(uid, out var comp))
+            return;
+
+        humanoid.Voice = voiceId;
+        comp.VoicePrototypeId = voiceId;
+    }
+    // c4llv07e tts end
 }

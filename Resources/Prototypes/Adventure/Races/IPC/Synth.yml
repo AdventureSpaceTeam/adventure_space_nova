@@ -7,31 +7,6 @@
   color: "#4df9ef"
   longRange: true
 
-#Смерть
-- type: emote
-  id: SynthDeathgasp
-  name: chat-emote-name-deathgasp
-  icon: Interface/Emotes/deathgasp.png
-  chatMessages: ["Замирает, его сенсоры отключаются, а модули перестают работать"]
-
-- type: emote
-  id: Crash
-  name: Сбой
-  icon: Adventure/Interface/Emotes/crash.png
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-    - BorgChassis
-  chatMessages: ["Сбой"]
-  chatTriggers:
-    - сбоит
-    - в шоке
-    - в ахуе
-    - завис
-    - зависает
-
 - type: entity
   save: false
   name: Урист макКПБ
@@ -47,6 +22,30 @@
   - BaseMobSpeciesInorganicIPC
   id: BaseMobSynth
   components:
+  - type: BodyEmotes
+    soundsId: SynthBodyEmotes
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ SpaceLube ]
+      methods: [ Touch ]
+      effects: 
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Cold: -2
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Обледенение отпадает от вашего корпуса" ]
+        probability: 0.25
   - type: Inventory
     templateId: Synth
   - type: ThermalRegulator
@@ -137,6 +136,11 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#8a8a9e"
   - type: MobState
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -155,12 +159,13 @@
       - Piercing
       - Heat
       - Shock
+      - Cold
   - type: TransferMindOnGib
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 400
       behaviors:
       - !type:GibBehavior { }
       - !type:PlaySoundBehavior
@@ -171,6 +176,7 @@
       60: 0.9
       80: 0.7
   - type: Speech
+    speechVerb: Electricity
     speechSounds: SyndieBorg
     allowedEmotes: ['Crash']
   - type: ZombieImmune
@@ -192,11 +198,8 @@
     doAfterDelay: 5
     damage:
       types:
-        Blunt: -10
         Slash: -10
         Piercing: -10
-        Heat: -10
-        Shock: -10
     allowSelfRepair: true
   - type: IntrinsicRadioReceiver
     channels:

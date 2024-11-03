@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -200,6 +201,12 @@ namespace Content.Server.Database
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
 
+            // c4llv07e tts
+            var voice = profile.Voice;
+            if (voice == String.Empty)
+                voice = TTSConfig.DefaultSexVoice[sex];
+            // c4llv07e tts
+
             // ReSharper disable once ConditionalAccessQualifierIsNonNullableAccordingToAPIContract
             var markingsRaw = profile.Markings?.Deserialize<List<string>>();
 
@@ -261,7 +268,8 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
+                loadouts,
+                voice // c4llv07e tts
             );
         }
 
@@ -276,6 +284,7 @@ namespace Content.Server.Database
             }
             var markings = JsonSerializer.SerializeToDocument(markingStrings);
 
+            profile.Voice = humanoid.Voice; // c4llv07e tts
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
             profile.Species = humanoid.Species;
@@ -875,10 +884,41 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         public async Task AddAdminLogs(List<AdminLog> logs)
         {
+            const int maxRetryAttempts = 5;
+            var initialRetryDelay = TimeSpan.FromSeconds(5);
+
             DebugTools.Assert(logs.All(x => x.RoundId > 0), "Adding logs with invalid round ids.");
-            await using var db = await GetDb();
-            db.DbContext.AdminLog.AddRange(logs);
-            await db.DbContext.SaveChangesAsync();
+
+            var attempt = 0;
+            var retryDelay = initialRetryDelay;
+
+            while (attempt < maxRetryAttempts)
+            {
+                try
+                {
+                    await using var db = await GetDb();
+                    db.DbContext.AdminLog.AddRange(logs);
+                    await db.DbContext.SaveChangesAsync();
+                    _opsLog.Debug($"Successfully saved {logs.Count} admin logs.");
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    attempt += 1;
+                    _opsLog.Error($"Attempt {attempt} failed to save logs: {ex}");
+
+                    if (attempt >= maxRetryAttempts)
+                    {
+                        _opsLog.Error($"Max retry attempts reached. Failed to save {logs.Count} admin logs.");
+                        return;
+                    }
+
+                    _opsLog.Warning($"Retrying in {retryDelay.TotalSeconds} seconds...");
+                    await Task.Delay(retryDelay);
+
+                    retryDelay *= 2;
+                }
+            }
         }
 
         protected abstract IQueryable<AdminLog> StartAdminLogsQuery(ServerDbContext db, LogFilter? filter = null);

@@ -8,17 +8,20 @@
   },
   "states": [
     {
-	  "name": "assembly"
-	},
-	{
-	  "name": "bolted_unlit"
-	},
+      "name": "assembly"
+    },
+    {
+      "name": "bolted_unlit"
+    },
     {
       "name": "closed"
     },
-	{
-	  "name": "closed_unlit"
-	},
+    {
+      "name": "closed_unlit"
+    },
+    {
+      "name": "open_unlit"
+    },
     {
       "name": "closing",
       "delays": [
@@ -61,8 +64,8 @@
 	{
 	  "name": "open",
 	  "delays": [
-	    [ 
-		  1 
+	    [
+		  1
 		]
 	  ]
 	},

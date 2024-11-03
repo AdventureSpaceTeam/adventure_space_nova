@@ -777,10 +777,13 @@
     name: ghost-role-information-smile-name
     description: ghost-role-information-smile-description
     rules: ghost-role-information-nonantagonist-rules
+    raffle: null
   - type: Grammar
     attributes:
       proper: true
       gender: female
+  - type: TTS # c4llv07e tts
+    voice: Dryad # TODO(c4): fix voices.
 
 - type: entity
   name: Pun Pun

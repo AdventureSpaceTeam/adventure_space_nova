@@ -5,6 +5,7 @@
   id: BaseMob
   abstract: true
   components:
+  - type: TTS # c4llv07e tts
   - type: Sprite
     noRot: true
     drawdepth: Mobs

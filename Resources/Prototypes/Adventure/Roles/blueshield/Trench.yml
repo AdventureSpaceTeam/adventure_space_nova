@@ -5,9 +5,9 @@
   description: Тренч из самых лучших синтетических материалов и с прочными вставками из керамических пластин. Не мешает движениям, но защищает на ура
   components:
   - type: Sprite
-    sprite: Adventure/Roles/blueshield/Trench.rsi
+    sprite: Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Trench.rsi
   - type: Clothing
-    sprite: Adventure/Roles/blueshield/Trench.rsi
+    sprite: Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Trench.rsi
   - type: Armor
     modifiers:
       coefficients:

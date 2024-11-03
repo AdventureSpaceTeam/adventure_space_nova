@@ -122,6 +122,8 @@
     attributes:
       gender: male
   - type: Sharp
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4llv07e): fix voices.
 
 - type: entity
   id: MobRatKingBuff

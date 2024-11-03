@@ -30,7 +30,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['Crunch'] # Adventure
+    allowedEmotes: ['Thump']
   - type: TypingIndicator
     proto: lizard
   - type: Vocal
@@ -38,6 +38,8 @@
       Male: MaleReptilian
       Female: FemaleReptilian
       Unsexed: MaleReptilian
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
@@ -49,10 +51,18 @@
     damage:
       types:
         Slash: 5
+  - type: ThermalRegulator # Adventure
+    metabolismHeat: 800 # Adventure
+    radiatedHeat: 100 # Adventure
+    implicitHeatRegulation: 250 # Adventure
+    sweatHeatRegulation: 500 # Adventure
+    shiveringHeatRegulation: 500 # Adventure
+    normalBodyTemperature: 293.15 # Adventure
+    thermalRegulationTemperatureThreshold: 25 # Adventure
   - type: Temperature
     heatDamageThreshold: 400
-    coldDamageThreshold: 285
-    currentTemperature: 310.15
+    coldDamageThreshold: 273.15 # Adventure 0с
+    currentTemperature: 293.15 # Adventure
     specificHeat: 42
     coldDamage:
       types:

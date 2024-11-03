@@ -83,12 +83,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 17
         reagents:
         - ReagentId: Nutriment
           Quantity: 10
         - ReagentId: Vitamin
           Quantity: 5
+        - ReagentId: Bacteria # Adventure
+          Quantity: 2
 
 # Salad
 

@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared.CCVar;
@@ -25,7 +26,7 @@ namespace Content.Shared.Preferences
     [Serializable, NetSerializable]
     public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     {
-        private static readonly Regex RestrictedNameRegex = new("[^А-Яа-яёЁ0-9' -]"); // c4llv07e: Allow cyrillic names
+        private static readonly Regex RestrictedNameRegex = new("[^A-Z,a-z,А-Я,а-я,ё,Ё,0-9,', ,.,-]"); // c4llv07e: Allow cyrillic names
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         public const int MaxNameLength = 32;
@@ -138,7 +139,8 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
+            Dictionary<string, RoleLoadout> loadouts,
+            string voice) // c4llv07e tts
         {
             Name = name;
             FlavorText = flavortext;
@@ -153,6 +155,10 @@ namespace Content.Shared.Preferences
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
+
+            // c4llv07e tts begin
+            Voice = voice;
+            // c4llv07e tts end
 
             var hasHighPrority = false;
             foreach (var (key, value) in _jobPriorities)
@@ -183,7 +189,8 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
-                new Dictionary<string, RoleLoadout>(other.Loadouts))
+                new Dictionary<string, RoleLoadout>(other.Loadouts),
+                other.Voice) // c4llv07e tts
         {
         }
 
@@ -237,6 +244,17 @@ namespace Content.Shared.Preferences
                 age = random.Next(speciesPrototype.MinAge, speciesPrototype.OldAge); // people don't look and keep making 119 year old characters with zero rp, cap it at middle aged
             }
 
+            // c4llv07e tts begin
+            var voices = prototypeManager
+                .EnumeratePrototypes<TTSVoicePrototype>()
+                .Where(o => CanHaveVoice(o, sex)).ToArray();
+            string voiceId = string.Empty;
+            if (voices.Count() != 0)
+            {
+                voiceId = random.Pick(voices).ID;
+            }
+            // c4llv07e tts end
+
             var gender = Gender.Epicene;
 
             switch (sex)
@@ -259,6 +277,7 @@ namespace Content.Shared.Preferences
                 Gender = gender,
                 Species = species,
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
+                Voice = voiceId, // c4llv07e tts
             };
         }
 
@@ -292,6 +311,12 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // c4llv07e tts begin
+        public HumanoidCharacterProfile WithVoice(string voice)
+        {
+            return new(this) { Voice = voice };
+        }
+        // c4llv07e tts end
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -617,6 +642,12 @@ namespace Content.Shared.Preferences
             _traitPreferences.Clear();
             _traitPreferences.UnionWith(GetValidTraits(traits, prototypeManager));
 
+            // c4llv07e tts begin
+            prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voice);
+            if (voice is null || !CanHaveVoice(voice, Sex))
+                Voice = TTSConfig.DefaultSexVoice[sex];
+            // c4llv07e tts end
+
             // Checks prototypes exist for all loadouts and dump / set to default if not.
             var toRemove = new ValueList<string>();
 
@@ -675,6 +706,13 @@ namespace Content.Shared.Preferences
 
             return result;
         }
+
+        // c4llv07e tts begin
+        public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
+        {
+            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+        }
+        // c4llv07e tts end
 
         public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection)
         {

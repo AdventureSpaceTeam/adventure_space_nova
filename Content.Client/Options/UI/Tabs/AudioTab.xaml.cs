@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.ACVar; // c4llv07e tts
 using Content.Client.Audio;
 using Content.Shared.CCVar;
 using Robust.Client.Audio;
@@ -25,6 +26,13 @@ public sealed partial class AudioTab : Control
             SliderVolumeMaster,
             scale: ContentAudioSystem.MasterVolumeMultiplier);
         masterVolume.ImmediateValueChanged += OnMasterVolumeSliderChanged;
+
+        // c4llv07e tts begin
+        Control.AddOptionPercentSlider(
+            ACVars.TTSVolume,
+            SliderVolumeTts,
+            scale: ContentAudioSystem.TtsMultiplier);
+        // c4llv07e tts end
 
         Control.AddOptionPercentSlider(
             CVars.MidiVolume,
@@ -61,6 +69,7 @@ public sealed partial class AudioTab : Control
         Control.AddOptionCheckBox(CCVars.RestartSoundsEnabled, RestartSoundsCheckBox);
         Control.AddOptionCheckBox(CCVars.EventMusicEnabled, EventMusicCheckBox);
         Control.AddOptionCheckBox(CCVars.AdminSoundsEnabled, AdminSoundsCheckBox);
+        Control.AddOptionCheckBox(ACVars.TTSClientEnabled, TtsClientCheckBox); // c4llv07e tts
 
         Control.Initialize();
     }

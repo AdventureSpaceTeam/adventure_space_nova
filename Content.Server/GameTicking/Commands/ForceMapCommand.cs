@@ -59,4 +59,45 @@ namespace Content.Server.GameTicking.Commands
             return CompletionResult.Empty;
         }
     }
+
+    [AdminCommand(AdminFlags.Round)]
+    sealed class SetMapCommand : IConsoleCommand
+    {
+        [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+        [Dependency] private readonly IGameMapManager _gameMapManager = default!;
+
+        public string Command => "setmap";
+        public string Description => "Устанавливает карту для *следуюшего* раунда";
+        public string Help => "setmap <map ID>";
+
+        public void Execute(IConsoleShell shell, string argStr, string[] args)
+        {
+            if (args.Length != 1)
+            {
+                shell.WriteLine("требуется один аргумент для ID карты");
+                return;
+            }
+
+            var name = args[0];
+
+            _gameMapManager.SelectMap(name);
+
+            shell.WriteLine($"Следующая карта будет \"{name}\"");
+        }
+
+        public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
+        {
+            if (args.Length == 1)
+            {
+                var options = IoCManager.Resolve<IPrototypeManager>()
+                    .EnumeratePrototypes<GameMapPrototype>()
+                    .Select(p => new CompletionOption(p.ID, p.MapName))
+                    .OrderBy(p => p.Value);
+
+                return CompletionResult.FromHintOptions(options, "<ID карты>");
+            }
+
+            return CompletionResult.Empty;
+        }
+    }
 }

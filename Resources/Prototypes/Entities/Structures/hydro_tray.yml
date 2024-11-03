@@ -4,6 +4,8 @@
   id: hydroponicsTray
   description: An interstellar-grade space farmplot allowing for rapid growth and selective breeding of crops. Just... keep in mind the space weeds.
   components:
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
   - type: Fixtures
     fixtures:
       fix1:
@@ -67,6 +69,11 @@
           False: { visible: false }
   - type: PlantHolder
     drawWarnings: true
+    wateringSound:
+      path: /Audio/Effects/Fluids/slosh.ogg
+      params:
+        volume: -6
+        variation: 0.20
   - type: Destructible
     thresholds:
     - trigger:

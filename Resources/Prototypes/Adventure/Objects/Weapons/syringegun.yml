@@ -63,6 +63,7 @@
 - type: entity
   id: MagazineBattleSyringes
   name: Магазин (боевые шприцы)
+  suffix: Debug, AdvWeapons
   parent: BaseItem
   components:
   - type: Tag
@@ -97,6 +98,7 @@
 
 - type: entity
   name: Шприцемёт
+  suffix: AdvWeapons, AdvAdmin
   parent: BaseItem
   id: WeaponSyringeGun
   description: Быстрое лечение на поле боя!
@@ -163,7 +165,7 @@
 - type: entity
   id: MagazineBattleSyringesNocturine
   parent: MagazineBattleSyringes
-  suffix: ноктурин
+  suffix: ноктурин, AdvAdmin
   components:
   - type: BallisticAmmoProvider
     proto: BattleSyringeNocturine

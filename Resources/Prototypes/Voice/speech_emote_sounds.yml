@@ -406,6 +406,12 @@
 - type: emoteSounds
   id: GeneralBodyEmotes
   sounds:
+    Facepalm:
+      collection: FacepalmCollection # Adventure
+    Scratch:
+      collection: ScratchCollection # Adventure
+    Fart:
+      collection: FartCollection # Adventure
     Crunch:
       collection: CrunchCollection # Adventure
     Clap:
@@ -430,6 +436,30 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
+       
+- type: emoteSounds
+  id: ReptilianBodyEmotes
+  sounds:
+    Facepalm:
+      collection: FacepalmCollection # Adventure
+    Scratch:
+      collection: ScratchCollection # Adventure
+    Fart:
+      collection: FartCollection # Adventure
+    Crunch:
+      collection: CrunchCollection # Adventure
+    Thump:
+      collection: TailThumpCollection # Adventure Collection
+      params:
+        variation: 0.125
+    Clap:
+      collection: Claps
+    Snap:
+      collection: Snaps
+      params:
+        volume: -6
+    Salute:
+      collection: Salutes
 
 # mobs
 - type: emoteSounds

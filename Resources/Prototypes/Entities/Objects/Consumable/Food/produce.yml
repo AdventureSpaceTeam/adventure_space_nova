@@ -2280,11 +2280,13 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 5
+        maxVol: 7
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
         - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Bacteria # Adventure
           Quantity: 2
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/pea.rsi

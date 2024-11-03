@@ -2,6 +2,7 @@
   parent: BaseStorageItem
   id: PockerChipsBox
   name: коробка фишек для покера
+  suffix: AdvFun
   components:
   - type: StorageFill
     contents:

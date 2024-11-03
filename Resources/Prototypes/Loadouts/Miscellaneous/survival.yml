@@ -23,6 +23,7 @@
     - Vulpkanin # Corvax-MRP
     - Skrell # Adventure
     - PigMan # Adventure
+    - Resomi # Adventure
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
@@ -226,7 +227,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesVox
   equipment:
-    mask: ClothingMaskBreath
+    mask: ClothingMaskGasBreathingTube # Adventure
 
 - type: loadout
   id: LoadoutSpeciesBreathToolMedical
@@ -234,7 +235,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesVox
   equipment:
-    mask: ClothingMaskBreathMedical
+    mask: ClothingMaskGasBreathingTube # Adventure
 
 - type: loadout
   id: LoadoutSpeciesBreathToolSecurity
@@ -242,4 +243,4 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesVox
   equipment:
-    mask: ClothingMaskGasSecurity
+    mask: ClothingMaskGasBreathingTube # Adventure

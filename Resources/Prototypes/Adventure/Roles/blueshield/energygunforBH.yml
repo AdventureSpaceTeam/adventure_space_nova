@@ -5,7 +5,7 @@
   description: Оружие для устранения беспорядков в любом их проявлении
   components:
   - type: Sprite
-    sprite: Adventure/Roles/blueshield/energy_gun.rsi
+    sprite: Adventure/Roles/blueshield/Weapons/energy_gun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -19,7 +19,7 @@
     availableModes:
     - SemiAuto
   - type: Item
-    sprite: Adventure/Roles/blueshield/energy_gun.rsi
+    sprite: Adventure/Roles/blueshield/Weapons/energy_gun.rsi
     size: Small
   - type: ProjectileBatteryAmmoProvider
     proto: LaserBullet
@@ -48,7 +48,7 @@
   noSpawn: true
   components:
   - type: Sprite
-    sprite: Adventure/Roles/blueshield/energy_gun.rsi
+    sprite: Adventure/Roles/blueshield/Weapons/energy_gun.rsi
     layers:
     - state: redtrac
       shader: unshaded

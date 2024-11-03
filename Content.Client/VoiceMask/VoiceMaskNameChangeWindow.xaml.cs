@@ -26,6 +26,8 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
             OnNameChange?.Invoke(NameSelector.Text);
         };
 
+        ReloadVoices(); // c4llv07e tts
+
         SpeechVerbSelector.OnItemSelected += args =>
         {
             OnVerbChange?.Invoke((string?) args.Button.GetItemMetadata(args.Id));
@@ -64,7 +66,7 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
             SpeechVerbSelector.SelectId(id);
     }
 
-    public void UpdateState(string name, string? verb)
+    public void UpdateState(string name, string voice, string? verb) // c4llv07e tts
     {
         NameSelector.Text = name;
         _verb = verb;
@@ -77,5 +79,11 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
                 break;
             }
         }
+
+        // c4llv07e tts begin
+        var voiceIdx = _voices.FindIndex(v => v.ID == voice);
+        if (voiceIdx != -1)
+            VoiceSelector.Select(voiceIdx);
+        // c4llv07e tts end
     }
 }

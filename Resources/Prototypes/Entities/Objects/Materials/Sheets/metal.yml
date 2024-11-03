@@ -37,6 +37,18 @@
   name: steel
   suffix: Full
   components:
+  - type: Healing # Adventure
+    damageContainers:
+      - Synth
+      - Silicon
+    damage:
+      types:
+        Blunt: -5  
+        Heat: -5  
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -173,6 +185,18 @@
   name: plasteel
   suffix: Full
   components:
+  - type: Healing # Adventure
+    damageContainers:
+      - Synth
+      - Silicon
+    damage:
+      types:
+        Blunt: -10  
+        Heat: -10  
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Material
   - type: PhysicalComposition
     materialComposition:

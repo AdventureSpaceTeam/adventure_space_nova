@@ -6,6 +6,8 @@
   name: personal ai device
   description: Your electronic pal who's fun to be with!
   components:
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
   - type: Instrument
     allowPercussion: false
     handheld: false

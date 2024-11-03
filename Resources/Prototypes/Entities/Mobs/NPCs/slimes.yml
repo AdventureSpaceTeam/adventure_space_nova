@@ -142,6 +142,8 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
 
 - type: entity
   name: blue slime

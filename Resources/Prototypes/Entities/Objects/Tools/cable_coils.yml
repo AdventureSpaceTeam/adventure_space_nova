@@ -37,6 +37,17 @@
   suffix: Full
   description: HV cables for connecting engines to heavy duty machinery, SMESes, and substations.
   components:
+  - type: Healing # Adventure
+    damageContainers:
+      - Synth
+      - Silicon
+    damage:
+      types:
+        Shock: -15  
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
     stackType: CableHV
     baseLayer: base
@@ -104,6 +115,17 @@
   suffix: Full
   description: MV cables for connecting substations to APCs, and also powering a select few things like emitters.
   components:
+  - type: Healing # Adventure
+    damageContainers:
+      - Synth
+      - Silicon
+    damage:
+      types:
+        Shock: -10  
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
     stackType: CableMV
     baseLayer: base
@@ -169,6 +191,17 @@
   description: Low-Voltage stack of wires for connecting APCs to machines and other purposes.
   suffix: Full
   components:
+  - type: Healing # Adventure
+    damageContainers:
+      - Synth
+      - Silicon
+    damage:
+      types:
+        Shock: -5  
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Sprite
     state: coillv-30
     layers:

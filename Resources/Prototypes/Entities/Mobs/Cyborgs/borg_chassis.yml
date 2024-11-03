@@ -284,6 +284,8 @@
     interactFailureString: petting-failure-medical-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
 
 - type: entity
   id: BorgChassisService

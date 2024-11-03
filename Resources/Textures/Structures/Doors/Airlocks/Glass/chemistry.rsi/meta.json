@@ -11,6 +11,9 @@
       "name": "assembly"
     },
     {
+      "name": "open_unlit"
+    },
+    {
       "name": "bolted_unlit"
     },
     {
@@ -33,17 +36,7 @@
       ]
     },
     {
-      "name": "closing_unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
+      "name": "closing_unlit"
     },
     {
       "name": "deny_unlit",
@@ -75,17 +68,7 @@
       ]
     },
     {
-      "name": "opening_unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
+      "name": "opening_unlit"
     },
     {
       "name": "panel_closing",

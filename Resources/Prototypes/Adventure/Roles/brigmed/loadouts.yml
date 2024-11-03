@@ -1,0 +1,126 @@
+# Комбез
+- type: loadout
+  id: BrigmedicJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedic
+
+- type: loadout
+  id: BrigmedicJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtBrigmedic
+
+- type: loadoutGroup
+  id: BrigmedicJumpsuits
+  name: Бригмедик, комбинезон
+  loadouts:
+  - BrigmedicJumpsuit
+  - BrigmedicJumpskirt
+  - SecurityJumpsuit
+  - SecurityJumpskirt
+
+# шапки
+- type: loadout
+  id: BrigmedicBeretSecurity
+  equipment:
+    head: ClothingHeadHatBeretSecurityMedic
+
+- type: loadout
+  id: BrigmedicBeret
+  equipment:
+    head: ClothingHeadHatBeretBrigmedic
+
+- type: loadout
+  id: BrigmedicHelmet
+  equipment:
+    head: ClothingHeadHelmetSecurityMedic
+
+- type: loadoutGroup
+  id: BrigmedicHelmets
+  name: Бригмедик, голова
+  loadouts:
+  - BrigmedicBeretSecurity
+  - BrigmedicBeret
+  - BrigmedicHelmet
+
+# Верх. шмон
+- type: loadout
+  id: BrigmedicCoatLabSecurityMedic
+  equipment:
+    outerClothing: ClothingOuterCoatLabSecurityMedic
+
+- type: loadout
+  id: BrigmedicVestSecurityMedic
+  equipment:
+    outerClothing: ClothingOuterVestSecurityMedic
+
+- type: loadout
+  id: BrigmedicArmorMedSec
+  equipment:
+    outerClothing: ClothingOuterVestArmorMedSec
+
+- type: loadout
+  id: BrigmedicCoatAMG
+  equipment:
+    outerClothing: ClothingOuterCoatAMG
+
+- type: loadoutGroup
+  id: BrigmedicOuterClothing
+  name: Бригмедик, верхняя одежда
+  loadouts:
+  - BrigmedicCoatAMG
+  - BrigmedicVestSecurityMedic
+  - BrigmedicArmorMedSec
+  - BrigmedicCoatLabSecurityMedic
+
+# Ботинки
+- type: loadout
+  id: BrigmedicBootsRed
+  equipment:
+    shoes: ClothingShoesColorRed
+
+- type: loadoutGroup
+  id: BrigmedicBoots
+  name: Бригмедик, обувь
+  loadouts:
+  - BrigmedicBootsRed
+  - CombatBoots
+  - SecurityWinterBoots
+  - JackBoots
+
+# Сумки
+- type: loadout
+  id: BrigmedicBackpack
+  equipment:
+     back: ClothingBackpackBrigmedic
+
+- type: loadout
+  id: BrigmedicSatchel
+  equipment:
+     back: ClothingBackpackSatchelBrigmedic
+
+- type: loadout
+  id: BrigmedicDuffel
+  equipment:
+     back: ClothingBackpackDuffelBrigmedic
+
+- type: loadoutGroup
+  id: BrigmedicBackpacks
+  name: Бригмедик, рюкзак
+  loadouts:
+  - BrigmedicBackpack
+  - BrigmedicSatchel
+  - BrigmedicDuffel
+
+# лодаут роли
+- type: roleLoadout
+  id: JobBrigmedic
+  groups:
+  - BrigmedicHelmets
+  - BrigmedicJumpsuits
+  - BrigmedicBackpacks
+  - BrigmedicOuterClothing
+  - BrigmedicBoots
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity

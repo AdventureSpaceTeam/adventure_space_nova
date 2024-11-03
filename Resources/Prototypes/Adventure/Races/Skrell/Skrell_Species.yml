@@ -59,8 +59,8 @@
     RHand: MobSkrellRHand
     LLeg: MobSkrellLLeg
     RLeg: MobSkrellRLeg
-    LFoot: MobSkrellLFood
-    RFoot: MobSkrellRFood
+    LFoot: MobSkrellLFoot
+    RFoot: MobSkrellRFoot
     Eyes: MobSkrellEyes
 
 - type: humanoidBaseSprite
@@ -142,13 +142,13 @@
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: MobSkrellRFood
+  id: MobSkrellRFoot
   baseSprite:
     sprite: Adventure/Races/Skrell/Species/parts.rsi
     state: r_foot
 
 - type: humanoidBaseSprite
-  id: MobSkrellLFood
+  id: MobSkrellLFoot
   baseSprite:
     sprite: Adventure/Races/Skrell/Species/parts.rsi
     state: l_foot

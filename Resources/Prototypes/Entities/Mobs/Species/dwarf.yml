@@ -51,7 +51,7 @@
     accent: dwarf
   - type: Speech
     speechSounds: Bass
-    allowedEmotes: ['Crunch', 'Bruh'] # Adventure
+    allowedEmotes: ['Bruh'] # Adventure
   - type: HumanoidAppearance
     species: Human
     hideLayersOnEquip:

@@ -5,6 +5,8 @@
   description: Just add capitalism!
   abstract: true
   components:
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
   - type: ActionGrant
     actions:
     - ActionVendingThrow
@@ -2171,4 +2173,3 @@
     ejectDelay: 2
   - type: AccessReader
     access: [["SyndicateAgent"]]
-

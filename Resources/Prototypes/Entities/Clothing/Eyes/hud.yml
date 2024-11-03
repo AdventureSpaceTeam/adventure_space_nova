@@ -33,6 +33,7 @@
     damageContainers:
     - Inorganic
     - Silicon
+    - Synth # Adventure
 
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]

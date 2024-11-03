@@ -3,7 +3,7 @@
   id: PlasmaMagazine
   name: Плазменная батарея
   description: Батарея для заряда плазменного оружия
-  suffix: BORK
+  suffix: BORK, AdvWeapons
   parent: BaseItem
   components:
   - type: Battery
@@ -81,7 +81,7 @@
   id: WeaponPlasmaGun
   name: Плазменная винтовка
   description: Для наибольшей точности держите в двух руках!
-  suffix: BORK
+  suffix: BORK, AdvWeapons
   parent: BaseItem
   components:
   - type: Sprite
@@ -161,7 +161,7 @@
 
 - type: entity
   parent: GunSafe
-  suffix: BORK
+  suffix: BORK, AdvWeapons
   id: GunSafePlasmaGun
   name: Оружейный сейф плазменных винтовок
   components:

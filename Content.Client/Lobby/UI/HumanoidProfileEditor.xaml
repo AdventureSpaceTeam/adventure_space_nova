@@ -91,6 +91,14 @@
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SpawnPriorityButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+                                <!-- c4llv07e tts begin -->
+                                <BoxContainer HorizontalExpand="True" Visible="False" Name="TTSContainer">
+                                    <Label Text="Голос:" />
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="VoiceButton" HorizontalAlignment="Right" />
+                                    <Button Name="VoicePlayButton" Text="▶" MaxWidth="80" />
+                                </BoxContainer>
+                                <!-- c4llv07e tts end -->
                             </BoxContainer>
                             <!-- Skin -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">

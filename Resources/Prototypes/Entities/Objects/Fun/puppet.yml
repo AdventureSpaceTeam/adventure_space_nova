@@ -5,6 +5,8 @@
   suffix: Dummy
   description: It's a dummy, dummy!
   components:
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
   - type: Sprite
     sprite: Objects/Fun/mrchips.rsi
     layers:
@@ -36,6 +38,8 @@
   id: MrDips
   name: mr dips
   components:
+  - type: TTS # c4llv07e tts
+    voice: glados # TODO(c4): fix voices.
   - type: Sprite
     sprite: Objects/Fun/mrdips.rsi
     layers:

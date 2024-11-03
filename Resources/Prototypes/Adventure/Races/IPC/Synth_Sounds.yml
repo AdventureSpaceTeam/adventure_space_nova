@@ -22,12 +22,80 @@
   - /Audio/Adventure/Voice/IPC/SynthSteep3.ogg
   - /Audio/Adventure/Voice/IPC/SynthSteep4.ogg
 
+- type: soundCollection
+  id: SynthLaughCollection
+  files:
+  - /Audio/Adventure/Voice/IPC/RobotHaha1.ogg
+  - /Audio/Adventure/Voice/IPC/RobotHaha2.ogg
+  - /Audio/Adventure/Voice/IPC/RobotHaha3.ogg
+  - /Audio/Adventure/Voice/IPC/RobotHaha4.ogg
+  - /Audio/Adventure/Voice/IPC/RobotHaha5.ogg
+
+#Робофейспалм
+- type: soundCollection
+  id: RoboFacepalmCollection
+  files:
+  - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm1.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm2.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm3.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm4.ogg    
+  
+#РобоЧесотка
+- type: soundCollection
+  id: RoboScratchingCollection
+  files:
+  - /Audio/Adventure/Voice/RobotEmotions/RobotScratching1.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotScratching2.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotScratching3.ogg
+
+#РобоХруст
+- type: soundCollection
+  id: RoboCrunchCollection
+  files:
+  - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch1.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch2.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch3.ogg
+  - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch4.ogg 
+
+#Смерть
+- type: emote
+  id: SynthDeathgasp
+  name: chat-emote-name-deathgasp
+  icon: Interface/Emotes/deathgasp.png
+  chatMessages: ["замирает, его сенсоры отключаются, а модули перестают работать"]
+  whitelist:
+    requireAll: true
+    components:
+    - MobState
+    - Repairable
+
+#Сбой
+- type: emote
+  id: Crash
+  name: Сбой
+  icon: Adventure/Interface/Emotes/crash.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    - BorgChassis
+  chatMessages: ["зависает"]
+  chatTriggers:
+    - сбоит
+    - в шоке
+    - в ахуе
+    - завис
+    - зависает
+
 #эмоции
 - type: emoteSounds
   id: SynthEmote
   params:
     variation: 0.125
   sounds:
+    Laugh:
+      collection: SynthLaughCollection
     Scream:
       collection: DroidScreamCollection
     SynthDeathgasp:
@@ -36,3 +104,21 @@
       path: /Audio/Machines/twobeep.ogg
     Crash:
       path: /Audio/Adventure/Voice/IPC/SynthWindows.ogg
+
+- type: emoteSounds
+  id: SynthBodyEmotes
+  sounds:
+    Scratch:
+      collection: RoboScratchingCollection
+    Crunch:
+      collection: RoboCrunchCollection
+    Facepalm:
+      collection: RoboFacepalmCollection 
+    Clap:
+      collection: Claps
+    Snap:
+      collection: Snaps
+      params:
+        volume: -6
+    Salute:
+      collection: Salutes

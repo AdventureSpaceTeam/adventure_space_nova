@@ -1,0 +1,22 @@
+- type: reagent
+  id: Bacteria
+  name: Бактерии
+  group: Foods
+  desc: Содержатся в некоторых блюдах, крайне не полезны для здоровья организма
+  physicalDesc: Плохопахнущее
+  flavor: protein
+  color: "#FFFFE5"
+  metabolisms:
+    Food:
+      effects:
+      - !type:Emote
+        emote: Fart
+        showInChat: true
+        probability: 0.05
+      - !type:PopupMessage 
+        type: Local
+        visualType: Medium
+        messages:
+        - "Вас начинает пучить."
+        - "Ваши газы рвутся наружу."
+        probability: 0.05

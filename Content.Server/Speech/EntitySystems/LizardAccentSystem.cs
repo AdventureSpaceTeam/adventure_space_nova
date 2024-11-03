@@ -85,6 +85,22 @@ public sealed class LizardAccentSystem : EntitySystem
             _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ" })
         );
         // Corvax-Localization-End
+
+        // Adventure-Localization-Start
+        // c => ссс 
+        message = Regex.Replace(
+            message,
+            "ж+",
+            _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" })
+        );
+        // c => ссс 
+        message = Regex.Replace(
+            message,
+            "Ж+",
+            _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" })
+        );
+        // Adventure-Localization-End
+        
         args.Message = message;
     }
 }

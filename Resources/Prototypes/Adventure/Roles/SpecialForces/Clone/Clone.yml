@@ -1,0 +1,147 @@
+- type: siliconLawset
+  id: CloneLaw
+  laws:
+  - CL1
+  - CL2
+  - CL3
+  - CL4
+  - CL5
+  obeysTo: laws-owner-beings
+
+- type: siliconLaw
+  id: CL1
+  order: 1
+  lawString: "Вы обязаны беспрекословно подчиняться Центральному Командованию."
+
+- type: siliconLaw
+  id: CL2
+  order: 2
+  lawString: "Неподчинение приказу считается нарушением и подлежит наказанию."
+
+- type: siliconLaw
+  id: CL3
+  order: 3
+  lawString: "Дезертирство является предательством НТ,своих собратьев и чести. При дерезтирстве подлежит немедленный расстрел без суда."
+
+- type: siliconLaw
+  id: CL4
+  order: 4
+  lawString: "Побег с поля боя считается дезертирством."
+
+- type: siliconLaw
+  id: CL5
+  order: 5
+  lawString: "Отдать жизнь во время своей миссии - ваш долг."
+
+
+- type: entity
+  parent: MobHuman
+  id: BaseMobHumanClone
+  name: Клон-Солдат 
+  components:
+  - type: GhostRole
+    name: Клон-Солдат
+    description: У вас только одна цель в жизны - подчиняться Центральному Командованию
+  - type: GhostTakeoverAvailable
+  - type: Hunger
+    baseDecayRate: 0.0083
+  - type: Thirst
+    baseDecayRate: 0.0083
+  - type: PassiveDamage 
+    allowedStates:
+    - Alive
+    damageCap: 140
+    damage:
+      groups:
+        Brute: -0.14
+        Burn: -0.14
+        Airloss: -0.14
+        Toxin: -0.14
+        Genetic: -0.14
+  - type: ZombieImmune
+  - type: Insulated
+  - type: MindShield
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - CentCom
+  - type: ActiveRadio
+    channels:
+    - CentCom
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      250: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      80: 0.7
+      100: 0.5
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: AutoImplant
+    implants:
+    - CloneImplant
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BorgUiKey.Key
+  - type: SiliconLawBound
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+  - type: SiliconLawProvider
+    laws: CloneLaw
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - EmagImmune
+
+- type: latheRecipe
+  id: BaseMobHumanCloneFactory
+  result: BaseMobHumanClone
+  completetime: 8
+  materials:
+    Biomass: 28
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: CloneImplant
+  name: Треккер
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      whitelist:
+        components:
+        - MobState 
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Critical
+      - Dead
+    - type: Rattle
+      radioChannel: CentCom

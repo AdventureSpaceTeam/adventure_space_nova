@@ -6,8 +6,11 @@
   name: revenant
   description: A spooky ghostie.
   components:
+  - type: TTS # c4llv07e tts
+    voice: gman # TODO(c4): fix voices.
   - type: Input
     context: "ghost"
+  - type: Spectral
   - type: MovementSpeedModifier
     baseWalkSpeed: 6
     baseSprintSpeed: 6
@@ -68,9 +71,9 @@
     - StolenEssence
   - type: RandomMetadata
     nameSegments:
-    - The
+#    - The
     - RevenantType
-    - of
+#    - of
     - RevenantAdjective
     - RevenantTheme
   - type: Speech

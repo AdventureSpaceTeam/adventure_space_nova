@@ -1,0 +1,34 @@
+#берет
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBlueshieldBeret
+  name: Берет офицера синего щита
+  description: Берет из дюроткани показывает статус своего владельца.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/blueshield/Clothing/Head/blueshield_beret.rsi
+    - type: Clothing
+      sprite: Adventure/Roles/blueshield/Clothing/Head/blueshield_beret.rsi
+
+#Фуражка
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBlueshieldCap
+  name: Фуражка офицера синего щита
+  description: Не забудь отдать честь.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/blueshield/Clothing/Head/BScap-black.rsi
+    - type: Clothing
+      sprite: Adventure/Roles/blueshield/Clothing/Head/BScap-black.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBlueshieldCapBlue
+  name: Синяя фуражка офицера синего щита
+  description: Не забудь отдать честь.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/blueshield/Clothing/Head/BScap-blue.rsi
+    - type: Clothing
+      sprite: Adventure/Roles/blueshield/Clothing/Head/BScap-blue.rsi
