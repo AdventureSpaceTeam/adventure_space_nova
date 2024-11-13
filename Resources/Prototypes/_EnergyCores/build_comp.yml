@@ -387,7 +387,7 @@
 
 - type: latheRecipe
   id: EnergyCoreRnD
-  result: RNDECCPU
+  result: RNDECCPU1
   completetime: 4
   materials:
     Steel: 10000
@@ -398,7 +398,7 @@
 
 - type: latheRecipe
   id: EnergyCoreHM
-  result: HMECCPU
+  result: HMECCPU1
   completetime: 4
   materials:
     Steel: 5000
