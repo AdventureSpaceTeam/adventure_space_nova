@@ -16666,11 +16666,6 @@ entities:
       parent: 2
 - proto: BoxFolderBlack
   entities:
-  - uid: 1013
-    components:
-    - type: Transform
-      pos: 8.718838,-28.542063
-      parent: 2
   - uid: 1014
     components:
     - type: Transform
@@ -16683,11 +16678,6 @@ entities:
       parent: 2
 - proto: BoxFolderBlue
   entities:
-  - uid: 1016
-    components:
-    - type: Transform
-      pos: 8.593838,-28.432688
-      parent: 2
   - uid: 1017
     components:
     - type: Transform
@@ -16761,11 +16751,6 @@ entities:
     components:
     - type: Transform
       pos: -24.514614,-29.387
-      parent: 2
-  - uid: 1031
-    components:
-    - type: Transform
-      pos: 8.437588,-28.338938
       parent: 2
   - uid: 1032
     components:
@@ -108954,11 +108939,6 @@ entities:
     - type: Transform
       pos: 48.44803,9.740131
       parent: 2
-  - uid: 16495
-    components:
-    - type: Transform
-      pos: 8.259504,-28.56417
-      parent: 2
   - uid: 16496
     components:
     - type: Transform
@@ -112537,11 +112517,6 @@ entities:
       parent: 2
 - proto: PaperBin10
   entities:
-  - uid: 16983
-    components:
-    - type: Transform
-      pos: 4.5,-9.5
-      parent: 2
   - uid: 16984
     components:
     - type: Transform
@@ -118099,6 +118074,13 @@ entities:
       parent: 2
     - type: ApcPowerReceiver
       powerLoad: 0
+- proto: Printer
+  entities:
+  - uid: 1013
+    components:
+    - type: Transform
+      pos: 8.5,-28.5
+      parent: 2
 - proto: Protolathe
   entities:
   - uid: 17804
@@ -136776,11 +136758,6 @@ entities:
     - type: Transform
       pos: 3.5,-9.5
       parent: 2
-  - uid: 20897
-    components:
-    - type: Transform
-      pos: 4.5,-9.5
-      parent: 2
 - proto: TableWood
   entities:
   - uid: 20898
@@ -138222,6 +138199,13 @@ entities:
     components:
     - type: Transform
       pos: 28.5,-4.5
+      parent: 2
+- proto: VendingMachineBSrobe
+  entities:
+  - uid: 1016
+    components:
+    - type: Transform
+      pos: 4.5,-9.5
       parent: 2
 - proto: VendingMachineCargoDrobe
   entities:

@@ -1604,6 +1604,11 @@ entities:
             1668: -8,17
         - node:
             color: '#334E6DFF'
+            id: ConcreteTrimLineS
+          decals:
+            1672: -8,16
+        - node:
+            color: '#334E6DFF'
             id: ConcreteTrimLineW
           decals:
             1667: -9,17
@@ -8221,6 +8226,18 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 15.5,27.5
+      parent: 1
+- proto: Biogenerator
+  entities:
+  - uid: 5344
+    components:
+    - type: Transform
+      pos: 33.5,27.5
+      parent: 1
+  - uid: 5666
+    components:
+    - type: Transform
+      pos: 1.5,-2.5
       parent: 1
 - proto: BlastDoor
   entities:
@@ -33515,14 +33532,6 @@ entities:
       parent: 3769
     - type: Physics
       canCollide: False
-- proto: energygun
-  entities:
-  - uid: 11806
-    components:
-    - type: Transform
-      parent: 11805
-    - type: Physics
-      canCollide: False
 - proto: ExosuitFabricator
   entities:
   - uid: 663
@@ -55342,11 +55351,6 @@ entities:
     - type: Transform
       pos: 0.5,-2.5
       parent: 1
-  - uid: 5997
-    components:
-    - type: Transform
-      pos: 1.5,-2.5
-      parent: 1
   - uid: 5998
     components:
     - type: Transform
@@ -69571,14 +69575,6 @@ entities:
     - type: Transform
       pos: 17.5,22.5
       parent: 1
-- proto: TableReinforcedGlass
-  entities:
-  - uid: 11800
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -8.5,16.5
-      parent: 1
 - proto: TableWood
   entities:
   - uid: 165
@@ -70554,6 +70550,13 @@ entities:
     - type: Transform
       pos: -27.5,-12.5
       parent: 1
+- proto: VendingMachineBSrobe
+  entities:
+  - uid: 5997
+    components:
+    - type: Transform
+      pos: -8.5,16.5
+      parent: 1
 - proto: VendingMachineCargoDrobe
   entities:
   - uid: 1712
@@ -70704,7 +70707,9 @@ entities:
     - type: Transform
       pos: -20.5,11.5
       parent: 1
-  - uid: 5344
+- proto: VendingMachineMedicalBrig
+  entities:
+  - uid: 9518
     components:
     - type: Transform
       pos: 20.5,7.5
@@ -79906,26 +79911,6 @@ entities:
     - type: Transform
       pos: 11.5,8.5
       parent: 1
-  - uid: 11805
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -8.5,16.5
-      parent: 1
-    - type: ContainerContainer
-      containers:
-        charger_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 11806
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: WeaponDisabler
   entities:
   - uid: 5324

@@ -2,7 +2,7 @@
   parent: BaseItem
   id: BSuplink
   name: Терминал снаряжения ОСЩ
-  suffix: Adventure
+  suffix: Adventure, Old
   description: Терминал который использует офицеры синего щита для покупки снаряжения.
   components:
   - type: Item

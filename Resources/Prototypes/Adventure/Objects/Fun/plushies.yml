@@ -116,3 +116,19 @@
   components:
   - type: Sprite
     state: plushieRD
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieCentCommRG
+  name: Плюшевый ПЦК
+  suffix: AdvPlushie
+  description: Потратил все деньги центкома на акулок и пиццу... мда.
+  components:
+  - type: Sprite
+    state: icon
+    sprite: Adventure/Objects/Fun/ethan.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/cat_meow.ogg
+  - type: UseDelay
+    delay: 1.0
