@@ -294,6 +294,8 @@
   - type: ShowJobIcons
   - type: ShowMindShieldIcons
   - type: StationAiVision # Adventure
+  - type: SiliconLawProvider # Adventure
+    laws: NTDefault
 
 - type: entity
   id: BaseBorgChassisSyndicate

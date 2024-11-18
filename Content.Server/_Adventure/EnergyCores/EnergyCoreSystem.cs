@@ -166,8 +166,6 @@ public sealed partial class EnergyCoreSystem : EntitySystem
             var isOn = target.Working;
             var console = target.EnergyCoreConsoleEntity;
             var curDamage = damage.TotalDamage.Float();
-            if (console is not EntityUid entity) return;
-            _ui.SetUiState(entity, EnergyCoreConsoleUiKey.Key, new EnergyCoreConsoleUpdateState(GetNetEntity(energyCore), timeOfLife, isOn, curDamage));
             if (_timing.CurTime > target.NextTick)
             {
                 if (!TryComp<NodeContainerComponent>(target.Owner, out var component))
@@ -180,6 +178,8 @@ public sealed partial class EnergyCoreSystem : EntitySystem
                 }
                 Working(target, cur);
             }
+            if (console is not EntityUid entity) return;
+            _ui.SetUiState(entity, EnergyCoreConsoleUiKey.Key, new EnergyCoreConsoleUpdateState(GetNetEntity(energyCore), timeOfLife, isOn, curDamage));
         }
     }
 

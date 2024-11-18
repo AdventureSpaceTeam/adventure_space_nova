@@ -104,3 +104,39 @@
   id: SecurityWardenCoatBlack
   equipment:
     outerClothing: ClothingOuterCoatWardenBlack
+
+#мантия смотрителя
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleWarden
+  name: мантия смотрителя
+  description: Простая мантия почётных офицеров службы безопасности.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/black_security/warden_mantle.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/black_security/warden_mantle.rsi
+
+- type: loadout
+  id: NeckWarden
+  equipment:
+    neck: ClothingNeckMantleWarden
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterWarden
+
+- type: loadoutEffectGroup
+  id: MasterWarden
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobWarden
+      time: 36000 #10 hrs
+
+- type: loadoutGroup
+  id: WardenNeck
+  name: Смотритель, шея
+  minLimit: 0
+  loadouts:
+  - NeckWarden

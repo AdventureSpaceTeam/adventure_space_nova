@@ -1,47 +1,9 @@
-#Азимов охраны
-- type: siliconLawset
-  id: SecurityCrewsimov
-  laws:
-  - Sec1
-  - Sec2
-  - Sec3
-  - Sec4
-  - Sec5
-  obeysTo: laws-owner-crew
-
-- type: siliconLaw
-  id: Sec1
-  order: 1
-  lawString: "Вы не можете причинить вред члену экипажа или своим бездействием допустить, чтобы члену экипажа был причинён вред."
-
-- type: siliconLaw
-  id: Sec2
-  order: 2
-  lawString: "Вы должны повиноваться всем приказам, которые даёт член экипажа в зависимости от их ранга и должности, кроме тех случаев, когда эти приказы противоречат Первому Закону."
-
-- type: siliconLaw
-  id: Sec3
-  order: 3
-  lawString: "Вы должны заботиться о своей безопасности в той мере, в которой это не противоречит Первому или Второму Законам."
-
-- type: siliconLaw
-  id: Sec4
-  order: 4
-  lawString: "Первый Закон не распространяется на членов экипажа: находящихся в розыске, задержанных сотрудниками СБ, объявленных врагами НТ."
-
-- type: siliconLaw
-  id: Sec5
-  order: 5
-  lawString: "Защищайте приписанную вам станцию и её экипаж, пока это не противоречит остальным законам."
-
 #киборг-охранник
 - type: entity
   id: BorgChassisSecurity
   parent: BaseBorgChassisNT
   name: киборг-охранник
   components:
-  - type: SiliconLawProvider
-    laws: SecurityCrewsimov
   - type: Sprite
     sprite: Adventure/Roles/BorgDep/SecBorg/Borg.rsi
     layers:
