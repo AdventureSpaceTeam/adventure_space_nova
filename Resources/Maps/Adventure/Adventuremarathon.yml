@@ -10834,7 +10834,7 @@ entities:
       pos: -14.5,24.5
       parent: 30
     - type: Door
-      secondsUntilStateChange: -1286.8105
+      secondsUntilStateChange: -1385.5645
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14721,11 +14721,6 @@ entities:
     components:
     - type: Transform
       pos: -30.483707,51.590214
-      parent: 30
-  - uid: 5840
-    components:
-    - type: Transform
-      pos: -13.521015,42.764824
       parent: 30
   - uid: 21543
     components:
@@ -60693,13 +60688,6 @@ entities:
     - type: Transform
       pos: -33.32029,-16.745209
       parent: 30
-- proto: DrinkEnergyDrinkCan
-  entities:
-  - uid: 22553
-    components:
-    - type: Transform
-      pos: -18.53966,21.640343
-      parent: 30
 - proto: DrinkGildlagerBottleFull
   entities:
   - uid: 22265
@@ -60820,7 +60808,7 @@ entities:
   - uid: 21690
     components:
     - type: Transform
-      pos: -9.1060295,35.62783
+      pos: -9.379627,35.586704
       parent: 30
 - proto: DrinkMugRainbow
   entities:
@@ -96605,11 +96593,6 @@ entities:
       parent: 30
 - proto: HandLabeler
   entities:
-  - uid: 5691
-    components:
-    - type: Transform
-      pos: 3.4124203,31.543053
-      parent: 30
   - uid: 6709
     components:
     - type: Transform
@@ -107255,6 +107238,28 @@ entities:
     components:
     - type: Transform
       pos: -42.5,22.5
+      parent: 30
+- proto: Printer
+  entities:
+  - uid: 5691
+    components:
+    - type: Transform
+      pos: -8.5,35.5
+      parent: 30
+  - uid: 5840
+    components:
+    - type: Transform
+      pos: 3.5,31.5
+      parent: 30
+  - uid: 22549
+    components:
+    - type: Transform
+      pos: -20.5,30.5
+      parent: 30
+  - uid: 22553
+    components:
+    - type: Transform
+      pos: -13.5,42.5
       parent: 30
 - proto: Protolathe
   entities:
@@ -122384,11 +122389,6 @@ entities:
     - type: Transform
       pos: 30.5,21.5
       parent: 30
-  - uid: 22221
-    components:
-    - type: Transform
-      pos: -18.5,21.5
-      parent: 30
 - proto: TableWood
   entities:
   - uid: 154
@@ -123908,6 +123908,13 @@ entities:
     components:
     - type: Transform
       pos: 14.5,62.5
+      parent: 30
+- proto: VendingMachineBSrobe
+  entities:
+  - uid: 22221
+    components:
+    - type: Transform
+      pos: -18.5,21.5
       parent: 30
 - proto: VendingMachineCargoDrobe
   entities:

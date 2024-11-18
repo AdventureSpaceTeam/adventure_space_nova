@@ -76,7 +76,7 @@
     sprite: Adventure/EnergyCores/sphere/sphere_big.rsi
     state: fly
   discipline: Experimental
-  tier: 3
+  tier: 2
   cost: 25000
   recipeUnlocks:
   - EnergyCoreCircuitboard

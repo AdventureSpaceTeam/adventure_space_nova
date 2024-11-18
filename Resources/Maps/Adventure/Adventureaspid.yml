@@ -7403,7 +7403,7 @@ entities:
             0: 65534
           -1,-5:
             0: 32768
-            6: 12
+            1: 12
             2: 3857
           0,-4:
             0: 65295
@@ -7479,7 +7479,7 @@ entities:
             0: 65535
           2,0:
             0: 4377
-            1: 52416
+            3: 52416
           2,-5:
             0: 36312
           3,-4:
@@ -7495,7 +7495,7 @@ entities:
             2: 8
           3,0:
             0: 52940
-            1: 4368
+            3: 4368
           4,-4:
             0: 65535
           4,-3:
@@ -7744,17 +7744,17 @@ entities:
             0: 4369
           -8,-4:
             0: 32981
-            1: 12288
+            3: 12288
           -8,-5:
             0: 64965
           -9,-4:
             0: 13311
-            1: 32768
+            3: 32768
           -8,-3:
-            1: 3
+            3: 3
             0: 65288
           -9,-3:
-            1: 8
+            3: 8
             0: 55603
           -8,-2:
             0: 47935
@@ -8316,32 +8316,32 @@ entities:
             2: 20309
           0,-8:
             2: 17479
-            3: 256
+            4: 256
           -1,-8:
             2: 4383
-            3: 3072
+            4: 3072
           0,-7:
-            4: 1
-            3: 256
+            5: 1
+            4: 256
             2: 17476
           -1,-7:
-            4: 12
-            3: 3072
+            5: 12
+            4: 3072
             2: 4369
           0,-6:
-            3: 1
-            5: 256
+            4: 1
+            6: 256
             2: 17476
           -1,-6:
-            3: 12
-            5: 3072
+            4: 12
+            6: 3072
             2: 4369
           0,-5:
-            6: 1
+            1: 1
             2: 1860
           0,-9:
             2: 17476
-            3: 273
+            4: 273
             0: 32
           1,-8:
             0: 65532
@@ -8412,7 +8412,7 @@ entities:
             0: 30583
           -1,-9:
             2: 4369
-            3: 3276
+            4: 3276
           -12,13:
             2: 8946
           -13,13:
@@ -9041,10 +9041,10 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 235
+          temperature: 293.15
           moles:
-          - 21.824879
-          - 82.10312
+          - 6666.982
+          - 0
           - 0
           - 0
           - 0
@@ -9071,6 +9071,21 @@ entities:
           - 0
           - 0
         - volume: 2500
+          temperature: 235
+          moles:
+          - 21.824879
+          - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
           temperature: 293.15
           moles:
           - 0
@@ -9105,21 +9120,6 @@ entities:
           moles:
           - 0
           - 6666.982
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 6666.982
-          - 0
           - 0
           - 0
           - 0
@@ -11234,7 +11234,7 @@ entities:
       pos: 12.5,-19.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -97783.19
+      secondsUntilStateChange: -98931.445
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12167,6 +12167,12 @@ entities:
     - type: Transform
       pos: 28.5,10.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -91.400406
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
 - proto: AirlockHeadOfSecurityGlassLocked
   entities:
   - uid: 8220
@@ -12246,13 +12252,6 @@ entities:
     components:
     - type: Transform
       pos: 23.5,51.5
-      parent: 1
-- proto: AirlockMaintCommandLocked
-  entities:
-  - uid: 6934
-    components:
-    - type: Transform
-      pos: 24.5,30.5
       parent: 1
 - proto: AirlockMaintEngiLocked
   entities:
@@ -12335,6 +12334,11 @@ entities:
     components:
     - type: Transform
       pos: -27.5,-10.5
+      parent: 1
+  - uid: 6279
+    components:
+    - type: Transform
+      pos: 24.5,30.5
       parent: 1
   - uid: 6779
     components:
@@ -12739,7 +12743,7 @@ entities:
       pos: -29.5,48.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -47516.883
+      secondsUntilStateChange: -48665.137
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14428,6 +14432,11 @@ entities:
     - type: Transform
       pos: -7.5,40.5
       parent: 1
+  - uid: 10541
+    components:
+    - type: Transform
+      pos: -4.5,40.5
+      parent: 1
 - proto: BedsheetQM
   entities:
   - uid: 9324
@@ -14972,7 +14981,7 @@ entities:
   - uid: 9270
     components:
     - type: Transform
-      pos: 24.172997,11.661996
+      pos: 23.525434,11.312889
       parent: 1
   - uid: 13472
     components:
@@ -16595,6 +16604,11 @@ entities:
     - type: Transform
       pos: 1.5,-5.5
       parent: 8756
+  - uid: 9226
+    components:
+    - type: Transform
+      pos: -6.5,71.5
+      parent: 1
   - uid: 9296
     components:
     - type: Transform
@@ -49364,7 +49378,7 @@ entities:
   - uid: 9271
     components:
     - type: Transform
-      pos: 24.589664,11.557829
+      pos: 23.886545,11.808999
       parent: 1
   - uid: 15422
     components:
@@ -56418,11 +56432,6 @@ entities:
     - type: Transform
       pos: 26.5,53.5
       parent: 1
-  - uid: 6279
-    components:
-    - type: Transform
-      pos: 11.5,70.5
-      parent: 1
   - uid: 6503
     components:
     - type: Transform
@@ -57680,20 +57689,6 @@ entities:
       parent: 1
     - type: FaxMachine
       name: Engineering
-  - uid: 9226
-    components:
-    - type: Transform
-      pos: 24.5,4.5
-      parent: 1
-    - type: FaxMachine
-      name: HoP's Office
-  - uid: 10541
-    components:
-    - type: Transform
-      pos: 10.5,70.5
-      parent: 1
-    - type: FaxMachine
-      name: Синий щит
   - uid: 15421
     components:
     - type: Transform
@@ -57715,6 +57710,18 @@ entities:
       parent: 8756
     - type: FaxMachine
       name: Captain's Private Shuttle
+  - uid: 18636
+    components:
+    - type: Transform
+      pos: 11.5,70.5
+      parent: 1
+  - uid: 18637
+    components:
+    - type: Transform
+      pos: 24.5,11.5
+      parent: 1
+    - type: FaxMachine
+      name: HoP's Office
 - proto: FaxMachineCaptain
   entities:
   - uid: 6800
@@ -59293,7 +59300,7 @@ entities:
       pos: 2.5,16.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -94743.32
+      secondsUntilStateChange: -95891.58
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 184.2664844
@@ -59303,7 +59310,7 @@ entities:
       pos: 3.5,16.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -78071.93
+      secondsUntilStateChange: -79220.19
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 184.6998173
@@ -59373,7 +59380,7 @@ entities:
       pos: -31.5,16.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -22747.629
+      secondsUntilStateChange: -23895.885
       state: Closing
   - uid: 5679
     components:
@@ -59817,7 +59824,7 @@ entities:
       pos: -30.5,-6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -52047.277
+      secondsUntilStateChange: -53195.53
       state: Closing
   - uid: 5809
     components:
@@ -60466,7 +60473,7 @@ entities:
       pos: -11.5,37.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -91416.086
+      secondsUntilStateChange: -92564.34
       state: Closing
   - uid: 9591
     components:
@@ -90317,7 +90324,7 @@ entities:
   - uid: 9273
     components:
     - type: Transform
-      pos: 24.527164,11.786996
+      pos: 23.997658,11.586776
       parent: 1
 - proto: PersonalAI
   entities:
@@ -94099,6 +94106,13 @@ entities:
     components:
     - type: Transform
       pos: 8.634878,22.739527
+      parent: 1
+- proto: Printer
+  entities:
+  - uid: 8241
+    components:
+    - type: Transform
+      pos: 24.5,4.5
       parent: 1
 - proto: Protolathe
   entities:
@@ -107167,6 +107181,11 @@ entities:
     - type: Transform
       pos: -15.5,58.5
       parent: 1
+  - uid: 6934
+    components:
+    - type: Transform
+      pos: 11.5,70.5
+      parent: 1
   - uid: 7252
     components:
     - type: Transform
@@ -107181,11 +107200,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,71.5
-      parent: 1
-  - uid: 8455
-    components:
-    - type: Transform
-      pos: 10.5,70.5
       parent: 1
   - uid: 8456
     components:
@@ -108435,6 +108449,13 @@ entities:
     components:
     - type: Transform
       pos: -35.5,56.5
+      parent: 1
+- proto: VendingMachineBSrobe
+  entities:
+  - uid: 8455
+    components:
+    - type: Transform
+      pos: 10.5,70.5
       parent: 1
 - proto: VendingMachineCargoDrobe
   entities:
