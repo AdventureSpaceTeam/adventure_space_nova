@@ -1,5 +1,4 @@
 using Content.Server._Adventure.TTS; // c4llv07e tts
-using Content.Server._Adventure.Sponsors; // c4llv07e sponsors
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -40,7 +39,6 @@ namespace Content.Server.IoC
         public static void Register()
         {
             IoCManager.Register<TTSManager>(); // c4llv07e tts
-            IoCManager.Register<SponsorsManager>(); // c4llv07e sponsors
             IoCManager.Register<IChatManager, ChatManager>();
             IoCManager.Register<ISharedChatManager, ChatManager>();
             IoCManager.Register<IChatSanitizationManager, ChatSanitizationManager>();

@@ -1,7 +1,6 @@
 - type: entity
   parent: SeedBase
   name: пакет спор (стеклошляпник)
-  suffix: AdvBotany
   id: GlasscapSeeds
   components:
     - type: Seed
@@ -32,7 +31,6 @@
   
 - type: entity
   name: бревно стеклошляпника
-  suffix: AdvBotany
   description: Кто сказал, что стекло не растёт на деревьях?
   id: GlassLog
   parent: ProduceBase

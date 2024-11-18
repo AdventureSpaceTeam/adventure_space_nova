@@ -37,17 +37,17 @@
 - type: entity
   parent: MobHuman
   id: BaseMobHumanClone
-  name: Клон-Солдат
+  name: Клон-Солдат 
   components:
   - type: GhostRole
     name: Клон-Солдат
-    description: У вас только одна цель в жизни - подчиняться Центральному Командованию
+    description: У вас только одна цель в жизны - подчиняться Центральному Командованию
   - type: GhostTakeoverAvailable
   - type: Hunger
     baseDecayRate: 0.0083
   - type: Thirst
     baseDecayRate: 0.0083
-  - type: PassiveDamage
+  - type: PassiveDamage 
     allowedStates:
     - Alive
     damageCap: 140
@@ -109,7 +109,7 @@
     damageContainers:
     - Biological
   - type: ShowHealthIcons
-    damageContainers:
+    damageContainers: 
     - Biological
   - type: ShowJobIcons
   - type: ShowMindShieldIcons
@@ -138,7 +138,7 @@
       permanent: true
       whitelist:
         components:
-        - MobState
+        - MobState 
     - type: TriggerOnMobstateChange
       mobState:
       - Critical

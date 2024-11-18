@@ -1,8 +1,4 @@
-﻿- type: metabolizerType
-  id: PigMan
-  name: Свинолюд
-
-- type: entity
+﻿- type: entity
   id: OrganPigManStomach
   parent: OrganHumanStomach
   name: Желудок троттина
@@ -22,22 +18,7 @@
   - type: Stomach
   - type: Metabolizer
     maxReagents: 5
-    metabolizerTypes: [PigMan]
-
-- type: entity
-  id: OrganPigManHeart
-  parent: OrganHumanHeart
-  name: Сердце троттина
-  description: тук тук
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Metabolizer
-    maxReagents: 2
-    metabolizerTypes: [ PigMan ]
-    groups:
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
+    metabolizerTypes: [Animal]
 
 #Тело Троттина
 - type: body
@@ -60,7 +41,7 @@
       - right leg
       - left leg
       organs:
-        heart: OrganPigManHeart
+        heart: OrganHumanHeart
         lungs: OrganHumanLungs
         stomach: OrganPigManStomach
         liver: OrganHumanLiver

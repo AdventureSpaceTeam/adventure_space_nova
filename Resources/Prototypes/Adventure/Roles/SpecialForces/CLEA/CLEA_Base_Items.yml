@@ -117,7 +117,7 @@
 
 #РПС ЦСС
 - type: entity
-  parent: [ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase]
+  parent: ClothingBeltSecurityWebbing
   id: ClothingBeltMilitaryWebbingCLEA
   name: РПС ЦСС
   description: не сковывает движений!

@@ -2,7 +2,7 @@
   id: SecurityIcon
   abstract: true
   priority: 3
-  offset: 0 # Adventure-Resprite
+  offset: 1
   locationPreference: Left # Corvax-TypingIndicator
   isShaded: true
 

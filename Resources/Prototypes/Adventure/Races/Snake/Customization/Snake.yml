@@ -10,17 +10,6 @@
     state: Snake_tail_big
 
 - type: marking
-  id: SnakeTailsTwisty
-  bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
-  forcedColoring: true
-  speciesRestriction: [Zerah]
-  sprites:
-  - sprite: Adventure/Races/Snake/Customization/Tails48.rsi
-    state: Snake_tail_twisty
-
-- type: marking
   id: SnakeCollarCobra
   bodyPart: HeadSide
   markingCategory: HeadSide

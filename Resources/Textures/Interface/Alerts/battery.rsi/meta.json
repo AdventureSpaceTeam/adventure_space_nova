@@ -1,14 +1,20 @@
 {
   "version": 1,
   "license": "CC0-1.0",
-  "copyright": "made by borkroman",
+  "copyright": "Created by EmoGarbage404 (github) for Space Station 14.",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "battery0"
+      "name": "battery0",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     },
     {
       "name": "battery1"

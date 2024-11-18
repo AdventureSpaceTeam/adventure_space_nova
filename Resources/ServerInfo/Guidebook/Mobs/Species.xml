@@ -20,8 +20,6 @@
   <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>
   <GuideEntityEmbed Entity="MobZerah" Caption="Зерах"/>
   <GuideEntityEmbed Entity="MobSynth" Caption="КПБ"/>
-  <GuideEntityEmbed Entity="MobResomi" Caption="Резоми"/>
-  <GuideEntityEmbed Entity="MobDrask" Caption="Драск"/>
   </Box>
 
 </Document>

@@ -1,5 +1,4 @@
-using Content.Server._Adventure.TTS; // c4llv07e tts
-using Content.Server._Adventure.Sponsors; // c4llv07e sponsors
+using Content.Server._Adventure.TTS;
 using Content.Server.Acz;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
@@ -111,7 +110,6 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<ServerApi>().Initialize();
 
                 IoCManager.Resolve<TTSManager>().Initialize(); // c4llv07e tts
-                IoCManager.Resolve<SponsorsManager>().Initialize(); // c4llv07e sponsors
                 IoCManager.Resolve<AdventureConfigManager>().Initialize(); // AdvSpace Config
 
                 _voteManager.Initialize();

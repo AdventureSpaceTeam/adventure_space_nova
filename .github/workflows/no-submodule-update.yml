@@ -1,9 +1,11 @@
 name: No submodule update checker
 
-on:
-  pull_request:
-    paths:
-      - 'RobustToolbox'
+# c4llv07e disable automatic workflows begin
+# on:
+#   pull_request:
+#     paths:
+#       - 'RobustToolbox'
+# c4llv07e disable automatic workflows end
 
 jobs:
   this_aint_right:

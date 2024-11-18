@@ -10,7 +10,6 @@
     voice: gman # TODO(c4): fix voices.
   - type: Input
     context: "ghost"
-  - type: Spectral
   - type: MovementSpeedModifier
     baseWalkSpeed: 6
     baseSprintSpeed: 6

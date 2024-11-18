@@ -163,7 +163,6 @@
       - FoodPlateSmallPlastic
       - FoodBowlBig
       - FoodPlateTin
-      - FoodPlateMuffinTin
       - FoodKebabSkewer
       - SprayBottle
       - MopItem
@@ -200,9 +199,11 @@
       - WetFloorSign
       - ClothingHeadHatCone
       - FreezerElectronics
+      - Flare
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
+      - BoxShotgunFlare
       - BoxShotgunSlug
       - CombatKnife
       - MagazineBoxLightRifle
@@ -317,8 +318,6 @@
       - SignallerAdvanced
       - SignalTrigger
       - VoiceTrigger
-      - EnergyCoreRnD
-      - EnergyCoreHM
       - Igniter
       - HandHeldMassScanner
       - PowerCellMicroreactor
@@ -511,7 +510,6 @@
       - GasRecyclerMachineCircuitboard
       - SeedExtractorMachineCircuitboard
       - AnalysisComputerCircuitboard
-      - EnergyCoreCircuitboard
       - ExosuitFabricatorMachineCircuitboard
       - AnomalyVesselCircuitboard
       - AnomalyVesselExperimentalCircuitboard
@@ -736,6 +734,7 @@
     runningState: icon
     staticRecipes:
       - BoxLethalshot
+      - BoxShotgunFlare
       - BoxShotgunPractice
       - BoxShotgunSlug
       - ClothingEyesHudSecurity
@@ -772,7 +771,6 @@
       - TargetHuman
       - TargetSyndicate
       - WeaponDisablerPractice
-      - WeaponFlareGunSecurity
       - WeaponLaserCarbinePractice
       - Zipties
     dynamicRecipes:
@@ -863,6 +861,7 @@
       runningState: icon
       staticRecipes:
         - BoxLethalshot
+        - BoxShotgunFlare
         - BoxShotgunSlug
         - BoxShellTranquilizer
         - MagazineBoxLightRifle

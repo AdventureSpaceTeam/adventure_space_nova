@@ -18,7 +18,6 @@
   parent: BaseFlowerBouquet
   id: EngBouquet
   name: букет инженерных тюльпанов
-  suffix: AdvFun
   components:
   - type: Construction
     graph: EngTulipBouquet
@@ -70,7 +69,6 @@
   parent: BaseFlowerBouquet
   id: RoseBouquet
   name: букет роз
-  suffix: AdvFun
   components:
   - type: Construction
     graph: RosesBouquet
@@ -145,7 +143,6 @@
   parent: BaseFlowerBouquet
   id: OrchBouquet
   name: орхидеевый букет
-  suffix: AdvFun
   components:
   - type: Construction
     graph: OrchFlowBouquet
@@ -205,7 +202,6 @@
   parent: BaseFlowerBouquet
   id: Flowbouquet
   name: цветочный букет
-  suffix: AdvFun
   components:
   - type: Construction
     graph: TulipBouquet
@@ -280,7 +276,6 @@
   parent: BaseFlowerBouquet
   id: MixedBouquet
   name: ассорти букет
-  suffix: AdvFun
   components:
   - type: Construction
     graph: MixedFlowBouquet

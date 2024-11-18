@@ -179,9 +179,6 @@
       effects:
         - !type:HealthChange
           conditions:
-          - !type:OrganType # Adventure
-            type: Drask
-            shouldHave: false
           - !type:Temperature
             # this is a little arbitrary but they gotta be pretty cold
             max: 213.0
@@ -659,16 +656,8 @@
       effects:
         - !type:SatiateThirst
           factor: 6
-          conditions: # Adventure
-          - !type:OrganType 
-            type: Drask
-            shouldHave: false
         - !type:ModifyBloodLevel
           amount: 6
-          conditions: # Adventure
-          - !type:OrganType 
-            type: Drask
-            shouldHave: false
 
 - type: reagent
   id: Siderlac

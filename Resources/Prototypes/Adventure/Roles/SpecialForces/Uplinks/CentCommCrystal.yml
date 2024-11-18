@@ -13,7 +13,7 @@
     size: Tiny
   - type: Stack
     count: 20
-    stackType: CentCommCrystal
+    stackType: Telecrystal
   - type: StaticPrice
     price: 0
   - type: StackPrice
@@ -37,9 +37,3 @@
   cash:
     1: CentCommCrystal1
   canWithdraw: true
-
-- type: stack
-  id: CentCommCrystal
-  name: Блюспейс Кристаллы
-  icon: Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi
-  spawn: CentCommCrystal1

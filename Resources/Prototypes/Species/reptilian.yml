@@ -11,8 +11,8 @@
   maleFirstNames: names_reptilian_male
   femaleFirstNames: names_reptilian_female
   naming: FirstDashFirst
-  minAge: 14 # Adventure
-  youngAge: 20 # Adventure
+  minAge: 10 # Adventure
+  youngAge: 17 # Adventure
   oldAge: 33 # Adventure
   maxAge: 55 # Adventure
 

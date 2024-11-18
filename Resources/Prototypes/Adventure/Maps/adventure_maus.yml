@@ -16,7 +16,9 @@
            !type:NanotrasenNameGenerator
             prefixCreator: "Z"
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
+          emergencyShuttlePath: /Maps/Shuttles/emergency_maus.yml
+        - type: StationCargoShuttle
+          path: /Maps/Shuttles/cargo_maus.yml
         - type: StationJobs
           availableJobs:
             CargoTechnician: [ 2, 2 ]
@@ -65,4 +67,3 @@
             JanitorBorg: [ 1, 1 ]
             MedicalBorg: [ 1, 1 ]
             ServiceBorg: [ 1, 1 ]
-            SecurityBorg: [ 1, 1 ]

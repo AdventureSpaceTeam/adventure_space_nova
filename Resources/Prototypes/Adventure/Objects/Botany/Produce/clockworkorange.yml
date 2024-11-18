@@ -1,7 +1,6 @@
 - type: entity
   parent: SeedBase
   name: пакет семян (заводной апельсин)
-  suffix: AdvBotany
   id: ClockworkOrangeSeeds
   components:
     - type: Seed
@@ -41,7 +40,6 @@
 
 - type: entity
   name: заводной апельсин
-  suffix: AdvBotany
   parent: FoodLemon
   id: FoodClockworkOrange
   description: Отдаёт молоком.

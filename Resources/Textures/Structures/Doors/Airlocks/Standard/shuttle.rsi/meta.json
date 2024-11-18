@@ -38,12 +38,30 @@
     ]
     },
     {
-      "name": "closing_unlit"
+      "name": "closing_unlit",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+      ]
+    ]
     },
     {
       "name": "deny_unlit",
       "delays": [
         [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
           0.2,
           0.2
       ]
@@ -68,7 +86,19 @@
     ]
     },
     {
-      "name": "opening_unlit"
+      "name": "opening_unlit",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+      ]
+    ]
     },
     {
       "name": "panel_closing",

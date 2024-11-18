@@ -50,10 +50,8 @@
   - type: Wires
     layoutId: Docking
   - type: Door
-    closeTimeOne: 0.8 # Adventure
-    closeTimeTwo: 0.8 # Adventure
-    openTimeOne: 0.8 # Adventure
-    openTimeTwo: 0.8 # Adventure
+    closeTimeTwo: 0.4
+    openTimeTwo: 0.4
     crushDamage:
       types:
         Blunt: 15
@@ -63,8 +61,6 @@
       path: /Audio/Effects/docking.ogg
     denySound:
       path: /Audio/Machines/airlock_deny.ogg
-    openingAnimationTime: 1.6 # Adventure
-    closingAnimationTime: 1.6 # Adventure
   - type: Airtight
     noAirWhenFullyAirBlocked: false
     airBlockedDirection:

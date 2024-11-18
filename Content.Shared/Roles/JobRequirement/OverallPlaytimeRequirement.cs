@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Shared.Localizations;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Preferences;
 using JetBrains.Annotations;
@@ -28,7 +27,7 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
         var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
         var overallDiffSpan = Time - overallTime;
         var overallDiff = overallDiffSpan.TotalMinutes;
-        var formattedOverallDiff = ContentLocalizationManager.FormatPlaytime(overallDiffSpan);
+        var formattedOverallDiff = overallDiffSpan.ToString(Loc.GetString("role-timer-time-format"));
 
         if (!Inverted)
         {

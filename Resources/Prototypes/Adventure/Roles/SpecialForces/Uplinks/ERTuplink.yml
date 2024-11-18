@@ -25,10 +25,12 @@
   - type: Store
     categories:
       - ERTweapons
+      - ERTpistol
       - ERTammo
       - ERTmore
       - ERTbombs
       - ERTmedicine
+      - ERTnanit
     currencyWhitelist:
       - CentCommCrystal
     balance:
@@ -62,16 +64,18 @@
     categories:
       - ERTweapons
       - ERTammo
+      - ERTpistol
       - ERTmore
       - ERTmedic
       - ERTbombs
       - ERTmedicine
       - ERTengi
+      - ERTnanit
       - ERTleader
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 30
 
 # Аплинк медика
 - type: entity
@@ -99,16 +103,17 @@
     price: 100
   - type: Store
     categories:
-      - ERTweapons
       - ERTammo
+      - ERTpistol
       - ERTmore
       - ERTbombs
+      - ERTnanit
       - ERTmedicine
       - ERTmedic
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 25
 
 # Аплинк инженера
 - type: entity
@@ -136,16 +141,17 @@
     price: 100
   - type: Store
     categories:
-      - ERTweapons
       - ERTammo
+      - ERTpistol
       - ERTmore
       - ERTbombs
       - ERTmedicine
       - ERTengi
+      - ERTnanit
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 25
 
 # Аплинк уборщика
 - type: entity
@@ -173,16 +179,17 @@
     price: 100
   - type: Store
     categories:
-      - ERTweapons
       - ERTammo
+      - ERTpistol
       - ERTmore
       - ERTbombs
       - ERTmedicine
+      - ERTnanit
       - ERTjanitor
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 25
 
 # Аплинк священника
 - type: entity
@@ -210,16 +217,17 @@
     price: 100
   - type: Store
     categories:
-      - ERTweapons
       - ERTammo
+      - ERTpistol
       - ERTmore
       - ERTbombs
       - ERTmedicine
+      - ERTnanit
       - ERTlight
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 25
 
 # Предметы аплинка - Оружие
 - type: storeCategory
@@ -227,92 +235,83 @@
   name: Оружие
 
 - type: listing
-  id: WeaponPistolMk58ERT
-  productEntity: WeaponPistolMk58
-  cost: 
-    CentCommCrystal: 2 
-  categories:
-  - ERTweapons
-
-- type: listing
-  id: WeaponDisablerERTs
-  productEntity: WeaponDisabler
-  cost: 
-    CentCommCrystal: 3 
-  categories:
-  - ERTweapons
-
-- type: listing
-  id: WeaponPulsePistolERT
-  productEntity: WeaponPulsePistol
-  cost: 
-    CentCommCrystal: 7 
-  categories:
-  - ERTweapons
-
-- type: listing
-  id: WeaponPistolN1984ERT
-  productEntity: WeaponPistolN1984
-  cost: 
-    CentCommCrystal: 7
-  categories:
-  - ERTweapons
-
-- type: listing
-  id: WeaponSubMachineGunWt550ERTs
+  id: WeaponSubMachineGunWt550ERT
   productEntity: WeaponSubMachineGunWt550
-  cost: 
-    CentCommCrystal: 15 
+  cost:
+    CentCommCrystal: 10
   categories:
   - ERTweapons
 
 - type: listing
   id: WeaponRifleLecterERT
   productEntity: WeaponRifleLecter
-  cost: 
-    CentCommCrystal: 15 
+  cost:
+    CentCommCrystal: 15
   categories:
   - ERTweapons
 
 - type: listing
-  id: WeaponRifleM90GrenadeLauncherERT
-  productEntity: WeaponRifleM90GrenadeLauncher
-  cost: 
-    CentCommCrystal: 15 
-  categories:
-  - ERTweapons
-
-- type: listing
-  id: WeaponShotgunEnforcerERT
-  productEntity: WeaponShotgunEnforcer
-  cost: 
-    CentCommCrystal: 15 
+  id: EnergySwordERTs
+  productEntity: EnergySwordERT
+  cost:
+    CentCommCrystal: 12
   categories:
   - ERTweapons
 
 - type: listing
   id: WeaponPulseCarbineERT
   productEntity: WeaponPulseCarbine
-  cost: 
+  cost:
+    CentCommCrystal: 16
+  categories:
+  - ERTweapons
+
+- type: listing
+  id: WeaponPulseRifleERT
+  productEntity: WeaponPulseRifle
+  cost:
     CentCommCrystal: 20
   categories:
   - ERTweapons
+# /Предметы аплинка - Оружие
+
+# Предметы аплинка - Пистолеты
+- type: storeCategory
+  id: ERTpistol
+  name: Пистолеты
 
 - type: listing
-  id: WeaponTaserERT
-  productEntity: WeaponTaser
-  cost: 
-    CentCommCrystal: 20 
-  categories:
-  - ERTweapons
-
-- type: listing
-  id: WeaponAdvancedLaserERT
-  productEntity: WeaponAdvancedLaser
+  id: WeaponRevolverMatebaERT
+  productEntity: WeaponRevolverMateba
   cost:
-    CentCommCrystal: 21
+    CentCommCrystal: 4
   categories:
-  - ERTweapons
+  - ERTpistol
+
+- type: listing
+  id: WeaponPulsePistolERT
+  productEntity: WeaponPulsePistol
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - ERTpistol
+
+- type: listing
+  id: WeaponPistolMk58ERT
+  productEntity: WeaponPistolMk58
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - ERTpistol
+
+- type: listing
+  id: WeaponDisablerERT
+  productEntity: WeaponDisabler
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - ERTpistol
+# /Предметы аплинка - Пистолеты
 
 # Предметы аплинка - Боеприпасы
 - type: storeCategory
@@ -320,87 +319,95 @@
   name: Боеприпасы
 
 - type: listing
-  id: MagazinePistolERT
-  productEntity: MagazinePistol
-  description: Магазин калибра 35 авто. Подходящий для простых пистолетов
-  cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTammo
-
-- type: listing
-  id: MagazineMagnumERT
-  productEntity: MagazineMagnum
-  description: Магазин калибра 45 магнум. Подходящий для тяжёлых пистолетов или револьверов.
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - ERTammo
-
-- type: listing
   id: MagazineRifleERT
   productEntity: MagazineRifle
-  description: Магазин калибра 20. Винтовочный подходящий для автоматов.
+  description: Магазин калибра 20. Винтовочный подходящий для лектера.
+  cost:
+    CentCommCrystal: 6
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazineRifleIncendiaryERT
+  productEntity: MagazineRifleIncendiary
+  description: Магазин калибра 20. Винтовочный подходящий для лектера.
+  cost:
+    CentCommCrystal: 6
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazineRifleUraniumERT
+  productEntity: MagazineRifleUranium
+  description: Магазин калибра 20. Винтовочный подходящий для лектера.
+  cost:
+    CentCommCrystal: 6
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazinePistolERT
+  productEntity: MagazinePistol
+  description: Магазин калибра 35 авто. Подходящий для простых пистолетов.
   cost:
     CentCommCrystal: 2
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazinePistolIncendiaryERT
+  productEntity: MagazinePistolIncendiary
+  description: Магазин калибра 35 авто. Подходящий для простых пистолетов.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazinePistolUraniumERT
+  productEntity: MagazinePistolUranium
+  description: Магазин калибра 35 авто. Подходящий для простых пистолетов.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - ERTammo
+
+- type: listing
+  id: SpeedLoaderMagnumERT
+  productEntity: SpeedLoaderMagnum
+  description: Магазин калибра 45 магнум. Подходит для револьверов.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - ERTammo
+
+- type: listing
+  id: SpeedLoaderMagnumIncendiaryERT
+  productEntity: SpeedLoaderMagnumIncendiary
+  description: Магазин калибра 45 магнум. Подходит для револьверов.
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - ERTammo
+
+- type: listing
+  id: SpeedLoaderMagnumUraniumERT
+  productEntity: SpeedLoaderMagnumUranium
+  description: Магазин калибра 45 магнум. Подходит для револьверов.
+  cost:
+    CentCommCrystal: 4
   categories:
   - ERTammo
 
 - type: listing
   id: MagazinePistolSubMachineGunTopMountedERT
   productEntity: MagazinePistolSubMachineGunTopMounted
-  description: Надствольный магазин калибра 35 авто. Подходящий для пистолетов-пулемётов.
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - ERTammo
-
-- type: listing
-  id: MagazineBoxPistolERT
-  productEntity: MagazineBoxPistol
-  description: Коробка калибра 35 авто. Подходящий для простых пистолетов.
+  description: Магазин калибра 35 авто. Подходит для пистолетов-пулемётов.
   cost:
     CentCommCrystal: 4
   categories:
   - ERTammo
-
-- type: listing
-  id: MagazineBoxMagnumERT
-  productEntity: MagazineBoxMagnum
-  description: Коробка калибра 45 магнум. Подходящий для тяжёлых пистолетов или револьверов.
-  cost:
-    CentCommCrystal: 8
-  categories:
-  - ERTammo
-
-- type: listing
-  id: MagazineBoxRifleERT
-  productEntity: MagazineBoxRifle
-  description: Коробка калибра 20. Винтовочный подходящий для автоматов.
-  cost:
-    CentCommCrystal: 8
-  categories:
-  - ERTammo
-
-- type: listing
-  id: MagazineShotgunERT
-  productEntity: MagazineShotgun
-  description: Барабн калибра 50. Подходящий дробовиков.
-  cost:
-    CentCommCrystal: 4
-  categories:
-  - ERTammo
-
-- type: listing
-  id: MagazineBoxMagnumAPERT
-  productEntity: MagazineBoxMagnumAP
-  description: Коробка патронов 45 магнум бронебойные . Подходящий для тяжёлых пистолетов или револьверов.
-  cost:
-    CentCommCrystal: 7
-  categories:
-  - ERTammo
-
-# Предметы аплинка - Боеприпасы
+# /Предметы аплинка - Боеприпасы
 
 # Предметы аплинка - Разное
 - type: storeCategory
@@ -408,16 +415,16 @@
   name: Разное
 
 - type: listing
-  id: MindShieldImplanterERT
-  productEntity: MindShieldImplanter
+  id: ClothingShoesBootsMagSciERT
+  productEntity: ClothingShoesBootsMagSci
   cost:
-    CentCommCrystal: 1
+    CentCommCrystal: 4
   categories:
   - ERTmore
 
 - type: listing
-  id: ClothingShoesBootsMagERT
-  productEntity: ClothingShoesBootsMag
+  id: HandheldCrewMonitorERT
+  productEntity: HandheldCrewMonitor
   cost:
     CentCommCrystal: 3
   categories:
@@ -432,30 +439,46 @@
   - ERTmore
 
 - type: listing
+  id: CrowbarERT
+  productEntity: Crowbar
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - ERTmore
+
+- type: listing
+  id: PortableRechargerERT
+  productEntity: PortableRecharger
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - ERTmore
+
+- type: listing
   id: JetpackBlueFilledERT
   productEntity: JetpackBlueFilled
   cost:
-    CentCommCrystal: 3
+    CentCommCrystal: 2
   categories:
   - ERTmore
-
-- type: listing
-  id: ClothingOuterHardsuitERTSecurityERT
-  productEntity: ClothingOuterHardsuitERTSecurity
-  cost:
-    CentCommCrystal: 5
-  categories:
-  - ERTmore
-
-- type: listing
-  id: JawsOfLifeERT
-  productEntity: JawsOfLife
-  cost:
-    CentCommCrystal: 5
-  categories:
-  - ERTmore
-
 # /Предметы аплинка - Разное
+
+# Предметы аплинка - Музыка
+#- type: storeCategory
+#  id: ERTmusic
+#  name: Музыка
+#
+#- type: listing
+#  id: TapePlayerERT
+#  productEntity: TapePlayer
+#  cost:
+#    CentCommCrystal: 1
+#  categories:
+#  - ERTmusic
+#   conditions:
+#  - !type:ListingLimitedStockCondition
+#    stock: 1
+# /Предметы аплинка - Музыка
 
 # Предметы аплинка - Взрывчатка
 - type: storeCategory
@@ -463,26 +486,10 @@
   name: Взрывчатка
 
 - type: listing
-  id: GrenadeFlashBangERT
-  productEntity: GrenadeFlashBang
+  id: ClusterGrenadeERT
+  productEntity: ClusterGrenade
   cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTbombs
-
-- type: listing
-  id: TearGasGrenadeERT
-  productEntity: TearGasGrenade
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - ERTbombs
-
-- type: listing
-  id: GrenadeStingerERT
-  productEntity: GrenadeStinger
-  cost:
-    CentCommCrystal: 2
+    CentCommCrystal: 3
   categories:
   - ERTbombs
 
@@ -495,50 +502,90 @@
   - ERTbombs
 
 - type: listing
+  id: EmpGrenadeERT
+  productEntity: EmpGrenade
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - ERTbombs
+
+- type: listing
+  id: GrenadeShrapnelERT
+  productEntity: GrenadeShrapnel
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - ERTbombs
+
+- type: listing
+  id: MetalFoamGrenadeERT
+  productEntity: MetalFoamGrenade
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - ERTbombs
+
+- type: listing
+  id: SmokeGrenadeERT
+  productEntity: SmokeGrenade
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - ERTbombs
+
+- type: listing
   id: GrenadeIncendiaryERT
   productEntity: GrenadeIncendiary
   cost:
-    CentCommCrystal: 3
+    CentCommCrystal: 2
   categories:
   - ERTbombs
 
 - type: listing
-  id: C4ERT
-  productEntity: C4
+  id: ExGrenadeERT
+  productEntity: ExGrenade
   cost:
-    CentCommCrystal: 3
+    CentCommCrystal: 2
   categories:
   - ERTbombs
 
 - type: listing
-  id: ClusterGrenadeERT
-  productEntity: ClusterGrenade
+  id: TearGasGrenadeERT
+  productEntity: TearGasGrenade
   cost:
-    CentCommCrystal: 7
+    CentCommCrystal: 2
+  categories:
+  - ERTbombs
+
+- type: listing
+  id: GrenadeFlashBangERT
+  productEntity: GrenadeFlashBang
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - ERTbombs
+
+- type: listing
+  id: GrenadeStingerERT
+  productEntity: GrenadeStinger
+  cost:
+    CentCommCrystal: 1
   categories:
   - ERTbombs
 # /Предметы аплинка - Взрывчатка
 
 # Предметы аплинка - Медицина
 - type: listing
-  id: BrutepackERT
-  productEntity: Brutepack
+  id: CombatMedipenERT
+  productEntity: CombatMedipen
   cost:
-    CentCommCrystal: 1
+    CentCommCrystal: 3
   categories:
   - ERTmedicine
 
 - type: storeCategory
   id: ERTmedicine
   name: Медицина
-
-- type: listing
-  id: OintmentERT
-  productEntity: Ointment
-  cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTmedicine
 
 - type: listing
   id: GauzeERT
@@ -549,29 +596,20 @@
   - ERTmedicine
 
 - type: listing
-  id: BloodpackERT
-  productEntity: Bloodpack
+  id: OintmentERT
+  productEntity: Ointment
   cost:
     CentCommCrystal: 1
   categories:
   - ERTmedicine
-  
-- type: listing
-  id: HandheldHealthAnalyzerERT
-  productEntity: HandheldHealthAnalyzer
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - ERTmedicine
 
 - type: listing
-  id: MedkitFilledERT
-  productEntity: MedkitFilled
+  id: BrutepackERT
+  productEntity: Brutepack
   cost:
-    CentCommCrystal: 3
+    CentCommCrystal: 1
   categories:
   - ERTmedicine
-
 # /Предметы аплинка - Медицина
 
 # Предметы аплинка медика
@@ -580,32 +618,51 @@
   name: ОБР медик
 
 - type: listing
-  id: DefibrillatorERT
-  productEntity: Defibrillator
+  id: HyposprayERTbuy
+  productEntity: HyposprayERT
   cost:
-    CentCommCrystal: 1
+    CentCommCrystal: 8
   categories:
   - ERTmedic
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
 
 - type: listing
-  id: MaterialBiomassERT
-  productEntity: MaterialBiomass
+  id: MedicatedSutureERT
+  productEntity: MedicatedSuture
   cost:
     CentCommCrystal: 2
   categories:
   - ERTmedic
 
 - type: listing
-  id: MedicatedSutureERT
-  productEntity: MedicatedSuture
+  id: RegenerativeMeshERT
+  productEntity: RegenerativeMesh
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - ERTmedic
+
+- type: listing
+  id: DefibrillatorERT
+  productEntity: Defibrillator
   cost:
     CentCommCrystal: 3
   categories:
   - ERTmedic
 
 - type: listing
-  id: RegenerativeMeshERT
-  productEntity: RegenerativeMesh
+  id: PowerCellMicroreactorERT
+  productEntity: PowerCellMicroreactor
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - ERTmedic
+
+- type: listing
+  id: MaterialBiomassERT
+  productEntity: MaterialBiomass
   cost:
     CentCommCrystal: 3
   categories:
@@ -615,29 +672,7 @@
   id: OmnizineChemistryBottleERT
   productEntity: OmnizineChemistryBottle
   cost:
-    CentCommCrystal: 4
-  categories:
-  - ERTmedic
-  conditions:
-    - !type:ListingLimitedStockCondition
-     stock: 1
-
-- type: listing
-  id: HyposprayERTbuy
-  productEntity: HyposprayERT
-  cost:
-    CentCommCrystal: 5
-  categories:
-  - ERTmedic
-  conditions:
-    - !type:ListingLimitedStockCondition
-     stock: 1
-
-- type: listing
-  id: MedkitAdvancedFilledERT
-  productEntity: MedkitAdvancedFilled
-  cost:
-    CentCommCrystal: 6
+    CentCommCrystal: 3
   categories:
   - ERTmedic
 
@@ -645,23 +680,12 @@
   id: MedkitCombatFilledERT
   productEntity: MedkitCombatFilled
   cost:
-    CentCommCrystal: 7
+    CentCommCrystal: 4
   categories:
   - ERTmedic
   conditions:
-    - !type:ListingLimitedStockCondition
-     stock: 1
-    
-- type: listing
-  id: InjectorMediumNanitsERT
-  productEntity: InjectorMediumNanits
-  cost:
-    CentCommCrystal: 15
-  categories:
-  - ERTmedic
-  conditions:
-    - !type:ListingLimitedStockCondition
-     stock: 1
+  - !type:ListingLimitedStockCondition
+   stock: 1
 
 # /Предметы аплинка медика
 
@@ -671,24 +695,16 @@
   name: ОБР инженер
 
 - type: listing
-  id: SheetSteelERT
-  productEntity: SheetSteel
+  id: JawsOfLifeERT
+  productEntity: JawsOfLife
   cost:
-    CentCommCrystal: 1
+    CentCommCrystal: 3
   categories:
   - ERTengi
 
 - type: listing
-  id: SheetGlassERT
-  productEntity: SheetGlass
-  cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTengi
-
-- type: listing
-  id: SheetPlasticERT
-  productEntity: SheetPlastic
+  id: CableHVStackERT
+  productEntity: CableHVStack
   cost:
     CentCommCrystal: 1
   categories:
@@ -711,34 +727,10 @@
   - ERTengi
 
 - type: listing
-  id: CableHVStackERT
-  productEntity: CableHVStack
-  cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTengi
-
-- type: listing
-  id: MetalFoamGrenadeERT
-  productEntity: MetalFoamGrenade
-  cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTengi
-
-- type: listing
-  id: SheetPlasteelERT
-  productEntity: SheetPlasteel
-  cost:
-    CentCommCrystal: 1
-  categories:
-  - ERTengi
-
-- type: listing
   id: RCDRechargingERT
   productEntity: RCDRecharging
   cost:
-    CentCommCrystal: 4
+    CentCommCrystal: 8
   categories:
   - ERTengi
   conditions:
@@ -752,24 +744,15 @@
   name: ОБР лидер
 
 - type: listing
-  id: WeaponPlasmaSniperERTs
-  productEntity: WeaponPlasmaSniper
-  cost:
-    CentCommCrystal: 18
-  categories:
-  - ERTleader
-
-- type: listing
   id: WeaponSniperHristovERT
   productEntity: WeaponSniperHristov
   cost:
-    CentCommCrystal: 14
+    CentCommCrystal: 15
   categories:
   - ERTleader
 
 - type: listing
   id: MagazineBoxAntiMaterielERT
-  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
   productEntity: MagazineBoxAntiMateriel
   cost:
     CentCommCrystal: 3
@@ -791,7 +774,7 @@
   id: ClothingShoesBootsMagAdvtwoERT
   productEntity: ClothingShoesBootsMagAdv
   cost:
-    CentCommCrystal: 4
+    CentCommCrystal: 5
   categories:
   - ERTleader
   conditions:
@@ -799,18 +782,27 @@
    stock: 1
 # /Предметы аплинка лидера
 
+# Предметы аплинка - Наниты
+- type: storeCategory
+  id: ERTnanit
+  name: Наниты
+
+- type: listing
+  id: InjectorMediumNanitsERT
+  productEntity: InjectorMediumNanits
+  cost:
+    CentCommCrystal: 5
+  categories:
+  - ERTnanit
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+# /Предметы аплинка - Наниты
+
 # Предметы аплинка уборщика
 - type: storeCategory
   id: ERTjanitor
   name: ОБР уборщик
-
-- type: listing
-  id: BoxBodyBagERT
-  productEntity: BoxBodyBag
-  cost:
-    CentCommCrystal: 4
-  categories:
-  - ERTjanitor
 
 - type: listing
   id: MobCleanBotERT
@@ -824,7 +816,7 @@
   id: AdvMopItemERT
   productEntity: AdvMopItem
   cost:
-    CentCommCrystal: 5
+    CentCommCrystal: 4
   categories:
   - ERTjanitor
 
@@ -841,7 +833,7 @@
   id: CleanerGrenadeERT
   productEntity: CleanerGrenade
   cost:
-    CentCommCrystal: 1
+    CentCommCrystal: 2
   categories:
   - ERTjanitor
 
@@ -849,7 +841,7 @@
   id: ClothingShoesBootsMagAdvERT
   productEntity: ClothingShoesBootsMagAdv
   cost:
-    CentCommCrystal: 5
+    CentCommCrystal: 4
   categories:
   - ERTjanitor
   conditions:
@@ -895,7 +887,7 @@
   - ERTlight
 
 - type: listing
-  id: BoxBodyBagERTEP
+  id: BoxBodyBagERT
   productEntity: BoxBodyBag
   cost:
     CentCommCrystal: 3
@@ -918,43 +910,3 @@
   categories:
   - ERTlight
 # /Предметы аплинка священника
-# /Дебаг аплинк
-- type: entity
-  parent: BaseItem
-  id: ERTuplinkabuse
-  name: Терминал ОБР акулки
-  suffix: Adventure, DEBUG
-  description: Терминал который используют ОБР акулки? в специальных операциях.
-  components:
-  - type: Item
-    size: Small
-    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
-  - type: UserInterface
-    interfaces:
-      enum.StoreUiKey.Key:
-        type: StoreBoundUserInterface
-  - type: ActivatableUI
-    key: enum.StoreUiKey.Key
-  - type: Sprite
-    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
-    layers:
-    - state: ERT
-  - type: Appearance
-  - type: StaticPrice
-    price: 100
-  - type: Store
-    categories:
-      - ERTweapons
-      - ERTammo
-      - ERTmore
-      - ERTbombs
-      - ERTmedic
-      - ERTmedicine
-      - ERTlight
-      - ERTjanitor
-      - ERTleader
-      - ERTengi
-    currencyWhitelist:
-      - CentCommCrystal
-    balance:
-      CentCommCrystal: 9999

@@ -31,18 +31,10 @@
     requiredLegs: 2
   - type: Inventory
     speciesId: reptilian # whyyy
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female
   - type: ContentEye
     targetZoom: "1.125, 1.125"
     maxZoom: "1.125, 1.125"
   - type: Speech
-    speechVerb: Wolf # Adventure
-    speechSounds: VulpkaninSpeach # Adventure
     allowedEmotes: ['Howl', 'Growl']
   - type: Vocal
     sounds:
@@ -79,11 +71,3 @@
   components:
   - type: HumanoidAppearance
     species: Vulpkanin
-  - type: Inventory
-    speciesId: reptilian 
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female

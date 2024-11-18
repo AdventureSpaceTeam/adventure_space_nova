@@ -19,7 +19,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: ["рыгает"]
+  chatMessages: ["Рыгает"]
   chatTriggers:
     - рыгает
     - рыгает!
@@ -49,7 +49,7 @@
     - BorgChassis
     - IgnoreKudzu
     - Storage
-  chatMessages: ["хрустит костями"]
+  chatMessages: ["Хрустит костями"]
   chatTriggers:
     - хрустит костями
     - хрустит костяшками
@@ -76,7 +76,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: ["пердит"]
+  chatMessages: ["Пердит"]
   chatTriggers:
     - ЧтОбЫнИкТоНеМоГэТоВыВеСтИ
 
@@ -102,7 +102,7 @@
     - BorgChassis
     - IgnoreKudzu
     - Storage
-  chatMessages: ["чешется"]
+  chatMessages: ["Чешется"]
   chatTriggers:
     - чешется
     - чешет волосы
@@ -140,7 +140,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: ["делает фейспалм"]
+  chatMessages: ["Делает фейспалм"]
   chatTriggers:
     - Делает фейспалм
     - испанский стыд
@@ -162,22 +162,3 @@
   - /Audio/Voice/Reptilian/reptilian_tailthump2.ogg
   - /Audio/Voice/Reptilian/reptilian_tailthump3.ogg
   - /Audio/Voice/Reptilian/reptilian_tailthump4.ogg
-
-# шипеть
-- type: emote
-  name: Шипеть
-  id: Hissing
-  icon: Adventure/Interface/Emotes/hiss.png
-  category: Vocal
-  available: false
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [шипит!]
-  chatTriggers:
-    - шипит
-    - шипит.
-    - шипит!

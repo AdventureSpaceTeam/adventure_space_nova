@@ -735,7 +735,6 @@
 
 - type: entity
   name: коробка ассорти-конфет
-  suffix: AdvFun
   parent: CandyBoxBase
   id: AssortedCandyBox
   description: Коробка самых разных конфет.
@@ -757,7 +756,6 @@
 
 - type: entity
   name: коробка синих конфет
-  suffix: AdvFun
   parent: CandyBoxBase
   id: BlueCandyBox
   components:
@@ -773,7 +771,6 @@
 
 - type: entity
   name: коробка жёлтых конфет
-  suffix: AdvFun
   parent: CandyBoxBase
   id: YellowCandyBox
   components:
@@ -789,7 +786,6 @@
 
 - type: entity
   name: коробка красных конфет
-  suffix: AdvFun
   parent: CandyBoxBase
   id: RedCandyBox
   components:
@@ -805,7 +801,6 @@
 
 - type: entity
   name: коробка зелёных конфет
-  suffix: AdvFun
   parent: CandyBoxBase
   id: GreenCandyBox
   components:
@@ -821,7 +816,6 @@
 
 - type: entity
   name: коробка необычных конфет
-  suffix: AdvFun
   parent: CandyBoxBase
   id: TerCandyBox
   components:

@@ -1,17 +1,14 @@
 - type: gameMapPool
   id: AdventureMapPool
   maps:
-  - AdventureRelict     #min 0  max 25
-  - AdventureAspid      #min 20 max 55
-# - AdventureAvrite     #min 40 max N/A
+  - AdventureAvrite     #min 40 max N/A
   - AdventureBagel      #min 30 max 120
-  - AdventureBox        #min 25 max 120 #rework (too big, original min 50)
-  - AdventureCluster    #min 0 max 35
+  - AdventureBox        #min 15 max 120 #rework(too big, original min 50)
+  - AdventureCluster    #min 10 max 35
   - AdventureDelta      #min 30 max N/A
-  - AdventureMarathon   #min 25 max 70
-  - AdventureMaus       #min 0  max 40
-# - Starquest           #min 0  max 20 # До лучших времён
-
+  - AdventureMaus       #min 0 max 40
+  - Starquest           #min 0 max 20
+  
 # original list
 #  - Bagel          #min 35 max 70
 #  - Box            #min 50 max N/A
@@ -37,4 +34,3 @@
 #  - CorvaxPearl    #min 20 max 50
 #  - Box            #min 50 max N/A
 #  - Train          #min 35 max 70
-#  - Aspid          #min 25 max 55 #Удалён

@@ -1,6 +1,5 @@
 - type: entity
   name: Многоразовый медипен
-  suffix: AdvMedical
   parent: BaseItem
   description: Учёные NT смогли создать новейшую медицинскую разработку! Медипен, но многоразовый.
   id: ReusableMedipen

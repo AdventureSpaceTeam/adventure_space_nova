@@ -1,8 +1,10 @@
-name: CRLF Check
+﻿name: CRLF Check
 
-on:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
+# c4llv07e disable automatic workflows begin
+# on:
+#   pull_request:
+#     types: [ opened, reopened, synchronize, ready_for_review ]
+# c4llv07e disable automatic workflows end
 
 jobs:
   build:

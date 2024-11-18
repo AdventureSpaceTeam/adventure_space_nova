@@ -279,9 +279,6 @@
         Asphyxiation: -1.0
   - type: FireVisuals
     alternateState: Standing
-  - type: GuideHelp # Adventure
-    guides:
-    - Species
 
 - type: entity
   save: false

@@ -62,12 +62,7 @@
   id: SynthDeathgasp
   name: chat-emote-name-deathgasp
   icon: Interface/Emotes/deathgasp.png
-  chatMessages: ["замирает, его сенсоры отключаются, а модули перестают работать"]
-  whitelist:
-    requireAll: true
-    components:
-    - MobState
-    - Repairable
+  chatMessages: ["Замирает, его сенсоры отключаются, а модули перестают работать"]
 
 #Сбой
 - type: emote
@@ -80,7 +75,7 @@
     components:
     - Vocal
     - BorgChassis
-  chatMessages: ["зависает"]
+  chatMessages: ["Зависает"]
   chatTriggers:
     - сбоит
     - в шоке

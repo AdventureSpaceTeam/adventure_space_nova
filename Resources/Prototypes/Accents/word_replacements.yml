@@ -695,27 +695,8 @@
     corvax-chatsan-word-122: corvax-chatsan-replacement-122
     corvax-chatsan-word-123: corvax-chatsan-replacement-123
     corvax-chatsan-word-124: corvax-chatsan-replacement-124
-    corvax-chatsan-word-125: corvax-chatsan-replacement-125 
+    corvax-chatsan-word-125: corvax-chatsan-replacement-125
 # Corvax-ChatSanitize-End
-# Adventure-ChatSanitize-Start
-    adventure-chatsan-word-126: adventure-chatsan-replacement-126 
-    adventure-chatsan-word-127: adventure-chatsan-replacement-127 
-    adventure-chatsan-word-128: adventure-chatsan-replacement-128
-    adventure-chatsan-word-129: adventure-chatsan-replacement-129
-    adventure-chatsan-word-130: adventure-chatsan-replacement-130 
-    adventure-chatsan-word-131: adventure-chatsan-replacement-131 
-    adventure-chatsan-word-132: adventure-chatsan-replacement-132
-    adventure-chatsan-word-133: adventure-chatsan-replacement-133
-    adventure-chatsan-word-134: adventure-chatsan-replacement-134
-    adventure-chatsan-word-135: adventure-chatsan-replacement-135
-    adventure-chatsan-word-136: adventure-chatsan-replacement-136
-    adventure-chatsan-word-137: adventure-chatsan-replacement-137
-    adventure-chatsan-word-138: adventure-chatsan-replacement-138
-    adventure-chatsan-word-139: adventure-chatsan-replacement-139
-    adventure-chatsan-word-140: adventure-chatsan-replacement-140
-    adventure-chatsan-word-141: adventure-chatsan-replacement-141
-    adventure-chatsan-word-142: adventure-chatsan-replacement-142
-# Adventure-ChatSanitize-End
 
 - type: accent
   id: liar

@@ -1,6 +1,5 @@
 - type: entity
   name: Суши
-  suffix: AdvFood
   parent: FoodMealBase
   id: FoodMealSushi
   description: Не стоит рассказывать Скреллам из чего это сделано...

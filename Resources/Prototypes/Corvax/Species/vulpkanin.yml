@@ -13,10 +13,6 @@
   femaleFirstNames: names_vulp_first_female
   maleLastNames: names_vulp_last # Corvax-LastnameGender
   femaleLastNames: names_vulp_last # Corvax-LastnameGender
-  minAge: 16 # Adventure
-  youngAge: 26 # Adventure
-  oldAge: 48 # Adventure
-  maxAge: 80 # Adventure
 
 - type: speciesBaseSprites
   id: MobVulpkaninSprites

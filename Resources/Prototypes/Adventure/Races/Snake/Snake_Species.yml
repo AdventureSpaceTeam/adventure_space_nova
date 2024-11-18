@@ -30,9 +30,9 @@
   dollPrototype: MobZerahDummy
   skinColoration: Hues
   defaultSkinTone: "#96db8b"
-  minAge: 12
-  youngAge: 15
-  oldAge: 25
+  minAge: 6
+  youngAge: 11
+  oldAge: 21
   maxAge: 35
   maleFirstNames: NamesZerah
   femaleFirstNames: NamesZerah

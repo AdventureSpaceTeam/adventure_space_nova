@@ -3,7 +3,7 @@
   name: chat-emote-name-howl
   category: Vocal
   available: false
-  icon: Adventure/Interface/Emotes/Howl.png # Adventure
+  icon: Interface/Actions/scream.png
   whitelist:
     components:
     - Vocal
@@ -25,26 +25,26 @@
   - завывает.
   - завывает!
 
-- type: emote # Adventure rework
+- type: emote
   id: Growl
-  name: Гавкать # Adventure
+  name: chat-emote-name-growl
   category: Vocal
   available: false
-  icon: Adventure/Interface/Emotes/wolf.png # Adventure
+  icon: Interface/Actions/scream.png
   whitelist:
     components:
     - Vocal
   blacklist:
     components:
     - BorgChassis
-  chatMessages: ["гавкает!"] # Adventure
-  chatTriggers: # Adventure
-  - гавкает
-  - гавкает.
-  - гавкает!
-  - лает
-  - лает.
-  - лает!
-  - лаит
-  - лаит.
-  - лаит!
+  chatMessages: ["chat-emote-msg-growl"]
+  chatTriggers:
+  - growl
+  - growl.
+  - growl!
+  - growls
+  - growls.
+  - growls!
+  - рычит
+  - рычит.
+  - рычит!

@@ -428,28 +428,6 @@
         damage:
           types:
             Poison: 3
-        conditions: # Adventure
-        - !type:OrganType 
-          type: PigMan
-          shouldHave: false
-    Food: # Adventure
-      effects: 
-      - !type:AdjustReagent # Adventure
-        conditions:
-        - !type:OrganType
-          type: PigMan
-          shouldHave: true
-        reagent: Protein
-        amount: 0.5
-    Drink: # Adventure
-      effects:
-      - !type:AdjustReagent # Adventure
-        conditions:
-        - !type:OrganType
-          type: PigMan
-          shouldHave: true
-        reagent: Protein
-        amount: 0.5
 
 - type: reagent
   id: VentCrud
@@ -500,9 +478,6 @@
           - !type:OrganType
             type: Animal
             shouldHave: false
-          - !type:OrganType # Adventure
-            type: PigMan
-            shouldHave: false
         type: Local
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-sick" ]
@@ -510,17 +485,11 @@
       - !type:ChemVomit
         probability: 0.1
         conditions:
-          - !type:OrganType # Adventure
-            type: PigMan
-            shouldHave: false
           - !type:OrganType
             type: Animal
             shouldHave: false
       - !type:HealthChange
         conditions:
-        - !type:OrganType # Adventure
-          type: PigMan
-          shouldHave: false
         - !type:OrganType
           type: Animal
           shouldHave: false
@@ -531,13 +500,6 @@
         conditions:
         - !type:OrganType
           type: Animal
-          shouldHave: true
-        reagent: Protein
-        amount: 0.5
-      - !type:AdjustReagent # Adventure
-        conditions:
-        - !type:OrganType # Adventure
-          type: PigMan
           shouldHave: true
         reagent: Protein
         amount: 0.5

@@ -1407,7 +1407,8 @@
   components:
     # make the player a traitor once its taken
   - type: AutoTraitor
-    profile: TraitorReinforcement
+    giveUplink: false
+    giveObjectives: false
 
 - type: entity
   id: MobMonkeySyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
@@ -1568,7 +1569,8 @@
   components:
     # make the player a traitor once its taken
   - type: AutoTraitor
-    profile: TraitorReinforcement
+    giveUplink: false
+    giveObjectives: false
 
 - type: entity
   id: MobKoboldSyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
@@ -1784,11 +1786,6 @@
   # intended for swarms that eat pills so only temporary
   - type: TimedDespawn
     lifetime: 60
-  - type: Hunger
-    baseDecayRate: 10 # always hungry
-    starvingSlowdownModifier: 1
-  - type: Thirst
-    baseDecayRate: 10 # always thirsty
 
 - type: entity
   parent: MobMouse
@@ -3386,7 +3383,7 @@
   - type: HTN
     rootTask:
       task: RuminantCompound
-
+      
 - type: entity
   name: diona nymph
   parent: [SimpleMobBase, StripableInventoryBase]

@@ -1,6 +1,5 @@
 - type: entity
   name: шафл-машинка
-  suffix: AdvFun
   id: Shuffler
   parent: BaseStorageItem
   components:

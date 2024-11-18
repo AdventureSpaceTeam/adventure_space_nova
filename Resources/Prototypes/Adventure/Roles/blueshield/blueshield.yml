@@ -16,8 +16,6 @@
     - !type:DepartmentTimeRequirement
       department: Command
       time: 3600 # 1 hours
-    - !type:AgeRequirement
-      requiredAge: 30 # Adventure
   startingGear: BlueshieldGear
   icon: "JobIconBlueshield"
   requireAdminNotify: true
@@ -37,13 +35,17 @@
 - type: startingGear
   id: BlueshieldGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitBlueshield
+    back: ClothingBackpackBlueshieldFilled
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatBlueshieldBeret
     eyes: ClothingEyesGlassesSecurity
-    id: BlueshieldPDA
     gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorBlueshield
+    id: BlueshieldPDA
     ears: ClothingHeadsetAltCommand
-  storage:
-    back:
-    - Flash
+    pocket1: BSuplink
+
 
 #Карта
 - type: entity
@@ -52,7 +54,7 @@
   name: ID карта офицера синего щита
   components:
   - type: Sprite
-    sprite: Adventure/Roles/blueshield/PDA/ID.rsi
+    sprite: Adventure/Roles/blueshield/ID.rsi
     layers:
     - state: silver
     - state: idblueshield
@@ -68,7 +70,7 @@
   description: Пахнет безопасностью
   components:
   - type: Sprite
-    sprite: Adventure/Roles/blueshield/PDA/PDA.rsi
+    sprite: Adventure/Roles/blueshield/PDA.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
     - state: "light_overlay"
@@ -86,7 +88,7 @@
     borderColor: "#3c485a"
     accentVColor: "#3c485a"
   - type: Icon
-    sprite: Adventure/Roles/blueshield/PDA/PDA.rsi
+    sprite: Adventure/Roles/blueshield/PDA.rsi
     state: pda-blueshield
 
 #Спавнер
@@ -94,7 +96,6 @@
   id: SpawnPointBlueshield
   parent: SpawnPointJobBase
   name: Офицер Синий Щит
-  suffix: AdvRoles, AdvMapping
   components:
   - type: SpawnPoint
     job_id: Blueshield
@@ -109,9 +110,108 @@
   parent: JobIcon
   id: JobIconBlueshield
   icon:
-    sprite: /Textures/Adventure/Roles/blueshield/PDA/JobIcons.rsi
+    sprite: /Textures/Adventure/Roles/blueshield/JobIcons.rsi
     state: BlueShieldOfficer
   jobName: синий щит
+
+#Рюкзак
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBlueshield
+  name: Рюкзак офицера синего щита
+  description: Особенный рюкзак для элитного офицера синего щита! А стоп... он же пассажирский
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/blueshield/Backpacks/blueshield.rsi
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackBlueshield
+  id: ClothingBackpackBlueshieldFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvivalSecurity
+      - id: Flash
+
+#Шапка
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBlueshieldBeret
+  name: Тёмно-синий берет
+  description: Тёмно-синий берет из дюроткани показывает статус своего владельца.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/blueshield/blueshield_beret.rsi
+    - type: Clothing
+      sprite: Adventure/Roles/blueshield/blueshield_beret.rsi
+
+#Униформа
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlueshield
+  name: Униформа офицера синего щита
+  description: Этикетка гласит "A special suit made for the best of the elites under CentCom" Что бы это значило?
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/blueshield/blueshielduniform.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/blueshield/blueshielduniform.rsi
+
+#Хардсьют
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitBlueshield
+  name: Шлем скафандра офицера синего щита
+  description: Укреплённый шлем с новой системой NT-HUD, которая не работает.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Adventure/Roles/blueshield/Hardsuit/Head/Blueshield.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/blueshield/Hardsuit/Head/Blueshield.rsi
+  - type: PointLight
+    color: cyan
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingOuterHardsuitSecurity
+  id: ClothingOuterHardsuitBlueshield
+  name: Скафандр офицера синего щита
+  description: Специальный костюм защищающий от внешний угроз. С дополнительным слоем брони.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/blueshield/Hardsuit/Suit/Blueshield.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/blueshield/Hardsuit/Suit/Blueshield.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.5
+        Piercing: 0.5
+        Radiation: 0.5
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitBlueshield
 
 #Шкаф
 - type: entity
@@ -129,7 +229,7 @@
 
 - type: entity
   id: LockerBlueshieldFilledHardsuit
-  suffix: Filled, Hardsuit, AdvRoles, AdvMapping
+  suffix: Filled, Hardsuit
   parent: LockerBlueshield
   components:
   - type: StorageFill
@@ -142,17 +242,32 @@
       - id: ClothingOuterHardsuitBlueshield
       - id: TrackingImplanter
       - id: TrackingImplanter
-      - id: TrackingImplanter
-      - id: TrackingImplanter
       - id: RubberStampblueshield
-      - id: WeaponX2DualphaseEnergyLaserGun
-      - id: ClothingBeltSheathBS
-#      - id: BSuplink Устарел и заменён на торгомат
+
+#Броня
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorBlueshield
+  name: Улучшенный бронежилет
+  description: Бронежилет укреплённый керамическими пластинами. Несколько мешает движениям, но многократно увеличивает шансы на выживание.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/blueshield/armor.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/blueshield/armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.4
+        Heat: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.80
 
 #Печать ОСЩ by raidgo
 - type: entity
   name: печать офицера синего щита
-  description: Печать из резины, для проставления печатей на важных документах.
   parent: RubberStampBase
   id: RubberStampblueshield
   suffix: Adventure

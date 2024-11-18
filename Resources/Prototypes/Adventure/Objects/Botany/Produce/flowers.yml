@@ -2,7 +2,6 @@
 - type: seed
   id: carnation
   name: семена гвоздик
-  suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: гвоздика
   plantRsi: Adventure/Objects/Botany/Produce/Flovers/carnation.rsi
@@ -37,7 +36,6 @@
   parent: BaseItem
   id: Carnation
   name: гвоздика
-  suffix: AdvBotany
   components:
   - type: Tag
     tags:
@@ -52,7 +50,6 @@
 - type: seed
   id: orchid
   name: семена орхидеи
-  suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: орхидея
   plantRsi: Adventure/Objects/Botany/Produce/Flovers/orchid.rsi
@@ -87,7 +84,6 @@
   parent: BaseItem
   id: Orchid
   name: орхидея
-  suffix: AdvBotany
   components:
   - type: Tag
     tags:
@@ -102,7 +98,6 @@
 - type: seed
   id: rosered
   name: семена красной розы
-  suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: красная роза
   plantRsi: Adventure/Objects/Botany/Produce/Flovers/rose_red.rsi
@@ -137,7 +132,6 @@
   parent: BaseItem
   id: RoseRed
   name: красная роза
-  suffix: AdvBotany
   components:
   - type: Tag
     tags:
@@ -152,7 +146,6 @@
 - type: seed
   id: rosewhite
   name: семена белой розы
-  suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: белая роза
   plantRsi: Adventure/Objects/Botany/Produce/Flovers/rose_white.rsi
@@ -187,7 +180,6 @@
   parent: BaseItem
   id: RoseWhite
   name: белая роза
-  suffix: AdvBotany
   components:
   - type: Tag
     tags:
@@ -202,7 +194,6 @@
 - type: seed
   id: tulip
   name: семена тюльпанов
-  suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: тюльпан
   plantRsi: Adventure/Objects/Botany/Produce/Flovers/tulip.rsi
@@ -237,7 +228,6 @@
   parent: BaseItem
   id: Tulip
   name: тюльпан
-  suffix: AdvBotany
   components:
   - type: Tag
     tags:

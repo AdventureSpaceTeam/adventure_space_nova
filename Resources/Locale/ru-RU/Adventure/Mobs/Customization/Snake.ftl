@@ -18,8 +18,6 @@ marking-SnakeHeadBase-Head = Зерах, воротник (Змеиная гол
 marking-SnakeHeadBase= Зерах, воротник (Змеиная голова)
 marking-SnakeTailBase-Tail_base = Зерах, хвост (Свёрнутый)
 marking-SnakeTailBase = Зерах, хвост (Свёрнутый)
-marking-SnakeTailsTwisty-Snake_tail_twisty = Зерах, хвост (Извилистый)
-marking-SnakeTailsTwisty = Зерах, хвост (Извилистый)
 
  
  

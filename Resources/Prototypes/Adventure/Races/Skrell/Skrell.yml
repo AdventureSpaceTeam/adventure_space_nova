@@ -51,18 +51,10 @@
   - type: Speech
     speechSounds: SkrellSpeach
     speechVerb: Slime
-  - type: ThermalRegulator
-    metabolismHeat: 800
-    radiatedHeat: 100
-    implicitHeatRegulation: 250
-    sweatHeatRegulation: 500
-    shiveringHeatRegulation: 500
-    normalBodyTemperature: 293.15 # температура тела не поднимается сама по себе.
-    thermalRegulationTemperatureThreshold: 25
   - type: Temperature
-    heatDamageThreshold: 400
-    coldDamageThreshold: 273.15
-    currentTemperature: 293.15
+    heatDamageThreshold: 343.15
+    coldDamageThreshold: 303.15
+    currentTemperature: 310.15
     coldDamage: 
       types:
         Cold : 1.5
@@ -72,9 +64,9 @@
         Heat : 1.5
   - type: TemperatureSpeed
     thresholds:
-      292.15: 0.8
-      290.15: 0.6
-      288.15: 0.4
+      301: 0.8
+      295: 0.6
+      285: 0.4
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale

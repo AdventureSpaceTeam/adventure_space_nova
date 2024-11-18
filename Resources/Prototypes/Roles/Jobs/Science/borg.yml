@@ -23,9 +23,6 @@
   - !type:RoleTimeRequirement
     role: JobServiceBorg
     time: 3600 #1 hr # Adventure
-  - !type:RoleTimeRequirement
-    role: JobSecurityBorg
-    time: 3600 #1 hr # Adventure
   canBeAntag: false
   icon: JobIconStationAi
   supervisors: job-supervisors-rd

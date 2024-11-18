@@ -5,13 +5,13 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: VulpkaninScreamCollection # Adventure
+      collection: MaleScreams
     Laugh:
       collection: MaleLaugh
     Growl:
-      collection: VulpkaninGrowlCollection # Adventure
+      collection: Growl
     Howl:
-      collection: VulpkaninHowlCollection # Adventure
+      path: /Audio/Corvax/Effects/howl.ogg
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -31,7 +31,7 @@
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
-      path: /Audio/Adventure/Voice/Vulpkanin/VulpDead.ogg # Adventure
+      collection: MaleDeathGasp
 
 - type: emoteSounds
   id: FemaleVulpkanin
@@ -39,13 +39,13 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: VulpkaninScreamCollection # Adventure
+      collection: FemaleScreams
     Laugh:
       collection: FemaleLaugh
     Growl:
-      collection: VulpkaninGrowlCollection # Adventure
+      collection: Growl
     Howl:
-      collection: VulpkaninHowlCollection # Adventure
+      path: /Audio/Corvax/Effects/howl.ogg
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -65,4 +65,4 @@
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
-      path: /Audio/Adventure/Voice/Vulpkanin/VulpDead.ogg # Adventure
+      collection: FemaleDeathGasp

@@ -1,7 +1,6 @@
 - type: entity
   parent: SeedBase
   name: пакет семян (голубая агава)
-  suffix: AdvBotany
   description: "Бодрящее"
   id: BlueAgavaSeeds
   components:
@@ -38,7 +37,6 @@
 
 - type: entity
   name: Голубая агава
-  suffix: AdvBotany
   parent: FoodProduceBase
   id: FoodBlueAgava
   description: Какое опьяняющее алоэ!

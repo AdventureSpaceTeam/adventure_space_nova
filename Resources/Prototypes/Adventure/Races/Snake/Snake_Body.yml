@@ -140,27 +140,6 @@
     - id: Poison
     - id: Narcotic
 
-- type: entity
-  id: OrganZerahStomach
-  name: Желудок зераха
-  parent: OrganAnimalStomach
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Stomach
-    specialDigestible:
-      tags:
-      - Meat
-      - Pill
-  - type: SolutionContainerManager
-    solutions:
-      stomach:
-        maxVol: 50
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
-
 
 - type: body
   name: "Зерах"
@@ -182,7 +161,7 @@
       organs:
         heart: OrganZerahHeart
         lungs: OrganZerahLungs
-        stomach: OrganZerahStomach
+        stomach: OrganReptilianStomach
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
     right arm:

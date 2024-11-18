@@ -25,9 +25,5 @@
     ClothingShoesBootsCombat: 1
     ClothingShoesBootsWinterSec: 2
     ClothingHeadHelmetJustice: 1
-    # Adventure Black Security
-    ClothingHeadHatSecsoftBlack: 2
-    ClothingHeadHatBeretSecurityBlack: 2
-    ClothingUniformJumpsuitSecBlack: 2
   contrabandInventory:
     ClothingMaskClownSecurity: 1

@@ -13,8 +13,8 @@
   naming: First
   sexes:
   - Unsexed 
-  minAge: 14 # Adventure
-  youngAge: 20 # Adventure
+  minAge: 11 # Adventure
+  youngAge: 18 # Adventure
   oldAge: 36 # Adventure
   maxAge: 60 # Adventure
  

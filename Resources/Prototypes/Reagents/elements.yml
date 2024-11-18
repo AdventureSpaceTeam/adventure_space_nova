@@ -154,9 +154,6 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType # Adventure
-          type: Drask
-          shouldHave: false
         - !type:OrganType
           type: Arachnid
           shouldHave: true
@@ -167,9 +164,6 @@
       effects:
       - !type:ModifyBloodLevel
         conditions:
-        - !type:OrganType # Adventure
-          type: Drask
-          shouldHave: false
         - !type:OrganType
           type: Arachnid
           shouldHave: false

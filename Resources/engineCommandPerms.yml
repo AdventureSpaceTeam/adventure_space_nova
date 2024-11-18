@@ -68,7 +68,6 @@
   - print_pvs_ack
   - pvs_override_info
   - merge_grids
-  - timemanager
 
 
 - Flags: MAPPING
