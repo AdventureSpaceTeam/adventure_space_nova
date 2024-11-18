@@ -1,0 +1,26 @@
+- type: species
+  id: Felinid
+  name: species-name-felinid
+  roundStart: true
+  sponsorOnly: true
+  prototype: MobFelinid
+  sprites: MobHumanSprites
+  markingLimits: MobFelinidMarkingLimits
+  dollPrototype: MobFelinidDummy
+  skinColoration: HumanToned
+  minAge: 15
+  youngAge: 25
+  oldAge: 39
+  maxAge: 65
+
+- type: markingPoints
+  id: MobFelinidMarkingLimits
+  points:
+    Tail:
+      points: 1
+      required: true
+      defaultMarkings: [ FelinidTail ]
+    HeadTop:
+      points: 1
+      required: true
+      defaultMarkings: [ FelinidEars ]

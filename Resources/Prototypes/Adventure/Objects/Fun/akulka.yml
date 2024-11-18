@@ -2,6 +2,7 @@
   parent: BasePlushie
   id: PlushieSharki_Makcu
   name: Акулка
+  suffix: AdvFun
   description: На этикетке написано "Макси Колоскова".
   components:
   - type: Sprite

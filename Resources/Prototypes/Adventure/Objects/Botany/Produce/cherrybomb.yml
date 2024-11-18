@@ -1,0 +1,78 @@
+- type: entity  #Семена
+  parent: SeedBase
+  name: пакет семян (бах-вишня)
+  suffix: AdvBotany
+  description: "пахнет вишней и порохом.."
+  id: CherryBombSeeds
+  components:
+    - type: Seed
+      seedId: CherryBombPlant
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/cherrybomb.rsi
+
+- type: seed  #Растение
+  id: CherryBombPlant
+  name: семена бах-вишни
+  noun: seeds-noun-seeds
+  displayName: бахвишнёвое дерево
+  plantRsi: Adventure/Objects/Botany/Produce/cherrybomb.rsi
+  packetPrototype: CherryBombSeeds
+  productPrototypes:
+    - CherryBomb
+  harvestRepeat: Repeat
+  lifespan: 55
+  maturation: 6
+  production: 6
+  growthStages: 6
+  yield: 5
+  potency: 10
+  idealLight: 6
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 30
+    Vitamin:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 40
+
+- type: entity  # Бомба
+  parent: [ GrenadeBase, BaseMajorContraband ]
+  id: CherryBomb
+  name: бах-вишня
+  suffix: AdvBotany
+  description: Взрывной плод мутировавшей вишни.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Weapons/Botany/cherrybomb.rsi
+  - type: OnUseTimerTrigger
+    delay: 5
+    examinable: false
+    initialBeepDelay: 0
+    beepSound: /Audio/Effects/lightburn.ogg
+  - type: RandomTimerTrigger
+    min: 0
+    max: 10
+  - type: ExplodeOnTrigger
+  - type: Explosive # Слабый взрыв в очень малом радиусе. Не разрушает покрытие.
+    explosionType: Default
+    totalIntensity: 3
+    intensitySlope: 5
+    maxIntensity: 1
+    canCreateVacuum: false
+  - type: Appearance
+  - type: TimerTriggerVisuals
+  - type: Produce
+    seedId: CherryBombPlant
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior

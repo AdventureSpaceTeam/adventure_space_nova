@@ -57,10 +57,10 @@
   components:
   - type: GameRule
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 300 # 5 min
+    minimumTimeUntilFirstEvent: 600 # 10 min # Adventure
     minMaxEventTiming:
-      min: 750 # 12.5 min
-      max: 930 # 17.5 min
+      min: 1800 # 30 min # # Adventure
+      max: 2700 # 45 min # # Adventure
     scheduledGameRules: !type:NestedSelector
       tableId: BasicMeteorSwarmEventsTable
 
@@ -70,10 +70,10 @@
   components:
   - type: GameRule
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 300 # 5 min 
+    minimumTimeUntilFirstEvent: 600 # 10 min # Adventure
     minMaxEventTiming:
       min: 750 # 12.5 min
-      max: 930 # 17.5 min
+      max: 1500 # 25 min # Adventure
     scheduledGameRules: !type:NestedSelector
       tableId: MeteorSwarmMildTable
 

@@ -56,7 +56,7 @@
 - type: entity
   parent: BrigmedicIDCard
   id: BrigmedicIDCardADV
-  suffix: ADVENTURE
+  suffix: Adventure
   name: ID карта бригмедика
   components:
   - type: PresetIdCard
@@ -75,7 +75,7 @@
   id: SpawnPointBrigmedicAdven
   parent: SpawnPointJobBase
   name: brigmedic
-  suffix: ADVENTURE
+  suffix: AdvRoles, AdvMapping
   components:
   - type: SpawnPoint
     job_id: Brigmedic

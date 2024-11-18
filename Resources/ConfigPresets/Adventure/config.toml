@@ -1,8 +1,6 @@
 [game]
 secret_weight_prototype = "AdventureSecretDefault"
 map_pool = "AdventureMapPool"
-lobbyenabled = true
-role_timers = true
 
 [server]
 rules_file = "AdventureRuleset"

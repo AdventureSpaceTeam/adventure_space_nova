@@ -1,0 +1,104 @@
+- type: entity  # Семена
+  parent: SeedBase
+  name: пакет семян (лён)
+  suffix: AdvBotany
+  id: LinenSeeds
+  components:
+    - type: Seed
+      seedId: linen
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/linen.rsi
+
+- type: seed  # Растение
+  id: linen
+  name: семена льна
+  noun: seeds-noun-seeds
+  displayName: лён
+  plantRsi: Adventure/Objects/Botany/Produce/linen.rsi
+  packetPrototype: LinenSeeds
+  productPrototypes:
+    - LinenBol
+  lifespan: 25
+  maturation: 8
+  production: 3
+  yield: 3
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.60
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+
+- type: entity  # Продукт
+  name: шар из льна
+  suffix: AdvBotany
+  description: Более крепкий чем обычный хлопок.
+  id: LinenBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/linen.rsi
+  - type: FlavorProfile
+    flavors:
+      - cotton
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: Log
+    spawnedPrototype: MaterialLinen1
+    spawnCount: 2
+  - type: Produce
+    seedId: linen
+  - type: Tag
+    tags:
+    - ClothMade
+    - CottonBoll
+    - LinenBoll
+
+- type: stack # Стак льна
+  id: Linen
+  name: Лён
+  icon: { sprite: /Adventure/Objects/Botany/Produce/linen.rsi, state: linen }
+  spawn: MaterialLinen1
+  maxCount: 30
+
+- type: constructionGraph # Крафт дюраткани
+  id: Durathreadlinen
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MaterialDurathread
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: Plastic
+              amount: 1
+            - tag: LinenBoll
+              name: Шар из льна
+              icon:
+                sprite: Adventure/Objects/Botany/Produce/linen.rsi
+                state: produce
+              doAfter: 1
+    - node: MaterialDurathread
+      entity: MaterialDurathread
+
+- type: construction  # Adventure
+  name: durathread linen
+  id: MaterialDurathreadLinen
+  graph: Durathreadlinen
+  startNode: start
+  targetNode: MaterialDurathread
+  category: construction-category-materials
+  description: Высококачественная нить, используемая для изготовления прочной одежды.
+  icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
+  objectType: Item

@@ -1,3 +1,25 @@
 # Last match in file takes precedence.
 
-/ @c4llv07e
+# В комментарии выше важно слово "ПОСЛЕДНИЙ"!
+# Если будет два правила
+# /abc/ @coder
+# / @owner
+# То при изменении /abc будет пинговаться только @owner.
+# Так что добавляем сюда с умом, чтобы не ломать ничего.
+
+* @c4llv07e
+/Content.*/_Adventure/TTS/ @c4llv07e
+/Content.*/_Adventure/Sponsors/ @c4llv07e
+
+/Content.*/Adventure/EnergyCores/ @aristophanivan
+/Resources/*/Adventure/EnergyCores/ @aristophanivan
+/Content.Server/_Adventure/AdventureConfigManager.cs @aristophanivan
+
+/Content.Client/_Adventure/Administration/ @AwareFoxy
+
+/Content.Shared/_Adventure/Abilities/ @borkroman
+/Content.Server/_Adventure/Abilities/ @borkroman
+/Content.Server/_Adventure/SnakeAccent/ @borkroman
+/Content.Server/_Adventure/UrUAccent/ @borkroman
+
+# TODO(c4): Добавить овнеров для ресурсов.

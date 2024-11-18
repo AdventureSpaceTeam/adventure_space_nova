@@ -1,5 +1,6 @@
 - type: entity
   name: плетёная сумка
+  suffix: AdvBotany
   id: SeedBag
   parent: BaseStorageItem
   description: Самодельная сумка ботаника. Подходит для свежего урожая
@@ -79,6 +80,6 @@
   startNode: start
   targetNode: seedbag
   category: construction-category-storage
-  description: A crude reinforced spear for when you need to put holes in somebody.
+  description: A nice bag special for seeds.
   icon: { sprite: Adventure/Objects/Botany/Equipment/seed_bag.rsi, state: icon }
   objectType: Item

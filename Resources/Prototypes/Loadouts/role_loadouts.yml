@@ -349,6 +349,7 @@
   id: JobWarden
   groups:
   - WardenHead
+  - WardenNeck # Adventure
   - WardenJumpsuit
   - SecurityBackpack
   - SecurityBelt
@@ -363,6 +364,7 @@
   id: JobSecurityOfficer
   groups:
   - SecurityHead
+  - SecurityNeck # Adventure
   - SecurityJumpsuit
   - SecurityBackpack
   - SecurityOuterClothing

@@ -628,9 +628,16 @@ public sealed partial class ChatSystem : SharedChatSystem
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"LOOC from {player:Player}: {message}");
     }
 
-    private void SendDeadChat(EntityUid source, ICommonSession player, string message, bool hideChat)
+      private void SendDeadChat(EntityUid source, ICommonSession player, string message, bool hideChat)
     {
-        var clients = GetDeadChatClients();
+        var dead_clients = GetDeadChatClients();
+        var clients = dead_clients.Concat(
+            GetRecipients(source, VoiceRange)
+            .Select(p => p.Key)
+            .Where(p => HasComp<DeadHearingComponent>(p.AttachedEntity))
+            .Select(p => p.Channel)
+            .Except(dead_clients));
+
         var playerName = Name(source);
         string wrappedMessage;
         if (_adminManager.IsAdmin(player))
@@ -748,8 +755,12 @@ public sealed partial class ChatSystem : SharedChatSystem
     // ReSharper disable once InconsistentNaming
     private string SanitizeInGameICMessage(EntityUid source, string message, out string? emoteStr, bool capitalize = true, bool punctuate = false, bool capitalizeTheWordI = true)
     {
-        var newMessage = message.Trim();
-        newMessage = SanitizeMessageReplaceWords(newMessage);
+        var newMessage = SanitizeMessageReplaceWords(message.Trim());
+
+        GetRadioKeycodePrefix(source, newMessage, out newMessage, out var prefix);
+
+        // Sanitize it first as it might change the word order
+        _sanitizer.TrySanitizeEmoteShorthands(newMessage, source, out newMessage, out emoteStr);
 
         if (capitalize)
             newMessage = SanitizeMessageCapital(newMessage);
@@ -758,9 +769,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (punctuate)
             newMessage = SanitizeMessagePeriod(newMessage);
 
-        _sanitizer.TrySanitizeOutSmilies(newMessage, source, out newMessage, out emoteStr);
-
-        return newMessage;
+        return prefix + newMessage;
     }
 
     private string SanitizeInGameOOCMessage(string message)

@@ -1,0 +1,5 @@
+- type: guideEntry
+  id: BorgRepair
+  name: Ремонт боргов
+  text: "/ServerInfo/Adventure/Guidebook/BorgRepair.xml"
+  

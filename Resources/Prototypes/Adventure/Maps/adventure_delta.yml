@@ -15,7 +15,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'TG'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency_corvaxdelta.yml
+          emergencyShuttlePath: /Maps/Shuttles/emergency_courser.yml
         - type: StationJobs
           availableJobs:
             Borg: [ 2, 3 ]
@@ -61,9 +61,11 @@
             # remap
             Blueshield: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
+            StationAi: [ 1, 1 ]
             # Bork
             CargoBorg: [ 1, 1 ]
             EngineerBorg: [ 1, 1 ]
             JanitorBorg: [ 1, 1 ]
             MedicalBorg: [ 1, 1 ]
             ServiceBorg: [ 1, 1 ]
+            SecurityBorg: [ 1, 1 ]

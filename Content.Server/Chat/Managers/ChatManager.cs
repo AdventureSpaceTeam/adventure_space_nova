@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.Sponsors; // c4llv07e sponsors
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -255,6 +256,25 @@ internal sealed partial class ChatManager : IChatManager
         {
             wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", patronColor),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }
+
+        // c4llv07e sponsors begin
+        var formated_message = FormattedMessage.EscapeText(message);
+        if (_sponsors.Sponsors.TryGetValue(player.UserId, out var sponsor))
+        {
+            string oocName = sponsor.OocName ?? "спонсор";
+            string oocColor = sponsor.OocColor?.ToHex() ?? string.Empty;
+            if (oocColor != string.Empty)
+                wrappedMessage = $"OOC: [bold]\\[{oocName}\\][color={oocColor}]{player.Name}[/color]:[/bold] {formated_message}";
+            else
+                wrappedMessage = $"OOC: [bold]\\[{oocName}\\]{player.Name}:[/bold] {formated_message}";
+        }
+
+        var data = _adminManager.GetAdminData(player);
+        if (data != null && data.Title != null)
+        {
+            wrappedMessage = $"OOC: [bold]<{data.Title}> {player.Name}:[/bold] {formated_message}";
+        }
+        // c4llv07e sponosrs end
 
         //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);

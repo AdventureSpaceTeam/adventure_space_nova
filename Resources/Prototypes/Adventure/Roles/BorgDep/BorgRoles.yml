@@ -168,3 +168,42 @@
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgService
   applyTraits: false
+
+#SecurityBorg
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSecurityBorg
+  icon:
+    sprite: Adventure/Roles/BorgDep/BorgIcons.rsi
+    state: SecurityBorg
+  jobName: киборг-охранник
+
+- type: playTimeTracker
+  id: JobSecurityBorg
+
+- type: job
+  id: SecurityBorg
+  name: киборг-охранник
+  description: job-description-borg
+  playTimeTracker: JobSecurityBorg
+  requirements: # Ответственная роль, надо больше игрового времени охраны
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 10800 
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 10800 
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 
+    - !type:RoleTimeRequirement
+      role: JobBorg
+      time: 3600
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 3600
+  canBeAntag: false
+  icon: JobIconSecurityBorg
+  supervisors: job-supervisors-rd
+  jobEntity: PlayerBorgChassisSecurity
+  applyTraits: false

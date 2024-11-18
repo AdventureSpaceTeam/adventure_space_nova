@@ -2,6 +2,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitShirtlessOveralls
   name: Садовый комбинезон без рубашки
+  suffix: AdvBotany
   description: Покажи кто тут босс гидропоники.
   components:
   - type: Sprite

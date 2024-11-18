@@ -136,6 +136,11 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#8a8a9e"
   - type: MobState
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -209,6 +214,9 @@
     damageProtection:
       flatReductions:
         Heat: 10
+  - type: GuideHelp
+    guides:
+    - Species
 
 - type: entity
   parent: BaseSpeciesDummy

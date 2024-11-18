@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from vgstation at https://github.com/vgstation-coders/vgstation13/commit/1cdfb0230cc96d0ba751fa002d04f8aa2f25ad7d",
+  "copyright": "made by borkroman",
   "size": {
     "x": 32,
     "y": 32
@@ -11,14 +11,9 @@
       "name": "stunbaton_off"
     },
     {
-      "name": "stunbaton_nocell"
-    },
-    {
       "name": "stunbaton_on",
       "delays": [
         [
-          0.1,
-          0.1,
           0.1,
           0.1,
           0.1,

@@ -15,7 +15,9 @@
     - IPC # Adventure
     - PigMan # Adventure
     - Skrell # Adventure
-    - Snake # Adventure
+    - Snake # Adventure 
+    - Resomi # Adventure  
+    - Drask # Adventure  
 
 - type: guideEntry
   id: Arachnid

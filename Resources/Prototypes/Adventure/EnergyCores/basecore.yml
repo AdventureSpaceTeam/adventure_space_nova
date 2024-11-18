@@ -1,0 +1,179 @@
+- type: entity
+  parent: BaseMachinePowered
+  id: BaseShuttleCore
+  description: Базовый прототип ядра шаттла
+  name: Базовое ядро шаттла
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Adventure/EnergyCores/sphere/sphere_big.rsi
+    layers:
+      - state: crutch
+        map: ["enum.GravityGeneratorVisualLayers.Base"]
+      - state: crutch
+        map: ["enum.GravityGeneratorVisualLayers.Core"]
+      - state: crutch
+        map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      - state: crutch
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+      - state: sphere_off
+        map: [ "enum.EnergyCoreVisualLayers.IsOff" ]
+        visible: false
+      - state: disabling
+        map: [ "enum.EnergyCoreVisualLayers.Disabling" ]
+        visible: false
+      - state: enabling
+        map: [ "enum.EnergyCoreVisualLayers.Enabling" ]
+        visible: false
+      - state: fly
+        map: [ "enum.EnergyCoreVisualLayers.IsOn" ]
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      output:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: Anchorable
+  - type: Appearance
+  - type: Pullable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Electronic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 5
+    maxTileBreak: 2147483647
+    totalIntensity: 20000
+  - type: PowerSupplier
+    enabled: true
+    supplyRate: 100000
+    supplyRampRate: 10000
+    supplyRampTolerance: 10000
+  - type: Electrified
+    onHandInteract: false
+    onInteractUsing: false
+    onBump: false
+    requirePower: true
+    highVoltageNode: output
+  - type: PacifismDangerousAttack
+  - type: PowerMonitoringDevice
+    group: Generator
+    loadNode: output
+    state: crutch
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/engine_hum.ogg
+  - type: GravityGenerator
+    idlePower: 50
+    activePower: 2500
+    lightRadiusMin: 0.75
+    lightRadiusMax: 2.5
+    spriteMap:
+      broken: "crutch"
+      unpowered: "crutch"
+      off: "crutch"
+      on: "crutch"
+  - type: Thruster
+    thrusterType: Angular
+    requireSpace: false
+    thrust: 2000
+  - type: DoAfter
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 2
+        density: 80
+        mask:
+          - FullTileMask
+        layer:
+          - FullTileLayer
+  - type: AtmosDevice
+  - type: ApcPowerReceiver
+    powerDisabled: false
+  - type: HeatFreezingCore
+  - type: EnergyCore
+    damage:
+      types:
+        Heat: 0.3
+    baseSupply: 100000
+  - type: Repairable
+    doAfterDelay: 8
+    fuelCost: 15
+  - type: EnergyCoreVisuals
+    onState: crutch
+    offState: crutch
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: BasicDevice
+  - type: DeviceList
+  - type: DeviceLinkSink
+    ports:
+      - EnergyCoreReceiver
+
+- type: entity
+  parent: BaseShuttleCore
+  id: BaseRNDCore
+  abstract: true
+  name: Base core
+  components:
+  - type: HeatFreezingCore
+    absorbGas: NitrousOxide
+  - type: EnergyCore
+    secPerMoles: 1
+
+- type: entity
+  parent: BaseShuttleCore
+  id: BaseNTCore
+  abstract: true
+  name: Base core
+  components:
+  - type: HeatFreezingCore
+    absorbGas: Frezon
+  - type: EnergyCore
+    secPerMoles: 2.5
+
+- type: entity
+  parent: BaseShuttleCore
+  id: BaseSYNCore
+  abstract: true
+  name: Base core
+  components:
+  - type: HeatFreezingCore
+    absorbGas: Ammonia
+  - type: EnergyCore
+    secPerMoles: 0.75
+
+- type: entity
+  parent: BaseShuttleCore
+  id: BaseHMCore
+  abstract: true
+  name: Base core
+  components:
+  - type: HeatFreezingCore
+    absorbGas: Plasma
+  - type: EnergyCore
+    secPerMoles: 0.5

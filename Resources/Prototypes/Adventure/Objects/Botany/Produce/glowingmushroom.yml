@@ -1,0 +1,60 @@
+- type: entity  # Семена
+  parent: SeedBase
+  name: пакет спор (светящийся гриб)
+  suffix: AdvBotany
+  description: "Даже этот пакетик немного светится"
+  id: GlowingMushroomSeeds
+  components:
+    - type: Seed
+      seedId: glowingmushroom
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/glowingmushrooms.rsi
+
+- type: seed  # Растение
+  id: glowingmushroom
+  name: пакет спор (светящийся гриб)
+  noun: seeds-noun-seeds
+  displayName: светящийся гриб
+  plantRsi: Adventure/Objects/Botany/Produce/glowingmushrooms.rsi
+  packetPrototype: GlowingMushroomSeeds
+  productPrototypes:
+    - FoodGlowingMushroom
+  lifespan: 55
+  maturation: 6
+  production: 6
+  growstage: 3
+  yield: 3
+  potency: 10
+  growthStages: 3
+  idealLight: 3 # Темнее!
+  chemicals:
+    Radium:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+- type: entity  # Продукт
+  name: светящийся гриб
+  parent: FoodMushroom
+  id: FoodGlowingMushroom
+  description: Излучает крупицы света.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - weird
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/glowingmushrooms.rsi
+  - type: Produce
+    seedId: glowingmushroom
+  - type: RadiationSource
+    intensity: 0.5
+  - type: PointLight  # Должен же светящийся гриб светиться?)
+    color: "#38f5bc"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Radium
+        Quantity: 5
+  - type: Tag
+    tags:
+    - Fruit

@@ -3,7 +3,7 @@
   id: PlasmaSniperMagazine
   name: Плазменная батарея "Виверны"
   description: Батарея для заряда плазменной винтовки "Виверна"
-  suffix: BORK
+  suffix: BORK, AdvWeapons
   parent: BaseItem
   components:
   - type: Battery
@@ -81,7 +81,7 @@
   id: WeaponPlasmaSniper
   name: Плазменная винтовка "Виверна"
   description: Плазменная снайперская винтовка убойной силы.
-  suffix: BORK
+  suffix: BORK, AdvWeapons
   parent: BaseItem
   components:
   - type: Sprite

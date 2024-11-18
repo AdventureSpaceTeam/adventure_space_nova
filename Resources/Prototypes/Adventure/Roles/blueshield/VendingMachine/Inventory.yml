@@ -1,0 +1,20 @@
+- type: vendingMachineInventory
+  id: BSrobeInventory
+  startingInventory:
+    ClothingBackpackBlueshield: 1
+    ClothingBackpackSatchelBlueshield: 1
+    ClothingBackpackDuffelBlueshield: 1
+    ClothingUniformJumpsuitBlueshield: 1
+    ClothingUniformjumpskirtBlueshield: 1
+    ClothingShoesBootsCombatFilled: 1
+    ClothingHeadHatBlueshieldBeret: 1
+    ClothingHeadBlueshieldCapBlue: 1
+    ClothingHeadBandBlue: 1
+    ClothingMaskNeckGaiter: 1
+    ClothingHandsGlovesColorBlack: 1
+    ClothingOuterArmorCoatBlueshield: 1
+    ClothingOuterArmorBlueshield: 1
+    ClothingUniformJumpsuitBlueshieldParade: 1
+    ClothingBeltMilitaryWebbingBlueshield: 1
+  contrabandInventory:
+    ToolDebug: 1

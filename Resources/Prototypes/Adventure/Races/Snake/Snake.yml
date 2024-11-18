@@ -24,7 +24,7 @@
     devourTime: 15
     whitelist:
       components:
-      - MobState
+      - Bloodstream
   - type: SolutionContainerManager
     solutions:
       melee:
@@ -69,8 +69,8 @@
       types:
         Slash: 5
   - type: Puller
-    needsHands: false
-  - type: LizardAccent
+    needsHands: true
+  - type: SnakeAccent # Adventure-Accent
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
@@ -87,10 +87,18 @@
     speechSounds: SnakeSpeach
     speechVerb: Reptilian
     allowedEmotes: ['Hissing', 'Thump']
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 250
+    sweatHeatRegulation: 500
+    shiveringHeatRegulation: 500
+    normalBodyTemperature: 293.15 # температура тела не поднимается сама по себе.
+    thermalRegulationTemperatureThreshold: 25
   - type: Temperature
-    heatDamageThreshold: 423.15
-    coldDamageThreshold: 303.15
-    currentTemperature: 310.15
+    heatDamageThreshold: 353.15
+    coldDamageThreshold: 288.15
+    currentTemperature: 293.15
     coldDamage: 
       types:
         Cold : 1.5
@@ -100,9 +108,9 @@
         Heat : 1.5
   - type: TemperatureSpeed
     thresholds:
-      303: 0.8
-      298: 0.6
-      293: 0.4
+      292.15: 0.8
+      290.15: 0.6
+      288.15: 0.4
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale

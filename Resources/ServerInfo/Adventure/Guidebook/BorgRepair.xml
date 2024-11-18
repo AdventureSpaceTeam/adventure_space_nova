@@ -1,0 +1,18 @@
+<Document>
+  # Ремонт боргов
+
+  <Box>
+    <GuideEntityEmbed Entity="Welder" Caption=""/>
+    <GuideEntityEmbed Entity="SheetSteel" Caption=""/>
+    <GuideEntityEmbed Entity="CableHVStack" Caption=""/>
+    <GuideEntityEmbed Entity="CableMVStack" Caption=""/>
+    <GuideEntityEmbed Entity="CableApcStack" Caption=""/>
+  </Box>
+  Чтобы отремонтировать борга не нужно быть Эйнштейном, нужно просто иметь прямые руки и немного мозгов.
+
+  ## Как тебя чинить, железяка?!
+
+  - Сварка восстанавливает 10 уколов и режущих за использование.
+  - Сталь восстанавливает 5 тупого и ожогов за единицу, пласталь восстанавливает по 10.
+  - Провода восстанавливают по 5 ([color=#56c923]НВ[/color]), 10 ([color=#c9bb23]СВ[/color]) и 15 ([color=#eb810f]ВВ[/color]) урона электричеством за единицу.
+</Document>

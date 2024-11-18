@@ -1,0 +1,85 @@
+#киборг-охранник
+- type: entity
+  id: BorgChassisSecurity
+  parent: BaseBorgChassisNT
+  name: киборг-охранник
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/BorgDep/SecBorg/Borg.rsi
+    layers:
+    - state: sec
+    - state: sec_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: sec_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - SecModul
+    hasMindState: sec_e
+    noMindState: sec_e_r
+  - type: PointLight
+    autoRot: true
+    netsync: false
+    color: "#ffeead"
+    radius: 4
+    energy: 2
+  - type: BorgTransponder
+    sprite:
+      sprite: Adventure/Roles/BorgDep/SecBorg/Borg.rsi
+      state: sec
+    name: киборг-охранник
+  - type: Construction
+    node: engineer
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Security
+    - Binary
+    - Common
+    - Science
+  - type: ActiveRadio
+    channels:
+    - Security
+    - Binary
+    - Common
+    - Science
+  - type: AccessReader
+    access: [["Security"], ["Command"], ["Research"]]
+  - type: Inventory
+    templateId: borgShort
+  - type: InteractionPopup
+    interactSuccessString: petting-success-engineer-cyborg
+    interactFailureString: petting-failure-engineer-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: TTS
+    voice: sentrybot
+  - type: ShowCriminalRecordIcons
+  - type: StationAiVision
+  - type: FlashImmunity
+  - type: BorgCuffed
+
+- type: entity
+  id: PlayerBorgChassisSecurity
+  parent: BorgChassisSecurity
+  suffix: Battery, Tools
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - ModuleSec
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: RandomMetadata
+    nameSegments: [names_borg]

@@ -1,9 +1,7 @@
 - type: soundCollection
   id: LobbyMusic
   files:
-    - /Audio/Lobby/thunderdome.ogg
     - /Audio/Lobby/absconditus.ogg
-    - /Audio/Lobby/space_asshole.ogg
     - /Audio/Lobby/endless_space.ogg
     - /Audio/Lobby/singuloose.ogg
     - /Audio/Lobby/comet_haley.ogg
@@ -15,3 +13,13 @@
     - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
     - /Audio/Lobby/every_light_is_blinking_at_once.ogg
     - /Audio/Lobby/atomicamnesiammx.ogg
+    # Adventure space edit. Made by RaidGo
+    - /Audio/Adventure/Lobby/Bluespace.ogg
+    - /Audio/Adventure/Lobby/Codebrain.ogg
+    - /Audio/Adventure/Lobby/Downtown.ogg
+    - /Audio/Adventure/Lobby/Exploring.ogg
+    - /Audio/Adventure/Lobby/Galaxies_and_echoes.ogg
+    - /Audio/Adventure/Lobby/Metropolis.ogg
+    - /Audio/Adventure/Lobby/Phoronindustry.ogg
+    - /Audio/Adventure/Lobby/Runner_in_motion.ogg
+    - /Audio/Adventure/Lobby/PhoronLeak.ogg

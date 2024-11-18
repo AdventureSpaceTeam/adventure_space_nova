@@ -1,0 +1,693 @@
+﻿- type: constructionGraph
+  id: EnergyCoreMiniNT
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: frame1
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: Plasteel
+        amount: 12
+        doAfter: 2
+  - node: frame1
+    entity: ECMiniFrameNT
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame2
+      steps:
+      - material: Plasma
+        amount: 12
+        doAfter: 3
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasteel1
+        amount: 12
+      - !type:DeleteEntity {}
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame2
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame3
+      steps:
+      - material: NTECCPU
+        amount: 1
+        doAfter: 5
+      - tool: Screwing
+        doAfter: 0.5
+    - to: frame1
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasma1
+        amount: 12
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Cutting
+        doAfter: 4
+  - node: frame3
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame4
+      steps:
+      - material: Silver
+        amount: 20
+        doAfter: 0.50
+    - to: frame2
+      completed:
+      - !type:SpawnPrototype
+        prototype: NTECCPU1
+        amount: 1
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Prying
+        doAfter: 0.50
+  - node: frame4
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      steps:
+      - material: ReinforcedGlass
+        amount: 12
+        doAfter: 4
+
+    - to: frame3
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotSilver1
+        amount: 20
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame5
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame6
+      steps:
+      - tool: Welding
+        doAfter: 15
+    - to: frame4
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetRGlass1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+  - node: frame6
+    entity: ECMiniFrameNT
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - tool: Welding
+        doAfter: 15
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+    - to: EnergyCore
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - material: Plastic
+        amount: 12
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 0.5
+  - node: EnergyCore
+    entity: NTSmallCore
+    edges:
+    - to: frame6
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlastic1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+
+- type: constructionGraph
+  id: EnergyCoreMiniRnD
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: frame1
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: Plasteel
+        amount: 12
+        doAfter: 2
+  - node: frame1
+    entity: ECMiniFrameRND
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame2
+      steps:
+      - material: Plasma
+        amount: 12
+        doAfter: 3
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasteel1
+        amount: 12
+      - !type:DeleteEntity {}
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame2
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame3
+      steps:
+      - material: RNDECCPU
+        amount: 1
+        doAfter: 5
+      - tool: Screwing
+        doAfter: 0.5
+    - to: frame1
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasma1
+        amount: 12
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Cutting
+        doAfter: 4
+  - node: frame3
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame4
+      steps:
+      - material: Silver
+        amount: 20
+        doAfter: 0.50
+    - to: frame2
+      completed:
+      - !type:SpawnPrototype
+        prototype: RNDECCPU1
+        amount: 1
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Prying
+        doAfter: 0.50
+  - node: frame4
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      steps:
+      - material: ReinforcedGlass
+        amount: 12
+        doAfter: 4
+    - to: frame3
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotSilver1
+        amount: 20
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame5
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame6
+      steps:
+      - tool: Welding
+        doAfter: 15
+    - to: frame4
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetRGlass1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+  - node: frame6
+    entity: ECMiniFrameRND
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - tool: Welding
+        doAfter: 15
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+    - to: EnergyCore
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - material: Plastic
+        amount: 12
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 0.5
+  - node: EnergyCore
+    entity: RnDSmallCore
+    edges:
+    - to: frame6
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlastic1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+
+- type: constructionGraph
+  id: EnergyCoreMiniSyn
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: frame1
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: Plasteel
+        amount: 12
+        doAfter: 2
+  - node: frame1
+    entity: ECMiniFrameSYN
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame2
+      steps:
+      - material: Plasma
+        amount: 12
+        doAfter: 3
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasteel1
+        amount: 12
+      - !type:DeleteEntity {}
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame2
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame3
+      steps:
+      - material: SYNECCPU
+        amount: 1
+        doAfter: 5
+      - tool: Screwing
+        doAfter: 0.5
+    - to: frame1
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasma1
+        amount: 12
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Cutting
+        doAfter: 4
+  - node: frame3
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame4
+      steps:
+      - material: Silver
+        amount: 20
+        doAfter: 0.50
+    - to: frame2
+      completed:
+      - !type:SpawnPrototype
+        prototype: SYNECCPU1
+        amount: 1
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Prying
+        doAfter: 0.50
+  - node: frame4
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      steps:
+      - material: ReinforcedGlass
+        amount: 12
+        doAfter: 4
+    - to: frame3
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotSilver1
+        amount: 20
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame5
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame6
+      steps:
+      - tool: Welding
+        doAfter: 15
+    - to: frame4
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetRGlass1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+  - node: frame6
+    entity: ECMiniFrameSYN
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - tool: Welding
+        doAfter: 15
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+    - to: EnergyCore
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - material: Plastic
+        amount: 12
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 0.5
+  - node: EnergyCore
+    entity: SyndicateSmallCore
+    edges:
+    - to: frame6
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlastic1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+
+- type: constructionGraph
+  id: EnergyCoreMiniHM
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: frame1
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - material: Plasteel
+        amount: 12
+        doAfter: 2
+  - node: frame1
+    entity: ECMiniFrameHM
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame2
+      steps:
+      - material: Plasma
+        amount: 12
+        doAfter: 3
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasteel1
+        amount: 12
+      - !type:DeleteEntity {}
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame2
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame3
+      steps:
+      - material: HMECCPU
+        amount: 1
+        doAfter: 5
+      - tool: Screwing
+        doAfter: 0.5
+    - to: frame1
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlasma1
+        amount: 12
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Cutting
+        doAfter: 4
+  - node: frame3
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame4
+      steps:
+      - material: Silver
+        amount: 20
+        doAfter: 0.50
+    - to: frame2
+      completed:
+      - !type:SpawnPrototype
+        prototype: HMECCPU1
+        amount: 1
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      steps:
+      - tool: Prying
+        doAfter: 0.50
+  - node: frame4
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      steps:
+      - material: ReinforcedGlass
+        amount: 12
+        doAfter: 4
+
+    - to: frame3
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotSilver1
+        amount: 20
+      steps:
+      - tool: Welding
+        doAfter: 20
+  - node: frame5
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame6
+      steps:
+      - tool: Welding
+        doAfter: 15
+    - to: frame4
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetRGlass1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+  - node: frame6
+    entity: ECMiniFrameHM
+    actions:
+    - !type:AppearanceChange
+    edges:
+    - to: frame5
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - tool: Welding
+        doAfter: 15
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+    - to: EnergyCore
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      steps:
+      - material: Plastic
+        amount: 12
+        doAfter: 3
+      - tool: Screwing
+        doAfter: 0.5
+  - node: EnergyCore
+    entity: HandMadeSmallCore
+    edges:
+    - to: frame6
+      conditions:
+      - !type:EntityAnchored
+        anchored: true
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetPlastic1
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 2
+
+- type: construction
+  name: Малое энергоядро НаноТрейзен
+  id: EnergyCoreMiniConstructionNT
+  graph: EnergyCoreMiniNT
+  startNode: start
+  targetNode: EnergyCore
+  category: construction-category-structures
+  description: СУПЕР ПУПЕР ЯДРО!
+  icon:
+    sprite: Adventure/EnergyCores/spblue/spblue_mini.rsi
+    state: fly
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: Малое энергоядро Синдиката
+  id: EnergyCoreMiniConstructionSyn
+  graph: EnergyCoreMiniSyn
+  startNode: start
+  targetNode: EnergyCore
+  category: construction-category-structures
+  description: СУПЕР ПУПЕР ЯДРО!
+  icon:
+    sprite: Adventure/EnergyCores/spred/spred_mini.rsi
+    state: fly
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: Малое энергоядро РнД
+  id: EnergyCoreMiniConstructionRnD
+  graph: EnergyCoreMiniRnD
+  startNode: start
+  targetNode: EnergyCore
+  category: construction-category-structures
+  description: СУПЕР ПУПЕР ЯДРО!
+  icon:
+    sprite: Adventure/EnergyCores/sprnd/sprnd_mini.rsi
+    state: fly
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: Малое самодельное энергоядро
+  id: EnergyCoreMiniConstructionHM
+  graph: EnergyCoreMiniHM
+  startNode: start
+  targetNode: EnergyCore
+  category: construction-category-structures
+  description: СУПЕР ПУПЕР ЯДРО!
+  icon:
+    sprite: Adventure/EnergyCores/sphere/sphere_mini.rsi
+    state: fly
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

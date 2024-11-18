@@ -1,3 +1,4 @@
+using Content.Server._Adventure.Sponsors;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading;
@@ -19,6 +20,7 @@ namespace Content.Server.Preferences.Managers
     /// </summary>
     public sealed class ServerPreferencesManager : IServerPreferencesManager, IPostInjectInit
     {
+        [Dependency] private readonly SponsorsManager _sponsors = default!;
         [Dependency] private readonly IServerNetManager _netManager = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
@@ -34,6 +36,11 @@ namespace Content.Server.Preferences.Managers
         private ISawmill _sawmill = default!;
 
         private int MaxCharacterSlots => _cfg.GetCVar(CCVars.GameMaxCharacterSlots);
+
+        private int GetUserMaxCharacterSlots(NetUserId userId)
+        {
+            return MaxCharacterSlots + _sponsors.GetAdditionalCharacterSlots(userId);
+        }
 
         public void Init()
         {
@@ -55,7 +62,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (index < 0 || index >= MaxCharacterSlots)
+            if (index < 0 || index >= GetUserMaxCharacterSlots(userId))
             {
                 return;
             }
@@ -95,7 +102,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (slot < 0 || slot >= MaxCharacterSlots)
+            if (slot < 0 || slot >= GetUserMaxCharacterSlots(userId))
                 return;
 
             var curPrefs = prefsData.Prefs!;
@@ -125,7 +132,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (slot < 0 || slot >= MaxCharacterSlots)
+            if (slot < 0 || slot >= GetUserMaxCharacterSlots(userId))
             {
                 return;
             }
@@ -213,7 +220,7 @@ namespace Content.Server.Preferences.Managers
             msg.Preferences = prefsData.Prefs;
             msg.Settings = new GameSettings
             {
-                MaxCharacterSlots = MaxCharacterSlots
+                MaxCharacterSlots = GetUserMaxCharacterSlots(session.UserId)
             };
             _netManager.ServerSendMessage(msg, session.Channel);
         }

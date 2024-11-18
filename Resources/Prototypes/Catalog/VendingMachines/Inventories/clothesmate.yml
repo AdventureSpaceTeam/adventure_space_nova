@@ -53,6 +53,8 @@
     ClothingUniformJumpskirtCasualPurple: 2
     ClothingUniformJumpsuitCasualRed: 2
     ClothingUniformJumpskirtCasualRed: 2
+    ClothingUniformJumpsuitCasualGreen: 2
+    ClothingUniformJumpskirtCasualGreen: 2
     # DO NOT ADD MORE, USE UNIFORM DYING
     ClothingShoesColorBlack: 8
     ClothingShoesColorBrown: 4
@@ -186,8 +188,16 @@
     long_pink_wig: 2
     pigtails_pink_wig: 2
     wisp_pink_wig: 2
+    # Adventure Dresses
+    ClothingLuxDressWhite: 2
+    ClothingLuxDressRed: 2
+    ClothingElegantDressRed: 2
+    ClothingElegantDressBlue: 2
+    ClothingElegantDressPink: 2
+    ClothingElegantDressBlack: 2
+    ClothingElegantDressGreen: 2
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
     ClothingUniformJumpskirtTacticool: 1
-  # DO NOT ADD MORE, USE UNIFORM DYING
+

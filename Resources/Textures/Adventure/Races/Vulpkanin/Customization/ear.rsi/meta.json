@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "close",
+      "directions": 4
+    },
+    {
+      "name": "close_inner",
+      "directions": 4
+    },
+    {
+      "name": "hanging",
+      "directions": 4
+    },
+    {
+      "name": "hanging_inner",
+      "directions": 4
+    },
+    {
+      "name": "hanging_left",
+      "directions": 4
+    },
+    {
+      "name": "hanging_left_inner",
+      "directions": 4
+    },
+    {
+      "name": "wide",
+      "directions": 4
+    },
+    {
+      "name": "wide_inner",
+      "directions": 4
+    },
+    {
+      "name": "wolf",
+      "directions": 4
+    }
+  ]
+}

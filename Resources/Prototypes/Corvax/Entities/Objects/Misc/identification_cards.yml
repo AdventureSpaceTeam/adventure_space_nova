@@ -6,7 +6,7 @@
     - type: Sprite
       layers:
         - state: silver
-        - state: idiaa
+        - state: idGenericCommand # Adventure-Resprite
     - type: PresetIdCard
       job: IAA
 
@@ -18,6 +18,6 @@
     - type: Sprite
       layers:
         - state: default
-        - state: idpilot
+        - state: idGenericSecurity # Adventure-Resprite
     - type: PresetIdCard
       job: Pilot

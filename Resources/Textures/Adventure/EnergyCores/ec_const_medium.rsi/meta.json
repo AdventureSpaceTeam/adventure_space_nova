@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-4.0",
+    "copyright": "Aristophan_ GC, temhbiubouh GC",
+    "size": {
+      "x": 192,
+      "y": 192
+    },
+    "states": [
+      {
+        "name": "corpus"
+      },
+      {
+        "name": "corpus_metal"
+      },
+      {
+        "name": "corpus_wires-1"
+      },
+      {
+        "name": "corpus_wires-2"
+      },
+      {
+        "name": "corpus_wires-3"
+      },
+      {
+        "name": "corpus_wires-4"
+      }
+    ]
+}
