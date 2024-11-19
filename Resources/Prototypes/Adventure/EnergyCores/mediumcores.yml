@@ -37,6 +37,7 @@
     timeOfLife: 480
     enablingLenght: 2.6
     baseSupply: 180000
+    secPerMoles: 1.75
   - type: PowerSupplier
     supplyRate: 180000
   - type: Sprite
@@ -58,6 +59,7 @@
     timeOfLife: 600
     enablingLenght: 7.7
     baseSupply: 200000
+    secPerMoles: 3.5
   - type: PowerSupplier
     supplyRate: 200000
   - type: Sprite
@@ -79,6 +81,7 @@
     timeOfLife: 500
     enablingLenght: 1.0
     baseSupply: 220000
+    secPerMoles: 1.25
   - type: PowerSupplier
     supplyRate: 220000
   - type: Sprite
@@ -98,9 +101,10 @@
       types:
         Heat: 0.125
     timeOfLife: 400
-    baseSupply: 150000
+    baseSupply: 160000
+    secPerMoles: 1
   - type: PowerSupplier
-    supplyRate: 150000
+    supplyRate: 160000
   - type: Sprite
     sprite: Adventure/EnergyCores/sphere/sphere.rsi
   - type: Construction

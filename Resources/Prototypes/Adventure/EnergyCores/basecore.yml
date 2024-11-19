@@ -142,8 +142,7 @@
   components:
   - type: HeatFreezingCore
     absorbGas: NitrousOxide
-  - type: EnergyCore
-    secPerMoles: 1
+    
 
 - type: entity
   parent: BaseShuttleCore
@@ -153,8 +152,7 @@
   components:
   - type: HeatFreezingCore
     absorbGas: Frezon
-  - type: EnergyCore
-    secPerMoles: 2.5
+    
 
 - type: entity
   parent: BaseShuttleCore
@@ -164,8 +162,7 @@
   components:
   - type: HeatFreezingCore
     absorbGas: Ammonia
-  - type: EnergyCore
-    secPerMoles: 0.75
+    
 
 - type: entity
   parent: BaseShuttleCore
@@ -175,5 +172,3 @@
   components:
   - type: HeatFreezingCore
     absorbGas: Plasma
-  - type: EnergyCore
-    secPerMoles: 0.5
