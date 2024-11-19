@@ -27,7 +27,7 @@
 - type: entity
   parent: [BaseSmallCore, BaseRNDCore]
   id: RnDSmallCore
-  description: Ядро для малых шаттлов, которое могжет изготовить каждая космическая станция типа "14", при имении ресурсов.
+  description: Ядро для малых шаттлов, которое может изготовить каждая космическая станция типа "14", при имении ресурсов.
   name: Малое ядро шаттла РнД.
   components:
   - type: EnergyCore
