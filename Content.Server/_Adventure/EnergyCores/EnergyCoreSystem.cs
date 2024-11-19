@@ -60,6 +60,8 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         component.ForceDisabled = true;
         TogglePowerDiscrete(uid, core: component);
         component.TimeOfLife = 0;
+        if (!TryComp(uid, out HeatFreezingCoreComponent? heatFreezing)) return;
+        heatFreezing.FilterGases.Add(heatFreezing.AbsorbGas);
     }
 
     private void OnDeviceUpdated(EntityUid uid, HeatFreezingCoreComponent component, ref AtmosDeviceUpdateEvent args)
@@ -79,6 +81,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         {
             Scrub(timeDelta, portableNode, adjacent, component);
             core.TimeOfLife += portableNode.Air.GetMoles(component.AbsorbGas) * core.SecPerMoles;
+            portableNode.Air.Clear();
             if (environment != null && core.Working && core.Size == 2)
                 _atmosphereSystem.AddHeat(environment, 5000);
             else if (environment != null && core.Working && core.Size == 3)
@@ -185,7 +188,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     public void TogglePower(EntityUid uid, bool playSwitchSound = true, EnergyCoreComponent? core = null, EntityUid? user = null)
     {
         if (core == null) if (!TryComp(uid, out core)) return;
-        if (core.Trantransitional || core.ForceDisabled) return;
+        if (core.ForceDisabled) return;
         if (!TryComp(uid, out ApcPowerReceiverComponent? receiver)) return;
         EnergyCoreState dataForSet;
         if (receiver.PowerDisabled)

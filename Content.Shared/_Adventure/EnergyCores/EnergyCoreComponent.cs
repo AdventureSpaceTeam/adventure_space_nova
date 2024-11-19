@@ -50,9 +50,6 @@ public sealed partial class EnergyCoreComponent : Component
     [DataField]
     public float LifeAfterOverheat = -60;
 
-    [ViewVariables(VVAccess.ReadOnly)]
-    public bool Trantransitional = false;
-
     [DataField]
     public float CurrentPowerGeneration = 1;
 
