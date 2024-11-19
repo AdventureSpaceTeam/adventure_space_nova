@@ -66,6 +66,9 @@ public sealed partial class EnergyCoreComponent : Component
 
     [DataField]
     public int Size = 1;
+
+    [DataField]
+    public bool isUndead = false;
 }
 
 [Serializable, NetSerializable]

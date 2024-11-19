@@ -173,6 +173,8 @@
   name: каркас базового энергоядра
   description: Это каркас базового энергоядра.
   abstract: true
+  placement:
+    mode: SnapgridCenter
   components:
   - type: GenericVisualizer
     visuals:

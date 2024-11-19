@@ -48,10 +48,10 @@
 
 # Верх. шмон
 
-#- type: loadout
-#  id: BSArmor
-#  equipment:
-#    outerClothing: ClothingOuterArmorBlueshield
+- type: loadout
+  id: BSArmor
+  equipment:
+    outerClothing: ClothingOuterArmorBlueshield
 
 - type: loadout
   id: BSArmorCoat
@@ -67,8 +67,10 @@
   id: BSOuterClothing
   name: ОСЩ, верхняя одежда
   loadouts:
+  - BSArmor
   - BSArmorCoat
   - BSArmorCoatParade
+
 
 # Ботинки
 - type: loadout

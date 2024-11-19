@@ -9,11 +9,11 @@
         </BoxContainer>
         <BoxContainer Orientation= "Vertical" SeparationOverride="4" MinWidth="350">
             <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="350">
-                <Label Name="CurrentHPLabel" Text="Текущая прочность:"/>
+                <Label Name="CurrentHPLabel" Text="Текущий урон, нанесенный ядру:"/>
                 <RichTextLabel Name="CurrentHP" Text="0"/>
             </BoxContainer>
             <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="350">
-                <Label Name="TimeAlive" Text="Осталось времени:"/>
+                <Label Name="TimeAlive" Text="Осталось времени (в секундах):"/>
                 <RichTextLabel Name="TimeAliveRich" Text="0"/>
             </BoxContainer>
         </BoxContainer>  

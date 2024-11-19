@@ -62,13 +62,14 @@
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
-    intensitySlope: 2
-    totalIntensity: 200
+    intensitySlope: 5
+    maxTileBreak: 2147483647
+    totalIntensity: 20000
   - type: PowerSupplier
     enabled: true
     supplyRate: 100000
-    supplyRampRate: 500
-    supplyRampTolerance: 500
+    supplyRampRate: 10000
+    supplyRampTolerance: 10000
   - type: Electrified
     onHandInteract: false
     onInteractUsing: false
@@ -141,6 +142,8 @@
   components:
   - type: HeatFreezingCore
     absorbGas: NitrousOxide
+  - type: EnergyCore
+    secPerMoles: 1
 
 - type: entity
   parent: BaseShuttleCore
@@ -150,6 +153,8 @@
   components:
   - type: HeatFreezingCore
     absorbGas: Frezon
+  - type: EnergyCore
+    secPerMoles: 2.5
 
 - type: entity
   parent: BaseShuttleCore
@@ -159,6 +164,8 @@
   components:
   - type: HeatFreezingCore
     absorbGas: Ammonia
+  - type: EnergyCore
+    secPerMoles: 0.75
 
 - type: entity
   parent: BaseShuttleCore
@@ -168,3 +175,5 @@
   components:
   - type: HeatFreezingCore
     absorbGas: Plasma
+  - type: EnergyCore
+    secPerMoles: 0.5

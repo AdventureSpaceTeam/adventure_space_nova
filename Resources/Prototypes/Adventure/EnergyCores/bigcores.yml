@@ -16,6 +16,13 @@
           - FullTileLayer
   - type: EnergyCore
     size: 3
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 50
+    intensitySlope: 5
+    maxTileBreak: 2147483647
+    tileBreakScale: 1
+    totalIntensity: 10000
 
 - type: entity
   parent: [BaseBigCore, BaseRNDCore]
@@ -28,11 +35,10 @@
       types:
         Heat: 0.125
     timeOfLife: 480
-    secPerMoles: 7.5
     enablingLenght: 2.6
-    baseSupply: 220000
+    baseSupply: 260000
   - type: PowerSupplier
-    supplyRate: 220000
+    supplyRate: 260000
   - type: Sprite
     sprite: Adventure/EnergyCores/sprnd/sprnd_big.rsi
 
@@ -47,11 +53,10 @@
       types:
         Heat: 0.1
     timeOfLife: 600
-    secPerMoles: 10
     enablingLenght: 7.7
-    baseSupply: 240000
+    baseSupply: 300000
   - type: PowerSupplier
-    supplyRate: 240000
+    supplyRate: 300000
   - type: Sprite
     sprite: Adventure/EnergyCores/spblue/spblue_big.rsi
   - type: Construction
@@ -69,11 +74,10 @@
       types:
         Heat: 0.125
     timeOfLife: 500
-    secPerMoles: 5
     enablingLenght: 1.0
-    baseSupply: 260000
+    baseSupply: 320000
   - type: PowerSupplier
-    supplyRate: 260000
+    supplyRate: 320000
   - type: Sprite
     sprite: Adventure/EnergyCores/spred/spred_big.rsi
   - type: Construction
@@ -91,7 +95,6 @@
       types:
         Heat: 0.25
     timeOfLife: 400
-    secPerMoles: 3
     baseSupply: 200000
   - type: PowerSupplier
     supplyRate: 200000

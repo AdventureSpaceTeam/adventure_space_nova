@@ -57,12 +57,9 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     }
     private void OnMapInit(EntityUid uid, EnergyCoreComponent component, MapInitEvent args)
     {
-        if (component.Working)
-        {
-            component.ForceDisabled = true;
-            TogglePower(uid);
-        }
-        component.Working = false;
+        component.ForceDisabled = true;
+        TogglePowerDiscrete(uid, core: component);
+        component.TimeOfLife = 0;
     }
 
     private void OnDeviceUpdated(EntityUid uid, HeatFreezingCoreComponent component, ref AtmosDeviceUpdateEvent args)
@@ -88,6 +85,8 @@ public sealed partial class EnergyCoreSystem : EntitySystem
                 _atmosphereSystem.AddHeat(environment, 10000);
             //Pump(environment, portableNode, component); // попросили убрать для хардкорности ситуации
         }
+        if (core.TimeOfLife > 0 && core.ForceDisabled)
+            core.ForceDisabled = false;
     }
 
 
@@ -146,7 +145,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
             if (component.TimeOfLife > component.LifeAfterOverheat)
             {
                 component.TimeOfLife -= 1;
-                if (component.TimeOfLife <= 0)
+                if (component.TimeOfLife <= 0 && !component.isUndead)
                     OverHeating(component);
             }
             else
@@ -186,8 +185,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     public void TogglePower(EntityUid uid, bool playSwitchSound = true, EnergyCoreComponent? core = null, EntityUid? user = null)
     {
         if (core == null) if (!TryComp(uid, out core)) return;
-        core.ForceDisabled = !core.ForceDisabled;
-        if (core.Trantransitional) return;
+        if (core.Trantransitional || core.ForceDisabled) return;
         if (!TryComp(uid, out ApcPowerReceiverComponent? receiver)) return;
         EnergyCoreState dataForSet;
         if (receiver.PowerDisabled)
@@ -254,10 +252,8 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         else
             _thrusterSystem.DisableThruster(uid, thruster, xForm);
         return !supplier.Enabled && !receiver.PowerDisabled; // i.e. PowerEnabled
-
-
-
     }
+
     private void OnNewLink(EntityUid uid, EnergyCoreConsoleComponent component, NewLinkEvent args)
     {
         if (!TryComp<EnergyCoreComponent>(args.Sink, out var analyzer))
@@ -277,7 +273,6 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     private void OnPowerToggled(EntityUid uid, EnergyCoreConsoleComponent component, EnergyCoreConsoleIsOnMessage args)
     {
         if (!TryComp(component.EnergyCoreEntity, out EnergyCoreComponent? core)) return;
-        core.ForceDisabled = !core.ForceDisabled;
         TogglePower(core.Owner);
     }
     private void OnParentChanged(EntityUid uid, EnergyCoreComponent component, ref EntParentChangedMessage args)
