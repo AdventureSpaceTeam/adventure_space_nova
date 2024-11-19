@@ -27,7 +27,7 @@
 - type: entity
   parent: [BaseMediumCore, BaseRNDCore]
   id: RnDMediumCore
-  description: Ядро для средних шаттлов, которое могжет изготовить каждая космическая станция типа "14", при имении ресурсов.
+  description: Ядро для средних шаттлов, которое может изготовить каждая космическая станция типа "14", при имении ресурсов.
   name: Среднее ядро шаттла РнД.
   components:
   - type: EnergyCore
