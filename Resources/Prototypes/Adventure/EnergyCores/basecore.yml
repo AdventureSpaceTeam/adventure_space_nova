@@ -3,7 +3,7 @@
   id: BaseShuttleCore
   description: Базовый прототип ядра шаттла
   name: Базовое ядро шаттла
-  abstract: true
+  suffix: Energy cores
   placement:
     mode: SnapgridCenter
   components:
@@ -105,7 +105,8 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 2
+          position: 0,-0.65
+          radius: 2.4
         density: 80
         mask:
           - FullTileMask
@@ -137,7 +138,6 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseRNDCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
@@ -147,7 +147,6 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseNTCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
@@ -157,7 +156,6 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseSYNCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
@@ -167,7 +165,6 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseHMCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore

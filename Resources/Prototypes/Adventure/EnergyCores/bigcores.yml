@@ -1,14 +1,14 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseBigCore
-  abstract: true
   components:
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 2
+          position: 0,-0.6
+          radius: 2.4
         density: 80
         mask:
           - FullTileMask

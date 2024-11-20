@@ -1,14 +1,14 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseMediumCore
-  abstract: true
   components:
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 1
+          position: 0,-0.35
+          radius: 1.45
         density: 80
         mask:
           - FullTileMask
@@ -23,7 +23,7 @@
     maxTileBreak: 2147483647
     tileBreakScale: 1
     totalIntensity: 5000
-  
+
 - type: entity
   parent: [BaseMediumCore, BaseRNDCore]
   id: RnDMediumCore

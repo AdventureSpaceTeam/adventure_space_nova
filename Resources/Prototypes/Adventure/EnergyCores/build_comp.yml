@@ -3,7 +3,6 @@
   parent: BaseItem
   name: Базовая составляющая Энергоядра
   description: Кругленькая красивенькая, но очень функциональная и хрупкая вещица. Является "центральным процессором" Энергоядра.
-  abstract: true
   components:
     - type: Sprite
       sprite: Adventure/EnergyCores/mini_core-RnD.rsi
@@ -19,7 +18,6 @@
 
 
 - type: entity
-  abstract: true
   parent: BaseEnergyBuildComp
   id: RnDEnergyCoreCPU
   name: Центральный процессор ядра РнД
@@ -40,7 +38,6 @@
     count: 1
 
 - type: entity
-  abstract: true
   id: SyndicateEnergyCoreCPU
   parent: BaseEnergyBuildComp
   name: Центральный процессор ядра Синдиката
@@ -61,7 +58,6 @@
     count: 1
 
 - type: entity
-  abstract: true
   id: NanoTrasenEnergyCoreCPU
   parent: BaseEnergyBuildComp
   name: Центральный процессор ядра НаноТрейзен
@@ -82,7 +78,6 @@
     count: 1
 
 - type: entity
-  abstract: true
   id: HandMadeEnergyCoreCPU
   parent: BaseEnergyBuildComp
   name: Центральный процессор самодельного ядра
@@ -172,7 +167,6 @@
   parent: BaseStructureDynamic
   name: каркас базового энергоядра
   description: Это каркас базового энергоядра.
-  abstract: true
   placement:
     mode: SnapgridCenter
   components:
@@ -242,7 +236,8 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 2
+          position: 0.5,0.1
+          radius: 2.4
         density: 80
         mask:
           - FullTileMask
@@ -295,7 +290,8 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.5
+          position: 0.5,0.05
+          radius: 0.75
         density: 80
         mask:
           - FullTileMask
@@ -348,7 +344,8 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 1
+          position: 0.5,0.05
+          radius: 1.5
         density: 80
         mask:
           - FullTileMask
