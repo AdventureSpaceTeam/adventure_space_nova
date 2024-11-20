@@ -1,6 +1,7 @@
 - type: entity
   id: SprayPaint
   name: баллончик с краской
+  suffix: AdvFun
   description: он способен менять цвет волос.
   parent: BaseItem
   components:

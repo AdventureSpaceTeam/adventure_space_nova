@@ -1,0 +1,125 @@
+#Струя пламени
+- type: entity
+  id: FireBallFlamethrower
+  name: реактивная смесь
+  parent: BaseBullet
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+      shader: unshaded
+  - type: Ammo
+    muzzleFlash: null
+  - type: IgniteOnCollide
+    fireStacks: 1
+  - type: PointLight
+    enabled: true
+    color: "#ff8d26"
+    radius: 3
+    energy: 2
+  - type: TimedDespawn
+    lifetime: 0.8
+
+#топливный бак 
+- type: Tag
+  id: TankFlamethrower
+
+- type: entity
+  id: FuelTankFirethrower
+  name: топливный бак 
+  description: Содержит горючую реактивную смесь.
+  parent: BaseItem
+  components:
+  - type: Battery
+    maxCharge: 12500
+    startingCharge: 12500
+    pricePerJoule: 0.15
+  - type: Tag
+    tags:
+      - TankFlamethrower
+  - type: ProjectileBatteryAmmoProvider
+    proto: FireBallFlamethrower
+    fireCost: 50
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Ginormous
+    sprite: Adventure/Objects/Weapons/Flamethrower/fuel_tank.rsi
+  - type: Sprite
+    sprite: Adventure/Objects/Weapons/Flamethrower/fuel_tank.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: Clothing
+    slots: BACK
+    sprite: Adventure/Objects/Weapons/Flamethrower/fuel_tank.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
+
+#Огнемёт
+- type: entity
+  name: Огнемёт
+  parent: BaseItem
+  id: FirethrowerGun
+  description: Ручной струйный огнемет. Предназначен для поражения групповых целей.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Weapons/Flamethrower/Flamethrower.rsi
+    layers:
+    - state: icon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    slots: BACK
+    sprite: Adventure/Objects/Weapons/Flamethrower/Flamethrower.rsi
+  - type: Item
+    size: Ginormous
+    sprite: Adventure/Objects/Weapons/Flamethrower/Flamethrower.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    projectileSpeed: 8
+    fireRate: 8
+    maxAngle: 90
+    minAngle: 60
+    soundGunshot:
+      collection: FlameShot
+      params:
+        volume: 8
+    soundEmpty:
+      path: /Audio/Effects/box_deploy.ogg
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -30
+    maxAngle: -30
+  - type: AmmoCounter
+  - type: ClothingSlotAmmoProvider 
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - TankFlamethrower
+  - type: Appearance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
+  - type: UseDelay
+    delay: 0.5
+
+- type: soundCollection
+  id: FlameShot
+  files:
+  - /Audio/Adventure/Weapon/Flamethrower/flameShot_1.ogg
+  - /Audio/Adventure/Weapon/Flamethrower/flameShot_2.ogg
+  - /Audio/Adventure/Weapon/Flamethrower/flameShot_3.ogg
+  - /Audio/Adventure/Weapon/Flamethrower/flameShot_4.ogg

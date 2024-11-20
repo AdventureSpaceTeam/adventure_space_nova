@@ -116,6 +116,8 @@
   packetPrototype: MimanaSeeds
   productPrototypes:
     - FoodMimana
+  mutationPrototypes:
+    - BananaGunPlant #Adventure
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -354,6 +356,8 @@
   packetPrototype: PineappleSeeds
   productPrototypes:
     - FoodPineapple
+  mutationPrototypes:
+    - coolpineapple # Adventure
   harvestRepeat: Repeat
   lifespan: 55
   maturation: 6
@@ -894,7 +898,9 @@
   plantRsi: Objects/Specific/Hydroponics/chanterelle.rsi
   packetPrototype: ChanterelleSeeds
   productPrototypes:
-    - FoodMushroom
+    - FoodMushroom  
+  mutationPrototypes:
+    - glowingmushroom  # Adventure
   lifespan: 35
   maturation: 10
   production: 7
@@ -1346,6 +1352,7 @@
     - FoodGalaxythistle
   mutationPrototypes:
     - glasstle
+    - mutatedfern # Adventure
   lifespan: 25
   maturation: 10
   production: 3
@@ -1717,6 +1724,8 @@
   packetPrototype: BerrySeeds
   productPrototypes:
     - FoodBerries
+  mutationPrototypes:
+    - spaceberries # Adventure
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -1896,6 +1905,7 @@
     - CottonBol
   mutationPrototypes:
     - pyrotton
+    - linen  # Adventure
   lifespan: 25
   maturation: 8
   production: 3
@@ -1946,6 +1956,8 @@
   packetPrototype: CherrySeeds
   productPrototypes:
     - FoodCherry
+  mutationPrototypes:
+    - CherryBombPlant # Adventure
   harvestRepeat: Repeat
   lifespan: 55
   maturation: 6

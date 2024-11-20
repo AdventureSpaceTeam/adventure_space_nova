@@ -29,8 +29,8 @@
   markingLimits: MobPigManMarkingLimits
   dollPrototype: MobPigManDummy
   skinColoration: HumanToned
-  minAge: 13
-  youngAge: 21
+  minAge: 18
+  youngAge: 25
   oldAge: 42
   maxAge: 70
 
@@ -79,8 +79,8 @@
     RHand: MobPigManRHand
     LLeg: MobPigManLLeg
     RLeg: MobPigManRLeg
-    LFoot: MobPigManLFood
-    RFoot: MobPigManRFood
+    LFoot: MobPigManLFoot
+    RFoot: MobPigManRFoot
     Eyes: MobPigManEyes
 
 - type: humanoidBaseSprite
@@ -162,13 +162,13 @@
     state: r_hand
 
 - type: humanoidBaseSprite
-  id: MobPigManRFood
+  id: MobPigManRFoot
   baseSprite:
     sprite: Adventure/Races/PigMan/Species/parts.rsi
     state: r_foot
 
 - type: humanoidBaseSprite
-  id: MobPigManLFood
+  id: MobPigManLFoot
   baseSprite:
     sprite: Adventure/Races/PigMan/Species/parts.rsi
     state: l_foot

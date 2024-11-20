@@ -32,7 +32,7 @@
 
 - type: lobbyBackground
   id: RikylkaChimestry
-  background: /Textures/Adventure/LobbyScreens/rikylka_chimestry.png
+  background: /Textures/Adventure/LobbyScreens/rikylka_chemistry.png
 
 - type: lobbyBackground
   id: spotted

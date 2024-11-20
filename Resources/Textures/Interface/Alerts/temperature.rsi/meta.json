@@ -8,22 +8,58 @@
   },
   "states": [
     {
-      "name": "cold1"
+      "name": "cold1",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     },
     {
-      "name": "cold2"
+      "name": "cold2",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     },
     {
-      "name": "cold3"
+      "name": "cold3",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     },
     {
-      "name": "hot1"
+      "name": "hot1",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     },
     {
-      "name": "hot2"
+      "name": "hot2",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     },
     {
-      "name": "hot3"
+      "name": "hot3",
+      "delays": [
+        [
+            0.5,
+            0.5
+        ]
+      ]
     }
   ]
 }

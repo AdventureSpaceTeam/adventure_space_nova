@@ -51,10 +51,18 @@
     damage:
       types:
         Slash: 5
+  - type: ThermalRegulator # Adventure
+    metabolismHeat: 800 # Adventure
+    radiatedHeat: 100 # Adventure
+    implicitHeatRegulation: 250 # Adventure
+    sweatHeatRegulation: 500 # Adventure
+    shiveringHeatRegulation: 500 # Adventure
+    normalBodyTemperature: 293.15 # Adventure
+    thermalRegulationTemperatureThreshold: 25 # Adventure
   - type: Temperature
     heatDamageThreshold: 400
-    coldDamageThreshold: 285
-    currentTemperature: 310.15
+    coldDamageThreshold: 273.15 # Adventure 0с
+    currentTemperature: 293.15 # Adventure
     specificHeat: 42
     coldDamage:
       types:
@@ -64,9 +72,9 @@
         Heat : 1.5 #per second, scales with temperature & other constants
   - type: TemperatureSpeed
     thresholds:
-      301: 0.8
-      295: 0.6
-      285: 0.4
+      285: 0.8 # Adventure
+      280: 0.6 # Adventure
+      273: 0.4 # Adventure
   - type: Wagging
   - type: Inventory
     speciesId: reptilian

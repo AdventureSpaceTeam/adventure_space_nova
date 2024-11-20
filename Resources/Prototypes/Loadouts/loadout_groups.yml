@@ -7,6 +7,7 @@
   loadouts:
   - FlowerWreath
   - Hairflower
+  - Headphones
   - PlushieLizard
   - PlushieSpaceLizard
   - Lighter
@@ -28,6 +29,22 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
+  - TowelColorBlack
+  - TowelColorDarkBlue
+  - TowelColorDarkGreen
+  - TowelColorGold
+  - TowelColorGray
+  - TowelColorGreen
+  - TowelColorLightBlue
+  - TowelColorLightBrown
+  - TowelColorMaroon
+  - TowelColorMime
+  - TowelColorOrange
+  - TowelColorPurple
+  - TowelColorRed
+  - TowelColorSilver
+  - TowelColorWhite
+  - TowelColorYellow
 
 - type: loadoutGroup
   id: Glasses
@@ -952,6 +969,7 @@
   loadouts:
   - WardenHead
   - WardenBeret
+  - SecurityWardenHatBlack # Adventure
 
 - type: loadoutGroup
   id: WardenJumpsuit
@@ -959,6 +977,7 @@
   loadouts:
   - WardenJumpsuit
   - WardenJumpskirt
+  - SecurityWardenJumpsuitBlack # Adventure
 
 - type: loadoutGroup
   id: WardenOuterClothing
@@ -966,6 +985,7 @@
   loadouts:
   - WardenCoat
   - WardenArmoredWinterCoat
+  - SecurityWardenCoatBlack # Adventure
 
 - type: loadoutGroup
   id: SecurityHead
@@ -976,6 +996,8 @@
   - SecurityBeret
   - SecurityHat
   - TrooperHat
+  - SecurityHatBlack # Adventure
+  - SecurityBeretBlack # Adventure
 
 - type: loadoutGroup
   id: SecurityJumpsuit
@@ -988,6 +1010,7 @@
   - SeniorOfficerJumpsuit
   - SeniorOfficerJumpskirt
   - TrooperUniform
+  - SecurityJumpsuitBlack # Adventure
 
 - type: loadoutGroup
   id: SecurityBackpack

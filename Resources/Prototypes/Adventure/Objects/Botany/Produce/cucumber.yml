@@ -1,6 +1,7 @@
 - type: entity
   parent: SeedBase
   name: пакет семян (огурец)
+  suffix: AdvBotany
   id: CucumberSeeds
   components:
     - type: Seed
@@ -42,6 +43,7 @@
 
 - type: entity
   name: огурец
+  suffix: AdvBotany
   parent: [FoodProduceBase]
   id: FoodCucumber
   description: Зелёный!

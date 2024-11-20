@@ -466,8 +466,30 @@ namespace Content.Shared.Cuffs
 
             _container.Insert(handcuff, component.Container);
             UpdateHeldItems(target, handcuff, component);
+
+            // Adventure-Start
+            var ev = new CuffedEvent(user, target);
+            RaiseLocalEvent(target, ref ev);
+            // Adventure-End
+
             return true;
         }
+
+        // Adventure-Start
+        public bool TryCuffingNow(EntityUid user, EntityUid target, EntityUid handcuff,
+            HandcuffComponent? handcuffComponent = null, CuffableComponent? cuffable = null)
+        {
+            if (!Resolve(handcuff, ref handcuffComponent) || !Resolve(target, ref cuffable, false))
+                return false;
+
+            if (!TryAddNewCuffs(target, user, handcuff, cuffable))
+                return false;
+
+            handcuffComponent.Used = true;
+            _audio.PlayPvs(handcuffComponent.EndCuffSound, handcuff);
+            return true;
+        }
+        // Adventure-End
 
         /// <returns>False if the target entity isn't cuffable.</returns>
         public bool TryCuffing(EntityUid user, EntityUid target, EntityUid handcuff, HandcuffComponent? handcuffComponent = null, CuffableComponent? cuffable = null)

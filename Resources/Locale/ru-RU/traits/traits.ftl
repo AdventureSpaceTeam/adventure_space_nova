@@ -39,3 +39,5 @@ trait-french-name = Французский акцент
 trait-french-desc = Ваш акцент, похоже, имеет определённый «je ne sais quoi».
 trait-spanish-name = Испанский акцент
 trait-spanish-desc = Hola señor, как пройти в la biblioteca.
+trait-hypomania-name = Гипомания
+trait-hypomania-desc = Периодически вас охватывают неконтролируемые приступы смеха.

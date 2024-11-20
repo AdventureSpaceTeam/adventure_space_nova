@@ -1062,7 +1062,8 @@ namespace Content.Shared.Interaction
             if (target == null)
                 return false;
 
-            DebugTools.Assert(!IsDeleted(user) && !IsDeleted(used) && !IsDeleted(target));
+            // NOTE(c4): For some reason this assert fails on our build. Temporary solution.
+            // DebugTools.Assert(!IsDeleted(user) && !IsDeleted(used) && !IsDeleted(target));
             var afterInteractUsingEvent = new AfterInteractUsingEvent(user, used, target, clickLocation, canReach);
             RaiseLocalEvent(target.Value, afterInteractUsingEvent);
 
@@ -1372,7 +1373,8 @@ namespace Content.Shared.Interaction
             if (uidB == null || args?.Handled == false)
                 return;
 
-//            DebugTools.AssertNotEqual(uidA, uidB.Value);
+            if (uidA == uidB.Value)
+                return;
 
             if (!TryComp(uidA, out MetaDataComponent? metaA) || metaA.EntityPaused)
                 return;

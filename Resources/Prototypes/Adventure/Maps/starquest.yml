@@ -67,6 +67,7 @@
             JanitorBorg: [ 1, 1 ]
             MedicalBorg: [ 1, 1 ]
             ServiceBorg: [ 1, 1 ]
+            SecurityBorg: [ 1, 1 ]
 #            XO: [ 1, 1 ]
 #            Foreman: [ 1, 1 ]
 #            HeadDoctor: [ 1, 1 ]

@@ -1,0 +1,162 @@
+- type: constructionGraph
+  id: FirelockDouble
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame1
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 2
+
+    - node: frame1
+      entity: DoubleFirelockGlassFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: frame2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: Cable
+              amount: 4
+              doAfter: 2
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Welding
+              doAfter: 2
+
+    - node: frame2
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tag: FirelockElectronics
+              store: board
+              name: firelock electronics
+              icon:
+                sprite: "Objects/Misc/module.rsi"
+                state: "mainboard"
+
+        - to: frame1
+          completed:
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 4
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Cutting
+              doAfter: 3
+
+    - node: frame3
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: frame4
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Screwing
+              doAfter: 0.50
+        - to: frame2
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Prying
+              doAfter: 0.50
+
+    - node: frame4
+      entity: DoubleFirelockGlassFrame
+      actions:
+      - !type:AppearanceChange
+      edges:
+        - to: DoubleFirelockGlassFrame
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - material: Glass
+              amount: 4
+              doAfter: 4
+
+        - to: frame3
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Screwing
+              doAfter: 0.90
+
+    - node: DoubleFirelockGlassFrame
+      edges:
+        - to: DoubleFirelockGlass
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Anchoring
+              doAfter: 2
+        - to: frame4
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetGlass1
+              amount: 4
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: DoubleFirelockGlass
+      entity: DoubleFirelockGlass
+      edges:
+        - to: DoubleFirelockGlassFrame
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Anchoring
+              doAfter: 2
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+
+
+- type: construction
+  name: firelock double flass
+  id: DoubleFirelockGlass
+  graph: FirelockDouble
+  startNode: start
+  targetNode: DoubleFirelockGlass
+  category: construction-category-structures
+  description: Apply crowbar.
+  icon:
+    sprite: Adventure/Structures/Doors/Glass/double_firelock_glass.rsi
+    state: assembly
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

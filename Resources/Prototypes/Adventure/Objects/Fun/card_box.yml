@@ -2,6 +2,7 @@
   parent: BaseStorageItem
   id: CardBox
   name: коробка игральных карт
+  suffix: AdvFun
   components:
   - type: StorageFill
     contents:
@@ -81,6 +82,7 @@
   parent: BaseStorageItem
   id: CardHolder
   name: держатель для карт
+  suffix: AdvFun
   components:
   - type: Sprite
     sprite: Adventure/Objects/Fun/cards.rsi

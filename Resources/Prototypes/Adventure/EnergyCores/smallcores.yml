@@ -1,0 +1,112 @@
+- type: entity
+  parent: BaseShuttleCore
+  id: BaseSmallCore
+  abstract: true
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        density: 80
+        mask:
+          - FullTileMask
+        layer:
+          - FullTileLayer
+  - type: EnergyCore
+    size: 1
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 2
+    maxTileBreak: 2147483647
+    tileBreakScale: 1
+    totalIntensity: 2500
+
+- type: entity
+  parent: [BaseSmallCore, BaseRNDCore]
+  id: RnDSmallCore
+  description: Ядро для малых шаттлов, которое может изготовить каждая космическая станция типа "14", при имении ресурсов.
+  name: Малое ядро шаттла РнД.
+  components:
+  - type: EnergyCore
+    damage:
+      types:
+        Heat: 0.05
+    timeOfLife: 480
+    enablingLenght: 2.6
+    baseSupply: 60000
+    secPerMoles: 2.5
+  - type: PowerSupplier
+    supplyRate: 60000
+  - type: Sprite
+    sprite: Adventure/EnergyCores/sprnd/sprnd_mini.rsi
+  - type: Construction
+    graph: EnergyCoreMiniRnD
+    node: EnergyCore
+
+- type: entity
+  parent: [BaseSmallCore, BaseNTCore]
+  id: NTSmallCore
+  description: Ядро для малых шаттлов, создающиеся на передовых производствах НаноТрейзен. Сложнее в исполнении, чем ядра РнД, используют при работе БС энергию.
+  name: Малое ядро шаттла НаноТрейзен.
+  components:
+  - type: EnergyCore
+    damage:
+      types:
+        Heat: 0.01
+    timeOfLife: 600
+    enablingLenght: 7.7
+    baseSupply: 80000
+    secPerMoles: 5
+  - type: PowerSupplier
+    supplyRate: 80000
+  - type: Sprite
+    sprite: Adventure/EnergyCores/spblue/spblue_mini.rsi
+  - type: Construction
+    graph: EnergyCoreMiniNT
+    node: EnergyCore
+
+- type: entity
+  parent: [BaseSmallCore, BaseSYNCore]
+  id: SyndicateSmallCore
+  description: Ядро для малых шаттлов, изготвливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
+  name: Малое ядро шаттла Синдиката.
+  components:
+  - type: EnergyCore
+    damage:
+      types:
+        Heat: 0.05
+    timeOfLife: 500
+    enablingLenght: 1.0
+    baseSupply: 100000
+    secPerMoles: 2
+  - type: PowerSupplier
+    supplyRate: 100000
+  - type: Sprite
+    sprite: Adventure/EnergyCores/spred/spred_mini.rsi
+  - type: Construction
+    graph: EnergyCoreMiniSyn
+    node: EnergyCore
+
+- type: entity
+  parent: [BaseSmallCore, BaseHMCore]
+  id: HandMadeSmallCore
+  description: Ядро для малых шаттлов, изготовленное из первого, что попалось под руку. Ненадежно, но просто в создании.
+  name: Малое самодельное ядро шаттла.
+  components:
+  - type: EnergyCore
+    damage:
+      types:
+        Heat: 0.1
+    timeOfLife: 400
+    baseSupply: 45000
+    secPerMoles: 1.5
+  - type: PowerSupplier
+    supplyRate: 45000
+  - type: Sprite
+    sprite: Adventure/EnergyCores/sphere/sphere_mini.rsi
+  - type: Construction
+    graph: EnergyCoreMiniHM
+    node: EnergyCore

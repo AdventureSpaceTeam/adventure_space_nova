@@ -92,4 +92,15 @@ public sealed class ACVars : CVars
     /// </summary>
     public static readonly CVarDef<bool> TTSClientEnabled =
         CVarDef.Create("tts.client_enabled", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+
+    /*
+     * Sponsor API
+     */
+
+    public static readonly CVarDef<string> SponsorApiUrl =
+        CVarDef.Create("sponsor.api_url", "", CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> SponsorApiToken =
+        CVarDef.Create("sponsor.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 }

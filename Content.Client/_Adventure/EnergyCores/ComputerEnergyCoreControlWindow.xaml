@@ -1,0 +1,22 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+               xmlns:cc ="clr-namespace:Content.Client.Administration.UI.CustomControls"
+               Title="Консоль контроля энергоядра"
+               MinWidth="700">
+    <BoxContainer Orientation="Horizontal" SeparationOverride="4" MinWidth="350">
+        <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="350">
+            <Label Name="PowerToggleLabel" Text="Переключить ядро"/>
+            <Button Name="PowerToggleButton" Text="Вкл/Выкл ядро" MinWidth="100" HorizontalAlignment="Left" ToggleMode="True"/>
+        </BoxContainer>
+        <BoxContainer Orientation= "Vertical" SeparationOverride="4" MinWidth="350">
+            <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="350">
+                <Label Name="CurrentHPLabel" Text="Текущий урон, нанесенный ядру:"/>
+                <RichTextLabel Name="CurrentHP" Text="0"/>
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="350">
+                <Label Name="TimeAlive" Text="Осталось времени (в секундах):"/>
+                <RichTextLabel Name="TimeAliveRich" Text="0"/>
+            </BoxContainer>
+        </BoxContainer>  
+    </BoxContainer>
+</DefaultWindow>
+

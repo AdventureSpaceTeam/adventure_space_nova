@@ -60,31 +60,71 @@ public sealed class LizardAccentSystem : EntitySystem
             "З+",
             _random.Pick(new List<string>() { "СС", "ССС" })
         );
-        // ш => шшш
+        // ш => шшш,щщщ
         message = Regex.Replace(
             message,
             "ш+",
-            _random.Pick(new List<string>() { "шш", "шшш" })
+            _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" }) // Adventure
         );
-        // Ш => ШШШ
+        // Ш => ШШШ,ЩЩЩ
         message = Regex.Replace(
             message,
             "Ш+",
-            _random.Pick(new List<string>() { "ШШ", "ШШШ" })
+            _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" }) // Adventure
         );
-        // ч => щщщ
+        // ч => щщщ,шшш
         message = Regex.Replace(
             message,
             "ч+",
-            _random.Pick(new List<string>() { "щщ", "щщщ" })
+            _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" }) // Adventure
         );
-        // Ч => ЩЩЩ
+        // Ч => ЩЩЩ,ШШШ
         message = Regex.Replace(
             message,
             "Ч+",
-            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ" })
+            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" }) // Adventure
         );
         // Corvax-Localization-End
+
+        // Adventure-Localization-Start
+        // ж => жжж 
+        message = Regex.Replace(
+            message,
+            "ж+",
+            _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" })
+        );
+        // Ж => ЖЖЖ 
+        message = Regex.Replace(
+            message,
+            "Ж+",
+            _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" })
+        );
+        // щ => щщщ,шшш 
+        message = Regex.Replace(
+            message,
+            "щ+",
+            _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" })
+        );
+        // Щ => ЩЩЩ,ШШШ 
+        message = Regex.Replace(
+            message,
+            "Щ+",
+            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" })
+        );
+        // ц => ссс 
+        message = Regex.Replace(
+            message,
+            "ц+",
+            _random.Pick(new List<string> { "сс", "ссс" })
+        );
+        // Ц => ССС 
+        message = Regex.Replace(
+            message,
+            "Ц+",
+            _random.Pick(new List<string> { "СС", "ССС" })
+        );
+        // Adventure-Localization-End
+        
         args.Message = message;
     }
 }
