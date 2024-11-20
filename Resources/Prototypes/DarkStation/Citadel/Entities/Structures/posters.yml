@@ -1,0 +1,122 @@
+- type: entity
+  parent: BaseSign
+  id: PosterBase
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: DarkStation/Structures/plakat.rsi
+    snapCardinals: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          PosterBroken:
+            min: 1
+            max: 1
+        offset: 0
+
+- type: entity
+  parent: BaseSign
+  id: PosterBroken
+  name: broken poster
+  description: "You can't make out anything from the poster's original print. It's ruined."
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: DarkStation/Structures/plakat.rsi
+    state: poster_broken
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel1
+  name: "Постер: Новый Порядок"
+  description: "Слава Новому Порядку!"
+  components:
+  - type: Sprite
+    state: 1
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel2
+  name: "Постер: Новый Порядок"
+  description: "Новый Порядок помогает тебе!"
+  components:
+  - type: Sprite
+    state: 2
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel3
+  name: "Постер: Стены"
+  description: "Стены Цитадели защитят тебя!"
+  components:
+  - type: Sprite
+    state: 3
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel4
+  name: "Постер: Чистое небо"
+  description: "Правительство создает чистое и мирное небо над вашими головами"
+  components:
+  - type: Sprite
+    state: 4
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel5
+  name: "Постер: Цитадель"
+  description: "Вы в безопасности!"
+  components:
+  - type: Sprite
+    state: 5
+  
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel6
+  name: "Постер: Смерть Герату!"
+  description: "Да воздравздвует же Северный Альянс!"
+  components:
+  - type: Sprite
+    state: 6
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel8
+  name: "Новый Порядок защитит вас!"
+  description: "Вы в безопасности!"
+  components:
+  - type: Sprite
+    state: 8
+
+- type: entity
+  parent: PosterBase
+  id: PosterCitadel6
+  name: "Противостояние"
+  description: "Бесконечное противостояние НП и СА"
+  components:
+  - type: Sprite
+    state: 7
