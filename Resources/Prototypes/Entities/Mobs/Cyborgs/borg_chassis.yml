@@ -2,6 +2,8 @@
   id: BorgChassisGeneric
   parent: BaseBorgChassisNT
   components:
+  - type: TTS # Adventure
+    voice: space_core
   - type: PointLight # Adventure
     color: "#97fcef"
   - type: Sprite
@@ -42,6 +44,8 @@
   parent: BaseBorgChassisNT
   name: salvage cyborg
   components:
+  - type: TTS # Adventure
+    voice: adventure_core
   - type: PointLight # Adventure
     color: "#a4fef4"
   - type: Sprite
@@ -105,6 +109,8 @@
   parent: BaseBorgChassisNT
   name: engineer cyborg
   components:
+  - type: TTS # Adventure
+    voice: threedog_radio
   - type: PointLight # Adventure
     color: "#97fcef"
   - type: Sprite
@@ -160,6 +166,8 @@
   parent: BaseBorgChassisNT
   name: janitor cyborg
   components:
+  - type: TTS # Adventure
+    voice: brendan
   - type: PointLight # Adventure
     color: "#72fbbe"
   - type: Sprite
@@ -223,6 +231,8 @@
   parent: [BaseBorgChassisNT, ShowMedicalIcons]
   name: medical cyborg
   components:
+  - type: TTS # Adventure
+    voice: glados
   - type: PointLight # Adventure
     color: "#adf1ff"
   - type: Sprite
@@ -284,14 +294,14 @@
     interactFailureString: petting-failure-medical-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
-  - type: TTS # c4llv07e tts
-    voice: glados # TODO(c4): fix voices.
 
 - type: entity
   id: BorgChassisService
   parent: BaseBorgChassisNT
   name: service cyborg
   components:
+  - type: TTS # Adventure
+    voice: mister_handy_fl3
   - type: PointLight # Adventure
     color: "#97fcef"
   - type: Sprite

@@ -329,3 +329,5 @@
       Unsexed: UnisexSiliconSyndicate
   - type: PointLight
     color: "#dd200b"
+  - type: TTS # Adventure
+    voice: sentrybot

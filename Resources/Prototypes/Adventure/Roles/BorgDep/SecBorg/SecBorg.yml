@@ -59,7 +59,7 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   - type: TTS
-    voice: sentrybot
+    voice: mister_gutsy_fl3
   - type: ShowCriminalRecordIcons
   - type: StationAiVision
   - type: FlashImmunity

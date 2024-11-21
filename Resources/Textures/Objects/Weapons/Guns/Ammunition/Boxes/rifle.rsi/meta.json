@@ -45,6 +45,12 @@
     },
     {
       "name": "uranium"
+    },
+    {
+      "name": "pulse"
+    },
+    {
+      "name": "explosive"
     }
   ]
 }

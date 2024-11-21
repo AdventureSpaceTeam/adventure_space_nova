@@ -152,6 +152,8 @@
     - DoorBumpOpener
   - type: Puller
     needsHands: false
+  - type: TTS # Adventure
+    voice: lord_harkon
     
 - type: entity
   parent: BaseMobDragon
