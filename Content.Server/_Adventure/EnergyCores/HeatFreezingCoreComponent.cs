@@ -1,4 +1,5 @@
 using Content.Shared.Atmos;
+using Robust.Shared.Player;
 
 namespace Content.Server._Adventure.EnergyCores;
 
@@ -11,10 +12,6 @@ public sealed partial class HeatFreezingCoreComponent : Component
     [DataField]
     public HashSet<Gas> FilterGases = new()
     {
-        Gas.Frezon,
-        Gas.Ammonia,
-        Gas.NitrousOxide,
-        Gas.Plasma
     };
 
     [DataField]
@@ -28,4 +25,5 @@ public sealed partial class HeatFreezingCoreComponent : Component
 
     [DataField]
     public Gas AbsorbGas = Gas.Frezon;
+    
 }

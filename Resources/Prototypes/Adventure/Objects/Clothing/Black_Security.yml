@@ -140,3 +140,39 @@
   minLimit: 0
   loadouts:
   - NeckWarden
+
+#накидка службы безопасности
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleSecurity
+  name: накидка службы безопасности
+  description: почётная накидка ветерана службы безопасности.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/black_security/security_mantle.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/black_security/security_mantle.rsi
+
+- type: loadout
+  id: NeckSecurityOfficer
+  equipment:
+    neck: ClothingNeckMantleSecurity
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterSecurityOfficer
+
+- type: loadoutEffectGroup
+  id: MasterSecurityOfficer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 72000 #20 hrs
+
+- type: loadoutGroup
+  id: SecurityNeck
+  name: Офицер СБ, шея
+  minLimit: 0
+  loadouts:
+  - NeckSecurityOfficer

@@ -3,7 +3,7 @@
   id: BaseShuttleCore
   description: Базовый прототип ядра шаттла
   name: Базовое ядро шаттла
-  abstract: true
+  suffix: Energy cores
   placement:
     mode: SnapgridCenter
   components:
@@ -62,13 +62,14 @@
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
-    intensitySlope: 2
-    totalIntensity: 200
+    intensitySlope: 5
+    maxTileBreak: 2147483647
+    totalIntensity: 20000
   - type: PowerSupplier
     enabled: true
     supplyRate: 100000
-    supplyRampRate: 500
-    supplyRampTolerance: 500
+    supplyRampRate: 10000
+    supplyRampTolerance: 10000
   - type: Electrified
     onHandInteract: false
     onInteractUsing: false
@@ -104,7 +105,8 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 2
+          position: 0,-0.65
+          radius: 2.4
         density: 80
         mask:
           - FullTileMask
@@ -136,34 +138,33 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseRNDCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
     absorbGas: NitrousOxide
+    
 
 - type: entity
   parent: BaseShuttleCore
   id: BaseNTCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
     absorbGas: Frezon
+    
 
 - type: entity
   parent: BaseShuttleCore
   id: BaseSYNCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
     absorbGas: Ammonia
+    
 
 - type: entity
   parent: BaseShuttleCore
   id: BaseHMCore
-  abstract: true
   name: Base core
   components:
   - type: HeatFreezingCore
