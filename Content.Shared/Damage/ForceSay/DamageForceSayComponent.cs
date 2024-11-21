@@ -37,7 +37,7 @@ public sealed partial class DamageForceSayComponent : Component
     ///     i.e. (prefix)-1 through (prefix)-(count)
     /// </summary>
     [DataField]
-    public int ForceSayStringCount = 7;
+    public int ForceSayStringCount = 12; /// Adventure
 
     /// <summary>
     ///     The amount of total damage between <see cref="ValidDamageGroups"/> that needs to be taken before
