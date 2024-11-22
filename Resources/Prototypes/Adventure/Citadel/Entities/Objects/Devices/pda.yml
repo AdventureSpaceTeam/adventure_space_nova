@@ -1,0 +1,173 @@
+- type: entity
+  abstract: true
+  parent: [BaseItem, StorePresetUplink]
+  id: BasePDACitadel
+  name: "Кошелек жителя цитадели"
+  description: "Слава Новому Порядку"
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Adventure/Citadel/Objects/Devices/citadel_pda.rsi
+    layers:
+    - map: ["enum.PdaVisualLayers.Base"]
+    - state: "light_overlay"
+      map: ["enum.PdaVisualLayers.Flashlight"]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: ["enum.PdaVisualLayers.IdLight"]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: Adventure/Citadel/Objects/Devices/citadel_pda.rsi
+    state: pda
+  - type: Pda
+    state: pda
+    paperSlot:
+      priority: -3
+      whitelist:
+        components:
+        - Paper
+    paiSlot:
+      priority: -2
+      whitelist:
+        components:
+        - PAI
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+    idSlot:
+      name: access-id-card-component-default
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+        - IdCard
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      PDA-id: !type:ContainerSlot {}
+      PDA-pen: !type:ContainerSlot {}
+      PDA-pai: !type:ContainerSlot {}
+      PDA-paper: !type:ContainerSlot {}
+      Cartridge-Slot: !type:ContainerSlot {}
+      program-container: !type:Container
+  - type: Storage
+    capacity: 2
+    grid:
+    - 0,0,1,2
+    maxItemSize: Small
+    storageOpenSound: /Audio/Effects/closetopen.ogg
+    storageCloseSound: /Audio/Effects/closetclose.ogg
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ItemSlots
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - idcard
+    - Belt
+  - type: Ringer
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: PDA
+    prefix: device-address-prefix-console
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Input
+    context: "human"
+
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelCargoPDA
+  name: Кошелек каргоновца
+  components:
+    - type: Pda
+      id: CitadelCargoIDCard
+      state: PDA-CSNAB
+    - type: Icon
+      state: PDA-CSNAB
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelServiceWorkerPDA
+  name: Кошелек обслуживающего персонала
+  components:
+    - type: Pda
+      id: CitadelServiceWorkerIDCard
+      state: PDA-CSER
+    - type: Icon
+      state: PDA-CSER
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelResearchPDA
+  name: Кошелек учёного
+  components:
+    - type: Pda
+      id: CitadelResearchIDCard
+      state: PDA-CRND
+    - type: Icon
+      state: PDA-CRND
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelPassengerPDA
+  name: Кошелек гражданина
+  components:
+    - type: Pda
+      id: CitadelPassengerIDCard
+      state: PDA-CPAS
+    - type: Icon
+      state: PDA-CPAS
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelMilitaryPDA
+  name: Кошелек офицера
+  components:
+    - type: Pda
+      id: CitadelMilitaryIDCard
+      state: PDA-CMIL
+    - type: Icon
+      state: PDA-CMIL
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelMedicalPDA
+  name: Кошелек медика
+  components:
+    - type: Pda
+      id: CitadelMedicalIDCard
+      state: PDA-CMED
+    - type: Icon
+      state: PDA-CMED
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelEngineerPDA
+  name: Кошелек инженера
+  components:
+    - type: Pda
+      id: CitadelEngineerIDCard
+      state: PDA-CENG
+    - type: Icon
+      state: PDA-CENG
+
+- type: entity
+  parent: BasePDACitadel
+  id: CitadelAdmiralPDA
+  name: Кошелек члена Канцелярии
+  components:
+    - type: Pda
+      id: CitadelAdmiralIDCard
+      state: PDA-CADM
+    - type: Icon
+      state: PDA-CADM

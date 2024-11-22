@@ -1,0 +1,173 @@
+- type: entity
+  id: BaseCitadelIDCard
+  parent: IDCardStandard
+  components:
+  - type: Sprite
+    sprite: Adventure/Citadel/Objects/Misc/idcards.rsi
+  - type: Clothing
+    sprite: Adventure/Citadel/Objects/Misc/idcards.rsi
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelCargoIDCard
+  name: ID карта каргоновца "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardSNAB
+  - type: IdCard
+    jobTitle: Каргоновец "Нового порядка"
+    jobIcon: CitadelJobIconSNAB
+  - type: Access
+    tags:
+    - Cargo
+    - Salvage
+    - Maintenance
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelServiceWorkerIDCard
+  name: ID карта обслуживающего персонала "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardSER
+  - type: IdCard
+    jobTitle: Обслуживающий персонал "Нового порядка"
+    jobIcon: CitadelJobIconSER
+  - type: Access
+    tags:
+    - Service
+    - Maintenance
+    - Bar
+    - Kitchen
+    - Theatre
+    - Hydroponics
+    - Chapel
+    - Janitor
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelResearchIDCard
+  name: ID карта учёного "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardRND
+  - type: IdCard
+    jobTitle: Учёный "Нового порядка"
+    jobIcon: CitadelJobIconRND
+  - type: Access
+    tags:
+    - Maintenance
+    - Research
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelPassengerIDCard
+  name: ID карта гражданина "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardPAS
+  - type: IdCard
+    jobTitle: Гражданин "Нового порядка"
+    jobIcon: CitadelJobIconPAS
+  - type: Access
+    tags:
+    - Maintenance
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelMilitaryIDCard
+  name: ID карта офицера "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardMIL
+  - type: IdCard
+    jobTitle: Офицер "Нового порядка"
+    jobIcon: CitadelJobIconMIL
+  - type: Access
+    tags:
+    - Engineering
+    - Medical
+    - Cargo
+    - Salvage
+    - Research
+    - Service
+    - Maintenance
+    - External
+    - Janitor
+    - Theatre
+    - Bar
+    - Kitchen
+    - Atmospherics
+    - Armory
+    - Security
+    - Brig
+    - Detective
+    - Hydroponics
+    - Chapel
+    - Chemistry
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelMedicalIDCard
+  name: ID карта врача "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardMED
+  - type: IdCard
+    jobTitle: Врач "Нового порядка"
+    jobIcon: CitadelJobIconMED
+  - type: Access
+    tags:
+    - Medical
+    - Chemistry
+    - Maintenance
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelEngineerIDCard
+  name: ID карта инженера "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardENG
+  - type: IdCard
+    jobTitle: Инженер "Нового порядка"
+    jobIcon: CitadelJobIconENG
+  - type: Access
+    tags:
+    - Engineering
+    - Medical
+    - Cargo
+    - Salvage
+    - Research
+    - Service
+    - Maintenance
+    - External
+    - Janitor
+    - Theatre
+    - Bar
+    - Kitchen
+    - Atmospherics
+
+- type: entity
+  parent: BaseCitadelIDCard
+  id: CitadelAdmiralIDCard
+  name: ID карта члена Канцелярии "Нового порядка"
+  components:
+  - type: Sprite
+    layers:
+    - state: idcardADM
+  - type: IdCard
+    jobTitle: Член Канцилярии "Нового порядка"
+    jobIcon: CitadelJobIconADM
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - CentralCommand
