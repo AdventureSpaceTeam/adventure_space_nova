@@ -1,6 +1,7 @@
 - type: entity
   id: BaseEnergyBuildComp
   parent: BaseItem
+  abstract: true
   name: Базовая составляющая Энергоядра
   description: Кругленькая красивенькая, но очень функциональная и хрупкая вещица. Является "центральным процессором" Энергоядра.
   components:
@@ -165,6 +166,7 @@
 - type: entity
   id: EnergyCoreFrame
   parent: BaseStructureDynamic
+  abstract: true
   name: каркас базового энергоядра
   description: Это каркас базового энергоядра.
   placement:
