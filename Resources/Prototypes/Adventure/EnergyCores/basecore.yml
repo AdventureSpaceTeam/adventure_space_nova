@@ -3,7 +3,7 @@
   id: BaseShuttleCore
   description: Базовый прототип ядра шаттла
   name: Базовое ядро шаттла
-  abstract: true
+  categories: [ HideSpawnMenu ]
   suffix: Energy cores
   placement:
     mode: SnapgridCenter
@@ -140,7 +140,7 @@
   parent: BaseShuttleCore
   id: BaseRNDCore
   name: Base core
-  abstract: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: HeatFreezingCore
     absorbGas: NitrousOxide
@@ -150,7 +150,7 @@
   parent: BaseShuttleCore
   id: BaseNTCore
   name: Base core
-  abstract: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: HeatFreezingCore
     absorbGas: Frezon
@@ -160,7 +160,7 @@
   parent: BaseShuttleCore
   id: BaseSYNCore
   name: Base core
-  abstract: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: HeatFreezingCore
     absorbGas: Ammonia
@@ -170,7 +170,7 @@
   parent: BaseShuttleCore
   id: BaseHMCore
   name: Base core
-  abstract: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: HeatFreezingCore
     absorbGas: Plasma
