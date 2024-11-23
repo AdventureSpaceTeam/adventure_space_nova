@@ -1,0 +1,41 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:parallax="clr-namespace:Content.Client.Parallax"
+         xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+         xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client">
+    <parallax:ParallaxControl />
+    <Control HorizontalAlignment="Center" VerticalAlignment="Center">
+        <PanelContainer StyleClasses="AngleRect" />
+        <BoxContainer Orientation="Vertical">
+            <BoxContainer Orientation="Horizontal">
+                <Label Margin="8 0 0 0" Text="{Loc 'discord-auth-title'}"
+                       StyleClasses="LabelHeading" VAlign="Center" />
+                <Button Name="QuitButton" Text="{Loc 'discord-auth-quit-btn'}"
+                        HorizontalAlignment="Right" HorizontalExpand="True" />
+            </BoxContainer>
+            <controls:HighDivider />
+            <BoxContainer Orientation="Vertical" Margin="10 25 10 0">
+                <Label Text="Для доступа на сервер вам необходимо связать аккаунт SS14 с Discord." Align="Center" />
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" Margin="10 25 10 0">
+                <Label Text="Советуем вам делать привязку на основной аккаунт." Align="Center" StyleClasses="LabelKeyText"/>
+                <Label Text="Будьте внимательны при выборе аккаунта.{Loc 'discord-auth-warn2'}" Align="Center" StyleClasses="LabelKeyText"/>
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" VerticalAlignment="Bottom" Margin="0 25 0 0">
+                <Label Text="QrCode для сканирования на телефоне." Align="Center" />
+                <TextureRect Name="QrCode" MaxHeight="400" HorizontalAlignment="Center" Margin="10 10 10 10"></TextureRect>
+            </BoxContainer>
+            <PanelContainer Name="InputContainer"
+                            VerticalAlignment="Stretch"
+                            VerticalExpand="True"
+                            HorizontalExpand="True"
+                            Margin="10 0 10 10">
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BackgroundColor="#333237"/>
+                </PanelContainer.PanelOverride>
+                <TextEdit Name="UrlEdit" Access="Public" MinSize="300 100"/>
+            </PanelContainer>
+            <Button Name="OpenUrlButton" Text="Открыть в браузере" HorizontalExpand="True" StyleClasses="OpenRight" />
+        </BoxContainer>
+    </Control>
+</Control>
