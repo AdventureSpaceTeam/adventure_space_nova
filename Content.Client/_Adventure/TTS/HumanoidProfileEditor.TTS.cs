@@ -39,8 +39,6 @@ public sealed partial class HumanoidProfileEditor
         for (var i = 0; i < _voiceList.Count; i++)
         {
             var voice = _voiceList[i];
-            if (!HumanoidCharacterProfile.CanHaveVoice(voice, Profile.Sex))
-                continue;
 
             var name = Loc.GetString(voice.Name);
             VoiceButton.AddItem(name, i);

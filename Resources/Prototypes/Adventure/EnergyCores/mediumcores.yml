@@ -1,6 +1,7 @@
 - type: entity
   parent: BaseShuttleCore
   id: BaseMediumCore
+  categories: [ HideSpawnMenu ]
   components:
   - type: Fixtures
     fixtures:
@@ -37,7 +38,7 @@
     timeOfLife: 480
     enablingLenght: 2.6
     baseSupply: 180000
-    secPerMoles: 1.75
+    secPerMoles: 0.5
   - type: PowerSupplier
     supplyRate: 180000
   - type: Sprite
@@ -59,7 +60,7 @@
     timeOfLife: 600
     enablingLenght: 7.7
     baseSupply: 200000
-    secPerMoles: 3.5
+    secPerMoles: 0.5
   - type: PowerSupplier
     supplyRate: 200000
   - type: Sprite
@@ -81,7 +82,7 @@
     timeOfLife: 500
     enablingLenght: 1.0
     baseSupply: 220000
-    secPerMoles: 1.25
+    secPerMoles: 0.5
   - type: PowerSupplier
     supplyRate: 220000
   - type: Sprite
@@ -102,7 +103,7 @@
         Heat: 0.125
     timeOfLife: 400
     baseSupply: 160000
-    secPerMoles: 1
+    secPerMoles: 0.025
   - type: PowerSupplier
     supplyRate: 160000
   - type: Sprite

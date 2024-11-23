@@ -58,21 +58,6 @@
             #civilian
             Passenger: [ -1, -1 ]
             Musician: [ 1, 1 ]
-            Borg: [ 1 , 1 ]
+            Borg: [ 6 , 6 ] # Adventure
             #custom
             Blueshield: [ 1, 1 ]
-            # Bork
-            CargoBorg: [ 1, 1 ]
-            EngineerBorg: [ 1, 1 ]
-            JanitorBorg: [ 1, 1 ]
-            MedicalBorg: [ 1, 1 ]
-            ServiceBorg: [ 1, 1 ]
-            SecurityBorg: [ 1, 1 ]
-#            XO: [ 1, 1 ]
-#            Foreman: [ 1, 1 ]
-#            HeadDoctor: [ 1, 1 ]
-#            Coordinator: [ 1, 1 ]
-#            HightOfficer: [ 1, 1 ]
-#            Storekeeper: [ 1, 1 ]
-#            Explorer: [ 2, 2 ]
-#            Brigmedic: [ 1, 1 ]
