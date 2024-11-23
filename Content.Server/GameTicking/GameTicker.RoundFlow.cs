@@ -526,6 +526,7 @@ namespace Content.Server.GameTicking
                 UpdateInfoText();
 
                 ReqWindowAttentionAll();
+                StartNewMapVote(); // Adventure
             }
         }
 

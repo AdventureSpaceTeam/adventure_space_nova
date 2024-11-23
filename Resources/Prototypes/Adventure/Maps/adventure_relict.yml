@@ -50,7 +50,7 @@
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 5, 5 ]
             ResearchAssistant: [ 3, 3 ]
-            Borg: [ 3, 3 ]
+            Borg: [ 6, 6 ] # Adventure
             # security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
@@ -66,9 +66,3 @@
             Blueshield: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
             StationAi: [ 1, 1 ]
-            CargoBorg: [ 1, 1 ]
-            EngenerBorg: [ 1, 1 ]
-            JanitorBorg: [ 1, 1 ]
-            MedIcalBorg: [ 1, 1 ]
-            ServiceBorg: [ 1, 1 ]
-            SecurityBorg: [ 1, 1 ]

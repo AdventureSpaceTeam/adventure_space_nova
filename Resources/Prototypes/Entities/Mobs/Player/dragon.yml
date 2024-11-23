@@ -6,6 +6,8 @@
   description: A flying leviathan, loosely related to space carps.
   abstract: true
   components:
+  - type: TTS # Adventure
+    voice: lord_harkon
   - type: Bloodstream
     bloodMaxVolume: 650
   - type: GhostRole
@@ -152,7 +154,7 @@
     - DoorBumpOpener
   - type: Puller
     needsHands: false
-    
+
 - type: entity
   parent: BaseMobDragon
   id: MobDragon

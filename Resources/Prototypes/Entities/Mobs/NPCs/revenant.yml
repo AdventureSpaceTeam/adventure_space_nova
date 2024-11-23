@@ -6,8 +6,8 @@
   name: revenant
   description: A spooky ghostie.
   components:
-  - type: TTS # c4llv07e tts
-    voice: gman # TODO(c4): fix voices.
+  - type: TTS # Adventure
+    voice: hermaeus_mora
   - type: Input
     context: "ghost"
   - type: Spectral
