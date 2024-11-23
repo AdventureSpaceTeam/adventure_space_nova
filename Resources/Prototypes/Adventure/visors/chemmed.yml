@@ -6,11 +6,10 @@
   description: Очки главного врача для варки и лечения.
   components:
   - type: Sprite
-    sprite: Adventure\visors\chemmed.rsi
+    sprite: Adventure/visors/chemmed.rsi
   - type: Clothing
-    sprite: Adventure\visors\chemmed.rsi
+    sprite: Adventure/visors/chemmed.rsi
   - type: Tag
     tags:
-    - HudMedical 
+    - HudMedical
   - type: SolutionScanner
-

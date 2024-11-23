@@ -6,7 +6,7 @@
   description: Сложные в сборке диагностические очки с защитой зрения от сварки.
   components:
   - type: Sprite
-    sprite: Adventure\visors\engdia.rsi
+    sprite: Adventure/visors/engdia.rsi
   - type: Clothing
-    sprite: Adventure\visors\engdia.rsi
+    sprite: Adventure/visors/engdia.rsi
   - type: EyeProtection
