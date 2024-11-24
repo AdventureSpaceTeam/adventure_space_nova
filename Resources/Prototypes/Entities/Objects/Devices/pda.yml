@@ -41,6 +41,12 @@
       whitelist:
         components:
         - IdCard
+    paperSlot:
+      startingItem: Paper
+      priority: -3
+      whitelist:
+        components:
+        - Paper
   - type: Item
     size: Small
   - type: ContainerContainer

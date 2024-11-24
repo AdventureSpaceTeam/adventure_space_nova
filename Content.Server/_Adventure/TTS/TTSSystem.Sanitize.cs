@@ -147,24 +147,6 @@ public sealed partial class TTSSystem
             {"осб", "О Эс Бэ"},
             {"ттс", "Тэ Тэ Эс"},
             // Adventure-End
-            // Adventure-Reptilian-Stars
-            {"осcб", "О Эcс Бэ"}, 
-            {"оcсcб", "О Эсcc Бэ"}, 
-            {"ссб", "Эсс Бэ"}, 
-            {"cссб", "Эсcс Бэ"}, 
-            {"рпсc", "Эр Пэ Эсcc"}, 
-            {"рпсcc", "Эр Пэ Эсcc"}, 
-            {"опрсc", "О Пэ Эр Эcс"}, 
-            {"опрсcc", "О Пэ Эр Эccс"}, 
-            {"кcc", "Кэ Ccэ"},
-            {"кccc", "Кэ Cccэ"},
-            {"сcи", "Эсc И"},
-            {"сccи", "Эсcc И"},
-            {"гсcб", "Гэ Эcс Бэ"},
-            {"гсccб", "Гэ Эccс Бэ"},
-            {"сcрп", "Эcс Эр Пэ"},
-            {"сccрп", "Эccс Эр Пэ"},
-            // Adventure-Reptilian-End
         };
 
     private static readonly IReadOnlyDictionary<string, string> ReverseTranslit =
