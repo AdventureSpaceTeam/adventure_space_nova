@@ -1,0 +1,12 @@
+<Document>
+	# Сборка ядра.
+	<Box>
+		<GuideEntityEmbed Entity="SheetPlasteel"/>
+		<GuideEntityEmbed Entity="SheetPlasma"/>
+		<GuideEntityEmbed Entity="RNDECCPU1"/>
+		<GuideEntityEmbed Entity="IngotSilver"/>
+		<GuideEntityEmbed Entity="SheetRGlass"/>
+		<GuideEntityEmbed Entity="SheetPlastic"/>
+	</Box>	
+	Вам понадобятся вот эти ресурсы
+</Document>

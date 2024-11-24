@@ -77,8 +77,15 @@
     state: fly
   discipline: Experimental
   tier: 2
-  cost: 25000
+  cost: 15000
   recipeUnlocks:
   - EnergyCoreCircuitboard
   - EnergyCoreHM
   - EnergyCoreRnD
+
+
+- type: guideEntry
+  id: EnergyCoresGuide
+  name: Энергоядра и с чем их есть
+  text: "/Prototypes/Adventure/EnergyCores/EnergyCoresGB.xml"
+  
