@@ -1291,8 +1291,7 @@
           shader: unshaded
           map: [ "blade" ]
     - type: Item
-      size: Small
-      sprite: Objects/Fun/toy_sword.rsi
+      sprite: Objects/Fun/toy_sword-inhands.rsi
     - type: UseDelay
       delay: 1.0
     - type: PointLight
