@@ -552,6 +552,8 @@
         orGroup: GiftPool
       - id: ToyRubberDuck
         orGroup: GiftPool
+      - id: ToyDualSword
+        orGroup: GiftPool
       - id: BikeHorn
         prob: 0.5
         orGroup: GiftPool
