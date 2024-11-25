@@ -209,7 +209,6 @@
   # Visual
   inventoryTemplateId: borgTall
   spriteBodyState: service
-  spriteBodyMovementState: service_moving # Adventure
   spriteHasMindState: service_e
   spriteNoMindState: service_e_r
   spriteToggleLightState: service_l

@@ -319,8 +319,6 @@
   id: AirlockChiefMedicalOfficerLocked
   suffix: ChiefMedicalOfficer, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/cmo.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefMedicalOfficer ]
@@ -330,8 +328,6 @@
   id: AirlockChiefEngineerLocked
   suffix: ChiefEngineer, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/ce.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefEngineer ]
@@ -341,8 +337,6 @@
   id: AirlockHeadOfSecurityLocked
   suffix: HeadOfSecurity, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/hos.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfSecurity ]
@@ -352,8 +346,6 @@
   id: AirlockResearchDirectorLocked
   suffix: ResearchDirector, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/rd.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsResearchDirector ]
@@ -363,8 +355,6 @@
   id: AirlockHeadOfPersonnelLocked
   suffix: HeadOfPersonnel, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/hop.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
@@ -374,8 +364,6 @@
   id: AirlockQuartermasterLocked
   suffix: Quartermaster, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/qm.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsQuartermaster ]
@@ -717,8 +705,6 @@
   id: AirlockChiefMedicalOfficerGlassLocked
   suffix: ChiefMedicalOfficer, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/cmo.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefMedicalOfficer ]
@@ -728,8 +714,6 @@
   id: AirlockChiefEngineerGlassLocked
   suffix: ChiefEngineer, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/ce.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefEngineer ]
@@ -739,8 +723,6 @@
   id: AirlockHeadOfSecurityGlassLocked
   suffix: HeadOfSecurity, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/hos.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfSecurity ]
@@ -750,8 +732,6 @@
   id: AirlockResearchDirectorGlassLocked
   suffix: ResearchDirector, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/rd.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsResearchDirector ]
@@ -761,8 +741,6 @@
   id: AirlockHeadOfPersonnelGlassLocked
   suffix: HeadOfPersonnel, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/hop.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
@@ -772,8 +750,6 @@
   id: AirlockQuartermasterGlassLocked
   suffix: Quartermaster, Locked
   components:
-  - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/qm.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsQuartermaster ]

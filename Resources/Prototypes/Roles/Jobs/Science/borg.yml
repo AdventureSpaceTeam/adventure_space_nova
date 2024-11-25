@@ -8,6 +8,24 @@
   - !type:RoleTimeRequirement
     role: JobBorg
     time: 3600 #1 hr # Adventure
+  - !type:RoleTimeRequirement
+    role: JobCargoBorg
+    time: 3600 #1 hr # Adventure
+  - !type:RoleTimeRequirement
+    role: JobEngineerBorg
+    time: 3600 #1 hr # Adventure
+  - !type:RoleTimeRequirement
+    role: JobJanitorBorg
+    time: 3600 #1 hr # Adventure
+  - !type:RoleTimeRequirement
+    role: JobMedicalBorg
+    time: 3600 #1 hr # Adventure
+  - !type:RoleTimeRequirement
+    role: JobServiceBorg
+    time: 3600 #1 hr # Adventure
+  - !type:RoleTimeRequirement
+    role: JobSecurityBorg
+    time: 3600 #1 hr # Adventure
   canBeAntag: false
   icon: JobIconStationAi
   supervisors: job-supervisors-rd

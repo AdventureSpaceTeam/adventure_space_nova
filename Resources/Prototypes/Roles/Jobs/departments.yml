@@ -133,6 +133,12 @@
   description: department-Silicon-description
   color: "#D381C9"
   roles:  
+  - SecurityBorg #Adventure            
+  - CargoBorg #Adventure
+  - EngineerBorg #Adventure
+  - JanitorBorg #Adventure
+  - MedicalBorg #Adventure
+  - ServiceBorg #Adventure
   - Borg
   - StationAi
 
@@ -149,5 +155,11 @@
   - Psychologist
   - Pilot # Corvax-Pilot
   - Blueshield #Adventure
-  - Brigmedic #Adventure  
+  - Brigmedic #Adventure
+  - CargoBorg #Adventure
+  - EngineerBorg #Adventure
+  - JanitorBorg #Adventure
+  - MedicalBorg #Adventure
+  - ServiceBorg #Adventure
+  - SecurityBorg #Adventure   
   primary: false

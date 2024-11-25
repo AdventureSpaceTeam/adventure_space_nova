@@ -791,10 +791,6 @@
       - PlasmaSniperMagazinePrint # Adventure
       - WeaponPlasmaGunPrint # Adventure
       - PlasmaMagazinePrint # Adventure
-      - MagazineBoxPistolPulse # Adventure
-      - MagazineBoxRiflePulse # Adventure
-      - MagazineBoxLightRiflePulse # Adventure
-      - MagazineBoxRifleExplosive # Adventure
   - type: MaterialStorage
     whitelist:
       tags:

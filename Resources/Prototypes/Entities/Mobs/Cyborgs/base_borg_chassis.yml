@@ -309,8 +309,6 @@
   parent: BaseBorgChassis
   abstract: true
   components:
-  - type: TTS # Adventure
-    voice: sentrybot
   - type: NpcFactionMember
     factions:
     - Syndicate
