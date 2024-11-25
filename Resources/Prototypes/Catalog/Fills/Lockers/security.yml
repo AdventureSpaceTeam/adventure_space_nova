@@ -236,8 +236,8 @@
     contents:
     - id: WeaponShotgunKammerer
       amount: 2
-    - id: BoxLethalshot
-      amount: 2
+    - id: BoxLethalshot # Adventure
+      amount: 2 # Adventure
 
 - type: entity
   id: GunSafeSubMachineGunWt550
