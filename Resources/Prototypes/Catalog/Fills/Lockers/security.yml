@@ -224,8 +224,8 @@
     contents:
     - id: WeaponShotgunEnforcer
       amount: 2
-    - id: BoxLethalshot
-      amount: 2
+    - id: BoxLethalshot # Adventure
+      amount: 2 # Adventure
 
 - type: entity
   parent: [GunSafe, BaseRestrictedContraband]
