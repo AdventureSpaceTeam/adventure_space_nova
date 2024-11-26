@@ -1,0 +1,61 @@
+#парадный костюм адвоката
+- type: entity
+  parent: ClothingUniformJumpsuitLawyerRed
+  id: ClothingUniformJumpsuitLawyerParade
+  name: парадный костюм адвоката
+  description: Позолоченный костюм, для громких выступлений.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/IAA/formalsuit.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/IAA/formalsuit.rsi
+
+- type: loadout
+  id: JumpsuitLawyerParade
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerParade
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterLawyerIAA
+
+- type: loadoutEffectGroup
+  id: MasterLawyerIAA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobIAA
+      time: 36000 #10 hrs
+
+#парадная накидка адвоката
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleLawyerParade
+  name: парадная накидка адвоката
+  description: Почётная накидка великого служителя закона.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/IAA/mantle.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/IAA/mantle.rsi
+  - type: TypingIndicatorClothing
+    proto: lawyer
+
+- type: loadout
+  id: NeckMantleLawyerParade
+  equipment:
+    neck: ClothingNeckMantleLawyerParade
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterMantleLawyerIAA
+
+- type: loadoutEffectGroup
+  id: MasterMantleLawyerIAA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobIAA
+      time: 36000 #10 hrs
