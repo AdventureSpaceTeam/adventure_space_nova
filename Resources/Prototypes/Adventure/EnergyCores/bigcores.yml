@@ -57,7 +57,7 @@
     timeOfLife: 600
     enablingLenght: 7.7
     baseSupply: 300000
-    secPerMoles: 0.25
+    secPerMoles: 0.375
   - type: PowerSupplier
     supplyRate: 300000
   - type: Sprite
@@ -100,7 +100,7 @@
         Heat: 0.25
     timeOfLife: 400
     baseSupply: 200000
-    secPerMoles: 0.0125
+    secPerMoles: 0.01875
   - type: PowerSupplier
     supplyRate: 200000
   - type: Sprite
