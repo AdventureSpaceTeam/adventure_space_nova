@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingEyesHudDiagnostic
+  id: ClothingEyesGlassesRD
+  name: хим-диагностические очки
+  suffix: Adventure
+  description: Идеальные для научной деятельности очки со встроенным хим. анализатором и диагностическим визором.
+  components:
+  - type: Sprite
+    sprite: Adventure/visors/scidia.rsi
+  - type: Clothing
+    sprite: Adventure/visors/scidia.rsi
+  - type: SolutionScanner

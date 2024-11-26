@@ -4,6 +4,7 @@
   id: ClothingHeadHatSecsoftBlack
   name: чёрная кепка службы безопасности
   description: Стильная кепка в новом, чёрном стиле.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/black_secsoft.rsi
@@ -21,6 +22,7 @@
   id: ClothingHeadHatBeretSecurityBlack
   name: чёрный берет службы безопасности
   description: Стильный вариант одежды для сотрудников службы безопасности.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/black_beret_security.rsi
@@ -41,6 +43,7 @@
   id: ClothingHeadHatWardenBlack
   name: чёрная фуражка смотрителя
   description: Эта шляпа подчеркивает, что вы - представитель ЗАКОНА.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/black_warden_hat.rsi
@@ -60,6 +63,7 @@
   id: ClothingUniformJumpsuitSecBlack
   name: чёрная униформа службы безопасности
   description: Комбинезон изготовлен из прочного материала, обеспечивающего надежную защиту.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/black_security_jumpsuit.rsi
@@ -77,6 +81,7 @@
   id: ClothingUniformJumpsuitWardenBlack
   name: чёрная униформа смотрителя
   description: Официальный защитный костюм для офицеров.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/black_warden_jumpsuit.rsi
@@ -94,6 +99,7 @@
   id: ClothingOuterCoatWardenBlack
   name: чёрная бронекуртка смотрителя
   description: Прочная, практичная куртка, предназначенная для защиты смотрителя от любых угроз.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/black_warden_coats.rsi
@@ -111,6 +117,7 @@
   id: ClothingNeckMantleWarden
   name: мантия смотрителя
   description: Простая мантия почётных офицеров службы безопасности.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/warden_mantle.rsi
@@ -147,6 +154,7 @@
   id: ClothingNeckMantleSecurity
   name: накидка службы безопасности
   description: почётная накидка ветерана службы безопасности.
+  suffix: BORK, AdvClothing
   components:
   - type: Sprite
     sprite: Adventure/Objects/Clothing/black_security/security_mantle.rsi
