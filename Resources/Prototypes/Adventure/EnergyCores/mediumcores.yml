@@ -103,7 +103,7 @@
         Heat: 0.125
     timeOfLife: 400
     baseSupply: 160000
-    secPerMoles: 0.0075
+    secPerMoles: 0.028125
   - type: PowerSupplier
     supplyRate: 160000
   - type: Sprite
