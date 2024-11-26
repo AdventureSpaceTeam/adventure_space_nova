@@ -128,12 +128,6 @@
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_Webbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: StorageFill
-    contents:
-    - id: MagazineRifle
-      amount: 3
-    - id: MagazinePistol
-      amount: 2
 
 #Боевой Бронежилет ЦСС
 - type: entity
