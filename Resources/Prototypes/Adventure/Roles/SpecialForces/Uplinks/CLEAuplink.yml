@@ -4,7 +4,7 @@
   id: CLEAuplink
   name: Терминал ЦСС
   suffix: Adventure
-  description: Терминал который использует ЦСС в специальных операциях.
+  description: Терминал, разработанный специально для центральных силовых структур NT
   components:
   - type: Item
     size: Small
@@ -40,7 +40,7 @@
   id: CLEAuplinkleader
   name: Терминал ЦСС лидера
   suffix: Adventure
-  description: Терминал который используют ЦСС лидеры в специальных операциях.
+  description: Тот же самый терминал для центральных силовых структур NT, но уже для офицеров отрядов
   components:
   - type: Item
     size: Small
@@ -101,8 +101,8 @@
   - CLEAweapons
 
 - type: listing
-  id: WeaponSubMachineGunWt550CLEA
-  productEntity: WeaponSubMachineGunWt550
+  id: WeaponSubMachineGunDrozdCLEA
+  productEntity: WeaponSubMachineGunDrozd
   cost: 
     CentCommCrystal: 12
   categories:
@@ -157,9 +157,9 @@
   - CLEAammo
 
 - type: listing
-  id: MagazinePistolSubMachineGunTopMountedCLEA
-  productEntity: MagazinePistolSubMachineGunTopMounted
-  description: Надствольный магазин калибра 35 авто. Подходящий для пистолетов-пулемётов.
+  id: MagazinePistolSubMachineGunCLEA
+  productEntity: MagazinePistolSubMachineGun
+  description:  Магазин калибра 35. Идеально подходит для крупных пистолетов пулемётов. 
   cost:
     CentCommCrystal: 2
   categories:
