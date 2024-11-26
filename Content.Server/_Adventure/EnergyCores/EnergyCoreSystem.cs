@@ -80,7 +80,10 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         while (enumerator.MoveNext(out var adjacent))
         {
             Scrub(timeDelta, portableNode, adjacent, component);
-            core.TimeOfLife += portableNode.Air.GetMoles(component.AbsorbGas) * core.SecPerMoles;
+            if (core.TimeOfLife < 1000)
+                core.TimeOfLife += portableNode.Air.GetMoles(component.AbsorbGas) * core.SecPerMoles;
+            else
+                core.TimeOfLife = 1000;
             portableNode.Air.Clear();
             if (environment != null && core.Working && core.Size == 2)
                 _atmosphereSystem.AddHeat(environment, 4000);
@@ -90,6 +93,9 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         }
         if (core.TimeOfLife > 0 && core.ForceDisabled)
             core.ForceDisabled = false;
+        if (environment != null && environment.Temperature >= 750)
+            OverHeating(core);
+
     }
 
 
