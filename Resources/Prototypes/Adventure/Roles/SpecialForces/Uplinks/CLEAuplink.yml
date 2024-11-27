@@ -1,0 +1,452 @@
+# Аплинк солдата
+- type: entity
+  parent: BaseItem
+  id: CLEAuplink
+  name: Терминал ЦСС
+  suffix: Adventure
+  description: Терминал, разработанный специально для центральных силовых структур NT
+  components:
+  - type: Item
+    size: Small
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+    layers:
+    - state: CLEA
+  - type: Appearance
+  - type: StaticPrice
+    price: 100
+  - type: Store
+    categories:
+      - CLEAweapons
+      - CLEAammo
+      - CLEAmore
+      - CLEAbombs
+      - CLEAmedicine
+    currencyWhitelist:
+      - CentCommCrystal
+    balance:
+      CentCommCrystal: 20
+
+# Аплинк лидера
+- type: entity
+  parent: BaseItem
+  id: CLEAuplinkleader
+  name: Терминал ЦСС лидера
+  suffix: Adventure
+  description: Тот же самый терминал для центральных силовых структур NT, но уже для офицеров отрядов
+  components:
+  - type: Item
+    size: Small
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/Uplinks/communication.rsi
+    layers:
+    - state: CLEA_L
+  - type: Appearance
+  - type: StaticPrice
+    price: 100
+  - type: Store
+    categories:
+      - CLEAweapons
+      - CLEAammo
+      - CLEAmore
+      - CLEAbombs
+      - CLEAmedicine
+      - CLEAleader
+    currencyWhitelist:
+      - CentCommCrystal
+    balance:
+      CentCommCrystal: 30
+
+# Предметы аплинка - Оружие
+- type: storeCategory
+  id: CLEAweapons
+  name: Оружие
+
+- type: listing
+  id: WeaponPistolMk58CLEA
+  productEntity: WeaponPistolMk58
+  cost: 
+    CentCommCrystal: 2 
+  categories:
+  - CLEAweapons
+
+- type: listing
+  id: WeaponDisablerCLEA
+  productEntity: WeaponDisabler
+  cost: 
+    CentCommCrystal: 3 
+  categories:
+  - CLEAweapons
+
+- type: listing
+  id: WeaponLaserCarbineCLEA
+  productEntity: WeaponLaserCarbine
+  cost: 
+    CentCommCrystal: 10
+  categories:
+  - CLEAweapons
+
+- type: listing
+  id: WeaponSubMachineGunDrozdCLEA
+  productEntity: WeaponSubMachineGunDrozd
+  cost: 
+    CentCommCrystal: 12
+  categories:
+  - CLEAweapons
+
+- type: listing
+  id: WeaponRifleLecterCLEA
+  productEntity: WeaponRifleLecter
+  cost: 
+    CentCommCrystal: 12
+  categories:
+  - CLEAweapons
+
+- type: listing
+  id: WeaponShotgunKammererCLEA
+  productEntity: WeaponShotgunKammerer
+  cost: 
+    CentCommCrystal: 12
+  categories:
+  - CLEAweapons
+
+- type: listing
+  id: WeaponLaserCannonCLEA
+  productEntity: WeaponLaserCannon
+  cost: 
+    CentCommCrystal: 15 
+  categories:
+  - CLEAweapons
+# /Предметы аплинка - Оружие
+
+# Предметы аплинка - Боеприпасы
+- type: storeCategory
+  id: CLEAammo
+  name: Боеприпасы
+
+- type: listing
+  id: MagazinePistolCLEA
+  productEntity: MagazinePistol
+  description: Магазин калибра 35 авто. Подходящий для простых пистолетов
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAammo
+
+- type: listing
+  id: MagazineRifleCLEA
+  productEntity: MagazineRifle
+  description: Магазин калибра 20. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAammo
+
+- type: listing
+  id: MagazinePistolSubMachineGunCLEA
+  productEntity: MagazinePistolSubMachineGun
+  description:  Магазин калибра 35. Идеально подходит для крупных пистолетов пулемётов. 
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAammo
+
+- type: listing
+  id: MagazineBoxPistolCLEA
+  productEntity: MagazineBoxPistol
+  description: Коробка калибра 35 авто. Подходящий для простых пистолетов.
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - CLEAammo
+
+- type: listing
+  id: MagazineBoxRifleCLEA
+  productEntity: MagazineBoxRifle
+  description: Коробка калибра 20. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - CLEAammo
+
+- type: listing
+  id: MagazineShotgunCLEA
+  productEntity: MagazineShotgun
+  description: Барабн калибра 50. Подходящий дробовиков.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAammo
+# /Предметы аплинка - Боеприпасы
+
+# Предметы аплинка - Разное
+- type: storeCategory
+  id: CLEAmore
+  name: Разное
+
+- type: listing
+  id: MindShieldImplanterCLEA
+  productEntity: MindShieldImplanter
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAmore
+
+- type: listing
+  id: ClothingShoesBootsMagCLEA
+  productEntity: ClothingShoesBootsMag
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAmore
+
+- type: listing
+  id: PinpointerNuclearCLEA
+  productEntity: PinpointerNuclear
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAmore
+
+- type: listing
+  id: JetpackBlueFilledCLEA
+  productEntity: JetpackBlueFilled
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAmore
+
+- type: listing
+  id: ClothingOuterHardsuitCLEAforUplink
+  productEntity: ClothingOuterHardsuitCLEA
+  cost:
+    CentCommCrystal: 5
+  categories:
+  - CLEAmore
+
+
+# /Предметы аплинка - Разное
+
+# Предметы аплинка - Взрывчатка
+- type: storeCategory
+  id: CLEAbombs
+  name: Взрывчатка
+
+- type: listing
+  id: GrenadeFlashBangCLEA
+  productEntity: GrenadeFlashBang
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAbombs
+
+- type: listing
+  id: TearGasGrenadeCLEA
+  productEntity: TearGasGrenade
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAbombs
+
+- type: listing
+  id: GrenadeStingerCLEA
+  productEntity: GrenadeStinger
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAbombs
+
+- type: listing
+  id: GrenadeIncendiaryCLEA
+  productEntity: GrenadeIncendiary
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAbombs
+
+- type: listing
+  id: C4CLEA
+  productEntity: C4
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAbombs
+
+# /Предметы аплинка - Взрывчатка
+
+# Предметы аплинка - Медицина
+- type: listing
+  id: BrutepackCLEA
+  productEntity: Brutepack
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAmedicine
+
+- type: storeCategory
+  id: CLEAmedicine
+  name: Медицина
+
+- type: listing
+  id: OintmentCLEA
+  productEntity: Ointment
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: GauzeCLEA
+  productEntity: Gauze
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: BloodpackCLEA
+  productEntity: Bloodpack
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAmedicine
+  
+- type: listing
+  id: HandheldHealthAnalyzerCLEA
+  productEntity: HandheldHealthAnalyzer
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: MedkitFilledCLEA
+  productEntity: MedkitFilled
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: DefibrillatorCLEA
+  productEntity: Defibrillator
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: MaterialBiomassCLEA
+  productEntity: MaterialBiomass
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: MedicatedSutureCLEA
+  productEntity: MedicatedSuture
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAmedicine
+
+- type: listing
+  id: RegenerativeMeshCLEA
+  productEntity: RegenerativeMesh
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAmedicine
+# /Предметы аплинка - Медицина
+
+# Предметы аплинка лидера
+- type: storeCategory
+  id: CLEAleader
+  name: Офицер ЦСС
+
+- type: listing
+  id: WeaponRifleAkCLEA
+  productEntity: WeaponRifleAk 
+  cost:
+    CentCommCrystal: 15
+  categories:
+  - CLEAleader
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: MagazineLightRifleCLEA
+  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
+  productEntity: MagazineLightRifle
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - CLEAleader
+
+- type: listing
+  id: MagazineBoxLightRifleBigCLEA
+  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
+  productEntity: MagazineBoxLightRifleBig
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAleader
+
+- type: listing
+  id: WeaponSniperHristovCLEA
+  productEntity: WeaponSniperHristov
+  cost:
+    CentCommCrystal: 14
+  categories:
+  - CLEAleader
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: MagazineBoxAntiMaterielCLEA
+  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
+  productEntity: MagazineBoxAntiMateriel
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CLEAleader
+
+- type: listing
+  id: PlushieSharki_MakcuCLEA
+  productEntity: PlushieSharki_Makcu
+  cost:
+    CentCommCrystal: 1
+  categories:
+  - CLEAleader
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: ClothingShoesBootsMagAdvtwoCLEA
+  productEntity: ClothingShoesBootsMagAdv
+  cost:
+    CentCommCrystal: 4
+  categories:
+  - CLEAleader
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+# /Предметы аплинка лидера

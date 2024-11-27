@@ -391,11 +391,11 @@
   result: RNDECCPU1
   completetime: 4
   materials:
-    Steel: 10000
-    Glass: 5000
-    Plasma: 7500
-    Gold: 5500
-    Silver: 5500
+    Steel: 7500
+    Glass: 4000
+    Plasma: 6000
+    Gold: 4500
+    Silver: 3000
 
 - type: latheRecipe
   id: EnergyCoreHM
@@ -404,6 +404,6 @@
   materials:
     Steel: 5000
     Glass: 3000
-    Plasma: 6500
+    Plasma: 5000
     Gold: 4000
-    Silver: 3000
+    Silver: 2500
