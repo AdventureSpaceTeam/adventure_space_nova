@@ -621,11 +621,8 @@
   category: construction-category-structures
   description: СУПЕР ПУПЕР ЯДРО!
   icon:
-    sprite: Adventure/EnergyCores/spblue/spblue_mini.rsi
-    state: fly
-  layers:
-  - sprite: Adventure/EnergyCores/ec_const_big.rsi
-    state: corpus
+    sprite: Adventure/EnergyCores/mini_core-blue.rsi
+    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -641,11 +638,8 @@
   category: construction-category-structures
   description: СУПЕР ПУПЕР ЯДРО!
   icon:
-    sprite: Adventure/EnergyCores/spred/spred_mini.rsi
-    state: fly
-  layers:
-  - sprite: Adventure/EnergyCores/ec_const_big.rsi
-    state: corpus
+    sprite: Adventure/EnergyCores/mini_core-redspace.rsi
+    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -661,11 +655,8 @@
   category: construction-category-structures
   description: СУПЕР ПУПЕР ЯДРО!
   icon:
-    sprite: Adventure/EnergyCores/sprnd/sprnd_mini.rsi
-    state: fly
-  layers:
-  - sprite: Adventure/EnergyCores/ec_const_big.rsi
-    state: corpus
+    sprite: Adventure/EnergyCores/mini_core-RnD.rsi
+    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -681,11 +672,8 @@
   category: construction-category-structures
   description: СУПЕР ПУПЕР ЯДРО!
   icon:
-    sprite: Adventure/EnergyCores/sphere/sphere_mini.rsi
-    state: fly
-  layers:
-  - sprite: Adventure/EnergyCores/ec_const_big.rsi
-    state: corpus
+    sprite: Adventure/EnergyCores/mini_core-yellow.rsi
+    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
