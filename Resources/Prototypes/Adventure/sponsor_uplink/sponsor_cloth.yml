@@ -1,0 +1,287 @@
+﻿
+# Makcu
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakGreenLegendarySponsor
+  name: зелёный плащ легендарного спонсора
+  description: Зелёный плащ
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Adventure/sponsor_uplink/1.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakBlackLegendarySponsor
+  name: чёрный плащ легендарного спонсора
+  description: Чёрный плащ
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Adventure/sponsor_uplink/2.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakVavevSponsor
+  name: плащ имени каца великого
+  description: Носи с честью!
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Adventure/sponsor_uplink/3.rsi
+
+# Whims
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBot
+  name: плащ ботаника
+  description: От него несет мутагеном...
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/4.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: Devilback
+  name: рюкзак дьявола
+  description: Владыка наблюдает за вами....
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/5.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/5.rsi
+
+- type: entity
+  parent: ClothingOuterWinterClown
+  id: devilcoat
+  name: куртка дьявола
+  description: Говорят , что сам дьявол ее носил.
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Adventure/sponsor_uplink/6.rsi
+    - type: Clothing
+      sprite: Adventure/sponsor_uplink/6.rsi
+
+
+- type: entity
+  parent: [ClothingUniformBase]
+  id: Neoncombez
+  name: неоновый комбинезон
+  description: Сделано из лучших компонентов, отдает отголоском будущего.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/7.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/7.rsi
+  - type: PointLight
+    energy: 0.9
+    color: "#04d9ff"
+    radius: 1.1
+
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakNeon
+  name: неоновый плащ
+  description: Этот высокотехнологичный неоновый плащ - воплощение стиля и функциональности. Встроенный голографический проектор позволяет создавать индивидуальные световые эффекты.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/18.rsi
+  - type: PointLight
+    energy: 0.9
+    color: "#04d9ff"
+    radius: 1.1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieRaidGo
+  name: Плюшевый Этан Райт
+  description: Потратил все деньги центкома на акулок и пиццу... мда
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/10.rsi
+    layers:
+      - state: icon
+  - type: Item
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_c4llv07e/rawr.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: Plushieromakatz
+  name: Плюшевый Роман Кац
+  description: Не давайте этому плюшевому засранцу калий и воду!!!
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/11.rsi
+    layers:
+      - state: icon
+  - type: Item
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_c4llv07e/rawr.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieMravka
+  name: Плюшевая Дилярам
+  description: Мяу!
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/12.rsi
+    layers:
+      - state: icon
+  - type: Item
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_c4llv07e/rawr.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieElan
+  name: Плюшевый Элан
+  description: Не самый умный ОЦК....
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/13.rsi
+    layers:
+      - state: icon
+  - type: Item
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_c4llv07e/rawr.ogg
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNecksouleater
+  name: плащ поглотителя души
+  description: Для тех, кто не определился.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/21.rsi
+
+# ExTreeMe
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesAnarhy
+  name: кровавые ботинки
+  description: На ботинках нарисована символика "Анархия".
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/8.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/8.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatAnarchyCoat
+  name: тренч анархиста
+  description: Панки хой!
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/19.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/19.rsi
+
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakAnarchyCap
+  name: плащ анархиста
+  description: Да здравствует анархия.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/20.rsi
+
+
+- type: entity
+  parent: [ClothingUniformBase]
+  id: ClothingUniformJumpsuitOldMoney
+  name: Старая водолазка
+  description: Old Money - утонченный, элегантный и безупречный вид. Этот комплект подчеркнёт вашу индивидуальность и станет незаменимой частью вашего гардероба. Белая водолазка, выполненная из высококачественной ткани, прекрасно сочетается с брюками, создавая гармоничный и элегантный силуэт.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/22.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/22.rsi
+
+# de11txn
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSyndiTrasenv1
+  name: плащ синдитрейзен
+  description: Подарок Куинку от .... агента?
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/9.rsi
+
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSyndiTrasenv2
+  name: плащ синдитрейзен v2
+  description: Для тех, кто не определился.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/15.rsi
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: ClothingEliteEyesBaseUnshaded
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+    state: icon
+  - type: Clothing
+    slots: [eyes]
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+  - type: Item
+    size: Small
+    storedRotation: -90
+
+- type: entity
+  parent: ClothingEliteEyesBaseUnshaded
+  id: ClothingAdvNeonGlasses
+  name: киберочки
+  description: Киберпанк уже сегодня, бесполезно правда, но красиво.
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/17.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/17.rsi
+
+
+# cotula
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCCSOF
+  name: плащ Главнокомандующего флотом
+  description: Тёмный плащ с украшениями и символом Nanotrasen, который носит Главком флота СпецОпераций.
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/16.rsi
+
