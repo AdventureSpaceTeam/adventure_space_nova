@@ -73,8 +73,8 @@
   id: EnergyCores
   name: Энергетические ядра
   icon:
-    sprite: Adventure/EnergyCores/sphere/sphere_big.rsi
-    state: fly
+    sprite: Adventure/EnergyCores/mini_core-yellow.rsi
+    state: icon
   discipline: Experimental
   tier: 2
   cost: 15000

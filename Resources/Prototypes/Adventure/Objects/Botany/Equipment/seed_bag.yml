@@ -74,12 +74,12 @@
       entity: SeedBag
 
 - type: construction
-  name: wicker bag
+  name: плетёная сумка
   id: SeedBag
   graph: SeedBag
   startNode: start
   targetNode: seedbag
   category: construction-category-storage
-  description: A nice bag special for seeds.
+  description: Хорошая сумка для семян.
   icon: { sprite: Adventure/Objects/Botany/Equipment/seed_bag.rsi, state: icon }
   objectType: Item

@@ -1,17 +1,17 @@
 ﻿- type: construction
-  name: metal rod
+  name: металлический стержень(metal rod) # Adventure
   id: MetalRod
   graph: MetalRod
   startNode: start
   targetNode: MetalRod
   category: construction-category-materials
-  description: A sturdy metal rod that can be used for various purposes.
+  description: Прочный металлический стержень, который можно использовать для различных целей. # Adventure
   icon: { sprite: Objects/Materials/parts.rsi, state: rods }
   objectType: Item
 
 - type: construction
-  name: reinforced glass
-  description: A reinforced sheet of glass.
+  name: бронестекло(reinforced glass) # Adventure
+  description: Лист армированного стекла. # Adventure
   id: SheetRGlass
   graph: Glass
   startNode: start
@@ -21,8 +21,8 @@
   objectType: Item
 
 - type: construction
-  name: clockwork glass
-  description: A brass-reinforced sheet of glass.
+  name: заводное стекло(glass) # Adventure
+  description: Лист укреплённого латунью стекла. # Adventure
   id: SheetClockworkGlass
   graph: Glass
   startNode: start
@@ -32,8 +32,8 @@
   objectType: Item
 
 - type: construction
-  name: plasma glass
-  description: A sheet of translucent plasma.
+  name: плазменное стекло(plasma glass) # Adventure
+  description: Лист полупрозрачной плазмы. # Adventure
   id: SheetPGlass
   graph: Glass
   startNode: start
@@ -43,8 +43,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced plasma glass
-  description: A reinforced sheet of translucent plasma.
+  name: плазменное бронестекло(reinforced plasma glass) # Adventure
+  description: Лист армированной полупрозрачной плазмы. # Adventure
   id: SheetRPGlass
   graph: Glass
   startNode: start
@@ -54,8 +54,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced plasma glass
-  description: A reinforced sheet of translucent plasma.
+  name: плазменное бронестекло(reinforced plasma glass) # Adventure
+  description: Лист армированной полупрозрачной плазмы. # Adventure
   id: SheetRPGlass0
   graph: Glass
   startNode: start
@@ -65,8 +65,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced plasma glass
-  description: A reinforced sheet of translucent plasma.
+  name: плазменное бронестекло(reinforced plasma glass) # Adventure
+  description: Лист армированной полупрозрачной плазмы. # Adventure
   id: SheetRPGlass1
   graph: Glass
   startNode: start
@@ -76,19 +76,19 @@
   objectType: Item
 
 - type: construction
-  name: durathread
+  name: дюраткань(durathread) # Adventure
   id: MaterialDurathread
   graph: Durathread
   startNode: start
   targetNode: MaterialDurathread
   category: construction-category-materials
-  description: Высококачественная нить, используемая для изготовления прочной одежды.
+  description: Высококачественная ткань, используемая для изготовления прочной одежды. # Adventure
   icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
   objectType: Item
 
 - type: construction
-  name: uranium glass
-  description: A sheet of uranium glass.
+  name: урановое стекло(uranium glass) # Adventure
+  description: Лист уранового стекла. # Adventure
   id: SheetUGlass
   graph: Glass
   startNode: start
@@ -98,8 +98,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced uranium glass
-  description: A reinforced sheet of uranium glass.
+  name: урановое бронестекло(reinforced uranium glass) # Adventure
+  description: Лист армированного уранового стекла. # Adventure
   id: SheetRUGlass
   graph: Glass
   startNode: start
@@ -109,8 +109,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced uranium glass
-  description: A reinforced sheet of uranium glass.
+  name: урановое бронестекло(reinforced uranium glass) # Adventure
+  description: Лист армированного уранового стекла. # Adventure
   id: SheetRUGlass0
   graph: Glass
   startNode: start
@@ -120,8 +120,8 @@
   objectType: Item
 
 - type: construction
-  name: reinforced uranium glass
-  description: A reinforced sheet of uranium glass.
+  name: урановое бронестекло(reinforced uranium glass) # Adventure
+  description: Лист армированного уранового стекла. # Adventure
   id: SheetRUGlass1
   graph: Glass
   startNode: start

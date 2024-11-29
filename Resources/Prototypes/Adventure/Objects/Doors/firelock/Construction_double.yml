@@ -145,13 +145,13 @@
 
 
 - type: construction
-  name: firelock double flass
+  name: пожарный шлюз [Двойной](firelock)
   id: DoubleFirelockGlass
   graph: FirelockDouble
   startNode: start
   targetNode: DoubleFirelockGlass
   category: construction-category-structures
-  description: Apply crowbar.
+  description: Это пожарный шлюз - он закрывается в зонах где сработала воздушная сигнализация. Постарайтесь не быть раздавленным!
   icon:
     sprite: Adventure/Structures/Doors/Glass/double_firelock_glass.rsi
     state: assembly
