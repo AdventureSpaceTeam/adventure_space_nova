@@ -78,7 +78,7 @@
     startAudio:
       path: /Audio/Corvax/Announcements/flux.ogg # Corvax-Announcements
       params:
-        volume: -4         
+        volume: -4
     weight: 8
     duration: 35
   - type: AnomalySpawnRule
@@ -96,7 +96,7 @@
     startAudio:
       path: /Audio/Corvax/Announcements/blusp_anomalies.ogg # Corvax-Announcements
       params:
-        volume: -4   
+        volume: -4
     weight: 8
     duration: 35
   - type: BluespaceArtifactRule
@@ -183,9 +183,8 @@
       min: 1
       max: 1
       pickPlayer: false
-      mindComponents:
-      - type: DragonRole
-        prototype: Dragon
+      mindRoles:
+      - MindRoleDragon
 
 - type: entity
   parent: BaseGameRule
@@ -233,9 +232,8 @@
         nameSegments:
         - names_ninja_title
         - names_ninja
-      mindComponents:
-      - type: NinjaRole
-        prototype: SpaceNinja
+      mindRoles:
+      - MindRoleNinja
 
 - type: entity
   parent: BaseGameRule
@@ -315,7 +313,7 @@
     startAudio: # Corvax-Announcements
       path: /Audio/Corvax/Announcements/comms_blackout.ogg
       params:
-        volume: -4    
+        volume: -4
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -343,7 +341,7 @@
     startAudio:
       path: /Audio/Announcements/ventclog.ogg # Corvax-Announcements
       params:
-        volume: -4      
+        volume: -4
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
@@ -456,9 +454,8 @@
       - type: ZombifyOnDeath
       - type: IncurableZombie
       - type: InitialInfected
-      mindComponents:
-      - type: InitialInfectedRole
-        prototype: InitialInfected
+      mindRoles:
+      - MindRoleInitialInfected
 
 - type: entity
   parent: BaseNukeopsRule
@@ -471,7 +468,7 @@
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
-    preloadedGrid: ShuttleStriker
+    mapPath: /Maps/Shuttles/ShuttleEvent/striker.yml
   - type: NukeopsRule
     roundEndBehavior: Nothing
   - type: AntagSelection
@@ -492,9 +489,8 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
-      mindComponents:
-      - type: NukeopsRole
-        prototype: Nukeops
+      mindRoles:
+      - MindRoleNukeops
 
 - type: entity
   parent: BaseTraitorRule
@@ -521,9 +517,8 @@
       blacklist:
         components:
         - AntagImmune
-      mindComponents:
-      - type: TraitorRole
-        prototype: TraitorSleeper
+      mindRoles:
+      - MindRoleTraitorSleeper
 
 - type: entity
   id: MassHallucinations
