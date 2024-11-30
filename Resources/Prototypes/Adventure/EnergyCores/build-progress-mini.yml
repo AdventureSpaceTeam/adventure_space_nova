@@ -623,6 +623,9 @@
   icon:
     sprite: Adventure/EnergyCores/mini_core-blue.rsi
     state: icon
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -640,6 +643,9 @@
   icon:
     sprite: Adventure/EnergyCores/mini_core-redspace.rsi
     state: icon
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -657,6 +663,9 @@
   icon:
     sprite: Adventure/EnergyCores/mini_core-RnD.rsi
     state: icon
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -674,6 +683,9 @@
   icon:
     sprite: Adventure/EnergyCores/mini_core-yellow.rsi
     state: icon
+  layers:
+  - sprite: Adventure/EnergyCores/ec_const_small.rsi
+    state: corpus
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
