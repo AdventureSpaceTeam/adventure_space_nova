@@ -1114,6 +1114,8 @@
   loadouts:
   - ChiefMedicalOfficerBeret
   - CMOMedicalHeadMirror
+  - MedicalHatCMO # Adventure
+  - MedicalHatCMOReflect # Adventure
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerJumpsuit
@@ -1159,6 +1161,11 @@
   - GreenSurgeryCap
   - PurpleSurgeryCap
   - NurseHat
+  - MedicalHatWhite # Adventure
+  - MedicalHatBlue # Adventure
+  - MedicalHatWhiteReflect # Adventure
+  - MedicalHatBlueReflect # Adventure
+  - MedicalHatSurNitrile # Adventure
 
 - type: loadoutGroup
   id: MedicalDoctorJumpsuit
@@ -1171,6 +1178,7 @@
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
+  - MedicalNurseJumpskirt # Adventure
 
 - type: loadoutGroup
   id: MedicalDoctorOuterClothing
@@ -1180,6 +1188,7 @@
   - RegularLabCoat
   - MedicalDoctorWintercoat
   - SeniorPhysicianLabCoat
+  - CoatLabNitrile # Adventure
 
 - type: loadoutGroup
   id: MedicalBackpack

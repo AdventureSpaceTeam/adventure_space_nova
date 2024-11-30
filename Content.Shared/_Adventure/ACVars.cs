@@ -103,4 +103,10 @@ public sealed class ACVars : CVars
 
     public static readonly CVarDef<string> SponsorApiToken =
         CVarDef.Create("sponsor.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    /// Start map and preset votes in lobby automatically.
+    /// </summary>
+    public static readonly CVarDef<bool> LobbyVote =
+        CVarDef.Create("game.lobby_vote", true, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
 }

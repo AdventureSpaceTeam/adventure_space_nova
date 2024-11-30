@@ -17,5 +17,5 @@
   name: Химик, голова
   minLimit: 0
   loadouts:
-  - MedicalChemistCapNitrile
-  - MedicalChemistBeret
+  - ChemistHatNitrile
+  - ChemistBeret

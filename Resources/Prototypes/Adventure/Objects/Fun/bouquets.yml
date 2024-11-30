@@ -3,7 +3,7 @@
   parent: BaseItem
   id: BaseFlowerBouquet
   abstract: true
-  components:  
+  components:
   - type: Construction
     node: bouquet
   - type: MeleeWeapon
@@ -29,7 +29,7 @@
     sprite: Adventure/Objects/Fun/Bouquets/eng_bouquet.rsi
 
 - type: construction
-  name: bouquet of engineering tulips
+  name: букет инженерных тюльпанов
   id: EngTulipBouquet
   graph: EngTulipBouquet
   startNode: start
@@ -81,7 +81,7 @@
     sprite: Adventure/Objects/Fun/Bouquets/rose_bouquet.rsi
 
 - type: construction
-  name: bouquet of roses
+  name: букет роз
   id: RosesBouquet
   graph: RosesBouquet
   startNode: start
@@ -156,7 +156,7 @@
     sprite: Adventure/Objects/Fun/Bouquets/orch_bouquet.rsi
 
 - type: construction
-  name: bouquet of orchids
+  name: орхидеевый букет
   id: OrchFlowBouquet
   graph: OrchFlowBouquet
   startNode: start
@@ -216,7 +216,7 @@
     sprite: Adventure/Objects/Fun/Bouquets/flow_bouquet.rsi
 
 - type: construction
-  name: flower bouquet
+  name: цветочный букет
   id: TulipBouquet
   graph: TulipBouquet
   startNode: start
@@ -291,7 +291,7 @@
     sprite: Adventure/Objects/Fun/Bouquets/mixed_bouquet.rsi
 
 - type: construction
-  name: assorted bouquet
+  name: ассорти букет
   id: MixedFlowBouquet
   graph: MixedFlowBouquet
   startNode: start

@@ -1,90 +1,90 @@
 - type: construction
-  name: cleanbot
+  name: чистобот # Adventure
   id: cleanbot
   graph: CleanBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot wanders around the station, mopping up any puddles it sees.
+  description: Ужас автоматизации теперь угрожает и космическим уборщикам. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/cleanbot.rsi
     state: cleanbot
 
 - type: construction
-  name: firebot
+  name: пожарбот # Adventure
   id: firebot
   graph: FireBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot puts out fires wherever it goes.
+  description: Маленький бот для тушения пожаров. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/firebot.rsi
     state: firebot
 
 - type: construction
-  name: honkbot
+  name: хонкбот # Adventure
   id: honkbot
   graph: HonkBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot honks and slips people.
+  description: Этот бот хонкает и на нём подскальзываются люди. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/honkbot.rsi
     state: honkbot
 
 - type: construction
-  name: jonkbot
+  name: кринжбот # Adventure
   id: jonkbot
   graph: JonkBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This cursed bot honks, laughs and slips people.
+  description: Этот бот проклято хонкает, смеётся и на нём подскальзываются люди. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/honkbot.rsi
     state: jonkbot
 
 - type: construction
-  name: medibot
+  name: медибот # Adventure
   id: medibot
   graph: MediBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot can help supply basic healing.
+  description: Этот бот может помочь с базовым лечением. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/medibot.rsi
     state: medibot
 
 - type: construction
-  name: mimebot
+  name: мимбот # Adventure
   id: mimebot
   graph: MimeBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot knows how to wave.
+  description: Этот бот знает как махать рукой. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/mimebot.rsi
     state: mimebot
 
 - type: construction
-  name: supplybot
+  name: грузобот # Adventure
   id: supplybot
   graph: SupplyBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: This bot can be loaded with cargo to make deliveries.
+  description: В этого бота можно что-то загрузить. # Adventure
   icon:
     sprite: Mobs/Silicon/Bots/supplybot.rsi
     state: supplybot

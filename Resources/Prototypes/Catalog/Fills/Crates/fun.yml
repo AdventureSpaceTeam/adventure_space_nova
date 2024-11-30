@@ -49,6 +49,7 @@
     - id: PlushieCMO
     - id: PlushieRD
     - id: PlushieCentCommRG
+    - id: PlushieBS
 # Adventure_plushie_end
 
 - type: entity

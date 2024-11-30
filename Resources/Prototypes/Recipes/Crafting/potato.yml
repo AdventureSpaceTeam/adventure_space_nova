@@ -1,32 +1,32 @@
 - type: construction
-  name: potato battery
+  name: картофельная батарея # Adventure
   id: PowerCellPotato
   graph: PowerCellPotato
   startNode: start
   targetNode: potatobattery
   category: construction-category-misc
-  description: A truly ingenious source of power.
+  description: По настоящему гениальный источник энергии. # Adventure
   icon: { sprite: Objects/Power/power_cells.rsi, state: potato }
   objectType: Item
 
 - type: construction
-  name: potato artificial intelligence
+  name: картофельный ИИ # Adventure
   id: PotatoAI
   graph: PotatoAI
   startNode: start
   targetNode: potatoai
   category: construction-category-misc
-  description: The potato happens to be the perfect power source for this chip.
+  description: Это картофелина. Вы заставили её быть разумной, вы, монстр. # Adventure
   icon: { sprite: Objects/Fun/pai.rsi, state: icon-potato-off }
   objectType: Item
-  
+
 - type: construction
-  name: supercompact AI chip
+  name: сверхкомпактный чип ИИ # Adventure
   id: PotatoAIChip
   graph: PotatoAIChip
   startNode: start
   targetNode: potatoaichip
   category: construction-category-misc
-  description: A masterfully(?) crafted AI chip, requiring a similarly improvised power source.
+  description: Мастерски(?) изготовленный чип ИИ, требует похожий импровизированный источник энергии. # Adventure
   icon: { sprite: Objects/Misc/potatoai_chip.rsi, state: icon }
   objectType: Item

@@ -4,3 +4,8 @@ enabled = false
 
 [shuttle]
 auto_call_time = 0
+
+# Adventure begin
+[game]
+lobby_vote = false
+# Adventure end

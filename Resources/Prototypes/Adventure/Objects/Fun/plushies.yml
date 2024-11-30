@@ -132,3 +132,22 @@
       path: /Audio/Animals/cat_meow.ogg
   - type: UseDelay
     delay: 1.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieBS
+  name: Плюшевый ОСЩ
+  suffix: AdvPlushie
+  description: Колит главам совсем не импланты...
+  components:
+  - type: Sprite
+    state: icon
+    sprite: Adventure/Objects/Fun/razor.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: UseDelay
+    delay: 1.0

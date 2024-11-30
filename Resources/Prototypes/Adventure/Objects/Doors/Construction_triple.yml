@@ -133,13 +133,13 @@
         doAfter: 8
 
 - type: construction
-  name: airlock triple
+  name: стеклянный шлюз [Тройной](airlock)
   id: AirlockTriple
   graph: AirlockTriple
   startNode: start
   targetNode: glassAirlockTriple
   category: construction-category-structures
-  description: It opens, it closes, and maybe crushes you.
+  description: Он открывается, он закрывается, и он может вас раздавить.
   icon:
     sprite: Adventure/Structures/Doors/Glass/triple_glass.rsi
     state: assembly
