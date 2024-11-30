@@ -86,14 +86,10 @@ public sealed partial class EnergyCoreSystem : EntitySystem
             else
                 core.TimeOfLife = 1000;
             portableNode.Air.Clear();
-            if (core.Working && core.Size == 2)
-                _atmosphereSystem.AddHeat(environment, 4000);
-            else if (core.Working && core.Size == 3)
-                _atmosphereSystem.AddHeat(environment, 8000);
-            //Pump(environment, portableNode, component); // попросили убрать для хардкорности ситуации
+            //Pump(adjacent, portableNode, component); // попросили убрать для хардкорности ситуации
             if (core.TimeOfLife > 0 && core.ForceDisabled)
                 core.ForceDisabled = false;
-            if (environment.Temperature >= 750)
+            if (adjacent.Temperature >= 750)
                 OverHeating(core);
         }
 
@@ -149,13 +145,19 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     private void Working(EnergyCoreComponent component, PipeNode air)
     {
         Absorb(component, air);
-        if (component.Working && !component.ForceDisabled)
+        var pos = Transform(component.Owner);
+        var environment = _atmosphereSystem.GetTileMixture(pos.GridUid, pos.MapUid, _transformSystem.GetGridTilePositionOrDefault(component.Owner), true);
+        if (component.Working && !component.ForceDisabled && environment != null)
         {
             if (component.TimeOfLife > component.LifeAfterOverheat)
             {
                 component.TimeOfLife -= 1;
                 if (component.TimeOfLife <= 0 && !component.isUndead)
                     OverHeating(component);
+                if (component.Size == 2)
+                    _atmosphereSystem.AddHeat(environment, 4000);
+                else if (component.Size == 3)
+                    _atmosphereSystem.AddHeat(environment, 8000);
             }
             else
             {
