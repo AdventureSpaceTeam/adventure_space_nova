@@ -4,6 +4,7 @@
   abstract: true
   components:
   - type: Organ
+    species: animal
   - type: Food
   - type: Sprite
     sprite: Mobs/Species/Human/organs.rsi
@@ -24,6 +25,28 @@
       - Meat
 
 - type: entity
+  id: OrganAnimalBrain
+  parent: BaseHumanOrgan
+  name: brain
+  description: "The source of incredible, unending intelligence. Honk."
+  components:
+  - type: Sprite
+    state: brain
+  - type: Organ
+    organType: Brain
+    species: animal #lets allow brain transfer to be a little easier
+  - type: Input
+    context: "ghost"
+  - type: Brain
+  - type: InputMover
+  - type: Examiner
+  - type: BlockMovement
+  - type: BadFood
+  - type: Tag
+    tags:
+    - Meat
+
+- type: entity
   id: BaseAnimalOrgan
   parent: BaseAnimalOrganUnGibbable
   abstract: true
@@ -41,7 +64,11 @@
     - state: lung-l
     - state: lung-r
   - type: Organ
+    organType: Lung
+    species: animal
   - type: Lung
+  - type: DLungs
+    organKey: lungs
   - type: Metabolizer
     removeEmpty: true
     solutionOnBody: false
@@ -73,6 +100,8 @@
   - type: Sprite
     state: stomach
   - type: Organ
+    organType: Stomach
+    species: animal
   - type: SolutionContainerManager
     solutions:
       stomach:
@@ -83,6 +112,8 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
   - type: Stomach
+  - type: DStomach
+    organKey: stomach
   - type: Metabolizer
     maxReagents: 3
     metabolizerTypes: [ Animal ]
@@ -116,6 +147,12 @@
   - type: Sprite
     state: liver
   - type: Organ
+    organType: Liver
+    species: animal
+  - type: ToxinFilter
+    organKey: liver
+    embedded: true
+    maxDamageThreshold: 375
   - type: Metabolizer
     maxReagents: 1
     metabolizerTypes: [ Animal ]
@@ -128,13 +165,14 @@
 
 - type: entity
   id: OrganAnimalHeart
-  parent: BaseAnimalOrgan
+  parent: [BaseAnimalOrgan, BaseHeart]
   name: heart
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: heart-on
   - type: Organ
+    species: animal
   - type: Metabolizer
     maxReagents: 2
     metabolizerTypes: [ Animal ]
@@ -145,6 +183,10 @@
   - type: Item
     size: Small
     heldPrefix: heart
+  - type: Tag
+    tags:
+    - Heart
+    - Meat
 
 - type: entity
   id: OrganAnimalKidneys
@@ -157,6 +199,12 @@
     - state: kidney-l
     - state: kidney-r
   - type: Organ
+    organType: Kidney
+    species: animal
+  - type: ToxinRemover
+    organKey: kidney
+    embedded: true
+    maxDamageThreshold: 600
   - type: Metabolizer
     maxReagents: 5
     metabolizerTypes: [ Animal ]

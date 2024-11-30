@@ -1,0 +1,6 @@
+﻿<DefaultWindow xmlns="https://spacestation14.io"
+               Title="Surgery Menu"
+               SetSize="625 675"
+               MinSize="625 675">
+    <BoxContainer Name="SurgeryLayout" Orientation="Horizontal" />
+</DefaultWindow>

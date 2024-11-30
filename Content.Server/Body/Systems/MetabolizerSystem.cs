@@ -1,4 +1,5 @@
 using Content.Server.Body.Components;
+using Content.Server.Body.Events;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Organ;
@@ -181,6 +182,7 @@ namespace Content.Server.Body.Systems
 
                     // Remove $rate, as long as there's enough reagent there to actually remove that much
                     mostToRemove = FixedPoint2.Clamp(rate, 0, quantity);
+                    var effectAmount = mostToRemove;
 
                     float scale = (float) mostToRemove / (float) rate;
 
@@ -192,9 +194,10 @@ namespace Content.Server.Body.Systems
                         if (!proto.WorksOnTheDead && _mobStateSystem.IsDead(solutionEntityUid.Value, state))
                             continue;
                     }
-
+                    var metabolizeEv = new OnEntityMetabolize(group, mostToRemove);
+                    RaiseLocalEvent(solutionEntityUid.Value, ref metabolizeEv);
                     var actualEntity = ent.Comp2?.Body ?? solutionEntityUid.Value;
-                    var args = new EntityEffectReagentArgs(actualEntity, EntityManager, ent, solution, mostToRemove, proto, null, scale);
+                    var args = new EntityEffectReagentArgs(actualEntity, EntityManager, ent, solution, effectAmount, proto, null, scale);
 
                     // do all effects, if conditions apply
                     foreach (var effect in entry.Effects)
@@ -215,14 +218,19 @@ namespace Content.Server.Body.Systems
                         }
 
                         effect.Effect(args);
+                        var eventArgs = new ReagentEffectApplyEvent(args);
+                        RaiseLocalEvent(args.TargetEntity, ref eventArgs);
                     }
+                    var afterReagentEv = new OnEntityMetabolizeAfterReagent(group, scale);
+                    RaiseLocalEvent(solutionEntityUid.Value, ref afterReagentEv);
                 }
 
                 // remove a certain amount of reagent
                 if (mostToRemove > FixedPoint2.Zero)
                 {
                     solution.RemoveReagent(reagent, mostToRemove);
-
+                    var afterMetabolize = new OnEntityAfterMetabolize(mostToRemove, soln.Value);
+                    RaiseLocalEvent(solutionEntityUid.Value, ref afterMetabolize);
                     // We have processed a reagant, so count it towards the cap
                     reagents += 1;
                 }

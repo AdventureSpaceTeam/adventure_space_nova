@@ -122,6 +122,19 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("nukeopsRole");
             _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
 
+            //DarkStation
+            _prototypeManager.RegisterIgnore("symptom");
+            _prototypeManager.RegisterIgnore("stationGoal");
+            _prototypeManager.RegisterIgnore("narsiAbilityPrototype");
+            _prototypeManager.RegisterIgnore("narsiRitualCategory");
+            _prototypeManager.RegisterIgnore("narsiRitual");
+            _prototypeManager.RegisterIgnore("diseaseBlacklistPrototype");
+            _prototypeManager.RegisterIgnore("disease");
+            _prototypeManager.RegisterIgnore("diseaseCure");
+            _prototypeManager.RegisterIgnore("diseaseStage");
+            _prototypeManager.RegisterIgnore("SCPStationGoal");
+            _prototypeManager.RegisterIgnore("salaries");
+
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();
             _screenshotHook.Initialize();

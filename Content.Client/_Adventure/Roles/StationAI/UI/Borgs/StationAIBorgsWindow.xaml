@@ -1,0 +1,63 @@
+﻿<controls1:FancyWindow xmlns="https://spacestation14.io"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
+                       xmlns:customControls1="clr-namespace:Content.Client.Administration.UI.CustomControls;assembly=Content.Client"
+                       xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                       MinSize="600 350"
+                       SetSize="650 450"
+                       Title="Активные борги станции">
+
+    <BoxContainer Name="Box" Orientation="Horizontal" Margin="8 8 8 8">
+
+        <BoxContainer Orientation="Vertical">
+
+            <BoxContainer Name="BorgsContainer" Orientation="Vertical" VerticalExpand="True">
+                <Label Name="Text" Text="Борги не найдены" />
+                <ItemList Name="SubnetList" VerticalExpand="True" Margin="0 5" />
+            </BoxContainer>
+
+            <BoxContainer Orientation="Horizontal" Margin="0 5 0 5" VerticalAlignment="Bottom">
+                <Button Name="Refresh" Text="Обновить" Margin="2 0 0 0" />
+                <Button Name="BackToBody" Text="Вернуться" Margin=" 2 0 0 0" />
+            </BoxContainer>
+
+        </BoxContainer>
+
+        <customControls1:VSeparator Margin="8 8 8 8" />
+
+        <BoxContainer Visible="False" Name="BorgInfoContainer" Orientation="Vertical" VerticalExpand="True"
+                      HorizontalExpand="True">
+
+            <BoxContainer Orientation="Horizontal">
+                <Label StyleClasses="LabelKeyText" Name="LabelName" Text="Имя: " />
+                <Label Name="BorgName" />
+            </BoxContainer>
+
+            <BoxContainer Orientation="Horizontal">
+                <Label StyleClasses="LabelKeyText" Name="LabelCoordinates" Text="Координаты: " />
+                <Label Name="BorgCoordinates" />
+            </BoxContainer>
+
+            <Label StyleClasses="LabelKeyText" Name="LawsLabel" Text="Законы борга" />
+
+            <PanelContainer VerticalExpand="True" HorizontalExpand="False">
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+
+                <RichTextLabel Name="BorgLaws" HorizontalExpand="False" />
+            </PanelContainer>
+
+            <BoxContainer Orientation="Horizontal">
+                <ProgressBar Name="ChargeBar" Access="Public" HorizontalExpand="True" MinValue="0" MaxValue="1">
+                    <Label Name="ChargeLabel" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0" />
+                </ProgressBar>
+            </BoxContainer>
+
+            <!-- <Button Name="ButtonSyncLaws" Text="Синхронизировать законы" /> -->
+            <Button Name="ButtonUseCamera" Text="Смотреть от лица борга" />
+
+        </BoxContainer>
+
+    </BoxContainer>
+</controls1:FancyWindow>

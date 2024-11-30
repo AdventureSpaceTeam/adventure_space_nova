@@ -1,0 +1,184 @@
+﻿<ui:FancyWindow xmlns="https://spacestation14.io"
+                xmlns:x="http://schemas.microsoft.com/winfx/2007/xaml"
+                xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
+                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                MinSize="256 256"
+                SetSize="512 512">
+    <BoxContainer Orientation="Vertical">
+
+        <PanelContainer Margin="8 0 8 0" Name="OperatorPanel">
+            <PanelContainer.PanelOverride>
+                <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+            </PanelContainer.PanelOverride>
+
+            <BoxContainer Orientation="Vertical">
+                <Label Margin="8 8 8 8" Align="Center" Text="Консоль оператора центрального командования"
+                       StyleClasses="LabelKeyText" />
+
+                <BoxContainer Orientation="Horizontal" Margin="8 8 8 8">
+                    <Label StyleClasses="LabelKeyText" Text="Оператор: " />
+                    <RichTextLabel Name="CCOOperator" />
+                </BoxContainer>
+
+                <Label Margin="8 8 8 8"
+                       Align="Center"
+                       Text="Выберите нужную станцию из представленных"
+                       StyleClasses="LabelKeyText" />
+
+                <OptionButton Margin="8 8 8 8" Name="StationsSelector" HorizontalExpand="True" />
+
+            </BoxContainer>
+        </PanelContainer>
+
+        <TabContainer Name="CTabContainer" Visible="False" VerticalExpand="True" Margin="8 8 8 8">
+            <PanelContainer VerticalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+
+                <BoxContainer Orientation="Vertical">
+
+                    <BoxContainer Orientation="Horizontal" Margin="8 8 8 8">
+                        <Label StyleClasses="LabelKeyText" Text="Текущий код: " />
+                        <RichTextLabel Name="StationAlertCode" />
+                    </BoxContainer>
+
+                    <BoxContainer Orientation="Horizontal" Margin="8 0 8 8">
+                        <Label StyleClasses="LabelKeyText" Align="Left" Text="Инструкции: " />
+                        <RichTextLabel Name="StationAlertCodeDescription" />
+                    </BoxContainer>
+
+                    <BoxContainer Orientation="Horizontal" Margin="8 0 8 8">
+                        <Label StyleClasses="LabelKeyText" Text="Эвакуационный шаттл: " />
+                        <RichTextLabel Name="EmergencyShuttle" />
+                    </BoxContainer>
+
+                    <GridContainer Columns="2" Margin="8 0 8 0">
+                        <Button HorizontalAlignment="Center" Name="StationOpenManifest" Text="Манифест станции" />
+                        <Button HorizontalAlignment="Center" Name="StationCallEmergencyShuttle"
+                                Text="Вызвать эвакуационный шаттл" />
+                    </GridContainer>
+                </BoxContainer>
+            </PanelContainer>
+
+            <PanelContainer VerticalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+
+                <BoxContainer Orientation="Vertical" Margin="8 8 8 8">
+                    <Label StyleClasses="LabelKeyText" Align="Center" Text="Объявление для станции" Margin="8 8 8 8" />
+
+                    <PanelContainer VerticalExpand="True">
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#25252A" />
+                        </PanelContainer.PanelOverride>
+                        <TextEdit Name="MessageInput" HorizontalExpand="True" VerticalExpand="True" Margin="8 8 8 8"
+                                  MinHeight="100" />
+                    </PanelContainer>
+
+                    <Button Name="AnnounceButton" Text="{Loc 'comms-console-menu-announcement-button'}"
+                            StyleClasses="OpenLeft" Access="Public" />
+                </BoxContainer>
+            </PanelContainer>
+
+            <PanelContainer VerticalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Vertical" Margin="8 8 8 8">
+                    <Label StyleClasses="LabelKeyText" Align="Center" Text="Отправить спец.отряд" Margin="8 8 8 8" />
+
+                    <BoxContainer Name="SpecialSquadContainer" Orientation="Vertical" />
+
+                </BoxContainer>
+            </PanelContainer>
+
+            <PanelContainer VerticalExpand="True">
+
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                </PanelContainer.PanelOverride>
+
+                <BoxContainer Orientation="Vertical" Margin="8 8 8 8">
+
+                    <ScrollContainer VerticalExpand="True"
+                                     HScrollEnabled="False"
+                                     VScrollEnabled="True"
+                                     MaxHeight="215">
+
+                        <BoxContainer Name="CrewMembersList" Orientation="Vertical" VerticalExpand="True" />
+
+                    </ScrollContainer>
+
+                    <PanelContainer
+                        Name="CrewMemberSalaryContainer"
+                        VerticalExpand="True"
+                        VerticalAlignment="Bottom"
+                        Margin="4 4 4 4"
+                        Visible="False">
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#25252A" />
+                        </PanelContainer.PanelOverride>
+
+                        <BoxContainer Orientation="Vertical">
+
+                            <BoxContainer Name="CrewMemberInfo" Orientation="Vertical">
+
+                                <BoxContainer Orientation="Horizontal" Margin="8 8 8 0">
+                                    <Label StyleClasses="StatusFieldTitle" Text="{Loc 'cco-console-crew-member-title'}" />
+                                    <Label Name="CrewMemberName" Margin="4 0 4 0" />
+                                </BoxContainer>
+
+                                <BoxContainer Orientation="Horizontal" Margin="8 0 8 0">
+                                    <Label StyleClasses="StatusFieldTitle" Text="{Loc 'cco-console-crew-member-job'}" />
+                                    <Label Name="CrewMemberJob" Margin="4 0 4 0" />
+                                </BoxContainer>
+
+                                <BoxContainer Orientation="Horizontal" Margin="8 0 8 0">
+                                    <Label StyleClasses="StatusFieldTitle"
+                                           Text="{Loc 'cco-console-crew-member-salary'}" />
+                                    <Label Name="CrewMemberSalary" Margin="4 0 4 0" />
+                                </BoxContainer>
+
+                                <BoxContainer Orientation="Horizontal" Name="CrewMemberPenaltiesContainer"
+                                              Margin="8 0 8 0">
+                                    <Label StyleClasses="StatusFieldTitle"
+                                           Text="{Loc 'cco-console-crew-member-penalties'}" />
+                                    <Label Name="CrewMemberPenaltiesSum" Margin="4 0 4 0" />
+                                </BoxContainer>
+
+                                <BoxContainer Orientation="Horizontal" Name="CrewMemberBonusesContainer"
+                                              Margin="8 0 8 0">
+                                    <Label StyleClasses="StatusFieldTitle"
+                                           Text="{Loc 'cco-console-crew-member-bonuses'}" />
+                                    <Label Name="CrewMemberBonusesSum" Margin="4 0 4 0" />
+                                </BoxContainer>
+                            </BoxContainer>
+
+                            <LineEdit Name="SalaryCount"
+                                      PlaceHolder="{Loc 'cco-console-crew-member-input-placeholder'}" Margin="8 8 8 0" />
+
+                            <BoxContainer Name="CrewMemberButtonsContainer"
+                                          Orientation="Horizontal"
+                                          Margin="8 8 8 8"
+                                          HorizontalExpand="True">
+                                <Button Name="CrewMemberBonusButton"
+                                        Text="{Loc 'cco-console-crew-member-bonus-button'}"
+                                        HorizontalExpand="True"
+                                        Margin="0 0 4 0"
+                                        Disabled="True" />
+
+                                <Button Name="CrewMemberPenaltyButton"
+                                        Text="{Loc 'cco-console-crew-member-penalty-button'}"
+                                        HorizontalExpand="True"
+                                        Margin="4 0 0 0"
+                                        Disabled="True" />
+                            </BoxContainer>
+                        </BoxContainer>
+                    </PanelContainer>
+                </BoxContainer>
+            </PanelContainer>
+        </TabContainer>
+    </BoxContainer>
+</ui:FancyWindow>

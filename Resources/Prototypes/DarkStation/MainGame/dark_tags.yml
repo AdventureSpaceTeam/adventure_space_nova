@@ -1,0 +1,31 @@
+﻿- type: Tag
+  id: Currency
+
+#Ratvar
+- type: Tag
+  id: RatvarBorgModule
+
+- type: Tag
+  id: RatvarDroneUsable
+
+#Surgery
+- type: Tag
+  id: Torso
+
+- type: Tag
+  id: LArm
+
+- type: Tag
+  id: RArm
+
+- type: Tag
+  id: LLeg
+
+- type: Tag
+  id: RLeg
+
+- type: Tag
+  id: Heart
+
+- type: Tag
+  id: Dog

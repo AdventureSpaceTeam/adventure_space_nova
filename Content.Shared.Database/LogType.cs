@@ -121,4 +121,12 @@ public enum LogType
     /// </summary>
     ExplosionHit = 94,
 
+    /// <summary>
+    /// Использовал Банкомат
+    /// </summary>
+    ATMUsage = 1000,
+    /// <summary>
+    /// Выдана зарплата
+    /// </summary>
+    Salary = 1001,
 }

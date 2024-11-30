@@ -14,6 +14,7 @@ using Content.Shared.Item;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Smoking;
 using Content.Shared.Temperature;
+using Content.Shared.Body.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using System.Linq;
@@ -33,6 +34,9 @@ namespace Content.Server.Nutrition.EntitySystems
         [Dependency] private readonly SharedContainerSystem _container = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
         [Dependency] private readonly ForensicsSystem _forensics = default!;
+        [Dependency] private readonly LungSystem _lungSystem = default!;
+        [Dependency] private readonly BodySystem _bodySystem = default!;
+        // [Dependency] private readonly IDiseasesBridge _diseasesBridge = default!;
 
         private const float UpdateTimer = 3f;
 
@@ -94,6 +98,7 @@ namespace Content.Server.Nutrition.EntitySystems
             if (args.Slot == "mask")
             {
                 _forensics.TransferDna(entity.Owner, args.Equipee, false);
+                // _diseasesBridge.TransferDiseasesContact(entity.Owner, args.Equipee);
             }
         }
 
@@ -142,7 +147,7 @@ namespace Content.Server.Nutrition.EntitySystems
 
                 // This is awful. I hate this so much.
                 // TODO: Please, someone refactor containers and free me from this bullshit.
-                if (!_container.TryGetContainingContainer((uid, null, null), out var containerManager) ||
+                if (!_container.TryGetContainingContainer(uid, out var containerManager) ||
                     !(_inventorySystem.TryGetSlotEntity(containerManager.Owner, "mask", out var inMaskSlotUid) && inMaskSlotUid == uid) ||
                     !TryComp(containerManager.Owner, out BloodstreamComponent? bloodstream))
                 {
@@ -151,6 +156,26 @@ namespace Content.Server.Nutrition.EntitySystems
 
                 _reactiveSystem.DoEntityReaction(containerManager.Owner, inhaledSolution, ReactionMethod.Ingestion);
                 _bloodstreamSystem.TryAddToChemicals(containerManager.Owner, inhaledSolution, bloodstream);
+
+                if (TryComp<BodyComponent>(containerManager.Owner, out var body))
+                {
+                    var lungs = _bodySystem.GetBodyOrganEntityComps<LungComponent>(body.Owner);
+                    var numLungs = lungs.Count;
+                    foreach (var lung in lungs)
+                    {
+                        //go through solution, check if it does any lung damage
+                        foreach (var reagent in inhaledSolution.Contents)
+                        {
+                            var lungEv = new OnEntityInhaleToLungs();
+                            RaiseLocalEvent(body.Owner, ref lungEv);
+                            if (lungEv.DamageLoss > 1.0f)
+                                lungEv.DamageLoss = 1.0f;
+                            var amount = (float)reagent.Quantity / numLungs * (1.0f - lungEv.DamageLoss);
+                            var smokeEv = new OnEntitySmoke(amount);
+                            RaiseLocalEvent(body.Owner, ref smokeEv);
+                        }
+                    }
+                }
             }
 
             _timer -= UpdateTimer;
@@ -163,4 +188,7 @@ namespace Content.Server.Nutrition.EntitySystems
     public sealed class SmokableSolutionEmptyEvent : EntityEventArgs
     {
     }
+
+    [ByRefEvent]
+    public record struct OnEntitySmoke(float Amount);
 }

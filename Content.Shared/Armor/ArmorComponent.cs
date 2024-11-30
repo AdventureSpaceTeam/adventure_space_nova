@@ -1,6 +1,8 @@
-﻿using Content.Shared.Damage;
+using Content.Shared.Damage;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
+using Content.Shared.Body.Part;
+using Content.Shared.Damage;
 
 namespace Content.Shared.Armor;
 
@@ -22,6 +24,10 @@ public sealed partial class ArmorComponent : Component
     /// </summary>
     [DataField]
     public float PriceMultiplier = 1;
+
+    [DataField]
+    [Access(Other = AccessPermissions.ReadExecute)]
+    public Dictionary<BodyPartType, float> SecurePartTypes = [];
 }
 
 /// <summary>

@@ -1,7 +1,8 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Shared.Body.Organ;
 using Content.Shared.Prototypes;
 using Robust.Shared.Prototypes;
+using Content.Shared.Body.Part;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Serialization.Markdown.Mapping;
@@ -126,7 +127,10 @@ public sealed class BodyPrototypeSerializer : ITypeReader<BodyPrototype, Mapping
         var name = node.Get<ValueDataNode>("name").Value;
         var root = node.Get<ValueDataNode>("root").Value;
         var slotNodes = node.Get<MappingDataNode>("slots");
-        var allConnections = new Dictionary<string, (string? Part, HashSet<string>? Connections, Dictionary<string, string>? Organs)>();
+        var allConnections = new Dictionary<string, (string? Part, HashSet<string>? Connections, Dictionary<string, OrganPrototypeSlot>? Organs, BodyPartType? SlotType)>();
+        var rootOverride = false;
+        if (node.TryGet("rootOverride", out var rootOverrideSet))
+            rootOverride = bool.Parse(node.Get<ValueDataNode>("rootOverride").Value);
 
         foreach (var (keyNode, valueNode) in slotNodes)
         {
@@ -149,22 +153,41 @@ public sealed class BodyPrototypeSerializer : ITypeReader<BodyPrototype, Mapping
                     connections.Add(connection.Value);
                 }
             }
-
-            Dictionary<string, string>? organs = null;
-            if (slot.TryGet("organs", out MappingDataNode? slotOrgansNode))
+            var organs = new Dictionary<string, OrganPrototypeSlot>();
+            if (slot.TryGet("organs", out MappingDataNode? slotOrgansNode) && part is not null) //must have part to have organs.
             {
-                organs = new Dictionary<string, string>();
 
                 foreach (var (organKeyNode, organValueNode) in slotOrgansNode)
                 {
-                    organs.Add(((ValueDataNode) organKeyNode).Value, ((ValueDataNode) organValueNode).Value);
+                    var organSlot = ((MappingDataNode)organValueNode);
+                    string? organ = null;
+                    if (organSlot.TryGet<ValueDataNode>("organ", out var organValue))
+                    {
+                        organ = organValue.Value;
+                    }
+                    var organSlotType = OrganType.Other;
+                    if (organSlot.TryGet<ValueDataNode>("type", out var organTypeValue))
+                    {
+                        organSlotType = (OrganType)Enum.Parse(typeof(OrganType), organTypeValue.Value);
+                    }
+                    var internalOrgan = true;
+                    if (organSlot.TryGet<ValueDataNode>("internal", out var internalOrganValue))
+                    {
+                        internalOrgan = bool.Parse(internalOrganValue.Value);
+                    }
+                    organs.Add(((ValueDataNode)organKeyNode).Value, new OrganPrototypeSlot(organ, organSlotType, internalOrgan));
                 }
             }
 
-            allConnections.Add(slotId, (part, connections, organs));
+            BodyPartType? slotType = null;
+            if (slot.TryGet<ValueDataNode>("slotType", out var slotTypeValue))
+            {
+                slotType = (BodyPartType)Enum.Parse(typeof(BodyPartType), slotTypeValue.Value);
+            }
+            allConnections.Add(slotId, (part, connections, organs, slotType));
         }
 
-        foreach (var (slotId, (_, connections, _)) in allConnections)
+        foreach (var (slotId, (_, connections, organs, _)) in allConnections)
         {
             if (connections == null)
                 continue;
@@ -180,9 +203,9 @@ public sealed class BodyPrototypeSerializer : ITypeReader<BodyPrototype, Mapping
 
         var slots = new Dictionary<string, BodyPrototypeSlot>();
 
-        foreach (var (slotId, (part, connections, organs)) in allConnections)
+        foreach (var (slotId, (part, connections, organs, slotType)) in allConnections)
         {
-            var slot = new BodyPrototypeSlot(part, connections ?? new HashSet<string>(), organs ?? new Dictionary<string, string>());
+            var slot = new BodyPrototypeSlot(part, connections ?? new HashSet<string>(), organs ?? new Dictionary<string, OrganPrototypeSlot>(), slotType);
             slots.Add(slotId, slot);
         }
 
