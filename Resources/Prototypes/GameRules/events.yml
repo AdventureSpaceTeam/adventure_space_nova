@@ -37,7 +37,6 @@
     - id: SleeperAgents
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
-    - id: DerelictCyborgSpawn
 
 - type: entity
   id: BaseStationEvent
