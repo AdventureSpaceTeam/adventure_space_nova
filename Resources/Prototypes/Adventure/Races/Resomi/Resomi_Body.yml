@@ -1,28 +1,4 @@
-﻿- type: entity
-  id: OrganResomiStomach
-  name: Желудок резоми
-  parent: OrganAnimalStomach
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Stomach
-    specialDigestible:
-      tags:
-      - ReptilianFood
-      - Meat
-      - Pill
-      - Crayon
-      - Paper
-  - type: SolutionContainerManager
-    solutions:
-      stomach:
-        maxVol: 50
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
-
-#Тело Резоми
+﻿#Тело Резоми
 - type: body
   name: "Резоми"
   id: Resomi
@@ -33,8 +9,8 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganResomiBrain
+        eyes: OrganResomiEyes
     torso:
       part: TorsoResomi
       connections:
@@ -43,11 +19,11 @@
       - right leg
       - left leg
       organs:
-        heart: OrganHumanHeart
-        lungs: OrganHumanLungs
+        heart: OrganResomiHeart
+        lungs: OrganResomiLungs
         stomach: OrganResomiStomach
-        liver: OrganAnimalLiver
-        kidneys: OrganHumanKidneys
+        liver: OrganResomiLiver
+        kidneys: OrganResomiKidneys
     right arm:
       part: RightArmResomi
       connections:

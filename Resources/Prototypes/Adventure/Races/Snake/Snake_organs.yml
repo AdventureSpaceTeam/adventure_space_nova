@@ -1,0 +1,143 @@
+﻿- type: metabolizerType
+  id: Zerah
+  name: Зерах
+
+- type: entity
+  id: OrganZerahiBrain
+  parent: OrganHumanBrain
+  name: мозг зераха
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganZerahEyes
+  parent: OrganHumanEyes
+  name: глаза зераха
+  description: Я тебя вижу
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  id: OrganZerahHeart
+  parent: BaseAnimalOrgan
+  name: Сердце зераха
+  description: Тук тук.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    state: heart-off
+  - type: Organ
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ Zerah ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+
+- type: entity
+  id: OrganZerahLungs
+  parent: OrganHumanLungs
+  name: лёгкие зераха
+  description: Фильтрует азот из атмосферы, который затем поступает в кровоток.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    layers:
+      - state: lung-l
+      - state: lung-r
+  - type: Lung
+    alert: LowNitrogen
+  - type: Metabolizer
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    metabolizerTypes: [ Slime ]
+    groups:
+    - id: Gas
+      rateModifier: 100.0
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: ZerahBlood
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity
+  id: OrganZerahStomach
+  name: желудок зераха
+  parent: OrganAnimalStomach
+  description: Отвратительно! Кто там сидит?!
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    state: stomach
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - Meat
+      - Pill
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Storage
+    grid:
+    - 0,0,6,3
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
+  - type: Item
+    size: Huge
+
+- type: entity
+  id: OrganZerahiLiver
+  parent: OrganAnimalLiver
+  name: печень зераха
+  description: Побереги меня.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    state: liver
+
+- type: entity
+  id: OrganZerahKidneys
+  parent: OrganHumanKidneys
+  name: почки зераха
+  description: Выводит токсины из кровотока.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Snake/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r
