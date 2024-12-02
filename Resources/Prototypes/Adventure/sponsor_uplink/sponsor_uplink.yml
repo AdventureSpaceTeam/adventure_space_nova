@@ -90,6 +90,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth7
@@ -98,6 +101,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth8
@@ -106,6 +112,9 @@
     DonateCrystal: 6
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth9
@@ -114,6 +123,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth10
@@ -208,6 +220,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth21
@@ -253,15 +268,16 @@
    stock: 1
 
 - type: listing
+  name: сюрприз Адвенчурлинка
   id: UplinkSponsorCloth26
-  productEntity: PresentRandom
+  productEntity: PresentAdventure
   cost:
-    DonateCrystal: 20
+    DonateCrystal: 15
   categories:
   - SponsorThin
   conditions:
   - !type:ListingLimitedStockCondition
-   stock: 1
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth27
@@ -276,11 +292,14 @@
 
 - type: listing
   id: UplinkSponsorCloth28
-  productEntity: PlushieRaidGo
+  productEntity: PlushieCentCommRG
   cost:
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth29
@@ -289,6 +308,9 @@
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth30
@@ -297,6 +319,10 @@
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 
 - type: listing
   id: UplinkSponsorCloth31
@@ -305,6 +331,10 @@
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 
 - type: listing
   id: UplinkSponsorCloth32
@@ -313,6 +343,10 @@
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 
 - type: listing
   id: UplinkSponsorCloth33
@@ -321,6 +355,10 @@
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 
 - type: listing
   id: UplinkSponsorCloth34
@@ -329,6 +367,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth35
@@ -337,6 +378,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth36
@@ -345,6 +389,9 @@
     DonateCrystal: 3
   categories:
   - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth37
@@ -422,6 +469,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth45
@@ -430,6 +480,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 
 - type: listing
@@ -447,6 +500,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth48
@@ -463,6 +519,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 
 - type: listing
@@ -472,6 +531,9 @@
     DonateCrystal: 5
   categories:
   - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 
 - type: listing
@@ -481,6 +543,31 @@
     DonateCrystal: 5
   categories:
   - SponsorThing
+
+
+- type: listing
+  id: UplinkSponsorCloth52
+  productEntity: PlushieBS
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth53
+  productEntity: ToyDualSword
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+
 
 - type: storePreset
   id: StorePresetSponsor
@@ -530,4 +617,4 @@
 
 
 
-#Whims / last upd 28/11
+#Whims / last upd 02/12

@@ -98,26 +98,13 @@
     color: "#04d9ff"
     radius: 1.1
 
-- type: entity
-  parent: BasePlushie
-  id: PlushieRaidGo
-  name: Плюшевый Этан Райт
-  description: Потратил все деньги центкома на акулок и пиццу... мда
-  components:
-  - type: Sprite
-    sprite: Adventure/sponsor_uplink/10.rsi
-    layers:
-      - state: icon
-  - type: Item
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_c4llv07e/rawr.ogg
 
 - type: entity
   parent: BasePlushie
   id: Plushieromakatz
   name: Плюшевый Роман Кац
   description: Не давайте этому плюшевому засранцу калий и воду!!!
+  suffix: AdvPlushie
   components:
   - type: Sprite
     sprite: Adventure/sponsor_uplink/11.rsi
@@ -126,13 +113,14 @@
   - type: Item
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_c4llv07e/rawr.ogg
+      path: /Audio/Animals/cat_meow.ogg
 
 - type: entity
   parent: BasePlushie
   id: PlushieMravka
   name: Плюшевая Дилярам
   description: Мяу!
+  suffix: AdvPlushie
   components:
   - type: Sprite
     sprite: Adventure/sponsor_uplink/12.rsi
@@ -141,12 +129,13 @@
   - type: Item
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_c4llv07e/rawr.ogg
+      path: /Audio/Animals/cat_meow.ogg
 
 - type: entity
   parent: BasePlushie
   id: PlushieElan
-  name: Плюшевый Элан
+  name: Плюшевый ОЦК
+  suffix: AdvPlushie
   description: Не самый умный ОЦК....
   components:
   - type: Sprite
@@ -156,17 +145,112 @@
   - type: Item
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_c4llv07e/rawr.ogg
+      path: /Audio/Animals/cat_meow.ogg
 
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNecksouleater
   name: плащ поглотителя души
-  description: Для тех, кто не определился.
+  description: Таинственный артефакт, окутанный мраком и древними легендами. Его тёмная материя словно поглощает свет, создавая вокруг себя атмосферу неведомого ужаса.
   suffix: Sponsor
   components:
   - type: Sprite
     sprite: Adventure/sponsor_uplink/21.rsi
+
+- type: entity
+  id: PresentBasedd
+  name: present
+  description: Все любят подарки , получайте!
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/23.rsi
+    layers:
+      - state: present
+
+
+- type: entity
+  id: PresentAdventure
+  parent: [PresentBasedd, BaseItem]
+  suffix: sponsor
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: PresentTrash
+      - id: Bucket
+        orGroup: GiftPool
+      - id: ToyDualSword
+        orGroup: GiftPool
+      - id: PlushieGhost
+        orGroup: GiftPool
+      - id: ClothingOuterCoatAnarchyCoat
+        orGroup: GiftPool
+      - id: PlushieRGBee
+        orGroup: GiftPool
+      - id: PlushieNuke
+        orGroup: GiftPool
+      - id: PlushieRouny
+        orGroup: GiftPool
+      - id: ClothingShoesAnarhy
+        orGroup: GiftPool
+      - id: ClothingAdvNeonGlasses
+        orGroup: GiftPool
+      - id: Neoncombez
+        orGroup: GiftPool
+      - id: devilcoat
+        orGroup: GiftPool
+      - id: ToySword
+        orGroup: GiftPool
+      - id: Soap
+        orGroup: GiftPool
+      - id: Skub
+        orGroup: GiftPool
+      - id: RGBStaff
+        orGroup: GiftPool
+      - id: BedsheetCosmos
+        orGroup: GiftPool
+      - id: SaxophoneInstrument
+        orGroup: GiftPool
+      - id: GlockenspielInstrument
+        orGroup: GiftPool
+      - id: RecorderInstrument
+        orGroup: GiftPool
+      - id: FluteInstrument
+        orGroup: GiftPool
+      - id: ClarinetInstrument
+        orGroup: GiftPool
+      - id: ToyNuke
+        orGroup: GiftPool
+      - id: RevolverCapGun
+        orGroup: GiftPool
+      - id: ClothingNeckCloakAnarchyCap
+        orGroup: GiftPool
+      - id: ClothingCloakVavevSponsor
+        orGroup: GiftPool
+      - id: ClothingNeckCloakSyndiTrasenv1
+        orGroup: GiftPool
+      - id: ClothingNeckCloakSyndiTrasenv2
+        orGroup: GiftPool
+      - id: ClothingNeckCloakNeon
+        orGroup: GiftPool
+      - id: MagazineFoamBox
+        orGroup: GiftPool
+      - id: GrenadeFoamDart
+        orGroup: GiftPool
+      - id: ToyHammer
+        orGroup: GiftPool
+      - id: PlushieMaid
+        orGroup: GiftPool
+      - id: PlushieCentCommRG
+        orGroup: GiftPool
+      - id: Devilback
+        orGroup: GiftPool
+      - id: SingularityToy
+        orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+
 
 # ExTreeMe
 
@@ -280,7 +364,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakCCSOF
   name: плащ Главнокомандующего флотом
-  description: Тёмный плащ с украшениями и символом Nanotrasen, который носит Главком флота СпецОпераций.
+  description: Поддельный тёмный плащ главнокомандующего флота СпецОпераций с украшениями и символом Nanotrasen.
   components:
   - type: Sprite
     sprite: Adventure/sponsor_uplink/16.rsi
