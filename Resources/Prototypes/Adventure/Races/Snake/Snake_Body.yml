@@ -1,5 +1,4 @@
-﻿
-- type: reagent
+﻿- type: reagent
   id: ZerahPoison
   name: Яд зераха
   group: Toxins
@@ -87,81 +86,6 @@
             Poison: 0.5
 
 #Тело Зераха
-- type: entity
-  id: OrganZerahLungs
-  parent: OrganHumanLungs
-  name: Лёгкие зераха
-  description: Фильтрует азот из атмосферы, который затем поступает в кровоток для использования в качестве переносчика электронов
-  components:
-  - type: Lung
-    alert: LowNitrogen
-  - type: Metabolizer
-    removeEmpty: true
-    solutionOnBody: false
-    solution: "Lung"
-    metabolizerTypes: [ Slime ]
-    groups:
-    - id: Gas
-      rateModifier: 100.0
-  - type: SolutionContainerManager
-    solutions:
-      organ:
-        reagents:
-        - ReagentId: ZerahBlood
-          Quantity: 10
-      Lung:
-        maxVol: 100.0
-        canReact: false
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
-
-- type: metabolizerType
-  id: Zerah
-  name: Зерах
-
-- type: entity
-  id: OrganZerahHeart
-  parent: BaseAnimalOrgan
-  name: Сердце зераха
-  description: тук тук
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    state: heart-on
-  - type: Organ
-  - type: Metabolizer
-    maxReagents: 2
-    metabolizerTypes: [ Zerah ]
-    groups:
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-
-- type: entity
-  id: OrganZerahStomach
-  name: Желудок зераха
-  parent: OrganAnimalStomach
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Stomach
-    specialDigestible:
-      tags:
-      - Meat
-      - Pill
-  - type: SolutionContainerManager
-    solutions:
-      stomach:
-        maxVol: 50
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
-
-
 - type: body
   name: "Зерах"
   id: ZerahSnake
@@ -172,8 +96,8 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganZerahiBrain
+        eyes: OrganZerahEyes
     torso:
       part: TorsoSnake
       connections:
@@ -183,8 +107,8 @@
         heart: OrganZerahHeart
         lungs: OrganZerahLungs
         stomach: OrganZerahStomach
-        liver: OrganAnimalLiver
-        kidneys: OrganHumanKidneys
+        liver: OrganZerahiLiver
+        kidneys: OrganZerahKidneys
     right arm:
       part: RightArmSnake
       connections:

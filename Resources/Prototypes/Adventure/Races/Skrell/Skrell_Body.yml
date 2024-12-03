@@ -9,8 +9,8 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganSkrellBrain
+        eyes: OrganSkrellEyes
     torso:
       part: TorsoSkrell
       connections:
@@ -19,11 +19,11 @@
       - right leg
       - left leg
       organs:
-        heart: OrganHumanHeart
-        lungs: OrganHumanLungs
-        stomach: OrganHumanStomach
-        liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        heart: OrganSkrellHeart
+        lungs: OrganSkrellLungs
+        stomach: OrganSkrellStomach
+        liver: OrganSkrellLiver
+        kidneys: OrganSkrellKidneys
     right arm:
       part: RightArmSkrell
       connections:
