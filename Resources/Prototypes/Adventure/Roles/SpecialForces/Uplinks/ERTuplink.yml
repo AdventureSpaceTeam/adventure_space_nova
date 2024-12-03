@@ -419,7 +419,7 @@
   id: ClothingShoesBootsMagERT
   productEntity: ClothingShoesBootsMag
   cost:
-    CentCommCrystal: 2
+    CentCommCrystal: 3
   categories:
   - ERTmore
 
@@ -452,14 +452,6 @@
   productEntity: JawsOfLife
   cost:
     CentCommCrystal: 5
-  categories:
-  - ERTmore
-
-- type: listing
-  id: ClothingBeltUtilityFilledERT
-  productEntity: ClothingBeltUtilityFilled
-  cost:
-    CentCommCrystal: 1
   categories:
   - ERTmore
 
