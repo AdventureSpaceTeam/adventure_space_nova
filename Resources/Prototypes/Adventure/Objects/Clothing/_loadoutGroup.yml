@@ -1,0 +1,21 @@
+- type: loadoutGroup
+  id: WardenNeck
+  name: Смотритель, шея
+  minLimit: 0
+  loadouts:
+  - NeckWarden
+
+- type: loadoutGroup
+  id: SecurityNeck
+  name: Офицер СБ, шея
+  minLimit: 0
+  loadouts:
+  - NeckSecurityOfficer
+
+- type: loadoutGroup
+  id: ChemistHead
+  name: Химик, голова
+  minLimit: 0
+  loadouts:
+  - ChemistHatNitrile
+  - ChemistBeret

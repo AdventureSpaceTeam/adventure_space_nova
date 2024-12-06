@@ -1,0 +1,92 @@
+﻿- type: entity
+  id: OrganResomiBrain
+  parent: OrganHumanBrain
+  name: мозг резоми
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganResomiEyes
+  parent: OrganHumanEyes
+  name: глаза резоми
+  description: Я тебя вижу
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  id: OrganResomiHeart
+  parent: OrganHumanHeart
+  name: сердце резоми
+  description: Мне жаль бессердечного ублюдка, который потерял это.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    state: heart-off
+
+- type: entity
+  id: OrganResomiLungs
+  parent: OrganHumanLungs
+  name: лёгкие резоми
+  description: Фильтрует кислород из атмосферы, который затем поступает в кровоток.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    layers:
+      - state: lung-l
+      - state: lung-r
+
+- type: entity
+  id: OrganResomiStomach
+  name: желудок резоми
+  parent: OrganAnimalStomach
+  description: Такой маленький и вкусный.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    state: stomach
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - ReptilianFood
+      - Meat
+      - Pill
+      - Crayon
+      - Paper
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity
+  id: OrganResomiLiver
+  parent: OrganAnimalLiver
+  name: печень резоми
+  description: Побереги меня.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    state: liver
+
+- type: entity
+  id: OrganResomiKidneys
+  parent: OrganHumanKidneys
+  name: почки резоми
+  description: Выводит токсины из кровотока.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Resomi/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r

@@ -93,12 +93,12 @@
       entity: MaterialDurathread
 
 - type: construction  # Adventure
-  name: durathread linen
+  name: дюраткань из льна(durathread)
   id: MaterialDurathreadLinen
   graph: Durathreadlinen
   startNode: start
   targetNode: MaterialDurathread
   category: construction-category-materials
-  description: Высококачественная нить, используемая для изготовления прочной одежды.
+  description: Высококачественная ткань, используемая для изготовления прочной одежды.
   icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
   objectType: Item

@@ -145,13 +145,13 @@
 
 
 - type: construction
-  name: firelock triple flass
+  name: пожарный шлюз [Тройной](firelock)
   id: TripleFirelockGlass
   graph: FirelockTriple
   startNode: start
   targetNode: TripleFirelockGlass
   category: construction-category-structures
-  description: Apply crowbar.
+  description: Это пожарный шлюз - он закрывается в зонах где сработала воздушная сигнализация. Постарайтесь не быть раздавленным!
   icon:
     sprite: Adventure/Structures/Doors/Glass/triple_firelock_glass.rsi
     state: assembly

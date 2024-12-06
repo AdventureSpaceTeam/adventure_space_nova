@@ -10,3 +10,4 @@
   - type: Clothing
     sprite: Adventure/visors/engdia.rsi
   - type: EyeProtection
+  - type: VisionCorrection

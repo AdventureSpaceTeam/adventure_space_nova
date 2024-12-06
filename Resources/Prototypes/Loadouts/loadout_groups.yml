@@ -300,7 +300,6 @@
   - LawyerJumpskirtRed
   - LawyerJumpsuitGood
   - LawyerJumpskirtGood
-  - JumpsuitLawyerParade # Adventure
 
 - type: loadoutGroup
   id: LawyerNeck
@@ -308,7 +307,6 @@
   minLimit: 0
   loadouts:
   - LawyerNeck
-  - NeckMantleLawyerParade # Adventure
 
 - type: loadoutGroup
   id: ChaplainHead
@@ -320,7 +318,6 @@
   - ChaplainPlagueHat
   - ChaplainWitchHat
   - ChaplainWitchHatAlt
-  - NuneliteHat # Adventure
 
 - type: loadoutGroup
   id: ChaplainMask
@@ -337,7 +334,6 @@
   - ChaplainJumpskirt
   - ChaplainRobesLight
   - ChaplainRobesDark
-  - NuneliteJumpskir # Adventure
 
 - type: loadoutGroup
   id: ChaplainOuterClothing
@@ -355,7 +351,6 @@
   minLimit: 0
   loadouts:
   - ChaplainNeck
-  - NeckChaplainGreat # Adventure
 
 - type: loadoutGroup
   id: JanitorHead
@@ -1166,11 +1161,11 @@
   - GreenSurgeryCap
   - PurpleSurgeryCap
   - NurseHat
-  - MedicalSurgCapNitrile # Adventure
   - MedicalHatWhite # Adventure
   - MedicalHatBlue # Adventure
   - MedicalHatWhiteReflect # Adventure
   - MedicalHatBlueReflect # Adventure
+  - MedicalHatSurNitrile # Adventure
 
 - type: loadoutGroup
   id: MedicalDoctorJumpsuit
@@ -1180,10 +1175,10 @@
   - MedicalDoctorJumpskirt
   - SeniorPhysicianJumpsuit
   - SeniorPhysicianJumpskirt
-  - MedicalNurseJumpskirt # Adventure
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
+  - MedicalNurseJumpskirt # Adventure
 
 - type: loadoutGroup
   id: MedicalDoctorOuterClothing
@@ -1254,6 +1249,8 @@
   - RegularLabCoat
   - ChemistLabCoat
   - ChemistWintercoat
+  - CoatLabNitrileChemist # Adventure
+  - ApronChemist # Adventure
 
 - type: loadoutGroup
   id: ChemistBackpack

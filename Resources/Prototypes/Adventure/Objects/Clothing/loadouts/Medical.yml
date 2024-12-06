@@ -1,0 +1,387 @@
+#униформа медсестры
+- type: entity
+  parent: ClothingUniformJumpskirtMedicalDoctor
+  id: ClothingUniformJumpskirtMedicalNurse
+  name: униформа медсестры
+  description: Крест на груди указывает на то, что его обладатель имеет медицинское образование.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/nurseUniform.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/nurseUniform.rsi
+
+- type: loadout
+  id: MedicalNurseJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtMedicalNurse
+
+#нитриловый халат
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLabNitrile
+  name: нитриловый халат
+  description: Хирургических халат из тонкого нитрила, на нём точно нет крови.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/NitrileCoats.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/NitrileCoats.rsi
+
+- type: loadout
+  id: CoatLabNitrile
+  equipment:
+    outerClothing: ClothingOuterCoatLabNitrile
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterDoctor
+
+- type: loadoutEffectGroup
+  id: MasterDoctor
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 36000 #10 hrs
+
+#белый медицинский колпак 
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatWhite
+  name: белый медицинский колпак 
+  description: Защищает голову от попадания вредных веществ.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+
+- type: loadout
+  id: MedicalHatWhite
+  equipment:
+    head: ClothingHeadMedHatWhite
+
+#голубой медицинский колпак 
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatBlue
+  name: голубой медицинский колпак 
+  description: Защищает голову от попадания вредных веществ.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    layers:
+    - state: icon
+      color: "#85c1e6"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#85c1e6"
+
+- type: loadout
+  id: MedicalHatBlue
+  equipment:
+    head: ClothingHeadMedHatBlue
+
+#медицинский колпак главного врача
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatCMO
+  name: медицинский колпак главного врача
+  description: Защищает голову от попадания вредных веществ.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    layers:
+    - state: icon
+      color: "#137889"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#137889"
+
+- type: loadout
+  id: MedicalHatCMO
+  equipment:
+    head: ClothingHeadMedHatCMO
+
+#медицинский колпак главного врача с рефлектором
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatCMOReflect
+  name: медицинский колпак главного врача с рефлектором
+  description: Защищает голову от попадания вредных веществ.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    layers:
+    - state: icon
+      color: "#137889"
+    - state: reflect-icon
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#137889"
+      - state: reflect-equipped-HELMET
+
+- type: loadout
+  id: MedicalHatCMOReflect
+  equipment:
+    head: ClothingHeadMedHatCMOReflect
+
+#белый медицинский колпак с рефлектором 
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatWhiteReflect
+  name: белый медицинский колпак с рефлектором 
+  description: Защищает голову от попадания вредных веществ.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    layers:
+    - state: icon
+    - state: reflect-icon
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: reflect-equipped-HELMET
+
+- type: loadout
+  id: MedicalHatWhiteReflect
+  equipment:
+    head: ClothingHeadMedHatWhiteReflect
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterDoctorHeadWhite
+
+- type: loadoutEffectGroup
+  id: MasterDoctorHeadWhite
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 18000 #5 hrs
+
+#голубой медицинский колпак с рефлектором 
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatBlueReflect
+  name: голубой медицинский колпак с рефлектором 
+  description: Защищает голову от попадания вредных веществ.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    layers:
+    - state: icon
+      color: "#85c1e6"
+    - state: reflect-icon
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/medshats.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        color: "#85c1e6"
+      - state: reflect-equipped-HELMET
+
+- type: loadout
+  id: MedicalHatBlueReflect
+  equipment:
+    head: ClothingHeadMedHatBlueReflect
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterDoctorHeadBlue
+
+- type: loadoutEffectGroup
+  id: MasterDoctorHeadBlue
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 18000 #5 hrs
+
+#нитриловая шапочка хирурга
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMedHatSurNitrile
+  name: нитриловая шапочка хирурга
+  description: Защищает голову от попадания вредных веществ и выпадения волос.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/surgcap_Nitrile.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/surgcap_Nitrile.rsi
+
+- type: loadout
+  id: MedicalHatSurNitrile
+  equipment:
+    head: ClothingHeadMedHatSurNitrile
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterDoctorHeadSurNitrile
+
+- type: loadoutEffectGroup
+  id: MasterDoctorHeadSurNitrile
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 36000 #10 hrs
+
+# Химики
+
+#нитриловая шапочка химика
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNitrileChemist
+  name: нитриловая шапочка химика
+  description: Защищает голову от попадания вредных веществ и выпадения волос.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/chem_cap_Nitrile.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/chem_cap_Nitrile.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.80
+
+- type: loadout
+  id: ChemistHatNitrile
+  equipment:
+    head: ClothingHeadHatNitrileChemist
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterChemistHeadNitrile
+
+- type: loadoutEffectGroup
+  id: MasterChemistHeadNitrile
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChemist
+      time: 36000 #10 hrs
+
+#берет химика
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadChemistBeret
+  name: берет химика
+  description: Главное не поджеч его.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/chem_beret.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/chem_beret.rsi
+
+- type: loadout
+  id: ChemistBeret
+  equipment:
+    head: ClothingHeadChemistBeret
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterChemistHeadBeret
+
+- type: loadoutEffectGroup
+  id: MasterChemistHeadBeret
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChemist
+      time: 18000 #10 hrs
+
+#нитриловый халат химика
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLabNitrileChemist
+  name: нитриловый халат химика
+  description: Химический халат из тонкого нитрила, всё равно сгорит.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/Chemical_NitrileCoats.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/Chemical_NitrileCoats.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: loadout
+  id: CoatLabNitrileChemist
+  equipment:
+    outerClothing: ClothingOuterCoatLabNitrileChemist
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterChemistCoatLab
+
+- type: loadoutEffectGroup
+  id: MasterChemistCoatLab
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChemist
+      time: 36000 #10 hrs
+
+#защитный фартук химика
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterApronChemist
+  name: защитный фартук химика
+  description: Плотный фартук для работы с опасными веществами.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/medical/Chemical_protection.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/medical/Chemical_protection.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: loadout
+  id: ApronChemist
+  equipment:
+    outerClothing: ClothingOuterApronChemist
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterChemistApron
+
+- type: loadoutEffectGroup
+  id: MasterChemistApron
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChemist
+      time: 36000 #10 hrs

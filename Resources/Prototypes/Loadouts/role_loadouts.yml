@@ -450,6 +450,7 @@
   id: JobChemist
   groups:
   - GroupTankHarness
+  - ChemistHead # Adventure
   - MedicalMask
   - ChemistJumpsuit
   - MedicalGloves

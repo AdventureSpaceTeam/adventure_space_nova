@@ -9,6 +9,7 @@
     sprite: Adventure/visors/chemmed.rsi
   - type: Clothing
     sprite: Adventure/visors/chemmed.rsi
+  - type: VisionCorrection
   - type: Tag
     tags:
     - HudMedical

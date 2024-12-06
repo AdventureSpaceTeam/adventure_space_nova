@@ -20,10 +20,9 @@
     mask: ClothingMaskCLEA
     id: CLEAPDA
     belt: ClothingBeltMilitaryWebbingCLEA
-    pocket1: WeaponPistolMk58
-    suitstorage: WeaponRifleLecter
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
+    pocket1: CLEAuplink
 
 #ГИР Офицера ЦСС Base
 - type: startingGear
@@ -38,10 +37,9 @@
     mask: ClothingMaskCLEA
     id: CLEAOfficerPDA
     belt: ClothingBeltMilitaryWebbingCLEA
-    pocket1: WeaponPistolMk58
-    suitstorage: WeaponRifleLecter
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
+    pocket1: CLEAuplinkleader
 
 # госторолька солдат
 - type: randomHumanoidSettings
@@ -131,10 +129,9 @@
     mask: ClothingMaskCLEA
     id: CLEAPDA
     belt: ClothingBeltMilitaryWebbingCLEA
-    pocket1: WeaponPistolMk58
-    suitstorage: WeaponRifleLecter
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
+    pocket1: CLEAuplink
 
 # Стартовый гир офицера FullEVA
 - type: startingGear
@@ -148,10 +145,9 @@
     mask: ClothingMaskCLEA
     id: CLEAOfficerPDA
     belt: ClothingBeltMilitaryWebbingCLEA
-    pocket1: WeaponPistolMk58
-    suitstorage: WeaponRifleLecter
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
+    pocket1: CLEAuplinkleader
 
 - type: randomHumanoidSettings
   id: CLEAOfficerEVA

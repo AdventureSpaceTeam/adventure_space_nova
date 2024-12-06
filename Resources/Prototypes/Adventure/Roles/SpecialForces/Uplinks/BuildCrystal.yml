@@ -1,0 +1,44 @@
+- type: entity
+  name: Строительный кристалл
+  parent: BaseItem
+  id: BuildCrystal
+  suffix: 20 СК
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/Uplinks/BuildTK.rsi
+    state: telecrystalorange
+  - type: Item
+    sprite: Adventure/Roles/SpecialForces/Uplinks/BuildTK.rsi
+    size: Tiny
+  - type: Stack
+    count: 20
+    stackType: BuildCrystal
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 200
+  - type: Currency
+    price:
+      BuildCrystal: 1
+
+- type: entity
+  parent: BuildCrystal
+  id: BuildCrystal1
+  name: Строительные кристаллы
+  suffix: 1 СК
+  components:
+  - type: Stack
+    count: 1
+
+- type: currency
+  id: BuildCrystal
+  displayName: Строительные кристаллы
+  cash:
+    1: BuildCrystal1
+  canWithdraw: true
+
+- type: stack
+  id: BuildCrystal
+  name: Строительные кристаллы
+  icon: Adventure/Roles/SpecialForces/Uplinks/BuildTK.rsi
+  spawn: BuildCrystal1

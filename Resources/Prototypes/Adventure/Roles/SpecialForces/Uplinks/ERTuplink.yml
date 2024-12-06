@@ -32,7 +32,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 25
+      CentCommCrystal: 30
 
 # Аплинк лидера
 - type: entity
@@ -71,7 +71,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 40
 
 # Аплинк медика
 - type: entity
@@ -108,7 +108,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 35
 
 # Аплинк инженера
 - type: entity
@@ -145,7 +145,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 35
 
 # Аплинк уборщика
 - type: entity
@@ -182,7 +182,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 35
 
 # Аплинк священника
 - type: entity
@@ -219,7 +219,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 35
 
 # Предметы аплинка - Оружие
 - type: storeCategory
@@ -378,7 +378,7 @@
   productEntity: MagazineBoxRifle
   description: Коробка калибра 20. Винтовочный подходящий для автоматов.
   cost:
-    CentCommCrystal: 8
+    CentCommCrystal: 3
   categories:
   - ERTammo
 
@@ -387,7 +387,7 @@
   productEntity: MagazineShotgun
   description: Барабн калибра 50. Подходящий дробовиков.
   cost:
-    CentCommCrystal: 4
+    CentCommCrystal: 3
   categories:
   - ERTammo
 
@@ -427,7 +427,7 @@
   id: PinpointerNuclearERT
   productEntity: PinpointerNuclear
   cost:
-    CentCommCrystal: 2
+    CentCommCrystal: 1
   categories:
   - ERTmore
 

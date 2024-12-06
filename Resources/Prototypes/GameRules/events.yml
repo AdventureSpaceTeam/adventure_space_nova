@@ -10,6 +10,7 @@
     - id: ClericalError
     - id: CockroachMigration
     - id: GasLeak
+    - id: GreytideVirus
     - id: IonStorm # its calm like 90% of the time smh
     - id: KudzuGrowth
     - id: MassHallucinations
@@ -36,7 +37,6 @@
     - id: SleeperAgents
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
-    - id: DerelictCyborgSpawn
 
 - type: entity
   id: BaseStationEvent
@@ -77,7 +77,7 @@
     startAudio:
       path: /Audio/Corvax/Announcements/flux.ogg # Corvax-Announcements
       params:
-        volume: -4         
+        volume: -4
     weight: 8
     duration: 35
   - type: AnomalySpawnRule
@@ -95,7 +95,7 @@
     startAudio:
       path: /Audio/Corvax/Announcements/blusp_anomalies.ogg # Corvax-Announcements
       params:
-        volume: -4   
+        volume: -4
     weight: 8
     duration: 35
   - type: BluespaceArtifactRule
@@ -182,9 +182,8 @@
       min: 1
       max: 1
       pickPlayer: false
-      mindComponents:
-      - type: DragonRole
-        prototype: Dragon
+      mindRoles:
+      - MindRoleDragon
 
 - type: entity
   parent: BaseGameRule
@@ -232,9 +231,8 @@
         nameSegments:
         - names_ninja_title
         - names_ninja
-      mindComponents:
-      - type: NinjaRole
-        prototype: SpaceNinja
+      mindRoles:
+      - MindRoleNinja
 
 - type: entity
   parent: BaseGameRule
@@ -314,7 +312,7 @@
     startAudio: # Corvax-Announcements
       path: /Audio/Corvax/Announcements/comms_blackout.ogg
       params:
-        volume: -4    
+        volume: -4
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -342,7 +340,7 @@
     startAudio:
       path: /Audio/Announcements/ventclog.ogg # Corvax-Announcements
       params:
-        volume: -4      
+        volume: -4
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
@@ -455,9 +453,8 @@
       - type: ZombifyOnDeath
       - type: IncurableZombie
       - type: InitialInfected
-      mindComponents:
-      - type: InitialInfectedRole
-        prototype: InitialInfected
+      mindRoles:
+      - MindRoleInitialInfected
 
 - type: entity
   parent: BaseNukeopsRule
@@ -470,7 +467,7 @@
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
-    preloadedGrid: ShuttleStriker
+    mapPath: /Maps/Shuttles/ShuttleEvent/striker.yml
   - type: NukeopsRule
     roundEndBehavior: Nothing
   - type: AntagSelection
@@ -491,9 +488,8 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
-      mindComponents:
-      - type: NukeopsRole
-        prototype: Nukeops
+      mindRoles:
+      - MindRoleNukeops
 
 - type: entity
   parent: BaseTraitorRule
@@ -520,9 +516,8 @@
       blacklist:
         components:
         - AntagImmune
-      mindComponents:
-      - type: TraitorRole
-        prototype: TraitorSleeper
+      mindRoles:
+      - MindRoleTraitorSleeper
 
 - type: entity
   id: MassHallucinations
@@ -560,3 +555,24 @@
     maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
     weight: 5
   - type: MobReplacementRule
+
+- type: entity
+  id: GreytideVirus
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 5
+    minimumPlayers: 25
+    reoccurrenceDelay: 20
+  - type: GreytideVirusRule
+    accessGroups:
+    - Cargo
+    - Command
+    - Engineering
+    - Research
+    - Security
+    - Service
+    blacklist:
+    - External # don't space everything

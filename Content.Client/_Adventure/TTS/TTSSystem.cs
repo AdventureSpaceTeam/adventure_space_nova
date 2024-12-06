@@ -50,7 +50,6 @@ public sealed class TTSSystem : EntitySystem
     {
         base.Shutdown();
         _cfg.UnsubValueChanged(ACVars.TTSVolume, OnTtsVolumeChanged);
-        _contentRoot.Dispose();
     }
 
     public void RequestPreviewTTS(string voiceId)

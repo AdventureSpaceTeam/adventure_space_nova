@@ -30,6 +30,10 @@
   - Security
   - Science
 
+  addComponents:
+  - type: BorgCuffed
+  - type: FlashImmunity
+
   inventoryTemplateId: borgShort
   spriteBodyState: sec
   spriteHasMindState: sec_e
