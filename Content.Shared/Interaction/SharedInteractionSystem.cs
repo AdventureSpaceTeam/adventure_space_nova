@@ -255,6 +255,9 @@ namespace Content.Shared.Interaction
             if (Deleted(uid))
                 return false;
 
+            var ev = new CtrlUseInWorldEvent(userEntity.Value, uid, coords);
+            RaiseLocalEvent(userEntity.Value, ev);
+
             if (!InRangeUnobstructed(userEntity.Value, uid, popup: true))
                 return false;
 
@@ -405,6 +408,8 @@ namespace Content.Shared.Interaction
                 // Perform alternative interactions, using context menu verbs.
                 // These perform their own range, can-interact, and accessibility checks.
                 AltInteract(user, target.Value);
+                var altEv = new AltUseInWorldEvent(user, target.Value, coordinates);
+                RaiseLocalEvent(user, altEv);
                 return;
             }
 
@@ -806,6 +811,11 @@ namespace Content.Shared.Interaction
 
             if (!inRange && popup && _gameTiming.IsFirstTimePredicted)
             {
+                var ev = new CannotRichMessageAttemptEvent();
+                RaiseLocalEvent(origin, ev);
+                if (ev.Cancelled)
+                    return inRange;
+
                 var message = Loc.GetString("interaction-system-user-interaction-cannot-reach");
                 _popupSystem.PopupClient(message, origin, origin);
             }

@@ -35,6 +35,8 @@ using Content.Shared.Prying.Components;
 using Content.Shared.Traits.Assorted;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Ghost.Roles.Components;
+using Robust.Shared.Random;
+
 
 namespace Content.Server.Zombies;
 
@@ -90,6 +92,13 @@ public sealed partial class ZombieSystem
             return;
 
         if (!Resolve(target, ref mobState, logMissing: false))
+            return;
+
+        if (_random.Prob(0.1f) && PolymorphToTank(target))
+            return;
+        if (_random.Prob(0.2f) && PolymorphToHunter(target))
+            return;
+        if (_random.Prob(0.2f) && PolymorphToSmoker(target))
             return;
 
         //you're a real zombie now, son.
@@ -168,9 +177,9 @@ public sealed partial class ZombieSystem
             {
                 DamageDict = new()
                 {
-                    { "Slash", 13 },
-                    { "Piercing", 7 },
-                    { "Structural", 10 }
+                    {"Slash", 13},
+                    {"Piercing", 7},
+                    {"Structural", 10}
                 }
             };
             melee.Damage = dspec;
@@ -233,7 +242,7 @@ public sealed partial class ZombieSystem
         if (hasMind && _mind.TryGetSession(mindId, out var session))
         {
             //Zombie role for player manifest
-            _roles.MindAddRole(mindId, "MindRoleZombie", mind: null, silent: true);
+            _roles.MindAddRole(mindId, new ZombieRoleComponent { PrototypeId = zombiecomp.ZombieRoleId });
 
             //Greeting message for new bebe zombers
             _chatMan.DispatchServerMessage(session, Loc.GetString("zombie-infection-greeting"));
@@ -246,7 +255,8 @@ public sealed partial class ZombieSystem
             _npc.WakeNPC(target, htn);
         }
 
-        if (!HasComp<GhostRoleMobSpawnerComponent>(target) && !hasMind) //this specific component gives build test trouble so pop off, ig
+        if (!HasComp<GhostRoleMobSpawnerComponent>(target) &&
+                !hasMind) //this specific component gives build test trouble so pop off, ig
         {
             //yet more hardcoding. Visit zombie.ftl for more information.
             var ghostRole = EnsureComp<GhostRoleComponent>(target);

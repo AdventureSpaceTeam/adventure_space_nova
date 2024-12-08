@@ -43,6 +43,9 @@ namespace Content.Shared.Preferences
             }
         };
 
+        [DataField]
+        public int BankBalance { get; set; } = 0;
+
         /// <summary>
         /// Antags we have opted in to.
         /// </summary>
@@ -98,6 +101,9 @@ namespace Content.Shared.Preferences
         [DataField]
         public HumanoidCharacterAppearance Appearance { get; set; } = new();
 
+        [DataField]
+        public HumanoidSponsorData SponsorData { get; private set; } = new();
+
         /// <summary>
         /// When spawning into a round what's the preferred spot to spawn.
         /// </summary>
@@ -133,7 +139,9 @@ namespace Content.Shared.Preferences
             int age,
             Sex sex,
             Gender gender,
+            int bankBalance,
             HumanoidCharacterAppearance appearance,
+            HumanoidSponsorData data,
             SpawnPriorityPreference spawnPriority,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
@@ -148,6 +156,8 @@ namespace Content.Shared.Preferences
             Age = age;
             Sex = sex;
             Gender = gender;
+            BankBalance = bankBalance;
+            SponsorData = data;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
             _jobPriorities = jobPriorities;
@@ -183,7 +193,9 @@ namespace Content.Shared.Preferences
                 other.Age,
                 other.Sex,
                 other.Gender,
+                other.BankBalance,
                 other.Appearance.Clone(),
+                other.SponsorData,
                 other.SpawnPriority,
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
                 other.PreferenceUnavailable,
@@ -493,6 +505,28 @@ namespace Content.Shared.Preferences
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
+        }
+
+        public HumanoidCharacterProfile WithBankBalance(int bankBalance)
+        {
+            return new(this)
+            {
+                BankBalance = bankBalance
+            };
+        }
+        public HumanoidCharacterProfile WithPatronPet(string petId, string petName)
+        {
+            return new HumanoidCharacterProfile(this)
+            {
+                SponsorData = new HumanoidSponsorData
+                {
+                    PetData = new ProfilePetData
+                    {
+                        PetId = petId,
+                        PetName = petName,
+                    },
+                },
+            };
         }
 
         public void EnsureValid(ICommonSession session, IDependencyCollection collection)

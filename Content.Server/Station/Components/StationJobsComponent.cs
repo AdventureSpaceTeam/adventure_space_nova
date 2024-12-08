@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Station.Systems;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
@@ -12,7 +12,7 @@ namespace Content.Server.Station.Components;
 /// <summary>
 /// Stores information about a station's job selection.
 /// </summary>
-[RegisterComponent, Access(typeof(StationJobsSystem)), PublicAPI]
+[RegisterComponent, PublicAPI]
 public sealed partial class StationJobsComponent : Component
 {
     /// <summary>

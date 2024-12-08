@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._c4llv07e.Bridges;
 using Content.Server.Advertise;
 using Content.Server.Advertise.Components;
 using Content.Server.Cargo.Systems;
@@ -9,6 +10,7 @@ using Content.Server.Power.EntitySystems;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Actions;
+using Content.Shared.AdventureSpace.CCVars;
 using Content.Shared.Damage;
 using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
@@ -16,16 +18,18 @@ using Content.Shared.Emag.Components;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Emp;
 using Content.Shared.Popups;
-using Content.Shared.Power;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
 using Content.Shared.VendingMachines;
 using Content.Shared.Wall;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
+using Robust.Shared.Configuration;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+
 
 namespace Content.Server.VendingMachines
 {
@@ -34,11 +38,14 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly AccessReaderSystem _accessReader = default!;
         [Dependency] private readonly AppearanceSystem _appearanceSystem = default!;
+        [Dependency] private readonly SharedActionsSystem _action = default!;
         [Dependency] private readonly PricingSystem _pricing = default!;
         [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
+        [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
+        [Dependency] private readonly IBankBridge _bankBridge = default!;
+        [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly SpeakOnUIClosedSystem _speakOnUIClosed = default!;
-        [Dependency] private readonly SharedPointLightSystem _light = default!;
 
         private const float WallVendEjectDistanceFromWall = 1f;
 
@@ -46,6 +53,7 @@ namespace Content.Server.VendingMachines
         {
             base.Initialize();
 
+            SubscribeLocalEvent<VendingMachineComponent, MapInitEvent>(OnComponentMapInit);
             SubscribeLocalEvent<VendingMachineComponent, PowerChangedEvent>(OnPowerChanged);
             SubscribeLocalEvent<VendingMachineComponent, BreakageEventArgs>(OnBreak);
             SubscribeLocalEvent<VendingMachineComponent, GotEmaggedEvent>(OnEmagged);
@@ -57,6 +65,7 @@ namespace Content.Server.VendingMachines
 
             Subs.BuiEvents<VendingMachineComponent>(VendingMachineUiKey.Key, subs =>
             {
+                subs.Event<BoundUIOpenedEvent>(OnBoundUIOpened);
                 subs.Event<VendingMachineEjectMessage>(OnInventoryEjectMessage);
             });
 
@@ -65,6 +74,12 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineComponent, RestockDoAfterEvent>(OnDoAfter);
 
             SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
+        }
+
+        private void OnComponentMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
+        {
+            _action.AddAction(uid, ref component.ActionEntity, component.Action, uid);
+            Dirty(uid, component);
         }
 
         private void OnVendingPrice(EntityUid uid, VendingMachineComponent component, ref PriceCalculationEvent args)
@@ -85,9 +100,9 @@ namespace Content.Server.VendingMachines
             args.Price += price;
         }
 
-        protected override void OnMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
+        protected override void OnComponentInit(EntityUid uid, VendingMachineComponent component, ComponentInit args)
         {
-            base.OnMapInit(uid, component, args);
+            base.OnComponentInit(uid, component, args);
 
             if (HasComp<ApcPowerReceiverComponent>(uid))
             {
@@ -99,6 +114,20 @@ namespace Content.Server.VendingMachines
         {
             if (component.Broken)
                 args.Cancel();
+        }
+
+        private void OnBoundUIOpened(EntityUid uid, VendingMachineComponent component, BoundUIOpenedEvent args)
+        {
+            UpdateVendingMachineInterfaceState(uid, component);
+        }
+
+        private void UpdateVendingMachineInterfaceState(EntityUid uid, VendingMachineComponent component)
+        {
+            if (!_userInterfaceSystem.HasUi(uid, VendingMachineUiKey.Key))
+                return;
+
+            var state = new VendingMachineInterfaceState(GetAllInventory(uid, component));
+            _userInterfaceSystem.SetUiState(uid, VendingMachineUiKey.Key, state);
         }
 
         private void OnInventoryEjectMessage(EntityUid uid, VendingMachineComponent component, VendingMachineEjectMessage args)
@@ -193,18 +222,6 @@ namespace Content.Server.VendingMachines
             component.CanShoot = canShoot;
         }
 
-        /// <summary>
-        /// Sets the <see cref="VendingMachineComponent.Contraband"/> property of the vending machine.
-        /// </summary>
-        public void SetContraband(EntityUid uid, bool contraband, VendingMachineComponent? component = null)
-        {
-            if (!Resolve(uid, ref component))
-                return;
-
-            component.Contraband = contraband;
-            Dirty(uid, component);
-        }
-
         public void Deny(EntityUid uid, VendingMachineComponent? vendComponent = null)
         {
             if (!Resolve(uid, ref vendComponent))
@@ -249,7 +266,7 @@ namespace Content.Server.VendingMachines
         /// <param name="itemId">The prototype ID of the item</param>
         /// <param name="throwItem">Whether the item should be thrown in a random direction after ejection</param>
         /// <param name="vendComponent"></param>
-        public void TryEjectVendorItem(EntityUid uid, InventoryType type, string itemId, bool throwItem, VendingMachineComponent? vendComponent = null)
+        public void TryEjectVendorItem(EntityUid uid, EntityUid? sender, InventoryType type, string itemId, bool throwItem, VendingMachineComponent? vendComponent = null)
         {
             if (!Resolve(uid, ref vendComponent))
                 return;
@@ -278,6 +295,11 @@ namespace Content.Server.VendingMachines
             if (string.IsNullOrEmpty(entry.ID))
                 return;
 
+            if (HandleVendingPrice(uid, sender, entry))
+            {
+                Deny(uid, vendComponent);
+                return;
+            }
 
             // Start Ejecting, and prevent users from ordering while anim playing
             vendComponent.Ejecting = true;
@@ -288,9 +310,25 @@ namespace Content.Server.VendingMachines
                 _speakOnUIClosed.TrySetFlag((uid, speakComponent));
 
             entry.Amount--;
-            Dirty(uid, vendComponent);
+            UpdateVendingMachineInterfaceState(uid, vendComponent);
             TryUpdateVisualState(uid, vendComponent);
             Audio.PlayPvs(vendComponent.SoundVend, uid);
+        }
+
+        private bool HandleVendingPrice(EntityUid uid, EntityUid? sender, VendingMachineInventoryEntry entry)
+        {
+            if (!_cfg.GetCVar(SecretCCVars.EconomyEnabled))
+                return false;
+
+            if (sender == null || entry.Price == 0 || !TryComp<ActorComponent>(sender, out var actor))
+                return false;
+
+            var transaction = _bankBridge.CreateBuyTransaction(uid, entry.Price);
+            if (_bankBridge.TryExecuteTransaction(sender.Value, actor.PlayerSession.UserId, transaction))
+                return false;
+
+            Popup.PopupEntity(Loc.GetString("vending-machine-component-no-money"), uid);
+            return true;
         }
 
         /// <summary>
@@ -305,7 +343,7 @@ namespace Content.Server.VendingMachines
         {
             if (IsAuthorized(uid, sender, component))
             {
-                TryEjectVendorItem(uid, type, itemId, component.CanShoot, component);
+                TryEjectVendorItem(uid, sender, type, itemId, component.CanShoot, component);
             }
         }
 
@@ -333,12 +371,6 @@ namespace Content.Server.VendingMachines
             else if (!this.IsPowered(uid, EntityManager))
             {
                 finalState = VendingMachineVisualState.Off;
-            }
-
-            if (_light.TryGetLight(uid, out var pointlight))
-            {
-                var lightState = finalState != VendingMachineVisualState.Broken && finalState != VendingMachineVisualState.Off;
-                _light.SetEnabled(uid, lightState, pointlight);
             }
 
             _appearanceSystem.SetData(uid, VendingMachineVisuals.VisualState, finalState);
@@ -373,7 +405,7 @@ namespace Content.Server.VendingMachines
             }
             else
             {
-                TryEjectVendorItem(uid, item.Type, item.ID, throwItem, vendComponent);
+                TryEjectVendorItem(uid, null, item.Type, item.ID, throwItem, vendComponent);
             }
         }
 
@@ -472,6 +504,7 @@ namespace Content.Server.VendingMachines
                     }
                 }
             }
+
             var disabled = EntityQueryEnumerator<EmpDisabledComponent, VendingMachineComponent>();
             while (disabled.MoveNext(out var uid, out _, out var comp))
             {
@@ -490,7 +523,7 @@ namespace Content.Server.VendingMachines
 
             RestockInventoryFromPrototype(uid, vendComponent);
 
-            Dirty(uid, vendComponent);
+            UpdateVendingMachineInterfaceState(uid, vendComponent);
             TryUpdateVisualState(uid, vendComponent);
         }
 
@@ -503,7 +536,8 @@ namespace Content.Server.VendingMachines
             {
                 double total = 0;
 
-                if (PrototypeManager.TryIndex(vendingInventory, out VendingMachineInventoryPrototype? inventoryPrototype))
+                if (PrototypeManager.TryIndex(vendingInventory,
+                        out VendingMachineInventoryPrototype? inventoryPrototype))
                 {
                     foreach (var (item, amount) in inventoryPrototype.StartingInventory)
                     {

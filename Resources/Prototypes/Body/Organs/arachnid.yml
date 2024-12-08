@@ -39,9 +39,6 @@
     state: stomach
   - type: Organ
     organType: Stomach
-  - type: Item
-    size: Small
-    heldPrefix: stomach
   - type: Stomach
     updateInterval: 1.5
   - type: SolutionContainerManager
@@ -71,7 +68,7 @@
       - state: lung-r
   - type: Organ
     organType: Lung
-    species: universal
+    species: universal #TODO make alternate lungs for non-human humanoids
   - type: Lung
   - type: DLungs
     organKey: lungs
@@ -109,9 +106,6 @@
   components:
   - type: Sprite
     state: heart-on
-  - type: Item
-    size: Small
-    heldPrefix: heart
   - type: Metabolizer
     updateInterval: 1.5
     maxReagents: 2
@@ -120,30 +114,41 @@
     - id: Medicine
     - id: Poison
     - id: Narcotic
+  - type: StaticPrice
+    price: 800
+  - type: Tag
+    tags:
+    - Heart
+    - Meat
 
 - type: entity
   id: OrganArachnidLiver
-  parent: BaseHumanOrgan
+  parent: BaseArachnidOrgan
   name: liver
   description: "Pairing suggestion: chianti and fava beans."
   categories: [ HideSpawnMenu ]
   components:
-  - type: Item
-    size: Small
-    heldPrefix: liver
   - type: Sprite
     state: liver
+  - type: Organ
+    organType: Liver
+  - type: ToxinFilter
+    organKey: liver
+    embedded: true
+    maxDamageThreshold: 500
   - type: Metabolizer # The liver metabolizes certain chemicals only, like alcohol.
     updateInterval: 1.5
     maxReagents: 1
-    metabolizerTypes: [Animal]
+    metabolizerTypes: [ Arachnid ]
     groups:
     - id: Alcohol
       rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
+  - type: StaticPrice
+    price: 600
 
 - type: entity
   id: OrganArachnidKidneys
-  parent: BaseHumanOrgan
+  parent: BaseArachnidOrgan
   name: kidneys
   description: "Filters toxins from the bloodstream."
   categories: [ HideSpawnMenu ]
@@ -152,15 +157,20 @@
     layers:
       - state: kidney-l
       - state: kidney-r
+  - type: Organ
+    organType: Kidney
+  - type: ToxinRemover
+    organKey: kidney
+    embedded: true
+    maxDamageThreshold: 600
   # The kidneys just remove anything that doesn't currently have any metabolisms, as a stopgap.
-  - type: Item
-    size: Small
-    heldPrefix: kidneys
   - type: Metabolizer
     updateInterval: 1.5
     maxReagents: 5
-    metabolizerTypes: [Animal]
+    metabolizerTypes: [ Arachnid ]
     removeEmpty: true
+  - type: StaticPrice
+    price: 660
 
 - type: entity
   id: OrganArachnidEyes
@@ -172,9 +182,12 @@
     layers:
       - state: eyeball-l
       - state: eyeball-r
-  - type: Item
-    size: Small
-    heldPrefix: eyeballs
+  - type: Organ
+    organType: Eye
+    species: universal
+  - type: EyeSight
+  - type: StaticPrice
+    price: 399
 
 - type: entity
   id: OrganArachnidTongue
@@ -184,3 +197,5 @@
   components:
   - type: Sprite
     state: tongue
+  - type: StaticPrice
+    price: 230

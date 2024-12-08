@@ -141,6 +141,10 @@ public sealed partial class FaxMachineComponent : Component
     /// </summary>
     [DataField]
     public EntProtoId PrintOfficePaperId = "PaperOffice";
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("receiveSCPGoal")]
+    public bool ReceiveSCPGoal { get; set; } = false;
 }
 
 [DataDefinition]
