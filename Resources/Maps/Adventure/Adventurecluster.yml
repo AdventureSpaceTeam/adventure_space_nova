@@ -57213,6 +57213,13 @@ entities:
     - type: Transform
       pos: -23.518227,6.599038
       parent: 1
+- proto: NewYearTree1
+  entities:
+  - uid: 7536
+    components:
+    - type: Transform
+      pos: -3.2979572,13.610954
+      parent: 1
 - proto: NitrogenCanister
   entities:
   - uid: 6803
@@ -62406,11 +62413,6 @@ entities:
     - type: Transform
       pos: -34.5,0.5
       parent: 1
-  - uid: 7536
-    components:
-    - type: Transform
-      pos: -3.5,12.5
-      parent: 1
   - uid: 7687
     components:
     - type: Transform
@@ -62462,11 +62464,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,12.5
-      parent: 1
-  - uid: 7538
-    components:
-    - type: Transform
-      pos: -2.5,13.5
       parent: 1
   - uid: 7540
     components:

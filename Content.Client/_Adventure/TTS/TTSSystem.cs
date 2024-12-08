@@ -1,12 +1,11 @@
+using System.IO;
 using Content.Shared.Chat;
 using Content.Shared._Adventure.ACVar;
 using Content.Shared._Adventure.TTS;
 using Robust.Client.Audio;
-using Robust.Client.ResourceManagement;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
-using Robust.Shared.ContentPack;
 using Robust.Shared.Utility;
 
 namespace Content.Client._Adventure.TTS;
@@ -18,12 +17,10 @@ namespace Content.Client._Adventure.TTS;
 public sealed class TTSSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IResourceManager _res = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly IAudioManager _audioLoader = default!;
 
     private ISawmill _sawmill = default!;
-    private readonly MemoryContentRoot _contentRoot = new();
-    private static readonly ResPath Prefix = ResPath.Root / "TTS";
 
     /// <summary>
     /// Reducing the volume of the TTS when whispering. Will be converted to logarithm.
@@ -36,12 +33,10 @@ public sealed class TTSSystem : EntitySystem
     private const float MinimalVolume = -10f;
 
     private float _volume = 0.0f;
-    private int _fileIdx = 0;
 
     public override void Initialize()
     {
         _sawmill = Logger.GetSawmill("tts");
-        _res.AddRoot(Prefix, _contentRoot);
         _cfg.OnValueChanged(ACVars.TTSVolume, OnTtsVolumeChanged, true);
         SubscribeNetworkEvent<PlayTTSEvent>(OnPlayTTS);
     }
@@ -65,12 +60,7 @@ public sealed class TTSSystem : EntitySystem
     private void OnPlayTTS(PlayTTSEvent ev)
     {
         _sawmill.Verbose($"Play TTS audio {ev.Data.Length} bytes from {ev.SourceUid} entity");
-
-        var filePath = new ResPath($"{_fileIdx++}.wav"); // c4llv07e fix tts
-        _contentRoot.AddOrUpdateFile(filePath, ev.Data);
-
-        var audioResource = new AudioResource();
-        audioResource.Load(IoCManager.Instance!, Prefix / filePath);
+        var audioStream = _audioLoader.LoadAudioWav(new MemoryStream(ev.Data));
 
         var audioParams = AudioParams.Default
             .WithVolume(AdjustVolume(ev.IsWhisper))
@@ -79,14 +69,12 @@ public sealed class TTSSystem : EntitySystem
         if (ev.SourceUid != null)
         {
             var sourceUid = GetEntity(ev.SourceUid.Value);
-            _audio.PlayEntity(audioResource.AudioStream, sourceUid, audioParams);
+            _audio.PlayEntity(audioStream, sourceUid, audioParams);
         }
         else
         {
-            _audio.PlayGlobal(audioResource.AudioStream, audioParams);
+            _audio.PlayGlobal(audioStream, audioParams);
         }
-
-        _contentRoot.RemoveFile(filePath);
     }
 
     private float AdjustVolume(bool isWhisper)

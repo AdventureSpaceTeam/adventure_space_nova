@@ -5,8 +5,28 @@
     "y": 32
   },
   "license": "CC-BY-SA-3.0",
-  "copyright": "made by borkroman",
+  "copyright": "made by borkroman, derelict sprites modified by GoldenCan(GitHub).",
   "states": [
+    {
+      "name": "derelict",
+      "directions": 4
+    },
+    {
+      "name": "derelict_e",
+      "directions": 4
+    },
+    {
+      "name": "derelict_e_r",
+      "directions": 4
+    },
+    {
+      "name": "derelict_icon",
+      "directions": 1
+    },
+    {
+      "name": "derelict_l",
+      "directions": 4
+    },
     {
       "name": "engineer",
       "directions": 4

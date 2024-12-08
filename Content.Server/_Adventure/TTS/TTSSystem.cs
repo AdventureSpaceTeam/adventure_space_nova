@@ -109,10 +109,10 @@ public sealed partial class TTSSystem : EntitySystem
 
     private async void HandleWhisper(EntityUid uid, string message, string obfMessage, string speaker)
     {
-        var fullSoundData = await GenerateTTS(message, speaker, true);
+        var fullSoundData = await GenerateTTS(message, speaker);
         if (fullSoundData is null) return;
 
-        var obfSoundData = await GenerateTTS(obfMessage, speaker, true);
+        var obfSoundData = await GenerateTTS(obfMessage, speaker);
         if (obfSoundData is null) return;
 
         var fullTtsEvent = new PlayTTSEvent(fullSoundData, GetNetEntity(uid), true);
@@ -135,7 +135,7 @@ public sealed partial class TTSSystem : EntitySystem
     }
 
     // ReSharper disable once InconsistentNaming
-    private async Task<byte[]?> GenerateTTS(string text, string speaker, bool isWhisper = false)
+    private async Task<byte[]?> GenerateTTS(string text, string speaker, string? effect = null)
     {
         var textSanitized = Sanitize(text);
         if (textSanitized == "") return null;
@@ -149,7 +149,7 @@ public sealed partial class TTSSystem : EntitySystem
         // var textSsml = ToSsmlText(textSanitized, ssmlTraits);
         // c4llv07e fix tts end
 
-        return await _ttsManager.ConvertTextToSpeech(speaker, textSanitized); // c4llv07e fix tts
+        return await _ttsManager.ConvertTextToSpeech(speaker, textSanitized, effect); // c4llv07e fix tts
     }
 }
 

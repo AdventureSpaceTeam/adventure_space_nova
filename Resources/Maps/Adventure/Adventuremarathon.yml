@@ -70,7 +70,7 @@ entities:
     - type: MetaData
     - type: Transform
       pos: 2.2710133,-2.4148211
-      parent: invalid
+      parent: 555
     - type: MapGrid
       chunks:
         -1,0:
@@ -7596,6 +7596,18 @@ entities:
     - type: SpreaderGrid
     - type: GridPathfinding
     - type: NavMap
+  - uid: 555
+    components:
+    - type: MetaData
+      name: Map Entity
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: PhysicsMap
+    - type: GridTree
+    - type: MovedGrids
+    - type: Broadphase
+    - type: OccluderTree
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 525
@@ -10834,7 +10846,7 @@ entities:
       pos: -14.5,24.5
       parent: 30
     - type: Door
-      secondsUntilStateChange: -1385.5645
+      secondsUntilStateChange: -1481.1453
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -49657,12 +49669,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 0.5,8.5
       parent: 30
-  - uid: 573
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -6.5,6.5
-      parent: 30
   - uid: 574
     components:
     - type: Transform
@@ -50015,6 +50021,12 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 36.5,38.5
+      parent: 30
+  - uid: 22572
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,6.5
       parent: 30
 - proto: ChanterelleSeeds
   entities:
@@ -64907,6 +64919,25 @@ entities:
     components:
     - type: Transform
       pos: -15.331403,8.303028
+      parent: 30
+- proto: Garlands
+  entities:
+  - uid: 573
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.5,11.5
+      parent: 30
+  - uid: 22570
+    components:
+    - type: Transform
+      pos: 6.5,5.5
+      parent: 30
+  - uid: 22575
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -10.5,12.5
       parent: 30
 - proto: GasAnalyzer
   entities:
@@ -101087,6 +101118,14 @@ entities:
     - type: Transform
       pos: -75.24839,-66.594925
       parent: 30
+- proto: NewYearTree1
+  entities:
+  - uid: 22576
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -7.5,7.5
+      parent: 30
 - proto: NitrogenCanister
   entities:
   - uid: 8771
@@ -101949,11 +101988,11 @@ entities:
       parent: 30
 - proto: PianoInstrument
   entities:
-  - uid: 555
+  - uid: 22571
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -5.5,6.5
+      pos: 3.5,6.5
       parent: 30
 - proto: Pickaxe
   entities:
@@ -114930,6 +114969,20 @@ entities:
     components:
     - type: Transform
       pos: -7.5,30.5
+      parent: 30
+- proto: SignNewYear
+  entities:
+  - uid: 22573
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 7.5,9.5
+      parent: 30
+  - uid: 22574
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 7.5,10.5
       parent: 30
 - proto: SignPlaque
   entities:

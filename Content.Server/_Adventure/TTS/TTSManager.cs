@@ -67,7 +67,7 @@ public sealed class TTSManager
     /// <param name="speaker">Identifier of speaker</param>
     /// <param name="text">SSML formatted text</param>
     /// <returns>Wav audio bytes or null if failed</returns>
-    public async Task<byte[]?> ConvertTextToSpeech(string speaker, string text)
+    public async Task<byte[]?> ConvertTextToSpeech(string speaker, string text, string? effect)
     {
         WantedCount.Inc();
         var cacheKey = GenerateCacheKey(speaker, text);
@@ -86,8 +86,10 @@ public sealed class TTSManager
             var timeout = _cfg.GetCVar(ACVars.TTSApiTimeout);
             var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
             // c4llv07e fix tts start
+            if (effect == null)
+                effect = "";
             var response = await _httpClient.GetAsync(
-                _apiUrl + $"?speaker={speaker}&text={text}&ext=wav&effect=", cts.Token);
+                _apiUrl + $"?speaker={speaker}&text={text}&ext=wav&effect={effect}", cts.Token);
             // c4llv07e fix tts end
             if (!response.IsSuccessStatusCode)
             {
