@@ -7,17 +7,10 @@
   color: "#fafa96"
   metabolisms:
     Narcotic:
+      metabolismRate: 0.50
       effects:
       - !type:Emote
-        emote: Laugh
-        showInChat: true
-        probability: 0.1
-        conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
-      - !type:Emote
-        emote: Yawn
+        emote: Scream
         showInChat: true
         probability: 0.1
         conditions:
@@ -36,14 +29,10 @@
         type: Local
         visualType: Medium
         messages:
-        - "Вам становится грустно."
+        - "Вы испытываете резкую боль."
         - "Вам резко хочется плакать."
-        - "Ваше настроение поднимается."
-        - "Вам хочется смеяться."
-        - "Вас насыщает радость."
-        - "Вы чувствуете лёгкую сонливость."
-        - "Вам хочется спать."
-        probability: 0.2
+        - "Вас начинает охватывать паника."
+        probability: 0.1
         conditions:
         - !type:OrganType
           type: Zerah
@@ -58,9 +47,27 @@
         - !type:OrganType
           type: Zerah
           shouldHave: false
+      - !type:ChemVomit
+        conditions:
+        - !type:OrganType
+          type: Zerah
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 15
+        probability: 0.3
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 10
+        conditions:
+        - !type:OrganType
+          type: Zerah
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 25
       - !type:MovespeedModifier
-        walkSpeedModifier: 0.85
-        sprintSpeedModifier: 0.85
+        walkSpeedModifier: 0.90
+        sprintSpeedModifier: 0.90
         conditions:
         - !type:OrganType
           type: Zerah
@@ -71,7 +78,7 @@
           type: Zerah
           shouldHave: false
         - !type:ReagentThreshold
-          min: 50
+          min: 30
           max: 100
         damage:
           types:
