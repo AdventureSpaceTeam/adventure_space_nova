@@ -1,4 +1,7 @@
-﻿- type: entity
+- type: Tag
+  id: MusicTape
+
+- type: entity
   parent: BaseItem
   id: BaseMusicTape
   name: кассета
@@ -9,6 +12,9 @@
     size: Tiny
   - type: Sprite
     sprite: Adventure/Objects/Devices/tapes.rsi
+  - type: Tag
+    tags:
+    - MusicTape
 
 - type: entity
   parent: BaseMusicTape

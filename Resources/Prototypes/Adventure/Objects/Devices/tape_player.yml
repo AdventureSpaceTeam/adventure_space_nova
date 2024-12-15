@@ -12,17 +12,19 @@
     volume: -4
     rolloffFactor: 1.2
     maxDistance: 10
-    tapeSlot:
-      insertSound: /Audio/Adventure/TapePlayer/insert_tape.ogg
-      ejectSound: /Audio/Adventure/TapePlayer/eject_tape.ogg
-      whitelist:
-        components:
-        - MusicTape
   - type: Item
     size: Small
   - type: ItemSlots
+    slots:
+      tape:
+        name: Tape slot
+        insertSound: /Audio/Adventure/TapePlayer/insert_tape.ogg
+        ejectSound: /Audio/Adventure/TapePlayer/eject_tape.ogg
+        whitelist:
+          tags:
+          - MusicTape
   - type: ContainerContainer
     containers:
       tape: !type:ContainerSlot
   - type: EmitSoundOnUse
-    sound: "/Audio/Adventure/TapePlayer/switch.ogg"
+    sound: /Audio/Adventure/TapePlayer/switch.ogg

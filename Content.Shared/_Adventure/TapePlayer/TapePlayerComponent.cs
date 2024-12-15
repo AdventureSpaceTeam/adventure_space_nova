@@ -2,7 +2,7 @@ using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
 
-namespace Content.Shared.TapePlayer;
+namespace Content.Shared._Adventure.TapePlayer;
 
 [RegisterComponent, NetworkedComponent]
 public sealed partial class TapePlayerComponent : Component
@@ -11,7 +11,7 @@ public sealed partial class TapePlayerComponent : Component
 
     public bool Played = false;
 
-    [DataField("tapeSlot", required: true)]
+    [DataField("tapeSlot")]
     public ItemSlot TapeSlot = new();
 
     [DataField("volume")]
@@ -25,11 +25,4 @@ public sealed partial class TapePlayerComponent : Component
     [DataField("maxDistance")]
     [ViewVariables(VVAccess.ReadWrite)]
     public float MaxDistance = 20f;
-}
-
-[RegisterComponent, NetworkedComponent]
-public sealed partial class MusicTapeComponent : Component
-{
-    [DataField("sound", customTypeSerializer: typeof(SoundSpecifierTypeSerializer))]
-    public SoundSpecifier? Sound;
 }
