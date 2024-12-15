@@ -33,9 +33,9 @@ public sealed class TapePlayerSystem : EntitySystem
         if (tape.Sound == null)
             return;
 
-        if (_audio.IsPlaying(ent))
+        if (_audio.IsPlaying(ent.Comp.AudioStream))
         {
-            _audio.Stop(ent);
+            _audio.Stop(ent.Comp.AudioStream);
             return;
         }
 
@@ -51,13 +51,11 @@ public sealed class TapePlayerSystem : EntitySystem
 
     private void OnHandActivate(Entity<TapePlayerComponent> ent, ref UseInHandEvent args)
     {
-        Logger.Info("=============== OnHand");
         OnActivate(ent);
     }
 
     private void OnWorldActivate(Entity<TapePlayerComponent> ent, ref ActivateInWorldEvent args)
     {
-        Logger.Info("=============== OnWorld");
         OnActivate(ent);
     }
 
