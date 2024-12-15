@@ -1,11 +1,13 @@
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Interaction;
 using Content.Shared._Adventure.TapePlayer;
-using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 
 namespace Content.Server._Adventure.TapePlayer;
+
 public sealed class TapePlayerSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -16,47 +18,52 @@ public sealed class TapePlayerSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<TapePlayerComponent, ComponentInit>(OnComponentInit);
-        SubscribeLocalEvent<TapePlayerComponent, UseInHandEvent>(OnActivate);
+        SubscribeLocalEvent<TapePlayerComponent, UseInHandEvent>(OnHandActivate);
+        SubscribeLocalEvent<TapePlayerComponent, ActivateInWorldEvent>(OnWorldActivate);
         SubscribeLocalEvent<TapePlayerComponent, EntRemovedFromContainerMessage>(OnItemRemoved);
     }
 
-    private void OnActivate(Entity<TapePlayerComponent> ent, ref UseInHandEvent args)
+    private void OnActivate(Entity<TapePlayerComponent> ent)
     {
-        var tape = ent.Comp.TapeSlot.Item;
-        if (tape == null)
+        var tapeEnt = _item.GetItemOrNull(ent, itemSlotName);
+        if (tapeEnt == null)
             return;
-        if (!TryComp<MusicTapeComponent>(tape, out var musicTapeComponent))
+        if (!TryComp<MusicTapeComponent>(tapeEnt, out var tape))
             return;
-        if (musicTapeComponent.Sound == null)
+        if (tape.Sound == null)
             return;
 
-        if (ent.Comp.Played)
+        if (_audio.IsPlaying(ent))
         {
-            _audio.Stop(ent.Comp.AudioStream);
-            ent.Comp.Played = false;
+            _audio.Stop(ent);
             return;
         }
 
-        ent.Comp.Played = true;
         var param = AudioParams.Default.WithLoop(true)
             .WithVolume(ent.Comp.Volume)
             .WithMaxDistance(ent.Comp.MaxDistance)
             .WithRolloffFactor(ent.Comp.RolloffFactor);
-        var stream = _audio.PlayPvs(musicTapeComponent.Sound, ent, param);
+        var stream = _audio.PlayPvs(tape.Sound, ent, param);
         if (stream == null)
             return;
         ent.Comp.AudioStream = stream.Value.Entity;
+    }
+
+    private void OnHandActivate(Entity<TapePlayerComponent> ent, ref UseInHandEvent args)
+    {
+        Logger.Info("=============== OnHand");
+        OnActivate(ent);
+    }
+
+    private void OnWorldActivate(Entity<TapePlayerComponent> ent, ref ActivateInWorldEvent args)
+    {
+        Logger.Info("=============== OnWorld");
+        OnActivate(ent);
     }
 
     private void OnItemRemoved(Entity<TapePlayerComponent> ent, ref EntRemovedFromContainerMessage args)
     {
         _audio.Stop(ent.Comp.AudioStream);
         ent.Comp.Played = false;
-    }
-
-    private void OnComponentInit(Entity<TapePlayerComponent> ent, ref ComponentInit args)
-    {
-        _item.AddItemSlot(ent, itemSlotName, ent.Comp.TapeSlot);
     }
 }
