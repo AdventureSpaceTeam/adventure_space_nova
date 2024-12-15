@@ -11,18 +11,15 @@ public sealed partial class TapePlayerComponent : Component
 
     public bool Played = false;
 
-    [DataField("tapeSlot")]
+    [DataField("tapeSlot"), ViewVariables(VVAccess.ReadWrite)]
     public ItemSlot TapeSlot = new();
 
-    [DataField("volume")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("volume"), ViewVariables(VVAccess.ReadWrite)]
     public float Volume;
 
-    [DataField("rolloffFactor")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("rolloffFactor"), ViewVariables(VVAccess.ReadWrite)]
     public float RolloffFactor = 1f;
 
-    [DataField("maxDistance")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("maxDistance"), ViewVariables(VVAccess.ReadWrite)]
     public float MaxDistance = 20f;
 }
