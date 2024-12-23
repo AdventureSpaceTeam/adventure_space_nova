@@ -1,0 +1,302 @@
+#Радио 
+- type: radioChannel
+  id: Flesh
+  name: Коллективный разум плоти
+  keycode: '-'
+  frequency: 666
+  color: "#ab2b52"
+  longRange: true
+
+#BaseMob
+- type: entity
+  parent: BaseMobFlesh
+  id: MobFleshOrganBase
+  components:
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Flesh
+    - FootstepSound
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 30
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    name: орган из плоти
+    description: Выпал, но ползёт.
+    rules: Выживите и возрадитесь вновь.
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Flesh
+  - type: ActiveRadio
+    channels:
+    - Flesh
+  - type: Hands
+  - type: ComplexInteraction
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: MeleeWeapon
+    altDisarm: false
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootStepOrgans
+      params:
+        volume: -5
+  - type: Reform
+    actionPrototype: ActionFleshHumanForm
+    reformTime: 30
+    popupText: Вы  начинаете медленно расти, преобретая новую форму.
+    reformPrototype: MobHumanFlesh
+
+- type: soundCollection
+  id: FootStepOrgans
+  files:
+  - /Audio/Adventure/flesh/FootStep1.ogg
+  - /Audio/Adventure/flesh/FootStep2.ogg
+  - /Audio/Adventure/flesh/FootStep3.ogg
+
+#мозг
+- type: entity
+  parent: MobFleshOrganBase
+  name: мозг плоти
+  description: Подумай о своих ошибках.
+  id: MobFleshOrganBrain
+  components:
+  - type: IsDeadIC
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: brain
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: brain
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganBrain
+  parent: OrganHumanBrain
+  components:
+  - type: Brain
+  - type: Nymph
+    entityPrototype: MobFleshOrganBrain
+    transferMind: true
+
+#глаза
+- type: entity
+  parent: MobFleshOrganBase
+  name: глаза плоти
+  description: Мне не нравится как ты на меня смотришь!
+  id: MobFleshOrganEyeball
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: eyeball
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: eyeball
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganEyeball
+  parent: OrganHumanEyes
+  components:
+  - type: Nymph
+    entityPrototype: MobFleshOrganEyeball
+
+#сердце
+- type: entity
+  parent: MobFleshOrganBase
+  name: сердце плоти
+  description: Тук тук.
+  id: MobFleshOrganHeart
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: heart
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: heart
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganHeart
+  parent: OrganAnimalHeart
+  components:
+  - type: Nymph
+    entityPrototype: MobFleshOrganHeart
+
+#почки
+- type: entity
+  parent: MobFleshOrganBase
+  name: почки плоти
+  description: Главное, что они пустые.
+  id: MobFleshOrganKidney
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: kidney
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: kidney
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganKidney
+  parent: OrganHumanKidneys
+  components:
+  - type: Nymph
+    entityPrototype: MobFleshOrganKidney
+
+#печень
+- type: entity
+  parent: MobFleshOrganBase
+  name: печень плоти
+  description: Надеюсь ты не пьян?
+  id: MobFleshOrganLiver
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: liver
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: liver
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganLiver
+  parent: OrganAnimalLiver
+  components:
+  - type: Nymph
+    entityPrototype: MobFleshOrganLiver
+
+#лёгкие
+- type: entity
+  parent: MobFleshOrganBase
+  name: лёгкие плоти
+  description: Тебе нужно "отдышаться".
+  id: MobFleshOrganLung
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: lung
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: lung
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganLung
+  parent: OrganHumanLungs
+  components:
+  - type: Nymph
+    entityPrototype: MobFleshOrganLung
+
+#желудок
+- type: entity
+  parent: MobFleshOrganBase
+  name: желудок плоти
+  description: Меня от тебя тошнит.
+  id: MobFleshOrganStomach
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: stomach
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: stomach
+      Dead:
+        Base: dead
+
+- type: entity
+  id: FleshOrganStomach
+  parent: OrganReptilianStomach
+  components:
+  - type: Nymph
+    entityPrototype: MobFleshOrganStomach
+
+#Распасться 
+- type: entity
+  id: FleshBreakAction
+  name: Распасться
+  description: Ваше тело будет уничтожено, ваши органы смогут восстановить вас.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Adventure/Roles/flesh.rsi
+      state: brain
+    event: !type:GibActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+#Принять форму человека
+- type: entity
+  id: ActionFleshHumanForm
+  name: Принять форму человека
+  description: Вы приобретёте внешность случайного человека.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Demons/abomination.rsi
+      state: dead
+    event: !type:ReformEvent {}
+    useDelay: 180

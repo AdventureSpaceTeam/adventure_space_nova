@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "meat"
+        },
+        {
+            "name": "Spawners"
+        },
+        {
+            "name": "Spawners_off"
+        },
+        {
+            "name": "brain"
+        },
+        {
+            "name": "eyeball"
+        },
+        {
+            "name": "heart"
+        },
+        {
+            "name": "kidney"
+        },
+        {
+            "name": "liver"
+        },
+        {
+            "name": "lung"
+        },
+        {
+            "name": "stomach"
+        },
+        {
+            "name": "dead"
+        }
+    ]
+}
