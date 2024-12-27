@@ -5,12 +5,15 @@ using Content.Server.Construction;
 using Content.Server.Construction.Components;
 using Content.Server.Power.Components;
 using Content.Shared.DoAfter;
+using Content.Shared.Doors;
+using Content.Shared.Doors.Systems;
 using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Tools.Components;
+using Content.Shared.Tools.Systems;
 using Content.Shared.Wires;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
@@ -443,8 +446,8 @@ public sealed class WiresSystem : SharedWiresSystem
         if (!IsPanelOpen(uid))
             return;
 
-        if (Tool.HasQuality(args.Used, "Cutting", tool) ||
-            Tool.HasQuality(args.Used, "Pulsing", tool))
+        if (Tool.HasQuality(args.Used, SharedToolSystem.CutQuality, tool) ||
+            Tool.HasQuality(args.Used, SharedToolSystem.PulseQuality, tool))
         {
             if (TryComp(args.User, out ActorComponent? actor))
             {
