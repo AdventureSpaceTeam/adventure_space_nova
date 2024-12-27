@@ -16,6 +16,7 @@
   color: "#0091ff"
   metabolisms:
     Poison:
+      metabolismRate: 0.50
       effects:
         - !type:HealthChange
           conditions:
@@ -65,7 +66,7 @@
     generated:
       reagents:
       - ReagentId: CryoxadoneDrask
-        Quantity: 0.5
+        Quantity: 0.50
   - type: MeleeWeapon
     soundHit:
       collection: Punch
@@ -74,7 +75,7 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 8
+        Blunt: 6
         Structural: 5 #чуть структурного
   - type: DamageVisuals
     damageOverlayGroups:

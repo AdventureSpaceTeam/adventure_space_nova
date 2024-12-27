@@ -1,0 +1,98 @@
+﻿- type: metabolizerType
+  id: Drask
+  name: Драск
+
+- type: entity
+  id: OrganDraskBrain
+  parent: OrganHumanBrain
+  name: мозг драска
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganDraskEyes
+  parent: OrganHumanEyes
+  name: глаза драска
+  description: Я тебя вижу
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+      - state: eyeball-rl
+
+- type: entity
+  id: OrganDraskHeart
+  parent: BaseAnimalOrgan
+  name: сердце драска
+  description: тук тук
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    state: heart-off
+  - type: Organ
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ Drask ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+
+- type: entity
+  id: OrganDraskLungs
+  parent: OrganHumanLungs
+  name: лёгкие драска
+  description: Фильтрует кислород из атмосферы, который затем поступает в кровоток.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    layers:
+      - state: lung-l
+      - state: lung-r
+
+- type: entity
+  id: OrganDraskStomach
+  parent: OrganHumanStomach
+  name: желудок драска
+  description: Отвратительно и пахнет мылом.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    state: stomach
+  - type: Metabolizer
+    maxReagents: 3
+    metabolizerTypes: [Drask]
+    groups:
+    - id: Food
+    - id: Drink
+
+- type: entity
+  id: OrganDraskLiver
+  parent: OrganHumanLiver
+  name: Печень драска
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    state: liver
+  - type: Metabolizer
+    metabolizerTypes: [Drask]
+    groups:
+    - id: Alcohol
+      rateModifier: 0.8
+
+- type: entity
+  id: OrganDraskKidneys
+  parent: OrganHumanKidneys
+  name: почки драска
+  description: Выводит токсины из кровотока.
+  components:
+  - type: Sprite
+    sprite: Adventure/Races/Drask/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r

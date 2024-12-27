@@ -9,8 +9,8 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganDraskBrain
+        eyes: OrganDraskEyes
         heart: OrganDraskHeart # сердце в голове
     torso:
       part: TorsoDrask
@@ -20,10 +20,10 @@
       - right leg
       - left leg
       organs:
-        lungs: OrganHumanLungs
+        lungs: OrganDraskLungs
         stomach: OrganDraskStomach
         liver: OrganDraskLiver
-        kidneys: OrganHumanKidneys
+        kidneys: OrganDraskKidneys
     right arm:
       part: RightArmDrask
       connections:
@@ -40,55 +40,6 @@
       part: RightLegDrask
     left leg:
       part: LeftLegDrask
-
-#Органы драска
-- type: metabolizerType
-  id: Drask
-  name: Драск
-
-- type: entity
-  id: OrganDraskHeart
-  parent: BaseAnimalOrgan
-  name: Сердце драска
-  description: тук тук
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    state: heart-on
-  - type: Organ
-  - type: Metabolizer
-    maxReagents: 2
-    metabolizerTypes: [ Drask ]
-    groups:
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-
-- type: entity
-  id: OrganDraskStomach
-  parent: OrganHumanStomach
-  name: stomach
-  description: "Gross. This is hard to stomach."
-  components:
-  - type: Sprite
-    state: stomach
-  - type: Metabolizer
-    maxReagents: 3
-    metabolizerTypes: [Drask]
-    groups:
-    - id: Food
-    - id: Drink
-
-- type: entity
-  id: OrganDraskLiver
-  parent: OrganHumanLiver
-  name: Печень драска
-  components:
-  - type: Metabolizer
-    metabolizerTypes: [Drask]
-    groups:
-    - id: Alcohol
-      rateModifier: 0.8
 
 #Части Драска
 - type: entity

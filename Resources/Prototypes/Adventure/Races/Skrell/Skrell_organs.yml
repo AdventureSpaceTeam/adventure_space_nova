@@ -45,7 +45,7 @@
 - type: entity
   id: OrganSkrellStomach
   parent: OrganHumanStomach
-  name: желёдок скрелла
+  name: желудок скрелла
   description: Отвратительно. Это трудно переварить.
   components:
   - type: Sprite
