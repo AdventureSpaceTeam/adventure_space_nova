@@ -10,7 +10,8 @@
   - AdventureCluster    #min 0 max 35
   - AdventureDelta      #min 30 max N/A
   - AdventureMarathon   #min 25 max 70
-  - AdventureMaus       #min 0  max 40
+#  - AdventureMaus       #min 0  max 40
+  - AdventureLoop        #min 25 max 70
 # - Starquest           #min 0  max 20 # До лучших времён
 
 # original list

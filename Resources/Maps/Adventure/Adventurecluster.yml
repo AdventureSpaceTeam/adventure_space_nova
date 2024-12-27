@@ -50,7 +50,7 @@ entities:
     - type: MetaData
     - type: Transform
       pos: -0.484375,-0.5
-      parent: 12281
+      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -4699,18 +4699,6 @@ entities:
       id: advCluster
     - type: SpreaderGrid
     - type: GridPathfinding
-  - uid: 12281
-    components:
-    - type: MetaData
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: OccluderTree
-    - type: LoadedMap
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 5973
@@ -55218,6 +55206,412 @@ entities:
     - type: Transform
       pos: 31.574986,-16.324593
       parent: 1
+- proto: HolopadAiBackupPower
+  entities:
+  - uid: 11800
+    components:
+    - type: Transform
+      pos: -3.5,45.5
+      parent: 1
+- proto: HolopadAiCore
+  entities:
+  - uid: 7538
+    components:
+    - type: Transform
+      pos: -6.5,49.5
+      parent: 1
+- proto: HolopadAiEntrance
+  entities:
+  - uid: 11805
+    components:
+    - type: Transform
+      pos: -6.5,45.5
+      parent: 1
+- proto: HolopadCargoBay
+  entities:
+  - uid: 12422
+    components:
+    - type: Transform
+      pos: 15.5,-26.5
+      parent: 1
+- proto: HolopadCargoFront
+  entities:
+  - uid: 12468
+    components:
+    - type: Transform
+      pos: 5.5,-26.5
+      parent: 1
+- proto: HolopadCommandBridge
+  entities:
+  - uid: 12281
+    components:
+    - type: Transform
+      pos: -4.5,29.5
+      parent: 1
+- proto: HolopadCommandBridgeLongRange
+  entities:
+  - uid: 12678
+    components:
+    - type: Transform
+      pos: 0.5,29.5
+      parent: 1
+- proto: HolopadCommandCaptain
+  entities:
+  - uid: 12380
+    components:
+    - type: Transform
+      pos: 4.5,29.5
+      parent: 1
+- proto: HolopadCommandCe
+  entities:
+  - uid: 12420
+    components:
+    - type: Transform
+      pos: 18.5,-14.5
+      parent: 1
+- proto: HolopadCommandCmo
+  entities:
+  - uid: 12421
+    components:
+    - type: Transform
+      pos: -18.5,14.5
+      parent: 1
+- proto: HolopadCommandHop
+  entities:
+  - uid: 12654
+    components:
+    - type: Transform
+      pos: -0.5,20.5
+      parent: 1
+- proto: HolopadCommandHos
+  entities:
+  - uid: 12655
+    components:
+    - type: Transform
+      pos: 29.5,14.5
+      parent: 1
+- proto: HolopadCommandLounge
+  entities:
+  - uid: 12495
+    components:
+    - type: Transform
+      pos: 4.5,21.5
+      parent: 1
+- proto: HolopadCommandMeetingRoom
+  entities:
+  - uid: 12494
+    components:
+    - type: Transform
+      pos: -10.5,30.5
+      parent: 1
+- proto: HolopadCommandQm
+  entities:
+  - uid: 12664
+    components:
+    - type: Transform
+      pos: 6.5,-16.5
+      parent: 1
+- proto: HolopadCommandVault
+  entities:
+  - uid: 12675
+    components:
+    - type: Transform
+      pos: -2.5,25.5
+      parent: 1
+- proto: HolopadEngineeringAME
+  entities:
+  - uid: 11806
+    components:
+    - type: Transform
+      pos: 26.5,-8.5
+      parent: 1
+- proto: HolopadEngineeringAtmosFront
+  entities:
+  - uid: 12017
+    components:
+    - type: Transform
+      pos: 32.5,-10.5
+      parent: 1
+- proto: HolopadEngineeringAtmosMain
+  entities:
+  - uid: 12018
+    components:
+    - type: Transform
+      pos: 36.5,-9.5
+      parent: 1
+- proto: HolopadEngineeringBreakroom
+  entities:
+  - uid: 12650
+    components:
+    - type: Transform
+      pos: 14.5,-11.5
+      parent: 1
+- proto: HolopadEngineeringFront
+  entities:
+  - uid: 12652
+    components:
+    - type: Transform
+      pos: 16.5,-7.5
+      parent: 1
+- proto: HolopadEngineeringStorage
+  entities:
+  - uid: 12651
+    components:
+    - type: Transform
+      pos: 19.5,-7.5
+      parent: 1
+- proto: HolopadEngineeringTechVault
+  entities:
+  - uid: 12672
+    components:
+    - type: Transform
+      pos: -2.5,-32.5
+      parent: 1
+- proto: HolopadEngineeringTelecoms
+  entities:
+  - uid: 12673
+    components:
+    - type: Transform
+      pos: 1.5,51.5
+      parent: 1
+- proto: HolopadGeneralArrivals
+  entities:
+  - uid: 12005
+    components:
+    - type: Transform
+      pos: 45.5,7.5
+      parent: 1
+- proto: HolopadGeneralCryosleep
+  entities:
+  - uid: 12497
+    components:
+    - type: Transform
+      pos: -2.5,-28.5
+      parent: 1
+- proto: HolopadGeneralDisposals
+  entities:
+  - uid: 12608
+    components:
+    - type: Transform
+      pos: -32.5,24.5
+      parent: 1
+- proto: HolopadGeneralEvac
+  entities:
+  - uid: 12653
+    components:
+    - type: Transform
+      pos: -40.5,9.5
+      parent: 1
+- proto: HolopadGeneralEVAStorage
+  entities:
+  - uid: 12649
+    components:
+    - type: Transform
+      pos: 41.5,22.5
+      parent: 1
+- proto: HolopadGeneralTools
+  entities:
+  - uid: 12674
+    components:
+    - type: Transform
+      pos: -4.5,-21.5
+      parent: 1
+- proto: HolopadMedicalChemistry
+  entities:
+  - uid: 12470
+    components:
+    - type: Transform
+      pos: -13.5,14.5
+      parent: 1
+- proto: HolopadMedicalFront
+  entities:
+  - uid: 12659
+    components:
+    - type: Transform
+      pos: -8.5,9.5
+      parent: 1
+- proto: HolopadMedicalMedbay
+  entities:
+  - uid: 12660
+    components:
+    - type: Transform
+      pos: -16.5,7.5
+      parent: 1
+- proto: HolopadMedicalMorgue
+  entities:
+  - uid: 12661
+    components:
+    - type: Transform
+      pos: -24.5,14.5
+      parent: 1
+- proto: HolopadMedicalSurgery
+  entities:
+  - uid: 12671
+    components:
+    - type: Transform
+      pos: -23.5,22.5
+      parent: 1
+- proto: HolopadMedicalVirology
+  entities:
+  - uid: 12676
+    components:
+    - type: Transform
+      pos: -15.5,19.5
+      parent: 1
+- proto: HolopadScienceAnomaly
+  entities:
+  - uid: 12003
+    components:
+    - type: Transform
+      pos: -30.5,-7.5
+      parent: 1
+- proto: HolopadScienceArtifact
+  entities:
+  - uid: 12016
+    components:
+    - type: Transform
+      pos: -15.5,-13.5
+      parent: 1
+- proto: HolopadScienceBreakroom
+  entities:
+  - uid: 12668
+    components:
+    - type: Transform
+      pos: -15.5,-3.5
+      parent: 1
+- proto: HolopadScienceFront
+  entities:
+  - uid: 12667
+    components:
+    - type: Transform
+      pos: -11.5,-6.5
+      parent: 1
+- proto: HolopadScienceRnd
+  entities:
+  - uid: 12665
+    components:
+    - type: Transform
+      pos: -10.5,-1.5
+      parent: 1
+- proto: HolopadScienceRobotics
+  entities:
+  - uid: 12666
+    components:
+    - type: Transform
+      pos: -7.5,-12.5
+      parent: 1
+- proto: HolopadSecurityArmory
+  entities:
+  - uid: 12004
+    components:
+    - type: Transform
+      pos: 36.5,11.5
+      parent: 1
+- proto: HolopadSecurityBrig
+  entities:
+  - uid: 12418
+    components:
+    - type: Transform
+      pos: 17.5,9.5
+      parent: 1
+- proto: HolopadSecurityBrigMed
+  entities:
+  - uid: 12419
+    components:
+    - type: Transform
+      pos: 20.5,6.5
+      parent: 1
+- proto: HolopadSecurityCourtroom
+  entities:
+  - uid: 12496
+    components:
+    - type: Transform
+      pos: -6.5,-25.5
+      parent: 1
+- proto: HolopadSecurityDetective
+  entities:
+  - uid: 12498
+    components:
+    - type: Transform
+      pos: 27.5,5.5
+      parent: 1
+- proto: HolopadSecurityFront
+  entities:
+  - uid: 12669
+    components:
+    - type: Transform
+      pos: 12.5,13.5
+      parent: 1
+- proto: HolopadSecurityLockerRoom
+  entities:
+  - uid: 12670
+    components:
+    - type: Transform
+      pos: 22.5,13.5
+      parent: 1
+- proto: HolopadSecurityPerma
+  entities:
+  - uid: 12663
+    components:
+    - type: Transform
+      pos: 31.5,26.5
+      parent: 1
+- proto: HolopadSecurityWarden
+  entities:
+  - uid: 12677
+    components:
+    - type: Transform
+      pos: 29.5,17.5
+      parent: 1
+- proto: HolopadServiceBar
+  entities:
+  - uid: 12057
+    components:
+    - type: Transform
+      pos: 4.5,6.5
+      parent: 1
+- proto: HolopadServiceBotany
+  entities:
+  - uid: 12112
+    components:
+    - type: Transform
+      pos: 1.5,-4.5
+      parent: 1
+- proto: HolopadServiceChapel
+  entities:
+  - uid: 12469
+    components:
+    - type: Transform
+      pos: -34.5,6.5
+      parent: 1
+- proto: HolopadServiceClownMime
+  entities:
+  - uid: 12478
+    components:
+    - type: Transform
+      pos: -11.5,-30.5
+      parent: 1
+- proto: HolopadServiceJanitor
+  entities:
+  - uid: 12656
+    components:
+    - type: Transform
+      pos: 13.5,-1.5
+      parent: 1
+- proto: HolopadServiceKitchen
+  entities:
+  - uid: 12657
+    components:
+    - type: Transform
+      pos: 2.5,1.5
+      parent: 1
+- proto: HolopadServiceLibrary
+  entities:
+  - uid: 12658
+    components:
+    - type: Transform
+      pos: -38.5,-3.5
+      parent: 1
 - proto: HospitalCurtainsOpen
   entities:
   - uid: 1804
@@ -56205,6 +56599,13 @@ entities:
     components:
     - type: Transform
       pos: -18.5,11.5
+      parent: 1
+- proto: LockerParamedicFilled
+  entities:
+  - uid: 12662
+    components:
+    - type: Transform
+      pos: -22.5,9.5
       parent: 1
 - proto: LockerQuarterMasterFilled
   entities:
