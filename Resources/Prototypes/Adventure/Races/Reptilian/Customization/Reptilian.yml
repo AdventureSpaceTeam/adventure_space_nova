@@ -135,6 +135,8 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_curved
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_curved2
 
 - type: marking
   id: LizardTailFlexible
@@ -144,6 +146,8 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_flexible
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_flexible2
 
 - type: marking
   id: LizardTailSpiky
@@ -153,6 +157,8 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_spiky
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_spiky2
 
 - type: marking  
   id: LizardTailRidge
@@ -162,6 +168,10 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_ridge
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_ridge2
+  - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
+    state: tail_ridge3
 
 #Body
 - type: marking
@@ -182,6 +192,15 @@
   - sprite: Adventure/Races/Reptilian/Customization/body.rsi
     state: body_ridge
 
+- type: marking
+  id: LizardChestUnderbellyF
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/body.rsi
+    state: body_underbelly_f
+
 #Frills
 - type: marking
   id: LizardFrillsCollar
@@ -191,6 +210,8 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_collar
+  - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_collar2
 
 - type: marking 
   id: LizardFrillsFins
@@ -200,6 +221,8 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_fins
+  - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_fins2
 
 - type: marking 
   id: LizardFrillsFinsKing
@@ -209,6 +232,8 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_finsking
+  - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_finsking2
 
 #Snout
 - type: marking

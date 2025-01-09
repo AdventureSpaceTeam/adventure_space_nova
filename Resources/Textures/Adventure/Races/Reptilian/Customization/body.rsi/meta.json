@@ -12,6 +12,10 @@
       "directions": 4
     },
     {
+      "name": "body_underbelly_f",
+      "directions": 4
+    },
+    {
       "name": "body_ridge",
       "directions": 4
     }

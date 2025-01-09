@@ -76,6 +76,8 @@
   params:
     variation: 0.125
   sounds:
+    Yawn:
+      collection: FemaleYawn
     Sneeze:
       collection: FemaleSneezes
     Cough:

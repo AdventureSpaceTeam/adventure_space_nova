@@ -48,6 +48,8 @@ marking-LizardSnoutFlat-snout_flat = Унатх, Морда (Плоская)
 marking-LizardSnoutFlat = Унатх, Морда (Плоская)
 marking-LizardSnoutHigh-snout_high = Унатх, Морда (Высокая)
 marking-LizardSnoutHigh = Унатх, Морда (Высокая)
+marking-LizardChestUnderbellyF-body_underbelly_f = Унатх, тело (женское подбрюшье)
+marking-LizardChestUnderbellyF = Унатх, тело (женское подбрюшье)
 
 
 

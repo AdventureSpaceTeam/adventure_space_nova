@@ -12,11 +12,7 @@
       "directions": 4
     },
     {
-      "name": "tail_curved_behind",
-      "directions": 4
-    },
-    {
-      "name": "tail_curved_front",
+      "name": "tail_curved2",
       "directions": 4
     },
     {
@@ -24,11 +20,7 @@
       "directions": 4
     },
     {
-      "name": "tail_flexible_behind",
-      "directions": 4
-    },
-    {
-      "name": "tail_flexible_front",
+      "name": "tail_flexible2",
       "directions": 4
     },
     {
@@ -36,11 +28,11 @@
       "directions": 4
     },
     {
-      "name": "tail_ridge_behind",
+      "name": "tail_ridge2",
       "directions": 4
     },
     {
-      "name": "tail_ridge_front",
+      "name": "tail_ridge3",
       "directions": 4
     },
     {
@@ -48,11 +40,7 @@
       "directions": 4
     },
     {
-      "name": "tail_spiky_behind",
-      "directions": 4
-    },
-    {
-      "name": "tail_spiky_front",
+      "name": "tail_spiky2",
       "directions": 4
     }
   ]
