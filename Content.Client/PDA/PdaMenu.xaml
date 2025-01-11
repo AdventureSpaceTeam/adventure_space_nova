@@ -21,7 +21,6 @@
         <pda:PdaNavigationButton Name="EjectPenButton" Access="Public" SetWidth="32"/>
         <pda:PdaNavigationButton Name="EjectIdButton" Access="Public" SetWidth="32"/>
         <pda:PdaNavigationButton Name="EjectPaiButton" Access="Public" SetWidth="32"/>
-        <pda:PdaNavigationButton Name="EjectPaperButton" Access="Public" SetWidth="32"/> <!-- Adventure Event PDA paper -->
     </BoxContainer>
     <BoxContainer Name="ViewContainer" HorizontalExpand="True" VerticalExpand="True" Access="Public">
         <BoxContainer Orientation="Vertical"
