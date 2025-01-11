@@ -67,26 +67,17 @@
   id: BlueshieldPDA
   description: Пахнет безопасностью
   components:
-  - type: Sprite
-    sprite: Adventure/Roles/blueshield/PDA/PDA.rsi
-    layers:
-    - map: [ "enum.PdaVisualLayers.Base" ]
-    - state: "light_overlay"
-      map: [ "enum.PdaVisualLayers.Flashlight" ]
-      shader: "unshaded"
-      visible: false
-    - state: "id_overlay"
-      map: [ "enum.PdaVisualLayers.IdLight" ]
-      shader: "unshaded"
-      visible: false
   - type: Pda
     id: BlueshieldIDCard
-    state: pda-blueshield
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-blueshield
   - type: PdaBorderColor
     borderColor: "#3c485a"
     accentVColor: "#3c485a"
   - type: Icon
-    sprite: Adventure/Roles/blueshield/PDA/PDA.rsi
     state: pda-blueshield
 
 #Спавнер

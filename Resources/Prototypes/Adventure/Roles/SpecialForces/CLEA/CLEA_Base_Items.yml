@@ -218,25 +218,16 @@
   name: КПК Солдата ЦСС
   description: не такой робастный, как у отряда быстрого реагирования
   components:
-  - type: Sprite
-    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_PDA.rsi
-    layers:
-    - map: [ "enum.PdaVisualLayers.Base" ]
-    - state: "light_overlay"
-      map: [ "enum.PdaVisualLayers.Flashlight" ]
-      shader: "unshaded"
-      visible: false
-    - state: "id_overlay"
-      map: [ "enum.PdaVisualLayers.IdLight" ]
-      shader: "unshaded"
-      visible: false
   - type: Pda
     id: CLEAIDCard
-    state: pda-CLEA
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-CLEA
   - type: PdaBorderColor
     borderColor: "#4e4e56"
   - type: Icon
-    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_PDA.rsi
     state: pda-CLEA
 
 #КПК офицера ЦСС
@@ -246,25 +237,16 @@
   name: КПК Офицера ЦСС
   description: не такой робастный, как у отряда быстрого реагирования
   components:
-  - type: Sprite
-    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_PDA.rsi
-    layers:
-    - map: [ "enum.PdaVisualLayers.Base" ]
-    - state: "light_overlay"
-      map: [ "enum.PdaVisualLayers.Flashlight" ]
-      shader: "unshaded"
-      visible: false
-    - state: "id_overlay"
-      map: [ "enum.PdaVisualLayers.IdLight" ]
-      shader: "unshaded"
-      visible: false
   - type: Pda
     id: CLEAOfficerIDCard
-    state: pda-CLEAOfficer
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-CLEAOfficer
   - type: PdaBorderColor
     borderColor: "#4e4e56"
   - type: Icon
-    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_PDA.rsi
     state: pda-CLEAOfficer
 
 #Скафандр ЦСС
