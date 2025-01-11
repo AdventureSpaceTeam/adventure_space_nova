@@ -73,6 +73,16 @@
       - CartridgeAntiMateriel
     capacity: 5
     proto: CartridgeAntiMateriel
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 10
+  - type: Gun
+    useKey: false 
+#Adventure-end
 
 - type: entity
   name: musket
@@ -89,6 +99,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Snipers/musket.rsi
   - type: Gun
+    useKey: false #Adventure
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -111,6 +122,14 @@
     animation: WeaponArcThrust
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 10
+#Adventure-end
 
 - type: entity
   name: flintlock pistol
@@ -119,6 +138,7 @@
   description: A pirate's companion. Yarrr! Uses .60 anti-materiel ammo.
   components:
   - type: Gun
+    useKey: false #Adventure
     minAngle: 0
     maxAngle: 30 #miss him entirely because the barrel is smoothbore
   - type: Item
@@ -139,4 +159,12 @@
     proto: CartridgeAntiMateriel
   - type: StaticPrice
     price: 0
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 5
+#Adventure-end
 

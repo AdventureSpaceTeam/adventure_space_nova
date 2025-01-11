@@ -17,6 +17,7 @@
   - type: Clothing
     sprite: Adventure/Objects/Weapons/M41A.rsi
   - type: Gun
+    useKey: false
     minAngle: 25
     maxAngle: 35
     angleIncrease: 4

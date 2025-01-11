@@ -23,6 +23,7 @@
     - Belt
   - type: AmmoCounter
   - type: Gun
+    useKey: false # Adventure
     selectedMode: SemiAuto
     fireRate: 1.5
     availableModes:
@@ -49,6 +50,14 @@
       path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
   - type: StaticPrice
     price: 500
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 5
+#Adventure-end
 
 - type: entity
   name: Deckard
@@ -65,6 +74,7 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Gun
+    useKey: false # Adventure
     fireRate: 2
   - type: RevolverAmmoProvider
     capacity: 5
@@ -104,6 +114,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
@@ -119,6 +130,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/python.rsi
   - type: Gun
+    useKey: false # Adventure
     selectedMode: SemiAuto
     fireRate: 2
     availableModes:
@@ -152,6 +164,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/pirate_revolver.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 1
   - type: ContainerContainer
     containers:

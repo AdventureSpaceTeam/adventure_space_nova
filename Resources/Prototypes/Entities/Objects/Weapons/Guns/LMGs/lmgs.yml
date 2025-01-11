@@ -22,6 +22,7 @@
     minAngle: -20
     maxAngle: -20
   - type: Gun
+    useKey: false # Adventure
     minAngle: 24
     maxAngle: 45
     angleIncrease: 4
@@ -64,6 +65,14 @@
     price: 500
   - type: UseDelay
     delay: 1
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 15
+#Adventure-end
 
 - type: entity
   name: L6 SAW

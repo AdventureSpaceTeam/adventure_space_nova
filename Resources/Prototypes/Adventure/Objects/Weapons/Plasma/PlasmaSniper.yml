@@ -105,6 +105,7 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
+    useKey: false
     fireRate: 0.5
     minAngle: 25
     maxAngle: 35
@@ -145,6 +146,12 @@
     walkModifier: 0.75
     sprintModifier: 0.75
   - type: GunRequiresWield
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 15
 
 - type: entity
   id: WeaponPlasmaSniperPrint

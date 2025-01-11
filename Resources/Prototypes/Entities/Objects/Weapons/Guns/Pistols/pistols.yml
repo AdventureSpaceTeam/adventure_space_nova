@@ -67,6 +67,14 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 5
+#Adventure-end
 
 - type: entity
   name: viper
@@ -100,6 +108,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: Gun # Adventure
+    useKey: false # Adventure
 
 - type: entity
   name: echis
@@ -108,6 +118,7 @@
   description: A viper for use by cyborgs. Creates .35 ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
   - type: Gun
+    useKey: false # Adventure
     fireRate: 5
     selectedMode: SemiAuto
     availableModes:
@@ -154,6 +165,7 @@
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
+    useKey: false # Adventure
     fireRate: 4
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
@@ -201,6 +213,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 5
     availableModes:
     - SemiAuto
@@ -223,6 +236,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
   - type: Gun
+    useKey: false # Adventure
     minAngle: 1
     maxAngle: 20
     angleIncrease: 8

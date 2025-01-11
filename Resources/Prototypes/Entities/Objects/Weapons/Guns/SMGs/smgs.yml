@@ -57,6 +57,14 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 8
+#Adventure-end
 
 - type: entity
   name: Atreides
@@ -72,6 +80,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
+    useKey: false # Adventure
     fireRate: 10
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
@@ -102,6 +111,7 @@
     minAngle: -19
     maxAngle: -16
   - type: Gun
+    useKey: false # Adventure
     minAngle: 21
     maxAngle: 32
     shotsPerBurst: 5
@@ -140,6 +150,7 @@
       minAngle: -19
       maxAngle: -16
     - type: Gun
+      useKey: false # Adventure
       minAngle: 21
       maxAngle: 32
       fireRate: 6 # Adventure
@@ -195,6 +206,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/SMGs/vector.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 6
     selectedMode: FullAuto
     soundGunshot:
@@ -250,6 +262,7 @@
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
+    useKey: false # Adventure
     fireRate: 5.5
     minAngle: 1
     maxAngle: 6

@@ -19,6 +19,14 @@
     containers:
       ballistic-ammo: !type:Container
         ents: []
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 18
+#Adventure-end
 
 - type: entity
   name: china lake
@@ -38,6 +46,7 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
+    useKey: false # Adventure
     fireRate: 1
     selectedMode: SemiAuto
     availableModes:
@@ -69,6 +78,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 0.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
@@ -102,6 +112,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 6
     selectedMode: FullAuto
     availableModes:
@@ -141,6 +152,7 @@
     - type: Clothing
       sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
     - type: Gun
+      useKey: false # Adventure
       fireRate: 1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/mateba.ogg

@@ -84,6 +84,7 @@
     size: Ginormous
     sprite: Adventure/Objects/Weapons/Flamethrower/Flamethrower.rsi
   - type: Gun
+    useKey: false
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -115,6 +116,12 @@
   - type: HeldSpeedModifier
   - type: UseDelay
     delay: 0.5
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 15
 
 - type: soundCollection
   id: FlameShot

@@ -50,6 +50,14 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 500
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 10
+#Adventure-end
 
 - type: entity
   name: AKMS
@@ -65,6 +73,7 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
+    useKey: false # Adventure
     fireRate: 5
     burstFireRate: 5 # Adventure
     selectedMode: FullAuto # Adventure
@@ -151,6 +160,8 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: Gun # Adventure
+    useKey: false # Adventure
 
 - type: entity
   name: Lecter
@@ -168,6 +179,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
   - type: Gun
+    useKey: false # Adventure
     burstFireRate: 5 # Adventure
     selectedMode: FullAuto # Adventure
     soundGunshot:

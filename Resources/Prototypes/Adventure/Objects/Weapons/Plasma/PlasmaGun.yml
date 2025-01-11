@@ -105,6 +105,7 @@
     - suitStorage
   - type: AmmoCounter
   - type: Gun
+    useKey: false
     fireRate: 3
     minAngle: 25
     maxAngle: 35
@@ -141,6 +142,12 @@
     magState: mag
     steps: 5
     zeroVisible: true
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 10
 
 - type: entity
   id: WeaponPlasmaGunPrint

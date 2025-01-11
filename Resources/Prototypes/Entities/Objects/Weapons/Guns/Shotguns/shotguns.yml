@@ -42,6 +42,14 @@
         ents: []
   - type: StaticPrice
     price: 500
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 10
+#Adventure-end
 
 - type: entity
   name: Bulldog
@@ -68,6 +76,7 @@
   - type: AmmoCounter
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    useKey: false # Adventure
     fireRate: 2
     selectedMode: FullAuto
     availableModes:
@@ -100,6 +109,14 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
+#Adventure-start
+  - type: MeleeWeapon
+    attackRate: 0.75
+    wideAnimationRotation: -135
+    damage:
+     types:
+       Blunt: 10
+#Adventure-end
 
 - type: entity
   name: double-barreled shotgun
@@ -116,6 +133,7 @@
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    useKey: false # Adventure
     fireRate: 2
   - type: BallisticAmmoProvider
     capacity: 2
@@ -193,6 +211,7 @@
     size: Small
     sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 4
   - type: BallisticAmmoProvider
     capacity: 2
@@ -229,6 +248,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
   - type: Gun
+    useKey: false # Adventure
     fireRate: 4
   - type: BallisticAmmoProvider
     capacity: 1
@@ -254,6 +274,7 @@
     sprite: Objects/Weapons/Guns/Shotguns/blunderbuss.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    useKey: false # Adventure
     fireRate: 2
   - type: BallisticAmmoProvider
     capacity: 1
@@ -277,6 +298,7 @@
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    useKey: false # Adventure
     fireRate: 4 #No reason to stifle the firerate since you have to manually reload every time anyways.
   - type: BallisticAmmoProvider
     capacity: 1
