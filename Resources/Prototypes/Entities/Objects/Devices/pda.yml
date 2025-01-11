@@ -45,6 +45,12 @@
       whitelist:
         components:
         - IdCard
+    paperSlot:
+      startingItem: Paper
+      priority: -3
+      whitelist:
+        components:
+        - Paper
   - type: PdaVisuals
   - type: Item
     size: Small
