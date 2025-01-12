@@ -1,7 +1,7 @@
 - type: gameMap
   id: AdventureBoxNew
   mapName: 'Box Station'
-  mapPath: /Maps/Adventure/Adventurebox.yml
+  mapPath: /Maps/Adventure/AdventureboxNew.yml
   minPlayers: 25
   maxPlayers: 120
   stations:
