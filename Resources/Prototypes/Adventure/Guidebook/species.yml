@@ -26,4 +26,9 @@
 - type: guideEntry
   id: Drask
   name: Драск
-  text: "/ServerInfo/Adventure/Guidebook/Races/Drask.xml"  
+  text: "/ServerInfo/Adventure/Guidebook/Races/Drask.xml"
+
+- type: guideEntry
+  id: Felinid
+  name: Фелиниды
+  text: "/ServerInfo/Adventure/Guidebook/Races/Felinid.xml"
