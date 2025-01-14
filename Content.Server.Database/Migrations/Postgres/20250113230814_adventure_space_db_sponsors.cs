@@ -5,32 +5,24 @@
 namespace Content.Server.Database.Migrations.Postgres
 {
     /// <inheritdoc />
-    public partial class adventure_sponsor_fix : Migration
+    public partial class adventure_space_db_sponsors : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
+            migrationBuilder.AddColumn<string>(
                 name: "sponsor_tier",
                 table: "player",
                 type: "text",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "text");
+                nullable: true);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
+            migrationBuilder.DropColumn(
                 name: "sponsor_tier",
-                table: "player",
-                type: "text",
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "text",
-                oldNullable: true);
+                table: "player");
         }
     }
 }

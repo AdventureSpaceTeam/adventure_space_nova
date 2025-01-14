@@ -5,7 +5,7 @@
 namespace Content.Server.Database.Migrations.Sqlite
 {
     /// <inheritdoc />
-    public partial class sponsor_tier : Migration
+    public partial class adventure_space_db_sponsors : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,8 +14,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                 name: "sponsor_tier",
                 table: "player",
                 type: "TEXT",
-                nullable: false,
-                defaultValue: "");
+                nullable: true);
         }
 
         /// <inheritdoc />
