@@ -6,7 +6,7 @@
   - AdventureAspid      #min 20 max 55
 # - AdventureAvrite     #min 40 max N/A
   - AdventureBagel      #min 30 max 120
-  - AdventureBoxNew        #min 25 max 120 #rework (too big, original min 50)
+#   - AdventureBoxNew        #min 25 max 120 #rework (too big, original min 50) # курсед карта, надо чинить
   - AdventureCluster    #min 0 max 35
   - AdventureDelta      #min 30 max N/A
   - AdventureMarathon   #min 25 max 70

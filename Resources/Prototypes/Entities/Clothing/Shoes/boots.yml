@@ -22,9 +22,9 @@
     sprite: Clothing/Shoes/Boots/jackboots.rsi
   - type: ClothingSlowOnDamageModifier
     modifier: 0.5
-  - type: FootstepModifier # Corvax-Sounds
+  - type: FootstepModifier # Adventure-Sounds
     footstepSoundCollection:
-      collection: FootstepBoots
+      collection: ADVFootstepBoots
 
 - type: entity
   parent: ClothingShoesBaseButcherable
