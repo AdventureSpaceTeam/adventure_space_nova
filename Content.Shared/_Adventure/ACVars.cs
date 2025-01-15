@@ -109,4 +109,14 @@ public sealed class ACVars : CVars
     /// </summary>
     public static readonly CVarDef<bool> LobbyVote =
         CVarDef.Create("game.lobby_vote", true, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
+
+    /*
+     * Discord
+     */
+
+    /// <summary>
+    /// URL of the discord webhook to relay bans messages.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordBanWebhook =
+        CVarDef.Create("discord.ban_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 }

@@ -33,6 +33,7 @@ using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
 using Content.Server._Adventure; // AdvSpace Config
+using Content.Server._Adventure.Discord; // AdvSpace Discord Webhook
 
 namespace Content.Server.IoC
 {
@@ -45,6 +46,7 @@ namespace Content.Server.IoC
             IoCManager.Register<SponsorsManager>(); // c4llv07e sponsors
             IoCManager.Register<AdventureConfigManager>(); // AdvSpace Config
             IoCManager.Register<AdventurePresetManager>(); // AdvSpace Preset
+            IoCManager.Register<DiscordWebhookBanSender>(); // AdvSpace Discord Webhook
             IoCManager.Register<IChatManager, ChatManager>();
             IoCManager.Register<ISharedChatManager, ChatManager>();
             IoCManager.Register<IChatSanitizationManager, ChatSanitizationManager>();

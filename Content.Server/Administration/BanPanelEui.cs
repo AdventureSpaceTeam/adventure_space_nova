@@ -8,6 +8,7 @@ using Content.Shared.Administration;
 using Content.Shared.Database;
 using Content.Shared.Eui;
 using Robust.Shared.Network;
+using Content.Server._Adventure.Discord; // AdvSpace Discord Webhook
 
 namespace Content.Server.Administration;
 
@@ -19,6 +20,7 @@ public sealed class BanPanelEui : BaseEui
     [Dependency] private readonly IPlayerLocator _playerLocator = default!;
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IAdminManager _admins = default!;
+    [Dependency] private readonly DiscordWebhookBanSender _DiscordWebhookBanSender = default!; // AdvSpace Discord Webhook
 
     private readonly ISawmill _sawmill;
 
@@ -124,6 +126,8 @@ public sealed class BanPanelEui : BaseEui
                 _banManager.CreateRoleBan(targetUid, target, Player.UserId, addressRange, targetHWid, role, minutes, severity, reason, now);
             }
 
+            _DiscordWebhookBanSender.SendRoleBansMessage(target, Player.Name, minutes, reason, roles); // AdvSpace Discord Webhook
+
             Close();
             return;
         }
@@ -143,6 +147,8 @@ public sealed class BanPanelEui : BaseEui
         }
 
         _banManager.CreateServerBan(targetUid, target, Player.UserId, addressRange, targetHWid, minutes, severity, reason);
+
+        _DiscordWebhookBanSender.SendBanMessage(target, Player.Name, minutes, reason); // AdvSpace Discord Webhook
 
         Close();
     }
