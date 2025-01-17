@@ -66,12 +66,14 @@ public sealed class TTSSystem : EntitySystem
 
     private void OnPlayTTS(PlayTTSEvent ev)
     {
-        _sawmill.Verbose($"Play TTS audio {ev.Data.Length} bytes from {ev.SourceUid} entity");
         var audioStream = _audioLoader.LoadAudioWav(new MemoryStream(ev.Data));
 
         var audioParams = AudioParams.Default
             .WithVolume(AdjustVolume(ev.IsWhisper))
             .WithMaxDistance(AdjustDistance(ev.IsWhisper));
+
+        if (ev.SourceUid is { Id: 0 })
+            return;
 
         if (ev.SourceUid != null)
         {
@@ -82,6 +84,7 @@ public sealed class TTSSystem : EntitySystem
         {
             _audio.PlayGlobal(audioStream, audioParams);
         }
+        _sawmill.Verbose($"Play TTS audio {ev.Data.Length} bytes from {ev.SourceUid} entity");
     }
 
     private float AdjustVolume(bool isWhisper)

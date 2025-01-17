@@ -12,6 +12,9 @@ namespace Content.Shared.PowerCell;
 public sealed partial class PowerCellComponent : Component
 {
     public const int PowerCellVisualsLevels = 2;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public bool IsInsertable = true;
 }
 
 [Serializable, NetSerializable]

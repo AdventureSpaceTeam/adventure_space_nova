@@ -13,6 +13,11 @@ namespace Content.Shared.Roles
     [Prototype("job")]
     public sealed partial class JobPrototype : IPrototype
     {
+        // Adventure sponsors begin
+        [DataField]
+        public int SponsorOpenMinLevel { get; set; } = 3;
+        // Adventure sponsors end
+
         [ViewVariables]
         [IdDataField]
         public string ID { get; private set; } = default!;

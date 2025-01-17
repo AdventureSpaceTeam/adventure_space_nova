@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS; // Adventure tts
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Enums;
@@ -12,6 +13,14 @@ namespace Content.Shared.Humanoid;
 public sealed partial class HumanoidAppearanceComponent : Component
 {
     public MarkingSet ClientOldMarkings = new();
+
+    // Adventure tts begin
+    /// <summary>
+    ///     Current voice. Used for correct cloning.
+    /// </summary>
+    [DataField]
+    public ProtoId<TTSVoicePrototype> Voice { get; set; } = TTSConfig.DefaultVoice;
+    // Adventure tts end
 
     [DataField, AutoNetworkedField]
     public MarkingSet MarkingSet = new();

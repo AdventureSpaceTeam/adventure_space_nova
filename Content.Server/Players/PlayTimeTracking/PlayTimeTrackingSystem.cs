@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.Sponsors; // Adventure sponsors
 using System.Linq;
 using Content.Server.Administration;
 using Content.Server.Administration.Managers;
@@ -39,6 +40,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly SharedRoleSystem _roles = default!;
     [Dependency] private readonly PlayTimeTrackingManager _tracking = default!;
+    [Dependency] private readonly ISponsorsManager _sponsors = default!;
 
     public override void Initialize()
     {
@@ -193,6 +195,10 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     {
         if (!_prototypes.TryIndex<JobPrototype>(role, out var job) ||
             !_cfg.GetCVar(CCVars.GameRoleTimers))
+            return true;
+
+        var sponsor = _sponsors.GetSponsor(player.UserId);
+        if (sponsor != null && sponsor.Level >= job.SponsorOpenMinLevel)
             return true;
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))

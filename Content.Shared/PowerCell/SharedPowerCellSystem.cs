@@ -46,10 +46,15 @@ public abstract class SharedPowerCellSystem : EntitySystem
         if (args.Container.ID != component.CellSlotId)
             return;
 
-        if (!HasComp<PowerCellComponent>(args.EntityUid))
+         // Adventure portable defibs begin
+        if (!TryComp<PowerCellComponent>(args.EntityUid, out var powercell))
         {
             args.Cancel();
+            return;
         }
+        if (!powercell.IsInsertable)
+            args.Cancel();
+        // Adventure portable defibs end
     }
 
     private void OnCellInserted(EntityUid uid, PowerCellSlotComponent component, EntInsertedIntoContainerMessage args)

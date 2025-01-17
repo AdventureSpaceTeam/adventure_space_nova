@@ -26,11 +26,16 @@ namespace Content.Shared.Preferences
     [Serializable, NetSerializable]
     public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     {
-        private static readonly Regex RestrictedNameRegex = new("[^A-Z,a-z,А-Я,а-я,ё,Ё,0-9,', ,.,-]"); // c4llv07e: Allow cyrillic names
+        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-zА-Яа-яёЁ0-9 '\-]"); // c4llv07e: Allow cyrillic names
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         public const int MaxNameLength = 32;
         public const int MaxDescLength = 512;
+
+        // Adventure tts begin
+        [DataField]
+        public string Voice { get; set; } = TTSConfig.DefaultVoice;
+        // Adventure tts end
 
         /// <summary>
         /// Job preferences for initial spawn.

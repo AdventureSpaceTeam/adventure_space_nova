@@ -8,6 +8,7 @@ public sealed class SponsorsManager : ISponsorsManager
 {
     [Dependency] private readonly ISharedPlayerManager _player = default!;
 
+    [ViewVariables(VVAccess.ReadWrite)]
     public SponsorTierPrototype? CurrentSponsor = null;
 
     public void SetSponsor(SponsorTierPrototype? sponsor)
@@ -19,6 +20,11 @@ public sealed class SponsorsManager : ISponsorsManager
     {
         if (userId != _player.LocalUser)
             return null;
+        return CurrentSponsor;
+    }
+
+    public SponsorTierPrototype? GetMySponsor()
+    {
         return CurrentSponsor;
     }
 }
