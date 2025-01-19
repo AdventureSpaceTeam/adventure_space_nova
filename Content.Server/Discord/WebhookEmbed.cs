@@ -17,11 +17,14 @@ public struct WebhookEmbed
     [JsonPropertyName("footer")]
     public WebhookEmbedFooter? Footer { get; set; } = null;
 
+
     [JsonPropertyName("fields")]
     public List<WebhookEmbedField> Fields { get; set; } = default!;
 
+    // Adventure webhook ban begin
     [JsonPropertyName("thumbnail")]
     public WebhookEmbedThumbnail? Thumbnail { get; set; } = null;
+    // Adventure webhook ban end
 
     public WebhookEmbed()
     {
