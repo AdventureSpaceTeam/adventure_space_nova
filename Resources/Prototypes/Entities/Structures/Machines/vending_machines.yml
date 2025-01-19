@@ -2120,36 +2120,36 @@
 
 # Pride Vending Machine
 
-- type: entity
-  parent: VendingMachine
-  id: VendingMachinePride
-  name: Pride-O-Mat
-  description: A vending machine containing pride.
-  components:
-  - type: VendingMachine
-    pack: PrideDrobeInventory
-    offState: off
-    brokenState: broken
-    normalState: normal-unshaded
-  - type: Advertise
-    pack: PrideDrobeAds
-  - type: SpeakOnUIClosed
-    pack: PrideDrobeGoodbyes
-  - type: Speech
-  - type: PointLight
-    radius: 1.5
-    energy: 1.3 # reduced energy since the color is pure white
-    color: "#FFFFFF"
-  - type: Sprite
-    sprite: Structures/Machines/VendingMachines/pride.rsi
-    layers:
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.Base"]
-    - state: "off"
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
-      shader: unshaded
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+# Adventure 135-ФЗ и 478-ФЗ- type: entity
+# Adventure 135-ФЗ и 478-ФЗ  parent: VendingMachine
+# Adventure 135-ФЗ и 478-ФЗ  id: VendingMachinePride
+# Adventure 135-ФЗ и 478-ФЗ  name: Pride-O-Mat
+# Adventure 135-ФЗ и 478-ФЗ  description: A vending machine containing pride.
+# Adventure 135-ФЗ и 478-ФЗ  components:
+# Adventure 135-ФЗ и 478-ФЗ  - type: VendingMachine
+# Adventure 135-ФЗ и 478-ФЗ    pack: PrideDrobeInventory
+# Adventure 135-ФЗ и 478-ФЗ    offState: off
+# Adventure 135-ФЗ и 478-ФЗ    brokenState: broken
+# Adventure 135-ФЗ и 478-ФЗ    normalState: normal-unshaded
+# Adventure 135-ФЗ и 478-ФЗ  - type: Advertise
+# Adventure 135-ФЗ и 478-ФЗ    pack: PrideDrobeAds
+# Adventure 135-ФЗ и 478-ФЗ  - type: SpeakOnUIClosed
+# Adventure 135-ФЗ и 478-ФЗ    pack: PrideDrobeGoodbyes
+# Adventure 135-ФЗ и 478-ФЗ  - type: Speech
+# Adventure 135-ФЗ и 478-ФЗ  - type: PointLight
+# Adventure 135-ФЗ и 478-ФЗ    radius: 1.5
+# Adventure 135-ФЗ и 478-ФЗ    energy: 1.3 # reduced energy since the color is pure white
+# Adventure 135-ФЗ и 478-ФЗ    color: "#FFFFFF"
+# Adventure 135-ФЗ и 478-ФЗ  - type: Sprite
+# Adventure 135-ФЗ и 478-ФЗ    sprite: Structures/Machines/VendingMachines/pride.rsi
+# Adventure 135-ФЗ и 478-ФЗ    layers:
+# Adventure 135-ФЗ и 478-ФЗ    - state: "off"
+# Adventure 135-ФЗ и 478-ФЗ      map: ["enum.VendingMachineVisualLayers.Base"]
+# Adventure 135-ФЗ и 478-ФЗ    - state: "off"
+# Adventure 135-ФЗ и 478-ФЗ      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+# Adventure 135-ФЗ и 478-ФЗ      shader: unshaded
+# Adventure 135-ФЗ и 478-ФЗ    - state: panel
+# Adventure 135-ФЗ и 478-ФЗ      map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 # Gas Tank Dispenser
 
