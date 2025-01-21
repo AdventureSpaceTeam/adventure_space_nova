@@ -429,6 +429,12 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+    Crash:
+      collection: CrashCollectionSinth # Adventure
+    Reboot:
+      collection: RebootCollectionSinth # Adventure
+    Load:
+      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg # Adventure
 
 - type: emoteSounds
   id: UnisexSiliconSyndicate
@@ -449,6 +455,12 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+    Crash:
+      collection: CrashCollectionSinth # Adventure
+    Reboot:
+      collection: RebootCollectionSinth # Adventure
+    Load:
+      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg # Adventure
 
 # body emotes
 - type: emoteSounds

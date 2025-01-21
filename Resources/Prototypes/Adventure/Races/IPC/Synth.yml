@@ -33,6 +33,17 @@
       methods: [ Touch ]
       effects:
       - !type:WashCreamPieReaction
+      - !type:Electrocute
+        probability: 0.05
+      - !type:Emote
+        emote: Crash
+        showInChat: true
+        probability: 0.1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Вода попадает в ваши схемы, приводя к замыканию" ]
+        probability: 0.1
     - reagents: [ SpaceLube ]
       methods: [ Touch ]
       effects: 
@@ -178,7 +189,7 @@
   - type: Speech
     speechVerb: Electricity
     speechSounds: SyndieBorg
-    allowedEmotes: ['Crash']
+    allowedEmotes: ['Crash', 'Reboot', 'Load']
   - type: ZombieImmune
   - type: Vocal
     sounds:

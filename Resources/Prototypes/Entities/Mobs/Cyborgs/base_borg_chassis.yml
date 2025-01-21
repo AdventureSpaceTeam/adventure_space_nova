@@ -156,6 +156,7 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+    allowedEmotes: ['Crash', 'Reboot', 'Load'] # Adventure
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
@@ -338,6 +339,7 @@
   - type: MovementAlwaysTouching
   - type: Speech
     speechSounds: SyndieBorg
+    allowedEmotes: ['Crash', 'Reboot', 'Load'] # Adventure
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
