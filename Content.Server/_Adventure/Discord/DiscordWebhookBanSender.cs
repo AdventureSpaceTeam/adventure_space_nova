@@ -7,6 +7,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Content.Shared.Database;
 using Content.Server.Administration;
+using Content.Server.GameTicking;
 
 namespace Content.Server._Adventure.Discord;
 
@@ -14,6 +15,7 @@ public sealed class DiscordWebhookBanSender
 {   
     [Dependency] private readonly DiscordWebhook _discord = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private readonly IEntitySystemManager _entSys = default!;
 
     private ISawmill _sawmill = default!;
 
@@ -24,7 +26,10 @@ public sealed class DiscordWebhookBanSender
     {
         try
         {
+            var gameTicker = _entSys.GetEntitySystemOrNull<GameTicker>();
             var serverName = _cfg.GetCVar(CCVars.GameHostName);
+
+            var runId = gameTicker != null ? gameTicker.RoundId : 0;
 
             var payload = new WebhookPayload()
             {
@@ -42,6 +47,7 @@ public sealed class DiscordWebhookBanSender
                                 > **Администратор**
                                 > **Логин:** {banningAdmin ?? "Консоль"}
 
+                                > **Номер раунда:** {runId}
                                 > **Выдан:** {DateTimeOffset.Now}
                                 > **Истекает:** {DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}
 
@@ -80,7 +86,10 @@ public sealed class DiscordWebhookBanSender
     {
         try
         {
+            var gameTicker = _entSys.GetEntitySystemOrNull<GameTicker>();
             var serverName = _cfg.GetCVar(CCVars.GameHostName);
+
+            var runId = gameTicker != null ? gameTicker.RoundId : 0;
 
             string formattedRolesStr = "";
 
@@ -101,9 +110,10 @@ public sealed class DiscordWebhookBanSender
                                 > **Нарушитель**
                                 > **Логин:** {targetUsername ?? "Неизвестно"}
                                 
-                                > **Администратор**
+                                > **Администратор** 
                                 > **Логин:** {banningAdmin ?? "Консоль"}
 
+                                > **Номер раунда:** {runId}
                                 > **Выдан:** {DateTimeOffset.Now}
                                 > **Истекает:** {DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}
 
