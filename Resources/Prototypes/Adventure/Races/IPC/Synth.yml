@@ -4,7 +4,7 @@
   name: Троичный
   keycode: '+'
   frequency: 123
-  color: "#4df9ef"
+  color: "#4bced0"
   longRange: true
 
 - type: entity

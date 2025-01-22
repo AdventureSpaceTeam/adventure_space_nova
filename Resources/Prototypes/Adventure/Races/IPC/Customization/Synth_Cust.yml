@@ -200,5 +200,83 @@
   - sprite: Adventure/Races/IPC/Customization/Head.rsi
     state: wires
 
+- type: marking
+  id: SynthAntennaRight
+  name: КПБ, Голова (Антенна справа)
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: antennaRight
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: antennaRight-unshaded
+
+- type: marking
+  id: SynthAntennaChappi
+  name: КПБ, Голова (Антенна Чаппи)
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: antennaChappi
+
+- type: marking
+  id: SynthAntennaFront
+  name: КПБ, Голова (Антенна с подсветкой)
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: antennaFront
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: antennaRight-unshaded
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: antennaLetf-unshaded
+
+#Body
+- type: marking
+  id: SynthChestHeart
+  name: КПБ, Грудь (Железное сердце)
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: heart
+
+- type: marking
+  id: SynthChestHPbar
+  name: КПБ, Спина (ХП бар)
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: HPbar
+
+- type: marking
+  id: SynthChestHPbarDouble
+  name: КПБ, Спина (Двойной ХП бар)
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: HPbarDouble
+
+- type: marking
+  id: SynthChestLight
+  name: КПБ, Спина (Подсветка)
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: Light
+
+
 
 
