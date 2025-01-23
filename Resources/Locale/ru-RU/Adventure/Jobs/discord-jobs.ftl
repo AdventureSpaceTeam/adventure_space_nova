@@ -1,9 +1,9 @@
-JobCBURN = Агент Карантинной Службы Центком
-JobDeathSquad = Агент Центком
+JobCBURN = Офицер РХБЗЗ
+JobDeathSquad = Офицер Эскадрона Смерти
 JobBlueshield = Офицер «Синий Щит»
 JobHeadRev = Глава революции
 JobNukeopsMedic = Медик Ядерных Оперативников 
-JobSubvertedSilicon = Заброшенный борг
+JobSubvertedSilicon = Взломанный борг
 JobZombie = Зомби
 JobSpaceNinja = Космический ниндзя
 JobNukeopsCommander = Командир Ядерных Оперативников 
