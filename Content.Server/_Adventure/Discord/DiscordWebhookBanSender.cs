@@ -31,6 +31,8 @@ public sealed class DiscordWebhookBanSender
 
             var runId = gameTicker != null ? gameTicker.RoundId : 0;
 
+            var expired = minutes != 0 ? $"{DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}" : "Никогда";
+
             var payload = new WebhookPayload()
             {
                 Username = "Банановые острова",
@@ -38,18 +40,18 @@ public sealed class DiscordWebhookBanSender
                     {
                         new()
                         {
-                            Title = minutes != 0 ? $"<:TeamAdmin:1198975655715553310> Временный бан на {minutes} мин" : $"Перманентная блокировка",
+                            Title = minutes != 0 ? $"<:TeamAdmin:1198975655715553310> Временный бан на {minutes} мин" : "<:TeamAdmin:1198975655715553310> Перманентная блокировка",
                             Color = minutes != 0 ? 16600397 : 13438992,
                             Description =  $"""
-                                > **Нарушитель**
-                                > **Логин:** {targetUsername ?? "Неизвестно"}
-                                
                                 > **Администратор**
                                 > **Логин:** {banningAdmin ?? "Консоль"}
 
+                                > **Нарушитель**
+                                > **Логин:** {targetUsername ?? "Неизвестно"}
+                                                               
                                 > **Номер раунда:** {runId}
                                 > **Выдан:** {DateTimeOffset.Now}
-                                > **Истекает:** {DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}
+                                > **Истекает:** {expired}
 
                                 > **Причина:** {reason}
                                 """,
@@ -91,6 +93,8 @@ public sealed class DiscordWebhookBanSender
 
             var runId = gameTicker != null ? gameTicker.RoundId : 0;
 
+            var expired = minutes != 0 ? $"{DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}" : "Никогда";
+
             string formattedRolesStr = "";
 
             foreach (var role in roles!){
@@ -104,18 +108,18 @@ public sealed class DiscordWebhookBanSender
                     {
                         new()
                         {
-                            Title = minutes != 0 ? $"<:TeamMod:1198975738376892476>  Временный джоб-бан на {minutes} мин" : $"Перманентный джоб-бан",
+                            Title = minutes != 0 ? $"<:TeamMod:1198975738376892476>  Временный джоб-бан на {minutes} мин" : "<:TeamMod:1198975738376892476> Перманентный джоб-бан",
                             Color = minutes != 0 ? 28927 : 2815,
                             Description =  $"""
+                                > **Администратор**
+                                > **Логин:** {banningAdmin ?? "Консоль"}
+
                                 > **Нарушитель**
                                 > **Логин:** {targetUsername ?? "Неизвестно"}
-                                
-                                > **Администратор** 
-                                > **Логин:** {banningAdmin ?? "Консоль"}
 
                                 > **Номер раунда:** {runId}
                                 > **Выдан:** {DateTimeOffset.Now}
-                                > **Истекает:** {DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}
+                                > **Истекает:** {expired}
 
                                 > **Роли:** {formattedRolesStr}
 
