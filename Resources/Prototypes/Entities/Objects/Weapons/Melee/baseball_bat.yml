@@ -31,6 +31,8 @@
     quickEquip: false
     slots:
     - back
+    equipDelay: 2 # Adventure
+    unequipDelay: 2 # Adventure
   - type: Construction
     graph: WoodenBat
     node: bat

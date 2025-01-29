@@ -1,6 +1,6 @@
 #Скафандр ОСЩ
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHelmetHardsuitSecurity
   id: ClothingHeadHelmetHardsuitBlueshield
   name: Шлем скафандра офицера синего щита
   description: Укреплённый шлем с новой системой NT-HUD, которая не работает.

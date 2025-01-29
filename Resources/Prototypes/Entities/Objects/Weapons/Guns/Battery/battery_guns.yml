@@ -12,6 +12,8 @@
     slots:
     - Back
     - suitStorage
+    equipDelay: 2 # Adventure
+    unequipDelay: 1 # Adventure
   - type: AmmoCounter
   - type: Gun
     fireRate: 2
@@ -65,6 +67,11 @@
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
+# Adventure-start
+  - type: Clothing
+    equipDelay: 2 # Adventure
+    unequipDelay: 1 # Adventure
+# Adventure-end
 
 - type: entity
   id: BaseWeaponBatterySmall
@@ -85,6 +92,8 @@
     slots:
     - Belt
     - suitStorage
+    equipDelay: 1 # Adventure
+    unequipDelay: 1 # Adventure
 
 - type: entity
   id: BaseWeaponPowerCellSmall
@@ -101,6 +110,8 @@
     quickEquip: false
     slots:
     - Belt
+    equipDelay: 1 # Adventure
+    unequipDelay: 1 # Adventure
 
 - type: entity
   name: svalinn laser pistol

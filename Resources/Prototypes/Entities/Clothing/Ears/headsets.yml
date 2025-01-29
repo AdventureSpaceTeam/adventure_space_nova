@@ -23,6 +23,8 @@
     slots:
     - ears
     sprite: Clothing/Ears/Headsets/base.rsi
+    equipDelay: 1 # Adventure
+    unequipDelay: 1 # Adventure
   - type: GuideHelp
     guides:
     - Radio

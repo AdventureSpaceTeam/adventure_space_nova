@@ -44,6 +44,7 @@
     coolingCoefficient: 0.005
   - type: FireProtection
     reduction: 0.2
+  - type: EyeProtection # Adventure
 
 #Engineering Hardsuit
 - type: entity
@@ -61,6 +62,7 @@
   - type: PressureProtection
     highPressureMultiplier: 0.1
     lowPressureMultiplier: 1000
+  - type: EyeProtection # Adventure
 
 #Spationaut Hardsuit
 - type: entity
@@ -140,7 +142,7 @@
 
 #Security Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitWithLightBase, ShowSecurityIcons] # Adventure
   id: ClothingHeadHelmetHardsuitSecurity
   name: security hardsuit helmet
   description: Armored hardsuit helmet for security needs.
@@ -161,10 +163,11 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: FlashImmunity # Adventure
 
 #Brigmedic Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHelmetHardsuitSecurity # Adventure
   id: ClothingHeadHelmetHardsuitBrigmedic
   name: brigmedic hardsuit helmet
   description: The lightweight helmet of the brigmedic hardsuit. Protects against viruses, and clowns.
@@ -190,7 +193,7 @@
 
 #Warden's Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHelmetHardsuitSecurity # Adventure
   id: ClothingHeadHelmetHardsuitWarden
   name: warden's hardsuit helmet
   description: A modified riot helmet. Oddly comfortable.
@@ -214,7 +217,7 @@
 
 #Captain's Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ClothingHeadHardsuitWithLightBase, ShowSecurityIcons] # Adventure
   id: ClothingHeadHelmetHardsuitCap
   name: captain's hardsuit helmet
   description: Special hardsuit helmet, made for the captain of the station.
@@ -228,6 +231,7 @@
     lowPressureMultiplier: 1000
   - type: PointLight
     color: "#b88ae5" # Adventure-Resprite
+  - type: FlashImmunity # Adventure
 
 #Chief Engineer's Hardsuit
 - type: entity
@@ -247,6 +251,7 @@
     lowPressureMultiplier: 1000
   - type: FireProtection
     reduction: 0.2
+  - type: EyeProtection # Adventure
 
 #Chief Medical Officer's Hardsuit
 - type: entity
@@ -284,7 +289,7 @@
 
 #Head of Security's hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: ClothingHeadHelmetHardsuitSecurity # Adventure
   id: ClothingHeadHelmetHardsuitSecurityRed
   name: head of security's hardsuit helmet
   description: Security hardsuit helmet with the latest top secret NT-HUD software. Belongs to the HoS.
@@ -524,7 +529,7 @@
 #CENTCOMM / ERT HARDSUITS
 #ERT Leader Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieCommander ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieCommander, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitERTLeader
   name: ERT leader hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -545,7 +550,7 @@
 
 #ERT Chaplain Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitERTChaplain
   name: ERT chaplain hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -559,7 +564,7 @@
 
 #ERT Engineer Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitERTEngineer
   name: ERT engineer hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -580,7 +585,7 @@
 
 #ERT Medical Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieElite ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieElite, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitERTMedical
   name: ERT medic hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -594,7 +599,7 @@
 
 #ERT Security Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitERTSecurity
   name: ERT security hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -615,7 +620,7 @@
 
 #ERT Janitor Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitERTJanitor
   name: ERT janitor hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -629,7 +634,7 @@
 
 #CBURN Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHardsuitWithLightBase ]
+  parent: [ BaseCentcommContraband, ClothingHeadHardsuitWithLightBase, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetCBURN
   name: CBURN exosuit helmet
   description: A pressure resistant and fireproof hood worn by special cleanup units.
@@ -668,7 +673,7 @@
 
 #Deathsquad Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHardsuitWithLightBase ] # Corvax-Resprite
+  parent: [ BaseCentcommContraband, ClothingHeadHardsuitWithLightBase, ClothingHeadHelmetHardsuitSecurity ] # Adventure
   id: ClothingHeadHelmetHardsuitDeathsquad
   name: deathsquad hardsuit helmet
   description: A robust helmet for special operations.

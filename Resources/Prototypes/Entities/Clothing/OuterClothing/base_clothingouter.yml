@@ -6,6 +6,8 @@
   - type: Clothing
     slots:
     - outerClothing
+    equipDelay: 2 # Adventure
+    unequipDelay: 2 # Adventure
   - type: Sprite
     state: icon
 
@@ -101,7 +103,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing]
+  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing, JetpackHardSuit] #Adventure-JetpackHardSuit
   id: ClothingOuterHardsuitBase
   name: base hardsuit
   components:

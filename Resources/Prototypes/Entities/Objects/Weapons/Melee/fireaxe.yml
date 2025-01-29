@@ -38,6 +38,8 @@
     quickEquip: false
     slots:
     - back
+    equipDelay: 2 # Adventure
+    unequipDelay: 1 # Adventure
   - type: Tool
     qualities:
       - Prying

@@ -280,7 +280,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitCLEA
 
 - type: entity
-  parent: ClothingHeadHardsuitBase
+  parent: [ ClothingHeadHardsuitBase, ShowSecurityIcons]
   id: ClothingHeadHelmetHardsuitCLEA
   name: Шлем скафандра солдата ЦСС
   description: таким шлемом можно колоть орехи
@@ -293,6 +293,7 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+  - type: FlashImmunity
 
 #Скафандр офицера ЦСС
 - type: entity
@@ -325,7 +326,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitCLEAOfficer
 
 - type: entity
-  parent: ClothingHeadHardsuitBase
+  parent: ClothingHeadHelmetHardsuitCLEA
   id: ClothingHeadHelmetHardsuitCLEAOfficer
   name: Шлем скафандра офицера ЦСС
   description: таким шлемом можно колоть орехи

@@ -61,6 +61,8 @@
     slots:
     - idcard
     - Belt
+    equipDelay: 1 # Adventure
+    unequipDelay: 1 # Adventure
   - type: UnpoweredFlashlight
   - type: PointLight
     enabled: false

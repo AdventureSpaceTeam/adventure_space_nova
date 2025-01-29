@@ -15,7 +15,9 @@
     - HEAD
     femaleMask: UniformTop
     equipSound: 
-    unequipSound: 
+    unequipSound:
+    equipDelay: 2 # Adventure
+    unequipDelay: 1 # Adventure 
   - type: Spillable
     solution: absorbed
   - type: Absorbent
