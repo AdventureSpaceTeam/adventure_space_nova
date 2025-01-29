@@ -1,0 +1,65 @@
+# перчатки охраны
+- type: entity # NO loadout
+  parent: ClothingHandsGlovesColorBlack
+  id: ClothingHandsGlovesBlackSecurity
+  suffix: BORK, AdvClothing
+  name: перчатки охраны
+  description: Обычные черные перчатки, которые не мешают вам выбивать дурь из невинных.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/black_security/SecHand.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/black_security/SecHand.rsi
+
+
+#Старый скафандр инженера
+- type: entity
+  parent: ClothingOuterHardsuitEngineering
+  id: ClothingOuterHardsuitEngineeringOld
+  name: старый скафандр инженера
+  suffix: BORK, AdvClothing
+  description: Один из первых вариантов современных инженерных скафандров, обладает малой подвижностью и защитой, но довольно большим баллоном.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/engineering/Old_Eng/Old_EngSuit.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/engineering/Old_Eng/Old_EngSuit.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Shock: 0.8
+        Caustic: 0.8
+        Radiation: 0.0
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitEngineeringOld
+  - type: GasTank
+    toggleAction: ActionToggleInternalsHardSuit
+    outputPressure: 21.3
+    air:
+      volume: 1.5
+      temperature: 293.15
+    tankLowPressure: 30.0
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitEngineering
+  id: ClothingHeadHelmetHardsuitEngineeringOld
+  name: шлем старого скафандра инженера
+  description: Довольно громооздкий, но светит явно лучше.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/engineering/Old_Eng/Old_EngHead.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/engineering/Old_Eng/Old_EngHead.rsi
+  - type: PointLight
+    color: "#a4fef4" 
+    radius: 7
+    energy: 3

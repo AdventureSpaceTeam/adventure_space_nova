@@ -1,0 +1,20 @@
+﻿#шлем с поднимаемыми очками
+- type: entity
+  parent: [ClothingHeadHelmetBase, BaseFoldable]
+  id: FlippableHelmet
+  abstract: true
+  components:
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: Поднять очки
+    foldVerbText: Опустить очки
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+    foldedHeldPrefix: flipped
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_flipped
+      map: ["foldedLayer"]
+      visible: false

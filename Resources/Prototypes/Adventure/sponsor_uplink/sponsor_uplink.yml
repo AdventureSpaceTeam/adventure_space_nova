@@ -567,6 +567,17 @@
   - !type:ListingLimitedStockCondition
    stock: 1
 
+- type: listing
+  id: UplinkSponsorCloth54
+  productEntity: PlushieBorg
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 5
+
 
 
 - type: storePreset

@@ -30,8 +30,6 @@
       toggleAction: ActionToggleJetpackHardSuit
       moleUsage: 0.00170
 
-#0.012473952
-
 - type: entity
   id: ActionToggleJetpackHardSuit
   name: Включить реактив

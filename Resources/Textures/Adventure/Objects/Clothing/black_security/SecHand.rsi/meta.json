@@ -11,22 +11,7 @@
       "name": "icon"
     },
     {
-      "name": "icon_flipped"
-    },
-    {
-      "name": "equipped-HELMET",
-      "directions": 4
-    },
-    {
-      "name": "equipped-HELMET-vox",
-      "directions": 4
-    },
-    {
-      "name": "flipped-equipped-HELMET",
-      "directions": 4
-    },
-    {
-      "name": "flipped-equipped-HELMET-vox",
+      "name": "equipped-HAND",
       "directions": 4
     },
     {
