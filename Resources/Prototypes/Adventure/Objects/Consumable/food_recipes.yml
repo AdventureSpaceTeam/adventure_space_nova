@@ -1,0 +1,11 @@
+# Soup
+- type: microwaveMealRecipe
+  id: RecipeSlimeSoup
+  name: slime soup recipe
+  result: FoodSoupSlime
+  time: 10
+  reagents:
+    Water: 10
+    Slime: 10
+  solids:
+    FoodBowlBig: 1
