@@ -65,6 +65,15 @@
               volume: 5
       - trigger:
           !type:DamageTrigger
+          damage: 950
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Corvax/Misc/siren.ogg
+            params:
+              volume: 10
+      - trigger:
+          !type:DamageTrigger
           damage: 1100
         behaviors:
           - !type:DoActsBehavior
