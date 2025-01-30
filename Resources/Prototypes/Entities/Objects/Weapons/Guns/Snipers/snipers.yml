@@ -17,8 +17,6 @@
     slots:
     - Back
     - suitStorage
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: AmmoCounter
   - type: Gun
     fireRate: 0.75

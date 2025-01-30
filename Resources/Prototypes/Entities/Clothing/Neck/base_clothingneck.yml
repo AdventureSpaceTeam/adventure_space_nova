@@ -9,8 +9,6 @@
     quickEquip: true
     slots:
     - neck
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Sprite
     state: icon
   - type: Butcherable

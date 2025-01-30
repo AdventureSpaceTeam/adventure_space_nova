@@ -6,8 +6,6 @@
   - type: Clothing
     slots:
     - FEET
-    equipDelay: 1 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Sprite
     state: icon
   - type: Item

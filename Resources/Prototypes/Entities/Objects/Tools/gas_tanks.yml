@@ -18,8 +18,6 @@
     slots:
     - Back
     - suitStorage
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: ActivatableUI
     key: enum.SharedGasTankUiKey.Key
   - type: UserInterface

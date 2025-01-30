@@ -13,8 +13,6 @@
     quickEquip: false
     slots:
     - back
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Storage
     grid:
     - 0,0,6,3

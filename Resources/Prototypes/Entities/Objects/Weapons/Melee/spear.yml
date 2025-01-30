@@ -54,8 +54,6 @@
     slots:
     - back
     - suitStorage
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Construction
     graph: Spear
     node: spear

@@ -25,8 +25,6 @@
     slots:
     - suitStorage
     - Belt
-    equipDelay: 1 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Gun
     fireRate: 6
     selectedMode: SemiAuto

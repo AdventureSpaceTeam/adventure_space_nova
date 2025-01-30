@@ -56,8 +56,6 @@
     quickEquip: false
     slots:
     - Belt
-    equipDelay: 1 # Adventure
-    unequipDelay: 1 # Adventure
   - type: DisarmMalus
     malus: 0.225
   - type: Appearance

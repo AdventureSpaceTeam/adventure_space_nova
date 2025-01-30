@@ -11,8 +11,6 @@
     slots:
     - idcard
     sprite: Objects/Misc/id_cards.rsi
-    equipDelay: 1 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Item
     size: Small
     heldPrefix: default

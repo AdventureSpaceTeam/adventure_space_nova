@@ -12,8 +12,6 @@
     equipSound:
       path: /Audio/Items/belt_equip.ogg
     quickEquip: false
-    equipDelay: 1 # Adventure
-    unequipDelay: 1 # Adventure
   - type: PhysicalComposition
     materialComposition:
       Cloth: 50

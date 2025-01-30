@@ -44,8 +44,6 @@
   - type: MultiHandedItem # Adventure
   - type: Clothing # Adventure
     slots: BACK
-    equipDelay: 2 # Adventure
-    unequipDelay: 2 # Adventure
   - type: ClothingSpeedModifier # Adventure
     walkModifier: 0.8
     sprintModifier: 0.8

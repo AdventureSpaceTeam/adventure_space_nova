@@ -6,8 +6,6 @@
   - type: Clothing
     slots:
     - outerClothing
-    equipDelay: 2 # Adventure
-    unequipDelay: 2 # Adventure
   - type: Sprite
     state: icon
 

@@ -21,8 +21,6 @@
     slots:
     - suitStorage
     - Belt
-    equipDelay: 1 # Adventure
-    unequipDelay: 1 # Adventure
   - type: AmmoCounter
   - type: Gun
     selectedMode: SemiAuto

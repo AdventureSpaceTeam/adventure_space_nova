@@ -11,8 +11,6 @@
     quickEquip: false
     slots:
     - Back
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Item
     size: Huge
   - type: StaticPrice

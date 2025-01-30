@@ -9,8 +9,6 @@
     slots: [innerclothing]
     equipSound:
       path: /Audio/Items/jumpsuit_equip.ogg
-    equipDelay: 2 # Adventure
-    unequipDelay: 1 # Adventure
   - type: Butcherable
     butcheringType: Knife
     spawned:
