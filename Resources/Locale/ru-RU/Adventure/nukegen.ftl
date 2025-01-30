@@ -1,0 +1,11 @@
+comp-nukegen-damaged-1 = Уровень разрушения: [color=#77f5f1]Отсутствует.[/color]
+comp-nukegen-damaged-2 = Уровень разрушения: [color=#4ee988]Минимальный.[/color]
+comp-nukegen-damaged-3 = Уровень разрушения: [color=#81e94e]Низкий.[/color]
+comp-nukegen-damaged-4 = Уровень разрушения: [color=#ade94e]Ниже среднего.[/color]
+comp-nukegen-damaged-5 = Уровень разрушения: [color=#e7e94e]Средний.[/color]
+comp-nukegen-damaged-6 = Уровень разрушения: [color=#e9c64e]Выше среднего.[/color]
+comp-nukegen-damaged-7 = Уровень разрушения: [color=#e99e4e]Высокий.[/color]
+comp-nukegen-damaged-8 = Уровень разрушения: [color=#e97d4e]Очень высокий.[/color]
+comp-nukegen-damaged-9 = Уровень разрушения: [color=#e94e4e]Критический.[/color]
+comp-nukegen-damaged-10 = Уровень разрушения: [color=#a83535]Катастрофический.[/color]
+

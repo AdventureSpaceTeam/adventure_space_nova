@@ -442,6 +442,7 @@
     - CondenserMachineCircuitBoard
     - HotplateMachineCircuitboard
     - PrinterMachineCircuitboard # Adventure printer
+    - NuclearGeneratorMachineCircuitboard # Adventure NuclearGenerator
     - UniformPrinterMachineCircuitboard
     - FloorGreenCircuit
     - FloorBlueCircuit
