@@ -47,6 +47,19 @@ tilemap:
 entities:
 - proto: ""
   entities:
+  - uid: 1
+    components:
+    - type: MetaData
+      name: Amber
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: PhysicsMap
+    - type: GridTree
+    - type: MovedGrids
+    - type: Broadphase
+    - type: OccluderTree
+    - type: LoadedMap
   - uid: 2
     components:
     - type: MetaData
@@ -55314,13 +55327,6 @@ entities:
     - type: Transform
       pos: -17.5,-57.5
       parent: 2
-- proto: HatChefNPCMouseRemy
-  entities:
-  - uid: 20476
-    components:
-    - type: Transform
-      pos: -8.760822,-30.469727
-      parent: 2
 - proto: CrateSecurityTrackingMindshieldImplants
   entities:
   - uid: 4184
@@ -65623,7 +65629,7 @@ entities:
       pos: -16.5,-17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -33846.67
+      secondsUntilStateChange: -33921.574
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -93326,6 +93332,13 @@ entities:
     - type: Transform
       pos: 17.714645,15.530955
       parent: 2
+- proto: HatChefNPCMouseRemy
+  entities:
+  - uid: 20476
+    components:
+    - type: Transform
+      pos: -8.760822,-30.469727
+      parent: 2
 - proto: HeatExchanger
   entities:
   - uid: 2550
@@ -93389,7 +93402,7 @@ entities:
       parent: 2
 - proto: HolopadAiCore
   entities:
-  - uid: 1
+  - uid: 20475
     components:
     - type: Transform
       pos: -65.5,-11.5
@@ -97106,6 +97119,7 @@ entities:
 
         ===================================================
     - type: Contraband
+      allowedJobs: []
       allowedDepartments:
       - Security
       severity: Syndicate
