@@ -32,7 +32,7 @@
     intensitySlope: 10
     totalIntensity: 1000000
   - type: RadiationSource
-    slope: 0.8 
+    slope: 1 
     intensity: 5
   - type: Sprite
     sprite: Adventure/Structures/Machines/NukeGen.rsi
@@ -82,6 +82,11 @@
           !type:DamageTrigger
           damage: 1000
         behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            RadiationSource:
+              min: 1
+              max: 1
         - !type:DoActsBehavior
           acts: ["Destruction"]
         - !type:PlaySoundBehavior
@@ -166,3 +171,15 @@
     - comp-nukegen-damaged-8
     - comp-nukegen-damaged-9
     - comp-nukegen-damaged-10
+
+# источник радиации
+- type: entity
+  id: RadiationSource
+  components:
+  - type: Sprite
+  - type: RadiationSource
+    intensity: 40
+    slope: 1
+    enabled: true
+  - type: TimedDespawn
+    lifetime: 900
