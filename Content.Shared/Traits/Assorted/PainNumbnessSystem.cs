@@ -42,5 +42,9 @@ public sealed class PainNumbnessSystem : EntitySystem
     {
         if (args.CurrentAlert == "HumanHealth")
             args.CancelUpdate = true;
+// Adventure-start
+        if (args.CurrentAlert == "BorgHealth")
+            args.CancelUpdate = true;
+// Adventure-end
     }
 }
