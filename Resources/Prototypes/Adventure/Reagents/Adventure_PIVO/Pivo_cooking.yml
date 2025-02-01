@@ -1,0 +1,50 @@
+# Реагенты для варки пив
+- type: reagent
+  id: Zlaki
+  name: Злаки
+  group: Foods
+  parent: Flour
+  desc: Звучит как начало алкогольной зависимости.
+  physicalDesc: зернистое
+  flavor: chalky
+  color: "#f8d273"
+
+- type: reagent
+  id: Solod
+  name: Солод
+  group: Foods
+  parent: Flour
+  desc: Намоченные и пророщенные семена злаков.
+  physicalDesc: зернистое
+  flavor: chalky
+  color: "#b37b3e"
+
+# Варка пив
+- type: reaction
+  id: Solod
+  source: true
+  requiredMixerCategories:
+  - Fermentation
+  reactants:
+    Zlaki:
+      amount: 1
+    Water:
+      amount: 1
+  products:
+    Solod: 1
+
+- type: reaction
+  id: Beer
+  source: true
+  requiredMixerCategories:
+  - Fermentation
+  minTemp: 323.15
+  reactants:
+    Solod:
+      amount: 1
+    Water:
+      amount: 4
+    Sugar: # третий реагент, чтоб при наличии в смеси лишних злак при варке солода мы сразу не получали пиво.
+      amount: 1
+  products:
+    Beer: 5 # получать 1 пиво было бы обидно.
