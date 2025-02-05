@@ -63,13 +63,19 @@
   - type: Tag
     tags:
     - BypassInteractionRangeChecks
+# Adventure-Speech-start
+  - type: Speech
+    speechVerb: Ghost
+  - type: TypingIndicator
+    proto: Ghost
+# Adventure-Speech-end
 
 # proto for player ghosts specifically
 - type: entity
   parent: MobObserverBase
   id: MobObserver
   components:
-  - type: Spectral
+  - type: Spectral   
 
 - type: entity
   id: ActionGhostBoo
