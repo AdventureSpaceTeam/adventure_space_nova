@@ -481,6 +481,7 @@
         - MagazineMagnum
         - CombatKnife
         - Truncheon
+        - Crowbar
       components:
         - Stunbaton
         - FlashOnTrigger
@@ -622,33 +623,6 @@
     sprite: Clothing/Belt/securitywebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/securitywebbing.rsi
-  - type: Storage
-    grid:
-    - 0,0,7,1
-    whitelist:
-      tags:
-        - CigPack
-        - Taser
-        - SecBeltEquip
-        - Radio
-        - Sidearm
-        - MagazinePistol
-        - MagazineMagnum
-        - CombatKnife
-        - Truncheon
-      components:
-        - Stunbaton
-        - FlashOnTrigger
-        - SmokeOnTrigger
-        - Flash
-        - Ammo
-        - Handcuff
-        - BallisticAmmoProvider
-        - CartridgeAmmo
-        - DoorRemote
-        - Whistle
-        - HolosignProjector
-        - BalloonPopper
 
 - type: entity
   parent: [ ClothingBeltStorageBase, BaseSecurityCargoContraband ]
@@ -684,33 +658,6 @@
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: Storage
-    grid:
-    - 0,0,7,1
-    whitelist:
-      tags:
-        - CigPack
-        - Taser
-        - SecBeltEquip
-        - Radio
-        - Sidearm
-        - MagazinePistol
-        - MagazineMagnum
-        - CombatKnife
-        - Truncheon
-      components:
-        - Stunbaton
-        - FlashOnTrigger
-        - SmokeOnTrigger
-        - Flash
-        - Ammo
-        - Handcuff
-        - BallisticAmmoProvider
-        - CartridgeAmmo
-        - DoorRemote
-        - Whistle
-        - HolosignProjector
-        - BalloonPopper 
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing

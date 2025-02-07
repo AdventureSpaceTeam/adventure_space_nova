@@ -60,6 +60,9 @@
     containers:
       storagebase: !type:NestedSelector
         tableId: BeltSecurityEntityTable
+        whitelist:
+      tags:
+        - Crowbar
 
 - type: entity
   id: ClothingBeltSecurityWebbingFilled
