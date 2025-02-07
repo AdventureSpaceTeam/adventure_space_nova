@@ -5,6 +5,10 @@
   name: ядерный генератор
   description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
   components:
+  - type: PowerSupplier
+    supplyRate: 240000
+    supplyRampRate: 10000
+    supplyRampTolerance: 10000
   - type: PointLight
     radius: 1.5
     energy: 2
@@ -26,11 +30,6 @@
   - type: Damageable
     damageContainer: StructuralInorganicNuclear
     damageModifierSet: MetallicNuclear
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 1000
-    intensitySlope: 10
-    totalIntensity: 1000000
   - type: RadiationSource
     slope: 1 
     intensity: 5
@@ -56,7 +55,7 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 800
+          damage: 850
         behaviors:
         - !type:PlaySoundBehavior
           sound:
@@ -67,32 +66,19 @@
           !type:DamageTrigger
           damage: 950
         behaviors:
-        - !type:PlaySoundBehavior
-          sound:
-            path: /Audio/Corvax/Misc/siren.ogg
-            params:
-              volume: 10
-      - trigger:
-          !type:DamageTrigger
-          damage: 1100
-        behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
       - trigger:
           !type:DamageTrigger
-          damage: 1000
+          damage: 900
         behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
-            RadiationSource:
+            NuclearGeneratorDestr:
               min: 1
               max: 1
         - !type:DoActsBehavior
           acts: ["Destruction"]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
-        - !type:ExplodeBehavior
 
 # ModifierSet
 - type: damageContainer
@@ -178,8 +164,8 @@
   components:
   - type: Sprite
   - type: RadiationSource
-    intensity: 40
+    intensity: 70
     slope: 1
     enabled: true
   - type: TimedDespawn
-    lifetime: 900
+    lifetime: 1800
