@@ -6,6 +6,9 @@
   suffix: Сломанный НЕ СПАВНИТЬ
   description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
   components:
+  - type: WarpPoint
+    follow: true
+    location: nuke generator
   - type: AnnounceOnSpawn
     message: Достигнута критическая точка, взрыв неизбежен и произойдёт через 60 секунд.
     sender: Ядерный генератор

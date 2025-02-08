@@ -5,6 +5,9 @@
   name: ядерный генератор
   description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
   components:
+  - type: WarpPoint
+    follow: true
+    location: nuke generator
   - type: PowerSupplier
     supplyRate: 240000
     supplyRampRate: 10000
