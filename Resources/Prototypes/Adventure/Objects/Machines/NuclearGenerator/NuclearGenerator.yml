@@ -119,19 +119,19 @@
     - type: MachineBoard
       prototype: NuclearGenerator
       stackRequirements:
-        Capacitor: 5
-        Steel: 20
-        CableHV: 20
+        Capacitor: 10
+        Steel: 30
+        CableHV: 30
         Cable: 10
-        Uranium: 10
+        Uranium: 30
 
 - type: latheRecipe
   id: NuclearGeneratorMachineCircuitboard
   result: NuclearGeneratorMachineCircuitboard
   completetime: 4
   materials:
-     Steel: 900
-     Glass: 900
+     Steel: 1000
+     Glass: 1000
 
 #изучение
 - type: technology
@@ -141,8 +141,8 @@
     sprite: Adventure/Structures/Machines/NukeGen.rsi
     state: nukegen
   discipline: Industrial
-  tier: 2
-  cost: 15000
+  tier: 3
+  cost: 30000
   recipeUnlocks:
   - NuclearGeneratorMachineCircuitboard
 
