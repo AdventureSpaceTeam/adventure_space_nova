@@ -6,6 +6,17 @@
   suffix: Сломанный НЕ СПАВНИТЬ
   description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
   components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.0,-1.0,1.0,1.0" 
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: WarpPoint
     follow: true
     location: nuke generator
@@ -16,11 +27,11 @@
       path: /Audio/Adventure/Machines/NukeGenDestr.ogg
     color: "#ff4646"
   - type: PowerSupplier
-    supplyRate: 500000
-    supplyRampRate: 500000
-    supplyRampTolerance: 500000
+    supplyRate: 1000000
+    supplyRampRate: 1000000
+    supplyRampTolerance: 1000000
   - type: PointLight
-    radius: 1.5
+    radius: 5
     energy: 2
     color: "#ff4646"
     castShadows: false
@@ -43,7 +54,7 @@
       - state: nukegen
       - state: nukegen_deatr
   - type: PowerMonitoringDevice
-    sprite: Adventure/Structures/Machines/NukeGen.rsi
+    sprite: Adventure/Interface/Icons.rsi
     state: nukegen
   - type: AmbientSound
     range: 5
