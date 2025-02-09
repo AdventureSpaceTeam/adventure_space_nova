@@ -151,3 +151,38 @@
       path: /Audio/Items/Toys/weh.ogg
   - type: UseDelay
     delay: 1.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieBorg
+  name: Плюшевый борг
+  suffix: AdvPlushie
+  description: Он тоже не любит называть законы.
+  components:
+  - type: Sprite
+    state: base
+    sprite: Adventure/Objects/Fun/plushieWiki.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Adventure/Voice/IPC/SynthWindows.ogg
+  - type: UseDelay
+    delay: 5.0
+  - type: RandomSprite
+    available:
+    - 0:
+        base: ""
+    - 0:
+        eng: ""
+    - 0:
+        jan: ""
+    - 0:
+        med: ""
+    - 0:
+        min: ""
+    - 0:
+        sec: ""
+    - 0:
+        ser: ""

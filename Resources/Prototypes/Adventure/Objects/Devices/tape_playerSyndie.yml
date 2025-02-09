@@ -1,0 +1,83 @@
+# синдиплеер
+- type: entity
+  parent: [ TapePlayer, BaseSyndicateContraband ]
+  id: TapePlayerSyndie
+  name: синдиплеер
+  description: Революция в области музыкального исскуства, убийца музыкантов для убийц.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Adventure/Objects/Devices/tape_player.rsi
+    state: icon-syndie
+
+# музло
+- type: entity
+  parent: [ BaseMusicTape, BaseSyndicateContraband ]
+  id: MusicTape421
+  name: Кассета (Collapse)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/Collapse1.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape422
+  name: Кассета (Rage)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/Collapse2.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape423
+  name: Кассета (Drive)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/Collapse3.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape424
+  name: Кассета (Hate)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/Collapse4.ogg"
+
+# набор бешенного музла
+- type: entity
+  id: CrateSyndieMusic
+  suffix: Filled
+  parent: CrateSyndicate
+  name: набор синди трек
+  description: Убивать под музыку космической тишины, конечно же весело, но может быть веселее.
+  components:
+  - type: StorageFill
+    contents:
+      - id: TapePlayerSyndie
+      - id: MusicTape421
+      - id: MusicTape422
+      - id: MusicTape423
+      - id: MusicTape424
+
+# набор бешенного музла в каталоге
+- type: listing
+  id: UplinkSyndieMusic
+  name: набор синди трек
+  description: Убивать под музыку космической тишины, конечно же весело, но может быть веселее.
+  productEntity: CrateSyndieMusic
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkPointless

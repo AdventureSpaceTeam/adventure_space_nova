@@ -30,6 +30,27 @@
     },
     {
       "name": "plushieRD"
+    },
+    {
+      "name": "base"
+    },
+    {
+      "name": "jan"
+    },
+    {
+      "name": "eng"
+    },
+    {
+      "name": "med"
+    },
+    {
+      "name": "min"
+    },
+    {
+      "name": "sec"
+    },
+    {
+      "name": "ser"
     }
   ]
 }
