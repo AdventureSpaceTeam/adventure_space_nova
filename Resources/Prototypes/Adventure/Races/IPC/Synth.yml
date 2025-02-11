@@ -59,6 +59,7 @@
         probability: 0.25
   - type: Inventory
     templateId: Synth
+  - type: AntagImmune #RaidGo Balance edit
   - type: ThermalRegulator
     metabolismHeat: 800
     radiatedHeat: 100
