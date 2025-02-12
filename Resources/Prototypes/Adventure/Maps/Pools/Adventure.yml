@@ -2,11 +2,11 @@
   id: AdventureMapPool
   maps:
 #  - AdventureRelict     #min 0  max 25
-  - AdventureAmber      #min 0 max 50
+#  - AdventureAmber      #min 0 max 50 #умер окончательно
   - AdventureAspid      #min 20 max 55
 # - AdventureAvrite     #min 40 max N/A
   - AdventureBagel      #min 30 max 120
-#   - AdventureBoxNew        #min 25 max 120 #rework (too big, original min 50) # курсед карта, надо чинить
+  - AdventureBoxNew        #min 25 max 120 #rework (too big, original min 50) # карта сломана но как говорится работает - не трогай
   - AdventureCluster    #min 0 max 35
   - AdventureDelta      #min 30 max N/A
   - AdventureMarathon   #min 25 max 70
