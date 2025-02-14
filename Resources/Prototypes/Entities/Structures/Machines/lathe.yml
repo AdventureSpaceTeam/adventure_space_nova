@@ -207,7 +207,7 @@
     - Instruments
     - Equipment
     - FauxTiles
-    - AdventureSolarSail
+    - AdventureSolarSail # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
