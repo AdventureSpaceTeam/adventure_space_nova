@@ -40,6 +40,12 @@ public sealed class SliceableFoodSystem : EntitySystem
         if (args.Handled)
             return;
 
+        if (!TryComp<UtensilComponent>(args.Used, out var utensil) || (utensil.Types & UtensilType.Knife) == 0)
+        {
+            args.Handled = true;
+            return;
+        }
+
         var doAfterArgs = new DoAfterArgs(EntityManager,
             args.User,
             entity.Comp.SliceTime,
@@ -76,9 +82,6 @@ public sealed class SliceableFoodSystem : EntitySystem
             return false;
 
         if (!_solutionContainer.TryGetSolution(uid, food.Solution, out var soln, out var solution))
-            return false;
-
-        if (!TryComp<UtensilComponent>(usedItem, out var utensil) || (utensil.Types & UtensilType.Knife) == 0)
             return false;
 
         var sliceVolume = solution.Volume / FixedPoint2.New(component.TotalCount);
