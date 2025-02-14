@@ -472,9 +472,9 @@
     - MedicalClothingStatic
     - EmptyMedkitsStatic
     - SurgeryStatic
-    - MedAdventure # Adventure
     dynamicPacks:
     - Chemistry
+    - MedAdventure # Adventure
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
