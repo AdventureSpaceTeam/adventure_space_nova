@@ -1,0 +1,308 @@
+- type: entity
+  name: сварочный меч
+  parent: [ BaseItem, BaseMinorContraband ]
+  id: fuelsword
+  description: "Сварочный аппарат, кустарно модифицированный каким-то умельцем. Судя по всему, автор этого творения черпал вдохновение от энергетических мечей."
+  suffix: Adventure
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: Adventure/Objects/Weapons/Melee/fuelsword.rsi
+    layers:
+    - state: icon
+    - state: sword_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    size: Small
+    sprite: Adventure/Objects/Weapons/Melee/fuelsword-inhands.rsi
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderactivate.ogg
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderdeactivate.ogg
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderhum.ogg
+      params:
+        variation: 0.125
+        volume: -7
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+          Heat: 15
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ItemToggleHot
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+    - type: Execution
+      doAfterDuration: 4.0
+  - type: ToggleableLightVisuals
+    spriteLayer: flame
+    inhandVisuals:
+      left:
+      - state: inhand-left-flame
+        shader: unshaded
+      right:
+      - state: inhand-right-flame
+        shader: unshaded
+  - type: UseDelay
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 4.5 # Палочкой по лицу наверное больно, хз?
+    soundHit:
+      collection: MetalThud
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 100
+        maxVol: 100
+  - type: Tool
+    useSound:
+      collection: Welder
+    qualities: Welding
+    speedModifier: 1.5
+  - type: Welder
+    fuelConsumption: 10
+  - type: PointLight
+    enabled: false
+    radius: 2
+    color: orange
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: Appearance
+  - type: RequiresEyeProtection
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 200
+  - type: StaticPrice
+    price: 40
+  - type: IgnitionSource
+    temperature: 700
+  - type: Reflect
+    reflectProb: 0.15
+    reflects:
+    - NonEnergy
+  - type: Construction
+    graph: fuelsword
+    node: fuelsword
+  - type: Tag
+    tags:
+    - FuelSword
+
+- type: entity
+  name: двухклинковый сварочный меч
+  parent: fuelsword
+  id: fuelsworddouble
+  description: "Два кустарно модифицированных сварочных аппарата, скреплённых вместе, образуя некое подобие двойного энергетического меча. Настоящее чудо грейтайдской мысли."
+  components:
+  - type: Item
+    size: Small
+    sprite: Adventure/Objects/Weapons/Melee/fueldoublesword-inhands.rsi
+  - type: Sprite
+    sprite: Adventure/Objects/Weapons/Melee/fueldoublesword.rsi
+    layers:
+    - state: icon
+    - state: sword_flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: true
+    soundActivate:
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderactivate.ogg
+      params:
+        variation: 0.250
+        volume: -2
+    soundDeactivate:
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderdeactivate.ogg
+      params:
+        variation: 0.250
+        volume: -2
+  - type: ItemToggleActiveSound
+    activeSound: null
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -8
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+          Heat: 12
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.7
+    - type: Execution
+      doAfterDuration: 4.0
+  - type: Wieldable
+    wieldSound: null
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.5
+    angle: 100
+    damage:
+      types:
+        Blunt: 4.5
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 150
+        maxVol: 150
+  - type: Reflect
+    reflectProb: 0.25
+    reflects:
+    - NonEnergy
+  - type: Construction
+    graph: fuelsworddouble
+    node: fuelsworddouble
+  - type: Tag
+    tags:
+    - FuelDoubleSword
+
+# Крафт
+- type: construction
+  name: сварочный меч
+  id: fuelsword
+  graph: fuelsword
+  startNode: start
+  targetNode: fuelsword
+  category: construction-category-weapons
+  description: "Сварочный аппарат, кустарно модифицированный каким-то умельцем. Судя по всему, автор этого творения черпал вдохновение от энергетических мечей."
+  icon:
+    sprite: Adventure/Objects/Weapons/Melee/fuelsword.rsi
+    state: icon
+  objectType: Item
+
+- type: construction
+  name: двухклинковый сварочный меч
+  id: fuelsworddouble
+  graph: fuelsworddouble
+  startNode: start
+  targetNode: fuelsworddouble
+  category: construction-category-weapons
+  description: "Два кустарно модифицированных сварочных аппарата, скреплённых вместе, образуя некое подобие двойного энергетического меча. Настоящее чудо грейтайдской мысли."
+  icon:
+    sprite: Adventure/Objects/Weapons/Melee/fueldoublesword.rsi
+    state: icon
+  objectType: Item
+
+# Граф крафта
+- type: constructionGraph
+  id: fuelsword
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: fuelsword
+          steps:
+            - tag: WelderMini
+              name: сварочный аппарат
+              icon:
+                sprite: Objects/Tools/welder_mini.rsi
+                state: icon
+            - tag: GlassBeaker
+              name: мензурка
+              icon:
+                sprite: Objects/Specific/Chemistry/beaker.rsi
+                state: beaker
+            - material: MetalRod
+              amount: 2
+            - material: Plasma
+              amount: 1
+            - tag: Igniter
+              name: воспламенитель
+              icon:
+                sprite: Objects/Devices/igniter.rsi
+                state: icon
+              doAfter: 30
+    - node: fuelsword
+      entity: fuelsword
+
+- type: constructionGraph
+  id: fuelsworddouble
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: fuelsworddouble
+          steps:
+            - tag: FuelSword
+              name: сварочный меч
+              icon:
+                sprite: Adventure/Objects/Weapons/Melee/fuelsword.rsi
+                state: icon
+            - tag: FuelSword
+              name: сварочный меч
+              icon:
+                sprite: Adventure/Objects/Weapons/Melee/fuelsword.rsi
+                state: icon
+            - material: Cable
+              amount: 10
+              doAfter: 60
+    - node: fuelsworddouble
+      entity: fuelsworddouble
+
+# Теги
+- type: Tag
+  id: FuelSword
+- type: Tag
+  id: FuelDoubleSword
+- type: Tag
+  id: WelderMini

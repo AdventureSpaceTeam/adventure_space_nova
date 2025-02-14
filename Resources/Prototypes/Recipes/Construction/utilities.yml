@@ -785,7 +785,7 @@
 - type: construction
   id: PressureControlledValve
   name: пневматический клапан # Adventure
-  description: Клапан, регулируемый давлением. # Adventure
+  description: Клапан, регулируемый давлением. Открывается если давление на выходе ниже чем давление на боковой трубе на 101.325 кПа. # Adventure
   graph: GasTrinary
   startNode: start
   targetNode: pneumaticvalve

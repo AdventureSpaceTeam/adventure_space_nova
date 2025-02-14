@@ -47,5 +47,8 @@
     TulipSeeds: 5 # Adventure
     NutSeeds: 5 # Adventure
     CoffeeSeeds: 5 # Adventure
+  contrabandInventory:
+    TobaccoSeeds: 2
+    FoodSnackSemki: 2
   emaggedInventory:
     FlyAmanitaSeeds: 1

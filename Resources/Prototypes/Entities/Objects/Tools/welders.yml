@@ -27,15 +27,21 @@
   - type: ItemToggle
     predictable: false
     soundActivate:
-      collection: WelderOn
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderactivate.ogg # Adventure
       params:
         variation: 0.125
         volume: -5
     soundDeactivate:
-      collection: WelderOff
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderdeactivate.ogg # Adventure
       params:
         variation: 0.125
         volume: -5
+  - type: ItemToggleActiveSound # Adventure
+    activeSound:
+      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderhum.ogg
+      params:
+        variation: 0.125
+        volume: -7
   - type: ItemToggleMeleeWeapon
     activatedSoundOnHit:
       path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
@@ -198,3 +204,6 @@
     enabled: false
     radius: 1.0
     color: orange
+  - type: Tag # Adventure
+    tags:
+    - WelderMini

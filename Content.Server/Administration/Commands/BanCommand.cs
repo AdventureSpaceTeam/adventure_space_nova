@@ -6,6 +6,7 @@ using Content.Shared.Database;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
+using Content.Server._Adventure.Discord; // AdvSpace Discord Webhook
 
 
 namespace Content.Server.Administration.Commands;
@@ -19,6 +20,7 @@ public sealed class BanCommand : LocalizedCommands
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly DiscordWebhookBanSender _DiscordWebhookBanSender = default!; // AdvSpace Discord Webhook
 
     public override string Command => "ban";
 
@@ -91,6 +93,8 @@ public sealed class BanCommand : LocalizedCommands
         var targetHWid = located.LastHWId;
 
         _bans.CreateServerBan(targetUid, target, player?.UserId, null, targetHWid, minutes, severity, reason);
+
+        _DiscordWebhookBanSender.SendBanMessage(target, player?.Name, minutes, reason); // AdvSpace Discord Webhook
     }
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

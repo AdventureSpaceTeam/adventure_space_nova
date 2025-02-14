@@ -5,6 +5,7 @@ using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
+using Content.Shared._Adventure.Sponsors; // adventure new life
 
 namespace Content.Client.UserInterface.Systems.Ghost;
 
@@ -12,6 +13,7 @@ namespace Content.Client.UserInterface.Systems.Ghost;
 public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSystem>
 {
     [Dependency] private readonly IEntityNetworkManager _net = default!;
+    [Dependency] private readonly ISponsorsManager _sponsors = default!; // adventure new life
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
 
@@ -38,6 +40,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
 
     public void OnSystemLoaded(GhostSystem system)
     {
+        system.GhostSponsorUpdated += UpdateGui; // adventure new life
         system.PlayerRemoved += OnPlayerRemoved;
         system.PlayerUpdated += OnPlayerUpdated;
         system.PlayerAttached += OnPlayerAttached;
@@ -64,7 +67,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         }
 
         Gui.Visible = _system?.IsGhost ?? false;
-        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody);
+        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, (_sponsors.GetSponsor(null)?.AllowRespawn) ?? false, _system?.Respawned ?? true); // adventure new life
     }
 
     private void OnPlayerRemoved(GhostComponent component)
@@ -122,6 +125,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         if (Gui == null)
             return;
 
+        Gui.NewLifePressed += NewLifePressed; // adventure new life
         Gui.RequestWarpsPressed += RequestWarps;
         Gui.ReturnToBodyPressed += ReturnToBody;
         Gui.GhostRolesPressed += GhostRolesPressed;
@@ -136,6 +140,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         if (Gui == null)
             return;
 
+        Gui.NewLifePressed -= NewLifePressed; // adventure new life
         Gui.RequestWarpsPressed -= RequestWarps;
         Gui.ReturnToBodyPressed -= ReturnToBody;
         Gui.GhostRolesPressed -= GhostRolesPressed;
@@ -155,6 +160,13 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui?.TargetWindow.Populate();
         Gui?.TargetWindow.OpenCentered();
     }
+
+    // adventure new life begin
+    private void NewLifePressed()
+    {
+        _system?.RequestNewLife();
+    }
+    // adventure new life end
 
     private void GhostRolesPressed()
     {

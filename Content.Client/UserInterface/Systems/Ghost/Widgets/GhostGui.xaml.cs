@@ -11,6 +11,7 @@ public sealed partial class GhostGui : UIWidget
 {
     public GhostTargetWindow TargetWindow { get; }
 
+    public event Action? NewLifePressed; // adventure new life
     public event Action? RequestWarpsPressed;
     public event Action? ReturnToBodyPressed;
     public event Action? GhostRolesPressed;
@@ -23,6 +24,7 @@ public sealed partial class GhostGui : UIWidget
 
         MouseFilter = MouseFilterMode.Ignore;
 
+        NewLifeButton.OnPressed += _ => NewLifePressed?.Invoke(); // adventure new life
         GhostWarpButton.OnPressed += _ => RequestWarpsPressed?.Invoke();
         ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
         GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
@@ -34,7 +36,7 @@ public sealed partial class GhostGui : UIWidget
         Visible = false;
     }
 
-    public void Update(int? roles, bool? canReturnToBody)
+    public void Update(int? roles, bool? canReturnToBody, bool isSponsor, bool respawned) // adventure new life
     {
         ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
 
@@ -50,6 +52,10 @@ public sealed partial class GhostGui : UIWidget
                 GhostRolesButton.StyleClasses.Remove(StyleBase.ButtonCaution);
             }
         }
+
+        NewLifeButton.Visible = isSponsor; // adventure new life
+        NewLifeButton.Disabled = respawned; // adventure new life
+        NewLifeButton.ToolTip = respawned ? "Можно использовать только один раз за раунд" : null; // adventure new life
 
         TargetWindow.Populate();
     }

@@ -1,22 +1,31 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/blob/1a2b4c66e573cac0e9eb0699b42890b287662de4/icons/obj/machines/gateway.dmi",
+  "copyright": "made by borkroman",
   "size": {
     "x": 96,
     "y": 96
   },
   "states": [
     {
-      "name": "frame"
+      "name": "frame",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
     },
     {
       "name": "on",
       "delays": [
         [
-          0.2,
-          0.2,
-          0.2
+          0.1,
+          0.1,
+          0.1,
+          0.1
         ]
       ]
     },
@@ -24,6 +33,7 @@
       "name": "portal",
       "delays": [
         [
+          0.3,
           0.3,
           0.3,
           0.3

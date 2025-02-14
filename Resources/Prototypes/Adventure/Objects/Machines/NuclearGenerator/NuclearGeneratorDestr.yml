@@ -1,0 +1,89 @@
+# Generator
+- type: entity
+  parent: BaseGenerator
+  id: NuclearGeneratorDestr
+  name: ядерный генератор
+  suffix: Сломанный НЕ СПАВНИТЬ
+  description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.0,-1.0,1.0,1.0" 
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: WarpPoint
+    follow: true
+    location: nuke generator
+  - type: AnnounceOnSpawn
+    message: Реактор превысил пределы целостности. Катастрофа неизбежна. Экипажу остаётся 60 секунд, чтобы покинуть зону поражения.
+    sender: Ядерный генератор
+    sound:
+      path: /Audio/Adventure/Machines/NukeGenDestr.ogg
+    color: "#ff4646"
+  - type: PowerSupplier
+    supplyRate: 1000000
+    supplyRampRate: 1000000
+    supplyRampTolerance: 1000000
+  - type: PointLight
+    radius: 5
+    energy: 2
+    color: "#ff4646"
+    castShadows: false
+    netsync: false
+  - type: RadiationReceiver
+  - type: Damageable
+    damageContainer: StructuralInorganicNuclear
+    damageModifierSet: MetallicNuclear
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 1000
+    intensitySlope: 10
+    totalIntensity: 1000000
+  - type: RadiationSource
+    slope: 1 
+    intensity: 10
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/NukeGen.rsi
+    layers:
+      - state: nukegen
+      - state: nukegen_deatr
+  - type: PowerMonitoringDevice
+    sprite: Adventure/Interface/Icons.rsi
+    state: nukegen
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/Effects/Grenades/Supermatter/supermatter_loop.ogg
+  - type: GuideHelp
+    guides:
+    - Power
+    - NuclearGenerator
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 150
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 120 # 60 секунд до взрыва
+        behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            RadiationSource:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:ExplodeBehavior

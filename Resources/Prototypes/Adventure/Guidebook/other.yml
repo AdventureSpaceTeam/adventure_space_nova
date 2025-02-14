@@ -2,4 +2,9 @@
   id: BorgRepair
   name: Ремонт боргов
   text: "/ServerInfo/Adventure/Guidebook/BorgRepair.xml"
+
+- type: guideEntry
+  id: NuclearGenerator
+  name: Ядерный генератор
+  text: "/ServerInfo/Adventure/Guidebook/NuclearGenerator.xml"
   

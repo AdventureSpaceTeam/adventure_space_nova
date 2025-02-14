@@ -36,11 +36,18 @@ marking-SynthScreenNoise-noiseScreen = КПБ, экран (Помехи)
 marking-SynthScreenNoise = КПБ, кран (Помехи)
 marking-SynthScreenDoubleCyclops-DoubleCyclops = КПБ, экран (Двойной циклоп на экране)
 marking-SynthScreenDoubleCyclops = КПБ, кран (Двойной циклоп на экране)
-
-
-
-
-
-
-
+marking-SynthAntennaRight-antennaRight = КПБ, Голова (Антенна справа)
+marking-SynthAntennaRight = КПБ, Голова (Антенна справа)
+marking-SynthAntennaChappi-antennaChappi = КПБ, Голова (Антенна Чаппи)
+marking-SynthAntennaChappi = КПБ, Голова (Антенна Чаппи)
+marking-SynthAntennaFront-antennaFront = КПБ, Голова (Антенна с подсветкой)
+marking-SynthAntennaFront = КПБ, Голова (Антенна с подсветкой)
+marking-SynthChestHeart-heart = КПБ, Грудь (Железное сердце)
+marking-SynthChestHeart = КПБ, Грудь (Железное сердце)
+marking-SynthChestHPbar-HPbar = КПБ, Спина (ХП бар)
+marking-SynthChestHPbar = КПБ, Спина (ХП бар)
+marking-SynthChestHPbarDouble-HPbarDouble = КПБ, Спина (Двойной ХП бар)
+marking-SynthChestHPbarDouble = КПБ, Спина (Двойной ХП бар)
+marking-SynthChestLight-Light = КПБ, Спина (Подсветка)
+marking-SynthChestLight = КПБ, Спина (Подсветка)
 

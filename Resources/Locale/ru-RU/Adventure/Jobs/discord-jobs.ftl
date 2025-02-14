@@ -1,0 +1,16 @@
+JobCBURN = Офицер РХБЗЗ
+JobDeathSquad = Офицер Эскадрона Смерти
+JobBlueshield = Офицер «Синий Щит»
+JobHeadRev = Глава революции
+JobNukeopsMedic = Медик Ядерных Оперативников 
+JobSubvertedSilicon = Взломанный борг
+JobZombie = Зомби
+JobSpaceNinja = Космический ниндзя
+JobNukeopsCommander = Командир Ядерных Оперативников 
+JobThief = Вор
+JobTraitor = Агент Синдиката
+JobTraitorSleeper = Спящий Агент Синдиката
+JobRev = Революционер
+JobDragon = Космический дракон
+JobNukeops = Ядерный Оперативник
+JobInitialInfected = Нулевой пациент

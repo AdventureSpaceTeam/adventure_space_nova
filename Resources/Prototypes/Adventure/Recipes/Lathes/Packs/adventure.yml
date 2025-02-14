@@ -1,0 +1,27 @@
+- type: latheRecipePack
+  id: CircuitAdventureStatic
+  recipes:
+  - PrinterMachineCircuitboard
+  - NuclearGeneratorMachineCircuitboard
+
+- type: latheRecipePack
+  id: SecurityAdventure
+  recipes:
+  - WeaponPlasmaSniperPrint
+  - PlasmaSniperMagazinePrint
+  - WeaponPlasmaGunPrint
+  - PlasmaMagazinePrint
+  - MagazineBoxPistolPulse
+  - MagazineBoxRiflePulse
+  - MagazineBoxLightRiflePulse
+  - MagazineBoxRifleExplosive
+
+- type: latheRecipePack
+  id: Adventure
+  recipes:
+  - SolarSailAssemblyFlatpack
+
+- type: latheRecipePack
+  id: MedAdventure
+  recipes:
+  - ReusableMedipen

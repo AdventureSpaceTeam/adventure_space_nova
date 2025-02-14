@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "nukegen"
+    },
+    {
+      "name": "nukegen_on"
+    },
+    {
+      "name": "nukegen_deatr"
+    }
+  ]
+}

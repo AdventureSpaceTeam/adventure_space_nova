@@ -68,6 +68,23 @@ namespace Content.Shared.Ghost
     {
     }
 
+    // adventure new life begin
+    [Serializable, NetSerializable]
+    public sealed class GhostRequestNewLifeEvent : EntityEventArgs
+    {
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class GhostRespawnedResponseEvent : EntityEventArgs
+    {
+        public bool Respawned { get; }
+        public GhostRespawnedResponseEvent(bool respawned)
+        {
+            Respawned = respawned;
+        }
+    }
+    // adventure new life end
+
     /// <summary>
     /// An individual place a ghost can warp to.
     /// This is used as part of <see cref="GhostWarpsResponseEvent"/>

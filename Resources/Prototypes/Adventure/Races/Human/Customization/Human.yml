@@ -1,0 +1,65 @@
+# прически
+- type: marking
+  id: HumanHairCombedShaved
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: combed
+
+- type: marking
+  id: HumanHairCombedBackADV
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: combedback
+
+- type: marking
+  id: HumanHairPunk
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: punk
+
+- type: marking
+  id: HumanHairTopKnot
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: topknot
+
+# бороды
+- type: marking
+  id: HumanFacialHairDED
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: ded
+
+- type: marking
+  id: HumanFacialHairGusar
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: gusar
+
+- type: marking
+  id: HumanFacialHairLogan
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: logan
+
+- type: marking
+  id: HumanFacialHairTrocki
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: trocki

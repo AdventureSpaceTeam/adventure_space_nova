@@ -57,6 +57,22 @@
   - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch3.ogg
   - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch4.ogg 
 
+#Зависание
+- type: soundCollection
+  id: CrashCollectionSinth
+  files:
+  - /Audio/Adventure/Voice/IPC/SynthWindows.ogg
+  - /Audio/Adventure/Voice/IPC/SynthWindows2.ogg
+  - /Audio/Adventure/Voice/IPC/SynthWindows3.ogg
+  - /Audio/Adventure/Voice/IPC/SynthWindows4.ogg
+
+#Перезагрузка
+- type: soundCollection
+  id: RebootCollectionSinth
+  files:
+  - /Audio/Adventure/Voice/IPC/SynthReboot.ogg
+  - /Audio/Adventure/Voice/IPC/SynthReboot2.ogg
+
 #Смерть
 - type: emote
   id: SynthDeathgasp
@@ -88,6 +104,46 @@
     - завис
     - зависает
 
+#Перезагрузка
+- type: emote
+  id: Reboot
+  name: Перезагрузка
+  icon: Adventure/Interface/Emotes/reboot.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    - BorgChassis
+  chatMessages: ["перезагружается"]
+  chatTriggers:
+    - перезагружается
+    - перезагрузился
+    - производит перезагрузку
+
+#Загрузка
+- type: emote
+  id: Load
+  name: Загрузка
+  icon: Adventure/Interface/Emotes/load.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+    - BorgChassis
+  chatMessages: ["загружает"]
+  chatTriggers:
+    - загружает
+    - загружает информацию
+    - обрабатывает информацию
+    - проводит диагностику
+    - думает
+    - размышляет
+    - обрабатывает
+    - сканирует
+    - загружается
+
 #эмоции
 - type: emoteSounds
   id: SynthEmote
@@ -103,7 +159,11 @@
     Whistle:
       path: /Audio/Machines/twobeep.ogg
     Crash:
-      path: /Audio/Adventure/Voice/IPC/SynthWindows.ogg
+      collection: CrashCollectionSinth
+    Reboot:
+      collection: RebootCollectionSinth
+    Load:
+      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg
 
 - type: emoteSounds
   id: SynthBodyEmotes

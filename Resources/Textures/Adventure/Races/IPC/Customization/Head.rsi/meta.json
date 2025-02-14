@@ -20,7 +20,23 @@
       "directions": 4
     },
     {
+      "name": "antennaRight",
+      "directions": 4
+    },
+    {
+      "name": "antennaRight-unshaded",
+      "directions": 4
+    },
+    {
       "name": "antennas",
+      "directions": 4
+    },
+    {
+      "name": "antennaFront",
+      "directions": 4
+    },
+    {
+      "name": "antennaChappi",
       "directions": 4
     },
     {

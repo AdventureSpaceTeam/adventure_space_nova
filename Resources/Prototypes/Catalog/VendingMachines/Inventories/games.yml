@@ -20,3 +20,7 @@
     CardBox: 4 # Adventure
     PockerChipsBox: 2 # Adventure
     Shuffler: 1 # Adventure
+  contrabandInventory:
+    Basketball: 1
+    FoodSnackBoritos: 3
+    DrinkSpaceMountainWindCan: 3

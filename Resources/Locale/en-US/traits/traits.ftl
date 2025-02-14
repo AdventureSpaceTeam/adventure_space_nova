@@ -62,3 +62,6 @@ trait-spanish-desc = Hola señor, donde esta la biblioteca.
 
 trait-hypomania-name = Hypomania
 trait-hypomania-desc = From time to time, you experience bouts of uncontrollable laughter.
+
+trait-painnumbness-name = Numb
+trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.

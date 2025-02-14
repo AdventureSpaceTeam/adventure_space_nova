@@ -1,0 +1,171 @@
+# солнечный парус
+- type: entity
+  id: SolarSail
+  parent: SolarPanelBasePhysSprite
+  description: Большая солнечная панель?
+  name: солнечный парус
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/solar_sail.rsi
+    state: solar_panel_glass
+  - type: PowerMonitoringDevice
+    group: Generator
+    loadNode: output
+    sprite: Structures/Power/Generation/solar_panel.rsi
+    state: solar_tracker
+    collectionName: SolarPanel
+  - type: PowerSupplier
+    supplyRampTolerance: 500
+    supplyRampRate: 500
+  - type: SolarPanel
+    maxSupply: 20000
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.0,-1.0,1.0,1.0" 
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable, LowImpassable, BulletImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: solarsail_broken
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: Construction
+    graph: SolarSail
+    node: solarsail
+
+# солнечный парус сломанный
+- type: entity
+  id: SolarSailBroken
+  parent: SolarPanelBasePhysSprite
+  name: солнечный парус
+  description: Сломанный солнечный парус.
+  suffix: Сломанный
+  components:
+  - type: PowerMonitoringDevice
+    group: Generator
+    loadNode: output
+    sprite: Structures/Power/Generation/solar_panel.rsi
+    state: solar_tracker
+    collectionName: SolarPanel
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/solar_sail.rsi
+    state: solar_panel_glass_broken
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.0,-1.0,1.0,1.0" 
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable, LowImpassable, BulletImpassable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlass:
+            min: 8
+            max: 8
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: SolarSail
+    node: solarsail_broken
+
+# каркас солнечного паруса
+- type: entity
+  id: SolarSailAssembly
+  parent: SolarAssembly
+  name: каркас солнечного паруса
+  description: Это каркас солнечного паруса.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.0,-1.0,1.0,1.0" 
+        density: 1375
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/solar_sail.rsi
+    state: solar_assembly
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: Construction
+    graph: SolarSail
+    node: solarassembly
+
+# упаковка каркаса солнечного паруса
+- type: entity
+  parent: BaseFlatpack
+  id: SolarSailAssemblyFlatpack
+  name: упаковка каркаса солнечного паруса
+  description: Универсально-сборная упаковка, используемая для сборки каркаса солнечного паруса.
+  components:
+  - type: Flatpack
+    entity: SolarSailAssembly
+  - type: Sprite
+    layers:
+    - state: solar-assembly-part
+  - type: StaticPrice
+    price: 100
+
+# изучение и печать
+- type: latheRecipe
+  id: SolarSailAssemblyFlatpack
+  result: SolarSailAssemblyFlatpack
+  completetime: 4
+  materials:
+     Steel: 500
+     Glass: 1000
+
+- type: technology
+  id: SolarSail
+  name: Солнечные паруса
+  icon:
+    sprite: Structures/Power/Generation/solar_panel.rsi
+    state: solar_tracker
+  discipline: Industrial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - SolarSailAssemblyFlatpack

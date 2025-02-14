@@ -1,3 +1,7 @@
+using Robust.Shared.Network; // adventure new life
+using Content.Server.GameTicking.Events; // adventure new life
+using Content.Shared.Players; // adventure new life
+using Content.Shared._Adventure.Sponsors; // adventure new life
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration.Logs;
@@ -41,6 +45,8 @@ namespace Content.Server.Ghost
 {
     public sealed class GhostSystem : SharedGhostSystem
     {
+        private List<NetUserId> _respawned = new(); // adventure new life
+        [Dependency] private readonly ISponsorsManager _sponsors = default!; // adventure new life
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly IAdminLogManager _adminLog = default!;
         [Dependency] private readonly SharedEyeSystem _eye = default!;
@@ -75,6 +81,9 @@ namespace Content.Server.Ghost
 
             _ghostQuery = GetEntityQuery<GhostComponent>();
             _physicsQuery = GetEntityQuery<PhysicsComponent>();
+
+            SubscribeNetworkEvent<GhostRequestNewLifeEvent>(OnNewLifeRequest); // adventure new life
+            SubscribeLocalEvent<RoundStartingEvent>(OnRoundStart); // adventure new life
 
             SubscribeLocalEvent<GhostComponent, ComponentStartup>(OnGhostStartup);
             SubscribeLocalEvent<GhostComponent, MapInitEvent>(OnMapInit);
@@ -280,6 +289,30 @@ namespace Content.Server.Ghost
 
             _mind.UnVisit(actor.PlayerSession);
         }
+
+        // adventure new life begin
+        private void OnRoundStart(RoundStartingEvent ev)
+        {
+            RaiseNetworkEvent(new GhostRespawnedResponseEvent(false));
+            _respawned.Clear();
+        }
+
+        private void OnNewLifeRequest(GhostRequestNewLifeEvent msg, EntitySessionEventArgs args)
+        {
+            var session = args.SenderSession;
+            if (!(_sponsors.GetSponsor(session.UserId)?.AllowRespawn ?? true))
+                return;
+            if (_respawned.Contains(session.UserId))
+            {
+                RaiseNetworkEvent(new GhostRespawnedResponseEvent(true), args.SenderSession.Channel);
+                return;
+            }
+            _mind.WipeMind(session);
+            _gameTicker.Respawn(session);
+            _respawned.Add(session.UserId);
+            RaiseNetworkEvent(new GhostRespawnedResponseEvent(true), args.SenderSession.Channel);
+        }
+        // adventure new life end
 
         #region Warp
 

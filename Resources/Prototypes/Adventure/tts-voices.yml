@@ -904,3 +904,423 @@
   speaker: sophronia_franklin
   id: sophronia_franklin
 
+# DOTA2
+- type: ttsVoice
+  name: Abaddon
+  description: Голос персонажа из игры Dota 2
+  speaker: abaddon_dota_2
+  id: abaddon_dota_2
+
+- type: ttsVoice
+  name: Alchemist
+  description: Голос персонажа из игры Dota 2
+  speaker: alchemist_dota_2
+  id: alchemist_dota_2
+
+- type: ttsVoice
+  name: Anti-Mage
+  description: Голос персонажа из игры Dota 2
+  speaker: anti-mage_dota_2
+  id: anti-mage_dota_2
+
+- type: ttsVoice
+  name: Arc-Warden
+  description: Голос персонажа из игры Dota 2
+  speaker: arc_warden_dota_2
+  id: arc_warden_dota_2
+
+- type: ttsVoice
+  name: Batrider
+  description: Голос персонажа из игры Dota 2
+  speaker: batrider_dota_2
+  id: batrider_dota_2
+
+- type: ttsVoice
+  name: Bloodseeker
+  description: Голос персонажа из игры Dota 2
+  speaker: bloodseeker_dota_2
+  id: bloodseeker_dota_2
+
+- type: ttsVoice
+  name: Bounty Hunter
+  description: Голос персонажа из игры Dota 2
+  speaker: bounty_hunter_dota_2
+  id: bounty_hunter_dota_2
+
+- type: ttsVoice
+  name: Bristleback
+  description: Голос персонажа из игры Dota 2
+  speaker: bristleback_dota_2
+  id: bristleback_dota_2
+
+- type: ttsVoice
+  name: Broodmother
+  description: Голос персонажа из игры Dota 2
+  speaker: broodmother_dota_2
+  id: broodmother_dota_2
+
+- type: ttsVoice
+  name: Centaur-Warrunner
+  description: Голос персонажа из игры Dota 2
+  speaker: centaur_warrunner_dota_2
+  id: centaur_warrunner_dota_2
+
+- type: ttsVoice
+  name: Clinkz
+  description: Голос персонажа из игры Dota 2
+  speaker: clinkz_dota_2
+  id: clinkz_dota_2
+
+- type: ttsVoice
+  name: Clockwerk
+  description: Голос персонажа из игры Dota 2
+  speaker: clockwerk_dota_2
+  id: clockwerk_dota_2
+
+- type: ttsVoice
+  name: Crystal Maiden 
+  description: Голос персонажа из игры Dota 2
+  speaker: crystal_maiden_dota_2
+  id: crystal_maiden_dota_2
+
+- type: ttsVoice
+  name: Dazzle
+  description: Голос персонажа из игры Dota 2
+  speaker: dazzle_dota_2
+  id: dazzle_dota_2
+
+- type: ttsVoice
+  name: Disruptor
+  description: Голос персонажа из игры Dota 2
+  speaker: disruptor_dota_2
+  id: disruptor_dota_2
+
+- type: ttsVoice
+  name: Doom
+  description: Голос персонажа из игры Dota 2
+  speaker: doom_dota_2
+  id: doom_dota_2
+  
+- type: ttsVoice
+  name: Dragon Knight
+  description: Голос персонажа из игры Dota 2
+  speaker: dragon_knight_dota_2
+  id: dragon_knight_dota_2
+
+- type: ttsVoice
+  name: Dragon Knight Dragon
+  description: Голос персонажа из игры Dota 2
+  speaker: dragon_knight_dragon_dota_2
+  id: dragon_knight_dragon_dota_2
+
+- type: ttsVoice
+  name: Drow Ranger
+  description: Голос персонажа из игры Dota 2
+  speaker: drow_ranger_dota_2
+  id: drow_ranger_dota_2
+
+- type: ttsVoice
+  name: Earthshaker
+  description: Голос персонажа из игры Dota 2
+  speaker: earthshaker_dota_2
+  id: earthshaker_dota_2
+
+- type: ttsVoice
+  name: Ember Spirit
+  description: Голос персонажа из игры Dota 2
+  speaker: ember_spirit_dota_2
+  id: ember_spirit_dota_2
+
+- type: ttsVoice
+  name: Enigma
+  description: Голос персонажа из игры Dota 2
+  speaker: enigma_dota_2
+  id: enigma_dota_2
+
+- type: ttsVoice
+  name: Gyrocopter
+  description: Голос персонажа из игры Dota 2
+  speaker: gyrocopter_dota_2
+  id: gyrocopter_dota_2
+
+- type: ttsVoice
+  name: Huskar
+  description: Голос персонажа из игры Dota 2
+  speaker: huskar_dota_2
+  id: huskar_dota_2
+
+- type: ttsVoice
+  name: Invoker
+  description: Голос персонажа из игры Dota 2
+  speaker: invoker_dota_2
+  id: invoker_dota_2
+
+- type: ttsVoice
+  name: Juggernaut
+  description: Голос персонажа из игры Dota 2
+  speaker: juggernaut_dota_2
+  id: juggernaut_dota_2
+
+- type: ttsVoice
+  name: Keeper Of The Light
+  description: Голос персонажа из игры Dota 2
+  speaker: keeper_of_the_light_dota_2
+  id: keeper_of_the_light_dota_2
+
+- type: ttsVoice
+  name: Kunkka
+  description: Голос персонажа из игры Dota 2
+  speaker: kunkka_dota_2
+  id: kunkka_dota_2
+
+- type: ttsVoice
+  name: Legion Commander Demon
+  description: Голос персонажа из игры Dota 2
+  speaker: legion_commander_demon_dota_2
+  id: legion_commander_demon_dota_2
+
+- type: ttsVoice
+  name: Legion Commander
+  description: Голос персонажа из игры Dota 2
+  speaker: legion_commander_dota_2
+  id: legion_commander_dota_2
+
+- type: ttsVoice
+  name: Lich
+  description: Голос персонажа из игры Dota 2
+  speaker: lich_dota_2
+  id: lich_dota_2
+
+- type: ttsVoice
+  name: Lina
+  description: Голос персонажа из игры Dota 2
+  speaker: lina_dota_2
+  id: lina_dota_2
+
+- type: ttsVoice
+  name: Luna
+  description: Голос персонажа из игры Dota 2
+  speaker: luna_dota_2
+  id: luna_dota_2
+
+- type: ttsVoice
+  name: Lycan
+  description: Голос персонажа из игры Dota 2
+  speaker: lycan_dota_2
+  id: lycan_dota_2
+
+- type: ttsVoice
+  name: Lycan Wolf
+  description: Голос персонажа из игры Dota 2
+  speaker: lycan_wolf_dota_2
+  id: lycan_wolf_dota_2
+
+- type: ttsVoice
+  name: Meepo
+  description: Голос персонажа из игры Dota 2
+  speaker: meepo_dota_2
+  id: meepo_dota_2
+
+- type: ttsVoice
+  name: Mirana
+  description: Голос персонажа из игры Dota 2
+  speaker: mirana_dota_2
+  id: mirana_dota_2
+
+- type: ttsVoice
+  name: Monkey King
+  description: Голос персонажа из игры Dota 2
+  speaker: monkey_king_dota_2
+  id: monkey_king_dota_2
+
+- type: ttsVoice
+  name: Monkey King Crown
+  description: Голос персонажа из игры Dota 2
+  speaker: monkey_king_crown_dota_2
+  id: monkey_king_crown_dota_2
+
+- type: ttsVoice
+  name: Necrophos
+  description: Голос персонажа из игры Dota 2
+  speaker: necrophos_dota_2
+  id: necrophos_dota_2
+
+- type: ttsVoice
+  name: Nyx Assassin
+  description: Голос персонажа из игры Dota 2
+  speaker: nyx_assassin_dota_2
+  id: nyx_assassin_dota_2
+
+- type: ttsVoice
+  name: Omniknight
+  description: Голос персонажа из игры Dota 2
+  speaker: omniknight_dota_2
+  id: omniknight_dota_2
+
+- type: ttsVoice
+  name: Outworld Destroyer
+  description: Голос персонажа из игры Dota 2
+  speaker: outworld_destroyer_dota_2
+  id: outworld_destroyer_dota_2
+
+- type: ttsVoice
+  name: Phantom Assassin Arcana
+  description: Голос персонажа из игры Dota 2
+  speaker: phantom_assassin_arcana_dota_2
+  id: phantom_assassin_arcana_dota_2
+
+- type: ttsVoice
+  name: Phantom Assassin 
+  description: Голос персонажа из игры Dota 2
+  speaker: phantom_assassin_dota_2
+  id: phantom_assassin_dota_2
+
+- type: ttsVoice
+  name: Phantom Lancer
+  description: Голос персонажа из игры Dota 2
+  speaker: phantom_lancer_dota_2
+  id: phantom_lancer_dota_2
+
+- type: ttsVoice
+  name: Pudge
+  description: Голос персонажа из игры Dota 2
+  speaker: pudge_dota_2
+  id: pudge_dota_2
+
+- type: ttsVoice
+  name: Queen Of Pain
+  description: Голос персонажа из игры Dota 2
+  speaker: queen_of_pain_dota_2
+  id: queen_of_pain_dota_2
+
+- type: ttsVoice
+  name: Razor
+  description: Голос персонажа из игры Dota 2
+  speaker: razor_dota_2
+  id: razor_dota_2
+
+- type: ttsVoice
+  name: Riki
+  description: Голос персонажа из игры Dota 2
+  speaker: riki_dota_2
+  id: riki_dota_2
+
+- type: ttsVoice
+  name: Rubick
+  description: Голос персонажа из игры Dota 2
+  speaker: rubick_dota_2
+  id: rubick_dota_2
+
+- type: ttsVoice
+  name: Sand King
+  description: Голос персонажа из игры Dota 2
+  speaker: sand_king_dota_2
+  id: sand_king_dota_2
+
+- type: ttsVoice
+  name: Shadow Fiend
+  description: Голос персонажа из игры Dota 2
+  speaker: shadow_fiend_dota_2
+  id: shadow_fiend_dota_2
+
+- type: ttsVoice
+  name: Shadow Shaman
+  description: Голос персонажа из игры Dota 2
+  speaker: shadow_shaman_dota_2
+  id: shadow_shaman_dota_2
+
+- type: ttsVoice
+  name: Skywrath Mage
+  description: Голос персонажа из игры Dota 2
+  speaker: skywrath_mage_dota_2
+  id: skywrath_mage_dota_2
+
+- type: ttsVoice
+  name: Slardar
+  description: Голос персонажа из игры Dota 2
+  speaker: slardar_dota_2
+  id: slardar_dota_2
+
+- type: ttsVoice
+  name: Slark
+  description: Голос персонажа из игры Dota 2
+  speaker: slark_dota_2
+  id: slark_dota_2
+
+- type: ttsVoice
+  name: Spirit Breaker
+  description: Голос персонажа из игры Dota 2
+  speaker: spirit_breaker_dota_2
+  id: spirit_breaker_dota_2
+
+- type: ttsVoice
+  name: Storm Spirit
+  description: Голос персонажа из игры Dota 2
+  speaker: storm_spirit_dota_2
+  id: storm_spirit_dota_2
+
+- type: ttsVoice
+  name: Sven
+  description: Голос персонажа из игры Dota 2
+  speaker: sven_dota_2
+  id: sven_dota_2
+
+- type: ttsVoice
+  name: Templar Assassin
+  description: Голос персонажа из игры Dota 2
+  speaker: templar_assassin_dota_2
+  id: templar_assassin_dota_2
+
+- type: ttsVoice
+  name: Tidehunter
+  description: Голос персонажа из игры Dota 2
+  speaker: tidehunter_dota_2
+  id: tidehunter_dota_2
+
+- type: ttsVoice
+  name: Treant Protector
+  description: Голос персонажа из игры Dota 2
+  speaker: treant_protector_dota_2
+  id: treant_protector_dota_2
+
+- type: ttsVoice
+  name: Underlord
+  description: Голос персонажа из игры Dota 2
+  speaker: underlord_dota_2
+  id: underlord_dota_2
+
+- type: ttsVoice
+  name: Ursa
+  description: Голос персонажа из игры Dota 2
+  speaker: ursa_dota_2
+  id: ursa_dota_2
+
+- type: ttsVoice
+  name: Windranger
+  description: Голос персонажа из игры Dota 2
+  speaker: windranger_dota_2
+  id: windranger_dota_2
+
+- type: ttsVoice
+  name: Winter Wyvern
+  description: Голос персонажа из игры Dota 2
+  speaker: winter_wyvern_dota_2
+  id: winter_wyvern_dota_2
+
+- type: ttsVoice
+  name: Witch Doctor
+  description: Голос персонажа из игры Dota 2
+  speaker: witch_doctor_dota_2
+  id: witch_doctor_dota_2
+
+- type: ttsVoice
+  name: Wraith King
+  description: Голос персонажа из игры Dota 2
+  speaker: wraith_king_dota_2
+  id: wraith_king_dota_2
+
+- type: ttsVoice
+  name: Zeus
+  description: Голос персонажа из игры Dota 2
+  speaker: zeus_dota_2
+  id: zeus_dota_2

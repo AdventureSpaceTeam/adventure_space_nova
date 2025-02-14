@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "heart",
+      "directions": 4
+    },
+    {
+      "name": "HPbar",
+      "directions": 4
+    },
+    {
+      "name": "HPbarDouble",
+      "directions": 4
+    },
+    {
+      "name": "Light",
+      "directions": 4
+    }
+  ]
+}

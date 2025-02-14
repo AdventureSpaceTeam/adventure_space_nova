@@ -1,0 +1,215 @@
+# Generator
+- type: entity
+  parent: [ BaseGenerator, ConstructibleMachine ]
+  id: NuclearGenerator
+  name: ядерный генератор
+  description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.0,-1.0,1.0,1.0" 
+        density: 1500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: WarpPoint
+    follow: true
+    location: nuke generator
+  - type: PowerSupplier
+    supplyRate: 600000
+    supplyRampRate: 50000
+    supplyRampTolerance: 50000
+  - type: PointLight
+    radius: 3
+    energy: 2
+    color: "#97e05e"
+    castShadows: false
+    netsync: false
+  - type: RadiationReceiver
+  - type: ExaminableDamage
+    messages: NuclearGeneratorMessages
+  - type: Repairable
+    doAfterDelay: 10
+    damage:
+      groups:
+        Brute: -100
+        Burn: -100
+      types:
+        Radiation: -100  
+        Structural: -100 
+  - type: Damageable
+    damageContainer: StructuralInorganicNuclear
+    damageModifierSet: MetallicNuclear
+  - type: RadiationSource
+    slope: 1 
+    intensity: 5
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/NukeGen.rsi
+    layers:
+      - state: nukegen
+      - state: nukegen_on
+  - type: PowerMonitoringDevice
+    sprite: Adventure/Interface/Icons.rsi
+    state: nukegen
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/Effects/Grenades/Supermatter/supermatter_loop.ogg
+  - type: GuideHelp
+    guides:
+    - Power
+    - NuclearGenerator
+  - type: Machine
+    board: NuclearGeneratorMachineCircuitboard
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 850
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Corvax/Misc/siren.ogg
+            params:
+              volume: 5
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 900
+        behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            NuclearGeneratorDestr:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+
+# ModifierSet
+- type: damageContainer
+  id: StructuralInorganicNuclear
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+  - Structural
+  - Radiation
+
+- type: damageModifierSet
+  id: MetallicNuclear
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.7
+    Shock: 1.2
+    Structural: 0.5
+    Radiation: 0.2
+  flatReductions:
+    Blunt: 5
+    Heat: 5
+
+# Craft
+- type: entity
+  id: NuclearGeneratorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: ядерный генератор (машинная плата)
+  description: Печатная плата для ядерного генератора.
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: NuclearGenerator
+      stackRequirements:
+        Capacitor: 10
+        Steel: 30
+        CableHV: 30
+        Cable: 10
+        Uranium: 30
+        NukeActivator: 1
+
+- type: latheRecipe
+  id: NuclearGeneratorMachineCircuitboard
+  result: NuclearGeneratorMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 1000
+     Glass: 1000
+
+#изучение
+- type: technology
+  id: NukeGen
+  name: Ядерное энергоснабжение
+  icon:
+    sprite: Adventure/Interface/Icons.rsi
+    state: nukegen
+  discipline: Industrial
+  tier: 3
+  cost: 30000
+  recipeUnlocks:
+  - NuclearGeneratorMachineCircuitboard
+
+# уровни разрушения
+- type: examinableDamage
+  id: NuclearGeneratorMessages
+  messages:
+    - comp-nukegen-damaged-1
+    - comp-nukegen-damaged-2
+    - comp-nukegen-damaged-3
+    - comp-nukegen-damaged-4
+    - comp-nukegen-damaged-5
+    - comp-nukegen-damaged-6
+    - comp-nukegen-damaged-7
+    - comp-nukegen-damaged-8
+    - comp-nukegen-damaged-9
+    - comp-nukegen-damaged-10
+
+# источник радиации
+- type: entity
+  id: RadiationSource
+  components:
+  - type: Sprite
+  - type: RadiationSource
+    intensity: 70
+    slope: 1
+    enabled: true
+  - type: TimedDespawn
+    lifetime: 1800
+
+# ядерный активатор
+- type: entity
+  id: NukeActivator
+  name: ядерный активатор
+  parent: BaseStockPart
+  description: Плата для сборки ядерного генератора, активирующий процесс.
+  components:
+    - type: WarpPoint
+      follow: true
+      location: nuke activator
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: engineering
+    - type: Tag
+      tags:
+        - NukeActivator
+    - type: Stack
+      stackType: NukeActivator
+
+- type: Tag
+  id: NukeActivator
+
+- type: stack
+  id: NukeActivator
+  name: capacitor
+  icon: { sprite: /Textures/Objects/Misc/module.rsi, state: engineering }
+  spawn: NukeActivator
+  maxCount: 1

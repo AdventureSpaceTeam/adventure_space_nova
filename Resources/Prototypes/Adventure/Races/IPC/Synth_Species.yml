@@ -31,10 +31,9 @@
       defaultMarkings: [ SynthAntennas ]
     Snout:
       points: 1
-      required: true
-      defaultMarkings: [ SynthScreen ]
+      required: false
     Chest:
-      points: 1
+      points: 3
       required: false
     Legs:
       points: 4

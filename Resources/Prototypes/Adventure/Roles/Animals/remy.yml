@@ -1,0 +1,63 @@
+- type: entity
+  name: Реми
+  description: Питомец шеф-повара, маленький серый поварёнок, который мастерски балансирует между готовкой и уничтожением запасов кухни.
+  parent: MobMouse
+  suffix: Adventure
+  id: MobMouseRemy
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Adventure/Roles/remy.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: mouse
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mouse-moving
+    noMovementLayers:
+      movement:
+        state: mouse
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Реми, питомец шеф-повара
+    description: Слушайтесь шеф-повара и вдохновляйте его на шедевры. Боритесь с желанием слопать всё, что лежит на кухне, доказывая, что вы — крыса с высокой кулинарной дисциплиной.
+    rules: ghost-role-information-familiar-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+  - type: GhostTakeoverAvailable
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.03"
+    sprite: Adventure/Roles/remy.rsi
+    equippedPrefix: 0
+    quickEquip: false
+  - type: NpcFactionMember
+    factions:
+      - PetsNT
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      60: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: mouse
+      Critical:
+        Base: dead
+      Dead:
+        Base: splat
+
+- type: entity
+  id: HatChefNPCMouseRemy
+  parent: ClothingHeadHatChef
+  suffix: Remy
+  components:
+    - type: StorageFill
+      contents:
+        - id: MobMouseRemy

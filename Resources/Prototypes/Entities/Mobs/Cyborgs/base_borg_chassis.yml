@@ -156,6 +156,7 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+    allowedEmotes: ['Crash', 'Reboot', 'Load'] # Adventure
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
@@ -171,7 +172,6 @@
     - cell_slot
   - type: Lock
     locked: true
-    breakOnEmag: false
     unlockOnClick: false
   - type: ActivatableUIRequiresLock
   - type: LockedWiresPanel
@@ -338,6 +338,7 @@
   - type: MovementAlwaysTouching
   - type: Speech
     speechSounds: SyndieBorg
+    allowedEmotes: ['Crash', 'Reboot', 'Load'] # Adventure
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
