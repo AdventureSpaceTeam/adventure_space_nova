@@ -266,6 +266,7 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    - CircuitAdventureDynamic # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
