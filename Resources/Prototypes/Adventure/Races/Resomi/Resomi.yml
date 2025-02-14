@@ -68,6 +68,7 @@
     shiveringHeatRegulation: 500
     normalBodyTemperature: 293.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 25
+  - type: NoInteractionInHands
   - type: Temperature
     heatDamageThreshold: 298.15 # 25с - начинаем получать урон.
     coldDamageThreshold: 213
