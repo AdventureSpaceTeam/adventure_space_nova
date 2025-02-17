@@ -1,0 +1,79 @@
+# Оружие
+- type: entity
+  name: игрушечная china lake
+  parent: [BaseWeaponLauncher, BaseGunWieldable]
+  id: WeaponLauncherToyChinaLake
+  description: Выглядит почти как настоящая. Для любителей больших пушек.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Fun/toy_china_lake.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Adventure/Objects/Fun/toy_china_lake.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - SnapPop
+    capacity: 10
+    proto: SnapPop
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+
+# Проджектайл
+- type: entity
+  id: BulletSnapPop
+  name: петарда
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/toys.rsi
+    layers:
+    - state: snappop
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 0.01
+    intensitySlope: 1
+    totalIntensity: 0.01
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 0
+
+# Патрон, пока не пригодился
+# - type: entity
+#   id: GrenadeSnappop
+#   name: snappop grenade
+#   parent: BaseItem
+#   components:
+#   - type: CartridgeAmmo
+#     proto: BulletGrenadeSnappop
+#   - type: Sprite
+#     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+#     layers:
+#     - state: frag
+#       map: ["enum.AmmoVisualLayers.Base"]
+#   - type: Appearance
+#   - type: Item
+#     size: Small
+#   - type: Tag
+#     tags:
+#     - SnapGrenade
+
+# Тег
+- type: Tag
+  id: SnapPop

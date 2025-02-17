@@ -11,6 +11,15 @@
     size: Tiny
   - type: Damageable
     damageContainer: Inorganic
+# Adventure toys start
+  - type: CartridgeAmmo
+    proto: BulletSnapPop
+    deleteOnSpawn: true
+  - type: Appearance
+  - type: Tag
+    tags:
+    - SnapPop
+# Adventure toys end
   - type: Destructible
     thresholds:
     - trigger:
@@ -53,6 +62,6 @@
   - type: StorageFill
     contents:
       - id: SnapPop
-        amount: 5
+        amount: 10 # Adventure
   - type: Dumpable
 

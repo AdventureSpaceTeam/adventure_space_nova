@@ -578,6 +578,28 @@
   - !type:ListingLimitedStockCondition
    stock: 5
 
+- type: listing
+  id: UplinkSponsorCloth55
+  productEntity: SnapPopBox
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth56
+  productEntity: WeaponLauncherToyChinaLake
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
 - type: storePreset
   id: StorePresetSponsor
   storeName: Sponsor
@@ -626,5 +648,6 @@
 
 
 
-#Whims / last upd 02/12
-#Raidgo / last upd 21/12
+#Whims / last upd 02/12/24
+#Raidgo / last upd 21/12/24
+#Siginanto / last upd 17/02/25
