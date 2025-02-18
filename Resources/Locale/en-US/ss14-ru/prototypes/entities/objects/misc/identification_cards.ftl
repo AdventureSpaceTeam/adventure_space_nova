@@ -126,3 +126,9 @@ ent-SeniorOfficerIDCard = senior officer ID card
 ent-UniversalIDCard = universal ID card
     .desc = An ID card that gives you access beyond your wildest dreams.
     .suffix = Admin
+
+# Adventure
+ent-CLEAIDCard = CLEA Soldier ID card
+    .desc = { ent-IDCardStandard.desc }
+ent-CLEAOfficerIDCard = CLEA Officer ID card
+    .desc = { ent-IDCardStandard.desc }

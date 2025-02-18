@@ -50,6 +50,7 @@
     - type: GhostRole
       name: Солдат ЦСС
       description: Солдат отряда Центральных Силовых Структур. Пора решать проблемы.
+      job: CLEASoldier
     - type: GhostTakeoverAvailable
     - type: Loadout
       prototypes: [ CLEAGearBase ]
@@ -88,6 +89,7 @@
     - type: GhostRole
       name: Офицер ЦСС
       description: Офицер отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
+      job: CLEAOfficer
     - type: GhostTakeoverAvailable
     - type: Loadout
       prototypes: [ CLEAGearOfficerBase ]
@@ -214,3 +216,41 @@
     - type: RandomHumanoidSpawner
       settings: CLEABaseEVA
     - type: AntagImmune
+
+# Джобки
+
+- type: playTimeTracker
+  id: JobCLEAOfficer
+
+- type: playTimeTracker
+  id: JobCLEASoldier
+
+- type: job
+  id: CLEAOfficer
+  name: Офицер ЦСС
+  description: Офицер отряда Центральных Силовых Структур. Пора решать проблемы.
+  playTimeTracker: JobCLEAOfficer
+  setPreference: false
+  startingGear: CLEAGearOfficerBase
+  icon: "JobIconCLEA"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+- type: job
+  id: CLEASoldier
+  name: Солдат ЦСС
+  description: Солдат отряда Центральных Силовых Структур. Пора решать проблемы.
+  playTimeTracker: JobCLEASoldier
+  setPreference: false
+  startingGear: CLEAGearBase
+  icon: "JobIconCLEA"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand

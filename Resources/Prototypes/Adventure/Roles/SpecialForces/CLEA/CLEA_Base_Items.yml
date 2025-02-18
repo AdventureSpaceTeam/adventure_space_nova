@@ -2,8 +2,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCLEA
-  name: Комбинезон ЦСС
-  description: теперь в новой цветовой гамме!
+  name: комбинезон ЦСС
+  description: Теперь в новой цветовой гамме!
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_uniform.rsi
@@ -14,8 +14,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHelmetCLEA
-  name: Шлем ЦСС
-  description: им можно колоть орехи
+  name: шлем ЦСС
+  description: Им можно колоть орехи.
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_Helmet.rsi
@@ -36,7 +36,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadBaseCapCLEA
-  name: Кепка офицера ЦСС
+  name: кепка офицера ЦСС
   description: Повседневный головной убор ЦСС.
   components:
   - type: Sprite
@@ -46,7 +46,7 @@
 
 #Гарнитура-наушники ЦСС
 - type: entity
-  name: Гарнитура-наушники ЦСС
+  name: гарнитура-наушники ЦСС
   parent: ClothingHeadsetAltCentCom
   id: CLEAHeadsetAlt
   description: Гарнитура, оснащенная подавляющими наушниками.
@@ -61,7 +61,7 @@
   parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons]
   id: ClothingEyesGlassesCLEA
   description: Очки, защищающие глаза от яркого света.
-  name: Защитные очки ЦСС
+  name: защитные очки ЦСС
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_glasses.rsi
@@ -75,7 +75,7 @@
 - type: entity
   parent: ClothingHandsGlovesColorBlack
   id: ClothingHandsGlovesCLEA
-  name: Боевые перчатки ЦСС
+  name: боевые перчатки ЦСС
   description: Тактический перчатки элитных солдат.
   components:
   - type: Sprite
@@ -90,8 +90,8 @@
 - type: entity
   parent: ClothingMaskGas
   id: ClothingMaskCLEA
-  name: Противогаз ЦСС
-  description: не освежает дыхание
+  name: противогаз ЦСС
+  description: Не освежает дыхание.
   components:
   - type: Item
     size: Tiny
@@ -120,7 +120,7 @@
   parent: [ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase]
   id: ClothingBeltMilitaryWebbingCLEA
   name: РПС ЦСС
-  description: не сковывает движений!
+  description: Не сковывает движений!
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_Webbing.rsi
@@ -133,7 +133,7 @@
 - type: entity
   parent: ClothingOuterBaseMedium
   id: ClothingOuterArmorCLEA
-  name: Боевой Бронежилет ЦСС
+  name: боевой бронежилет ЦСС
   description: Стандартный армейский бронежилет.
   components:
   - type: Sprite
@@ -155,7 +155,8 @@
 - type: entity
   parent: ClothingBackpackSecurity
   id: ClothingMilitaryBackpackCLEA
-  name: Рюкзак ЦСС
+  name: рюкзак ЦСС
+  description: Это очень робастный рюкзак.
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_BackPack.rsi
@@ -178,16 +179,10 @@
     layers:
     - state: silver
     - state: idCLEA
-  - type: IdCard
-    jobTitle: Солдат ЦСС
-    jobIcon: JobIconCLEA
+  - type: PresetIdCard
+    job: CLEASoldier
   - type: Item
     heldPrefix: silver
-  - type: Access
-    groups:
-    - AllAccess
-    tags:
-    - CentralCommand
 
 #ID карта офицера ЦСС
 - type: entity
@@ -200,23 +195,17 @@
     layers:
     - state: silver
     - state: idCLEA
-  - type: IdCard
-    jobTitle: Офицер ЦСС
-    jobIcon: JobIconCLEA
+  - type: PresetIdCard
+    job: CLEAOfficer
   - type: Item
     heldPrefix: silver
-  - type: Access
-    groups:
-    - AllAccess
-    tags:
-    - CentralCommand
 
 #КПК солдата ЦСС
 - type: entity
   parent: BasePDA
   id: CLEAPDA
   name: КПК Солдата ЦСС
-  description: не такой робастный, как у отряда быстрого реагирования
+  description: Не такой робастный, как у отряда быстрого реагирования.
   components:
   - type: Pda
     id: CLEAIDCard
@@ -235,7 +224,7 @@
   parent: BasePDA
   id: CLEAOfficerPDA
   name: КПК Офицера ЦСС
-  description: не такой робастный, как у отряда быстрого реагирования
+  description: Не такой робастный, как у отряда быстрого реагирования.
   components:
   - type: Pda
     id: CLEAOfficerIDCard
@@ -253,8 +242,8 @@
 - type: entity
   parent: ClothingOuterHardsuitSecurity
   id: ClothingOuterHardsuitCLEA
-  name: Скафандр солдата ЦСС
-  description: базовый боевой скафандр центральных силовых структур
+  name: скафандр солдата ЦСС
+  description: Базовый боевой скафандр центральных силовых структур.
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit.rsi
@@ -282,8 +271,8 @@
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHardsuitCLEA
-  name: Шлем скафандра солдата ЦСС
-  description: таким шлемом можно колоть орехи
+  name: шлем скафандра солдата ЦСС
+  description: Таким шлемом можно колоть орехи.
   components:
   - type: BreathMask
   - type: Sprite
@@ -298,8 +287,8 @@
 - type: entity
   parent: ClothingOuterHardsuitSecurity
   id: ClothingOuterHardsuitCLEAOfficer
-  name: Скафандр офицера ЦСС
-  description: базовый боевой скафандр центральных силовых структур
+  name: скафандр офицера ЦСС
+  description: Базовый боевой скафандр центральных силовых структур.
   components:
   - type: Sprite
     sprite: Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit_Officer.rsi
@@ -327,8 +316,8 @@
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHardsuitCLEAOfficer
-  name: Шлем скафандра офицера ЦСС
-  description: таким шлемом можно колоть орехи
+  name: шлем скафандра офицера ЦСС
+  description: Таким шлемом можно колоть орехи.
   components:
   - type: BreathMask
   - type: Sprite
