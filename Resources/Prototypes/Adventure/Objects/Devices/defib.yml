@@ -1,0 +1,141 @@
+- type: entity
+  id: DefibrillatorCompactADV
+  parent: [ BaseDefibrillator, PowerCellSlotMediumItem ]
+  name: карманный дефибриллятор
+  description: Компактнее некуда!
+  suffix: Adventure
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Devices/defib_compact.rsi
+    layers:
+      - state: defibcompact
+      - state: defibcompact-powered
+        map: [ "enum.ToggleVisuals.Layer" ]
+        visible: false
+        shader: unshaded
+  - type: MultiHandedItem
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: ToggleCellDraw
+  - type: PowerCellDraw
+    useRate: 100
+  - type: Defibrillator
+    zapHeal:
+      types:
+        Asphyxiation: -40
+    doAfterDuration: 3
+  - type: DoAfter
+  - type: UseDelay
+
+- type: entity
+  id: DefibrillatorCompactADVEmpty
+  parent: DefibrillatorCompactADV
+  suffix: Empty, Adventure
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: entity
+  id: DefibrillatorCMOAdv
+  parent: BaseDefibrillator
+  name: продвинутый карманный дефибриллятор
+  description: Компактнее некуда! Теперь и с микрореакторной батареей и встроенным шокером!
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Devices/defib_nt.rsi
+    layers:
+      - state: defibnt
+  - type: MultiHandedItem
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Defibrillator
+    zapHeal:
+      types:
+        Asphyxiation: -40
+    doAfterDuration: 2
+  - type: StunDefib
+    energyPerUse: 120
+  - type: DoAfter
+  - type: UseDelay
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 2
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedDamage:
+      types:
+        Blunt: 2
+        Shock: 5
+  - type: StaminaDamageOnHit
+    damage: 20
+  - type: Battery
+    maxCharge: 720
+    startingCharge: 720
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 6
+  - type: ExaminableBattery
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: DefibrillatorCMOAdv
+
+- type: entity
+  id: DefibrillatorSyndicateAdv
+  parent: DefibrillatorCompactADV
+  name: карманный дефибриллятор Интердайн
+  description: По совместительству является оружием самообороны для лиц склонных к военным преступлениям.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Devices/defib_synd.rsi
+    layers:
+      - state: defibcombat
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedDamage:
+      types:
+        Blunt: 8
+        Shock: 16
+  - type: Defibrillator
+    zapHeal:
+      types:
+        Asphyxiation: -40
+    doAfterDuration: 5
+
+# Рецепт
+- type: latheRecipe
+  id: DefibrillatorCompactADV
+  result: DefibrillatorCompactADVEmpty
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 500
+    Glass: 400

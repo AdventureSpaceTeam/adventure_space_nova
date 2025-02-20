@@ -1,3 +1,6 @@
+# Adventure target
+steal-target-groups-cmo-compact-defibrillator = advanced compact defibrillator
+
 # Traitor single items
 steal-target-groups-hypospray = hypospray
 steal-target-groups-handheld-crew-monitor = handheld crew monitor

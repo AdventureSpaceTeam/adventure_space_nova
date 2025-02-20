@@ -303,7 +303,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: DefibrillatorSyndicate
+      - id: DefibrillatorSyndicateAdv # Adventure
       - id: MedkitCombatFilled
         amount: 4
       - id: Tourniquet

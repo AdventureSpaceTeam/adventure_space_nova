@@ -222,6 +222,7 @@
     - id: ClothingMaskSterile
     - id: DoorRemoteMedical
     - id: HandheldCrewMonitor
+    - id: DefibrillatorCMOAdv # Adventure
     - id: Hypospray
     - id: MedicalTechFabCircuitboard
     - id: MedkitFilled

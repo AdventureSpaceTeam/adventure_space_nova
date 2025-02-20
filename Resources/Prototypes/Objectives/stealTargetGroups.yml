@@ -7,12 +7,12 @@
     sprite: Objects/Specific/Medical/hypospray.rsi
     state: hypo
 
-- type: stealTargetGroup
-  id: HandheldCrewMonitor
-  name: steal-target-groups-handheld-crew-monitor
-  sprite:
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
+# Adventure- type: stealTargetGroup
+# Adventure  id: HandheldCrewMonitor
+# Adventure  name: steal-target-groups-handheld-crew-monitor
+# Adventure  sprite:
+# Adventure    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+# Adventure    state: scanner
 
 - type: stealTargetGroup
   id: ClothingOuterHardsuitRd
@@ -83,6 +83,15 @@
   sprite:
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
     state: base
+
+#Adventure
+
+- type: stealTargetGroup
+  id: DefibrillatorCMOAdv
+  name: steal-target-groups-cmo-compact-defibrillator
+  sprite:
+    sprite: Adventure/Objects/Devices/defib_nt.rsi
+    state: defibnt
 
 # Thief Collection
 

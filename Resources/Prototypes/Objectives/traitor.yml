@@ -156,12 +156,19 @@
   - type: StealCondition
     stealGroup: Hypospray
 
-- type: entity
+# Adventure- type: entity
+# Adventure  parent: BaseCMOStealObjective
+# Adventure  id: CMOCrewMonitorStealObjective
+# Adventure  components:
+# Adventure  - type: StealCondition
+# Adventure    stealGroup: HandheldCrewMonitor
+
+- type: entity # Adventure
   parent: BaseCMOStealObjective
-  id: CMOCrewMonitorStealObjective
+  id: CMODefibrillatorStealObjective
   components:
   - type: StealCondition
-    stealGroup: HandheldCrewMonitor
+    stealGroup: DefibrillatorCMOAdv
 
 ## rd
 
