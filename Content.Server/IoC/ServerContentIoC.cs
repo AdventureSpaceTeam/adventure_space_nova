@@ -1,3 +1,4 @@
+using Content.Server.Adventure.DiscordAuth; // adventure discord auth
 using Content.Server._Adventure.TTS; // c4llv07e tts
 using Content.Server._Adventure.Sponsors; // c4llv07e sponsors
 using Content.Shared._Adventure.Sponsors; // c4llv07e sponsors
@@ -42,6 +43,7 @@ namespace Content.Server.IoC
     {
         public static void Register()
         {
+            IoCManager.Register<DiscordAuthBotManager>(); // adventure discord auth
             IoCManager.Register<TTSManager>(); // c4llv07e tts
             IoCManager.Register<ISponsorsManager, SponsorsManager>(); // c4llv07e sponsors
             IoCManager.Register<SponsorsManager>(); // c4llv07e sponsors

@@ -1,3 +1,4 @@
+using Content.Server.Adventure.DiscordAuth; // adventure discord auth
 using Content.Server._Adventure.TTS; // c4llv07e tts
 using Content.Server._Adventure.Sponsors; // c4llv07e sponsors
 using Content.Server._RMC14.Mentor; // c4llv07e sponsors
@@ -119,6 +120,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<SponsorsManager>().Initialize(); // c4llv07e sponsors
                 IoCManager.Resolve<AdventureConfigManager>().Initialize(); // AdvSpace Config
                 IoCManager.Resolve<AdventurePresetManager>().Initialize(); // AdvSpace Preset
+                IoCManager.Resolve<DiscordAuthBotManager>().Initialize(); // adventure discord auth
 
                 _voteManager.Initialize();
                 _updateManager.Initialize();
