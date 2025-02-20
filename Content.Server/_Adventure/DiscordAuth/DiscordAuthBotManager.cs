@@ -1,3 +1,6 @@
+using Content.Shared._Adventure.ACVar;
+using Robust.Shared.Configuration;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Net.Http;
 using System.Net;
@@ -12,24 +15,36 @@ namespace Content.Server.Adventure.DiscordAuth;
 public sealed class DiscordAuthBotManager
 {
     public ISawmill _sawmill = default!;
+    public IConfigurationManager _cfg = default!;
     public HttpListener listener = default!;
-    public static HttpClient discordClient = default!; = new()
+    public string listeningUrl = string.Empty;
+    public static HttpClient discordClient = new()
     {
-        // BaseAddress = new Uri("https://c4llv07e.requestcatcher.com"),
         BaseAddress = new Uri("https://discord.com/api/v10")
     };
 
     public void Initialize()
     {
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("discord_auth");
+        _cfg = IoCManager.Resolve<IConfigurationManager>();
+        _cfg.OnValueChanged(ACVars.DiscordAuthClientId, _ => UpdateAuthHeader(), false);
+        _cfg.OnValueChanged(ACVars.DiscordAuthClientSecret, _ => UpdateAuthHeader(), true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthListeningUrl, url => listeningUrl = url, true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthDebugApiUrl, url => discordClient.BaseAddress = new Uri(url), true);
+        listener = new HttpListener();
+        listener.Prefixes.Add(listeningUrl);
+        listener.Start();
+        Task.Run(ListenerThread);
+    }
+
+    public void UpdateAuthHeader()
+    {
+        var client_id = _cfg.GetCVar(ACVars.DiscordAuthClientId);
+        var client_secret = _cfg.GetCVar(ACVars.DiscordAuthClientSecret);
         discordClient.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue(
                 "Basic",
-                Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{yourusername}:{yourpwd}")));
-        listener = new HttpListener();
-        listener.Prefixes.Add("http://localhost:3963/");
-        listener.Start();
-        Task.Run(ListenerThread);
+                Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{client_id}:{client_secret}")));
     }
 
     public void WriteStringStream(HttpListenerResponse resp, string text)
@@ -64,7 +79,7 @@ public sealed class DiscordAuthBotManager
 
             rqArgs["grant_type"] = "authorization_code";
             rqArgs["code"] = code;
-            rqArgs["redirect_uri"] = "http://localhost:3963/";
+            rqArgs["redirect_uri"] = listeningUrl;
 
             Console.WriteLine("Sending request");
             using var msg = new HttpRequestMessage(HttpMethod.Post, "oauth2/token")
@@ -73,11 +88,12 @@ public sealed class DiscordAuthBotManager
             };
             using HttpResponseMessage response = await discordClient.SendAsync(msg);
             Console.WriteLine("Request sent");
-            var str = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"str: {str}");
+            // var str = await response.Content.ReadAsStringAsync();
+            // Console.WriteLine($"str: {str}");
+            // TODO(c4): ReadFromJson not working, understand why
             var tokenStruct = await response.Content.ReadFromJsonAsync<TokenResponse>();
 
-            Console.WriteLine($"{tokenStruct}, {tokenStruct?.TokenType} {tokenStruct?.AccessToken}");
+            Console.WriteLine($"{tokenStruct}, {tokenStruct?.token_type} {tokenStruct?.access_token}");
 
             resp.StatusCode = (int) HttpStatusCode.OK;
             resp.StatusDescription = "OK";
@@ -103,9 +119,9 @@ public sealed class DiscordAuthBotManager
         string redirect_uri);
 
     public record class TokenResponse(
-        string TokenType = "Bearer",
-        string? AccessToken = null,
-        int ExpiresIn = 0,
-        string? RefreshToken = null,
-        string Scope = "identify");
+        string token_type = "Bearer",
+        string? access_token = null,
+        int expires_in = 0,
+        string? refresh_token = null,
+        string scope = "identify");
 }
