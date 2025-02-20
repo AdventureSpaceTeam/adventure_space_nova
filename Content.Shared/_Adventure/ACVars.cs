@@ -119,4 +119,21 @@ public sealed class ACVars : CVars
     /// </summary>
     public static readonly CVarDef<string> DiscordBanWebhook =
         CVarDef.Create("discord.ban_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /*
+     * Discord auth
+     */
+
+    // Doesn't hot-reload, you need to restart server when this value changes.
+    public static readonly CVarDef<string> DiscordAuthListeningUrl =
+        CVarDef.Create("discord_auth.listening_url", "http://localhost:3963/", CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> DiscordAuthClientId =
+        CVarDef.Create("discord_auth.client_id", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    public static readonly CVarDef<string> DiscordAuthClientSecret =
+        CVarDef.Create("discord_auth.client_secret", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    public static readonly CVarDef<string> DiscordAuthDebugApiUrl =
+        CVarDef.Create("discord_auth.debug_api_url", "https://discord.com/api/v10", CVar.SERVERONLY);
 }
