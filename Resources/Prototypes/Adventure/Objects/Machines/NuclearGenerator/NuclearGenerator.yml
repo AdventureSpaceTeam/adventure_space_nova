@@ -176,6 +176,7 @@
 # источник радиации
 - type: entity
   id: RadiationSource
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
   - type: RadiationSource

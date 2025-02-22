@@ -5,6 +5,7 @@
   name: ядерный генератор
   suffix: Сломанный НЕ СПАВНИТЬ
   description: Невероятно мощный генератор, излучающий радиоактивную энергию для длительного энергоснабжения.
+  categories: [ HideSpawnMenu ]
   components:
   - type: Fixtures
     fixtures:
