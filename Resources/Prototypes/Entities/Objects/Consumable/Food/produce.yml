@@ -50,6 +50,8 @@
         reagents:
         - ReagentId: Flour
           Quantity: 10
+        - ReagentId: Zlaki # Adventure-PIVO
+          Quantity: 2
   - type: Produce
     seedId: wheat
   - type: Tag
