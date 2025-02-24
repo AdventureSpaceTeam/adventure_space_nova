@@ -274,3 +274,28 @@
   - type: Sprite
     sprite: Adventure/sponsor_uplink/16.rsi
 
+# bork
+
+- type: entity
+  parent: [ClothingUniformBase]
+  id: ClothingUniformJumpsuitJeans
+  name: рваные джинсы
+  description: Самый что ни есть Old-School.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/jeans.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/jeans.rsi  
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterPunkJacket
+  name: косуха
+  description: Натуральная кожа и сталь, ну прям крутизна.
+  suffix: Sponsor
+  components:
+  - type: Sprite
+    sprite: Adventure/sponsor_uplink/Punk_jacket.rsi
+  - type: Clothing
+    sprite: Adventure/sponsor_uplink/Punk_jacket.rsi

@@ -31,6 +31,46 @@
     - sprite: Adventure/Races/Human_hair.rsi
       state: topknot
 
+- type: marking
+  id: HumanHairPunkSmall
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: punk_small
+
+- type: marking
+  id: HumanHairPunkShaggy
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: punk_shaggy
+
+- type: marking
+  id: HumanHairPunkSpike
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: punk_spike
+
+- type: marking
+  id: HumanHairPunkTail
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: punk_tail
+
+- type: marking
+  id: HumanHairPunkGorshok
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: Gorshok
+
 # бороды
 - type: marking
   id: HumanFacialHairDED

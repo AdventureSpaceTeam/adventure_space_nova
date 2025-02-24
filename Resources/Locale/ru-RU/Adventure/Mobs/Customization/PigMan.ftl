@@ -10,7 +10,9 @@ marking-PigHippies = Троттин, Борода (Грязный хиппи)
 marking-PigLongHeir = Троттин, Борода (Старец)
 marking-PigDwarf = Троттин, Борода (Дварфская)
 marking-PigSkipper = Троттин, Борода (Подбородок)
-
+marking-PigDed = Троттин, Борода (Борода деда)
+marking-PigShetina = Троттин, Борода (Щетина)
+marking-PigBigBeard = Троттин, Борода (Широкий подбородок)
 
 
 

@@ -600,6 +600,22 @@
   - !type:ListingLimitedStockCondition
    stock: 1
 
+- type: listing
+  id: UplinkSponsorCloth57
+  productEntity: ClothingUniformJumpsuitJeans
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
+- type: listing
+  id: UplinkSponsorCloth58
+  productEntity: ClothingOuterPunkJacket
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
 - type: storePreset
   id: StorePresetSponsor
   storeName: Sponsor

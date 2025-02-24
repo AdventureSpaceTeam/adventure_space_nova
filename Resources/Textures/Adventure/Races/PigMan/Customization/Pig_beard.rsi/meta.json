@@ -38,6 +38,18 @@
     {
       "name": "shkeper",
       "directions": 4
+    },
+    {
+      "name": "pigded",
+      "directions": 4
+    },
+    {
+      "name": "shetina",
+      "directions": 4
+    },
+    {
+      "name": "hrac",
+      "directions": 4
     }
   ]
 }

@@ -69,3 +69,30 @@
   sprites:
     - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
       state: shkeper
+
+- type: marking
+  id: PigDed
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: pigded
+
+- type: marking
+  id: PigShetina
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: shetina
+
+- type: marking
+  id: PigBigBeard
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesRestriction: [PigMan]
+  sprites:
+    - sprite: Adventure/Races/PigMan/Customization/Pig_beard.rsi
+      state: hrac

@@ -38,6 +38,26 @@
     {
       "name": "topknot",
       "directions": 4
+    },
+    {
+      "name": "punk_small",
+      "directions": 4
+    },
+    {
+      "name": "punk_shaggy",
+      "directions": 4
+    },
+    {
+      "name": "punk_spike",
+      "directions": 4
+    },
+    {
+      "name": "Gorshok",
+      "directions": 4
+    },
+    {
+      "name": "punk_tail",
+      "directions": 4
     }
   ]
 }
