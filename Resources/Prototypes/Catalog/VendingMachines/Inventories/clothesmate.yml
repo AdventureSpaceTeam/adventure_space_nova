@@ -196,6 +196,23 @@
     ClothingElegantDressPink: 2
     ClothingElegantDressBlack: 2
     ClothingElegantDressGreen: 2
+    # Adventure Brass-Pants NO ERP - Стринги через лодаут пж.
+    BaseClothingBrass: 1
+    ClothingBrassBlack: 1
+    ClothingBrassOrange: 1
+    ClothingBrassGreen: 1
+    ClothingBrassCyan: 1
+    ClothingBrassBlue: 1
+    ClothingBrassRed: 1
+    ClothingBrassPink: 
+    BaseClothingPants: 1
+    ClothingPantsBlack: 1
+    ClothingPantsOrange: 1
+    ClothingPantsGreen: 1
+    ClothingPantsCyan: 1
+    ClothingPantsBlue: 1
+    ClothingPantsRed: 1
+    ClothingPantsPink: 1
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1

@@ -150,6 +150,16 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -176,6 +186,16 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -211,6 +231,16 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -237,3 +267,13 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit

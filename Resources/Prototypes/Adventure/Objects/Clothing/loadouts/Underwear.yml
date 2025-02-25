@@ -1,0 +1,321 @@
+#Лифоны
+- type: loadout
+  id: BaseClothingBrass
+  equipment:
+    brass: BaseClothingBrass
+
+- type: loadout
+  id: ClothingBrassBlack
+  equipment:
+    brass: ClothingBrassBlack
+
+- type: loadout
+  id: ClothingBrassOrange
+  equipment:
+    brass: ClothingBrassOrange
+
+- type: loadout
+  id: ClothingBrassGreen
+  equipment:
+    brass: ClothingBrassGreen
+
+- type: loadout
+  id: ClothingBrassCyan
+  equipment:
+    brass: ClothingBrassCyan
+
+- type: loadout
+  id: ClothingBrassBlue
+  equipment:
+    brass: ClothingBrassBlue
+
+- type: loadout
+  id: ClothingBrassRed
+  equipment:
+    brass: ClothingBrassRed
+
+- type: loadout
+  id: ClothingBrassPink
+  equipment:
+    brass: ClothingBrassPink
+
+- type: loadout
+  id: ClothingBrassWhite
+  equipment:
+    brass: ClothingBrassWhite
+
+- type: loadout
+  id: ClothingBrassBlack2
+  equipment:
+    brass: ClothingBrassBlack2
+
+- type: loadout
+  id: ClothingBrassOrange2
+  equipment:
+    brass: ClothingBrassOrange2
+
+- type: loadout
+  id: ClothingBrassGreen2
+  equipment:
+    brass: ClothingBrassGreen2
+
+- type: loadout
+  id: ClothingBrassCyan2
+  equipment:
+    brass: ClothingBrassCyan2
+
+- type: loadout
+  id: ClothingBrassBlue2
+  equipment:
+    brass: ClothingBrassBlue2
+
+- type: loadout
+  id: ClothingBrassRed2
+  equipment:
+    brass: ClothingBrassRed2
+
+- type: loadout
+  id: ClothingBrassPink2
+  equipment:
+    brass: ClothingBrassPink2
+
+- type: loadout
+  id: ClothingBrassWhite3
+  equipment:
+    brass: ClothingBrassWhite3
+
+- type: loadout
+  id: ClothingBrassBlack3
+  equipment:
+    brass: ClothingBrassBlack3
+
+- type: loadout
+  id: ClothingBrassOrange3
+  equipment:
+    brass: ClothingBrassOrange3
+
+- type: loadout
+  id: ClothingBrassGreen3
+  equipment:
+    brass: ClothingBrassGreen3
+
+- type: loadout
+  id: ClothingBrassCyan3
+  equipment:
+    brass: ClothingBrassCyan3
+
+- type: loadout
+  id: ClothingBrassBlue3
+  equipment:
+    brass: ClothingBrassBlue3
+
+- type: loadout
+  id: ClothingBrassRed3
+  equipment:
+    brass: ClothingBrassRed3
+
+- type: loadout
+  id: ClothingBrassPink3
+  equipment:
+    brass: ClothingBrassPink3
+
+- type: loadout
+  id: ClothingBrassWhite4
+  equipment:
+    brass: ClothingBrassWhite4
+
+- type: loadout
+  id: ClothingBrassBlack4
+  equipment:
+    brass: ClothingBrassBlack4
+
+- type: loadout
+  id: ClothingBrassOrange4
+  equipment:
+    brass: ClothingBrassOrange4
+
+- type: loadout
+  id: ClothingBrassGreen4
+  equipment:
+    brass: ClothingBrassGreen4
+
+- type: loadout
+  id: ClothingBrassCyan4
+  equipment:
+    brass: ClothingBrassCyan4
+
+- type: loadout
+  id: ClothingBrassBlue4
+  equipment:
+    brass: ClothingBrassBlue4
+
+- type: loadout
+  id: ClothingBrassRed4
+  equipment:
+    brass: ClothingBrassRed4
+
+- type: loadout
+  id: ClothingBrassPink4
+  equipment:
+    brass: ClothingBrassPink4
+
+#Трусы
+- type: loadout
+  id: BaseClothingPants
+  equipment:
+    pants: BaseClothingPants
+
+- type: loadout
+  id: ClothingPantsBlack
+  equipment:
+    pants: ClothingPantsBlack
+
+- type: loadout
+  id: ClothingPantsOrange
+  equipment:
+    pants: ClothingPantsOrange
+
+- type: loadout
+  id: ClothingPantsGreen
+  equipment:
+    pants: ClothingPantsGreen
+
+- type: loadout
+  id: ClothingPantsCyan
+  equipment:
+    pants: ClothingPantsCyan
+
+- type: loadout
+  id: ClothingPantsBlue
+  equipment:
+    pants: ClothingPantsBlue
+
+- type: loadout
+  id: ClothingPantsRed
+  equipment:
+    pants: ClothingPantsRed
+
+- type: loadout
+  id: ClothingPantsPink
+  equipment:
+    pants: ClothingPantsPink
+
+- type: loadout
+  id: ClothingPantsWhite
+  equipment:
+    pants: ClothingPantsWhite
+
+- type: loadout
+  id: ClothingPantsBlack2
+  equipment:
+    pants: ClothingPantsBlack2
+
+- type: loadout
+  id: ClothingPantsOrange2
+  equipment:
+    pants: ClothingPantsOrange2
+
+- type: loadout
+  id: ClothingPantsGreen2
+  equipment:
+    pants: ClothingPantsGreen2
+
+- type: loadout
+  id: ClothingPantsCyan2
+  equipment:
+    pants: ClothingPantsCyan2
+
+- type: loadout
+  id: ClothingPantsBlue2
+  equipment:
+    pants: ClothingPantsBlue2
+
+- type: loadout
+  id: ClothingPantsRed2
+  equipment:
+    pants: ClothingPantsRed2
+
+- type: loadout
+  id: ClothingPantsPink2
+  equipment:
+    pants: ClothingPantsPink2
+
+- type: loadout
+  id: ClothingPantsWhite3
+  equipment:
+    pants: ClothingPantsWhite3
+
+- type: loadout
+  id: ClothingPantsBlack3
+  equipment:
+    pants: ClothingPantsBlack3
+
+- type: loadout
+  id: ClothingPantsOrange3
+  equipment:
+    pants: ClothingPantsOrange3
+
+- type: loadout
+  id: ClothingPantsGreen3
+  equipment:
+    pants: ClothingPantsGreen3
+
+- type: loadout
+  id: ClothingPantsCyan3
+  equipment:
+    pants: ClothingPantsCyan3
+
+- type: loadout
+  id: ClothingPantsBlue3
+  equipment:
+    pants: ClothingPantsBlue3
+
+- type: loadout
+  id: ClothingPantsRed3
+  equipment:
+    pants: ClothingPantsRed3
+
+- type: loadout
+  id: ClothingPantsPink3
+  equipment:
+    pants: ClothingPantsPink3
+
+- type: loadout
+  id: ClothingPantsWhite4
+  equipment:
+    pants: ClothingPantsWhite4
+
+- type: loadout
+  id: ClothingPantsBlack4
+  equipment:
+    pants: ClothingPantsBlack4
+
+- type: loadout
+  id: ClothingPantsOrange4
+  equipment:
+    pants: ClothingPantsOrange4
+
+- type: loadout
+  id: ClothingPantsGreen4
+  equipment:
+    pants: ClothingPantsGreen4
+
+- type: loadout
+  id: ClothingPantsCyan4
+  equipment:
+    pants: ClothingPantsCyan4
+
+- type: loadout
+  id: ClothingPantsBlue4
+  equipment:
+    pants: ClothingPantsBlue4
+
+- type: loadout
+  id: ClothingPantsRed4
+  equipment:
+    pants: ClothingPantsRed4
+
+- type: loadout
+  id: ClothingPantsPink4
+  equipment:
+    pants: ClothingPantsPink4

@@ -26,3 +26,79 @@
   minLimit: 0
   loadouts:
   - HeadAtmosBeret
+
+- type: loadoutGroup
+  id: BrassGroup
+  name: Бюстгальтеры 
+  minLimit: 0
+  loadouts:
+  - BaseClothingBrass
+  - ClothingBrassBlack
+  - ClothingBrassOrange
+  - ClothingBrassGreen
+  - ClothingBrassCyan
+  - ClothingBrassBlue
+  - ClothingBrassRed
+  - ClothingBrassPink
+  - ClothingBrassWhite
+  - ClothingBrassBlack2
+  - ClothingBrassOrange2
+  - ClothingBrassGreen2
+  - ClothingBrassCyan2
+  - ClothingBrassBlue2
+  - ClothingBrassRed2
+  - ClothingBrassPink2
+  - ClothingBrassWhite3
+  - ClothingBrassBlack3
+  - ClothingBrassOrange3
+  - ClothingBrassGreen3
+  - ClothingBrassCyan3
+  - ClothingBrassBlue3
+  - ClothingBrassRed3
+  - ClothingBrassPink3
+  - ClothingBrassWhite4
+  - ClothingBrassBlack4
+  - ClothingBrassOrange4
+  - ClothingBrassGreen4
+  - ClothingBrassCyan4
+  - ClothingBrassBlue4
+  - ClothingBrassRed4
+  - ClothingBrassPink4
+
+- type: loadoutGroup
+  id: PantsGroup
+  name: Трусы 
+  minLimit: 0
+  loadouts:
+  - BaseClothingPants
+  - ClothingPantsBlack
+  - ClothingPantsOrange
+  - ClothingPantsGreen
+  - ClothingPantsCyan
+  - ClothingPantsBlue
+  - ClothingPantsRed
+  - ClothingPantsPink
+  - ClothingPantsWhite
+  - ClothingPantsBlack2
+  - ClothingPantsOrange2
+  - ClothingPantsGreen2
+  - ClothingPantsCyan2
+  - ClothingPantsBlue2
+  - ClothingPantsRed2
+  - ClothingPantsPink2
+  - ClothingPantsWhite3
+  - ClothingPantsBlack3
+  - ClothingPantsOrange3
+  - ClothingPantsGreen3
+  - ClothingPantsCyan3
+  - ClothingPantsBlue3
+  - ClothingPantsRed3
+  - ClothingPantsPink3
+  - ClothingPantsWhite4
+  - ClothingPantsBlack4
+  - ClothingPantsOrange4
+  - ClothingPantsGreen4
+  - ClothingPantsCyan4
+  - ClothingPantsBlue4
+  - ClothingPantsRed4
+  - ClothingPantsPink4

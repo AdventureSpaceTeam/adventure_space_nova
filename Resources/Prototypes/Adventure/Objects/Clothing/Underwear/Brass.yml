@@ -1,0 +1,541 @@
+#Бюстгальтеры
+- type: entity
+  parent: BaseClothingPants
+  id: BaseClothingBrass
+  description: Стандартная модель бюстгальтера, скрывающая ваше достоинство.
+  name: белый бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+    slots: [brass]
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlack
+  name: чёрный бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassOrange
+  name: оранжевый бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassGreen
+  name: зелёный бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassCyan
+  name: голубой бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlue
+  name: синий бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassRed
+  name: красный бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassPink
+  name: розовый бюстгальтер
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-box
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-box
+        color: "#f785f0"
+
+#Бикини
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassWhite
+  name: белый бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlack2
+  name: чёрный бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassOrange2
+  name: оранжевый бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassGreen2
+  name: зелёный бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassCyan2
+  name: голубой бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlue2
+  name: синий бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassRed2
+  name: красный бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassPink2
+  name: розовый бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-pant
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-pant
+        color: "#f785f0"
+
+#Топики
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassWhite3
+  name: белый топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlack3
+  name: чёрный топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassOrange3
+  name: оранжевый топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassGreen3
+  name: зелёный топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassCyan3
+  name: голубой топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlue3
+  name: синий топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassRed3
+  name: красный топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassPink3
+  name: розовый топик
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string
+        color: "#f785f0"
+
+#Пуш-апы
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassWhite4
+  name: белый пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlack4
+  name: чёрный пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassOrange4
+  name: оранжевый пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassGreen4
+  name: зелёный пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassCyan4
+  name: голубый пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassBlue4
+  name: синий пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassRed4
+  name: красный пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassPink4
+  name: розовый пуш-ап
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-string2
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-string2
+        color: "#f785f0"

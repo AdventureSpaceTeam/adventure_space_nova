@@ -71,6 +71,10 @@
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+#Adventure-slots-start
+    - map: ["brass"]
+    - map: ["pants"]
+#Adventure-slots-end
     - map: [ "jumpsuit" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
@@ -142,21 +146,33 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
+#Adventure-start
       belt:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: belt
       neck:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: neck
       outerClothing:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: outerClothing
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+#Adventure-end
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -205,18 +221,30 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
+#Adventure-start
       belt:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: belt
       neck:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: neck
       outerClothing:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: outerClothing
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+#Adventure-end

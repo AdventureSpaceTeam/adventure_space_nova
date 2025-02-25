@@ -146,6 +146,11 @@
           32:
             sprite: Adventure/Races/Snake/displacement.rsi
             state: desp_f
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Snake/displacement.rsi
+            state: desp_f
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -175,6 +180,11 @@
             sprite: Adventure/Races/Snake/displacement.rsi
             state: desp_f
       outerClothing:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Snake/displacement.rsi
+            state: desp_f
+      brass:
         sizeMaps:
           32:
             sprite: Adventure/Races/Snake/displacement.rsi
@@ -308,6 +318,13 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,5
       displayName: Back
+    - name: brass
+      slotTexture: brass
+      slotFlags: BRASS
+      stripTime: 3
+      uiWindowPos: 3,2
+      strippingWindowPos: 2,1
+      displayName: Brass
 
 - type: entity
   id: ActionDevourZerah

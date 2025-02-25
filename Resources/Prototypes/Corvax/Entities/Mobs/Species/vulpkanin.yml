@@ -37,6 +37,13 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+#Adventure-slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-slots-end
   - type: ContentEye
     targetZoom: "1.125, 1.125"
     maxZoom: "1.125, 1.125"
@@ -87,3 +94,10 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+#Adventure-slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-slots-end

@@ -96,6 +96,11 @@
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: fat
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -103,6 +108,11 @@
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
       outerClothing:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: fat
+      pants:
         sizeMaps:
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
@@ -132,6 +142,11 @@
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: fat
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -139,6 +154,11 @@
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
       outerClothing:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: fat
+      pants:
         sizeMaps:
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi

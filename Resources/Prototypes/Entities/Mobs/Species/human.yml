@@ -27,6 +27,14 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+#Adventure-Slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-end
+
 
 
 - type: entity
@@ -41,3 +49,10 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+#Adventure-Slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-end

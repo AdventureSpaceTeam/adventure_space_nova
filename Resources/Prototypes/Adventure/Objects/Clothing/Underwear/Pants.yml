@@ -1,0 +1,558 @@
+#Трусы
+- type: entity
+  parent: Clothing
+  id: BaseClothingPants
+  description: Стандартная модель трусов, скрывающая ваше достоинство.
+  name: белые трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+    slots: [pants]
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 15
+  - type: Tag
+    tags:
+    - ClothMade
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlack
+  name: чёрные трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsOrange
+  name: оранжевые трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsGreen
+  name: зелёные трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsCyan
+  name: голубые трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlue
+  name: синие трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsRed
+  name: красные трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsPink
+  name: розовые трусы
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+        color: "#f785f0"
+
+#Плавки
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsWhite
+  name: белые плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlack2
+  name: чёрные плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsOrange2
+  name: оранжевые плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsGreen2
+  name: зелёные плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsCyan2
+  name: голубые плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlue2
+  name: синие плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsRed2
+  name: красные плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsPink2
+  name: розовые плавки
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-pant
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-pant
+        color: "#f785f0"
+
+#Стринги
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsWhite3
+  name: белые стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlack3
+  name: чёрные стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsOrange3
+  name: оранжевые стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsGreen3
+  name: зелёные стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsCyan3
+  name: голубые стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlue3
+  name: синие стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsRed3
+  name: красные стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsPink3
+  name: розовые стринги
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string
+        color: "#f785f0"
+
+#Бикини
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsWhite4
+  name: белые бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlack4
+  name: чёрные бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsOrange4
+  name: оранжевые бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsGreen4
+  name: зелёные бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsCyan4
+  name: голубые бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlue4
+  name: синие бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsRed4
+  name: красные бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsPink4
+  name: розовые бикини
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-string2
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-string2
+        color: "#f785f0"

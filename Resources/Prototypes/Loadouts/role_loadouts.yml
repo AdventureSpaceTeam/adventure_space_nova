@@ -10,6 +10,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
@@ -24,6 +26,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Silicons
 #- type: roleLoadout
@@ -52,6 +56,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobBartender
@@ -65,6 +71,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobServiceWorker
@@ -76,6 +84,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobChef
@@ -90,6 +100,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobLibrarian
@@ -101,6 +113,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobLawyer
@@ -113,6 +127,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobChaplain
@@ -128,6 +144,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobJanitor
@@ -143,6 +161,8 @@
   - Trinkets
   - JanitorPlunger
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobBotanist
@@ -156,6 +176,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobClown
@@ -169,6 +191,8 @@
   - Glasses
   - SurvivalClown
   - Trinkets
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobMime
@@ -183,6 +207,8 @@
   - Glasses
   - SurvivalMime
   - Trinkets
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobMusician
@@ -196,6 +222,8 @@
   - Trinkets
   - Instruments
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Cargo
 - type: roleLoadout
@@ -212,6 +240,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobCargoTechnician
@@ -226,6 +256,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobSalvageSpecialist
@@ -238,6 +270,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Engineering
 - type: roleLoadout
@@ -253,6 +287,8 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobTechnicalAssistant
@@ -263,6 +299,8 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobStationEngineer
@@ -277,6 +315,8 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobAtmosphericTechnician
@@ -290,6 +330,8 @@
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Science
 - type: roleLoadout
@@ -307,6 +349,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobScientist
@@ -324,6 +368,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobResearchAssistant
@@ -335,6 +381,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Security
 - type: roleLoadout
@@ -351,6 +399,8 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobWarden
@@ -366,6 +416,8 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -382,6 +434,8 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobDetective
@@ -396,6 +450,8 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobSecurityCadet
@@ -405,6 +461,8 @@
   - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathToolSecurity
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Medical
 - type: roleLoadout
@@ -423,6 +481,8 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobMedicalDoctor
@@ -440,6 +500,8 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobMedicalIntern
@@ -451,6 +513,8 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobChemist
@@ -466,6 +530,8 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobParamedic
@@ -482,6 +548,8 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # Wildcards
 - type: roleLoadout
@@ -493,6 +561,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobReporter
@@ -504,6 +574,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobPsychologist
@@ -515,6 +587,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobBoxer
@@ -527,6 +601,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit
