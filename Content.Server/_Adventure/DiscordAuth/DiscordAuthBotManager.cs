@@ -88,12 +88,12 @@ public sealed class DiscordAuthBotManager
             };
             using HttpResponseMessage response = await discordClient.SendAsync(msg);
             Console.WriteLine("Request sent");
-            // var str = await response.Content.ReadAsStringAsync();
-            // Console.WriteLine($"str: {str}");
-            // TODO(c4): ReadFromJson not working, understand why
-            var tokenStruct = await response.Content.ReadFromJsonAsync<TokenResponse>();
+            var str = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"str: {str}");
+            var res = JsonSerializer.Deserialize<TokenResponse>(str);
+            if (res is null) return;
 
-            Console.WriteLine($"{tokenStruct}, {tokenStruct?.token_type} {tokenStruct?.access_token}");
+            Console.WriteLine($"{res.access_token} {res.token_type}");
 
             resp.StatusCode = (int) HttpStatusCode.OK;
             resp.StatusDescription = "OK";
