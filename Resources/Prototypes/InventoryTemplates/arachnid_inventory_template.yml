@@ -81,6 +81,22 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,5
       displayName: Back
+    # Adventure-slots-start
+    - name: brass
+      slotTexture: brass
+      slotFlags: BRASS
+      stripTime: 3
+      uiWindowPos: 3,2
+      strippingWindowPos: 2,1
+      displayName: Brass
+    - name: pants
+      slotTexture: pants
+      slotFlags: PANTS
+      stripTime: 6
+      uiWindowPos: 3,1
+      strippingWindowPos: 2,2
+      displayName: Pants
+    # Adventure-slots-end
 
     - name: pocket4
       slotTexture: web
@@ -140,3 +156,4 @@
       dependsOnComponents:
       - type: AllowSuitStorage
       displayName: Suit Storage
+
