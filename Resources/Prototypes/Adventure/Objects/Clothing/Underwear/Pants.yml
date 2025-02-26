@@ -5,6 +5,8 @@
   description: Стандартная модель трусов, скрывающая ваше достоинство.
   name: белые трусы
   components:
+  - type: Item
+    size: Small
   - type: Sprite
     sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
     layers:
@@ -151,6 +153,25 @@
       pants:
       - state: equipped-box
         color: "#f785f0"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsHearts
+  name: трусы с сердечками
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-box
+    - state: icon-box-heart
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+      - state: equipped-box-heart
+        color: "#fb0808"
 
 #Плавки
 - type: entity
@@ -556,3 +577,31 @@
       pants:
       - state: equipped-string2
         color: "#f785f0"
+
+# Rofls
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsZasranes
+  description: У вас явно есть причины это носить...
+  name: взрослый подгузник
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-zasranes
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-zasranes
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Storage
+    grid:
+    - 0,0,1,1

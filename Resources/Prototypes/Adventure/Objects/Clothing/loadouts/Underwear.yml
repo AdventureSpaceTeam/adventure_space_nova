@@ -319,3 +319,37 @@
   id: ClothingPantsPink4
   equipment:
     pants: ClothingPantsPink4
+
+- type: loadout
+  id: ClothingPantsHearts
+  equipment:
+    pants: ClothingPantsHearts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterClothingPantsHearts
+
+- type: loadoutEffectGroup
+  id: MasterClothingPantsHearts
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPassenger
+      time: 36000 #10 hrs
+
+- type: loadout
+  id: ClothingPantsZasranes
+  equipment:
+    pants: ClothingPantsZasranes
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterZasranes
+
+- type: loadoutEffectGroup
+  id: MasterZasranes
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 180000 #50 hrs

@@ -11,6 +11,12 @@
       "name": "icon-box"
     },
     {
+      "name": "icon-box-heart"
+    },
+    {
+      "name": "icon-zasranes"
+    },
+    {
       "name": "icon-pant"
     },
     {
@@ -21,6 +27,14 @@
     },
     {
       "name": "equipped-box",
+      "directions": 4
+    },
+    {
+      "name": "equipped-box-heart",
+      "directions": 4
+    },
+    {
+      "name": "equipped-zasranes",
       "directions": 4
     },
     {
