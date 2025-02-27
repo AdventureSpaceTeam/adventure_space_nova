@@ -54,7 +54,7 @@
     damage:
      types:
        Piercing: 5
-       Slash: 10
+       Slash: 30
   - type: GunRequiresWield # \ Конец комента, чтобы не ебаться с апстримом, <3
 
 - type: entity
