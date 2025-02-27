@@ -122,12 +122,12 @@
       slotFlags: BRASS
       stripTime: 3
       uiWindowPos: 3,2
-      strippingWindowPos: 2,1
+      strippingWindowPos: 3,1
       displayName: Brass
     - name: pants
       slotTexture: pants
       slotFlags: PANTS
       stripTime: 6
       uiWindowPos: 3,1
-      strippingWindowPos: 2,2
+      strippingWindowPos: 3,2
       displayName: Pants

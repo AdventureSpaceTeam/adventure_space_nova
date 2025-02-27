@@ -323,7 +323,7 @@
       slotFlags: BRASS
       stripTime: 3
       uiWindowPos: 3,2
-      strippingWindowPos: 2,1
+      strippingWindowPos: 3,1
       displayName: Brass
 
 - type: entity
