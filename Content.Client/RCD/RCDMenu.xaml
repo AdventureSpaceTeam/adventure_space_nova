@@ -27,6 +27,14 @@
         <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-lighting'}" TargetLayer="Lighting" Visible="False">
             <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Interface/Radial/RCD/lighting.png"/>
         </ui:RadialMenuTextureButtonWithSector>
+    <!-- Adventure-Start -->
+        <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-pipes'}" TargetLayer="GasPipes" Visible="False">
+            <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Adventure/Interface/PFD/pipe4.png"/>
+        </ui:RadialMenuTextureButtonWithSector>
+        <ui:RadialMenuTextureButtonWithSector SetSize="64 64" ToolTip="{Loc 'rcd-component-atmosmachine'}" TargetLayer="GasMachine" Visible="False">
+            <TextureRect VerticalAlignment="Center" HorizontalAlignment="Center" TextureScale="2 2" TexturePath="/Textures/Adventure/Interface/PFD/scrub.png"/>
+        </ui:RadialMenuTextureButtonWithSector>
+    <!-- Adventure-End -->
     </ui:RadialContainer>
 
     <!-- Walls and flooring -->
@@ -43,5 +51,13 @@
        
     <!-- Lighting -->
     <ui:RadialContainer Name="Lighting"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
+
+    <!-- Adventure-Start -->
+    <!-- GasPipes -->
+    <ui:RadialContainer Name="GasPipes"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
+
+    <!-- GasMachine -->
+    <ui:RadialContainer Name="GasMachine"  VerticalExpand="True" HorizontalExpand="True" InitialRadius="100"/>
+    <!-- Adventure-End -->
 
 </ui:RadialMenu>

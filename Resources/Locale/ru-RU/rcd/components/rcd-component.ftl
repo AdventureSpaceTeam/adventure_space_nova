@@ -33,6 +33,11 @@ rcd-component-airlocks = Шлюзы
 rcd-component-electrical = Электроприборы
 rcd-component-lighting = Освещение
 
+### Adventure-start
+rcd-component-pipes = Трубы и насосы
+rcd-component-atmosmachine = Порты и вентиляции
+### Adventure-end
+
 ### Prototype names (note: constructable items will be puralized)
 
 rcd-component-deconstruct = демонтаж
