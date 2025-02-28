@@ -1,0 +1,161 @@
+- type: entity
+  id: PFD
+  parent: RCD
+  name: УПТ
+  description: Новейшее ручное устройство подачи труб, которое может быстро размещать трубы и вентиляции.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - GasPipeStraight
+    - GasPipeBend
+    - GasPipeTJunction
+    - GasPipeFourway
+    - GasPressurePump
+    - GasPort
+    - GasVentPump  
+    - GasPassiveVent 
+    - GasVentScrubber 
+    - GasMixer 
+    - GasFilter 
+  - type: Sprite
+    sprite: Adventure/Objects/Tools/pfd.rsi
+    state: icon
+  - type: Clothing
+    sprite: Adventure/Objects/Tools/pfd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+#Трубы
+- type: rcd
+  id: GasPipeStraight    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe1.png
+  mode: ConstructObject
+  prototype: GasPipeStraight
+  cost: 2
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPipeBend    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipeG.png
+  mode: ConstructObject
+  prototype: GasPipeBend
+  cost: 2
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPipeTJunction    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe3.png
+  mode: ConstructObject
+  prototype: GasPipeTJunction
+  cost: 2
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPipeFourway    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe4.png
+  mode: ConstructObject
+  prototype: GasPipeFourway
+  cost: 2
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPressurePump    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pump.png
+  mode: ConstructObject
+  prototype: GasPressurePump
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4
+
+#Порты и венты
+- type: rcd
+  id: GasPort    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/Port.png
+  mode: ConstructObject
+  prototype: GasPort
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: GasVentPump    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/vent.png
+  mode: ConstructObject
+  prototype: GasVentPump
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: GasPassiveVent    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/passvent.png
+  mode: ConstructObject
+  prototype: GasPassiveVent
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: GasVentScrubber    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/scrub.png
+  mode: ConstructObject
+  prototype: GasVentScrubber
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: GasMixer    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/gasMix.png
+  mode: ConstructObject
+  prototype: GasMixer
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4
+
+- type: rcd
+  id: GasFilter    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/gasFilter.png
+  mode: ConstructObject
+  prototype: GasFilter
+  cost: 4
+  delay: 4
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct4

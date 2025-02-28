@@ -164,7 +164,8 @@
     - id: ClothingHandsGlovesColorYellow
     - id: ClothingHeadsetAltEngineering
     - id: DoorRemoteEngineering
-    - id: RCD
+    - id: RCD 
+    - id: PFD # Adventure
     - id: RCDAmmo
     - id: RubberStampCE
     - id: NTECCPU1 # Adventure
