@@ -76,6 +76,7 @@
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboard
+    ipc: IPCModulCommand # Adventure-IPC
   storage:
     back:
     - Flash

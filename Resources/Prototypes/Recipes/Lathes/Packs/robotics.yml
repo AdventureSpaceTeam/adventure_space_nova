@@ -32,6 +32,14 @@
   id: Robotics
   recipes:
   - ProximitySensor
+# Adventure-IPC-Start
+  - IPCModulMed
+  - IPCModulEng
+  - IPCModulChem
+  - IPCModulLight
+  - IPCModulNoShock
+  - IPCModulMusic
+# Adventure-IPC-End
 
 - type: latheRecipePack
   id: BorgModules

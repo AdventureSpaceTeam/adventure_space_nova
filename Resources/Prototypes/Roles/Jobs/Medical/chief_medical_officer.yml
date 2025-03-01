@@ -45,6 +45,7 @@
     id: CMOPDA
     ears: ClothingHeadsetCMO
     belt: ClothingBeltMedicalFilled
+    ipc: IPCModulMed # Adventure-IPC
   storage:
     back:
     - Flash

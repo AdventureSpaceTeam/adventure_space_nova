@@ -8,6 +8,8 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
 
 - type: roleLoadout
   id: JobPilot
@@ -21,3 +23,5 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure

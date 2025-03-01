@@ -25,6 +25,7 @@
   equipment:
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
+    ipc: IPCModulMed # Adventure-IPC
   #storage:
     #back:
     #- Stuff
