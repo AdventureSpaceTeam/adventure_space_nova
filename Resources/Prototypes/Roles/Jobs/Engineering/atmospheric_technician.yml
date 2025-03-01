@@ -27,6 +27,7 @@
     id: AtmosPDA
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
+    ipc: IPCModulEng # Adventure-IPC
   #storage:
     #back:
     #- Stuff

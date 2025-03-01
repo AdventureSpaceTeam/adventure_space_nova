@@ -35,5 +35,6 @@
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
     pocket2: BookSpaceLaw
+    ipc: IPCModulCommand # Adventure-IPC
   inhand:
     - BriefcaseIAAFilled

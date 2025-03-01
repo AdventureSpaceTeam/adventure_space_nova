@@ -58,6 +58,7 @@
     id: SyndiPDA
     pocket2: PlushieCarp
     belt: ClothingBeltMilitaryWebbing
+    ipc: IPCModulSyndieNuker # Adventure-IPC
   storage:
     back:
     - WeaponPistolViper

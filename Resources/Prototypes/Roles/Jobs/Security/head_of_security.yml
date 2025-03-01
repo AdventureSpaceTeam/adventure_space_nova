@@ -48,6 +48,7 @@
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
     pocket1: WeaponPistolMk58
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Flash

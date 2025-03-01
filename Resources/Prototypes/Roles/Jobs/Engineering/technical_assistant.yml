@@ -27,6 +27,7 @@
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
     pocket2: BookEngineersHandbook
+    ipc: IPCModulEng # Adventure-IPC
   #storage:
     #back:
     #- Stuff

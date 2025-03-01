@@ -1,0 +1,275 @@
+- type: entity
+  parent: Clothing
+  abstract: true
+  id: BaseIPCModul
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: base
+  - type: Clothing
+    equipSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+    unequipSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+    equipDelay: 10
+    unequipDelay: 10
+    slots: [ipc]
+
+# административный модуль КПБ
+- type: entity
+  parent: [BaseIPCModul, BaseCommandContraband]
+  id: IPCModulCommand
+  description: Модуль КПБ, обеспечивающий защиту от вспышек и отображающий статус ID-карты.
+  name: административный модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: base
+    - state: M_cap
+  - type: FlashImmunity
+  - type: ShowJobIcons
+
+# охранный модуль КПБ
+- type: entity
+  parent: [BaseIPCModul, ShowSecurityIcons, BaseSecurityContraband]
+  id: IPCModulSec
+  description: Охранный тип модернизации КПБ, обеспечивает защиту зрительных сенсоров и отображение данных должности.
+  name: охранный модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: base
+    - state: M_sec
+  - type: FlashImmunity
+
+# медицинский модуль КПБ
+- type: entity
+  parent: [BaseIPCModul, ShowMedicalIcons]
+  id: IPCModulMed
+  description: Медицинский тип модернизации КПБ, отображает показатели здоровья.
+  name: медицинский модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: base
+    - state: M_med
+
+- type: latheRecipe
+  id: IPCModulMed
+  category: Robotics
+  result: IPCModulMed
+  completetime: 3
+  materials:
+    Steel: 300
+    Glass: 300
+    Plastic: 200
+    Gold: 50
+
+# технический модуль КПБ
+- type: entity
+  parent: BaseIPCModul
+  id: IPCModulEng
+  description: Технический тип модернизации КПБ, отображает состояние синтетиков.
+  name: технический модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: base
+    - state: M_eng
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+    - Synth 
+
+- type: latheRecipe
+  id: IPCModulEng
+  parent: IPCModulMed
+  result: IPCModulEng
+
+# химический модуль КПБ
+- type: entity
+  parent: BaseIPCModul
+  id: IPCModulChem
+  description: Химический тип модернизации КПБ, отображает реагенты и их состав.
+  name: химический модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: base
+    - state: M_chem
+  - type: SolutionScanner
+
+- type: latheRecipe
+  id: IPCModulChem
+  parent: IPCModulMed
+  result: IPCModulChem
+  materials:
+    Steel: 300
+    Glass: 300
+    Plastic: 200
+    Gold: 50
+    Plasma: 100
+
+# модульный фонарь КПБ
+- type: entity
+  parent: BaseIPCModul
+  id: IPCModulLight
+  description: Второстименная модернизация кпб, обеспечивает видимость в темноте.
+  name: модульный фонарь КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: light
+  - type: Clothing
+    equippedPrefix: off
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    radius: 3
+    energy: 2
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: Appearance
+  - type: HandheldLight
+    addPrefix: false
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+      - !type:FadeBehaviour
+        id: radiating
+        interpolate: Linear
+        maxDuration: 2.0
+        startValue: 3.0
+        endValue: 2.0
+        isLooped: true
+        reverseWhenFinished: true
+      - !type:PulseBehaviour
+        id: blinking
+        interpolate: Nearest
+        maxDuration: 1.0
+        minValue: 0.1
+        maxValue: 2.0
+        isLooped: true
+  - type: Battery
+    maxCharge: 600 
+    startingCharge: 600
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+
+- type: latheRecipe
+  id: IPCModulLight
+  parent: IPCModulMed
+  result: IPCModulLight
+  materials:
+    Steel: 200
+    Glass: 500
+    Plastic: 200
+    Gold: 50
+
+# изолирующий модуль КПБ
+- type: entity
+  parent: BaseIPCModul
+  id: IPCModulNoShock
+  description: Защищает основные энергосистемы от удара током.
+  name: изолирующий модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: Shock
+  - type: Armor
+    modifiers:
+      coefficients:
+        Shock: 0.0
+
+- type: latheRecipe
+  id: IPCModulNoShock
+  parent: IPCModulMed
+  result: IPCModulNoShock
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 500
+    Gold: 200
+
+# музыкальный модуль КПБ
+- type: entity
+  parent: BaseIPCModul
+  id: IPCModulMusic
+  description: Играйте музыку из вашей головы и радуйте народ.
+  name: музыкальный модуль КПБ
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: music
+  - type: Appearance
+  - type: Instrument
+    allowPercussion: true
+    allowProgramChange: true
+  - type: ActivatableUI
+    blockSpectators: true 
+    inHandsOnly: false
+    singleUser: true
+    requiresComplex: true
+    verbText: verb-instrument-openui
+    key: enum.InstrumentUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+
+- type: latheRecipe
+  id: IPCModulMusic
+  parent: IPCModulMed
+  result: IPCModulMusic
+  materials:
+    Steel: 200
+    Glass: 500
+    Plastic: 500
+    Gold: 100
+
+# Изучение
+- type: technology
+  id: IPCModulS
+  name: Модулизация КПБ
+  icon:
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    state: base
+  discipline: Industrial
+  tier: 1
+  cost: 30000
+  recipeUnlocks:
+  - IPCModulMed
+  - IPCModulEng
+  - IPCModulChem
+  - IPCModulLight
+  - IPCModulNoShock
+  - IPCModulMusic
+
+# Модули антагов
+# модуль КПБ Синдиката
+- type: entity
+  parent: [BaseIPCModul, ShowSecurityIcons, BaseSyndicateContraband]
+  id: IPCModulSyndieNuker
+  suffix: Ядерный оперативник
+  description: Одна из последних разработок Cybersun, для киборгов.
+  name: модуль КПБ Синдиката
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: synd
+  - type: ShowSyndicateIcons
+  - type: FlashImmunity

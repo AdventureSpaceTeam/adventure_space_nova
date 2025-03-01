@@ -28,6 +28,7 @@
     pocket1: EnergySword
     pocket2: EnergyShield
     belt: ClothingBeltMilitaryWebbingMedFilled
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - WeaponPulsePistol

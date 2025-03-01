@@ -28,6 +28,7 @@
     pocket1: RadioHandheld
     pocket2: WeaponLaserGun
     belt: ClothingBeltBandolier
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - WeaponShotgunDoubleBarreled

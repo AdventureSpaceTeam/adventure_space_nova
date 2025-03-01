@@ -41,6 +41,7 @@
     id: BlueshieldPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltCommand
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Flash

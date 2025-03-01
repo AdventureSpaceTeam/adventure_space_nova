@@ -35,6 +35,7 @@
   equipment:
     id: RnDPDA
     ears: ClothingHeadsetRD
+    ipc: IPCModulEng # Adventure-IPC
   storage:
     back:
     - Flash

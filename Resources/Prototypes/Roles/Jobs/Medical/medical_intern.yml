@@ -24,6 +24,7 @@
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
+    ipc: IPCModulMed # Adventure-IPC
   #storage:
     #back:
     #- Stuff
