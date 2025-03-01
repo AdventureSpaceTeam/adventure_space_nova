@@ -490,6 +490,12 @@
       - state: equipped-INNERCLOTHING
         color: "#ff8300"
       - state: prisoner-equipped-INNERCLOTHING
+# Adventure-edit-start
+      jumpsuit-reptilian:
+      - state: equipped-INNERCLOTHING-reptilian
+        color: "#ff8300"
+      - state: prisoner-equipped-INNERCLOTHING-reptilian
+# Adventure-edit-end
   - type: SuitSensor
     controlsLocked: true
     randomMode: false

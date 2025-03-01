@@ -30,6 +30,12 @@
       - state: equipped-FEET
         color: "#1d1d1d"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#1d1d1d"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # White Shoes
 - type: entity
@@ -59,6 +65,12 @@
       - state: equipped-FEET
         color: "#EAE8E8"
       - state: contrastedsoles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#EAE8E8"
+      - state: contrastedsoles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Blue Shoes
 - type: entity
@@ -90,6 +102,12 @@
       - state: equipped-FEET
         color: "#0089EF"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#0089EF"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Brown Shoes
 - type: entity
@@ -121,6 +139,12 @@
       - state: equipped-FEET
         color: "#592D01"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#592D01"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Green Shoes
 - type: entity
@@ -152,6 +176,12 @@
       - state: equipped-FEET
         color: "#5ABF2F"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#5ABF2F"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Orange Shoes
 - type: entity
@@ -183,6 +213,12 @@
       - state: equipped-FEET
         color: "#EF8100"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#EF8100"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Red Shoes
 - type: entity
@@ -214,6 +250,12 @@
       - state: equipped-FEET
         color: "#940000"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#940000"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Yellow Shoes
 - type: entity
@@ -245,6 +287,12 @@
       - state: equipped-FEET
         color: "#EBE216"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#EBE216"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
 
 # Purple Shoes
 - type: entity
@@ -276,3 +324,9 @@
       - state: equipped-FEET
         color: "#9C0DE1"
       - state: soles-equipped-FEET
+# Adventure-edit-start
+      shoes-reptilian:
+      - state: equipped-FEET-reptilian
+        color: "#9C0DE1"
+      - state: soles-equipped-FEET-reptilian
+# Adventure-edit-end
