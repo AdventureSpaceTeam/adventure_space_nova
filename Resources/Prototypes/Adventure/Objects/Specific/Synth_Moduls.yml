@@ -273,3 +273,61 @@
     - state: synd
   - type: ShowSyndicateIcons
   - type: FlashImmunity
+
+- type: entity
+  parent: IPCModulSyndieNuker
+  id: IPCModulSyndieShield
+  description: Одна из последних разработок Cybersun, для киборгов.
+  name: модуль КПБ Синдиката генератор щита
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: Shield_S
+  - type: Clothing
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    clothingVisuals:
+      ipc:
+      - state: equipped_Shield
+        color: "#ff767c"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.8
+  - type: Reflect
+    reflectProb: 0.5
+    spread: 10
+  - type: PointLight
+    radius: 2
+    energy: 1
+    color: "#ff767c"
+
+# Модули ОБР
+# модуль КПБ генератор щита
+- type: entity
+  parent: [IPCModulSec, BaseCentcommContraband]
+  id: IPCModulSecShield
+  description: Генерирует энергощит, обеспечивающий защиту от энергооружия.
+  name: модуль КПБ генератор щита
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: Shield_NT
+  - type: Clothing
+    sprite: Adventure/Objects/Specific/IPC_moduls.rsi
+    clothingVisuals:
+      ipc:
+      - state: equipped_Shield
+        color: "#cedffd"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.8
+  - type: Reflect
+    reflectProb: 0.5
+    spread: 10
+  - type: PointLight
+    radius: 2
+    energy: 1
+    color: "#cedffd"

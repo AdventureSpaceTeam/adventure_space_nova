@@ -36,6 +36,34 @@
     },
     {
       "name": "Shock"
+    },
+    {
+      "name": "Shield_NT"
+    },
+    {
+      "name": "Shield_S"
+    },
+    {
+      "name": "equipped_Shield",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ]
     }
   ]
 }
