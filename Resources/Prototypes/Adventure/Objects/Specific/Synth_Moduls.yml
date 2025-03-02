@@ -277,7 +277,7 @@
 - type: entity
   parent: IPCModulSyndieNuker
   id: IPCModulSyndieShield
-  description: Одна из последних разработок Cybersun, для киборгов.
+  description: Одна из последних разработок Cybersun, для киборгов, Генерирует энергощит, обеспечивающий защиту от энергооружия.
   name: модуль КПБ Синдиката генератор щита
   components:
   - type: Sprite
@@ -301,6 +301,22 @@
     radius: 2
     energy: 1
     color: "#ff767c"
+
+- type: listing
+  id: UplinkIPCModulSyndieShield
+  name: модуль КПБ Синдиката генератор щита
+  description: Одна из последних разработок Cybersun, для киборгов, генерирует энергощит, обеспечивающий защиту от энергооружия.
+  icon: { sprite: /Textures/Adventure/Objects/Specific/IPC_moduls.rsi, state: Shield_S }
+  productEntity: IPCModulSyndieShield
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
 
 # Модули ОБР
 # модуль КПБ генератор щита
