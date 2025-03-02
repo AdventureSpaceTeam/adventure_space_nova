@@ -33,11 +33,11 @@
   sprite: /Textures/Adventure/Interface/PFD/pipe1.png
   mode: ConstructObject
   prototype: GasPipeStraight
-  cost: 2
-  delay: 2
+  cost: 1
+  delay: 1
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct2
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: GasPipeBend    
@@ -45,11 +45,11 @@
   sprite: /Textures/Adventure/Interface/PFD/pipeG.png
   mode: ConstructObject
   prototype: GasPipeBend
-  cost: 2
-  delay: 2
+  cost: 1
+  delay: 1
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct2
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: GasPipeTJunction    
@@ -57,11 +57,11 @@
   sprite: /Textures/Adventure/Interface/PFD/pipe3.png
   mode: ConstructObject
   prototype: GasPipeTJunction
-  cost: 2
-  delay: 2
+  cost: 1
+  delay: 1
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct2
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: GasPipeFourway    
@@ -69,11 +69,11 @@
   sprite: /Textures/Adventure/Interface/PFD/pipe4.png
   mode: ConstructObject
   prototype: GasPipeFourway
-  cost: 2
-  delay: 2
+  cost: 1
+  delay: 1
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct2
+  fx: EffectRCDConstruct1
 
 - type: rcd
   id: GasPressurePump    
@@ -81,11 +81,11 @@
   sprite: /Textures/Adventure/Interface/PFD/pump.png
   mode: ConstructObject
   prototype: GasPressurePump
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
 
 #Порты и венты
 - type: rcd
@@ -94,11 +94,11 @@
   sprite: /Textures/Adventure/Interface/PFD/Port.png
   mode: ConstructObject
   prototype: GasPort
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: GasVentPump    
@@ -106,11 +106,11 @@
   sprite: /Textures/Adventure/Interface/PFD/vent.png
   mode: ConstructObject
   prototype: GasVentPump
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: GasPassiveVent    
@@ -118,11 +118,11 @@
   sprite: /Textures/Adventure/Interface/PFD/passvent.png
   mode: ConstructObject
   prototype: GasPassiveVent
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: GasVentScrubber    
@@ -130,11 +130,11 @@
   sprite: /Textures/Adventure/Interface/PFD/scrub.png
   mode: ConstructObject
   prototype: GasVentScrubber
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: GasMixer    
@@ -142,11 +142,11 @@
   sprite: /Textures/Adventure/Interface/PFD/gasMix.png
   mode: ConstructObject
   prototype: GasMixer
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
 
 - type: rcd
   id: GasFilter    
@@ -154,8 +154,8 @@
   sprite: /Textures/Adventure/Interface/PFD/gasFilter.png
   mode: ConstructObject
   prototype: GasFilter
-  cost: 4
-  delay: 4
+  cost: 2
+  delay: 2
   rules:
   - MustBuildOnSubfloor
-  fx: EffectRCDConstruct4
+  fx: EffectRCDConstruct2
