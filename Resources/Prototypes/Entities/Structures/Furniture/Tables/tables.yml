@@ -198,6 +198,16 @@
   - type: Construction
     graph: Table
     node: Table
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 15
+    tableDamage:
+      types:
+        Blunt: 125
+    tableMassLimit: 120
+# Adventure-edit-end
 
 - type: entity
   id: TableReinforced
@@ -245,6 +255,16 @@
       types:
         Blunt: 8
     bonkTime: 3
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 25
+    tableDamage:
+      types:
+        Blunt: 150
+    tableMassLimit: 240
+# Adventure-edit-end
 
 - type: entity
   id: TableGlass
@@ -456,6 +476,16 @@
   - type: Construction
     graph: Table
     node: TableBrass
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 25
+    tableDamage:
+      types:
+        Blunt: 125
+    tableMassLimit: 240
+# Adventure-edit-end
 
 - type: entity
   id: TableWood
@@ -505,6 +535,16 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepWood
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 15
+    tableDamage:
+      types:
+        Blunt: 100
+    tableMassLimit: 120
+# Adventure-edit-end
 
 - type: entity
   id: TableCarpet
@@ -548,6 +588,16 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 15
+    tableDamage:
+      types:
+        Blunt: 15
+    tableMassLimit: 120
+# Adventure-edit-end
 
 - type: entity
   id: TableStone
@@ -609,6 +659,16 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 5
+    tableDamage:
+      types:
+        Blunt: 50
+    tableMassLimit: 120
+# Adventure-edit-end
 
 # Fancy tables
 
@@ -648,6 +708,16 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCarpet
+# Adventure-edit-start
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 15
+    tableDamage:
+      types:
+        Blunt: 25
+    tableMassLimit: 120
+# Adventure-edit-end
 
 - type: entity
   id: TableFancyBlue
@@ -856,6 +926,16 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepWood
+# Adventure-edit-end
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 15
+    tableDamage:
+      types:
+        Blunt: 25
+    tableMassLimit: 120
+# Adventure-edit-end
 
 - type: entity
   id: TableCounterMetal
@@ -901,3 +981,13 @@
   - type: Construction
     graph: Table
     node: CounterMetal
+# Adventure-edit-end
+  - type: GlassTable
+    climberDamage:
+      types:
+        Blunt: 25
+    tableDamage:
+      types:
+        Blunt: 40
+    tableMassLimit: 240
+# Adventure-edit-end
