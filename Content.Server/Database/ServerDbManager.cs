@@ -27,6 +27,10 @@ namespace Content.Server.Database
     public interface IServerDbManager
     {
         Task SetPlayerRecordSponsor(NetUserId userId, string? sponsorTier); // Adventure sponsor api
+        // Adventure discord auth begin
+        Task<bool> SetPlayerRecordDiscordId(NetUserId userId, string? discordId);
+        Task<PlayerRecord?> GetPlayerRecordByDiscordId(string discordId, CancellationToken cancel = default);
+        // Adventure discord auth end
 
         void Init();
 
@@ -399,6 +403,18 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.SetPlayerRecordSponsor(userId, sponsorTier));
         }
         // Adventure sponsor api end
+        // Adventure discord auth begin
+        public Task<bool> SetPlayerRecordDiscordId(NetUserId userId, string? discordId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.SetPlayerRecordDiscordId(userId, discordId));
+        }
+        public Task<PlayerRecord?> GetPlayerRecordByDiscordId(string discordId, CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetPlayerRecordByDiscordId(discordId, cancel));
+        }
+        // Adventure discord auth end
 
         public static readonly Counter DbReadOpsMetric = Metrics.CreateCounter(
             "db_read_ops",

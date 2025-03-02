@@ -1,5 +1,8 @@
+using Content.Server.Database;
 using Content.Shared._Adventure.ACVar;
 using Robust.Shared.Configuration;
+using Robust.Shared.Network;
+using System.Collections.Specialized;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Net.Http;
@@ -14,19 +17,25 @@ namespace Content.Server.Adventure.DiscordAuth;
 
 public sealed class DiscordAuthBotManager
 {
-    public ISawmill _sawmill = default!;
-    public IConfigurationManager _cfg = default!;
+    [Dependency] public IConfigurationManager _cfg = default!;
+    [Dependency] public IServerDbManager _db = default!;
+    [Dependency] public IServerNetManager _net = default!;
+
     public HttpListener listener = default!;
     public string listeningUrl = string.Empty;
+    public string clientId = string.Empty;
+    public string clientSecret = string.Empty;
     public static HttpClient discordClient = new()
     {
         BaseAddress = new Uri("https://discord.com/api/v10")
     };
+    public Dictionary<Guid, NetUserId> stateToUid = new();
+
+    public ISawmill _sawmill = default!;
 
     public void Initialize()
     {
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("discord_auth");
-        _cfg = IoCManager.Resolve<IConfigurationManager>();
         _cfg.OnValueChanged(ACVars.DiscordAuthClientId, _ => UpdateAuthHeader(), false);
         _cfg.OnValueChanged(ACVars.DiscordAuthClientSecret, _ => UpdateAuthHeader(), true);
         _cfg.OnValueChanged(ACVars.DiscordAuthListeningUrl, url => listeningUrl = url, true);
@@ -35,16 +44,48 @@ public sealed class DiscordAuthBotManager
         listener.Prefixes.Add(listeningUrl);
         listener.Start();
         Task.Run(ListenerThread);
+        _net.Connecting += OnConnecting;
+    }
+
+    public async Task OnConnecting(NetConnectingArgs e)
+    {
+        var userId = e.UserId;
+        var player = await _db.GetPlayerRecordByUserId(userId);
+        if (player is null)
+        {
+            e.Deny($"User not found.\nПользователь не найден\nuserId: {userId}");
+            return;
+        }
+        if (player.DiscordId is not null) return;
+        var link = GenerateInviteLink(userId);
+        e.Deny(new NetDenyReason($"Пожалуйста, авторизуйтесь по ссылке: {link}"));
     }
 
     public void UpdateAuthHeader()
     {
-        var client_id = _cfg.GetCVar(ACVars.DiscordAuthClientId);
-        var client_secret = _cfg.GetCVar(ACVars.DiscordAuthClientSecret);
+        clientId = _cfg.GetCVar(ACVars.DiscordAuthClientId);
+        clientSecret = _cfg.GetCVar(ACVars.DiscordAuthClientSecret);
         discordClient.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue(
                 "Basic",
-                Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{client_id}:{client_secret}")));
+                Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{clientId}:{clientSecret}")));
+    }
+
+    public string GenerateInviteLink(NetUserId uid)
+    {
+        if (discordClient.BaseAddress is null) return string.Empty;
+        var guid = Guid.NewGuid();
+        stateToUid[guid] = uid;
+        // https://discord.com/oauth2/authorize?client_id=1336163093159481397&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3963%2F&scope=identify
+        NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+        queryString.Add("client_id", clientId);
+        queryString.Add("response_type", "code");
+        queryString.Add("redirect_uri", listeningUrl);
+        queryString.Add("scope", "identify");
+        queryString.Add("state", guid.ToString());
+        var uri = new UriBuilder(new Uri(discordClient.BaseAddress, "oauth2/authorize"));
+        uri.Query = queryString.ToString();
+        return uri.ToString();
     }
 
     public void WriteStringStream(HttpListenerResponse resp, string text)
@@ -56,70 +97,90 @@ public sealed class DiscordAuthBotManager
         output.Close();
     }
 
+    public void errorReturn(HttpListenerResponse resp, string errorString)
+    {
+        Console.WriteLine($"Returned {errorString}");
+        resp.StatusCode = (int) HttpStatusCode.Unauthorized;
+        resp.StatusDescription = "Unauthorized";
+        WriteStringStream(resp, errorString);
+    }
+
     public async Task HandleConnection(HttpListenerContext ctx)
     {
-        Console.WriteLine("Listening");
-            HttpListenerRequest request = ctx.Request;
-            using HttpListenerResponse resp = ctx.Response;
-            Console.WriteLine("Connected");
-            resp.Headers.Set("Content-Type", "text/html");
+        HttpListenerRequest request = ctx.Request;
+        using HttpListenerResponse resp = ctx.Response;
+        resp.Headers.Set("Content-Type", "text/plain; charset=UTF-8");
+        var guidString = request.QueryString.Get("state");
+        if (guidString is null)
+        {
+            errorReturn(resp, "No state found");
+            return;
+        }
+        var guid = new Guid(guidString);
+        NetUserId userId = stateToUid[guid];
+        stateToUid.Remove(guid); // Don't allow linking multiple accounts to the same uid
+        var code = request.QueryString.Get("code");
+        if (code is null)
+        {
+            errorReturn(resp, "No code found");
+            return;
+        }
+        var rqArgs = new Dictionary<string, string>();
+        rqArgs["grant_type"] = "authorization_code";
+        rqArgs["code"] = code;
+        rqArgs["redirect_uri"] = listeningUrl;
+        using var getTokenMsg = new HttpRequestMessage(HttpMethod.Post, "oauth2/token")
+        {
+            Content = new FormUrlEncodedContent(rqArgs),
+        };
+        using HttpResponseMessage response = await discordClient.SendAsync(getTokenMsg);
+        var str = await response.Content.ReadAsStringAsync();
+        var res = JsonSerializer.Deserialize<TokenResponse>(str);
+        if (res is null)
+        {
+            Console.WriteLine($"Error {str}"); // TODO(c4): Replace Console.WriteLine with sawmills
+            errorReturn(resp, "Error on connection to discord api");
+            return;
+        }
 
-            var code = request.QueryString.Get("code");
-            if (code is null)
-            {
-                Console.WriteLine("Code not found");
-                resp.StatusCode = (int) HttpStatusCode.Unauthorized;
-                resp.StatusDescription = "Unauthorized";
-                WriteStringStream(resp, "No code found");
-                Console.WriteLine("Written");
-                return;
-            }
+        using var getUserMsg = new HttpRequestMessage(HttpMethod.Get, "users/@me");
+        getUserMsg.Headers.Authorization = new AuthenticationHeaderValue(res.token_type, res.access_token);
+        using HttpResponseMessage userResp = await discordClient.SendAsync(getUserMsg);
+        var userRespStr = await userResp.Content.ReadAsStringAsync();
+        var userRespRes = JsonSerializer.Deserialize<UserResponse>(userRespStr);
+        if (userRespRes is null)
+        {
+            Console.WriteLine($"Error {userRespStr}");
+            errorReturn(resp, "Error on getting user information");
+            return;
+        }
+        var discordId = userRespRes.id;
+        Console.WriteLine($"discord user id: {discordId}");
 
-            var rqArgs = new Dictionary<string, string>();
+        if (discordId is null) {
+            Console.WriteLine($"Error, can't get discord Id");
+            errorReturn(resp, "Error, can't recieve discord id from discord api");
+            return;
+        }
 
-            rqArgs["grant_type"] = "authorization_code";
-            rqArgs["code"] = code;
-            rqArgs["redirect_uri"] = listeningUrl;
+        if (_db.GetPlayerRecordByDiscordId(discordId) is not null)
+        {
+            Console.WriteLine($"Error, {discordId} tried to link account twice");
+            errorReturn(resp, "Пользователь уже привязан");
+            return;
+        }
 
-            Console.WriteLine("Sending request");
-            using var getTokenMsg = new HttpRequestMessage(HttpMethod.Post, "oauth2/token")
-            {
-                Content = new FormUrlEncodedContent(rqArgs),
-            };
-            using HttpResponseMessage response = await discordClient.SendAsync(getTokenMsg);
-            Console.WriteLine("Request sent");
-            var str = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"str: {str}");
-            var res = JsonSerializer.Deserialize<TokenResponse>(str);
-            if (res is null)
-            {
-                resp.StatusCode = (int) HttpStatusCode.Forbidden;
-                resp.StatusDescription = "Forbidden";
-                WriteStringStream(resp, $"Error {str}");
-                return;
-            }
+        if (!(await _db.SetPlayerRecordDiscordId(userId, discordId)))
+        {
+            Console.WriteLine($"Error, could not found {userId}");
+            errorReturn(resp, "Error, non such user");
+            return;
+        }
 
-            Console.WriteLine($"{res.access_token} {res.token_type}");
-
-            using var getUserMsg = new HttpRequestMessage(HttpMethod.Get, "users/@me");
-            getUserMsg.Headers.Authorization = new AuthenticationHeaderValue(res.token_type, res.access_token);
-            using HttpResponseMessage userResp = await discordClient.SendAsync(getUserMsg);
-            var userRespStr = await userResp.Content.ReadAsStringAsync();
-            Console.WriteLine($"user resp: {userRespStr}");
-            var userRespRes = JsonSerializer.Deserialize<UserResponse>(userRespStr);
-            if (userRespRes is null)
-            {
-                resp.StatusCode = (int) HttpStatusCode.Forbidden;
-                resp.StatusDescription = "Forbidden";
-                WriteStringStream(resp, $"Error {userRespStr}");
-                return;
-            }
-
-            Console.WriteLine($"user id: {userRespRes.id}");
-
-            resp.StatusCode = (int) HttpStatusCode.OK;
-            resp.StatusDescription = "OK";
-            WriteStringStream(resp, "Good");
+        Console.WriteLine($"Player: {userId} linked to discord uid {discordId}");
+        resp.StatusCode = (int) HttpStatusCode.OK;
+        resp.StatusDescription = "OK";
+        WriteStringStream(resp, "Good");
     }
 
     public async Task ListenerThread()
@@ -134,12 +195,6 @@ public sealed class DiscordAuthBotManager
             }
         }
     }
-
-    public record class OauthTokenRequest(
-        string? grant_type = null,
-        string? code = null,
-        string? redirect_uri = null,
-        string? state = null);
 
     // {"token_type": "Bearer", "access_token": "ibnjoi44JCapPRWRDU4EPtE3slJFWC", "expires_in": 604800, "refresh_token": "Ljk03G6mG6du1Lo6yazxrQ6Se7oLY1", "scope": "identify"}
     public record class TokenResponse(
