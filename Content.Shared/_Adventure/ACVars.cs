@@ -124,6 +124,9 @@ public sealed class ACVars : CVars
      * Discord auth
      */
 
+    public static readonly CVarDef<bool> DiscordAuthEnabled =
+        CVarDef.Create("discord_auth.enabled", false, CVar.SERVERONLY);
+
     // Doesn't hot-reload, you need to restart server when this value changes.
     public static readonly CVarDef<string> DiscordAuthListeningUrl =
         CVarDef.Create("discord_auth.listening_url", "http://localhost:3963/", CVar.SERVERONLY);

@@ -22,6 +22,7 @@ public sealed class DiscordAuthBotManager
     [Dependency] public IServerNetManager _net = default!;
 
     public HttpListener listener = default!;
+    public bool discordAuthEnabled = false;
     public string listeningUrl = string.Empty;
     public string redirectUrl = string.Empty;
     public string clientId = string.Empty;
@@ -41,6 +42,7 @@ public sealed class DiscordAuthBotManager
         _cfg.OnValueChanged(ACVars.DiscordAuthClientSecret, _ => UpdateAuthHeader(), true);
         _cfg.OnValueChanged(ACVars.DiscordAuthListeningUrl, url => listeningUrl = url, true);
         _cfg.OnValueChanged(ACVars.DiscordAuthRedirectUrl, url => redirectUrl = url, true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthEnabled, val => discordAuthEnabled = val, true);
         _cfg.OnValueChanged(ACVars.DiscordAuthDebugApiUrl, url => discordClient.BaseAddress = new Uri(url), true);
         listener = new HttpListener();
         listener.Prefixes.Add(listeningUrl);
@@ -51,6 +53,7 @@ public sealed class DiscordAuthBotManager
 
     public async Task OnConnecting(NetConnectingArgs e)
     {
+        if (!discordAuthEnabled) return;
         var userId = e.UserId;
         var player = await _db.GetPlayerRecordByUserId(userId);
         if (player is null)
@@ -112,6 +115,7 @@ public sealed class DiscordAuthBotManager
 
     public async Task HandleConnection(HttpListenerContext ctx)
     {
+        if (!discordAuthEnabled) return; // Don't want to handle thread recreation on cvar change.
         HttpListenerRequest request = ctx.Request;
         using HttpListenerResponse resp = ctx.Response;
         resp.Headers.Set("Content-Type", "text/plain; charset=UTF-8");
