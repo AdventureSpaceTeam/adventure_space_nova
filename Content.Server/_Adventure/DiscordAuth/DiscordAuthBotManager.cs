@@ -23,6 +23,7 @@ public sealed class DiscordAuthBotManager
 
     public HttpListener listener = default!;
     public string listeningUrl = string.Empty;
+    public string redirectUrl = string.Empty;
     public string clientId = string.Empty;
     public string clientSecret = string.Empty;
     public static HttpClient discordClient = new()
@@ -39,6 +40,7 @@ public sealed class DiscordAuthBotManager
         _cfg.OnValueChanged(ACVars.DiscordAuthClientId, _ => UpdateAuthHeader(), false);
         _cfg.OnValueChanged(ACVars.DiscordAuthClientSecret, _ => UpdateAuthHeader(), true);
         _cfg.OnValueChanged(ACVars.DiscordAuthListeningUrl, url => listeningUrl = url, true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthRedirectUrl, url => redirectUrl = url, true);
         _cfg.OnValueChanged(ACVars.DiscordAuthDebugApiUrl, url => discordClient.BaseAddress = new Uri(url), true);
         listener = new HttpListener();
         listener.Prefixes.Add(listeningUrl);
@@ -83,7 +85,7 @@ public sealed class DiscordAuthBotManager
         NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
         queryString.Add("client_id", clientId);
         queryString.Add("response_type", "code");
-        queryString.Add("redirect_uri", listeningUrl);
+        queryString.Add("redirect_uri", redirectUrl);
         queryString.Add("scope", "identify");
         queryString.Add("state", guid.ToString());
         var uri = new UriBuilder(new Uri(discordClient.BaseAddress, "oauth2/authorize"));
@@ -131,7 +133,7 @@ public sealed class DiscordAuthBotManager
         var rqArgs = new Dictionary<string, string>();
         rqArgs["grant_type"] = "authorization_code";
         rqArgs["code"] = code;
-        rqArgs["redirect_uri"] = listeningUrl;
+        rqArgs["redirect_uri"] = redirectUrl;
         using var getTokenMsg = new HttpRequestMessage(HttpMethod.Post, "oauth2/token")
         {
             Content = new FormUrlEncodedContent(rqArgs),

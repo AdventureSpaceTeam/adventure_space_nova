@@ -128,6 +128,9 @@ public sealed class ACVars : CVars
     public static readonly CVarDef<string> DiscordAuthListeningUrl =
         CVarDef.Create("discord_auth.listening_url", "http://localhost:3963/", CVar.SERVERONLY);
 
+    public static readonly CVarDef<string> DiscordAuthRedirectUrl =
+        CVarDef.Create("discord_auth.redirect_url", "http://localhost:3963/", CVar.SERVERONLY);
+
     public static readonly CVarDef<string> DiscordAuthClientId =
         CVarDef.Create("discord_auth.client_id", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
