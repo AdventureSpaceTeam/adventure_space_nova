@@ -597,7 +597,8 @@ namespace Content.Server.Database
         public List<RoleWhitelist> JobWhitelists { get; set; } = null!;
 
         // Adventure model begin
-        public string? SponsorTier { get; set; } = null!;
+        public string? SponsorTier { get; set; } = null!; // adventure sponsor api
+        public string? DiscordId { get; set; } = null!; // adventure discord auth
         // Adventure model end
     }
 

@@ -1,3 +1,4 @@
+using Robust.Client.UserInterface.CustomControls; // Adventure discord auth
 using System.Text.RegularExpressions;
 using Content.Client.MainMenu.UI;
 using Content.Client.UserInterface.Systems.EscapeMenu;
@@ -19,6 +20,8 @@ namespace Content.Client.MainMenu
     // Instantiated dynamically through the StateManager, Dependencies will be resolved.
     public sealed class MainScreen : Robust.Client.State.State
     {
+        [Dependency] private readonly IUriOpener _uriOpener = default!; // Adventure discord auth
+        [Dependency] private readonly IClipboardManager _clipboard = null!; // Adventure discord auth
         [Dependency] private readonly IBaseClient _client = default!;
         [Dependency] private readonly IClientNetManager _netManager = default!;
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
@@ -179,8 +182,79 @@ namespace Content.Client.MainMenu
             }
         }
 
+        // Adventure discord auth begin
+        public void PopupLink(string message, string link, string? title = null)
+        {
+            var popup = new DefaultWindow
+            {
+                Title = string.IsNullOrEmpty(title) ? Loc.GetString("popup-title") : title,
+            };
+
+            var messageLabel = new Label { Text = message };
+            const int linkMaxSize = 50;
+            var linkLabel = new Label {
+                Text = link.Substring(0, Math.Min(link.Length, linkMaxSize)) +
+                    ((link.Length > linkMaxSize) ? "..." : string.Empty)
+            };
+
+            var vBox = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+            };
+
+            vBox.AddChild(messageLabel);
+            vBox.AddChild(linkLabel);
+
+            var copyButton = new Button
+            {
+                Text = "Копировать",
+                HorizontalExpand = true,
+            };
+
+            var openButton = new Button
+            {
+                Text = "Открыть",
+                HorizontalExpand = true,
+            };
+
+            copyButton.OnPressed += _ =>
+            {
+                _clipboard.SetText(link);
+            };
+
+            openButton.OnPressed += _ =>
+            {
+                _uriOpener.OpenUri(link);
+            };
+
+            var hBox = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                HorizontalAlignment = Control.HAlignment.Right,
+            };
+
+            hBox.AddChild(openButton);
+            hBox.AddChild(copyButton);
+            vBox.AddChild(hBox);
+
+            popup.Contents.AddChild(vBox);
+            popup.OpenCentered();
+        }
+        // Adventure discord auth end
+
         private void _onConnectFailed(object? _, NetConnectFailArgs args)
         {
+            // Adventure discord auth begin
+            object? returnedLink = args.Message.ValueOf("discord_auth_link");
+            if (returnedLink is string discordAuthLink)
+            {
+                PopupLink(
+                    Loc.GetString("main-menu-failed-to-connect",("reason", args.Reason)),
+                    discordAuthLink,
+                    "Авторизация в Дискорде");
+                return;
+            }
+            // Adventure discord auth end
             _userInterfaceManager.Popup(Loc.GetString("main-menu-failed-to-connect",("reason", args.Reason)));
             _netManager.ConnectFailed -= _onConnectFailed;
             _setConnectingState(false);

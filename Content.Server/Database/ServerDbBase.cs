@@ -644,6 +644,31 @@ namespace Content.Server.Database
         }
         // Adventure sponsor api end
 
+        // Adventure discord auth begin
+        /// Returns true when succeed, flase when not.
+        public async Task<bool> SetPlayerRecordDiscordId(NetUserId userId, string? discordId)
+        {
+            await using var db = await GetDb();
+            var record = await db.DbContext.Player.SingleOrDefaultAsync(p => p.UserId == userId.UserId);
+            if (record == null)
+                return false;
+            record.DiscordId = discordId;
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<PlayerRecord?> GetPlayerRecordByDiscordId(string discordId, CancellationToken cancel)
+        {
+            await using var db = await GetDb();
+
+            var record = await db.DbContext.Player
+                .OrderByDescending(p => p.LastSeenTime)
+                .FirstOrDefaultAsync(p => p.DiscordId == discordId, cancel);
+
+            return record == null ? null : MakePlayerRecord(record);
+        }
+        // Adventure discord auth end
+
         public async Task<PlayerRecord?> GetPlayerRecordByUserName(string userName, CancellationToken cancel)
         {
             await using var db = await GetDb();
@@ -686,7 +711,8 @@ namespace Content.Server.Database
                 new DateTimeOffset(NormalizeDatabaseTime(player.LastSeenTime)),
                 player.LastSeenAddress,
                 player.LastSeenHWId,
-                player.SponsorTier); // Adventure sponsor api
+                player.SponsorTier, // Adventure sponsor api
+                player.DiscordId); // Adventure discord auth
         }
 
         #endregion
