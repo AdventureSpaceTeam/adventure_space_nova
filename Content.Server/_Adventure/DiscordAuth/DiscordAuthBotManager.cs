@@ -58,7 +58,10 @@ public sealed class DiscordAuthBotManager
         }
         if (player.DiscordId is not null) return;
         var link = GenerateInviteLink(userId);
-        e.Deny(new NetDenyReason($"Пожалуйста, авторизуйтесь по ссылке: {link}"));
+        e.Deny(new NetDenyReason($"Пожалуйста, авторизуйтесь по ссылке", new Dictionary<string, object>
+        {
+            {"discord_auth_link", link}
+        }));
     }
 
     public void UpdateAuthHeader()
@@ -99,7 +102,7 @@ public sealed class DiscordAuthBotManager
 
     public void errorReturn(HttpListenerResponse resp, string errorString)
     {
-        Console.WriteLine($"Returned {errorString}");
+        _sawmill.Debug($"Returned {errorString}");
         resp.StatusCode = (int) HttpStatusCode.Unauthorized;
         resp.StatusDescription = "Unauthorized";
         WriteStringStream(resp, errorString);
@@ -138,7 +141,7 @@ public sealed class DiscordAuthBotManager
         var res = JsonSerializer.Deserialize<TokenResponse>(str);
         if (res is null)
         {
-            Console.WriteLine($"Error {str}"); // TODO(c4): Replace Console.WriteLine with sawmills
+            _sawmill.Error($"Error {str}");
             errorReturn(resp, "Error on connection to discord api");
             return;
         }
@@ -150,34 +153,33 @@ public sealed class DiscordAuthBotManager
         var userRespRes = JsonSerializer.Deserialize<UserResponse>(userRespStr);
         if (userRespRes is null)
         {
-            Console.WriteLine($"Error {userRespStr}");
+            _sawmill.Error($"Error {userRespStr}");
             errorReturn(resp, "Error on getting user information");
             return;
         }
         var discordId = userRespRes.id;
-        Console.WriteLine($"discord user id: {discordId}");
 
         if (discordId is null) {
-            Console.WriteLine($"Error, can't get discord Id");
+            _sawmill.Error($"Error, can't get discord Id");
             errorReturn(resp, "Error, can't recieve discord id from discord api");
             return;
         }
 
         if (_db.GetPlayerRecordByDiscordId(discordId) is not null)
         {
-            Console.WriteLine($"Error, {discordId} tried to link account twice");
+            _sawmill.Warning($"Error, {discordId} tried to link account twice");
             errorReturn(resp, "Пользователь уже привязан");
             return;
         }
 
         if (!(await _db.SetPlayerRecordDiscordId(userId, discordId)))
         {
-            Console.WriteLine($"Error, could not found {userId}");
+            _sawmill.Error($"Error, could not found {userId}");
             errorReturn(resp, "Error, non such user");
             return;
         }
 
-        Console.WriteLine($"Player: {userId} linked to discord uid {discordId}");
+        _sawmill.Info($"Player: {userId} linked to discord uid {discordId}");
         resp.StatusCode = (int) HttpStatusCode.OK;
         resp.StatusDescription = "OK";
         WriteStringStream(resp, "Good");
