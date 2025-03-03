@@ -57,8 +57,6 @@
         visualType: Large
         messages: [ "Обледенение отпадает от вашего корпуса" ]
         probability: 0.25
-  - type: Inventory
-    templateId: Synth
   - type: ThermalRegulator
     metabolismHeat: 800
     radiatedHeat: 100
@@ -228,6 +226,14 @@
   - type: GuideHelp
     guides:
     - Species
+  - type: Inventory
+    templateId: Synth
+    displacements:
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/IPC/displacement.rsi
+            state: pants
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -236,3 +242,11 @@
   components:
     - type: HumanoidAppearance
       species: Synth
+    - type: Inventory
+      templateId: Synth
+      displacements:
+        pants:
+          sizeMaps:
+            32:
+              sprite: Adventure/Races/IPC/displacement.rsi
+              state: pants
