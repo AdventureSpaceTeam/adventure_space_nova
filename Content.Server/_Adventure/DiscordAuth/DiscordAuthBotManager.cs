@@ -167,9 +167,11 @@ public sealed class DiscordAuthBotManager
             return;
         }
 
-        if (_db.GetPlayerRecordByDiscordId(discordId) is not null)
+        var player = await _db.GetPlayerRecordByDiscordId(discordId);
+
+        if (player is not null)
         {
-            _sawmill.Warning($"Error, {discordId} tried to link account twice");
+            _sawmill.Warning($"Error, {discordId} ({player.UserId}) tried to link account twice");
             errorReturn(resp, "Пользователь уже привязан");
             return;
         }
