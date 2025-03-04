@@ -23,6 +23,7 @@
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
+    ipc: IPCModulEng # Adventure-IPC
   #storage:
     #back:
     #- Stuff

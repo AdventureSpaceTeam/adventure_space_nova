@@ -52,6 +52,7 @@
     gloves: ClothingHandsGlovesCaptain
     id: CaptainPDA
     ears: ClothingHeadsetAltCommand
+    ipc: IPCModulCommand # Adventure-IPC
   storage:
     back:
     - Flash

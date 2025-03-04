@@ -35,6 +35,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolMk58
     pocket2: BookSecurity
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Flash

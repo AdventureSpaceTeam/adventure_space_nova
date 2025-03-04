@@ -45,6 +45,7 @@
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetCE
     belt: ClothingBeltUtilityEngineering
+    ipc: IPCModulEng # Adventure-IPC
   storage:
     back:
     - Flash

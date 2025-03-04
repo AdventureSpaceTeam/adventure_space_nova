@@ -23,6 +23,7 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplink
+    ipc: IPCModulSec 
 
 #ГИР Офицера ЦСС Base
 - type: startingGear
@@ -40,6 +41,7 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplinkleader
+    ipc: IPCModulSec 
 
 # госторолька солдат
 - type: randomHumanoidSettings
@@ -134,6 +136,7 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplink
+    ipc: IPCModulSec 
 
 # Стартовый гир офицера FullEVA
 - type: startingGear
@@ -150,6 +153,7 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplinkleader
+    ipc: IPCModulSec 
 
 - type: randomHumanoidSettings
   id: CLEAOfficerEVA

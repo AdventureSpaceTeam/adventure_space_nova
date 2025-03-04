@@ -31,6 +31,7 @@
     id: WardenPDA
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Flash
