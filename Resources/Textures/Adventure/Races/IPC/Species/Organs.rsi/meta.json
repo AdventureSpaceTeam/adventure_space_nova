@@ -8,24 +8,10 @@
   },
   "states": [
     {
-      "name": "brain",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2
-        ]
-      ]
+      "name": "brain"
     },
     {
-      "name": "brain-unshaded",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2
-        ]
-      ]
+      "name": "brain-unshaded"
     }
   ]
 }
