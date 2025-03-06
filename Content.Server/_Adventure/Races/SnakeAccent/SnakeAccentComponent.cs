@@ -1,4 +1,4 @@
-namespace Content.Server._Adventure.SnakeAccent;
+namespace Content.Server._Adventure.Races.SnakeAccent;
 
 /// <summary>
 ///     Rrrr!

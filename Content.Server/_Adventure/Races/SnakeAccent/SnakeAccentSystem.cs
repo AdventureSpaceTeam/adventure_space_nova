@@ -1,8 +1,8 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using Content.Server.Speech;
 using Robust.Shared.Random;
 
-namespace Content.Server._Adventure.SnakeAccent;
+namespace Content.Server._Adventure.Races.SnakeAccent;
 
 public sealed class SnakeAccentSystem : EntitySystem
 {
