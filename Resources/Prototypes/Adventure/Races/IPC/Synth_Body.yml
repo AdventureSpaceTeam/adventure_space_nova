@@ -278,20 +278,3 @@
   - type: BodyPart
     partType: Foot
     symmetry: Right
-
-# батарея КПБ
-- type: entity
-  name: батарея КПБ
-  description: Элемент питания КПБ. Популярный и надёжный вариант.
-  id: PowerCellMediumIPC
-  parent: PowerCellMedium
-  components:
-  - type: Battery
-    maxCharge: 720
-    startingCharge: 720
-  - type: Tag
-    tags:
-      - PowerCellIPC
-
-- type: Tag
-  id: PowerCellIPC

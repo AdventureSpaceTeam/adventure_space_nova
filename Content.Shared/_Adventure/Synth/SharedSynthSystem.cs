@@ -73,6 +73,6 @@ public abstract partial class SharedSynthSystem : EntitySystem
             return;
 
         var sprintDif = movement.BaseWalkSpeed / movement.BaseSprintSpeed;
-        args.ModifySpeed(0.5f, sprintDif);
+        args.ModifySpeed(0.5f, 0.5f);
     }
 }

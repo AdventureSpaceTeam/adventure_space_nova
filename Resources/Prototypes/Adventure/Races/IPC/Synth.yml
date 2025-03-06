@@ -18,22 +18,19 @@
       cell_slot: !type:ContainerSlot 
   - type: PowerCellSlot
     cellSlotId: cell_slot
-    fitsInCharger: false
+    fitsInCharger: true
   - type: ItemToggle
     onActivate: false 
     activated: false 
     onUse: false 
   - type: PowerCellDraw
-    drawRate: 0.6
+    drawRate: 1.1
   - type: ItemSlots
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMediumIPC
-        disableEject: true
-        whitelist:
-          tags:
-            - PowerCellIPC
+        startingItem: PowerCellHigh
+        locked: true
   - type: Synth
 
 - type: entity
