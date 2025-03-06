@@ -100,10 +100,6 @@ public sealed partial class SynthSystem : SharedSynthSystem
     private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args)  // карочи тут какая-то хуйня ебливая
     {
         var (uid, comp) = ent;
-        if (args.Activated)
-            InstallAllModules(uid, comp);
-        else
-            DisableAllModules(uid, comp);
 
         var drawing = _mobState.IsAlive(ent);
         _powerCell.SetDrawEnabled(uid, drawing);
