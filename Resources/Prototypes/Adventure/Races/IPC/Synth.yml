@@ -12,6 +12,29 @@
   name: Урист макКПБ
   parent: BaseMobSynth
   id: MobSynth
+  components:
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot 
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: false
+  - type: ItemToggle
+    onActivate: false 
+    activated: false 
+    onUse: false 
+  - type: PowerCellDraw
+    drawRate: 0.6
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMediumIPC
+        disableEject: true
+        whitelist:
+          tags:
+            - PowerCellIPC
+  - type: Synth
 
 - type: entity
   abstract: true

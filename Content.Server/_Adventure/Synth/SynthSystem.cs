@@ -49,6 +49,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         SubscribeLocalEvent<SynthComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
+        SubscribeLocalEvent<SynthComponent, ItemToggledEvent>(OnToggled);
 
         InitializeUI();
 
@@ -97,7 +98,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         UpdateUI(uid, component);
     }
 
-    private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args)  // карочи тут какая-то хуйня ебливая
+    private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args) 
     {
         var (uid, comp) = ent;
 
