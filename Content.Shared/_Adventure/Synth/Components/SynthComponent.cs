@@ -1,4 +1,6 @@
 ﻿using Content.Shared.Alert;
+using Content.Shared.Damage;
+using Content.Shared.FixedPoint;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -14,4 +16,17 @@ public sealed partial class SynthComponent : Component
 
     [DataField]
     public ProtoId<AlertPrototype> NoBatteryAlert = "BorgBatteryNone";
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    public DamageSpecifier EmpDamage = new()
+    {
+        DamageDict = new Dictionary<string, FixedPoint2>
+        {
+            { "Shock", 10 },
+        }
+    };
+
+    [DataField("empParalyzeTime")]
+    public float EmpParalyzeTime = 10;
+
 }

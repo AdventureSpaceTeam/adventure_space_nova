@@ -1,4 +1,7 @@
 using Content.Server.Actions;
+using Content.Server.Emp;
+using Content.Shared.Stunnable;
+using Content.Shared.Damage;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
@@ -22,6 +25,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
+
 namespace Content.Server._Adventure.Synth;
 
 public sealed partial class SynthSystem : SharedSynthSystem
@@ -37,6 +41,8 @@ public sealed partial class SynthSystem : SharedSynthSystem
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
+    [Dependency] private readonly SharedStunSystem _stunSystem = default!;
+    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
@@ -46,6 +52,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<SynthComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<SynthComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
@@ -53,6 +60,12 @@ public sealed partial class SynthSystem : SharedSynthSystem
 
         InitializeUI();
 
+    }
+
+    private void OnEmpPulse(EntityUid uid, SynthComponent component, EmpPulseEvent ev)
+    {
+        _damageableSystem.TryChangeDamage(uid, component.EmpDamage, true);
+        _stunSystem.TryParalyze(uid, TimeSpan.FromSeconds(component.EmpParalyzeTime), true);
     }
 
     private void OnMapInit(EntityUid uid, SynthComponent component, MapInitEvent args)
@@ -109,5 +122,4 @@ public sealed partial class SynthSystem : SharedSynthSystem
 
         _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
     }
-
 }
