@@ -1,0 +1,18 @@
+- type: entity
+  parent: BaseItem
+  id: GasAnalyzerCartridge
+  name: GasAnalyser cartridge
+  description: An environmental maintenance program that reports current gas levels.
+  components:
+    - type: Sprite
+      sprite: Adventure/Objects/Devices/cartridge.rsi
+      state: cart-atmo
+    - type: Icon
+      sprite: Adventure/Objects/Devices/cartridge.rsi
+      state: cart-atmo
+    - type: Cartridge
+      programName: gas-analyzer-program-name
+      icon:
+        sprite: Adventure/Objects/Specific/Atmos/gasanalyzer.rsi
+        state: icon
+    - type: GasAnalyzerCartridge
