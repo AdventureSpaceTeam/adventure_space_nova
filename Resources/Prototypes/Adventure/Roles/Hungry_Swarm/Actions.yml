@@ -1,0 +1,157 @@
+#Пожирание
+- type: entity
+  id: ActionDevourHungerSwarm
+  name: "[color=red]Пожирать[/color]"
+  description: Ешьте всё!.
+  noSpawn: true
+  components:
+  - type: EntityTargetAction
+    icon: { sprite : Interface/Actions/devour.rsi, state: icon }
+    iconOn: { sprite : Interface/Actions/devour.rsi, state: icon-on }
+    event: !type:DevourActionEvent
+    priority: 1
+
+# Построить слизь
+- type: entity
+  id: ActionHungerSwarmWeb
+  name: Построить слизь
+  description: Слизь - ваш друг и союзнить, распространяйте её чтобы замедлить ваших врагов, а нахождение на ней усиливает вашу регенерацию.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/other.rsi
+      state: tile
+    event: !type:SpiderWebActionEvent
+    useDelay: 20
+
+#Строительство стены
+- type: entity
+  id: ActionHungerSwarmWall
+  name: Построить стену улья
+  description: Возведите стену для защиты улья.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 20
+    range: 1.5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/other.rsi
+      state: wall
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: HungerSwarmWallSpawn
+        amount: 1
+
+#Строительство двери
+- type: entity
+  id: ActionHungerSwarmDoor
+  name: Построить проход улья
+  description: Возведите проход для защиты улья.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 40
+    range: 1.5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/door.rsi
+      state: closed
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: HungerSwarmDoorSpawn
+        amount: 1
+
+#Построить биоэлюмистентную слизь
+- type: entity
+  id: ActionHungerSwarmWebLight
+  name: Построить биоэлюмистентную слизь
+  description: Возведите особый вид слизи, чтобы подсветить себе путь.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 20
+    range: 1.5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/other.rsi
+      state: light
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: HungerSwarmWebLight
+        amount: 1
+
+#Отложить яйцо
+- type: entity
+  id: ActionHungerSwarmLayEgg
+  name: Отложить яйцо
+  description: Пришло время размножиться.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/other.rsi
+      state: egg
+    useDelay: 60
+    event: !type:EggLayInstantActionEvent
+
+#постройка
+- type: entity
+  parent: BaseSubdermalImplant 
+  id: ActionHungerSwarmWallImplant
+  name: Построить стену улья
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionHungerSwarmWall 
+
+- type: entity
+  parent: BaseSubdermalImplant 
+  id: ActionHungerSwarmDoorImplant
+  name: Построить проход улья
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionHungerSwarmDoor 
+
+- type: entity
+  parent: BaseSubdermalImplant 
+  id: ActionHungerSwarmWebLightImplant
+  name: Построить биоэлюмистентную слизь
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionHungerSwarmWebLight 
+
+#Вырасти в жнеца
+- type: entity
+  id: ReaperEvolutionAction
+  name: Вырасти в жнеца
+  description: Пришло время стать взрослее.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/reaper.rsi
+      state: icon
+    event: !type:ReformEvent {}
+    useDelay: 60
+
+#Выпустить жало
+- type: entity
+  noSpawn: true
+  id: ActionReaperSting
+  name: Выпустить жало
+  description: Используйте своё жало чтобы убивать врагов (доступно раз в 5 секунд).
+  components:
+  - type: WorldTargetAction
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: Adventure/Roles/Hungry_Swarm/other.rsi
+      state: sting
+    event: !type:ActionGunShootEvent
+    priority: 100
+    checkCanAccess: false
+    range: 0
