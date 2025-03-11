@@ -104,6 +104,10 @@
         type: InstrumentBoundUserInterface
       enum.HealthAnalyzerUiKey.Key:
         type: HealthAnalyzerBoundUserInterface
+      # Adventure cartridge gas analyzer begin
+      enum.GasAnalyzerUiKey.Key:
+        type: GasAnalyzerBoundUserInterface
+      # Adventure cartridge gas analyzer end
   - type: Tag
     tags:
     - DoorBumpOpener
