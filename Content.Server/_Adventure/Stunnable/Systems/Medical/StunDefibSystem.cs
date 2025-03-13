@@ -13,7 +13,7 @@ using Content.Shared.Stunnable;
 
 namespace Content.Server._Adventure.Stunnable.Systems.Medical
 {
-    public sealed class StunDefibSystem : SharedStunbatonSystem
+    public sealed class StunDefibSystem : EntitySystem
     {
         [Dependency] private readonly SharedItemSystem _item = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
