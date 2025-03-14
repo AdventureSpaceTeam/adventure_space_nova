@@ -34,6 +34,14 @@
       "directions": 4
     },
     {
+      "name": "equipped-box-rep",
+      "directions": 4
+    },
+    {
+      "name": "equipped-box-heart-rep",
+      "directions": 4
+    },
+    {
       "name": "equipped-zasranes",
       "directions": 4
     },
@@ -47,6 +55,14 @@
     },
     {
       "name": "equipped-string2",
+      "directions": 4
+    },
+    {
+      "name": "equipped-string-rep",
+      "directions": 4
+    },
+    {
+      "name": "equipped-string2-rep",
       "directions": 4
     }
   ]
