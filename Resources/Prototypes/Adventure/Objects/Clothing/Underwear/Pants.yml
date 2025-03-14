@@ -16,6 +16,8 @@
     clothingVisuals:
       pants:
       - state: equipped-box
+      pants-reptilian:
+      - state: equipped-box-rep
     slots: [pants]
   - type: Butcherable
     butcheringType: Knife
@@ -51,6 +53,9 @@
       pants:
       - state: equipped-box
         color: "#292739"
+      pants-reptilian:
+      - state: equipped-box-rep
+        color: "#292739"
 
 - type: entity
   parent: BaseClothingPants
@@ -67,6 +72,9 @@
     clothingVisuals:
       pants:
       - state: equipped-box
+        color: "#d5801c"
+      pants-reptilian:
+      - state: equipped-box-rep
         color: "#d5801c"
 
 - type: entity
@@ -85,6 +93,9 @@
       pants:
       - state: equipped-box
         color: "#1cd543"
+      pants-reptilian:
+      - state: equipped-box-rep
+        color: "#1cd543"
 
 - type: entity
   parent: BaseClothingPants
@@ -101,6 +112,9 @@
     clothingVisuals:
       pants:
       - state: equipped-box
+        color: "#21eae3"
+      pants-reptilian:
+      - state: equipped-box-rep
         color: "#21eae3"
 
 - type: entity
@@ -119,6 +133,9 @@
       pants:
       - state: equipped-box
         color: "#6c72f3"
+      pants-reptilian:
+      - state: equipped-box-rep
+        color: "#6c72f3"
 
 - type: entity
   parent: BaseClothingPants
@@ -136,6 +153,9 @@
       pants:
       - state: equipped-box
         color: "#fb0808"
+      pants-reptilian:
+      - state: equipped-box-rep
+        color: "#fb0808"
 
 - type: entity
   parent: BaseClothingPants
@@ -152,6 +172,9 @@
     clothingVisuals:
       pants:
       - state: equipped-box
+        color: "#f785f0"
+      pants-reptilian:
+      - state: equipped-box-rep
         color: "#f785f0"
 
 - type: entity
@@ -171,6 +194,10 @@
       pants:
       - state: equipped-box
       - state: equipped-box-heart
+        color: "#fb0808"
+      pants-reptilian:
+      - state: equipped-box-rep
+      - state: equipped-box-heart-rep
         color: "#fb0808"
 
 #Плавки
@@ -323,6 +350,8 @@
     clothingVisuals:
       pants:
       - state: equipped-string
+      pants-reptilian:
+      - state: equipped-string-rep
 
 - type: entity
   parent: BaseClothingPants
@@ -339,6 +368,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string
+        color: "#292739"
+      pants-reptilian:
+      - state: equipped-string-rep
         color: "#292739"
 
 - type: entity
@@ -357,6 +389,9 @@
       pants:
       - state: equipped-string
         color: "#d5801c"
+      pants-reptilian:
+      - state: equipped-string-rep
+        color: "#d5801c"
 
 - type: entity
   parent: BaseClothingPants
@@ -373,6 +408,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string
+        color: "#1cd543"
+      pants-reptilian:
+      - state: equipped-string-rep
         color: "#1cd543"
 
 - type: entity
@@ -391,6 +429,9 @@
       pants:
       - state: equipped-string
         color: "#21eae3"
+      pants-reptilian:
+      - state: equipped-string-rep
+        color: "#21eae3"
 
 - type: entity
   parent: BaseClothingPants
@@ -407,6 +448,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string
+        color: "#6c72f3"
+      pants-reptilian:
+      - state: equipped-string-rep
         color: "#6c72f3"
 
 - type: entity
@@ -425,6 +469,9 @@
       pants:
       - state: equipped-string
         color: "#fb0808"
+      pants-reptilian:
+      - state: equipped-string-rep
+        color: "#fb0808"
 
 - type: entity
   parent: BaseClothingPants
@@ -442,6 +489,9 @@
       pants:
       - state: equipped-string
         color: "#f785f0"
+      pants-reptilian:
+      - state: equipped-string-rep
+        color: "#f785f0"
 
 #Бикини
 - type: entity
@@ -458,6 +508,8 @@
     clothingVisuals:
       pants:
       - state: equipped-string2
+      pants-reptilian:
+      - state: equipped-string2-rep
 
 - type: entity
   parent: BaseClothingPants
@@ -474,6 +526,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string2
+        color: "#292739"
+      pants-reptilian:
+      - state: equipped-string2-rep
         color: "#292739"
 
 - type: entity
@@ -492,6 +547,9 @@
       pants:
       - state: equipped-string2
         color: "#d5801c"
+      pants-reptilian:
+      - state: equipped-string2-rep
+        color: "#d5801c"
 
 - type: entity
   parent: BaseClothingPants
@@ -508,6 +566,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string2
+        color: "#1cd543"
+      pants-reptilian:
+      - state: equipped-string2-rep
         color: "#1cd543"
 
 - type: entity
@@ -526,6 +587,9 @@
       pants:
       - state: equipped-string2
         color: "#21eae3"
+      pants-reptilian:
+      - state: equipped-string2-rep
+        color: "#21eae3"
 
 - type: entity
   parent: BaseClothingPants
@@ -542,6 +606,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string2
+        color: "#6c72f3"
+      pants-reptilian:
+      - state: equipped-string2-rep
         color: "#6c72f3"
 
 - type: entity
@@ -560,6 +627,9 @@
       pants:
       - state: equipped-string2
         color: "#fb0808"
+      pants-reptilian:
+      - state: equipped-string2-rep
+        color: "#fb0808"
 
 - type: entity
   parent: BaseClothingPants
@@ -576,6 +646,9 @@
     clothingVisuals:
       pants:
       - state: equipped-string2
+        color: "#f785f0"
+      pants-reptilian:
+      - state: equipped-string2-rep
         color: "#f785f0"
 
 # Rofls
