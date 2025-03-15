@@ -11,7 +11,7 @@
         path:
           "/Audio/Effects/glass_hit.ogg"
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/double_glass.rsi
+    sprite: Adventure/Structures/Doors/Double/double_glass.rsi
     snapCardinals: false
     offset: 0.5,0
   - type: Fixtures
@@ -49,7 +49,7 @@
         path:
           "/Audio/Effects/glass_hit.ogg"
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/triple_glass.rsi
+    sprite: Adventure/Structures/Doors/Triple/triple_glass.rsi
     snapCardinals: false
     offset: 0,0
   - type: Fixtures
@@ -84,10 +84,12 @@
   name: каркас большого шлюза
   description: Он открывается, он закрывается, и он может вас раздавить.
   components:
+  - type: Rotatable
   - type: Transform
+    anchored: true
     noRot: false
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/double_glass.rsi
+    sprite: Adventure/Structures/Doors/Double/double_glass.rsi
     state: "assembly"
     snapCardinals: false
     offset: 0.5,0
@@ -113,10 +115,12 @@
   name: каркас большого шлюза
   description: Он открывается, он закрывается, и он может вас раздавить.
   components:
+  - type: Rotatable
   - type: Transform
+    anchored: true
     noRot: false
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/triple_glass.rsi
+    sprite: Adventure/Structures/Doors/Triple/triple_glass.rsi
     state: "assembly"
     snapCardinals: false
     offset: 0,0
@@ -140,10 +144,18 @@
   id: GlassDouble
   iconPriority: 30
   stylePaths:
-    glass: Adventure/Structures/Doors/Glass/double_glass.rsi
+    glass: Adventure/Structures/Doors/Double/double_glass.rsi
+    atmospherics: Adventure/Structures/Doors/Double/atmospherics.rsi
+    cargo:       Adventure/Structures/Doors/Double/cargo.rsi
+    command:     Adventure/Structures/Doors/Double/command.rsi
+    science:     Adventure/Structures/Doors/Double/science.rsi
+    engineering: Adventure/Structures/Doors/Double/engineering.rsi
+    hydroponics: Adventure/Structures/Doors/Double/hydroponics.rsi
+    medical:     Adventure/Structures/Doors/Double/medical.rsi
+    security:    Adventure/Structures/Doors/Double/security.rsi
 
 - type: AirlockGroup
   id: GlassTriple
   iconPriority: 30
   stylePaths:
-    glass: Adventure/Structures/Doors/Glass/triple_glass.rsi
+    glass: Adventure/Structures/Doors/Triple/triple_glass.rsi

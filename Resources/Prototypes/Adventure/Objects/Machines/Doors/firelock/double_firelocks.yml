@@ -6,7 +6,7 @@
   suffix: Двойной
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/double_firelock_glass.rsi
+    sprite: Adventure/Structures/Doors/Double/double_firelock_glass.rsi
     snapCardinals: false
     offset: 0.5,0
   - type: Fixtures
@@ -35,6 +35,7 @@
   suffix: Двойной
   description: Это каркас большого пожарного шлюза.
   components:
+  - type: Rotatable
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Key:
@@ -44,7 +45,7 @@
           frame3: { state: assembly }
           frame4: { state: assembly }
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/double_firelock_glass.rsi
+    sprite: Adventure/Structures/Doors/Double/double_firelock_glass.rsi
     layers:
     - state: "assembly"
     snapCardinals: false
@@ -81,6 +82,7 @@
         - HighImpassable
         - MidImpassable
   - type: Transform
+    anchored: true
     noRot: false
   - type: Construction
     graph: FirelockDouble
@@ -94,7 +96,7 @@
   suffix: Тройной
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/triple_firelock_glass.rsi
+    sprite: Adventure/Structures/Doors/Triple/triple_firelock_glass.rsi
     snapCardinals: false
     offset: 0,0
   - type: Fixtures
@@ -123,6 +125,7 @@
   suffix: Тройной
   description: Это каркас большого пожарного шлюза.
   components:
+  - type: Rotatable
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Key:
@@ -132,7 +135,7 @@
           frame3: { state: assembly }
           frame4: { state: assembly }
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/triple_firelock_glass.rsi
+    sprite: Adventure/Structures/Doors/Triple/triple_firelock_glass.rsi
     layers:
     - state: "assembly"
     snapCardinals: false
@@ -169,6 +172,7 @@
         - HighImpassable
         - MidImpassable
   - type: Transform
+    anchored: true
     noRot: false
   - type: Construction
     graph: FirelockTriple

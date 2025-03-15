@@ -143,7 +143,7 @@
   category: construction-category-structures
   description: Он открывается, он закрывается, и он может вас раздавить.
   icon:
-    sprite: Adventure/Structures/Doors/Glass/double_glass.rsi
+    sprite: Adventure/Structures/Doors/Double/double_glass.rsi
     state: assembly
   objectType: Structure
   placementMode: SnapgridCenter

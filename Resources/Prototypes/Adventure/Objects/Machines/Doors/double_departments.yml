@@ -1,0 +1,153 @@
+# не закрытые
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockCommand
+  suffix: Двойной, Командование
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/command.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockSecurity
+  suffix: Двойной, Служба безопасности
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/security.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockCargo
+  suffix: Двойной, Снабжение
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/cargo.rsi
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockHydroponics
+  suffix: Двойной, Гидропоника
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/hydroponics.rsi
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockEngineering
+  suffix: Двойной, Инженерный
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/engineering.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockMedical
+  suffix: Двойной, Медицинский
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/medical.rsi
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: DoubleGlassAirlock
+  id: DoubleGlassAirlockScience
+  suffix: Двойной, Научный
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/science.rsi
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  parent: DoubleGlassAirlockEngineering
+  id: DoubleGlassAirlockAtmospherics
+  suffix: Двойной, Атмосферный
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Double/atmospherics.rsi
+
+# закрытые
+- type: entity
+  parent: DoubleGlassAirlockCommand
+  id: DoubleGlassAirlockCommandLocked
+  suffix: Двойной, Командование, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]
+
+- type: entity
+  parent: DoubleGlassAirlockSecurity
+  id: DoubleGlassAirlockSecurityLocked
+  suffix: Двойной, Служба безопасности, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: DoubleGlassAirlockCargo
+  id: DoubleGlassAirlockCargoLocked
+  suffix: Двойной, Снабжение, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+
+- type: entity
+  parent: DoubleGlassAirlockHydroponics
+  id: DoubleGlassAirlockHydroponicsLocked
+  suffix: Двойной, Гидропоника, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHydroponics ]
+
+- type: entity
+  parent: DoubleGlassAirlockEngineering
+  id: DoubleGlassAirlockEngineeringLocked
+  suffix: Двойной, Инженерный, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+
+- type: entity
+  parent: DoubleGlassAirlockMedical
+  id: DoubleGlassAirlockMedicalLocked
+  suffix: Двойной, Медицинский, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+
+- type: entity
+  parent: DoubleGlassAirlockScience
+  id: DoubleGlassAirlockScienceLocked
+  suffix: Двойной, Научный, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearch ]
+
+- type: entity
+  parent: DoubleGlassAirlockAtmospherics
+  id: DoubleGlassAirlockAtmosphericsLocked
+  suffix: Двойной, Атмосферный, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAtmospherics ]
