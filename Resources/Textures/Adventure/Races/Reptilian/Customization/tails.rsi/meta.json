@@ -42,6 +42,14 @@
     {
       "name": "tail_spiky2",
       "directions": 4
+    },
+    {
+      "name": "tail_spike",
+      "directions": 4
+    },
+    {
+      "name": "tail_spike2",
+      "directions": 4
     }
   ]
 }

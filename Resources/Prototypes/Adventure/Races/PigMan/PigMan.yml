@@ -101,6 +101,11 @@
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: hand
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -117,6 +122,11 @@
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: hand
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -147,6 +157,11 @@
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: hand
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -163,3 +178,8 @@
           32:
             sprite: Adventure/Races/PigMan/Species/fat.rsi
             state: fat
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/PigMan/Species/fat.rsi
+            state: hand

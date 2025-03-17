@@ -62,6 +62,10 @@
     {
       "name": "horns_trike",
       "directions": 4
+    },
+    {
+      "name": "full_spike",
+      "directions": 4
     }
   ]
 }

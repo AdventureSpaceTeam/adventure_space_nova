@@ -13,6 +13,10 @@
         {
             "name": "fat",
             "directions": 4
+        },
+        {
+            "name": "hand",
+            "directions": 4
         }
     ]
 }
