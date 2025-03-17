@@ -1,0 +1,33 @@
+- type: entity
+  parent: [BaseHardBomb, BaseSyndicateContraband]
+  id: EMPSyndicateBomb
+  name: ЭМИ бомба синдиката
+  description: Большой механизм, работающий как бомба синдиката, но в отличии от неё, создаёт огромный ЭМИ импульс, способный поразить целый отдел.
+  components:
+    - type: Sprite
+      sprite: Adventure/Structures/Machines/emp_bomb.rsi
+      layers:
+        - state: syndicate-bomb
+        - state: syndicate-bomb-active
+          visible: false
+          map: [ "primed" ]
+        - state: syndicate-bomb-wires
+          visible: false
+          map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+    - type: GenericVisualizer
+      visuals:
+        enum.DefusableVisuals.Active:
+          primed:
+            True: { visible: true }
+            False: { visible: false }
+        enum.WiresVisualLayers.MaintenancePanel:
+          enum.WiresVisualLayers.MaintenancePanel:
+            True: { visible: true }
+            False: { visible: false }
+    - type: PointLight
+      color: "#0076bd"
+      radius: 1.2
+      softness: 1
+    - type: EmpOnTrigger
+      range: 20
+      energyConsumption: 50000
