@@ -106,7 +106,7 @@ public sealed class DepartmentBanCommand : IConsoleCommand
             jobList.Add(job); // AdvSpace Discord Webhook
         }
 
-        _DiscordWebhookBanSender.SendRoleBansMessage(target, shell.Player?.Name, minutes, reason, jobList); // AdvSpace Discord Webhook
+        _DiscordWebhookBanSender.SendRoleBansMessage(target, targetUid, shell.Player?.Name, shell.Player?.UserId, minutes, reason, jobList); // AdvSpace Discord Webhook
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Text;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
@@ -91,7 +91,7 @@ public sealed class RoleBanCommand : IConsoleCommand
 
         _bans.CreateRoleBan(targetUid, located.Username, shell.Player?.UserId, null, targetHWid, job, minutes, severity, reason, DateTimeOffset.UtcNow);
 
-        _DiscordWebhookBanSender.SendRoleBansMessage(target, shell.Player?.Name, minutes, reason, new List<string> {job}); // AdvSpace Discord Webhook
+        _DiscordWebhookBanSender.SendRoleBansMessage(target, targetUid, shell.Player?.Name, shell.Player?.UserId, minutes, reason, new List<string> { job }); // AdvSpace Discord Webhook
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

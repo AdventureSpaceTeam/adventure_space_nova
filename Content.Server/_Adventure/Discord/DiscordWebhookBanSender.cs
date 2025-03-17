@@ -8,21 +8,23 @@ using Robust.Shared.Network;
 using Content.Shared.Database;
 using Content.Server.Administration;
 using Content.Server.GameTicking;
+using Content.Server.Database;
 
 namespace Content.Server._Adventure.Discord;
 
 public sealed class DiscordWebhookBanSender
-{   
+{
     [Dependency] private readonly DiscordWebhook _discord = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IEntitySystemManager _entSys = default!;
+    [Dependency] public IServerDbManager _db = default!;
 
     private ISawmill _sawmill = default!;
 
     private readonly string _iconUrl = "https://cdn.discordapp.com/emojis/1167383322863878214.webp?size=44";
-    private readonly string _thumbnailIconUrl ="https://static.wikia.nocookie.net/ss14andromeda13/images/f/ff/Clown.png/revision/latest?cb=20230217121049&path-prefix=ru";   
+    private readonly string _thumbnailIconUrl = "https://static.wikia.nocookie.net/ss14andromeda13/images/f/ff/Clown.png/revision/latest?cb=20230217121049&path-prefix=ru";
 
-    public async void SendBanMessage(string? targetUsername, string? banningAdmin, uint minutes, string reason)
+    public async void SendBanMessage(string? targetUsername, NetUserId? targetUserId, string? banningAdmin, NetUserId? banningAdminId, uint minutes, string reason)
     {
         try
         {
@@ -32,6 +34,10 @@ public sealed class DiscordWebhookBanSender
             var runId = gameTicker != null ? gameTicker.RoundId : 0;
 
             var expired = minutes != 0 ? $"{DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}" : "Никогда";
+
+            var dataTargetUser = await _db.GetPlayerRecordByUserId((NetUserId)targetUserId!);
+
+            var dataBanningAdmin = await _db.GetPlayerRecordByUserId((NetUserId)banningAdminId!);
 
             var payload = new WebhookPayload()
             {
@@ -45,9 +51,11 @@ public sealed class DiscordWebhookBanSender
                             Description =  $"""
                                 > **Администратор**
                                 > **Логин:** {banningAdmin ?? "Консоль"}
+                                > **Дискорд:** <@{dataBanningAdmin?.DiscordId}>
 
                                 > **Нарушитель**
                                 > **Логин:** {targetUsername ?? "Неизвестно"}
+                                > **Дискорд:** <@{dataTargetUser?.DiscordId}>
                                                                
                                 > **Номер раунда:** {runId}
                                 > **Выдан:** {DateTimeOffset.Now}
@@ -84,7 +92,7 @@ public sealed class DiscordWebhookBanSender
         }
     }
 
-    public async void SendRoleBansMessage(string? targetUsername, string? banningAdmin, uint minutes, string reason, IReadOnlyCollection<string>? roles)
+    public async void SendRoleBansMessage(string? targetUsername, NetUserId? targetUserId, string? banningAdmin, NetUserId? banningAdminId, uint minutes, string reason, IReadOnlyCollection<string>? roles)
     {
         try
         {
@@ -95,12 +103,17 @@ public sealed class DiscordWebhookBanSender
 
             var expired = minutes != 0 ? $"{DateTimeOffset.Now + TimeSpan.FromMinutes(minutes)}" : "Никогда";
 
+            var dataTargetUser = await _db.GetPlayerRecordByUserId((NetUserId)targetUserId!);
+
+            var dataBanningAdmin = await _db.GetPlayerRecordByUserId((NetUserId)banningAdminId!);
+
             string formattedRolesStr = "";
 
-            foreach (var role in roles!){
-            formattedRolesStr = formattedRolesStr + $"\n> `{Loc.GetString($"Job{role}")}`";
+            foreach (var role in roles!)
+            {
+                formattedRolesStr = formattedRolesStr + $"\n> `{Loc.GetString($"Job{role}")}`";
             }
-            
+
             var payload = new WebhookPayload()
             {
                 Username = "Банановые острова",
@@ -113,9 +126,11 @@ public sealed class DiscordWebhookBanSender
                             Description =  $"""
                                 > **Администратор**
                                 > **Логин:** {banningAdmin ?? "Консоль"}
+                                > **Дискорд:** <@{dataBanningAdmin?.DiscordId}>
 
                                 > **Нарушитель**
                                 > **Логин:** {targetUsername ?? "Неизвестно"}
+                                > **Дискорд:** <@{dataTargetUser?.DiscordId}>
 
                                 > **Номер раунда:** {runId}
                                 > **Выдан:** {DateTimeOffset.Now}
@@ -152,5 +167,5 @@ public sealed class DiscordWebhookBanSender
         {
             _sawmill.Error($"Error while sending ban webhook to Discord: {e}");
         }
-    }    
+    }
 }

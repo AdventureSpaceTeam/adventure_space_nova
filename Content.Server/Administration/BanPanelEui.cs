@@ -88,9 +88,9 @@ public sealed class BanPanelEui : BaseEui
             }
 
             if (hidInt == 0)
-                hidInt = (uint) (ipAddress.AddressFamily == AddressFamily.InterNetworkV6 ? Ipv6_CIDR : Ipv4_CIDR);
+                hidInt = (uint)(ipAddress.AddressFamily == AddressFamily.InterNetworkV6 ? Ipv6_CIDR : Ipv4_CIDR);
 
-            addressRange = (ipAddress, (int) hidInt);
+            addressRange = (ipAddress, (int)hidInt);
         }
 
         var targetUid = target is not null ? PlayerId : null;
@@ -126,7 +126,7 @@ public sealed class BanPanelEui : BaseEui
                 _banManager.CreateRoleBan(targetUid, target, Player.UserId, addressRange, targetHWid, role, minutes, severity, reason, now);
             }
 
-            _DiscordWebhookBanSender.SendRoleBansMessage(target, Player.Name, minutes, reason, roles); // AdvSpace Discord Webhook
+            _DiscordWebhookBanSender.SendRoleBansMessage(target, targetUid, Player.Name, Player.UserId, minutes, reason, roles); // AdvSpace Discord Webhook
 
             Close();
             return;
@@ -148,7 +148,7 @@ public sealed class BanPanelEui : BaseEui
 
         _banManager.CreateServerBan(targetUid, target, Player.UserId, addressRange, targetHWid, minutes, severity, reason);
 
-        _DiscordWebhookBanSender.SendBanMessage(target, Player.Name, minutes, reason); // AdvSpace Discord Webhook
+        _DiscordWebhookBanSender.SendBanMessage(target, targetUid, Player.Name, Player.UserId, minutes, reason); // AdvSpace Discord Webhook
 
         Close();
     }
