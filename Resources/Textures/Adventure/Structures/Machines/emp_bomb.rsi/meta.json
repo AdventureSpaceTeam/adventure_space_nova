@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Resprite by COTULa",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "syndicate-bomb"
+        },
+        {
+            "name": "syndicate-bomb-wires"
+        },
+        {
+            "name": "syndicate-bomb-active",
+            "delays": [
+                [
+                    0.25,
+                    0.25,
+                    0.25
+                ]
+            ]
+        }
+    ]
+}
