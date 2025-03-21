@@ -43,18 +43,6 @@
     {
       "name": "equipped-head-unshaded-vox",
       "directions": 4
-    },
-    {
-      "name": "equipped-head-vulpkanin",
-      "directions": 4
-    },
-    {
-      "name": "equipped-head-light-vulpkanin",
-      "directions": 4
-    },
-    {
-      "name": "equipped-head-unshaded-vulpkanin",
-      "directions": 4
     }
   ]
 }
