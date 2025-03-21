@@ -7,3 +7,6 @@ melee-battery-examine =
         [few] удара
        *[other] ударов
     }.
+
+throngler-was-crafted = НАГИБАТОР БЫЛ СОЗДАН
+throngler-was-crafted-sender = ???

@@ -393,7 +393,7 @@
 
 - type: entity
   name: moproach kit crate
-  description: A box with one moproach kit that provides you with two moproaches.
+  description: Коробка с одним набором таракашвабры, который включает две таракашвабры. # Adventure
   id: CrateFunMoproach
   parent: CratePlastic
   components:

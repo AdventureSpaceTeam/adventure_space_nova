@@ -1,30 +1,44 @@
-reagent-name-astrotame = Астротем
-reagent-desc-astrotame = Слаще тысячи ложек сахара, но без калорий.
-reagent-name-bbq-sauce = соус барбекю
-reagent-desc-bbq-sauce = Салфетки в комплект не входят.
-reagent-name-cornoil = кукурузное масло
-reagent-desc-cornoil = Кукурузное масло. Вкусное масло, используемое в готовке. Изготавливается из кукурузы.
-reagent-name-frostoil = холодный соус
-reagent-desc-frostoil = Заставляет язык онеметь.
-reagent-name-horseradish-sauce = хрен
-reagent-desc-horseradish-sauce = Пакетик душистого хрена.
-reagent-name-hotsauce = острый соус
-reagent-desc-hotsauce = Вкус просто огонь.
-reagent-name-ketchup = кетчуп
-reagent-desc-ketchup = Приготовлен из томатного пюре с добавлением специй.
-reagent-name-ketchunaise = кетчунез
-reagent-desc-ketchunaise = Так называемый Русский соус, популярный среди космо-американцев.
-reagent-name-laughin-syrup = смешной сироп
-reagent-desc-laughin-syrup = Продукт отжима смешного горошка. Он шипуч и, похоже, меняет вкус в зависимости от того, с чем его употребляют!
-reagent-name-mayo = майонез
-reagent-desc-mayo = Жирный соус, приготовленный из масла, яиц, и какой-либо (пищевой) кислоты.
-reagent-name-mustard = горчица
-reagent-desc-mustard = Простая горчица жёлтого цвета, изготовленная из семян горчицы.
-reagent-name-vinaigrette = винегретная заправка
-reagent-desc-vinaigrette = Простая заправка для салатов, приготовленная из масла, уксуса и приправ.
-reagent-name-soysauce = соевый соус
+reagent-name-astrotame = сок, который фальшиво сладкий
+reagent-desc-astrotame = Сладость тысячи сахаров, но без калорий.
+
+reagent-name-bbq-sauce = сок, который ты кладёшь на стейк
+reagent-desc-bbq-sauce = Влажные салфетки в комплект не входят.
+
+reagent-name-cornoil = сок, который развязывает войны, но из кукурузы
+reagent-desc-cornoil = Кукурузное масло, вкусное масло для готовки. Сделано из кукурузы.
+
+reagent-name-coldsauce = сок, который просто мята
+reagent-desc-coldsauce = Оставляет язык онемевшим после употребления.
+
+reagent-name-horseradish-sauce = сок, который конь
+reagent-desc-horseradish-sauce = Пахучий соус из хрена.
+
+reagent-name-hotsauce = сок, который обжигает твой язык
+reagent-desc-hotsauce = Обжигает, но это приятно.
+
+reagent-name-ketchup = сок, который ты надеешься, что не сок, который заставляет тебя жить
+reagent-desc-ketchup = Сделан из протёртых томатов и приправлен специями.
+
+reagent-name-ketchunaise = сок, который гибрид
+reagent-desc-ketchunaise = Так называемый русский соус, популярен среди космических американцев.
+
+reagent-name-laughin-syrup = сок, который заставляет тебя смеяться
+reagent-desc-laughin-syrup = Продукт из сока смеющихся горошин. Газированный, вкус меняется в зависимости от сочетания!
+
+reagent-name-mayo = сок, который не является инструментом
+reagent-desc-mayo = Кремовый соус, сделанный из масла, яиц и какой-то (съедобной) кислоты.
+
+reagent-name-mustard = сок, который отлично сочетается с хот-догами
+reagent-desc-mustard = Классическая жёлтая горчица, приготовленная из семян горчицы.
+
+reagent-name-vinaigrette = сок, который делает салаты красивыми
+reagent-desc-vinaigrette = Простой салатный соус из масла, уксуса и специй.
+
+reagent-name-soysauce = сок, который делает вещи соевыми
 reagent-desc-soysauce = Солёная приправа на основе сои.
-reagent-name-table-salt = столовая соль
-reagent-desc-table-salt = Хлорид натрия, широко известный как соль, часто используется в качестве пищевой приправы или для мгновенного уничтожения мозговых червей.
-reagent-name-syrup = сироп
-reagent-desc-syrup = Вкуснейший сироп, получаемый из древесного сока, и который по своим свойствам липче клея.
+
+reagent-name-table-salt = сок, который делает вещи солёными
+reagent-desc-table-salt = Обычная поваренная соль, хлорид натрия, часто используется для приправы или мгновенного уничтожения вредителей.
+
+reagent-name-syrup = сок, который тягучий
+reagent-desc-syrup = Вкусный сироп, сделанный из древесного сока, почему-то липче, чем клей.

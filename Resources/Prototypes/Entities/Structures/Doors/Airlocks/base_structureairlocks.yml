@@ -185,6 +185,8 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Vending
+  - type: TTS # c4llv07e tts
+    voice: brukan # c4llv07e tts
   - type: SpeakOnDoorOpened
   placement:
     mode: SnapgridCenter

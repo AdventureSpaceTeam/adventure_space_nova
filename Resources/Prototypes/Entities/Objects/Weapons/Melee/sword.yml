@@ -198,17 +198,17 @@
         proper: true
 
 - type: entity
-  name: throngler
+  name: нагибатор # Adventure
   parent: Throngler
   id: ThronglerFools
   suffix: Announcement
-  description: Why would you make this?
+  description: Зачем ты создал это? # Adventure
   components:
     - type: AnnounceOnSpawn
       message: throngler-was-crafted
       sender: throngler-was-crafted-sender
       sound:
-        path: /Audio/Misc/gamma.ogg
+        path: /Audio/Corvax/Misc/siren.ogg
       color: red
     - type: Construction
       graph: ThronglerFools

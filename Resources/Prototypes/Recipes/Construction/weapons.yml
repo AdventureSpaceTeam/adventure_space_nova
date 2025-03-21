@@ -197,12 +197,12 @@
   objectType: Item
 
 - type: construction
-  name: throngler
+  name: нагибатор # Adventure
   id: ThronglerFools
   graph: ThronglerFools
   startNode: start
   targetNode: throngler
   category: construction-category-weapons
-  description: You are not really going to try make this, are you?
+  description: Вы же не собираетесь его создавать, правда? # Adventure
   icon: { sprite: Objects/Weapons/Melee/Throngler2.rsi, state: icon }
   objectType: Item
