@@ -1,0 +1,18 @@
+# Famous Musician Time
+- type: loadoutEffectGroup
+  id: FamousMusician
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMusician
+      time: 180000 #50 hrs, special reward for Musician mains
+
+- type: loadout
+  id: SuperSynthesizer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: FamousMusician
+  storage:
+    back:
+    - SuperSynthesizerInstrument
