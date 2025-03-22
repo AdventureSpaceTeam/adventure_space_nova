@@ -80,7 +80,7 @@
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
     startAudio:
-      path: /Audio/Corvax/Announcements/flux.ogg # Corvax-Announcements
+      collection: DTSAnomaly
       params:
         volume: -4
     weight: 8
@@ -98,7 +98,7 @@
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
     startAudio:
-      path: /Audio/Corvax/Announcements/blusp_anomalies.ogg # Corvax-Announcements
+      collection: DTSAlert
       params:
         volume: -4
     weight: 8
@@ -339,15 +339,11 @@
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-start-announcement
     startAudio:
-      path: /Audio/Announcements/gasleak_start.ogg # Corvax-Announcements
+      collection: DTSAlert
       params:
         volume: -4
     endAnnouncement: station-event-gas-leak-end-announcement
     weight: 8
-    endAudio:
-      path: /Audio/Announcements/gasleak_end.ogg # Corvax-Announcements
-      params:
-        volume: -4
   - type: GasLeakRule
 
 - type: entity
@@ -370,7 +366,7 @@
     startAnnouncement: station-event-power-grid-check-start-announcement
     endAnnouncement: station-event-power-grid-check-end-announcement
     startAudio:
-      path: /Audio/Announcements/power_off.ogg
+      path: /Audio/Adventure/DTS/poweroff.ogg
       params:
         volume: -4
     duration: 60
@@ -386,7 +382,7 @@
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio: # Corvax-Announcements
-      path: /Audio/Corvax/Announcements/comms_blackout.ogg
+      path: /Audio/Adventure/DTS/radiation.ogg
       params:
         volume: -4
     duration: 120
@@ -414,7 +410,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-start-announcement
     startAudio:
-      path: /Audio/Announcements/ventclog.ogg # Corvax-Announcements
+      collection: DTSAlert
       params:
         volume: -4
     earliestStart: 15
@@ -430,7 +426,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Adventure/DTS/aliens.ogg
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -451,7 +447,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Adventure/DTS/aliens.ogg
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -472,7 +468,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/Intern/aliens.ogg
+      path: /Audio/Adventure/DTS/aliens.ogg
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -489,7 +485,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Adventure/DTS/aliens.ogg
     earliestStart: 20
     minimumPlayers: 20
     weight: 1.5
@@ -578,7 +574,7 @@
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
-      path: /Audio/Announcements/intercept.ogg
+      path: /Audio/Adventure/DTS/intercept.ogg
     duration: null # the rule has to last the whole round not 1 second
     occursDuringRoundEnd: false
   - type: AlertLevelInterceptionRule
@@ -638,7 +634,7 @@
   components:
   - type: StationEvent
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      collection: DTSAlert
     weight: 5
     minimumPlayers: 25
     reoccurrenceDelay: 20

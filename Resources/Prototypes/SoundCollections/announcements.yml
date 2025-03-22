@@ -3,9 +3,46 @@
   files:
   - /Audio/Announcements/RoundEnd/apc_destroyed.ogg
   - /Audio/Announcements/RoundEnd/disappointed.ogg
-  - /Audio/Announcements/RoundEnd/notevenpaidforthis.ogg
+  - /Audio/Adventure/DTS/alert9.ogg # Adventure
+  - /Audio/Adventure/DTS/animes.ogg # Adventure
 
 - type: soundCollection
   id: PowerOn
   files:
-  - /Audio/Announcements/power_on.ogg
+  - /Audio/Adventure/DTS/poweron.ogg
+
+# ADVENTURE
+
+- type: soundCollection
+  id: RoundStart
+  files:
+  - /Audio/Adventure/DTS/welcome1.ogg
+  - /Audio/Adventure/DTS/welcome2.ogg
+  - /Audio/Adventure/DTS/welcome3.ogg
+  - /Audio/Adventure/DTS/welcome4.ogg
+  - /Audio/Adventure/DTS/welcome5.ogg
+  - /Audio/Adventure/DTS/welcome6.ogg
+
+- type: soundCollection
+  id: DTSAlert
+  files:
+  - /Audio/Adventure/DTS/alert1.ogg
+  - /Audio/Adventure/DTS/alert2.ogg
+  - /Audio/Adventure/DTS/alert3.ogg
+  - /Audio/Adventure/DTS/alert4.ogg
+  - /Audio/Adventure/DTS/alert5.ogg
+  - /Audio/Adventure/DTS/alert6.ogg
+  - /Audio/Adventure/DTS/alert7.ogg
+  - /Audio/Adventure/DTS/alert8.ogg
+  - /Audio/Adventure/DTS/alert9.ogg
+  - /Audio/Adventure/DTS/alert10.ogg
+  - /Audio/Adventure/DTS/alert11.ogg
+  - /Audio/Adventure/DTS/alert12.ogg
+  - /Audio/Adventure/DTS/alert13.ogg
+  - /Audio/Adventure/DTS/outbreak5.ogg
+
+- type: soundCollection
+  id: DTSAnomaly
+  files:
+  - /Audio/Adventure/DTS/spanomalies.ogg
+  - /Audio/Adventure/DTS/granomalies.ogg

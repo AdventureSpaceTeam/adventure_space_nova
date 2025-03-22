@@ -99,7 +99,7 @@
     earliestStart: 12
     minimumPlayers: 25
   - type: MeteorSwarm
-    announcementSound: /Audio/Announcements/meteors_start.ogg # Corvax-Announcements
+    announcementSound: /Audio/Adventure/DTS/meteors.ogg
 
 - type: entity
   parent: GameRuleMeteorSwarm
@@ -131,7 +131,7 @@
     minimumPlayers: 0
   - type: MeteorSwarm
     announcement: station-event-space-dust-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/Adventure/DTS/meteors.ogg
     nonDirectional: true
     meteors:
       MeteorSpaceDust: 1
@@ -186,7 +186,7 @@
     weight: 0.05
   - type: MeteorSwarm
     announcement: station-event-meteor-urist-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/Adventure/DTS/meteors.ogg
     meteors:
       MeteorUrist: 1
     waves:
@@ -203,7 +203,7 @@
   - type: StationEvent
     startAnnouncement: station-event-immovable-rod-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Adventure/DTS/meteors.ogg
     weight: 3.5
     reoccurrenceDelay: 1
     duration: 1
