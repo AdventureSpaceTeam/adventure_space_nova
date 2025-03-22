@@ -19,6 +19,12 @@
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 3600 #1 hrs
+# Adventure-edit-start
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - PigMan
+# Adventure-edit-end
   startingGear: BrigmedicGearADVENT
   icon: "JobIconBrigmedic"
   requireAdminNotify: true

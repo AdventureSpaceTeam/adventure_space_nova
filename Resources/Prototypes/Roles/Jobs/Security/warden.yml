@@ -3,11 +3,19 @@
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
+  weight: 5
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 36000 #10 hrs
-  weight: 5
+# Adventure-edit-start
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Zerah
+      - PigMan
+      - Vox
+# Adventure-edit-end
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos

@@ -1,42 +1,61 @@
 - type: gameMapPool
   id: AdventureMapPool
   maps:
-#  - AdventureRelict     #min 0  max 25
-#  - AdventureAmber      #min 0 max 50
+# - AdventureAmber      #min 0  max 50
   - AdventureAspid      #min 20 max 55
 # - AdventureAvrite     #min 40 max N/A
   - AdventureBagel      #min 30 max 120
-  - AdventureBoxNew        #min 25 max 120 #rework (too big, original min 50) 
-  - AdventureCluster    #min 0 max 35
+  - AdventureBoxNew     #min 25 max 120 #rework (too big, original min 50) 
+  - AdventureCluster    #min 0  max 35
   - AdventureDelta      #min 30 max N/A
+  - AdventureLoop       #min 25 max 70
   - AdventureMarathon   #min 25 max 70
-#  - AdventureMaus       #min 0  max 40
-  - AdventureLoop        #min 25 max 70
+  - AdventureMaus       #min 0  max 40
+  - AdventureOmega      #min 0  max 25
+  - AdventurePacked     #min 0  max 25
+# - AdventureRelict     #min 0  max 25
 # - Starquest           #min 0  max 20 # До лучших времён
 
 # original list
-#  - Bagel          #min 35 max 70
-#  - Box            #min 50 max N/A
-#  - Cog            #min 35 max 70
-#  - Core           #min 35 max 70
-#  - Fland          #min 70 max N/A
-#  - Marathon       #min 35 max 70
-#  - Meta           #min 50 max N/A
-#  - Oasis          #min 70 max N/A
-#  - Omega          #min 7 max 35
-#  - Packed         #min 7 max 35
-#  - Reach          #min 0 max 7
+#  - Amber              #min 15 max 50
+#  - Bagel              #min 35 max 80
+#  - Box                #min 50 max N/A
+#  - Convex             #min 75 max N/A
+#  #- Core              #min 35 max 70
+#  - Elkridge           #min 15 max 45
+#  - Fland              #min 70 max N/A
+#  #- Gate              #min 55 max N/A
+#  - Loop               #min 35 max 70
+#  - Marathon           #min 35 max 70
+#  - Meta               #min 50 max 80
+#  - Oasis              #min 70 max N/A
+#  - Omega              #min 7  max 35
+#  - Packed             #min 7  max 35
+#  - Plasma             #min 30 max 80
+#  - Reach              #min 0  max 7
+#  #- Train             #min 35 max 70
 
 # Corvax list
-#  - CorvaxDelta    #min 55 max N/A
-#  - CorvaxAvrite   #min 55 max N/A
-#  - CorvaxSilly    #min 0 max 30
-#  - CorvaxAstra    #min 55 max N/A
-#  - CorvaxMaus     #min 0 max 35
-#  - CorvaxPaper    #min 20 max 50
-#  - CorvaxPilgrim  #min 40 max N/A
-#  - CorvaxTerra    #min 0 max 30
-#  - CorvaxPearl    #min 20 max 50
-#  - Box            #min 50 max N/A
-#  - Train          #min 35 max 70
-#  - Aspid          #min 25 max 55 #Удалён
+# Highpop
+#  - CorvaxDelta        #min 55 max N/A
+#  - CorvaxAvrite       #min 55 max N/A
+#  - CorvaxAstra        #min 55 max N/A
+#  - CorvaxPilgrim      #min 40 max N/A
+#  - Bagel              #min 35 max 80
+#  - Box                #min 50 max N/A
+# Midpop
+#  - CorvaxCute         #min 0  max 35
+#  - CorvaxPaper        #min 25 max 55
+#  - CorvaxOutpost      #min 25 max 55
+#  - CorvaxAwesome      #min 25 max 55
+#  - CorvaxPearl        #min 25 max 55
+#  - Amber              #min 15 max 50
+#  - Marathon           #min 35 max 70
+# Lowpop
+#  - CorvaxSilly        #min 0  max 25
+#  - CorvaxMaus         #min 0  max 35
+#  - CorvaxTushkan      #min 0  max 25
+#  - Omega              #min 7  max 35
+#  - Packed             #min 7  max 35
+
+#  #- CorvaxTerra       #min 0  max 30

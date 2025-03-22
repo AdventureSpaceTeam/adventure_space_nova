@@ -73633,50 +73633,6 @@ entities:
     - type: Transform
       pos: -112.672066,8.495071
       parent: 2
-- proto: Garlands
-  entities:
-  - uid: 16983
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 15.5,-38.5
-      parent: 2
-  - uid: 20897
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 17.5,-39.5
-      parent: 2
-  - uid: 25227
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 20.5,-39.5
-      parent: 2
-  - uid: 25228
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 21.5,-39.5
-      parent: 2
-  - uid: 25229
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 22.5,-38.5
-      parent: 2
-  - uid: 25230
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 22.5,-27.5
-      parent: 2
-  - uid: 25231
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 22.5,-26.5
-      parent: 2
 - proto: GasCanisterBrokenBase
   entities:
   - uid: 11327
@@ -112315,13 +112271,6 @@ entities:
     - type: Transform
       pos: -8.327919,25.771437
       parent: 2
-- proto: NewYearTree1
-  entities:
-  - uid: 1031
-    components:
-    - type: Transform
-      pos: 19.5,-33.5
-      parent: 2
 - proto: NitrogenCanister
   entities:
   - uid: 16857
@@ -128560,13 +128509,6 @@ entities:
     components:
     - type: Transform
       pos: 38.5,15.5
-      parent: 2
-- proto: SignNewYear
-  entities:
-  - uid: 16495
-    components:
-    - type: Transform
-      pos: 15.5,-37.5
       parent: 2
 - proto: SignNosmoking
   entities:

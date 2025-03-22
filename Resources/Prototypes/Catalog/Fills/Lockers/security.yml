@@ -88,7 +88,7 @@
 
 - type: entity
   id: LockerBrigmedicFilled
-  suffix: Brigmedic, Filled
+  suffix: Brigmedic, Filled, AdvMapping
   parent: LockerBrigmedic
   components:
   - type: StorageFill

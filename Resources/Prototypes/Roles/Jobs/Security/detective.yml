@@ -7,6 +7,12 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 36000 # 10 hours # Adventure
+# Adventure-edit-start
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - PigMan
+# Adventure-edit-end
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos

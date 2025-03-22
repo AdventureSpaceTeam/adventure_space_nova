@@ -11,6 +11,15 @@
 #      time: 144000 #40 hrs
     - !type:AgeRequirement
       requiredAge: 30 # Adventure
+# Adventure-edit-start
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Synth
+      - Zerah
+      - PigMan
+      - Vox
+# Adventure-edit-end
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

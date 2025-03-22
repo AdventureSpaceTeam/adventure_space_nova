@@ -7,6 +7,12 @@
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 36000 #10 hrs # Adventure
+# Adventure-edit-start
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - Synth
+# Adventure-edit-end
   guides: [ Zombies ]
 
 - type: antag

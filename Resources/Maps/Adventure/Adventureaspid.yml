@@ -61343,72 +61343,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -35.35777,27.333279
       parent: 1
-- proto: Garlands
-  entities:
-  - uid: 6910
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -13.5,5.5
-      parent: 1
-  - uid: 18641
-    components:
-    - type: Transform
-      pos: -10.5,5.5
-      parent: 1
-  - uid: 18642
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,2.5
-      parent: 1
-  - uid: 18643
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,3.5
-      parent: 1
-  - uid: 18644
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,11.5
-      parent: 1
-  - uid: 18645
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 4.5,-5.5
-      parent: 1
-  - uid: 18646
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -14.5,2.5
-      parent: 1
-  - uid: 18647
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -14.5,1.5
-      parent: 1
-  - uid: 18648
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -14.5,-1.5
-      parent: 1
-  - uid: 18649
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -14.5,-5.5
-      parent: 1
-  - uid: 18650
-    components:
-    - type: Transform
-      pos: -13.5,-6.5
-      parent: 1
 - proto: GasAnalyzer
   entities:
   - uid: 7117
@@ -90171,13 +90105,6 @@ entities:
     - type: Transform
       pos: -10.361936,34.69222
       parent: 1
-- proto: NewYearTree1
-  entities:
-  - uid: 1664
-    components:
-    - type: Transform
-      pos: -7.5,-4.5
-      parent: 1
 - proto: NitrogenCanister
   entities:
   - uid: 1755
@@ -101660,13 +101587,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,34.5
-      parent: 1
-- proto: SignNewYear
-  entities:
-  - uid: 548
-    components:
-    - type: Transform
-      pos: -9.5,-6.5
       parent: 1
   - uid: 18256
     components:

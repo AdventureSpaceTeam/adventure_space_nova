@@ -64921,25 +64921,6 @@ entities:
     - type: Transform
       pos: -3.6880527,63.936996
       parent: 30
-- proto: Garlands
-  entities:
-  - uid: 573
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,11.5
-      parent: 30
-  - uid: 22570
-    components:
-    - type: Transform
-      pos: 6.5,5.5
-      parent: 30
-  - uid: 22575
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -10.5,12.5
-      parent: 30
 - proto: GasAnalyzer
   entities:
   - uid: 9369
@@ -101517,14 +101498,6 @@ entities:
     components:
     - type: Transform
       pos: -75.24839,-66.594925
-      parent: 30
-- proto: NewYearTree1
-  entities:
-  - uid: 22576
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -7.5,7.5
       parent: 30
 - proto: NitrogenCanister
   entities:

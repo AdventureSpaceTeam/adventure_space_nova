@@ -73780,14 +73780,6 @@ entities:
     - type: Transform
       pos: 3.4062185,76.170845
       parent: 2
-- proto: NewYearTree1
-  entities:
-  - uid: 9367
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -22.431211,55.78221
-      parent: 2
 - proto: NitrogenCanister
   entities:
   - uid: 799
