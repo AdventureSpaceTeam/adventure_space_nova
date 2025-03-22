@@ -382,6 +382,8 @@
     items:
     - HandheldHealthAnalyzerUnpowered
     - Brutepack10Lingering
+    - BrutepackBandage10Lingering #Adventure
+    - OintmentIce10Lingering #Adventure
     - Ointment10Lingering
     - Gauze10Lingering
     - Bloodpack10Lingering

@@ -67,7 +67,7 @@
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.45
+        Barotrauma: 0.45 # Adventure
   - type: Reactive
     groups:
       Flammable: [ Touch ]

@@ -5,6 +5,7 @@
     - Blunt
     - Slash
     - Piercing
+    - Barotrauma #Adventure
 
 - type: damageGroup
   id: Burn

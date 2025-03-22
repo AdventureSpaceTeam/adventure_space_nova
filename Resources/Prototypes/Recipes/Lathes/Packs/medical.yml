@@ -43,6 +43,8 @@
   - DiseaseSwab
   - BodyBag
   - WhiteCane
+  - BrutepackBandage #Adventure
+  - OintmentIce #Adventure
 
 - type: latheRecipePack
   id: RollerBedsStatic

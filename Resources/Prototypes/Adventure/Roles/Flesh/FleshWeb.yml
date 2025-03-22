@@ -71,7 +71,7 @@
     - type: Barotrauma
       damage:
         types:
-          Blunt: 0.10
+          Barotrauma: 0.10
     - type: AtmosExposed
     - type: Flammable
       fireSpread: true

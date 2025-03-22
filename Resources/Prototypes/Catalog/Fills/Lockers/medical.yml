@@ -8,10 +8,10 @@
       - id: BoxSyringe
       - id: EpinephrineChemistryBottle
         amount: 1
-      - id: Brutepack
-        amount: 2
-      - id: Ointment
-        amount: 2
+      - id: Brutepack # Adventure
+        amount: 1
+      - id: Ointment # Adventure
+        amount: 1
       - id: Bloodpack
         amount: 2
       - id: Gauze
@@ -27,10 +27,10 @@
       - id: BoxSyringe
       - id: EpinephrineChemistryBottle
         amount: 1
-      - id: Brutepack
-        amount: 2
-      - id: Ointment
-        amount: 2
+      - id: Brutepack # Adventure
+        amount: 1
+      - id: Ointment # Adventure
+        amount: 1
       - id: Bloodpack
         amount: 2
       - id: Gauze

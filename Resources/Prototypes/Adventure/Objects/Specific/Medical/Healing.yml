@@ -1,0 +1,167 @@
+#мазь от обморожения
+- type: entity
+  name: мазь от обморожения
+  description: Используется для лечения обморожения. Не эффективен при ожогах.
+  parent: Ointment
+  id: OintmentIce
+  suffix: Полный (Adventure)
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/Medical/healing.rsi
+    state: ointment_ice
+  - type: Item
+    size: Small
+    sprite: Adventure/Objects/Specific/Medical/healing.rsi
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Cold: -5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+  - type: Stack
+    stackType: OintmentIce
+    count: 10
+
+- type: stack
+  id: OintmentIce
+  name: ointment
+  icon: { sprite: "/Adventure/Objects/Specific/Medical/healing.rsi", state: ointment_ice }
+  spawn: OintmentIce
+  maxCount: 10
+
+- type: entity
+  id: OintmentIce1
+  parent: OintmentIce
+  suffix: Один
+  components:
+  - type: Stack
+    stackType: OintmentIce
+    count: 1
+
+- type: entity
+  id: OintmentIce10Lingering
+  parent: OintmentIce
+  suffix: 10, Не исчезают закончившись
+  components:
+  - type: Stack
+    lingering: true
+    count: 10
+
+- type: latheRecipe
+  id: OintmentIce
+  result: OintmentIce1
+  completetime: 1
+  materials:
+    Steel: 25
+    Plastic: 25
+
+#пластырь
+- type: entity
+  name: пластырь
+  description: Мягкий пластырь, предназначенный для лечения небольших порезов.
+  parent: Brutepack
+  id: BrutepackBandage
+  suffix: Полный (Adventure)
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/Medical/healing.rsi
+    state: bandage
+  - type: Item
+    size: Small
+    sprite: Adventure/Objects/Specific/Medical/healing.rsi
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Slash: -5 
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: BrutepackBandage
+    count: 10
+
+- type: stack
+  id: BrutepackBandage
+  name: ointment
+  icon: { sprite: "/Adventure/Objects/Specific/Medical/healing.rsi", state: bandage }
+  spawn: BrutepackBandage
+  maxCount: 10
+
+- type: entity
+  id: BrutepackBandage1
+  parent: BrutepackBandage
+  suffix: Один
+  components:
+  - type: Stack
+    stackType: BrutepackBandage
+    count: 1
+
+- type: entity
+  id: BrutepackBandage10Lingering
+  parent: BrutepackBandage
+  suffix: 10, Не исчезают закончившись
+  components:
+  - type: Stack
+    lingering: true
+    count: 10
+
+- type: latheRecipe
+  id: BrutepackBandage
+  result: BrutepackBandage1
+  completetime: 1
+  materials:
+    Steel: 25
+    Plastic: 25
+
+#гель от ушибов
+- type: entity
+  name: гель от ушибов
+  description: Гель для лечения тяжёлых ушибов.
+  parent: MedicatedSuture
+  id: BrutepackGel
+  suffix: Полный (Adventure)
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Specific/Medical/healing.rsi
+    state: brutepack
+  - type: Item
+    size: Small
+    sprite: Adventure/Objects/Specific/Medical/healing.rsi
+    storedRotation: -90
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Blunt: -10
+        Barotrauma: -4
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: BrutepackGel
+    count: 10
+
+- type: stack
+  id: BrutepackGel
+  name: ointment
+  icon: { sprite: "/Adventure/Objects/Specific/Medical/healing.rsi", state: brutepack }
+  spawn: BrutepackGel
+  maxCount: 10
+
+- type: entity
+  id: BrutepackGel1
+  parent: BrutepackGel
+  suffix: Один
+  components:
+  - type: Stack
+    stackType: BrutepackGel
+    count: 1

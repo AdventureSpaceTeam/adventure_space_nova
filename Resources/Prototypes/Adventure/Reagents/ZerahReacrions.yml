@@ -90,11 +90,6 @@
           time: 10
           refresh: false
         - !type:GenericStatusEffect
-          key: ForcedSleep
-          component: ForcedSleeping
-          refresh: false
-          type: Add
-        - !type:GenericStatusEffect
           key: TemporaryBlindness
           component: TemporaryBlindness
 
@@ -136,10 +131,10 @@
         - !type:HealthChange
           damage:
             types:
-              Heat: -2
-              Shock: -2
-              Cold: -2
-              Caustic: -2
+              Heat: -5
+              Shock: -5
+              Cold: -5
+              Caustic: -5
 
 - type: reaction
   id: SkhariSyrup
@@ -204,3 +199,40 @@
       amount: 2
   products:
     GoodMorning: 1
+
+# для антагов без рдм
+- type: reagent
+  id: BlackMambaPlus
+  name: Нюка мамба
+  desc: Последнее что вы пьёте и это факт.
+  group: Toxins
+  color: "#000000"  
+  physicalDesc: Супер опасное
+  metabolisms: 
+    Poison:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: 25
+        - !type:GenericStatusEffect
+          key: Muted
+          component: Muted
+          type: Add
+          time: 10
+          refresh: false
+        - !type:GenericStatusEffect
+          key: TemporaryBlindness
+          component: TemporaryBlindness
+
+- type: reaction
+  id: BlackMambaPlus
+  reactants:
+    BlackMamba: 
+      amount: 1
+    Nocturine: 
+      amount: 1
+    Vestine: 
+      amount: 1
+  products:
+    BlackMambaPlus: 1

@@ -1,0 +1,64 @@
+# гомункул
+- type: entity
+  parent: MobFleshJared
+  id: MobFleshJaredHomunculus
+  name: гомункул
+  description: Кусок мяса из пробирки.
+  components:
+  - type: TTS 
+    voice: ziggs
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 2
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Adventure/Roles/Homunculus.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: Homunculus
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: Homunculus
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: HTN
+    rootTask:
+      task: KillerTomatoCompound
+  - type: NPCImprintingOnSpawnBehaviour
+    whitelist:
+      components:
+      - HumanoidAppearance
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    name: гомункул
+    description: Кусок мяса из пробирки.
+    rules: ghost-role-information-familiar-rules
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+
+# искусственная нимфа дионы
+- type: entity
+  parent: MobDionaNymph
+  id: MobDionaNymphHomunculus
+  name: искусственная нимфа дионы
+  description: Похожа на кошку, только.... ветвистее.
+  components:
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    name: искусственная нимфа дионы
+    description: Похожа на кошку, только.... ветвистее.
+    rules: ghost-role-information-familiar-rules
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable

@@ -260,6 +260,26 @@
           types:
             Asphyxiation: -1
             Bloodloss: -0.5
+# Adventure-start
+        conditions: 
+        - !type:OrganType 
+          type: Vox
+          shouldHave: false
+        - !type:OrganType 
+          type: Zerah
+          shouldHave: false
+        - !type:OrganType 
+          type: Slime
+          shouldHave: false
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 3
+        conditions: 
+        - !type:OrganType 
+          type: Vox
+          shouldHave: true
+# Adventure-start
       - !type:HealthChange
         conditions:
           - !type:ReagentThreshold
@@ -285,6 +305,26 @@
           types:
             Asphyxiation: -3.5
             Bloodloss: -3
+# Adventure-start
+        conditions: 
+        - !type:OrganType 
+          type: Vox
+          shouldHave: false
+        - !type:OrganType 
+          type: Zerah
+          shouldHave: false
+        - !type:OrganType 
+          type: Slime
+          shouldHave: false
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+        conditions: 
+        - !type:OrganType 
+          type: Vox
+          shouldHave: true
+# Adventure-start
       - !type:AdjustReagent
         conditions:
         - !type:ReagentThreshold

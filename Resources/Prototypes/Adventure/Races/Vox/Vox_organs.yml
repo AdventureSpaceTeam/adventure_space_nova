@@ -1,0 +1,18 @@
+- type: entity
+  id: OrganVoxHeart
+  parent: OrganHumanHeart
+  name: сердце вокса
+  description: Мне жаль бессердечного ублюдка, который потерял это.
+  components:
+  - type: Sprite
+    state: heart-on
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [Vox]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+  - type: Item
+    size: Small
+    heldPrefix: heart

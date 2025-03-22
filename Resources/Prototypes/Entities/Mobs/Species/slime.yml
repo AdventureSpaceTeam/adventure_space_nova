@@ -73,7 +73,7 @@
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.50 #per second, scales with pressure and other constants.
+        Barotrauma: 0.50 #Adventure
         Heat: 0.2 # 0.1 more than humans, i feel like low pressure would make slime boil more than blunt stretch them so i decided on this instead.
   - type: Reactive
     groups:

@@ -27,19 +27,20 @@
     state: ointment
   - type: Item
     heldPrefix: ointment
+#Adventure-start
   - type: Healing
     damageContainers:
       - Biological
     damage:
       types:
         Heat: -5
-        Cold: -5
-        Shock: -5
-        Caustic: -1.5
+        Shock: -2
+        Caustic: -1
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
     healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
+#Adventure-end
   - type: Stack
     stackType: Ointment
     count: 10
@@ -78,19 +79,20 @@
     state: regenerative-mesh
   - type: Item
     heldPrefix: regenerative-mesh
+#Adventure-start
   - type: Healing
     damageContainers:
       - Biological
     damage:
       types:
         Heat: -10
-        Cold: -10
-        Shock: -10
+        Shock: -4
         Caustic: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
     healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
+#Adventure-end
   - type: Stack
     stackType: RegenerativeMesh
     count: 10
@@ -118,16 +120,19 @@
     - Brutepack
   - type: Sprite
     state: brutepack
+#Adventure-start
   - type: Healing
     damageContainers:
       - Biological
     damage:
-      groups:
-        Brute: -15 # 5 for each type in the group
+      types:
+        Blunt: -5
+        Barotrauma: -2
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-start
   - type: Stack
     stackType: Brutepack
     count: 10
@@ -167,17 +172,20 @@
   - type: Item
     heldPrefix: medicated-suture
     storedRotation: -90
+#Adventure-start
   - type: Healing
     damageContainers:
       - Biological
     damage:
-      groups:
-        Brute: -30 # 10 for each type in the group
-    bloodlossModifier: -10 # a suture should stop ongoing bleeding
+      types:
+        Slash: -10
+        Piercing: -10
+    bloodlossModifier: -10 
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
   - type: Stack
     stackType: MedicatedSuture
     count: 10

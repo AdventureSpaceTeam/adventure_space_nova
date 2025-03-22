@@ -1,0 +1,91 @@
+#Нитроксалин
+- type: reagent
+  id: Nitroxalin
+  name: Нитроксалин
+  group: Medicine
+  desc: Необходим для восстановления уровня азота в крови.
+  physicalDesc: бесцветное
+  flavor: medicine
+  color: "#aabbfc"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions: 
+        - !type:OrganType 
+          type: Vox
+          shouldHave: true
+        damage:
+          types:
+            Asphyxiation: -3.5
+      - !type:HealthChange
+        conditions: 
+        - !type:OrganType 
+          type: Zerah
+          shouldHave: true
+        damage:
+          types:
+            Asphyxiation: -3.5
+      - !type:HealthChange
+        conditions: 
+        - !type:OrganType 
+          type: Slime
+          shouldHave: true
+        damage:
+          types:
+            Asphyxiation: -3.5
+      - !type:HealthChange
+        conditions:
+          - !type:ReagentThreshold
+            min: 20
+        damage:
+          types:
+            Asphyxiation: 3
+            Cold: 1
+
+- type: reaction
+  id: Nitroxalin
+  minTemp: 320
+  reactants:
+    Nitrogen:
+      amount: 2
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Nitroxalin: 2
+
+#Криобиозин
+- type: reagent
+  id: Barotrasine
+  name: Баротразин
+  group: Medicine
+  desc: Используется для восстановления органических тканей после экстримального давления.
+  physicalDesc: мутное
+  flavor: medicine
+  color: "#faadff"
+  worksOnTheDead: true # лечит давление у мёртвых, ну чтоб вообще плохо не было
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:HealthChange
+          conditions:
+          - !type:Temperature
+            max: 175.15
+          damage:
+            types:
+              Barotrauma: -4
+
+- type: reaction
+  id: Barotrasine
+  minTemp: 320
+  reactants:
+    Bruizine:
+      amount: 1
+    Cryoxadone:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Barotrasine: 1
