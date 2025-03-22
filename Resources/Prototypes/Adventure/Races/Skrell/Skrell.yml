@@ -12,6 +12,9 @@
   id: BaseMobSkrell
   name: Урист макСкрелл
   components:
+  - type: ActionGun
+    action: ActionScrellShot
+    gunProto: ScrellGunWater
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -119,3 +122,88 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+
+# Стрельба водичкой
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ActionScrellShot
+  name: Плюнуть
+  description: Плюйте в своих врагов!
+  components:
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 5
+  - type: WorldTargetAction
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon:
+      sprite: /Textures/Adventure/Roles/Screll/action.rsi
+      state: icon
+    event: !type:ActionGunShootEvent
+    priority: 100
+    checkCanAccess: false
+    range: 0
+    
+- type: entity
+  noSpawn: true
+  id: ScrellGunWater
+  components:
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 5
+    rechargeSound:
+      path: /Audio/Animals/space_dragon_roar.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletWaterShotScrell
+    capacity: 1
+    count: 1
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/water_spray.ogg
+    soundEmpty: null
+    projectileSpeed: 20
+
+- type: entity
+  id: BulletWaterShotScrell
+  name: плевок скрелла
+  components:
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: TimedDespawn
+    lifetime: 10
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1 #it's just water, bro
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/water_shot.rsi
+    layers:
+    - state: icon
+      color: "#7FFFD4"
+      map: ["enum.VaporVisualLayers.Base"]
+  - type: Ammo
+    muzzleFlash: null
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: Water
+          Quantity: 10
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.10,-0.30,0.10,0.15"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 5
+  - type: Vapor
+    active: true
+  - type: Appearance
+  - type: VaporVisuals
+
