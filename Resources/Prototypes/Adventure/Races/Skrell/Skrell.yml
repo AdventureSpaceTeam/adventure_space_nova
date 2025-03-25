@@ -175,7 +175,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 1 #it's just water, bro
+        Blunt: 0.1 #it's just water, bro
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/water_shot.rsi
     layers:
