@@ -8,7 +8,7 @@
   id: NamesRevenantAdjective
   values:
     prefix: names-revenant-adjective-dataset-
-    count: 16 # adventure localization
+    count: 21 # adventure localization
 
 - type: localizedDataset
   id: NamesRevenantTheme

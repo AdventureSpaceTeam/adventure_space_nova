@@ -2,10 +2,10 @@
   id: NamesFirstMale
   values:
     prefix: names-first-male-dataset-
-    count: 364 # adventure localization
+    count: 986 # adventure localization
 
 - type: localizedDataset
   id: NamesFirstFemale
   values:
     prefix: names-first-female-dataset-
-    count: 444 # adventure localization
+    count: 1145 # adventure localization

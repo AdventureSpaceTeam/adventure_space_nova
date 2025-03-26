@@ -2,13 +2,13 @@
   id: NamesMothFirstMale
   values:
     prefix: names-moth-first-male-dataset-
-    count: 38 # adventure localization
+    count: 39 # adventure localization
 
 - type: localizedDataset
   id: NamesMothFirstFemale
   values:
     prefix: names-moth-first-female-dataset-
-    count: 46 # adventure localization
+    count: 38 # adventure localization
 
 - type: localizedDataset
   id: NamesMothLast

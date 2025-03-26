@@ -2,10 +2,10 @@
   id: NamesOperationPrefix
   values:
     prefix: names-operation-prefix-dataset-
-    count: 98 # adventure localization
+    count: 101 # adventure localization
 
 - type: localizedDataset
   id: NamesOperationSuffix
   values:
     prefix: names-operation-suffix-dataset-
-    count: 51 # adventure localization
+    count: 102 # adventure localization

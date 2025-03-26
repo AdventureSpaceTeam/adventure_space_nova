@@ -2,10 +2,10 @@
   id: NamesArachnidFirst
   values:
     prefix: names-arachnid-first-dataset-
-    count: 64 # adventure localization
+    count: 73 # adventure localization
 
 - type: localizedDataset
   id: NamesArachnidLast
   values:
     prefix: names-arachnid-last-dataset-
-    count: 66 # adventure localization
+    count: 68 # adventure localization
