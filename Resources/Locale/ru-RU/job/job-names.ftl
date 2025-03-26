@@ -110,3 +110,5 @@ JobWarden = Смотритель
 JobVisitor = Посетитель
 JobBoxer = Боксёр
 JobZookeeper = Зоотехник
+
+job-name-blueshield = Офицер «Синий Щит»

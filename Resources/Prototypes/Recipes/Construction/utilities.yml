@@ -699,8 +699,8 @@
 
 - type: construction
   id: HeatExchangerBend
-  name: radiator bend
-  description: Transfers heat between the pipe and its surroundings.
+  name: радиатор [Угловой](radiator) # Adventure
+  description: Переносит тепло между трубой и окружающей средой. # Adventure
   graph: GasBinary
   startNode: start
   targetNode: bendradiator

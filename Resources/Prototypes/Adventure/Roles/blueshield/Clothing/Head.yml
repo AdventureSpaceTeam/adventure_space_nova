@@ -2,7 +2,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBlueshieldBeret
-  name: Берет офицера синего щита
+  name: берет офицера синий щит
   description: Берет из дюроткани показывает статус своего владельца.
   components:
     - type: Sprite
@@ -14,7 +14,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadBlueshieldCap
-  name: Фуражка офицера синего щита
+  name: фуражка офицера синий щит
   description: Не забудь отдать честь.
   components:
     - type: Sprite
@@ -25,7 +25,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadBlueshieldCapBlue
-  name: Синяя фуражка офицера синего щита
+  name: синяя фуражка офицера синий щит
   description: Не забудь отдать честь.
   components:
     - type: Sprite

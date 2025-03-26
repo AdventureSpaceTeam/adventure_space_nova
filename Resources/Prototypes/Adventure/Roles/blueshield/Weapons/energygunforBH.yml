@@ -1,8 +1,8 @@
 - type: entity
-  name: Энергетический пистолет
+  name: энергетический пистолет
   parent: BaseWeaponBatterySmall
   id: energygun
-  description: Оружие для устранения беспорядков в любом их проявлении
+  description: Оружие для устранения беспорядков в любом их проявлении.
   components:
   - type: Sprite
     sprite: Adventure/Roles/blueshield/Weapons/energy_gun.rsi
@@ -42,7 +42,7 @@
     price: 1000
 
 - type: entity
-  name: Лазер
+  name: лазер
   id: LaserBullet
   parent: EmitterBolt
   noSpawn: true
@@ -58,7 +58,7 @@
         Heat: 17
 
 - type: entity
-  name: Станнер
+  name: станнер
   id: BulletDisablerForEnergyGum
   parent: BaseBullet
   noSpawn: true

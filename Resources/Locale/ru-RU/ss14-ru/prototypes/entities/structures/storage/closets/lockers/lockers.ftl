@@ -67,3 +67,10 @@ ent-LockerMime = шкаф мима
     .desc = { ent-LockerBaseSecure.desc }
 ent-LockerRepresentative = шкаф представителя Nanotrasen
     .desc = { ent-LockerBaseSecure.desc }
+
+# Adventure
+
+ent-LockerBlueshield = шкаф офицера синий щит
+    .desc = { ent-LockerBaseSecure.desc }
+ent-LockerBlueshieldFilledHardsuit = шкаф офицера синий щит
+    .desc = { ent-LockerBaseSecure.desc }

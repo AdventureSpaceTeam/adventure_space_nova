@@ -2,7 +2,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBlueshield
-  name: Униформа офицера синего щита
+  name: униформа офицера синий щит
   description: Этикетка гласит "A special suit made for the best of the elites under CentCom" Что бы это значило?
   components:
   - type: Sprite
@@ -13,7 +13,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformjumpskirtBlueshield
-  name: Униформа офицера синего щита
+  name: униформа офицера синий щит
   description: Этикетка гласит "A special suit made for the best of the elites under CentCom" Что бы это значило?
   components:
   - type: Sprite
@@ -25,7 +25,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBlueshieldParade
-  name: Парадная униформа офицера синего щита
+  name: парадная униформа офицера синий щит
   description: Элегантная форма настоящего офицера.
   components:
   - type: Sprite

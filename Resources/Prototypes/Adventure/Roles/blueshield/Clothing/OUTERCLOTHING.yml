@@ -2,7 +2,7 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitBlueshield
-  name: Шлем скафандра офицера синего щита
+  name: шлем скафандра офицера синий щит
   description: Укреплённый шлем с новой системой NT-HUD, которая не работает.
   components:
   - type: BreathMask
@@ -26,8 +26,8 @@
 - type: entity
   parent: ClothingOuterHardsuitSecurity
   id: ClothingOuterHardsuitBlueshield
-  name: Скафандр офицера синего щита
-  description: Специальный костюм защищающий от внешний угроз. С дополнительным слоем брони.
+  name: скафандр офицера синий щит
+  description: Специальный костюм защищающий от внешних угроз. С дополнительным слоем брони.
   components:
   - type: Sprite
     sprite: Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Hardsuit/Suit/Blueshield.rsi
@@ -57,7 +57,7 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: ClothingOuterArmorBlueshield
-  name: Улучшенный бронежилет
+  name: улучшенный бронежилет
   description: Бронежилет укреплённый керамическими пластинами. Несколько мешает движениям, но многократно увеличивает шансы на выживание.
   components:
   - type: Sprite
@@ -78,7 +78,7 @@
 - type: entity
   parent: ClothingOuterCoatHoSTrench
   id: ClothingOuterArmorCoatBlueshield
-  name: Бронекуртка офицера синего щита
+  name: бронекуртка офицера синий щит
   description: Шинель, усиленная специальным сплавом для дополнительной защиты и придания стиля тем, у кого внушительный вид.
   components:
     - type: Sprite
@@ -96,7 +96,7 @@
 - type: entity
   parent: ClothingOuterArmorCoatBlueshield
   id: ClothingOuterArmorCoatBlueshieldParade
-  name: Парадная бронекуртка офицера синего щита
+  name: парадная бронекуртка офицера синий щит
   components:
     - type: Sprite
       sprite: Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/BSformaljacket.rsi

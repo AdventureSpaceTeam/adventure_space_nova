@@ -98,13 +98,13 @@
   objectType: Item
 
 - type: construction
-  name: lizard plushie slippers
+  name: вех-тапочки # Adventure
   id: ClothingShoeSlippersLizard
   graph: ClothingShoeSlippersLizard
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: An adorable pair of slippers that resemble a lizardperson. Combine this with some other green clothing and you'll be the coolest crewmember on the station!
+  description: Очаровательная пара тапочек, похожих на унатха. Сочетайте их с другой зелёной одеждой — и вы будете самым крутым членом экипажа на станции! # Adventure
   icon: { sprite: Clothing/Shoes/Misc/lizard-slippers.rsi, state: icon }
   objectType: Item
 

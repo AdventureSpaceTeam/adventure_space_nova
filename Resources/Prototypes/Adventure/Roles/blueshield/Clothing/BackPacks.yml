@@ -2,8 +2,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackBlueshield
-  name: Рюкзак офицера синего щита
-  description: Особенный рюкзак для элитного офицера синего щита! А стоп... он же пассажирский.. или нет?
+  name: рюкзак офицера синего щита
+  description: Особенный рюкзак для элитного офицера синий щит! А стоп... он же пассажирский.. или нет?
   components:
   - type: Sprite
     sprite: Adventure/Roles/blueshield/Clothing/Backpacks/blueshield.rsi
@@ -12,7 +12,7 @@
 - type: entity
   parent: ClothingBackpackDuffel
   id: ClothingBackpackDuffelBlueshield
-  name: Вещмешок офицера синего щита
+  name: вещмешок офицера синий щит.
   description: Большая сумка для хранения ору.. то есть защиты капитана.
   components:
   - type: Sprite
@@ -22,7 +22,7 @@
 - type: entity
   parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelBlueshield
-  name: Сумка офицера синего щита
+  name: сумка офицера синий щит
   description: Маленькая и удобная, а главное модная.
   components:
   - type: Sprite

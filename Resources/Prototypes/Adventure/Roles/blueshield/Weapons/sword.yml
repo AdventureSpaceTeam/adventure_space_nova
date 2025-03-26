@@ -3,7 +3,7 @@
   parent: [BaseSword, BaseRestrictedContraband]
   id: BlueshieldSabre
   suffix: Adventure
-  description: Церемониальное оружие, принадлежащее офицеру синего щита станции.
+  description: Церемониальное оружие, принадлежащее офицеру синий щит.
   components:
   - type: Sprite
     sprite: Adventure/Roles/blueshield/Weapons/Sable/Sable.rsi
@@ -29,7 +29,7 @@
   id: ClothingBeltSheathBS
   name: офицерские сабельные ножны
   suffix: Adventure
-  description: Удобное хранилище для клинка офицера синего щита.
+  description: Удобное хранилище для клинка офицера синий щит.
   components:
   - type: Sprite
     sprite: Adventure/Roles/blueshield/Weapons/Sable/sheath.rsi

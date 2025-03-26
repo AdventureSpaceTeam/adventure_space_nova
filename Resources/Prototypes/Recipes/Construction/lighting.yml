@@ -27,7 +27,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light tube containing a yellow crystal
+  description: Мощная лампа, внутри которой находится маленький жёлтый кристалл. # Adventure
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -60,7 +60,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light tube containing a black crystal. It won't be very bright.
+  description: Мощная лампа, внутри которой находится маленький чёрный кристалл. Вряд ли она будет яркой. # Adventure
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -87,89 +87,88 @@
   objectType: Item
 
 - type: construction
-  name: cyan light bulb
+  name: голубая лампочка # Adventure
   id: CyanLightBulb
   graph: CyanLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a cyan crystal.
+  description: Мощная лампа, внутри которой находится маленький голубой кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: blue light bulb
+  name: синяя лампочка # Adventure
   id: BlueLightBulb
   graph: BlueLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a blue crystal.
+  description: Мощная лампа, внутри которой находится маленький синий кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: yellow light bulb
+  name: жёлтая лампочка # Adventure
   id: YellowLightBulb
   graph: YellowLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a yellow crystal.
+  description: Мощная лампа, внутри которой находится маленький жёлтый кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: pink light bulb
+  name: розовая лампочка # Adventure
   id: PinkLightBulb
   graph: PinkLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a pink crystal.
+  description: Мощная лампа, внутри которой находится маленький розовый кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: orange light bulb
+  name: оранжевая лампочка # Adventure
   id: OrangeLightBulb
   graph: OrangeLightBulb
   startNode: start
   targetNode: icon
-  category: construction-category-utilities
-  description: A high powered light bulb containing an orange crystal.
+  category: conМощная лампа, внутри которой находится маленький оранжевый кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: black light bulb
+  name: чёрная лампочка # Adventure
   id: BlackLightBulb
   graph: BlackLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a black crystal. It won't be very bright.
+  description: Мощная лампа, внутри которой находится маленький чёрный кристалл. Вряд ли она будет яркой. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: red light bulb
+  name: красная лампочка # Adventure
   id: RedLightBulb
   graph: RedLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a red crystal.
+  description: Мощная лампа, внутри которой находится маленький красный кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 
 - type: construction
-  name: green light bulb
+  name: зелёная лампочка # Adventure
   id: GreenLightBulb
   graph: GreenLightBulb
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: A high powered light bulb containing a green crystal.
+  description: Мощная лампа, внутри которой находится маленький зелёный кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item

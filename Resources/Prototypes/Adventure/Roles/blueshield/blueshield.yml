@@ -1,7 +1,7 @@
 #Роль
 - type: job
   id: Blueshield
-  name: офицер синий щит
+  name: Офицер Синий Щит
   description: Защищайте командный состав и ВИП персон Центрального Командования
   playTimeTracker: JobBlueshield
   requirements:
@@ -59,7 +59,7 @@
 - type: entity
   parent: IDCardStandard
   id: BlueshieldIDCard
-  name: ID карта офицера синего щита
+  name: ID карта офицера синий щит
   components:
   - type: Sprite
     sprite: Adventure/Roles/blueshield/PDA/ID.rsi
@@ -72,10 +72,10 @@
     job: Blueshield
 
 - type: entity
-  name: Кпк офицера синего щита
+  name: кпк офицера синий щит
   parent: BasePDA
   id: BlueshieldPDA
-  description: Пахнет безопасностью
+  description: Пахнет безопасностью.
   components:
   - type: Pda
     id: BlueshieldIDCard
@@ -118,7 +118,7 @@
 - type: entity
   id: LockerBlueshield
   parent: LockerBase
-  name: Шкаф Офицера синего щита
+  name: шкаф офицера синий щит
   components:
   - type: Appearance
   - type: EntityStorageVisuals
@@ -130,7 +130,7 @@
 
 - type: entity
   id: LockerBlueshieldFilledHardsuit
-  suffix: Filled, Hardsuit, AdvRoles, AdvMapping
+  suffix: Заполненный, Скафандр, AdvRoles, AdvMapping
   parent: LockerBlueshield
   components:
   - type: StorageFill
@@ -152,7 +152,7 @@
 
 #Печать ОСЩ by raidgo
 - type: entity
-  name: печать офицера синего щита
+  name: печать офицера синий щит
   description: Печать из резины, для проставления печатей на важных документах.
   parent: RubberStampBase
   id: RubberStampblueshield

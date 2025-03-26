@@ -1,7 +1,7 @@
 - type: entity
   parent: BaseItem
   id: BSuplink
-  name: Терминал снаряжения ОСЩ
+  name: терминал снаряжения ОСЩ
   suffix: Adventure, Old
   description: Терминал который использует офицеры синего щита для покупки снаряжения.
   components:
