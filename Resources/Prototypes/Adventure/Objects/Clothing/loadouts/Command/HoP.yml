@@ -1,0 +1,142 @@
+#комбезы
+- type: entity
+  parent: ClothingUniformJumpsuitHoP
+  id: ClothingUniformJumpsuitJacketHoP
+  name: пиджак главы персонала
+  description: Строгий костюм для скучной работы.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/hop_jumpsuit.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/HoP/hop_jumpsuit.rsi
+
+- type: loadout
+  id: ClothingUniformJumpsuitJacketHoP
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitJacketHoP
+
+- type: entity
+  parent: ClothingUniformJumpskirtHoP
+  id: ClothingUniformJumpskirtJacketHoP
+  name: юбка-пиджак главы персонала
+  description: Строгий костюм для скучной работы.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/hop_jumpskirt.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/HoP/hop_jumpskirt.rsi
+
+- type: loadout
+  id: ClothingUniformJumpskirtJacketHoP
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJacketHoP
+
+#фуражка 
+- type: entity
+  parent: ClothingHeadHatHopcap
+  id: ClothingHeadHatHopHat
+  name: фуражка главы персонала
+  description: Великолепная, стильная фуражка главы персонала.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/hophat.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/HoP/hophat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: loadout
+  id: ClothingHeadHatHopHat
+  equipment:
+    head: ClothingHeadHatHopHat
+
+#пальто 
+- type: entity
+  parent: ClothingOuterCoatHOP
+  id: ClothingOuterCoatHOPGreatcoat
+  name: шинель главы персонала
+  description: Бумажки, пожалуйста.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/hop_greatcoat.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/HoP/hop_greatcoat.rsi
+
+- type: loadout
+  id: ClothingOuterCoatHOPGreatcoat
+  equipment:
+    outerClothing: ClothingOuterCoatHOPGreatcoat
+
+#сумки 
+- type: entity
+  parent: [ClothingBackpack, BaseCommandContraband]
+  id: ClothingBackpackHOP
+  name: рюкзак главы персонала
+  description: Это специальный рюкзак, изготовленный исключительно для офицеров Nanotrasen.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/backpack.rsi
+
+- type: loadout
+  id: ClothingBackpackHOP
+  equipment:
+    back: ClothingBackpackHOP
+
+- type: entity
+  parent: [ClothingBackpackDuffel, BaseCommandContraband]
+  id: ClothingBackpackDuffelHOP
+  name: вещмешок главы персонала
+  description: Большая спортивная сумка для хранения бумаги.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/duffel.rsi
+
+- type: loadout
+  id: ClothingBackpackDuffelHOP
+  equipment:
+    back: ClothingBackpackDuffelHOP
+
+- type: entity
+  parent: [ClothingBackpackSatchel, BaseCommandContraband]
+  id: ClothingBackpackSatchelHOP
+  name: сумка главы персонала
+  description: Эксклюзивная сумка для офицеров Nanotrasen.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/satchel.rsi
+
+- type: loadout
+  id: ClothingBackpackSatchelHOP
+  equipment:
+    back: ClothingBackpackSatchelHOP
+
+#скаф 
+- type: entity
+  parent: [ClothingOuterHardsuitBasic, BaseCommandContraband]
+  id: ClothingOuterHardsuitHOP
+  name: скафандр главы персонала
+  description: Базовый скафандр для командования станции.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/suit/hop_suit.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/HoP/suit/hop_suit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitHOP
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitHOP
+  name: шлем скафандра главы персонала
+  description: Таким шлемом можно колоть орехи.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/HoP/suit/hop_helmet.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/HoP/suit/hop_helmet.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000

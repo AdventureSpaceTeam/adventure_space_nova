@@ -143,6 +143,7 @@
   minLimit: 0
   loadouts:
   - HoPHead
+  - ClothingHeadHatHopHat # Adventure
 
 - type: loadoutGroup
   id: HoPJumpsuit
@@ -150,6 +151,10 @@
   loadouts:
   - HoPJumpsuit
   - HoPJumpskirt
+  - HoPJumpsuitTurtleneck # Adventure
+  - HoPJumpskirtTurtleneck # Adventure
+  - ClothingUniformJumpsuitJacketHoP # Adventure
+  - ClothingUniformJumpskirtJacketHoP # Adventure
 
 - type: loadoutGroup
   id: HoPNeck
@@ -163,9 +168,9 @@
   id: HoPBackpack
   name: loadout-group-hop-backpack
   loadouts:
-  - CommonBackpack
-  - CommonSatchel
-  - CommonDuffel
+  - ClothingBackpackHOP # Adventure
+  - ClothingBackpackSatchelHOP # Adventure
+  - ClothingBackpackDuffelHOP # Adventure
   - HoPBackpackIan
 
 - type: loadoutGroup
@@ -175,6 +180,7 @@
   loadouts:
   - HoPWintercoat
   - HoPCoat
+  - ClothingOuterCoatHOPGreatcoat # Adventure
 
 # Civilian
 - type: loadoutGroup
