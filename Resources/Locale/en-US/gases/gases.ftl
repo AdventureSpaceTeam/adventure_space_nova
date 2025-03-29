@@ -7,3 +7,13 @@ gases-water-vapor = Water Vapor
 gases-ammonia = Ammonia
 gases-n2o = Nitrous Oxide
 gases-frezon = Frezon
+
+# Adventure gases
+
+gases-bz = BZ
+gases-halon = Halon
+gases-healium = Healium
+gases-hyper-noblium = Hyper-Noblium
+gases-hydrogen = Hydrogen
+gases-pluoxium = Pluoxium
+gases-nitrium = Nitrium
