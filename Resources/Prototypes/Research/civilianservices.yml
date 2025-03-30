@@ -143,6 +143,7 @@
   recipeUnlocks:
   - BorgModuleAdvancedTreatment
   - BorgModuleDefibrillator
+  - BorgModuleRescue # Adventure
 
 - type: technology
   id: AdvancedCleaning

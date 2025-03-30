@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from paradise station at commit https://github.com/ParadiseSS13/Paradise/commit/9312f1fb7dcdf1c195e255a528f31092613fb60d Resprite by KREKS",
+  "copyright": "by borkroman",
   "size": {
     "x": 32,
     "y": 32
@@ -11,6 +11,9 @@
       "name": "assembly"
     },
     {
+      "name": "open_unlit"
+    },
+    {
       "name": "bolted_unlit"
     },
     {
@@ -18,9 +21,6 @@
     },
     {
       "name": "closed_unlit"
-    },
-    {
-      "name": "open_unlit"
     },
     {
       "name": "closing",
@@ -36,22 +36,13 @@
       ]
     },
     {
-      "name": "closing_unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
+      "name": "closing_unlit"
     },
     {
       "name": "deny_unlit",
       "delays": [
         [
+          0.1,
           0.1,
           0.1,
           0.1,
@@ -77,17 +68,7 @@
       ]
     },
     {
-      "name": "opening_unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.07,
-          0.07,
-          0.07,
-          0.2
-        ]
-      ]
+      "name": "opening_unlit"
     },
     {
       "name": "panel_closing",
@@ -103,6 +84,9 @@
       ]
     },
     {
+      "name": "panel_open"
+    },
+    {
       "name": "panel_opening",
       "delays": [
         [
@@ -114,10 +98,6 @@
           0.2
         ]
       ]
-    },
-
-    {
-      "name": "panel_open"
     },
     {
       "name": "sparks",
@@ -141,8 +121,7 @@
           0.1,
           0.1,
           0.1,
-          0.1,
-          1.7
+          0.1
         ]
       ]
     },

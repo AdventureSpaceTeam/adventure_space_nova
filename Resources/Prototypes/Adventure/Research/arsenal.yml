@@ -1,0 +1,11 @@
+- type: technology
+  id: BorgModuleCombat
+  name: Боевые технологии киборгов
+  icon:
+    sprite: Adventure/Roles/BorgDep/SecBorg/Borg_laser_gun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - BorgModuleCombat

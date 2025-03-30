@@ -36,6 +36,8 @@
   - type: Tag
     tags:
     - ClothMade
+  - type: StealTarget
+    stealGroup: Pants
 
 - type: entity
   parent: BaseClothingPants

@@ -89,9 +89,9 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+      collection: ReptilianScreamCollectionADV # Adventure
     Laugh:
-      path: /Audio/Animals/lizard_happy.ogg
+      collection: ReptilianLaughCollectionADV # Adventure
     Honk:
       collection: BikeHorn
     Whistle:
@@ -108,7 +108,7 @@
       collection: DeathGasp
 #Adventure-start
     Yawn:
-      collection: MaleYawn
+      collection: ReptilianYawnCollectionADV
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -116,7 +116,7 @@
     Sigh:
       collection: MaleSigh
     Hissing:
-      path: /Audio/Animals/snake_hiss.ogg
+      collection: ReptilianHissCollectionADV
 #Adventure-end
 
 - type: emoteSounds
@@ -125,9 +125,9 @@
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+      collection: ReptilianScreamCollectionADV # Adventure
     Laugh:
-      path: /Audio/Animals/lizard_happy.ogg
+      collection: ReptilianLaughCollectionADV # Adventure
     Honk:
       collection: BikeHorn
     Whistle:
@@ -144,7 +144,7 @@
       collection: FemaleDeathGasp
 #Adventure-start
     Yawn:
-      collection: FemaleYawn
+      collection: ReptilianYawnCollectionADV
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -152,7 +152,7 @@
     Sigh:
       collection: FemaleSigh
     Hissing:
-      path: /Audio/Animals/snake_hiss.ogg
+      collection: ReptilianHissCollectionADV
 #Adventure-end
 
 - type: emoteSounds

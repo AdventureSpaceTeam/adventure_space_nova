@@ -1,0 +1,36 @@
+﻿
+
+- type: soundCollection
+  id: ReptilianScreamCollectionADV
+  files:
+  - /Audio/Adventure/Voice/Reptilian/Scream1.ogg
+  - /Audio/Adventure/Voice/Reptilian/Scream2.ogg
+  - /Audio/Adventure/Voice/Reptilian/Scream3.ogg
+
+- type: soundCollection
+  id: ReptilianLaughCollectionADV
+  files:
+  - /Audio/Adventure/Voice/Reptilian/Haha1.ogg
+  - /Audio/Adventure/Voice/Reptilian/Haha1.ogg
+
+- type: soundCollection
+  id: ReptilianHissCollectionADV
+  files:
+  - /Audio/Adventure/Voice/Reptilian/Hiss1.ogg
+  - /Audio/Adventure/Voice/Reptilian/Hiss2.ogg
+
+- type: soundCollection
+  id: ReptilianYawnCollectionADV
+  files:
+  - /Audio/Adventure/Voice/Reptilian/Yawn1.ogg
+  - /Audio/Adventure/Voice/Reptilian/Yawn2.ogg
+  - /Audio/Adventure/Voice/Reptilian/Yawn3.ogg
+
+- type: speechSounds
+  id: LizardADV
+  saySound:
+    path: /Audio/Adventure/Voice/Reptilian/RepSpeech1.ogg
+  askSound:
+    path: /Audio/Adventure/Voice/Reptilian/RepSpeech2.ogg
+  exclaimSound:
+    path: /Audio/Adventure/Voice/Reptilian/RepSpeech3.ogg

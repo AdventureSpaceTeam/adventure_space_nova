@@ -278,7 +278,7 @@
 
 - type: emote
   id: ClapSingle
-  name: chat-emote-name-clap-single
+  name: Одиночный хлопок # Adventure
   category: Hands
   icon: Interface/Emotes/clap.png #TODO: Needs a sprite that distinguishes it better from clap
   whitelist:
@@ -287,13 +287,18 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [ "chat-emote-msg-clap-single" ]
+  chatMessages: [ "делает хлопок" ]
   chatTriggers:
     - clap
     - claps their hands together
     - claps her hands together
     - claps his hands together
     - claps its hands together
+# Adventure-start
+    - делает хлопок
+    - хлопает один раз
+    - ударяет в ладоши
+# Adventure-end
 
 - type: emote
   id: Snap
@@ -347,7 +352,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: ["Стучит хвостом"] # Adventure
+  chatMessages: ["стучит хвостом"] # Adventure
   chatTriggers:
     - thump
     - thumps

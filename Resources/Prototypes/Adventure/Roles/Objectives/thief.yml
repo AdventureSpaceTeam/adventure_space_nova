@@ -1,0 +1,37 @@
+# Трусы
+- type: stealTargetGroup
+  id: Pants
+  name: трусы
+  sprite:
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    state: icon-box
+
+- type: entity
+  parent: BaseThiefStealCollectionObjective
+  id: PantsStealCollectionObjective
+  components:
+  - type: StealCondition
+    stealGroup: Pants
+    minCollectionSize: 5
+    maxCollectionSize: 10
+  - type: Objective
+    difficulty: 1
+
+# Лифчики
+- type: stealTargetGroup
+  id: Brass
+  name: лифчики
+  sprite:
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    state: icon-box
+
+- type: entity
+  parent: BaseThiefStealCollectionObjective
+  id: BrassStealCollectionObjective
+  components:
+  - type: StealCondition
+    stealGroup: Brass
+    minCollectionSize: 5
+    maxCollectionSize: 10
+  - type: Objective
+    difficulty: 1

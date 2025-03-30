@@ -53,6 +53,11 @@
   - BorgModuleHarvesting
   - BorgModuleDefibrillator
   - BorgModuleAdvancedTreatment
+# Adventure Borg start
+  - BorgModuleAdvanchedMining
+  - BorgModuleRescue
+  - BorgModuleCombat
+# Adventure Borg end
 
 - type: latheRecipePack
   id: MechParts

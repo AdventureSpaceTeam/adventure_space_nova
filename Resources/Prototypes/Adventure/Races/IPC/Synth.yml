@@ -24,7 +24,7 @@
     activated: false 
     onUse: false 
   - type: PowerCellDraw
-    drawRate: 1.1
+    drawRate: 0.6
   - type: ItemSlots
     slots:
       cell_slot:
@@ -38,7 +38,7 @@
     damageCap: 200
     damage:
       types:
-        Shock: 1.0
+        Shock: 0.5
 
 - type: entity
   abstract: true

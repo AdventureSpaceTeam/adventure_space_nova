@@ -29,7 +29,7 @@
       amount: 5
   - type: LizardAccent
   - type: Speech
-    speechSounds: Lizard
+    speechSounds: LizardADV # Adventure
     speechVerb: Reptilian
     allowedEmotes: ['Thump', 'Hissing']
   - type: TypingIndicator

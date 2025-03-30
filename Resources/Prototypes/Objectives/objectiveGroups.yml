@@ -66,6 +66,8 @@
     MailStealCollectionObjective: 1                     #cargo
     IDCardsStealCollectionObjective: 1
     LAMPStealCollectionObjective: 2                     #only for moth
+    PantsStealCollectionObjective: 1 # Adventure
+    BrassStealCollectionObjective: 1 # Adventure
 
 - type: weightedRandom
   id: ThiefObjectiveGroupItem

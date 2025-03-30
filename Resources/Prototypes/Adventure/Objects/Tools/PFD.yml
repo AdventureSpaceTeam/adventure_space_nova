@@ -17,6 +17,18 @@
     - GasVentScrubber 
     - GasMixer 
     - GasFilter 
+    - DisposalBend 
+    - DisposalTrunk 
+    - DisposalPipe 
+    - DisposalTagger 
+    - DisposalJunction 
+    - DisposalRouter 
+    - DisposalYJunction 
+    - GasOutletInjector 
+    - GasValve 
+    - HeatExchangerBend 
+    - HeatExchanger 
+    - Deconstruct 
   - type: Sprite
     sprite: Adventure/Objects/Tools/pfd.rsi
     state: icon
@@ -76,12 +88,84 @@
   fx: EffectRCDConstruct1
 
 - type: rcd
-  id: GasPressurePump    
+  id: DisposalBend    
   category: GasPipes
-  sprite: /Textures/Adventure/Interface/PFD/pump.png
+  sprite: /Textures/Adventure/Interface/PFD/pipe2.png
   mode: ConstructObject
-  prototype: GasPressurePump
-  cost: 2
+  prototype: DisposalBend
+  cost: 1
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalTrunk    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe9.png
+  mode: ConstructObject
+  prototype: DisposalTrunk
+  cost: 1
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalPipe    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe10.png
+  mode: ConstructObject
+  prototype: DisposalPipe
+  cost: 1
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalTagger    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe6.png
+  mode: ConstructObject
+  prototype: DisposalTagger
+  cost: 1
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalJunction    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe8.png
+  mode: ConstructObject
+  prototype: DisposalJunction
+  cost: 1
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalRouter    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe5.png
+  mode: ConstructObject
+  prototype: DisposalRouter
+  cost: 1
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalYJunction    
+  category: GasPipes
+  sprite: /Textures/Adventure/Interface/PFD/pipe7.png
+  mode: ConstructObject
+  prototype: DisposalYJunction
+  cost: 1
   delay: 2
   rules:
   - MustBuildOnSubfloor
@@ -154,6 +238,78 @@
   sprite: /Textures/Adventure/Interface/PFD/gasFilter.png
   mode: ConstructObject
   prototype: GasFilter
+  cost: 2
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPressurePump    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/pump.png
+  mode: ConstructObject
+  prototype: GasPressurePump
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasOutletInjector    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/injector.png
+  mode: ConstructObject
+  prototype: GasOutletInjector
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasVolumePump    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/pumpVolume.png
+  mode: ConstructObject
+  prototype: GasVolumePump
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasValve    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/pumpManualValve.png
+  mode: ConstructObject
+  prototype: GasValve
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: HeatExchangerBend    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/radiator2.png
+  mode: ConstructObject
+  prototype: HeatExchangerBend
+  cost: 2
+  delay: 2
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: HeatExchanger    
+  category: GasMachine
+  sprite: /Textures/Adventure/Interface/PFD/radiator1.png
+  mode: ConstructObject
+  prototype: HeatExchanger
   cost: 2
   delay: 2
   rules:
