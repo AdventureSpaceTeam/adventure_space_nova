@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made By Zeneganto",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "black",
+	  "directions": 4
+    },
+    {
+      "name": "blue",
+	  "directions": 4
+    },
+    {
+      "name": "cian",
+	  "directions": 4
+    },
+    {
+      "name": "green",
+	  "directions": 4
+    },
+    {
+      "name": "orange",
+	  "directions": 4
+    },
+    {
+      "name": "pink",
+	  "directions": 4
+    },
+    {
+      "name": "red",
+	  "directions": 4
+    },
+    {
+      "name": "white",
+	  "directions": 4
+    }
+  ]
+}
