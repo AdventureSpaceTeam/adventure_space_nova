@@ -371,7 +371,7 @@
 - type: entity
   id: CrateCargoCatWife
   name: лоттерея кошко-жён
-  description: Ящик содержащий невероятное сокровище, вашу личную кошку-жену! Доступно 8 расцветок белья! В комплекте идёт костюм горничной и модные сапожки.
+  description: "Ящик содержащий невероятное сокровище, вашу личную кошку-жену! Доступно 8 расцветок белья! В комплекте идут: костюм горничной и модные сапожки."
   parent: CratePrivateSecure
   components:
   - type: StorageFill
@@ -404,7 +404,7 @@
     - id: ClothingShoesHighheelBoots
 
 - type: cargoProduct
-  id: FunCrateGambling
+  id: FunCrateCatWife
   icon:
     sprite: Clothing/Head/Hats/catears.rsi
     state: icon
