@@ -47,7 +47,7 @@
 - type: reagent
   id: SkrellBlood
   parent: Blood
-  name: Синяя кровь
+  name: сок, который питает ктулху, но чёрный
   group: Biological
   flavor: metallic
   color: "#454078"

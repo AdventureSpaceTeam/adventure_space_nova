@@ -1,6 +1,6 @@
 ﻿- type: reagent
   id: ZerahPoison
-  name: Яд зераха
+  name: сок, который яд змеи
   group: Toxins
   desc: Довольно опасный токсин, обладающий непредсказуемым эффектом.
   physicalDesc: токсичное
@@ -25,7 +25,7 @@
         - !type:OrganType
           type: Zerah
           shouldHave: false
-      - !type:PopupMessage 
+      - !type:PopupMessage
         type: Local
         visualType: Medium
         messages:
@@ -124,7 +124,7 @@
 - type: reagent
   id: ZerahBlood
   parent: Blood
-  name: Кровь зераха
+  name: сок, который питает змей, но жёлтый
   group: Biological
   flavor: metallic
   color: "#e1b52e"

@@ -20,7 +20,7 @@
         true
       NavSmash: !type:Bool
         true
-  - type: Prying 
+  - type: Prying
     pryPowered: true
     force: true
     speedModifier: 1.5
@@ -88,7 +88,7 @@
     tags:
     - FootstepSound
     - HungerSwarm
-  - type: Hunger 
+  - type: Hunger
     thresholds:
       Overfed: 35
       Okay: 25
@@ -149,16 +149,16 @@
 - type: Tag
   id: HungerSwarmGuardian
 
-#Радио 
+#Радио
 - type: radioChannel
   id: HungerSwarm
-  name: Коллективный разум 
+  name: Коллективный разум
   keycode: 'у'
   frequency: 426
   color: "#d2af52"
   longRange: true
 
-#Броня 
+#Броня
 - type: damageModifierSet
   id: HungerSwarm
   coefficients:
@@ -232,7 +232,7 @@
 #Яд жнеца
 - type: reagent
   id: ReaperPoison
-  name: Яд жнеца
+  name: сок, который яд насекомого
   group: Toxins
   desc: Используется жнецами-стражами для защиты улья.
   flavor: bitter
@@ -280,7 +280,7 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: ReaperFly
-      params: 
+      params:
         volume: -10
   - type: Spider
     webPrototype: HungerSwarmWeb

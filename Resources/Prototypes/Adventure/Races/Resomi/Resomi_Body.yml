@@ -165,7 +165,7 @@
 - type: reagent
   id: ResomiBlood
   parent: Blood
-  name: Кровь резоми
+  name: сок, который питает коротышек, но розовый
   group: Biological
   flavor: metallic
   color: "#a70195"

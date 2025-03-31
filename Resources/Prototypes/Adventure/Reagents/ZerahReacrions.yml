@@ -11,11 +11,11 @@
 - type: reagent
   id: ZerahBloodCollapsed
   parent: Blood
-  name: Свёрнутая кровь зераха
+  name: сок, который свёрнутый, но красный
   desc: Свёрнутая кровь зерах, готовая к добыче яда.
   group: Biological
   flavor: metallic
-  color: "#b08b18"   
+  color: "#b08b18"
 
 # добыча яда
 - type: reaction
@@ -36,12 +36,12 @@
 # промежуточный токсин для варки всего остального
 - type: reagent
   id: ZToxin
-  name: Z-токсин
+  name: сок, который токсин, но змеиный
   desc: Продукт труда безумных учёных.
   group: Toxins
-  color: "#99b018"  
+  color: "#99b018"
   physicalDesc: Токсичное
-  metabolisms: 
+  metabolisms:
     Poison:
       effects:
         - !type:HealthChange
@@ -56,11 +56,11 @@
 - type: reaction
   id: ZToxin
   reactants:
-    ZerahPoison: 
+    ZerahPoison:
       amount: 1
-    Ipecac: 
+    Ipecac:
       amount: 1
-    Haloperidol: 
+    Haloperidol:
       amount: 1
     Plasma:
       amount: 1
@@ -71,12 +71,12 @@
 # безболезненный яд, хорошо подойдёт для проведения процедуры казни (возможна лёгкая реанимация)
 - type: reagent
   id: BlackMamba
-  name: Чёрная мамба
+  name: сок, который чёрная смерть
   desc: Последнее что вы пьёте.
   group: Toxins
-  color: "#1f1d17"  
+  color: "#1f1d17"
   physicalDesc: Опасное
-  metabolisms: 
+  metabolisms:
     Poison:
       effects:
         - !type:HealthChange
@@ -101,15 +101,15 @@
 - type: reaction
   id: BlackMamba
   reactants:
-    ZToxin: 
+    ZToxin:
       amount: 1
-    ZerahPoison: 
+    ZerahPoison:
       amount: 1
-    UnstableMutagen: 
+    UnstableMutagen:
       amount: 1
-    Dexalin: 
+    Dexalin:
       amount: 1
-    Pax: 
+    Pax:
       amount: 1
   products:
     BlackMamba: 1
@@ -117,12 +117,12 @@
 # типо мазь из змеиного яда, горько, невкусно, лучше мыться
 - type: reagent
   id: SkhariSyrup
-  name: Сироп Схари
+  name: сок, который как мазь, но змеиный
   desc: Вредно для уротребления внутрь.
   group: Medicine
-  color: "#fdd891"  
+  color: "#fdd891"
   physicalDesc: Шипучее
-  metabolisms: 
+  metabolisms:
     Poison:
       effects:
         - !type:HealthChange
@@ -144,25 +144,25 @@
 - type: reaction
   id: SkhariSyrup
   reactants:
-    ZToxin: 
+    ZToxin:
       amount: 1
-    Dermaline: 
+    Dermaline:
       amount: 1
-    FluorosulfuricAcid: 
+    FluorosulfuricAcid:
       amount: 1
   products:
     SkhariSyrup: 1
 
-# супер крепкий алкоголь 
+# супер крепкий алкоголь
 - type: reagent
   id: GoodMorning
-  name: "Доброе утро"
+  name: сок, который желает доброго утра
   parent: BaseAlcohol
   desc: А утро то ни разу не доброе.
   flavor: alcohol
-  color: "#ed660c"  
+  color: "#ed660c"
   physicalDesc: Шипучее
-  metabolisms: 
+  metabolisms:
     Alcohol:
       effects:
       - !type:MovespeedModifier
@@ -196,11 +196,11 @@
 - type: reaction
   id: GoodMorning
   reactants:
-    ZToxin: 
+    ZToxin:
       amount: 1
-    Ethanol: 
+    Ethanol:
       amount: 2
-    ChloralHydrate: 
+    ChloralHydrate:
       amount: 2
   products:
     GoodMorning: 1

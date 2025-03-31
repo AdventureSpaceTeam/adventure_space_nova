@@ -1,6 +1,6 @@
 - type: reagent
   id: Bacteria
-  name: Бактерии
+  name: сок, который вызывает несварение
   group: Foods
   desc: Содержатся в некоторых блюдах, крайне не полезны для здоровья организма
   physicalDesc: Плохопахнущее
@@ -13,7 +13,7 @@
         emote: Fart
         showInChat: true
         probability: 0.05
-      - !type:PopupMessage 
+      - !type:PopupMessage
         type: Local
         visualType: Medium
         messages:
