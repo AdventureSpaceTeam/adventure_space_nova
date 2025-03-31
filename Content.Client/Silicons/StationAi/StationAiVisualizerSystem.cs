@@ -165,6 +165,7 @@ public sealed partial class StationAiVisualizerSystem : VisualizerSystem<Station
                 sprite.LayerSetVisible(StationAiVisualLayers.ScreenStanding, true);
                 sprite.LayerSetState(StationAiVisualLayers.CoreStanding, new RSI.StateId("base_high"));
                 sprite.LayerSetState(StationAiVisualLayers.ScreenStanding, new RSI.StateId("ai_high"));
+                sprite.LayerSetAutoAnimated(StationAiVisualLayers.ScreenStanding, true);
                 break;
             default:
                 break;
