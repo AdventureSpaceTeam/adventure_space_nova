@@ -117,3 +117,17 @@
       !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
       time: 18000 #10 hrs
+
+# пояс
+- type: entity
+  id: ClothingBeltUtilityEngineeringAdventure
+  parent: ClothingBeltUtility
+  suffix: Инженерный (Adventure)
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarYellow
+      - id: PowerDrill
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool

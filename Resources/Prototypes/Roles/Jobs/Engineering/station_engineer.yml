@@ -21,7 +21,7 @@
   id: StationEngineerGear
   equipment:
     eyes: ClothingEyesGlassesMeson
-    belt: ClothingBeltUtilityEngineering
+    belt: ClothingBeltUtilityEngineeringAdventure # Adventure
     ears: ClothingHeadsetEngineering
     ipc: IPCModulEng # Adventure-IPC
   #storage:
