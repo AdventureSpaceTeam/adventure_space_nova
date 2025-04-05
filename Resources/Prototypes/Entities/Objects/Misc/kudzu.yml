@@ -228,7 +228,7 @@
     - type: Barotrauma
       damage:
         types:
-          Blunt: 0.10 #per second, scales with pressure and other constants.
+          Barotrauma: 0.10 # Adventure
     - type: Flammable
       fireSpread: true
       damage:

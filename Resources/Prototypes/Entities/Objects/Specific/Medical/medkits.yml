@@ -99,4 +99,10 @@
   - type: Item
     heldPrefix: blackkit
     size: Normal
+#Adventure-start
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,4,1
+#Adventure-end
 

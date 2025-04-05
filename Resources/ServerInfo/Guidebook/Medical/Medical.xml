@@ -7,6 +7,8 @@
 ## Медицинская помощь
 <Box>
 <GuideEntityEmbed Entity="Brutepack"/>
+<GuideEntityEmbed Entity="BrutepackBandage"/>
+<GuideEntityEmbed Entity="OintmentIce"/>
 <GuideEntityEmbed Entity="Bloodpack"/>
 <GuideEntityEmbed Entity="Ointment"/>
 <GuideEntityEmbed Entity="Gauze"/>

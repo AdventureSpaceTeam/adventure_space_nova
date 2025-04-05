@@ -21,6 +21,7 @@
     contents:
       - id: Ointment
         amount: 2
+      - id: OintmentIce #Adventure
       - id: PillCanisterKelotane
       - id: PillCanisterDermaline
 
@@ -32,6 +33,7 @@
   - type: StorageFill
     contents:
       - id: Brutepack
+      - id: BrutepackBandage #Adventure
       - id: Gauze
       - id: PillCanisterIron
       - id: PillCanisterCopper
@@ -82,9 +84,9 @@
   - type: StorageFill
     contents:
       - id: MedicatedSuture
+      - id: BrutepackGel #Adventure
       - id: RegenerativeMesh
       - id: Bloodpack
-        amount: 2
 
 - type: entity
   id: MedkitCombatFilled
@@ -94,6 +96,7 @@
   - type: StorageFill
     contents:
       - id: MedicatedSuture
+      - id: BrutepackGel #Adventure
       - id: RegenerativeMesh
       - id: SyringeEphedrine
       - id: SyringeSaline

@@ -48,6 +48,7 @@
       types:
         Blunt: -5  
         Heat: -5  
+        Barotrauma: -1 
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -196,6 +197,7 @@
       types:
         Blunt: -10  
         Heat: -10  
+        Barotrauma: -3
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:

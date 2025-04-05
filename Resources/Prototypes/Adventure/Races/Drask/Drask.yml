@@ -26,6 +26,7 @@
             groups:
               Burn: -2
             types:
+              Blunt: -2
               Slash: -2
               Piercing: -2
               Bloodloss: -2

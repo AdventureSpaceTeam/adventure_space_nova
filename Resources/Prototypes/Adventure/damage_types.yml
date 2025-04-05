@@ -1,0 +1,5 @@
+- type: damageType
+  id: Barotrauma
+  name: Давление
+  armorCoefficientPrice: 2
+  armorFlatPrice: 10

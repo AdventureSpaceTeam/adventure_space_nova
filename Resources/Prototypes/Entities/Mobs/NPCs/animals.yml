@@ -1773,7 +1773,7 @@
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.1
+        Barotrauma: 0.1 # Adventure
   - type: Vocal
     sounds:
       Male: Mouse
@@ -3352,7 +3352,7 @@
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.1
+        Barotrauma: 0.1 # Adventure
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
