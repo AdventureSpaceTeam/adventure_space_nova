@@ -25,6 +25,20 @@
       Ammonia: stationAmmonia
       NitrousOxide: stationNO
       Frezon: danger
+# Adventure gases start
+      BZ: danger
+      Halon: danger
+      Healium: danger
+      HyperNoblium: danger
+      Hydrogen: danger
+      Pluoxium: stationPluoxium
+      Nitrium: danger
+      Helium: danger
+      AntiNoblium: danger
+      ProtoNitrate: danger
+      Zauker: danger
+# Adventure gases end
+
   - type: Tag
     tags:
       - AirSensor

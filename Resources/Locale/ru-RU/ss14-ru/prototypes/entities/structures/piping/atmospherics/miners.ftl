@@ -32,3 +32,27 @@ ent-GasMinerAmmonia = газодобытчик аммиака
     .desc = { ent-GasMinerBase.desc }
 ent-GasMinerNitrousOxide = газодобытчик оксида азота N2O
     .desc = { ent-GasMinerBase.desc }
+# Adventure gases begin
+ent-GasMinerBZ = газодобытчик бз
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerHalon = газодобытчик галона
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerHealium = газодобытчик хилиума
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerHyperNoblium = газодобытчик гипер-ноблиума
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerHydrogen = газодобытчик водорода H2
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerPluoxium = газодобытчик плюоксиума
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerNitrium = газодобытчик нитриума
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerHelium = газодобытчик гелия He
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerAntiNoblium = газодобытчик анти-ноблиума
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerProtoNitrate = газодобытчик прото-нитрата
+    .desc = { ent-GasMinerBase.desc }
+ent-GasMinerZauker = газодобытчик заукера
+    .desc = { ent-GasMinerBase.desc }
+# Adventure gases end

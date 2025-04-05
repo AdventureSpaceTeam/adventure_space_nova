@@ -22,7 +22,20 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.WaterVapor,
             Gas.Ammonia,
             Gas.NitrousOxide,
-            Gas.Frezon
+            Gas.Frezon,
+            // Adventure gases begin
+            Gas.BZ,
+            Gas.Halon,
+            Gas.Healium,
+            Gas.HyperNoblium,
+            Gas.Hydrogen,
+            Gas.Pluoxium,
+            Gas.Nitrium,
+            Gas.Helium,
+            Gas.AntiNoblium,
+            Gas.ProtoNitrate,
+            Gas.Zauker
+            // Adventure gases end
         };
 
         // Presets for 'dumb' air alarm modes

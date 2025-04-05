@@ -36,6 +36,15 @@ namespace Content.Server.Atmos.Reactions
         [DataField("minimumEnergy")]
         public float MinimumEnergyRequirement { get; private set; } = 0f;
 
+        /// Adventure gases start
+        /// <summary>
+        ///     Maximum pressure requirement for the reaction to occur.
+        ///     Defaults to unlimited pressure.
+        /// </summary>
+        [DataField("maximumPressure")]
+        public float MaximumPressureRequirement { get; private set; } = float.MaxValue;
+        /// Adventure gases end
+
         /// <summary>
         ///     Lower numbers are checked/react later than higher numbers.
         ///     If two reactions have the same priority, they may happen in either order.
@@ -57,6 +66,11 @@ namespace Content.Server.Atmos.Reactions
         /// <param name="heatScale">Scaling factor that should be applied to all heat input or outputs.</param>
         public ReactionResult React(GasMixture mixture, IGasMixtureHolder? holder, AtmosphereSystem atmosphereSystem, float heatScale)
         {
+            // Adventure gases begin
+            // Проверка максимального давления
+            if (mixture.Pressure > MaximumPressureRequirement)
+                return ReactionResult.NoReaction;
+            // Adventure gases end
             var result = ReactionResult.NoReaction;
 
             foreach (var effect in _effects)

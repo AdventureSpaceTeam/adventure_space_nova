@@ -174,6 +174,19 @@ namespace Content.Shared.Atmos
             [Gas.Plasma] = Loc.GetString("gas-plasma-abbreviation"),
             [Gas.Tritium] = Loc.GetString("gas-tritium-abbreviation"),
             [Gas.WaterVapor] = Loc.GetString("gas-water-vapor-abbreviation"),
+            // Adventure gases begin
+            [Gas.BZ] = Loc.GetString("gas-bz-abbreviation"),
+            [Gas.Halon] = Loc.GetString("gas-halon-abbreviation"),
+            [Gas.Healium] = Loc.GetString("gas-healium-abbreviation"),
+            [Gas.HyperNoblium] = Loc.GetString("gas-hyper-noblium-abbreviation"),
+            [Gas.Hydrogen] = Loc.GetString("gas-hydrogen-abbreviation"),
+            [Gas.Pluoxium] = Loc.GetString("gas-pluoxium-abbreviation"),
+            [Gas.Nitrium] = Loc.GetString("gas-nitrium-abbreviation"),
+            [Gas.Helium] = Loc.GetString("gas-helium-abbreviation"),
+            [Gas.AntiNoblium] = Loc.GetString("gas-anti-noblium-abbreviation"),
+            [Gas.ProtoNitrate] = Loc.GetString("gas-proto-nitrate-abbreviation"),
+            [Gas.Zauker] = Loc.GetString("gas-zauker-abbreviation"),
+            // Adventure gases end
         };
 
         #region Excited Groups
@@ -203,7 +216,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     Total number of gases. Increase this if you want to add more!
         /// </summary>
-        public const int TotalNumberOfGases = 9;
+        public const int TotalNumberOfGases = 20; // Adventure gases
 
         /// <summary>
         ///     This is the actual length of the gases arrays in mixtures.
@@ -264,12 +277,123 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     1 mol of Tritium is required per X mol of oxygen.
         /// </summary>
-        public const float FrezonProductionTritRatio = 8.0f;
+        public const float FrezonProductionTritRatio = 50.0f; // Adventure gases
 
         /// <summary>
         ///     1 / X of the tritium is converted into Frezon each tick
         /// </summary>
         public const float FrezonProductionConversionRate = 50f;
+
+        #region Adventure gases
+        /// Adventure gases start
+
+        /// BZ Gas Synthesis Constants
+        public const float BZSynthesisMaxPressure = 41f;
+        public const float BZPlasmaRatio = 0.55f;
+        public const float BZN20Ratio = 0.45f;
+        public const float BZSynthesisEfficiency = 0.80f;
+        public const float BZFormationEnergy = 5000f;
+        public const float BZSynthesisMaxRate = 3f;
+
+        /// Halon Gas Properties
+        public const float HalonActivationTemperature = 400f;
+        public const float HalonMaxTemperature = 2000f;
+        public const float HalonAbsorptionRate = 1f;
+        public const float HalonHeatAbsorptionFactor = 500000f;
+
+        /// Healium Gas Synthesis Constants
+        public const float HealiumMinTemperature = 25f;
+        public const float HealiumMaxTemperature = 300f;
+        public const float HealiumConversionRatio = 2f;
+        public const float HealiumProductionEnergy = 200000f;
+        public const float HealiumProductionMaxRate = 2.5f;
+        public const float HealiumProductionYield = 0.3f;
+
+        /// Hyper-Noblium Gas Synthesis Constants
+        public const float HyperNobliumProductionMinTemp = 21.67f;
+        public const float HyperNobliumProductionMaxTemp = 27.85f;
+        public const float HyperNobliumProductionEnergy = 20000f;
+        public const float HyperNobliumProductionNitrogenRatio = 10f;
+        public const float HyperNobliumProductionTritiumRatio = 5f;
+        public const float HyperNobliumProductionMaxRate = 3.5f;
+
+        /// Hyper-Noblium effect constant
+        public const float HyperNobliumFullSuppressionThresholdPercentage  = 0.015f; // если в воздушной смеси ноблиума хотя бы 1,5%, то все реакции прекращаются, даже горение трития или плазмы
+
+        /// Hydrogen burning constants
+        public const float HydrogenBurnRate = 0.8f; // 80% водорода сгорает за тик
+        public const float HydrogenMinIgnitionTemperature = 560f;
+        public const float HydrogenBurnOxyFactor = 2f;
+
+        /// Pluoxium Gas Synthesis Constants
+        public const float PluoxiumFormationMaxRate = 5f;
+        public const float PluoxiumOxygenRatio = 0.5f;
+        public const float PluoxiumTritiumRatio = 0.01f;
+        public const float PluoxiumHydrogenByproductRatio = 0.01f;
+        public const float PluoxiumFormationEnergy = 1000f;
+
+        /// Nitrium Production Constants
+        public const float NitriumProductionMinTemp = 1500f;
+        public const float NitriumProductionTempDivisor = 2984f;
+        public const float NitriumProductionEnergy = 100000f;
+        public const float NitriumProductionMaxRate = 5f;
+        public const float NitriumTritiumRatio = 1f;
+        public const float NitriumNitrogenRatio = 1f;
+        public const float NitriumBZRatio = 0.05f;
+        public const float NitriumMinTritium = 20f;
+        public const float NitriumMinNitrogen = 10f;
+        public const float NitriumMinBZ = 5f;
+
+        /// Proto-Nitrate Production Constants
+        public const float PNProductionMinTemperature = 5000f;
+        public const float PNProductionMaxTemperature = 10000f;
+        public const float PNProductionTemperatureScale = 0.005f;
+        public const float PNProductionEnergy = 650f;
+        public const float PNPluoxiumRatio = 0.2f;
+        public const float PNHydrogenRatio = 2f;
+        public const float PNProductionEfficiency = 1.0f;
+
+        /// Zauker Production Constants
+        public const float ZaukerProductionMinTemperature = 50000f;
+        public const float ZaukerProductionMaxTemperature = 75000f;
+        public const float ZaukerProductionTemperatureScale = 0.000005f;
+        public const float ZaukerProductionEnergy = 5000f;
+        public const float ZaukerHyperNobRatio = 0.01f;
+        public const float ZaukerNitriumRatio = 0.5f;
+        public const float ZaukerProductionEfficiency = 0.5f;
+        public const float ZaukerProductionMaxPerTick = 5f;
+
+        /// Proto-Nitrate Reactions start
+        // Hydrogen Conversion
+        public const float PNHydrogenConversionThreshold = 150f;
+        public const float PNHydrogenConversionRate = 0.1f;
+        public const float PNHydrogenConversionMaxRate = 5f;
+        public const float PNHydrogenConversionEnergy = 2500f;
+
+        // Tritium Conversion
+        public const float PNTritiumMinTemp = 150f;
+        public const float PNTritiumMaxTemp = 340f;
+        public const float PNTritiumConversionRate = 0.05f;
+        public const float PNTritiumConversionEnergy = 10000f;
+
+        // BZ Decomposition
+        public const float PNBZaseMinTemp = 260f;
+        public const float PNBZaseMaxTemp = 280f;
+        public const float PNBZaseConversionRate = 0.2f;
+        public const float PNBZaseEnergy = 60000f;
+        /// Proto-Nitrate Reactions end
+
+        /// Nitrium Decomposition
+        public const float NitriumDecompositionMaxTemp = 343f;
+        public const float NitriumDecompositionTempDivisor = 100f;
+        public const float NitriumDecompositionRate = 1.2f;
+        public const float NitriumDecompositionEnergy = 30000f;
+
+        /// Zauker Decomposition
+        public const float ZaukerDecompositionMaxRate = 20f;
+        public const float ZaukerDecompositionEnergy = 460f;
+        ///  Adventure gases end
+        #endregion
 
         /// <summary>
         ///     The maximum portion of the N2O that can decompose each reaction tick. (50%)
@@ -367,6 +491,19 @@ namespace Content.Shared.Atmos
         WaterVapor = 5,
         Ammonia = 6,
         NitrousOxide = 7,
-        Frezon = 8
+        Frezon = 8,
+        // Adventure gases begin
+        BZ = 9,
+        Halon = 10,
+        Healium = 11,
+        HyperNoblium = 12,
+        Hydrogen = 13,
+        Pluoxium = 14,
+        Nitrium = 15,
+        Helium = 16,
+        AntiNoblium = 17,
+        ProtoNitrate = 18,
+        Zauker = 19
+        // Adventure gases end
     }
 }

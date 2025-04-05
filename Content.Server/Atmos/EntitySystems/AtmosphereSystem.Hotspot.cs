@@ -45,8 +45,12 @@ namespace Content.Server.Atmos.EntitySystems
             if(tile.ExcitedGroup != null)
                 ExcitedGroupResetCooldowns(tile.ExcitedGroup);
 
-            if ((tile.Hotspot.Temperature < Atmospherics.FireMinimumTemperatureToExist) || (tile.Hotspot.Volume <= 1f)
-                || tile.Air == null || tile.Air.GetMoles(Gas.Oxygen) < 0.5f || (tile.Air.GetMoles(Gas.Plasma) < 0.5f && tile.Air.GetMoles(Gas.Tritium) < 0.5f))
+            if ((tile.Hotspot.Temperature < Atmospherics.FireMinimumTemperatureToExist) ||
+                (tile.Hotspot.Volume <= 1f) || tile.Air == null ||
+                tile.Air.GetMoles(Gas.Oxygen) < 0.5f ||
+                (tile.Air.GetMoles(Gas.Plasma) < 0.5f &&
+                 tile.Air.GetMoles(Gas.Tritium) < 0.5f &&
+                 tile.Air.GetMoles(Gas.Hydrogen) < 0.5f)) // Adventure
             {
                 tile.Hotspot = new Hotspot();
                 InvalidateVisuals(ent, tile);
@@ -134,12 +138,13 @@ namespace Content.Server.Atmos.EntitySystems
 
             var plasma = tile.Air.GetMoles(Gas.Plasma);
             var tritium = tile.Air.GetMoles(Gas.Tritium);
+            var hydrogen = tile.Air.GetMoles(Gas.Hydrogen); // Adventure
 
             if (tile.Hotspot.Valid)
             {
                 if (soh)
                 {
-                    if (plasma > 0.5f || tritium > 0.5f)
+                    if (plasma > 0.5f || tritium > 0.5f || hydrogen > 0.5f) // Adventure
                     {
                         if (tile.Hotspot.Temperature < exposedTemperature)
                             tile.Hotspot.Temperature = exposedTemperature;
@@ -151,10 +156,11 @@ namespace Content.Server.Atmos.EntitySystems
                 return;
             }
 
-            if ((exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature) && (plasma > 0.5f || tritium > 0.5f))
+            if ((exposedTemperature > Atmospherics.PlasmaMinimumBurnTemperature) &&
+                (plasma > 0.5f || tritium > 0.5f || hydrogen > 0.5f)) // Adventure
             {
                 if (sparkSourceUid.HasValue)
-                    _adminLog.Add(LogType.Flammable, LogImpact.High, $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: {tile.Air.Temperature.ToString():temperature}K - {oxygen}mol Oxygen, {plasma}mol Plasma, {tritium}mol Tritium");
+                    _adminLog.Add(LogType.Flammable, LogImpact.High, $"Heat/spark of {ToPrettyString(sparkSourceUid.Value)} caused atmos ignition of gas: {tile.Air.Temperature.ToString():temperature}K - {oxygen}mol Oxygen, {plasma}mol Plasma, {tritium}mol Tritium, {hydrogen}mol Hydrogen"); // Adventure
 
                 tile.Hotspot = new Hotspot
                 {
