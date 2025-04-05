@@ -1,0 +1,62 @@
+#машина для брожения
+- type: entity
+  id: MachinePivo
+  parent: BaseTabletopChemicalMachine
+  name: цилиндроконический танк
+  description: Предназначен для изготовления пива.
+  components:
+  - type: SolutionContainerMixer
+    mixDuration: 5 # время варки стоит на 5 секунд, чтобы при проверке не ждать реальные 5 минут.
+    mixingSound:
+      path: /Audio/Machines/spinning.ogg
+      params:
+        volume: -4
+  - type: ReactionMixer
+    reactionTypes:
+    - Fermentation
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/Pivo_machine.rsi
+    layers:
+    - state: base
+      map: ["beyblade"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+    - state: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.SolutionContainerMixerVisuals.Mixing:
+        beyblade:
+          True: {state: "base-spinning"}
+          False: {state: "base"}
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: True }
+          False: { visible: False }
+  - type: Machine
+    board: PivoMachineCircuitboard
+
+#выполняемая реакция
+- type: mixingCategory
+  id: Fermentation
+  verbText: брожение
+  icon:
+    sprite: Adventure/Structures/Machines/Pivo_machine.rsi
+    state: base
+
+# машинная плата и крафт
+- type: entity
+  id: PivoMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: цилиндроконический танк (машинная плата)
+  description: Печатная плата для цилиндроконического танка.
+  components:
+  - type: MachineBoard
+    prototype: MachinePivo
+    stackRequirements:
+      Manipulator: 1
+      Steel: 10
+      Capacitor: 1
+      Cable: 2

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC0-1.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "base-spinning",
+      "delays":
+        [
+          [
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ]
+        ]
+    },
+    {
+      "name": "panel"
+    },
+    {
+      "name": "unshaded"
+    }
+  ]
+}
