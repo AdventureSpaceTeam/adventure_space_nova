@@ -101,7 +101,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing]
+  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing, JetpackHardSuit] # Adventure-JetpackHardSuit
   id: ClothingOuterHardsuitBase
   name: base hardsuit
   components:

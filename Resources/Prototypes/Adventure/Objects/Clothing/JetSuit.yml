@@ -1,0 +1,57 @@
+- type: entity
+  parent: BaseItem
+  abstract: true
+  id: JetpackHardSuit
+  components:
+    - type: Tag
+      tags:
+      - GasTank
+    - type: ActivatableUI
+      key: enum.SharedGasTankUiKey.Key
+    - type: UserInterface
+      interfaces:
+        enum.SharedGasTankUiKey.Key:
+          type: GasTankBoundUserInterface
+    - type: InputMover
+      toParent: true
+    - type: MovementSpeedModifier
+      weightlessAcceleration: 1
+      weightlessFriction: 0.3
+      weightlessModifier: 1.2
+    - type: CanMoveInAir
+    - type: GasTank
+      toggleAction: ActionToggleInternalsHardSuit
+      outputPressure: 21.3
+      air:
+        volume: 0.50
+        temperature: 293.15
+      tankLowPressure: 30.0
+    - type: Jetpack
+      toggleAction: ActionToggleJetpackHardSuit
+      moleUsage: 0.00170
+
+- type: entity
+  id: ActionToggleJetpackHardSuit
+  name: Включить реактив
+  description: Используйте запас воздуха своего скафандра, чтобы перемещаться за пределами станции.
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    icon:
+      sprite: Adventure/Interface/Icons.rsi
+      state: Jetpack
+    useDelay: 1.0
+    event: !type:ToggleJetpackEvent
+
+- type: entity
+  id: ActionToggleInternalsHardSuit
+  name: Включить подачу воздуха
+  description: Используйте запас воздуха своего скафандра для дыхания.
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    icon:
+      sprite: Adventure/Interface/Icons.rsi
+      state: GasTank
+    event: !type:ToggleActionEvent
+    useDelay: 1
