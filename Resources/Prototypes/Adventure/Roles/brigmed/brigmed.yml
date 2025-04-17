@@ -1,7 +1,7 @@
 #Роль
 - type: job
   id: Brigmedic
-  name: бригмедик
+  name: Бригмедик
   description: Оказывайте медицинскую помощь заключенным и сотрудникам службы безопасности.
   playTimeTracker: JobBrigmedic
   requirements:

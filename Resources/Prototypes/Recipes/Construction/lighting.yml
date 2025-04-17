@@ -136,7 +136,8 @@
   graph: OrangeLightBulb
   startNode: start
   targetNode: icon
-  category: conМощная лампа, внутри которой находится маленький оранжевый кристалл. # Adventure
+  category: construction-category-utilities
+  description: Мощная лампа, внутри которой находится маленький оранжевый кристалл. # Adventure
   icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
   objectType: Item
 

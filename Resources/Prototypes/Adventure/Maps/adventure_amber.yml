@@ -5,7 +5,7 @@
   minPlayers: 0
   maxPlayers: 50
   stations:
-    AdvAmber:
+    advAmber:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
@@ -66,3 +66,4 @@
             # remap
             Blueshield: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
+            IAA: [ 1, 1 ]
