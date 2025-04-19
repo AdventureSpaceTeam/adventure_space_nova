@@ -1,0 +1,131 @@
+- type: entity
+  id: NecroSpike
+  suffix: LavaLand
+  parent: BaseStructure
+  name: шип Некрополя
+  description: Шип, растуший с самой глубины Некрополя к вершине.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: Adventure/Roles/LavaLand/necro_spike/necro_spike.rsi
+    state: Spike1
+    layers:
+    - state: Spike1
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: RandomSprite
+    available:
+    - 0:
+        Spike1: ""
+    - 0:
+        Spike2: ""
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnBasaltChalm:
+            min: 1
+            max: 1
+          OldChestRandomLoot:
+            min: 1
+            max: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Impassable 
+  - type: CombatMode
+    toggleMouseRotator: false
+  - type: NoRotateOnInteract
+  - type: NoRotateOnMove
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    showExamineText: false
+    availableModes:
+    - SemiAuto
+    soundGunshot: null
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 15
+    rechargeSound: null
+  - type: BasicEntityAmmoProvider
+    proto: NecroSpikeSpawnRandomMob
+    capacity: 1
+    count: 1
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+    blackboard:
+      VisionRadius: !type:Single
+        4
+      AggroVisionRadius: !type:Single
+        4
+
+- type: entity
+  id: NecroSpikeSpawnRandomMob
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - MobLavaLandLegion
+      - MobWatcherLavaLandFire
+      - MobLavaLandGoliath  
+
+# обвал
+- type: entity
+  id: SpawnBasaltChalm
+  categories: [ HideSpawnMenu ]
+  name: обвал
+  components:
+  - type: Transform
+    anchored: True
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/necro_spike/basalt_chasm_spawn.rsi
+    layers:
+    - state: basalt_chasm_spawn
+    drawdepth: BelowFloor
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - ItemMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: TimedDespawn
+    lifetime: 5.0
+  - type: SpawnOnDespawn
+    prototype: FloorChasmEntity
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Adventure/LavaLand/StoneDown.ogg

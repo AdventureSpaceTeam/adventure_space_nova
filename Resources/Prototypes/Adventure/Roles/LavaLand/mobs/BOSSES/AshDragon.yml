@@ -10,12 +10,13 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound
+    - FootstepSound  
+    - LavaMob
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/mobs/BOSSES/dragon.rsi
   - type: MovementSpeedModifier
-    baseWalkSpeed : 2.5
-    baseSprintSpeed : 2.5
+    baseWalkSpeed : 3.0
+    baseSprintSpeed : 3.0
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -31,14 +32,14 @@
     damage:
       types:
         Slash: 20
-        Piercing: 20
+        Piercing: 10
         Heat: 10
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.90
+          radius: 0.35
         density: 10000
         mask:
         - FlyingMobMask
@@ -49,8 +50,12 @@
     spawned:
     - id: Coal1
       amount: 10
+    - id: DragonRuby1
+      amount: 2
+    - id: Ruby1
+      amount: 5
     - id: MaterialMagmatite1
-      amount: 10
+      amount: 5
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepThud
@@ -73,13 +78,13 @@
     soundGunshot: /Audio/Magic/fireball.ogg 
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 50
+    autoRechargeRate: 10
   - type: Battery
-    maxCharge: 1000
-    startingCharge: 1000
+    maxCharge: 50
+    startingCharge: 50
   - type: HTN
     rootTask:
-      task: SimpleRangedHostileCompoundAudioTrigger
+      task: SimpleMeleeRangedHostileCompoundAudioTrigger
     blackboard:
       VisionRadius: !type:Single
         9
@@ -143,45 +148,11 @@
     count: 3
     spread: 50
 
-- type: htnCompound
-  id: SimpleRangedHostileCompoundAudioTrigger
-  branches:
-    - tasks:
-        - !type:HTNCompoundTask
-          task: InnateRangedCombatCompound
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompound
-    - tasks:
-        - !type:HTNPrimitiveTask
-          operator: !type:UtilityOperator
-            proto: NearbyGunTargets
-        - !type:HTNPrimitiveTask
-          preconditions:
-            - !type:KeyExistsPrecondition
-              key: Target
-            - !type:TargetInRangePrecondition
-              targetKey: Target
-              rangeKey: RangedRange
-            - !type:TargetInLOSPrecondition
-              targetKey: Target
-              rangeKey: RangedRange
-          operator: !type:GunOperator
-            targetKey: Target
-            requireLOS: true
-          services:
-            - !type:UtilityService
-              id: RangedService
-              proto: NearbyGunTargets
-              key: Target
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompound
-
 #спавнер
 - type: entity
   id: MobSpawnAshDragon
   suffix: LavaLand
+  categories: [ HideSpawnMenu ]
   name: спавн дракона
   components:
   - type: Transform
@@ -190,6 +161,7 @@
   - type: Physics
     bodyType: Static
   - type: Sprite
+    noRot: true
     sprite: Adventure/Roles/LavaLand/mobs/BOSSES/dragon_spawn.rsi
     layers:
     - state: spawn
@@ -215,3 +187,96 @@
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/Adventure/LavaLand/DragonSpawn.ogg
+
+#драконий саркофаг
+- type: entity
+  id: DragonSarcophag
+  parent: BaseStructure
+  suffix: Спавн дракона LavaLand
+  name: драконий саркофаг
+  description: Запечатанный гроб неизвестного героя, правителя и бог знает кого ещё. Содержит в себе богатства Некрополиса.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: Adventure/Roles/LavaLand/mobs/BOSSES/dragon.rsi
+    layers:
+    - state: altar
+    - state: altar_light
+      shader: unshaded
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnAshDragonSpawn: 
+            min: 1
+            max: 1
+          HeadSkeleton:
+            min: 1   
+            max: 1
+          MaterialBones1:
+            min: 3 
+            max: 6
+          FoodMeatRotten:
+            min: 2
+            max: 4
+          ClothingOuterArmorMagusred:
+            min: 1
+            max: 1
+          GoldRing:
+            min: 0
+            max: 1
+          GoldRingDiamond:
+            min: 0
+            max: 1
+          GoldRingGem:
+            min: 0
+            max: 1
+          FoodGoldenApple:
+            min: 0
+            max: 1
+          IngotGold:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.49,-0.49,1.49,0.49" 
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Impassable
+  - type: PointLight
+    radius: 4
+    energy: 1.5
+    color: "#ee5858"
+
+- type: entity
+  id: SpawnAshDragonSpawn
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+  - type: TimedDespawn
+    lifetime: 9
+  - type: SpawnOnDespawn
+    prototype: MobSpawnAshDragon
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Adventure/LavaLand/DragonFly.ogg

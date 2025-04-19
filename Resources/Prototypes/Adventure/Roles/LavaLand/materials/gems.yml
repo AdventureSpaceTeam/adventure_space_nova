@@ -197,3 +197,58 @@
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Topaz }
   color: "#f29d46"
   price: 20
+
+#драконий рубин
+- type: entity
+  parent: MaterialBase
+  id: DragonRuby
+  name: драконий рубин
+  description: Обработанный драгоценный камень из пламени дракона.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Dragon_stone
+  - type: Appearance
+  - type: Stack
+    stackType: DragonRuby
+    count: 10
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ProcessedDragonRuby: 100
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#ee5858"
+
+- type: latheRecipe
+  id: DragonRuby
+  result: DragonRuby1
+  completetime: 0
+  materials:
+    RawDragon: 200
+
+- type: entity
+  parent: DragonRuby
+  id: DragonRuby1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: DragonRuby
+  name: драконий рубин
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone }
+  spawn: Emerald1
+  maxCount: 10
+
+- type: material
+  id: ProcessedDragonRuby
+  name: драконий рубин
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone }
+  color: "#ee5858"
+  price: 40

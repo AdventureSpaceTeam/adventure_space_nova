@@ -32,12 +32,25 @@
   - type: Tag
     tags:
     - CannotSuicide
+    - LavaMob
   - type: NoSlip
   - type: Temperature
     heatDamageThreshold: 100273,15 
     specificHeat: 10000
   - type: ExplosionResistance
     damageCoefficient: 0.5
+  - type: StatusEffects
+    allowed:
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - TemporaryBlindness
+    - RadiationProtection
+    - Drowsiness
+    - Adrenaline
+
+- type: Tag
+  id: LavaMob
 
 #Голиаф
 - type: entity
@@ -80,12 +93,15 @@
     spawned:
     - id: FoodMeatGoliath
       amount: 3
+    - id: MaterialGoliathHide1
+      amount: 3
     - id: MaterialMagmatiteFragment1
       amount: 3
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound
+    - FootstepSound  
+    - LavaMob
   - type: PointLight
     radius: 2
     energy: 1.5
@@ -121,23 +137,10 @@
     spawned:
     - id: FoodMeatGoliath
       amount: 6
+    - id: MaterialGoliathHide1
+      amount: 6
     - id: MaterialMagmatite1
       amount: 1
-
-# повелитель роя
-- type: entity
-  id: MobHivelordLavaLand
-  parent: [ BaseMobLavaLand, MobHivelord ]
-  name: повелитель роя
-  suffix: LavaLand
-  description: Воистину инопланетное существо, представляющее собой массу неизвестного органического, постоянно колышущегося материала. Во время атаки его части отделяются и атакуют совместно с оригиналом.
-  components:
-  - type: Sprite
-    sprite: Adventure/Roles/LavaLand/mobs/hivelord.rsi
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      50: Dead   
 
 # наблюдатель
 - type: entity
@@ -253,6 +256,11 @@
     maxIntensity: 3
     canCreateVacuum: false
     deleteAfterExplosion: false
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound  
+    - LavaMob
 
 #легион
 - type: entity
@@ -265,7 +273,8 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound
+    - FootstepSound 
+    - LavaMob
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/mobs/legions/legion.rsi
   - type: MovementSpeedModifier
@@ -285,9 +294,11 @@
       types:
         Slash: 5
   - type: Butcherable
-    butcherDelay: 10
+    butcherDelay: 5
     spawned:
     - id: SalvageHumanCorpse
+      amount: 1
+    - id: FoodLegionHeart
       amount: 1
     - id: Coal1
       amount: 2
@@ -316,11 +327,16 @@
         9
       AggroVisionRadius: !type:Single
         9
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/Adventure/LavaLand/legion_whispers.ogg 
 
 - type: entity
   id: MobLavaLandLegionSkull
   parent: [ MobHivelordBrood, BaseMobLavaLand ]
   name: череп легиона
+  categories: [ HideSpawnMenu ]
   suffix: LavaLand
   description: Чуть менее головастый парень.
   components:
@@ -354,3 +370,56 @@
     damage:
       types:
         Slash: 5
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/Adventure/LavaLand/legion_whispers.ogg 
+
+- type: entity
+  id: FoodLegionHeart
+  parent: FoodBase
+  categories: [ HideSpawnMenu ]
+  suffix: LavaLand
+  name: сердце легиона
+  description: Каменное цердце, обладающее целебными свойствами.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Rororium
+          Quantity: 5
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    state: core1
+  - type: Item
+    size: Normal
+  - type: Perishable
+    rotAfter: 120 
+    molsPerSecondPerUnitMass: 0
+    forceRotProgression: true
+  - type: RotInto
+    entity: FoodLegionHeartDead
+    stage: 1
+  - type: Tag
+    tags:
+    - Meat
+    - ClothMade
+
+- type: entity
+  id: FoodLegionHeartDead
+  parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  suffix: LavaLand
+  name: потухшее сердце легиона
+  description: Оно потухло и утратило свои свойства.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    state: core2
+  - type: SpaceGarbage
+  - type: Item
+    size: Normal
+  - type: StaticPrice
+    price: 500

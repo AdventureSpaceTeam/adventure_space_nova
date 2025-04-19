@@ -1,0 +1,360 @@
+- type: dungeonConfig
+  id: AdventureLava
+  layers:
+    - !type:PrototypeDunGen
+      proto: LavaBlob
+    - !type:PrototypeDunGen
+      proto: LavaExterior
+    - !type:PrototypeDunGen
+      proto: LavaSmaller
+    - !type:PrototypeDunGen
+      proto: LavaSmallPaths
+    - !type:EntityTableDunGen
+      minCount: 7
+      maxCount: 12
+      table:
+        id: VGRoidInteriorRoomMarker
+    - !type:PrototypeDunGen
+      proto: LavaFill
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltBananium
+      count: 20
+      minGroupSize: 3
+      maxGroupSize: 8
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltTin
+      count: 35
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltCoal
+      count: 35
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltQuartz
+      count: 35
+      minGroupSize: 10
+      maxGroupSize: 15
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltSalt
+      count: 35
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltGold
+      count: 35
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltSilver
+      count: 35
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltPlasma
+      count: 35
+      minGroupSize: 4
+      maxGroupSize: 8
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltUranium
+      count: 35
+      minGroupSize: 4
+      maxGroupSize: 8
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltArtifactFragment
+      count: 25
+      minGroupSize: 1
+      maxGroupSize: 3
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltDiamond
+      count: 15
+      minGroupSize: 1
+      maxGroupSize: 2
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltMagmatite
+      count: 25
+      minGroupSize: 6
+      maxGroupSize: 10
+    - !type:OreDunGen
+      replacement: WallRockBasaltMagmatite
+      entity: WallRockBasaltMagmatiteCrab
+      count: 10
+      minGroupSize: 2
+      maxGroupSize: 5
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltGem
+      count: 15
+      minGroupSize: 3
+      maxGroupSize: 6
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: FloorLavaEntity
+      count: 350
+      minGroupSize: 3
+      maxGroupSize: 15
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: BasaltRandom
+      count: 350
+      minGroupSize: 3
+      maxGroupSize: 10
+    - !type:OreDunGen
+      replacement: FloorLavaEntity
+      entity: BasaltRandom
+      count: 200
+      minGroupSize: 1
+      maxGroupSize: 3
+    - !type:OreDunGen
+      replacement: BasaltRandom
+      entity: NecroSpike
+      count: 100
+      minGroupSize: 1
+      maxGroupSize: 1
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: FloorChasmEntity
+      count: 50
+      minGroupSize: 3
+      maxGroupSize: 10
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: RockDragonStone
+      count: 1
+      minGroupSize: 5
+      maxGroupSize: 10
+    - !type:OreDunGen
+      replacement: RockDragonStone
+      entity: SalvageSpawnerDragonSarcophag
+      count: 1
+      minGroupSize: 1
+      maxGroupSize: 1
+    - !type:OreDunGen
+      replacement: BasaltRandom
+      entity: SalvageSpawnerMobLavaLandColossusSleep
+      count: 1
+      minGroupSize: 1
+      maxGroupSize: 1
+    - !type:OreDunGen
+      replacement: BasaltRandom
+      entity: SalvageSpawnerLegionBoss
+      count: 1
+      minGroupSize: 1
+      maxGroupSize: 1
+
+- type: dungeonConfig
+  id: LavaBlob
+  layers:
+  - !type:NoiseDistanceDunGen
+    size: 272, 272
+    distanceConfig: !type:DunGenEuclideanSquaredDistance
+      blendWeight: 0.80
+    layers:
+    - tile: FloorBasalt
+      threshold: 0.50
+      noise:
+        frequency: 0.010
+        noiseType: OpenSimplex2
+        fractalType: FBm
+        octaves: 5
+        lacunarity: 2
+        gain: 0.5
+
+- type: dungeonConfig
+  id: LavaSmaller
+  minOffset: 40
+  maxOffset: 60
+  layers:
+  - !type:NoiseDistanceDunGen
+    size: 150, 150
+    distanceConfig: !type:DunGenEuclideanSquaredDistance
+    layers:
+    - tile: FloorBasalt
+      threshold: 0.50
+      noise:
+        frequency: 0.080
+        noiseType: OpenSimplex2
+        fractalType: FBm
+        octaves: 5
+        lacunarity: 1.5
+        gain: 0.5
+
+- type: dungeonConfig
+  id: LavaExterior
+  reserveTiles: true
+  data:
+    tiles:
+      FallbackTile: FloorBasalt
+      WidenTile: FloorBasalt
+  layers:
+  - !type:PrototypeDunGen
+    proto: LavaExteriorDungeons
+  - !type:SplineDungeonConnectorDunGen
+
+- type: dungeonConfig
+  id: LavaExteriorDungeons
+  reserveTiles: true
+  minCount: 2
+  maxCount: 3
+  layers:
+  - !type:ExteriorDunGen
+    proto: Experiment
+  - !type:EntityTableDunGen
+    minCount: 25
+    maxCount: 40
+    table: !type:NestedSelector
+      tableId: SalvageScrapSpawnerCommon
+  - !type:EntityTableDunGen
+    minCount: 30
+    maxCount: 40
+    table: !type:NestedSelector
+      tableId: SalvageScrapSpawnerValuable
+  - !type:EntityTableDunGen
+    minCount: 15
+    maxCount: 25
+    table: !type:NestedSelector
+      tableId: SalvageTreasureSpawnerCommon
+  - !type:EntityTableDunGen
+    minCount: 15
+    maxCount: 25
+    table: !type:NestedSelector
+      tableId: SalvageEquipmentSpawnerCommon
+  - !type:EntityTableDunGen
+    minCount: 15
+    maxCount: 20
+    table: !type:NestedSelector
+      tableId: SalvageTreasureSpawnerValuable
+  - !type:EntityTableDunGen
+    minCount: 15
+    maxCount: 20
+    table: !type:NestedSelector
+      tableId: SalvageEquipmentSpawnerValuable
+  - !type:MobsDunGen
+    minCount: 8
+    maxCount: 15
+    groups:
+    - id: SalvageSpawnerMobLavaLand
+      amount: 1
+
+- type: dungeonConfig
+  id: LavaSmallPaths
+  reserveTiles: true
+  layers:
+  - !type:ReplaceTileDunGen
+    layers:
+    - tile: FloorBasalt
+      threshold: 0.75
+      noise:
+        frequency: 0.040
+        noiseType: OpenSimplex2
+        fractalType: Ridged
+        lacunarity: 1.5
+        octaves: 2
+        gain: 2.0
+  - !type:MobsDunGen
+    minCount: 35
+    maxCount: 50
+    groups:
+    - id: SalvageSpawnerMobLavaLand
+      amount: 1
+
+- type: dungeonConfig
+  id: LavaFill
+  data:
+    entities:
+      Fill: WallRockBasalt
+  layers:
+  - !type:FillGridDunGen
+    allowedTiles:
+    - FloorBasalt
+
+#спавнеры мобов
+- type: entity
+  parent: MarkerBase
+  id: SalvageSpawnerMobLavaLand
+  name: Mining Lava Mob Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
+      state: goliath
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: MobLavaLandGoliath
+        weight: 25
+      - id: MobLavaLandGoliathAncient
+        weight: 15
+      - id: MobWatcherLavaLandFire
+        weight: 20
+      - id: MobLavaLandLegion
+        weight: 30
+      - id: MobSkeletonBloodMinerCutter
+        weight: 2
+      - id: MobSkeletonBloodMinerAccelerator
+        weight: 4
+      - id: MobSkeletonBloodMinerMiningDrill
+        weight: 4
+
+#боссы
+- type: entity
+  parent: MarkerBase
+  id: SalvageSpawnerDragonSarcophag
+  name: Mining Lava BOSSES Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
+      state: goliath
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: DragonSarcophag
+        weight: 100
+
+- type: entity
+  parent: MarkerBase
+  id: SalvageSpawnerMobLavaLandColossusSleep
+  name: Mining Lava BOSSES Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
+      state: goliath
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: MobLavaLandColossusSleep
+        weight: 100
+
+- type: entity
+  parent: MarkerBase
+  id: SalvageSpawnerLegionBoss
+  name: Mining Lava BOSSES Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
+      state: goliath
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: LegionBossStage1
+        weight: 100

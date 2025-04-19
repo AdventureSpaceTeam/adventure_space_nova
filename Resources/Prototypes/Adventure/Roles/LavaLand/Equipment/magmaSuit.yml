@@ -7,13 +7,13 @@
   description: Скафандр утилизатора, укреплённый магматитовой рудой.
   components:
   - type: Sprite
-    sprite: Adventure/Roles/LavaLand/MagmaSuit/suit.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/suit.rsi
     layers:
     - state: icon
     - state: icon-lava
       shader: unshaded
   - type: Clothing
-    sprite: Adventure/Roles/LavaLand/MagmaSuit/suit.rsi  
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/suit.rsi  
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
@@ -63,7 +63,7 @@
   description: Шлем утилизатора в магматитовой обёртке.
   components:
   - type: Sprite
-    sprite: Adventure/Roles/LavaLand/MagmaSuit/helmet.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/helmet.rsi
     layers:
     - state: icon
     - state: icon-lava
@@ -85,7 +85,7 @@
       - state: equipped-HELMET-lava
         shader: unshaded
   - type: Clothing
-    sprite: Adventure/Roles/LavaLand/MagmaSuit/helmet.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/helmet.rsi
     clothingVisuals:
       head:
       - state: off-equipped-HELMET
@@ -142,5 +142,5 @@
   objectType: Item
   description: Скафандр утилизатора, укреплённый магматитовой рудой.
   icon:
-    sprite: Adventure/Roles/LavaLand/MagmaSuit/suit.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/suit.rsi
     state: icon

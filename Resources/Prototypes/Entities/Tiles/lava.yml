@@ -61,4 +61,11 @@
     range: 5
     sound:
       path: /Audio/Adventure/LavaLand/Magma.ogg
+  - type: DamageContacts
+    damage:
+      types:
+        Heat: 2
+    ignoreWhitelist:
+      tags:
+      - LavaMob
 # Adventure-LavaLand-end

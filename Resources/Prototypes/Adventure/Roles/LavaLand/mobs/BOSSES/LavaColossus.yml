@@ -11,6 +11,7 @@
     tags:
     - CannotSuicide
     - FootstepSound
+    - LavaMob
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/mobs/BOSSES/colossus.rsi
   - type: MovementSpeedModifier
@@ -28,15 +29,14 @@
     animation: WeaponArcPunch
     damage:
       types:
-        Slash: 20
-        Piercing: 20
-        Heat: 10
+        Blunt: 20
+        Heat: 20
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.90
+          radius: 0.35
         density: 10000
         mask:
         - MobMask
@@ -46,9 +46,15 @@
     butcherDelay: 30
     spawned:
     - id: DiamondOre1
-      amount: 10
+      amount: 5
+    - id: OreEmerald1
+      amount: 2
+    - id: OreSapphire1
+      amount: 2
+    - id: OreTopaz1
+      amount: 2
     - id: GoldOre1
-      amount: 10
+      amount: 2
     - id: Coal1
       amount: 10
     - id: MaterialMagmatite1
@@ -67,17 +73,18 @@
     availableModes:
     - SemiAuto
     soundGunshot: null
-  - type: RechargeBasicEntityAmmo
-    showExamineText: false
-    rechargeCooldown: 5
-    rechargeSound: null
-  - type: BasicEntityAmmoProvider
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 20
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: ProjectileBatteryAmmoProvider
     proto: MobLavaCrabLavaLand
-    capacity: 1
-    count: 1
+    fireCost: 60
   - type: HTN
     rootTask:
-      task: SimpleRangedHostileCompoundAudioTrigger
+      task: SimpleMeleeRangedHostileCompoundAudioTrigger
     blackboard:
       VisionRadius: !type:Single
         9
@@ -102,7 +109,7 @@
 - type: entity
   id: MobSpawnLavaColossus
   categories: [ HideSpawnMenu ]
-  name: спавн колосса
+  name: магматитовая скала
   components:
   - type: Transform
     anchored: True
@@ -110,6 +117,7 @@
   - type: Physics
     bodyType: Static
   - type: Sprite
+    noRot: true
     sprite: Adventure/Roles/LavaLand/mobs/BOSSES/colossus.rsi
     layers:
     - state: spawn

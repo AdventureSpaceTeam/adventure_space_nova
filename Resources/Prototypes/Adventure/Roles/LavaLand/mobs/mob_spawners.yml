@@ -1,0 +1,69 @@
+- type: entity
+  name: спавнер голиафа
+  id: SpawnMobLavaLandGoliath
+  suffix: LavaLand
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobLavaLandGoliath
+
+- type: entity
+  name: спавнер древнего голиафа
+  id: SpawnMobLavaLandGoliathAncient
+  suffix: LavaLand
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobLavaLandGoliathAncient
+
+- type: entity
+  name: спавнер наблюдателя за огнём
+  id: SpawnMobWatcherLavaLandFire
+  suffix: LavaLand
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobWatcherLavaLandFire
+
+- type: entity
+  name: спавнер магматитового краба
+  id: SpawnMobLavaCrabLavaLand
+  suffix: LavaLand
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobLavaCrabLavaLand
+
+- type: entity
+  name: спавнер легиона
+  id: SpawnMobLavaLandLegion
+  suffix: LavaLand
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobLavaLandLegion

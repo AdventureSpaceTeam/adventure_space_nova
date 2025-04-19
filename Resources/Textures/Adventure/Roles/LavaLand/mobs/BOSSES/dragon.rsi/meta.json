@@ -20,6 +20,12 @@
     {
       "name": "light_alive",
       "directions": 4
+    },
+    {
+      "name": "altar_light"
+    },
+    {
+      "name": "altar"
     }
   ]
 }

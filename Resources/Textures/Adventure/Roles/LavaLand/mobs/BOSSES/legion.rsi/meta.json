@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "alive1"
+    },
+    {
+      "name": "light_alive1"
+    },
+    {
+      "name": "alive2"
+    },
+    {
+      "name": "light_alive2"
+    },
+    {
+      "name": "alive3"
+    },
+    {
+      "name": "light_alive3"
+    },
+    {
+      "name": "alive4"
+    },
+    {
+      "name": "light_alive4"
+    },
+    {
+      "name": "alive5"
+    },
+    {
+      "name": "dead5"
+    },
+    {
+      "name": "light_alive5"
+    },
+    {
+      "name": "light_dead5"
+    },
+    {
+      "name": "Spawn",
+      "delays": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.5
+        ]
+      ]
+    }
+  ]
+}

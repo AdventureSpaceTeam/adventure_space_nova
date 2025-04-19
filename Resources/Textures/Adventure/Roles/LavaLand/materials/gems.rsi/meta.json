@@ -42,6 +42,12 @@
     },
     {
       "name": "Topaz_ore"
+    },
+    {
+      "name": "core1"
+    },
+    {
+      "name": "core2"
     }
   ]
 }

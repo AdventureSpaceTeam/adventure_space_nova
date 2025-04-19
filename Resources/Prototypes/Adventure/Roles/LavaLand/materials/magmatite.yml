@@ -30,6 +30,29 @@
       types:
         Heat: 5
     popupText: "Магматит обжигает ваши руки."
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Rock
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 120
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialMagmatiteFragment1:
+            min: 10
+            max: 10
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
 - type: entity
   parent: MaterialMagmatite
@@ -246,3 +269,35 @@
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: processed_magmatite }
   color: "#e64e04"
   price: 25
+
+#магматитовая стена 
+- type: entity
+  parent: WallCobblebrick
+  id: WallBasaltCobblebrickMagma
+  suffix: LavaLand
+  name: магматитовая стена 
+  description: Идеально подогнанные друг к другу кирпичик за кирпичиком образовали стену.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/cobblebrick_basalt_magma.rsi
+  - type: Icon
+    sprite: Adventure/Roles/LavaLand/materials/cobblebrick_basalt_magma.rsi
+  - type: IconSmooth
+    key: cobblebricks
+    base: cobblebrick
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: RCDDeconstructable
+    cost: 31
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#f2511e"
