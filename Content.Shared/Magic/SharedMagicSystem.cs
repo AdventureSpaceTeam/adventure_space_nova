@@ -26,6 +26,8 @@ using Content.Shared.Tag;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.GameObjects;
+using Robust.Shared.IoC;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
@@ -154,7 +156,7 @@ public abstract class SharedMagicSystem : EntitySystem
 
     private void OnBeforeCastSpell(Entity<MagicComponent> ent, ref BeforeCastSpellEvent args)
     {
-        var comp = ent.Comp;
+        var comp = Comp<MagicComponent>(ent);
         var hasReqs = true;
 
         if (comp.RequiresClothes)
@@ -163,8 +165,7 @@ public abstract class SharedMagicSystem : EntitySystem
             while (enumerator.MoveNext(out var containerSlot))
             {
                 if (containerSlot.ContainedEntity is { } item)
-                    hasReqs = HasComp<WizardClothesComponent>(item);
-                else
+                    hasReqs = TryComp<WizardClothesComponent>(item, out _);
                     hasReqs = false;
 
                 if (!hasReqs)
@@ -522,16 +523,14 @@ public abstract class SharedMagicSystem : EntitySystem
         ev.Handled = true;
         Speak(ev);
 
-        var allHumans = _mind.GetAliveHumans();
-
-        foreach (var human in allHumans)
+        foreach (var humanUid in _mind.GetAliveHumans())
         {
-            if (!human.Comp.OwnedEntity.HasValue)
+            if (!TryComp<MindComponent>(humanUid, out var humanComp) || !humanComp.OwnedEntity.HasValue)
                 continue;
 
-            var ent = human.Comp.OwnedEntity.Value;
-
+            var ent = humanComp.OwnedEntity.Value;
             var mapCoords = _transform.GetMapCoordinates(ent);
+
             foreach (var spawn in EntitySpawnCollection.GetSpawns(spawns, _random))
             {
                 var spawned = Spawn(spawn, mapCoords);

@@ -53,6 +53,17 @@ namespace Content.Client.VendingMachines
             _menu.OpenCenteredLeft();
         }
 
+        public void Refresh()
+        {
+            var system = EntMan.System<VendingMachineSystem>();
+            _cachedInventory = system.GetAllInventory(Owner);
+
+            if (_menu is VendingMachineMenu menu)
+                menu.Populate(_cachedInventory, out _cachedFilteredIndex);
+            else if (_menu is EconomyVendingMachineMenu economyMenu)
+                economyMenu.Populate(_cachedInventory, out _cachedFilteredIndex);
+        }
+
         private void SetupOldVendingMenu(VendingMachineMenu menu)
         {
             menu.OnItemSelected += OnItemSelected;
