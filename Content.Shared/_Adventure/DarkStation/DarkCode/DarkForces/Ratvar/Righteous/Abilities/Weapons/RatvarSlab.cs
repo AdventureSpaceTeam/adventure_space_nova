@@ -1,6 +1,6 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Weapons;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities.Weapons;
 
 public sealed partial class RatvarSlabStun : EntityTargetActionEvent
 {

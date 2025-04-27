@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Beacon;
+﻿namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress.Objectives.Beacon;
 
 [RegisterComponent]
 public sealed partial class RatvarBeaconObjectiveComponent : Component

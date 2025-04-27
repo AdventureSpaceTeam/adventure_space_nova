@@ -2,7 +2,7 @@ using System.Linq;
 using Content.Shared.Silicons.Laws;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Roles.StationAI.UI;
+namespace Content.Shared._Adventure.Roles.StationAI.UI;
 
 [Serializable, NetSerializable]
 public sealed class StationAIRequestBorgsList : BoundUserInterfaceMessage

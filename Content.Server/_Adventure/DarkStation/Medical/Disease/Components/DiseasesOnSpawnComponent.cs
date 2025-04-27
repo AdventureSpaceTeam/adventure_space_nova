@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+﻿using Content.Server._Adventure.Medical.Disease.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Components;
+namespace Content.Server._Adventure.Medical.Disease.Components;
 
 [RegisterComponent]
 public sealed partial class DiseasesOnSpawnComponent : Component

@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Polymorth;
+﻿using Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Polymorth;
 using Content.Server.Polymorph.Systems;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar;
 
 public sealed partial class NarsiAltarSystem
 {

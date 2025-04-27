@@ -1,7 +1,7 @@
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Roles.StationAI.UI;
+namespace Content.Shared._Adventure.Roles.StationAI.UI;
 
 
 [Serializable, NetSerializable]

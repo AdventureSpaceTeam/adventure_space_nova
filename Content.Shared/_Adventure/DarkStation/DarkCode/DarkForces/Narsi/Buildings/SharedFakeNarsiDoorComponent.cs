@@ -1,4 +1,4 @@
-namespace Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings;
+namespace Content.Shared._Adventure.DarkForces.Narsi.Buildings;
 
 [RegisterComponent]
 public sealed partial class SharedFakeNarsiDoorComponent : Component

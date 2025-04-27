@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Silence;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Silence;
 
 [RegisterComponent]
 public sealed partial class NarsiSilenceComponent : Component

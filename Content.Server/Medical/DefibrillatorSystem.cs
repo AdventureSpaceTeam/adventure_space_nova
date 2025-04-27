@@ -24,7 +24,7 @@ using Content.Shared.Toggleable;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using Content.Shared.AdventureSpace.Medical.Surgery.Events.Organs;
+using Content.Shared._Adventure.Medical.Surgery.Events.Organs;
 
 
 namespace Content.Server.Medical;

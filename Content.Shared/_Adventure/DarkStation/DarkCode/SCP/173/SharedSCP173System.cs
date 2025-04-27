@@ -3,7 +3,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Storage.Components;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.SCP._173;
+namespace Content.Shared._Adventure.SCP._173;
 
 public abstract class SharedSCP173System : EntitySystem
 {

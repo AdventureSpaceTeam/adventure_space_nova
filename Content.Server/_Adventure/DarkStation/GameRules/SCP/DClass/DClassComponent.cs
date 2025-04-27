@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.GameRules.SCP.DClass;
+namespace Content.Server._Adventure.GameRules.SCP.DClass;
 
 [RegisterComponent]
 [Access(typeof(DClassSystem))]

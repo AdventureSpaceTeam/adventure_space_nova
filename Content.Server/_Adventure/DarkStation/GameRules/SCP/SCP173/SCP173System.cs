@@ -2,7 +2,7 @@ using Content.Server.Actions;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.GameTicking;
 using Content.Server.Ghost;
-using Content.Shared.AdventureSpace.SCP._173;
+using Content.Shared._Adventure.SCP._173;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Eye.Blinding.Systems;
@@ -21,7 +21,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.SCP173;
+namespace Content.Server._Adventure.GameRules.SCP.SCP173;
 
 public sealed class SCP173System : SharedSCP173System
 {

@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Damage;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.FireArms;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.FireArms;
 
 [RegisterComponent]
 public sealed partial class NarsiCultistFireArmsComponent : Component

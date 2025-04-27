@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.Roles.StationAI.Components;
+namespace Content.Shared._Adventure.Roles.StationAI.Components;
 
 [RegisterComponent]
 [NetworkedComponent]

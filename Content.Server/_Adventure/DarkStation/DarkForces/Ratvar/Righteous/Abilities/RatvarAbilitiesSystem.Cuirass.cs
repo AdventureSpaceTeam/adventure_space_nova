@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Armor;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Armor;
+﻿using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Armor;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities.Armor;
 using Content.Shared.Damage;
 using Content.Shared.Inventory;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities;
 
 public sealed partial class RatvarAbilitiesSystem
 {

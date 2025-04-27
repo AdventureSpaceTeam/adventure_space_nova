@@ -1,12 +1,12 @@
-﻿using Content.Shared.AdventureSpace.Medical.Surgery;
-using Content.Shared.AdventureSpace.Medical.Surgery.Events.Doll;
+﻿using Content.Shared._Adventure.Medical.Surgery;
+using Content.Shared._Adventure.Medical.Surgery.Events.Doll;
 using Content.Shared.Body.Part;
 using Robust.Client.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
-using SecretCCVars = Content.Shared.AdventureSpace.CCVars.SecretCCVars;
+using SecretCCVars = Content.Shared._Adventure.CCVars.SecretCCVars;
 
-namespace Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems;
+namespace Content.Client._Adventure.Medical.Surgery.UI.Doll.Widgets.Systems;
 
 public sealed class TargetDollSystem : EntitySystem
 {

@@ -1,8 +1,8 @@
-using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
+using Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
 using Content.Server.Mind;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals;
 
 public sealed partial class NarsiChangeMindRitualEffect : NarsiRitualEffect
 {

@@ -1,7 +1,7 @@
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 
-namespace Content.Server.AdventureSpace.Roles.Spawners;
+namespace Content.Server._Adventure.Roles.Spawners;
 
 public sealed class AdditionalJobsSystem : EntitySystem
 {

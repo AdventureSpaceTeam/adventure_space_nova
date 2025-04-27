@@ -1,11 +1,11 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
-using Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
+﻿using Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
+using Content.Server._Adventure.DarkForces.Saint.Saintable.Events;
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.Popups;
-using VampireComponent = Content.Shared.AdventureSpace.DarkForces.Vampire.Components.VampireComponent;
+using VampireComponent = Content.Shared._Adventure.DarkForces.Vampire.Components.VampireComponent;
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire.Role;
+namespace Content.Server._Adventure.GameRules.Vampire.Role;
 
 public sealed partial class VampireSystem
 {

@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
+﻿using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress;
 using Content.Server.Power.Components;
 using Content.Server.Wires;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Events;
+using Content.Shared._Adventure.DarkForces.Ratvar.Events;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
@@ -11,7 +11,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Gear;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Gear;
 
 public sealed class RatvarGearSystem : EntitySystem
 {

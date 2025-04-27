@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Zombie.Hunter;
+namespace Content.Shared._Adventure.Zombie.Hunter;
 
 [Serializable, NetSerializable]
 public enum HunterVisuals : byte

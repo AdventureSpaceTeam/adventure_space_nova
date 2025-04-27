@@ -1,7 +1,7 @@
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.AdventureSpace.FastUI;
+namespace Content.Shared._Adventure.FastUI;
 
 [Serializable, NetSerializable]
 public sealed class ListingData

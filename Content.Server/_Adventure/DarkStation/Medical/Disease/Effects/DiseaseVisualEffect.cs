@@ -1,8 +1,8 @@
-﻿using Content.Shared.AdventureSpace.Medical.Diseases.Effects;
+﻿using Content.Shared._Adventure.Medical.Diseases.Effects;
 using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
+namespace Content.Server._Adventure.Medical.Disease.Effects;
 
 [DataDefinition]
 public sealed partial class DiseaseVisualEffect : DiseaseEffect

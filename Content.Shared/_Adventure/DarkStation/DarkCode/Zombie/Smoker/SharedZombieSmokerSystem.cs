@@ -1,12 +1,12 @@
 using System.Numerics;
 using Content.Shared.Movement.Events;
-using Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+using Content.Shared._Adventure.Zombie.Smoker.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Shared.AdventureSpace.Zombie.Smoker;
+namespace Content.Shared._Adventure.Zombie.Smoker;
 
 public abstract class SharedZombieSmokerSystem : EntitySystem
 {

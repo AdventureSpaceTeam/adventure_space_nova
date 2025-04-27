@@ -4,7 +4,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.RoundEnd;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
-using Content.Shared.AdventureSpace.DarkForces.Desecrated;
+using Content.Shared._Adventure.DarkForces.Desecrated;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs;
@@ -15,7 +15,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Pontific;
+namespace Content.Server._Adventure.GameTicking.Rules.Pontific;
 
 public sealed class PontificRuleSystem : GameRuleSystem<PontificRuleComponent>
 {

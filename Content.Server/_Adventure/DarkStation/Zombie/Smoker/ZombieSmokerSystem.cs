@@ -1,8 +1,8 @@
 ﻿using System.Numerics;
 using Content.Server.Interaction;
 using Content.Shared.ActionBlocker;
-using Content.Shared.AdventureSpace.Zombie.Smoker;
-using Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+using Content.Shared._Adventure.Zombie.Smoker;
+using Content.Shared._Adventure.Zombie.Smoker.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
@@ -12,7 +12,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Zombie.Smoker;
+namespace Content.Server._Adventure.Zombie.Smoker;
 
 public sealed partial class ZombieSmokerSystem : SharedZombieSmokerSystem
 {

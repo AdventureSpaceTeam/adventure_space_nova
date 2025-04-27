@@ -1,11 +1,11 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
+﻿using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
 using Content.Server.Stunnable;
 using Content.Shared.Item;
 using Content.Shared.UserInterface;
 using RatvarStructureComponent =
-    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.RatvarStructureComponent;
+    Content.Server._Adventure.DarkForces.Ratvar.Righteous.Structures.RatvarStructureComponent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress;
 
 public sealed partial class RatvarProgressSystem
 {

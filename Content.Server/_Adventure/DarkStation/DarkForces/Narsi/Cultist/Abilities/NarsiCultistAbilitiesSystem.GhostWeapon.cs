@@ -1,11 +1,11 @@
-﻿using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+﻿using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Popups;
 using Robust.Shared.Spawners;
 using NarsiCultistGhostWeaponEvent =
-    Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistGhostWeaponEvent;
+    Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistGhostWeaponEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

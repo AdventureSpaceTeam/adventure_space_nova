@@ -1,12 +1,12 @@
-﻿using Content.Server.AdventureSpace.GameRules.Vampire.EUI;
-using Content.Server.AdventureSpace.GameRules.Vampire.Role.Abilities;
-using Content.Server.AdventureSpace.GameRules.Vampire.Role.Events;
+﻿using Content.Server._Adventure.GameRules.Vampire.EUI;
+using Content.Server._Adventure.GameRules.Vampire.Role.Abilities;
+using Content.Server._Adventure.GameRules.Vampire.Role.Events;
 using Content.Server.EUI;
 using Content.Server.Mind;
 using Content.Server.Objectives;
-using Content.Shared.AdventureSpace.DarkForces.Vampire;
-using Content.Shared.AdventureSpace.DarkForces.Vampire.Components;
-using Content.Shared.AdventureSpace.Vampire;
+using Content.Shared._Adventure.DarkForces.Vampire;
+using Content.Shared._Adventure.DarkForces.Vampire.Components;
+using Content.Shared._Adventure.Vampire;
 using Content.Shared.Mind;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Nutrition.Components;
@@ -14,7 +14,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire.Role;
+namespace Content.Server._Adventure.GameRules.Vampire.Role;
 
 public sealed partial class VampireSystem : EntitySystem
 {

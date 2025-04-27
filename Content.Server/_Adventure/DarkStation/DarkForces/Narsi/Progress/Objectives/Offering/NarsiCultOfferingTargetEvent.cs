@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Offering;
+﻿namespace Content.Server._Adventure.DarkForces.Narsi.Progress.Objectives.Offering;
 
 [ByRefEvent]
 public readonly record struct NarsiCultOfferingTargetEvent;

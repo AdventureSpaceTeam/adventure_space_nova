@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Cult.Runes;
+namespace Content.Shared._Adventure.Cult.Runes;
 
 public abstract partial class SharedNarsiRuneComponent : Component
 {

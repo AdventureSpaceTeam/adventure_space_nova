@@ -2,7 +2,7 @@ using Content.Shared.Actions;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Events;
+namespace Content.Server._Adventure.DarkForces.Narsi.Runes.Events;
 
 public sealed partial class NarsiRuneInstantSpawnEvent : InstantActionEvent
 {

@@ -1,7 +1,7 @@
 using Content.Shared.StationRecords;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Roles.CCO;
+namespace Content.Shared._Adventure.Roles.CCO;
 
 [Serializable] [NetSerializable]
 public sealed class CcoConsoleStationState(

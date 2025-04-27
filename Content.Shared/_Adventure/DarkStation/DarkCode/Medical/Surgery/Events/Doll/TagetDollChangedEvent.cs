@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Body.Part;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Medical.Surgery.Events.Doll;
+namespace Content.Shared._Adventure.Medical.Surgery.Events.Doll;
 
 [Serializable]
 [NetSerializable]

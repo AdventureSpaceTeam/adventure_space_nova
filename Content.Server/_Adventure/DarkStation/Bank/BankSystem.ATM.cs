@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.Bank.Components;
-using Content.Shared.AdventureSpace.Bank;
-using Content.Shared.AdventureSpace.Bank.BUI;
-using Content.Shared.AdventureSpace.Bank.Events;
+﻿using Content.Server._Adventure.Bank.Components;
+using Content.Shared._Adventure.Bank;
+using Content.Shared._Adventure.Bank.BUI;
+using Content.Shared._Adventure.Bank.Events;
 using Content.Shared.Coordinates;
 using Content.Shared.Database;
 using Content.Shared.Stacks;
@@ -9,9 +9,9 @@ using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using BankATMComponent = Content.Shared.AdventureSpace.Bank.Components.BankATMComponent;
+using BankATMComponent = Content.Shared._Adventure.Bank.Components.BankATMComponent;
 
-namespace Content.Server.AdventureSpace.Bank;
+namespace Content.Server._Adventure.Bank;
 
 public sealed partial class BankSystem
 {

@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Bank.Events;
+namespace Content.Shared._Adventure.Bank.Events;
 
 [Serializable, NetSerializable]
 

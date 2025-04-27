@@ -1,7 +1,7 @@
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.UI;
 
 [Serializable, NetSerializable]
 public sealed class RatvarEnchantmentBUIState : BoundUserInterfaceState

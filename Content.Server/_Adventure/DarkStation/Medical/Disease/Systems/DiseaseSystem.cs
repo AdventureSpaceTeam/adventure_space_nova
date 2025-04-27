@@ -1,13 +1,13 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
-using Content.Server.AdventureSpace.Medical.Disease.Data;
-using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+﻿using Content.Server._Adventure.Medical.Disease.Components;
+using Content.Server._Adventure.Medical.Disease.Data;
+using Content.Server._Adventure.Medical.Disease.Prototypes;
 using Content.Shared.Inventory;
 using Content.Shared.Popups;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
+namespace Content.Server._Adventure.Medical.Disease.Systems;
 
 public sealed partial class DiseaseSystem : EntitySystem
 {

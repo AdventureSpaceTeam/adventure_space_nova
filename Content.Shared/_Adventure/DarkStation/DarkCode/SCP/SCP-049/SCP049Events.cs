@@ -1,6 +1,6 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared.AdventureSpace.SCP.SCP_049;
+namespace Content.Shared._Adventure.SCP.SCP_049;
 
 public sealed partial class SCP049HealEvent : EntityTargetActionEvent
 {

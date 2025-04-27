@@ -1,10 +1,10 @@
-﻿using Content.Shared.AdventureSpace.Bank.Transactions;
+﻿using Content.Shared._Adventure.Bank.Transactions;
 using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
-namespace Content.Server.AdventureSpace.Roles.Salary;
+namespace Content.Server._Adventure.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {
@@ -13,11 +13,11 @@ public sealed partial class CrewMemberSalarySystem
 
     private void InitializeAntags()
     {
-        _cfg.OnValueChanged(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyAntagBaseSalary, OnAntagBaseSalaryChanged);
-        _cfg.OnValueChanged(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyAntagMaxSalary, OnAntagMaxSalaryChanged);
+        _cfg.OnValueChanged(Shared._Adventure.CCVars.SecretCCVars.EconomyAntagBaseSalary, OnAntagBaseSalaryChanged);
+        _cfg.OnValueChanged(Shared._Adventure.CCVars.SecretCCVars.EconomyAntagMaxSalary, OnAntagMaxSalaryChanged);
 
-        _antagBaseSalary = _cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyAntagBaseSalary);
-        _antagMaxSalary = _cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyAntagMaxSalary);
+        _antagBaseSalary = _cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyAntagBaseSalary);
+        _antagMaxSalary = _cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyAntagMaxSalary);
     }
 
     private void OnAntagMaxSalaryChanged(int newMaxSalary)

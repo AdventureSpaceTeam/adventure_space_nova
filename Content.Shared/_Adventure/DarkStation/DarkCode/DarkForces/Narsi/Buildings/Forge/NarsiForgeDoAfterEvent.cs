@@ -1,7 +1,7 @@
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Cult;
+namespace Content.Shared._Adventure.Cult;
 
 [DataDefinition]
 [Serializable, NetSerializable]

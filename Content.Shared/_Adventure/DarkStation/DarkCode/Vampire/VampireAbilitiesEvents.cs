@@ -1,6 +1,6 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared.AdventureSpace.Vampire;
+namespace Content.Shared._Adventure.Vampire;
 
 public interface IVampireEvent
 {

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross.Events;
-using Content.Server.AdventureSpace.SecretCCVars;
+using Content.Server._Adventure.DarkForces.Saint.Items.Cross.Events;
+using Content.Server._Adventure.SecretCCVars;
 using Content.Server.Radio.EntitySystems;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
@@ -10,7 +10,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.DarkAltar;
+namespace Content.Server._Adventure.DarkForces.Desecrated.Pontific.DarkAltar;
 
 public sealed class PontificDarkAltarSystem : EntitySystem
 {

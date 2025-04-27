@@ -1,7 +1,7 @@
 ﻿using Content.Server.Body.Events;
 using Content.Shared.Chemistry.EntitySystems;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Liver;
+namespace Content.Server._Adventure.Medical.Surgery.Organs.Liver;
 
 public sealed class LiverSystem : SurgeryOrganSystem<ToxinFilterComponent, ToxinFilterMarkerComponent>
 {

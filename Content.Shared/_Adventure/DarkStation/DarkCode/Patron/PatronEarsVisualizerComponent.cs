@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.Patron;
+namespace Content.Shared._Adventure.Patron;
 
 [RegisterComponent]
 [NetworkedComponent]

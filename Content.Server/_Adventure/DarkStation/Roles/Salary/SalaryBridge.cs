@@ -1,8 +1,8 @@
 ﻿using Content.Server._c4llv07e.Bridges;
-using Content.Shared.AdventureSpace.Roles.Salary;
+using Content.Shared._Adventure.Roles.Salary;
 using Content.Shared.StationRecords;
 
-namespace Content.Server.AdventureSpace.Roles.Salary;
+namespace Content.Server._Adventure.Roles.Salary;
 
 public sealed class SalaryBridge : ISalaryBridge
 {

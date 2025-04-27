@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross.Events;
-using Content.Server.AdventureSpace.DarkForces.Saint.Items.Events;
+﻿using Content.Server._Adventure.DarkForces.Saint.Items.Cross.Events;
+using Content.Server._Adventure.DarkForces.Saint.Items.Events;
 using Content.Server.Popups;
 using Content.Shared.Popups;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross;
+namespace Content.Server._Adventure.DarkForces.Saint.Items.Cross;
 
 public sealed partial class SaintCrossSystem : EntitySystem
 {

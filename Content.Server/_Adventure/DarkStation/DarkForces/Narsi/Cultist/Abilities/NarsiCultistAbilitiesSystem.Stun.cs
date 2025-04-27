@@ -1,8 +1,8 @@
-﻿using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+﻿using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Stunnable;
-using NarsiCultistStunEvent = Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistStunEvent;
+using NarsiCultistStunEvent = Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistStunEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

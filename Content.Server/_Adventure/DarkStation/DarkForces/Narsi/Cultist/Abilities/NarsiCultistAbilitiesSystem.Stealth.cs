@@ -1,11 +1,11 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Stealth;
-using Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+﻿using Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Stealth;
+using Content.Server._Adventure.DarkForces.Saint.Saintable.Events;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Stealth.Components;
 using NarsiCultistInvisibilityEvent =
-    Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistInvisibilityEvent;
+    Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistInvisibilityEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

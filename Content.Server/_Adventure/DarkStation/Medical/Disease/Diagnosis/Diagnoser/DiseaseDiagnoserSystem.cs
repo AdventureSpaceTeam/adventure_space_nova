@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Diagnoser.Components;
-using Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Swab;
-using Content.Server.AdventureSpace.Medical.Disease.Systems;
+﻿using Content.Server._Adventure.Medical.Disease.Diagnosis.Diagnoser.Components;
+using Content.Server._Adventure.Medical.Disease.Diagnosis.Swab;
+using Content.Server._Adventure.Medical.Disease.Systems;
 using Content.Server.Popups;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Verbs;
@@ -9,7 +9,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Diagnoser;
+namespace Content.Server._Adventure.Medical.Disease.Diagnosis.Diagnoser;
 
 public sealed partial class DiseaseDiagnoserSystem : EntitySystem
 {

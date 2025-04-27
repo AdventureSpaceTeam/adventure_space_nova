@@ -2,7 +2,7 @@
 using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Zombie;
+namespace Content.Server._Adventure.Zombie;
 
 public sealed partial class CureSpecialZombieInfection : EntityEffect
 {

@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Tools;
+﻿using Content.Server._Adventure.Medical.Surgery.Tools;
 using Content.Shared.Damage;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Components;
+namespace Content.Server._Adventure.Medical.Surgery.Components;
 
 [RegisterComponent]
 public sealed partial class SurgeryDamageComponent : Component

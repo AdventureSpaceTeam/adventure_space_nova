@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Actions;
 
-namespace Content.Shared.AdventureSpace.SCP._173;
+namespace Content.Shared._Adventure.SCP._173;
 
 public sealed partial class SCP173ShartEvent : InstantActionEvent
 {

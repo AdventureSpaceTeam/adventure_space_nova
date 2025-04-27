@@ -2,7 +2,7 @@
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Eye.Blinding.Systems;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Eyes;
+namespace Content.Server._Adventure.Medical.Surgery.Organs.Eyes;
 
 public sealed class EyeSightSystem : EntitySystem
 {

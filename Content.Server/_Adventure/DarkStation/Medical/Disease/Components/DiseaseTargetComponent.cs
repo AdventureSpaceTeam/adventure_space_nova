@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Data;
+﻿using Content.Server._Adventure.Medical.Disease.Data;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Components;
+namespace Content.Server._Adventure.Medical.Disease.Components;
 
 [RegisterComponent]
 public sealed partial class DiseaseTargetComponent : Component

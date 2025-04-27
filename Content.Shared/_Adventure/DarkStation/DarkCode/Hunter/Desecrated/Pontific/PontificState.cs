@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific;
+namespace Content.Shared._Adventure.Hunter.Desecrated.Pontific;
 
 [Serializable, NetSerializable]
 public enum PontificState : byte

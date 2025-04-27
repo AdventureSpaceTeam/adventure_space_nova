@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Events;
+﻿namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress.Events;
 
 [ByRefEvent]
 public record RatvarSpawnStartedEvent(EntityUid Portal);

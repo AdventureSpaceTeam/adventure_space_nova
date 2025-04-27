@@ -1,7 +1,7 @@
 using Robust.Shared;
 using Robust.Shared.Configuration;
 
-namespace Content.Server.AdventureSpace.SecretCCVars;
+namespace Content.Server._Adventure.SecretCCVars;
 
 [CVarDefs]
 public sealed class SecretCCVars : CVars

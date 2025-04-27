@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.UI;
 
 [Serializable, NetSerializable]
 public sealed class RatvarMidasTouchBUIState : BoundUserInterfaceState

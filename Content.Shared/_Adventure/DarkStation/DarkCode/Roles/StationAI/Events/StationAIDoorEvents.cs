@@ -1,6 +1,6 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared.AdventureSpace.Roles.StationAI.Events;
+namespace Content.Shared._Adventure.Roles.StationAI.Events;
 
 public sealed partial class StationAIDoorBolt : EntityTargetActionEvent
 {

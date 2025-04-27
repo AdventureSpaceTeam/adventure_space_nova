@@ -1,9 +1,9 @@
 ﻿using Content.Shared.Actions;
-using Content.Shared.AdventureSpace.SCP;
+using Content.Shared._Adventure.SCP;
 using Content.Shared.Doors.Components;
 using Content.Shared.Doors.Systems;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Door;
+namespace Content.Server._Adventure.GameRules.SCP.Door;
 
 public sealed class SCPDoorPryerSystem : EntitySystem
 {

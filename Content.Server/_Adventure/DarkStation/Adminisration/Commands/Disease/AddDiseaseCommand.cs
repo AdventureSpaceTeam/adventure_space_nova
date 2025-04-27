@@ -1,9 +1,9 @@
 ﻿using Content.Server.Administration;
-using Content.Server.AdventureSpace.Medical.Disease.Systems;
+using Content.Server._Adventure.Medical.Disease.Systems;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 
-namespace Content.Server.AdventureSpace.Adminisration.Commands.Disease;
+namespace Content.Server._Adventure.Adminisration.Commands.Disease;
 
 [AdminCommand(AdminFlags.Host)]
 public sealed class AddDiseaseCommand : LocalizedCommands

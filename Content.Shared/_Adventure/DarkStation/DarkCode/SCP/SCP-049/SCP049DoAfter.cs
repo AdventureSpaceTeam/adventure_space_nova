@@ -1,7 +1,7 @@
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.SCP.SCP_049;
+namespace Content.Shared._Adventure.SCP.SCP_049;
 
 [Serializable, NetSerializable]
 public sealed partial class SCP049HealDoAfterEvent : DoAfterEvent

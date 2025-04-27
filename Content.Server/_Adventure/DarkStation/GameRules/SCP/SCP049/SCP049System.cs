@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Events;
+using Content.Server._Adventure.GameRules.SCP.Station.Goals.Events;
 using Content.Server.Chat.Managers;
 using Content.Server.DoAfter;
 using Content.Server.Flash;
@@ -7,15 +7,15 @@ using Content.Server.Popups;
 using Content.Server.Speech.Components;
 using Content.Server.Stunnable;
 using Content.Shared.Actions;
-using Content.Shared.AdventureSpace.SCP.SCP_049;
+using Content.Shared._Adventure.SCP.SCP_049;
 using Content.Shared.DoAfter;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Rejuvenate;
 using Robust.Shared.Player;
-using SCP049Component = Content.Shared.AdventureSpace.SCP.SCP_049.Components.SCP049Component;
-using SCP049ThrallComponent = Content.Shared.AdventureSpace.SCP.SCP_049.Components.SCP049ThrallComponent;
+using SCP049Component = Content.Shared._Adventure.SCP.SCP_049.Components.SCP049Component;
+using SCP049ThrallComponent = Content.Shared._Adventure.SCP.SCP_049.Components.SCP049ThrallComponent;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.SCP049;
+namespace Content.Server._Adventure.GameRules.SCP.SCP049;
 
 public sealed class SCP049System : SharedSCP049System
 {

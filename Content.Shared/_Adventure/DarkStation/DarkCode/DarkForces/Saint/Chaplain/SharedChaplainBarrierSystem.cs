@@ -1,9 +1,9 @@
-using Content.Shared.AdventureSpace.DarkForces.Saint.Chaplain.Components;
+using Content.Shared._Adventure.DarkForces.Saint.Chaplain.Components;
 using Content.Shared.Throwing;
 using Robust.Shared.Physics.Events;
-using ChaplainBarrierComponent = Content.Shared.AdventureSpace.DarkForces.Saint.Chaplain.Components.ChaplainBarrierComponent;
+using ChaplainBarrierComponent = Content.Shared._Adventure.DarkForces.Saint.Chaplain.Components.ChaplainBarrierComponent;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Saint.Chaplain;
+namespace Content.Shared._Adventure.DarkForces.Saint.Chaplain;
 
 public sealed class SharedChaplainBarrierSystem : EntitySystem
 {

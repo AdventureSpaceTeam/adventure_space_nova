@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
-using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Events;
-using Content.Server.AdventureSpace.Utils;
+using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress;
+using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress.Events;
+using Content.Server._Adventure.Utils;
 using Content.Server.AlertLevel;
 using Content.Server.Antag;
 using Content.Server.Chat.Systems;
@@ -10,7 +10,7 @@ using Content.Server.RoundEnd;
 using Content.Shared.GameTicking.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Ratvar;
+namespace Content.Server._Adventure.GameTicking.Rules.Ratvar;
 
 public sealed class RatvarRuleSystem : GameRuleSystem<RatvarRuleComponent>
 {

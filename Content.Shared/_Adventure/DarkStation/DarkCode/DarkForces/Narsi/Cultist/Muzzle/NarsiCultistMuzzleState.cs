@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Narsi.Cultist.Muzzle;
+namespace Content.Shared._Adventure.DarkForces.Narsi.Cultist.Muzzle;
 
 [Serializable, NetSerializable]
 public enum NarsiCultistMuzzleStatus : byte

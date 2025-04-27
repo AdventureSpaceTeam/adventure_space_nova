@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Body.Organ;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Medical.Surgery.Events.Organs;
+namespace Content.Shared._Adventure.Medical.Surgery.Events.Organs;
 
 [Serializable, NetSerializable]
 public record SurgeryOrganModel(

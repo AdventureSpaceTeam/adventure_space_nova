@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Medical.Diseases.Effects;
+namespace Content.Shared._Adventure.Medical.Diseases.Effects;
 
 [Serializable, NetSerializable]
 public enum DiseaseVisualLayers : byte

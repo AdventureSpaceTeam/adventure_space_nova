@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
-using Content.Server.AdventureSpace.Medical.Disease.Data;
+﻿using Content.Server._Adventure.Medical.Disease.Components;
+using Content.Server._Adventure.Medical.Disease.Data;
 using Content.Server.Body.Systems;
 using Content.Shared.Interaction.Events;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
+namespace Content.Server._Adventure.Medical.Disease.Systems;
 
 public sealed partial class DiseaseSystem
 {

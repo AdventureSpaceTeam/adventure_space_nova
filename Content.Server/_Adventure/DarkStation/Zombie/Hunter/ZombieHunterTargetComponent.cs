@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.Zombie.Hunter;
+﻿namespace Content.Server._Adventure.Zombie.Hunter;
 
 [RegisterComponent]
 public sealed partial class ZombieHunterTargetComponent : Component

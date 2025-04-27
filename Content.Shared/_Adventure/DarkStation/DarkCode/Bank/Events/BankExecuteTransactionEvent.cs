@@ -1,7 +1,7 @@
-using Content.Shared.AdventureSpace.Bank.Transactions;
+using Content.Shared._Adventure.Bank.Transactions;
 using Robust.Shared.Network;
 
-namespace Content.Shared.AdventureSpace.Bank.Events;
+namespace Content.Shared._Adventure.Bank.Events;
 
 public sealed class BankExecuteTransactionEvent : CancellableEntityEventArgs
 {

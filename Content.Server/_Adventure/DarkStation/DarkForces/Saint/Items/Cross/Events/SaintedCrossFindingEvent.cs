@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross.Events;
+﻿namespace Content.Server._Adventure.DarkForces.Saint.Items.Cross.Events;
 
 public sealed class SaintedCrossFindingEvent : HandledEntityEventArgs
 {

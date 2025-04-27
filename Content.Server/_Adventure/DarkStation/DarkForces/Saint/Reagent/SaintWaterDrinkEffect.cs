@@ -1,8 +1,8 @@
-using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
+using Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
 using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Reagent;
+namespace Content.Server._Adventure.DarkForces.Saint.Reagent;
 
 public sealed partial class SaintWaterDrinkEffect : EntityEffect
 {

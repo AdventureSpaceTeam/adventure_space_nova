@@ -1,8 +1,8 @@
-﻿using Content.Shared.AdventureSpace.Medical.Diseases.Effects;
+﻿using Content.Shared._Adventure.Medical.Diseases.Effects;
 using Robust.Client.GameObjects;
 using Robust.Shared.Utility;
 
-namespace Content.Client.AdventureSpace.Medical.Disease;
+namespace Content.Client._Adventure.Medical.Disease;
 
 public sealed class DiseasesVisualizerSystem : VisualizerSystem<DiseasesVisualsComponent>
 {

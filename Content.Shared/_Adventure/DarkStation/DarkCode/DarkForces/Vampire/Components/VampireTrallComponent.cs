@@ -3,7 +3,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Vampire.Components;
+namespace Content.Shared._Adventure.DarkForces.Vampire.Components;
 
 [RegisterComponent]
 [NetworkedComponent]

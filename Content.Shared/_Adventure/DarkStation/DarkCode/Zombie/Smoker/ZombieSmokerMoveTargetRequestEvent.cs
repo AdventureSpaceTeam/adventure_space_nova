@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Zombie.Smoker;
+namespace Content.Shared._Adventure.Zombie.Smoker;
 
 [Serializable, NetSerializable]
 public sealed class ZombieSmokerMoveTargetRequestEvent : EntityEventArgs

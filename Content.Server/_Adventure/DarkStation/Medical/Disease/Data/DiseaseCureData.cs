@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Data;
+namespace Content.Server._Adventure.Medical.Disease.Data;
 
 [Serializable]
 [DataDefinition]

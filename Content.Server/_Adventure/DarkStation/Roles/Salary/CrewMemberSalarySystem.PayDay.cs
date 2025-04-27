@@ -1,11 +1,11 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.Roles.Salary.Components;
-using Content.Shared.AdventureSpace.Bank.Transactions;
-using Content.Shared.AdventureSpace.Roles.Salary;
+using Content.Server._Adventure.Roles.Salary.Components;
+using Content.Shared._Adventure.Bank.Transactions;
+using Content.Shared._Adventure.Roles.Salary;
 using Content.Shared.Database;
 using Content.Shared.StationRecords;
 
-namespace Content.Server.AdventureSpace.Roles.Salary;
+namespace Content.Server._Adventure.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {

@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Prototypes;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Goals.Prototypes;
 
 [Prototype("SCPStationGoal")]
 public sealed class SCPStationGoalPrototype : IPrototype

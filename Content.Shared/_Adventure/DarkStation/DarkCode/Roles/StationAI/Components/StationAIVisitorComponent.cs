@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.AdventureSpace.Roles.StationAI.Components;
+namespace Content.Shared._Adventure.Roles.StationAI.Components;
 
 [NetworkedComponent]
 [RegisterComponent]

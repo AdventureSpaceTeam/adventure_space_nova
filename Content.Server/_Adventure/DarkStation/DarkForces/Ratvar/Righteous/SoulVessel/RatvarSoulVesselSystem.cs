@@ -1,6 +1,6 @@
 ﻿using Content.Server.Mind;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.DoAfterEvents;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Items;
+using Content.Shared._Adventure.DarkForces.Ratvar.DoAfterEvents;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Items;
 using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Interaction;
@@ -9,7 +9,7 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Silicons.Borgs.Components;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.SoulVessel;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.SoulVessel;
 
 public sealed class RatvarSoulVesselSystem : EntitySystem
 {

@@ -1,18 +1,18 @@
 ﻿using System.Linq;
 using Content.Server.Mind;
 using Content.Server.Objectives;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Roles;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Roles;
 using Content.Shared.GameTicking;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using RatvarPortalComponent =
-    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Portal.RatvarPortalComponent;
+    Content.Server._Adventure.DarkForces.Ratvar.Righteous.Structures.Portal.RatvarPortalComponent;
 using RatvarSummonObjectiveComponent =
-    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon.
+    Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon.
     RatvarSummonObjectiveComponent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress;
 
 public sealed partial class RatvarProgressSystem : EntitySystem
 {

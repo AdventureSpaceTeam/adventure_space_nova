@@ -1,6 +1,7 @@
 ﻿<ui:FancyWindow xmlns="https://spacestation14.io"
                 xmlns:x="http://schemas.microsoft.com/winfx/2007/xaml"
                 xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
+                x:Class="Content.Client._Adventure.DarkForces.Ratvar.Structures.RatvarWorkshopWindow"
                 xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                 xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls;assembly=Content.Client"
                 SetSize="512 350" Title="Мастерская Ратвара">

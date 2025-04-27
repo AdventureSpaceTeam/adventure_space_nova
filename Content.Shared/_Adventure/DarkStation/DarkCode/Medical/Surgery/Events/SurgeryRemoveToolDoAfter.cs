@@ -1,7 +1,7 @@
 ﻿using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Medical.Surgery.Events;
+namespace Content.Shared._Adventure.Medical.Surgery.Events;
 
 [Serializable, NetSerializable]
 public sealed partial class SurgeryRemoveToolDoAfter : DoAfterEvent

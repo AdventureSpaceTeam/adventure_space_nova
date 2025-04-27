@@ -1,8 +1,8 @@
 using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Components;
+using Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
+using Content.Server._Adventure.DarkForces.Narsi.Progress.Components;
 using Content.Server.Chemistry.Containers.EntitySystems;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Whitelist;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
@@ -10,7 +10,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
 
 [ImplicitDataDefinitionForInheritors]
 public abstract partial class NarsiRitualEffect

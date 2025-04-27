@@ -12,7 +12,7 @@ using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 
-namespace Content.Server.AdventureSpace.Bank;
+namespace Content.Server._Adventure.Bank;
 
 public sealed partial class BankSystem
 {

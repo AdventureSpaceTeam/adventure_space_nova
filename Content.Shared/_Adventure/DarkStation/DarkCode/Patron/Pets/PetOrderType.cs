@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Patron.Pets;
+namespace Content.Shared._Adventure.Patron.Pets;
 
 [Serializable, NetSerializable]
 public enum PetOrderType : byte

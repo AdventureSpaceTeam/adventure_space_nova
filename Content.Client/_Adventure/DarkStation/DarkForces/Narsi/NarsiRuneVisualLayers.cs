@@ -1,4 +1,4 @@
-﻿namespace Content.Client.AdventureSpace.DarkForces.Narsi;
+﻿namespace Content.Client._Adventure.DarkForces.Narsi;
 
 public enum NarsiRuneVisualLayers : byte
 {

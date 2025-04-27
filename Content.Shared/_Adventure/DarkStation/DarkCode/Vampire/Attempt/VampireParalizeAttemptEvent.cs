@@ -1,4 +1,4 @@
-namespace Content.Shared.AdventureSpace.Vampire.Attempt;
+namespace Content.Shared._Adventure.Vampire.Attempt;
 
 public sealed partial class VampireParalizeAttemptEvent : CancellableEntityEventArgs
 {

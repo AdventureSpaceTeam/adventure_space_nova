@@ -1,15 +1,15 @@
 using System.Linq;
-using Content.Shared.AdventureSpace.Vampire;
-using Content.Shared.AdventureSpace.Vampire.Attempt;
+using Content.Shared._Adventure.Vampire;
+using Content.Shared._Adventure.Vampire.Attempt;
 using Content.Shared.Chat;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Content.Shared.Humanoid;
 using Content.Shared.Tag;
 using Robust.Shared.Map;
-using VampireComponent = Content.Shared.AdventureSpace.DarkForces.Vampire.Components.VampireComponent;
+using VampireComponent = Content.Shared._Adventure.DarkForces.Vampire.Components.VampireComponent;
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire.Role.Abilities;
+namespace Content.Server._Adventure.GameRules.Vampire.Role.Abilities;
 
 public sealed partial class VampireAbilitiesSystem
 {

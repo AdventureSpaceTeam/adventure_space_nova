@@ -1,12 +1,12 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Content.Server.GameTicking;
-using Content.Shared.AdventureSpace.Bank.Events;
-using Content.Shared.AdventureSpace.Bank.Transactions;
+using Content.Shared._Adventure.Bank.Events;
+using Content.Shared._Adventure.Bank.Transactions;
 using Content.Shared.Preferences;
 using Robust.Shared.Network;
-using BankAccountComponent = Content.Shared.AdventureSpace.Bank.Components.BankAccountComponent;
+using BankAccountComponent = Content.Shared._Adventure.Bank.Components.BankAccountComponent;
 
-namespace Content.Server.AdventureSpace.Bank;
+namespace Content.Server._Adventure.Bank;
 
 public sealed partial class BankSystem : EntitySystem
 {

@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Chemistry;
 using Content.Shared.FixedPoint;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
+namespace Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
 
 /**
  * Вызывается, если у сущности есть Flammable в Reactive компоненте

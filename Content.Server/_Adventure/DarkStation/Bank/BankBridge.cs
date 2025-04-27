@@ -1,8 +1,8 @@
 ﻿using Content.Server._c4llv07e.Bridges;
-using Content.Shared.AdventureSpace.Bank.Transactions;
+using Content.Shared._Adventure.Bank.Transactions;
 using Robust.Shared.Network;
 
-namespace Content.Server.AdventureSpace.Bank;
+namespace Content.Server._Adventure.Bank;
 
 public sealed class BankBridge : IBankBridge
 {

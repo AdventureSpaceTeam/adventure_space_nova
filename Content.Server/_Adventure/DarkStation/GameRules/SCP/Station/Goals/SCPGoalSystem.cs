@@ -1,8 +1,8 @@
 using System.Linq;
-using Content.Server.AdventureSpace.GameRules.SCP.Station.Components;
-using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Events;
-using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Prototypes;
-using Content.Server.AdventureSpace.Utils;
+using Content.Server._Adventure.GameRules.SCP.Station.Components;
+using Content.Server._Adventure.GameRules.SCP.Station.Goals.Events;
+using Content.Server._Adventure.GameRules.SCP.Station.Goals.Prototypes;
+using Content.Server._Adventure.Utils;
 using Content.Server.Chat.Systems;
 using Content.Server.Fax;
 using Content.Shared.Fax.Components;
@@ -13,7 +13,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Goals;
 
 public sealed class SCPGoalSystem : EntitySystem
 {

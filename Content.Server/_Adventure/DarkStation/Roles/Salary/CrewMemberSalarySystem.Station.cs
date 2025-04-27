@@ -1,12 +1,12 @@
 ﻿using Content.Server.Station.Events;
-using Content.Shared.AdventureSpace.Roles.Salary;
+using Content.Shared._Adventure.Roles.Salary;
 using Content.Shared.GameTicking;
 using Content.Shared.StationRecords;
 using CrewMemberStationSalaryComponent =
-    Content.Server.AdventureSpace.Roles.Salary.Components.CrewMemberStationSalaryComponent;
+    Content.Server._Adventure.Roles.Salary.Components.CrewMemberStationSalaryComponent;
 
 
-namespace Content.Server.AdventureSpace.Roles.Salary;
+namespace Content.Server._Adventure.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {
@@ -18,7 +18,7 @@ public sealed partial class CrewMemberSalarySystem
 
     private void OnRoundEnded(RoundEndedEvent ev)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         foreach (var station in _cachedEntries.Keys)
@@ -50,7 +50,7 @@ public sealed partial class CrewMemberSalarySystem
 
     private void UpdateStationSalary()
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         var curTime = _gameTiming.CurTime;

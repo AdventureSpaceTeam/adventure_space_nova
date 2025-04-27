@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Damage;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
+namespace Content.Server._Adventure.DarkForces.Saint.Saintable.Events;
 
 public sealed class OnSaintEntityCollide : HandledEntityEventArgs, ISaintEntityEvent
 {

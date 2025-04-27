@@ -1,4 +1,4 @@
-﻿using Content.Shared.AdventureSpace.Roles.Salary;
+﻿using Content.Shared._Adventure.Roles.Salary;
 using Content.Shared.StationRecords;
 
 namespace Content.Server._c4llv07e.Bridges;

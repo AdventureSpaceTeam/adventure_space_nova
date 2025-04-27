@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Roles.Salary;
+namespace Content.Server._Adventure.Roles.Salary;
 
 [Serializable]
 [Prototype("salaries")]

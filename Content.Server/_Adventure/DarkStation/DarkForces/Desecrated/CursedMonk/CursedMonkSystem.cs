@@ -1,8 +1,8 @@
 using Content.Server.Beam;
 using Content.Shared.Actions;
-using AttackLightningEvent = Content.Shared.AdventureSpace.Hunter.MobAbilities.AttackLightningEvent;
+using AttackLightningEvent = Content.Shared._Adventure.Hunter.MobAbilities.AttackLightningEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Desecrated.CursedMonk;
+namespace Content.Server._Adventure.DarkForces.Desecrated.CursedMonk;
 
 public sealed class CursedMonkSystem : EntitySystem
 {

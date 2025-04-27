@@ -1,4 +1,4 @@
-using Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
+using Content.Server._Adventure.DarkForces.Narsi.Progress;
 using Content.Server.AlertLevel;
 using Content.Server.Antag;
 using Content.Server.Audio;
@@ -11,7 +11,7 @@ using Content.Shared.Audio;
 using Content.Shared.GameTicking.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Narsi;
+namespace Content.Server._Adventure.GameTicking.Rules.Narsi;
 
 public sealed partial class NarsiRuleSystem : GameRuleSystem<NarsiRuleComponent>
 {

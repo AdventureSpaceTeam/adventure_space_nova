@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Ratvar;
+namespace Content.Server._Adventure.GameTicking.Rules.Ratvar;
 
 [RegisterComponent]
 [Access(typeof(RatvarRuleSystem))]

@@ -6,7 +6,7 @@ using Content.Shared.Body.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
+namespace Content.Server._Adventure.Medical.Disease.Effects;
 
 [DataDefinition]
 public sealed partial class DiseaseVomitRandomOrganEffect : DiseaseEffect

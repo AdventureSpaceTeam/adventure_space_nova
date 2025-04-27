@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Patron.Ghost;
+namespace Content.Shared._Adventure.Patron.Ghost;
 
 [Serializable, NetSerializable]
 public sealed class SponsorChangeGhostEvent(string id) : BoundUserInterfaceMessage

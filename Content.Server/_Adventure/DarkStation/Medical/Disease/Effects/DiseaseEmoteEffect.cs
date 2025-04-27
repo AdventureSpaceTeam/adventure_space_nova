@@ -2,7 +2,7 @@
 using Content.Shared.Chat.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
+namespace Content.Server._Adventure.Medical.Disease.Effects;
 
 [DataDefinition]
 public sealed partial class DiseaseEmoteEffect : DiseaseEffect

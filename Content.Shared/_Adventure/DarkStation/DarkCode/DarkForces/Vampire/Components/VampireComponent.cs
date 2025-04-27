@@ -3,7 +3,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Vampire.Components;
+namespace Content.Shared._Adventure.DarkForces.Vampire.Components;
 
 [RegisterComponent]
 [NetworkedComponent]

@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.Medical.Surgery.Components;
+﻿namespace Content.Server._Adventure.Medical.Surgery.Components;
 
 [RegisterComponent]
 public sealed partial class SurgeryComponent : Component

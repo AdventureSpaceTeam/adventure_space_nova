@@ -1,7 +1,7 @@
 using Robust.Shared.Enums;
 using Robust.Shared.Serialization;
-using Content.Shared.AdventureSpace.Bank.Transactions;
-using Content.Shared.AdventureSpace.Roles.Salary;
+using Content.Shared._Adventure.Bank.Transactions;
+using Content.Shared._Adventure.Roles.Salary;
 using Robust.Shared.Network;
 
 

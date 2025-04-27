@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.Medical.Surgery.Components;
+namespace Content.Shared._Adventure.Medical.Surgery.Components;
 
 [RegisterComponent]
 [NetworkedComponent]

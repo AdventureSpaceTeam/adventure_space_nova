@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.Patron;
+﻿namespace Content.Server._Adventure.Patron;
 
 [RegisterComponent]
 public sealed partial class PetComponent : Component

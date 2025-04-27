@@ -1,4 +1,4 @@
-namespace Content.Shared.AdventureSpace.Bank.Components;
+namespace Content.Shared._Adventure.Bank.Components;
 
 [RegisterComponent]
 public sealed partial class MarketModifierComponent : Component

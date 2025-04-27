@@ -1,12 +1,12 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
+﻿using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Progress;
 using Content.Server.Materials;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.DoAfterEvents;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+using Content.Shared._Adventure.DarkForces.Ratvar.DoAfterEvents;
+using Content.Shared._Adventure.DarkForces.Ratvar.UI;
 using Content.Shared.DoAfter;
 using Content.Shared.UserInterface;
 using Robust.Server.GameObjects;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Workshop;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Structures.Workshop;
 
 public sealed class RatvarWorkshopSystem : EntitySystem
 {

@@ -1,13 +1,13 @@
 ﻿using System.Linq;
 using System.Numerics;
-using Content.Shared.AdventureSpace.Roles.CCO;
-using Content.Shared.AdventureSpace.Roles.Salary;
+using Content.Shared._Adventure.Roles.CCO;
+using Content.Shared._Adventure.Roles.Salary;
 using Content.Shared.StationRecords;
 using Content.Shared.StatusIcon;
 using Robust.Client.UserInterface.Controls;
-using SecretCCVars = Content.Shared.AdventureSpace.CCVars.SecretCCVars;
+using SecretCCVars = Content.Shared._Adventure.CCVars.SecretCCVars;
 
-namespace Content.Client.AdventureSpace.Roles.CCO.Console;
+namespace Content.Client._Adventure.Roles.CCO.Console;
 
 public sealed partial class CcoConsoleWindow
 {

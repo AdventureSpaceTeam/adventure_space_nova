@@ -1,7 +1,7 @@
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Vampire;
+namespace Content.Shared._Adventure.Vampire;
 
 [Serializable, NetSerializable]
 public sealed partial class VampireTrallDoAfterEvent : DoAfterEvent

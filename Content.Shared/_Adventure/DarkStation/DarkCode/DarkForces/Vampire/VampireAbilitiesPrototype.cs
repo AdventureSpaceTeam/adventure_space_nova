@@ -1,7 +1,7 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Vampire;
+namespace Content.Shared._Adventure.DarkForces.Vampire;
 
 [Serializable]
 [Prototype("vampireAbility")]

@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Roles;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Roles;
 
 [RegisterComponent, NetworkedComponent]
 public sealed partial class RatvarRighteousComponent : Component

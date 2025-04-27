@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Components;
+﻿namespace Content.Server._Adventure.GameRules.SCP.Station.Components;
 
 [RegisterComponent]
 public sealed partial class SCPStationComponent : Component

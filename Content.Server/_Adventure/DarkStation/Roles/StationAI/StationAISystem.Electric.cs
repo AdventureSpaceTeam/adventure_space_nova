@@ -1,9 +1,9 @@
 ﻿using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Shared.AdventureSpace.Roles.StationAI.Components;
+using Content.Shared._Adventure.Roles.StationAI.Components;
 using Content.Shared.Speech;
 
-namespace Content.Server.AdventureSpace.Roles.StationAI;
+namespace Content.Server._Adventure.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

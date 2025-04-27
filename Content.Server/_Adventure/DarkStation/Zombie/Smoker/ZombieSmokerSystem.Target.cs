@@ -1,10 +1,10 @@
-﻿using Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+﻿using Content.Shared._Adventure.Zombie.Smoker.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs;
 using Content.Shared.Zombies;
 using Robust.Shared.Player;
 
-namespace Content.Server.AdventureSpace.Zombie.Smoker;
+namespace Content.Server._Adventure.Zombie.Smoker;
 
 public sealed partial class ZombieSmokerSystem
 {

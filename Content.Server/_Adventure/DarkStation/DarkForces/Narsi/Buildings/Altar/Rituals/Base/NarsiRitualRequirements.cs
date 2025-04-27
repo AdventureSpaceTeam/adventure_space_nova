@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Whitelist;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
 
 [DataDefinition]
 public sealed partial class NarsiRitualRequirements

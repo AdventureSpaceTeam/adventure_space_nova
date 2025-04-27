@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace Content.Server.AdventureSpace.Utils;
+namespace Content.Server._Adventure.Utils;
 
 public static class CollectionUtils
 {

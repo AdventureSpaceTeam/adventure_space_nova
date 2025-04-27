@@ -2,7 +2,7 @@
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client.AdventureSpace.Roles.CCO.Console;
+namespace Content.Client._Adventure.Roles.CCO.Console;
 
 [GenerateTypedNameReferences]
 public sealed partial class CcoConsoleSquadControl : Control

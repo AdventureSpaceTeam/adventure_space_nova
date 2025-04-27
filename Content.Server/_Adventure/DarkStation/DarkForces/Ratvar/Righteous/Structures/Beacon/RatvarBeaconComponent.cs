@@ -2,7 +2,7 @@
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Beacon;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Structures.Beacon;
 
 [RegisterComponent]
 public sealed partial class RatvarBeaconComponent : Component

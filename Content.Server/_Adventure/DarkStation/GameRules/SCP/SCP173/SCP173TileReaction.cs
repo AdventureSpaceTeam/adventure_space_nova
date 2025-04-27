@@ -15,7 +15,7 @@ using Content.Shared.Tools.Systems;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.SCP173;
+namespace Content.Server._Adventure.GameRules.SCP.SCP173;
 
 [UsedImplicitly]
 [DataDefinition]

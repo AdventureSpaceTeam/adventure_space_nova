@@ -1,8 +1,8 @@
 using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Events;
+using Content.Server._Adventure.DarkForces.Narsi.Runes.Events;
 using Content.Shared.Audio;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Narsi;
+namespace Content.Server._Adventure.GameTicking.Rules.Narsi;
 
 public sealed partial class NarsiRuleSystem
 {

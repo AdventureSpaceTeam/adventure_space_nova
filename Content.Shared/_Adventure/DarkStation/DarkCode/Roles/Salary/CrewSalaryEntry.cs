@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Roles.Salary;
+namespace Content.Shared._Adventure.Roles.Salary;
 
 [ImplicitDataDefinitionForInheritors]
 [Serializable]

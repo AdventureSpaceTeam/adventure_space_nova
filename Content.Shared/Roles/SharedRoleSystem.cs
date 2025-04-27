@@ -3,6 +3,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.Mind;
+using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -465,6 +466,37 @@ public abstract class SharedRoleSystem : EntitySystem
             return false;
 
         return CheckAntagonistStatus(mindId.Value).ExclusiveAntag;
+    }
+
+    public void SubscribeAntagEvents()
+    {
+        SubscribeLocalEvent((EntityUid _, MindRoleComponent component, ref MindGetAllRoleInfoEvent args) =>
+        {
+            var name = "game-ticker-unknown-role";
+            var prototype = "";
+            string? playTimeTracker = null;
+    
+            if (component.AntagPrototype is not null && _prototypes.TryIndex(component.AntagPrototype, out var antag))
+            {
+                name = antag.Name;
+                prototype = antag.ID;
+            }
+            else if (component.JobPrototype is not null && _prototypes.TryIndex(component.JobPrototype, out var job))
+            {
+                name = job.Name;
+                prototype = job.ID;
+                playTimeTracker = job.PlayTimeTracker;
+            }
+    
+            name = Loc.GetString(name);
+            args.Roles.Add(new RoleInfo(name, component.Antag, playTimeTracker, prototype));
+        });
+    
+        SubscribeLocalEvent((EntityUid _, MindRoleComponent component, ref MindIsAntagonistEvent args) =>
+        {
+            args.IsAntagonist |= component.Antag;
+            args.IsExclusiveAntagonist |= component.ExclusiveAntag;
+        });
     }
 
    public (bool Antag, bool ExclusiveAntag) CheckAntagonistStatus(Entity<MindComponent?> mind)

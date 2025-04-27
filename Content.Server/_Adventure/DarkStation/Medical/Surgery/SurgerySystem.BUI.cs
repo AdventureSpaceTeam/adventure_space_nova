@@ -1,14 +1,14 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Components;
-using Content.Server.AdventureSpace.Medical.Surgery.Events;
-using Content.Server.AdventureSpace.Medical.Surgery.Tools;
-using Content.Server.AdventureSpace.Medical.Surgery.Tools.Components;
-using Content.Shared.AdventureSpace.Medical.Surgery;
-using Content.Shared.AdventureSpace.Medical.Surgery.Components;
+﻿using Content.Server._Adventure.Medical.Surgery.Components;
+using Content.Server._Adventure.Medical.Surgery.Events;
+using Content.Server._Adventure.Medical.Surgery.Tools;
+using Content.Server._Adventure.Medical.Surgery.Tools.Components;
+using Content.Shared._Adventure.Medical.Surgery;
+using Content.Shared._Adventure.Medical.Surgery.Components;
 using Content.Shared.Body.Part;
 using Content.Shared.Hands.Components;
 using Content.Shared.Inventory;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery;
+namespace Content.Server._Adventure.Medical.Surgery;
 
 public sealed partial class SurgerySystem
 {

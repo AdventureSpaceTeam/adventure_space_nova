@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Tools;
+﻿using Content.Server._Adventure.Medical.Surgery.Tools;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Events;
+namespace Content.Server._Adventure.Medical.Surgery.Events;
 
 public sealed class SurgeryToolAppliedEvent(SurgeryToolUsage toolUsage) : HandledEntityEventArgs
 {

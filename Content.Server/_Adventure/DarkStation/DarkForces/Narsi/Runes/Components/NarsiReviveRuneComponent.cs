@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
+namespace Content.Server._Adventure.DarkForces.Narsi.Runes.Components;
 
 [RegisterComponent]
 public sealed partial class NarsiReviveRuneComponent : Component

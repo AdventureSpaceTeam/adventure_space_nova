@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
+﻿using Content.Server._Adventure.Medical.Disease.Components;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Data;
+namespace Content.Server._Adventure.Medical.Disease.Data;
 
 [Serializable]
 [DataDefinition]

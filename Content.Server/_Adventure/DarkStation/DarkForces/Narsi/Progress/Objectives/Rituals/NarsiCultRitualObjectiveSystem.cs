@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Progress.Objectives;
+using Content.Shared._Adventure.DarkForces.Narsi.Progress.Objectives;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Rituals;
+namespace Content.Server._Adventure.DarkForces.Narsi.Progress.Objectives.Rituals;
 
 public sealed class NarsiCultRitualObjectiveSystem : EntitySystem
 {

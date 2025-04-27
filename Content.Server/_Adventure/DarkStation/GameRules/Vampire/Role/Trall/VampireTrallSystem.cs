@@ -1,8 +1,8 @@
-using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components;
-using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
+using Content.Server._Adventure.DarkForces.Saint.Chaplain.Components;
+using Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
 using Content.Server.Mind;
 using Content.Server.Roles;
-using Content.Shared.AdventureSpace.DarkForces.Vampire.Components;
+using Content.Shared._Adventure.DarkForces.Vampire.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Mind;
 using Content.Shared.Mindshield.Components;
@@ -14,7 +14,7 @@ using Content.Shared.Stunnable;
 using Robust.Server.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire.Role.Trall;
+namespace Content.Server._Adventure.GameRules.Vampire.Role.Trall;
 
 public sealed class VampireTrallSystem : EntitySystem
 {

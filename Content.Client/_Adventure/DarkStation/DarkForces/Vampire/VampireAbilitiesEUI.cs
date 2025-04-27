@@ -1,9 +1,9 @@
 ﻿using Content.Client.Eui;
-using Content.Shared.AdventureSpace.DarkForces.Vampire;
+using Content.Shared._Adventure.DarkForces.Vampire;
 using Content.Shared.Eui;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.AdventureSpace.DarkForces.Vampire;
+namespace Content.Client._Adventure.DarkForces.Vampire;
 
 public sealed class VampireAbilitiesEUI : BaseEui
 {

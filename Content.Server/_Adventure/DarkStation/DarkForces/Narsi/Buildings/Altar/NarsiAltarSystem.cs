@@ -1,8 +1,8 @@
-using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
+using Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
+using Content.Server._Adventure.DarkForces.Narsi.Progress;
 using Content.Server.Polymorph.Systems;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings.Altar;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.DoAfter;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
@@ -12,7 +12,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar;
 
 public sealed partial class NarsiAltarSystem : EntitySystem
 {

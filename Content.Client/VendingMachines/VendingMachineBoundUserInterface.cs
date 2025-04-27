@@ -3,7 +3,7 @@ using Content.Shared.VendingMachines;
 using Robust.Client.UserInterface.Controls;
 using System.Linq;
 using Content.Client.UserInterface.Controls;
-using Content.Shared.AdventureSpace.CCVars;
+using Content.Shared._Adventure.CCVars;
 using Robust.Client.UserInterface;
 using Robust.Shared.Configuration;
 

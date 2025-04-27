@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.Medical.Surgery.Events;
+namespace Content.Server._Adventure.Medical.Surgery.Events;
 
 [ByRefEvent]
 public record struct SurgeryBodyUpdated(EntityUid Body);

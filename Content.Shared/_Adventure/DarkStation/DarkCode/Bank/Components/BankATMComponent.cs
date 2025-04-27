@@ -1,7 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.Bank.Components;
+namespace Content.Shared._Adventure.Bank.Components;
 
 [RegisterComponent, NetworkedComponent]
 public sealed partial class BankATMComponent : Component

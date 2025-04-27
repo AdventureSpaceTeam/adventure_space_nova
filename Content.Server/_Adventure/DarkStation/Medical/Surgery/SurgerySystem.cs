@@ -1,13 +1,13 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.AdventureSpace.Medical.Surgery.Components;
-using Content.Server.AdventureSpace.Medical.Surgery.Events;
-using Content.Server.AdventureSpace.Medical.Surgery.Tools;
-using Content.Server.AdventureSpace.Medical.Surgery.Tools.Components;
+using Content.Server._Adventure.Medical.Surgery.Components;
+using Content.Server._Adventure.Medical.Surgery.Events;
+using Content.Server._Adventure.Medical.Surgery.Tools;
+using Content.Server._Adventure.Medical.Surgery.Tools.Components;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
-using Content.Shared.AdventureSpace.Medical.Surgery;
-using Content.Shared.AdventureSpace.Medical.Surgery.Components;
+using Content.Shared._Adventure.Medical.Surgery;
+using Content.Shared._Adventure.Medical.Surgery.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Organ;
@@ -24,7 +24,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery;
+namespace Content.Server._Adventure.Medical.Surgery;
 
 public sealed partial class SurgerySystem : EntitySystem
 {

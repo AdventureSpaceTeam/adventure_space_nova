@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using Content.Server.AdventureSpace.Roles.Spawners;
+using Content.Server._Adventure.Roles.Spawners;
 using Content.Server.GameTicking;
 using Content.Shared.Preferences;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Patron;
+namespace Content.Server._Adventure.Patron;
 
 public sealed class PatronItemsSystem : EntitySystem
 {

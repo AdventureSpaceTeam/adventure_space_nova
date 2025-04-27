@@ -1,6 +1,6 @@
 using Content.Server.Station.Components;
 
-namespace Content.Server.AdventureSpace.Roles.Spawners;
+namespace Content.Server._Adventure.Roles.Spawners;
 
 public static class StationJobComponentExt
 {

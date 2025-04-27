@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Armor;
+﻿namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Armor;
 
 [RegisterComponent]
 public sealed partial class RatvarCuirassComponent : Component

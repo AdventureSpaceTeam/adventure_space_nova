@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Components;
+﻿using Content.Server._Adventure.DarkForces.Narsi.Progress.Components;
 using Content.Shared.Objectives.Components;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives;
+namespace Content.Server._Adventure.DarkForces.Narsi.Progress.Objectives;
 
 public sealed class NarsiObjectiveSystem : EntitySystem
 {

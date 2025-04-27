@@ -1,4 +1,4 @@
-namespace Content.Shared.AdventureSpace.FastUI;
+namespace Content.Shared._Adventure.FastUI;
 
 public sealed class SecretListingEUISelectedEvent : CancellableEntityEventArgs
 {

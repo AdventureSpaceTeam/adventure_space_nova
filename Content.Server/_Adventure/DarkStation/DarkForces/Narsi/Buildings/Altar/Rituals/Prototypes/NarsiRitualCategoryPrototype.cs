@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
 
 [Prototype]
 public sealed class NarsiRitualCategoryPrototype : IPrototype

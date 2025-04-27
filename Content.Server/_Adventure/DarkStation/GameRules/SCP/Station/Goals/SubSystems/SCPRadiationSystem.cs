@@ -1,8 +1,8 @@
-using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Components;
+using Content.Server._Adventure.GameRules.SCP.Station.Goals.Components;
 using Content.Shared.Radiation.Events;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.SubSystems;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Goals.SubSystems;
 
 public sealed class SCPRadiationSystem : EntitySystem
 {

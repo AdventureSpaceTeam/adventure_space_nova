@@ -1,12 +1,12 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Midas;
+using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities.Midas;
 using Content.Server.Stack;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Prototypes;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+using Content.Shared._Adventure.DarkForces.Ratvar.Prototypes;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities;
+using Content.Shared._Adventure.DarkForces.Ratvar.UI;
 using Content.Shared.Stacks;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities;
 
 public sealed partial class RatvarAbilitiesSystem
 {

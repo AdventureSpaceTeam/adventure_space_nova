@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using Content.Server.Interaction;
 using Content.Shared.ActionBlocker;
-using Content.Shared.AdventureSpace.Zombie.Hunter;
+using Content.Shared._Adventure.Zombie.Hunter;
 using Content.Shared.Damage;
 using Content.Shared.Humanoid;
 using Content.Shared.Interaction.Events;
@@ -19,7 +19,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.Zombie.Hunter;
+namespace Content.Server._Adventure.Zombie.Hunter;
 
 public sealed class ZombieHunterSystem : EntitySystem
 {

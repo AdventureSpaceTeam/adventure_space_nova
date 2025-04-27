@@ -2,7 +2,7 @@ using Content.Shared.Eui;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Vampire;
+namespace Content.Shared._Adventure.DarkForces.Vampire;
 
 [Serializable, NetSerializable]
 public sealed class VampireAbilitiesState : EuiMessageBase

@@ -1,8 +1,8 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Components;
-using Content.Server.AdventureSpace.Medical.Surgery.Events;
+﻿using Content.Server._Adventure.Medical.Surgery.Components;
+using Content.Server._Adventure.Medical.Surgery.Events;
 using Content.Shared.Body.Part;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery;
+namespace Content.Server._Adventure.Medical.Surgery;
 
 public sealed partial class SurgerySystem
 {

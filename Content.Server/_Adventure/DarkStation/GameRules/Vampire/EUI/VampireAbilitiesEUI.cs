@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventureSpace.GameRules.Vampire.Role.Events;
+﻿using Content.Server._Adventure.GameRules.Vampire.Role.Events;
 using Content.Server.EUI;
-using Content.Shared.AdventureSpace.DarkForces.Vampire;
+using Content.Shared._Adventure.DarkForces.Vampire;
 using Content.Shared.Eui;
 using JetBrains.Annotations;
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire.EUI;
+namespace Content.Server._Adventure.GameRules.Vampire.EUI;
 
 [UsedImplicitly]
 public sealed class VampireAbilitiesEUI : BaseEui

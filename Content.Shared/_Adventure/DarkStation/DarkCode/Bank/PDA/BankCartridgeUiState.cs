@@ -1,7 +1,7 @@
-using Content.Shared.AdventureSpace.Bank.Transactions;
+using Content.Shared._Adventure.Bank.Transactions;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Bank.PDA;
+namespace Content.Shared._Adventure.Bank.PDA;
 
 [Serializable, NetSerializable]
 public sealed class BankCartridgeUiState : BoundUserInterfaceState

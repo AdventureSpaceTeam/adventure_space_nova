@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Blindness;
+﻿namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Blindness;
 
 [RegisterComponent]
 public sealed partial class NarsiBlindnessComponent : Component

@@ -1,6 +1,6 @@
 using Robust.Shared.Audio;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Narsi;
+namespace Content.Server._Adventure.GameTicking.Rules.Narsi;
 
 [RegisterComponent] [Access(typeof(NarsiRuleSystem))]
 public sealed partial class NarsiRuleComponent : Component

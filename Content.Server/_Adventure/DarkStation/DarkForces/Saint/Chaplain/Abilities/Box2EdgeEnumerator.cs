@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Abilities;
+namespace Content.Server._Adventure.DarkForces.Saint.Chaplain.Abilities;
 
 public struct Box2EdgeEnumerator
 {

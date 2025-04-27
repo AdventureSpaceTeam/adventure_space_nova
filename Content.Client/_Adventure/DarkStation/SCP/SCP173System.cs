@@ -1,9 +1,9 @@
-using Content.Shared.AdventureSpace.SCP._173;
+using Content.Shared._Adventure.SCP._173;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Client.AdventureSpace.SCP;
+namespace Content.Client._Adventure.SCP;
 
 public sealed class SCP173System : SharedSCP173System
 {

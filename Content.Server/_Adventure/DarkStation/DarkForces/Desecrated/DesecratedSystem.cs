@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross.Events;
-using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
-using Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
+﻿using Content.Server._Adventure.DarkForces.Saint.Items.Cross.Events;
+using Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
+using Content.Server._Adventure.DarkForces.Saint.Saintable.Events;
 using Content.Server.Polymorph.Systems;
 using Content.Server.Popups;
-using Content.Shared.AdventureSpace.DarkForces.Desecrated;
+using Content.Shared._Adventure.DarkForces.Desecrated;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
@@ -13,7 +13,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Polymorph;
 using Robust.Shared.Physics.Events;
 
-namespace Content.Server.AdventureSpace.DarkForces.Desecrated;
+namespace Content.Server._Adventure.DarkForces.Desecrated;
 
 public sealed class DesecratedSystem : EntitySystem
 {

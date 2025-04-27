@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities;
 
 [Serializable, NetSerializable]
 public enum RatvarEnchantmentableVisuals : byte

@@ -1,11 +1,11 @@
 using System.Linq;
-using Content.Server.AdventureSpace.Medical.Surgery.Components;
+using Content.Server._Adventure.Medical.Surgery.Components;
 using Content.Server.Medical;
-using Content.Shared.AdventureSpace.Medical.Surgery.Components;
+using Content.Shared._Adventure.Medical.Surgery.Components;
 using Content.Shared.Damage;
 using Content.Shared.Rejuvenate;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Wounds;
+namespace Content.Server._Adventure.Medical.Surgery.Wounds;
 
 public sealed partial class SurgeryDamageSystem
 {

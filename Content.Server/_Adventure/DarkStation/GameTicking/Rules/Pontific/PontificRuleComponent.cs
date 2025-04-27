@@ -2,7 +2,7 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Pontific;
+namespace Content.Server._Adventure.GameTicking.Rules.Pontific;
 
 [RegisterComponent] [Access(typeof(PontificRuleSystem))]
 public sealed partial class PontificRuleComponent : Component

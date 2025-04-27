@@ -1,13 +1,13 @@
 ﻿using Content.Server.Doors.Systems;
 using Content.Server.Electrocution;
 using Content.Server.Power.Components;
-using Content.Shared.AdventureSpace.Roles.StationAI.Components;
-using Content.Shared.AdventureSpace.Roles.StationAI.Events;
+using Content.Shared._Adventure.Roles.StationAI.Components;
+using Content.Shared._Adventure.Roles.StationAI.Events;
 using Content.Shared.Database;
 using Content.Shared.Doors.Components;
 using Content.Shared.Interaction.Events;
 
-namespace Content.Server.AdventureSpace.Roles.StationAI;
+namespace Content.Server._Adventure.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

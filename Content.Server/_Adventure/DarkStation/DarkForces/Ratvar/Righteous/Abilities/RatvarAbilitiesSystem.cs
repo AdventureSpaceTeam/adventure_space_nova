@@ -1,8 +1,8 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
+﻿using Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
 using Content.Shared.Actions;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Weapons;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities.Weapons;
+using Content.Shared._Adventure.DarkForces.Ratvar.UI;
 using Content.Shared.Throwing;
 using Content.Shared.Timing;
 using Content.Shared.Wieldable.Components;
@@ -10,7 +10,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities;
 
 public sealed partial class RatvarAbilitiesSystem : EntitySystem
 {

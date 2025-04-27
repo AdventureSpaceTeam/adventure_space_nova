@@ -1,11 +1,11 @@
 ﻿using System.Text;
-using Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Diagnoser.Components;
-using Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Swab;
-using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+using Content.Server._Adventure.Medical.Disease.Diagnosis.Diagnoser.Components;
+using Content.Server._Adventure.Medical.Disease.Diagnosis.Swab;
+using Content.Server._Adventure.Medical.Disease.Prototypes;
 using Content.Shared.Paper;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Diagnoser;
+namespace Content.Server._Adventure.Medical.Disease.Diagnosis.Diagnoser;
 
 public sealed partial class DiseaseDiagnoserSystem
 {

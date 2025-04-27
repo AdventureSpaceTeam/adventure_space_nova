@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.Bonus;
-using Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.DarkAltar;
-using Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.Prayer;
-using Content.Server.AdventureSpace.SecretCCVars;
+﻿using Content.Server._Adventure.DarkForces.Desecrated.Pontific.Bonus;
+using Content.Server._Adventure.DarkForces.Desecrated.Pontific.DarkAltar;
+using Content.Server._Adventure.DarkForces.Desecrated.Pontific.Prayer;
+using Content.Server._Adventure.SecretCCVars;
 using Content.Server.Beam;
-using Content.Shared.AdventureSpace.DarkForces.Desecrated;
-using Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific;
+using Content.Shared._Adventure.DarkForces.Desecrated;
+using Content.Shared._Adventure.Hunter.Desecrated.Pontific;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.Mobs;
@@ -14,17 +14,17 @@ using Robust.Server.Audio;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using PontificBloodyAltarEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificBloodyAltarEvent;
-using PontificDarkPrayerEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificDarkPrayerEvent;
-using PontificFelLightningEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificFelLightningEvent;
-using PontificFlameSwordsEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificFlameSwordsEvent;
-using PontificKudzuEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificKudzuEvent;
-using PontificLungeOfFaithEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificLungeOfFaithEvent;
-using PontificPrayerDoAfterEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificPrayerDoAfterEvent;
-using PontificSpawnGuardianEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificSpawnGuardianEvent;
-using PontificSpawnMonkEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificSpawnMonkEvent;
+using PontificBloodyAltarEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificBloodyAltarEvent;
+using PontificDarkPrayerEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificDarkPrayerEvent;
+using PontificFelLightningEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificFelLightningEvent;
+using PontificFlameSwordsEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificFlameSwordsEvent;
+using PontificKudzuEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificKudzuEvent;
+using PontificLungeOfFaithEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificLungeOfFaithEvent;
+using PontificPrayerDoAfterEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificPrayerDoAfterEvent;
+using PontificSpawnGuardianEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificSpawnGuardianEvent;
+using PontificSpawnMonkEvent = Content.Shared._Adventure.Hunter.Desecrated.Pontific.PontificSpawnMonkEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific;
+namespace Content.Server._Adventure.DarkForces.Desecrated.Pontific;
 
 public sealed partial class PontificSystem
 {

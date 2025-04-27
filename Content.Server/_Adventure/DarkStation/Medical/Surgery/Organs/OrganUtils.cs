@@ -1,6 +1,6 @@
 using Content.Shared.Body.Organ;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Organs;
+namespace Content.Server._Adventure.Medical.Surgery.Organs;
 
 public static class OrganUtils
 {

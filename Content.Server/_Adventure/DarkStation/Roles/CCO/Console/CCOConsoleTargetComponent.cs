@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.Roles.CCO.Console;
+namespace Content.Server._Adventure.Roles.CCO.Console;
 
 [RegisterComponent]
 public sealed partial class CCOConsoleTargetComponent : Component

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text;
-using Content.Server.AdventureSpace.Utils;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.CreatureEgg;
+using Content.Server._Adventure.Utils;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings.CreatureEgg;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Examine;
 using Content.Shared.Verbs;
@@ -11,7 +11,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.CreatureEgg;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.CreatureEgg;
 
 public sealed class NarsiCreatureEggSystem : EntitySystem
 {

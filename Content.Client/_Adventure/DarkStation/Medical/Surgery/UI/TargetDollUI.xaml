@@ -1,5 +1,5 @@
 ﻿<ui:TargetDollUI xmlns="https://spacestation14.io"
-                 xmlns:ui="clr-namespace:Content.Client.AdventureSpace.Medical.Surgery.UI"
+                 xmlns:ui="clr-namespace:Content.Client._Adventure.Medical.Surgery.UI"
                  MinSize="64 64">
     <PanelContainer HorizontalAlignment="Right" VerticalAlignment="Bottom">
         <BoxContainer Name="Surface" Access="Public" Orientation="Vertical" />

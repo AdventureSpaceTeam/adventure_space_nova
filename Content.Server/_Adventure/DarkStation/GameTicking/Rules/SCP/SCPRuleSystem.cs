@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.GameRules.SCP;
+using Content.Server._Adventure.GameRules.SCP;
 using Content.Server.Antag;
 using Content.Server.GameTicking.Rules;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.SCP;
+namespace Content.Server._Adventure.GameTicking.Rules.SCP;
 
 public sealed class SCPRuleSystem : GameRuleSystem<SCPRuleComponent>
 {

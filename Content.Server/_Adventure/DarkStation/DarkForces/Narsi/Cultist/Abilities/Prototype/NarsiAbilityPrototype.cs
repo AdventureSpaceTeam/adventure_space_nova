@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Prototype;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Prototype;
 
 [Prototype("narsiAbilityPrototype")]
 public sealed class NarsiAbilityPrototype : IPrototype

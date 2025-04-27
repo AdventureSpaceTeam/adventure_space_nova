@@ -1,8 +1,8 @@
-﻿using Content.Shared.AdventureSpace.DarkForces.Ratvar.Structures.Altar;
+﻿using Content.Shared._Adventure.DarkForces.Ratvar.Structures.Altar;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
 
-namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Structures.Altar;
+namespace Content.Client._Adventure.DarkForces.Ratvar.Structures.Altar;
 
 public sealed class AltarGlowSystem : EntitySystem
 {

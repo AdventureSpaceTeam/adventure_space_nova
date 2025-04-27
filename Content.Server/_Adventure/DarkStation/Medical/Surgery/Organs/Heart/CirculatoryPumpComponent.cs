@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components;
-using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components.Base;
+﻿using Content.Server._Adventure.Medical.Surgery.Organs.Components;
+using Content.Server._Adventure.Medical.Surgery.Organs.Components.Base;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Heart;
+namespace Content.Server._Adventure.Medical.Surgery.Organs.Heart;
 
 [RegisterComponent]
 public sealed partial class CirculatoryPumpComponent : BaseOrganComponent, IIntervalOrgan

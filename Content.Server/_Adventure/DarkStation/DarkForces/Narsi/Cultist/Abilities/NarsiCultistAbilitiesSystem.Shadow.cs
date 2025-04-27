@@ -1,10 +1,10 @@
 ﻿using Content.Shared.AdventureSpace;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Cultist.Shadow;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Shared._Adventure.DarkForces.Narsi.Cultist.Shadow;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Robust.Shared.Spawners;
-using NarsiCultistShadowEvent = Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistShadowEvent;
+using NarsiCultistShadowEvent = Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistShadowEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

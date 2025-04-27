@@ -1,20 +1,20 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.Roles.Salary;
+using Content.Server._Adventure.Roles.Salary;
 using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
 using Content.Server.CrewManifest;
 using Content.Server.RoundEnd;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Systems;
-using Content.Shared.AdventureSpace.FastUI;
-using Content.Shared.AdventureSpace.Roles.CCO;
+using Content.Shared._Adventure.FastUI;
+using Content.Shared._Adventure.Roles.CCO;
 using Content.Shared.NPC.Systems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventureSpace.Roles.CCO.Console;
+namespace Content.Server._Adventure.Roles.CCO.Console;
 
 //shit code. I know :)
 public sealed class CcoConsoleSystem : EntitySystem

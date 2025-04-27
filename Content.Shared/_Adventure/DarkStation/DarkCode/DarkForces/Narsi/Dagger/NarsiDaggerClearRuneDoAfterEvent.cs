@@ -1,7 +1,7 @@
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Narsi.Dagger;
+namespace Content.Shared._Adventure.DarkForces.Narsi.Dagger;
 
 [Serializable, NetSerializable]
 public sealed partial class NarsiDaggerClearRuneDoAfterEvent : DoAfterEvent

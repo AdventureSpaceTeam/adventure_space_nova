@@ -1,8 +1,8 @@
 using Content.Shared.Destructible;
 using Content.Shared.Mobs;
-using Content.Shared.AdventureSpace.Roles.StationAI.Components;
+using Content.Shared._Adventure.Roles.StationAI.Components;
 
-namespace Content.Shared.AdventureSpace.Roles.StationAI;
+namespace Content.Shared._Adventure.Roles.StationAI;
 
 public abstract class SharedStationAISystem : EntitySystem
 {

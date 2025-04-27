@@ -1,9 +1,9 @@
-﻿using Content.Shared.AdventureSpace.Roles.CCO;
+﻿using Content.Shared._Adventure.Roles.CCO;
 using Content.Shared.NPC.Prototypes;
 using Robust.Shared.Prototypes;
 using Color = Robust.Shared.Maths.Color;
 
-namespace Content.Server.AdventureSpace.Roles.CCO.Console;
+namespace Content.Server._Adventure.Roles.CCO.Console;
 
 [RegisterComponent]
 public sealed partial class CcoConsoleComponent : Component

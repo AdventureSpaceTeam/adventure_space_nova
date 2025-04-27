@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Numerics;
-using Content.Server.AdventureSpace.Roles.Spawners;
+using Content.Server._Adventure.Roles.Spawners;
 using Content.Server.GameTicking;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Mind;
@@ -8,7 +8,7 @@ using Content.Server.NPC;
 using Content.Server.NPC.HTN;
 using Content.Server.NPC.Systems;
 using Content.Shared.Actions;
-using Content.Shared.AdventureSpace.Patron.Pets;
+using Content.Shared._Adventure.Patron.Pets;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mind.Components;
@@ -23,7 +23,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Patron;
+namespace Content.Server._Adventure.Patron;
 
 public sealed class PatronPetsSystem : EntitySystem
 {

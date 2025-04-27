@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.Medical.Surgery.Tools;
+﻿namespace Content.Server._Adventure.Medical.Surgery.Tools;
 
 public enum SurgeryToolUsage
 {

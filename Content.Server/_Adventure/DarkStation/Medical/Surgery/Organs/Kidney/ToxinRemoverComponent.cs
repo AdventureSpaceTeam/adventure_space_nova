@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components;
-using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components.Base;
+﻿using Content.Server._Adventure.Medical.Surgery.Organs.Components;
+using Content.Server._Adventure.Medical.Surgery.Organs.Components.Base;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Kidney;
+namespace Content.Server._Adventure.Medical.Surgery.Organs.Kidney;
 
 [RegisterComponent]
 public sealed partial class ToxinRemoverComponent : BaseRegeneratableOrganComponent, IIntervalOrgan

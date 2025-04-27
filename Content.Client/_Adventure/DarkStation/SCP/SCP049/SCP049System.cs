@@ -1,11 +1,11 @@
-﻿using Content.Shared.AdventureSpace.SCP.SCP_049;
+﻿using Content.Shared._Adventure.SCP.SCP_049;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;
-using SCP049Component = Content.Shared.AdventureSpace.SCP.SCP_049.Components.SCP049Component;
-using SCP049ThrallComponent = Content.Shared.AdventureSpace.SCP.SCP_049.Components.SCP049ThrallComponent;
+using SCP049Component = Content.Shared._Adventure.SCP.SCP_049.Components.SCP049Component;
+using SCP049ThrallComponent = Content.Shared._Adventure.SCP.SCP_049.Components.SCP049ThrallComponent;
 
-namespace Content.Client.AdventureSpace.SCP.SCP049;
+namespace Content.Client._Adventure.SCP.SCP049;
 
 public sealed class SCP049System : SharedSCP049System
 {

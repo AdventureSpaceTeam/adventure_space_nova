@@ -1,9 +1,9 @@
 ﻿using Content.Server.Cuffs;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Stunnable;
-using NarsiCultistCuffEvent = Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistCuffEvent;
+using NarsiCultistCuffEvent = Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistCuffEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

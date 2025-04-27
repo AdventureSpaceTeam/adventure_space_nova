@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings;
+namespace Content.Shared._Adventure.DarkForces.Narsi.Buildings;
 
 public abstract class SharedFakeNarsiDoorSystem : EntitySystem
 {

@@ -1,8 +1,8 @@
-﻿using Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+﻿using Content.Shared._Adventure.DarkForces.Ratvar.UI;
 using Robust.Client.Graphics;
 using Robust.Client.Input;
 
-namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Midas;
+namespace Content.Client._Adventure.DarkForces.Ratvar.Midas;
 
 public sealed class RatvarMidasTouchBUI : BoundUserInterface
 {

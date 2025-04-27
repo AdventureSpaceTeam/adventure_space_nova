@@ -1,8 +1,8 @@
-using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Gear;
+using Content.Server._Adventure.DarkForces.Narsi.Cultist.Gear;
 using Content.Server.Materials;
-using Content.Shared.AdventureSpace.Cult;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Shared._Adventure.Cult;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.DoAfter;
 using Content.Shared.Materials;
 using Content.Shared.Popups;
@@ -11,7 +11,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Forge;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Forge;
 
 public sealed class NarsiCultForgeSystem : EntitySystem
 {

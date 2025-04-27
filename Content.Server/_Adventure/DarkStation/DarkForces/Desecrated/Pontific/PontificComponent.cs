@@ -4,7 +4,7 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific;
+namespace Content.Server._Adventure.DarkForces.Desecrated.Pontific;
 
 [RegisterComponent]
 public sealed partial class PontificComponent : Component

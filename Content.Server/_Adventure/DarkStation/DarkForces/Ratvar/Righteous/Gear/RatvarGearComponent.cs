@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Gear;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Gear;
 
 [RegisterComponent]
 public sealed partial class RatvarGearComponent : Component

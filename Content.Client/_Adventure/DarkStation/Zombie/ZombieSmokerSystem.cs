@@ -1,5 +1,5 @@
-﻿using Content.Shared.AdventureSpace.Zombie.Smoker;
-using Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+﻿using Content.Shared._Adventure.Zombie.Smoker;
+using Content.Shared._Adventure.Zombie.Smoker.Components;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -7,7 +7,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Dynamics.Joints;
 
-namespace Content.Client.AdventureSpace.Zombie;
+namespace Content.Client._Adventure.Zombie;
 
 public sealed class ZombieSmokerSystem : SharedZombieSmokerSystem
 {

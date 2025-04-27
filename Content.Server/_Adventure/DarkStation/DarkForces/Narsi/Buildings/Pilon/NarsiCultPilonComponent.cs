@@ -2,7 +2,7 @@ using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Pilon;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Pilon;
 
 [RegisterComponent]
 public sealed partial class NarsiCultPilonComponent : Component

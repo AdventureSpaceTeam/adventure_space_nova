@@ -2,7 +2,7 @@
 using Content.Server.StationRecords.Systems;
 using Content.Shared.StationRecords;
 
-namespace Content.Server.AdventureSpace.Roles.Salary;
+namespace Content.Server._Adventure.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {

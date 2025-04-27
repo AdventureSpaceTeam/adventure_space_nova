@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.Medical.Surgery.Bionic;
+﻿namespace Content.Server._Adventure.Medical.Surgery.Bionic;
 
 [RegisterComponent]
 public sealed partial class ArmDrillComponent : Component, IBionicPart

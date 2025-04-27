@@ -1,7 +1,7 @@
 ﻿using Content.Server.Popups;
 using Content.Shared.Alert;
 
-namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific;
+namespace Content.Server._Adventure.DarkForces.Desecrated.Pontific;
 
 [DataDefinition]
 public sealed partial class PontificFelAlertClick : IAlertClick

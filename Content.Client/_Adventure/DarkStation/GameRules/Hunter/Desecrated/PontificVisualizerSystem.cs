@@ -1,8 +1,8 @@
-using Content.Client.AdventureSpace.DarkForces.Desecrated;
-using Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific;
+using Content.Client._Adventure.DarkForces.Desecrated;
+using Content.Shared._Adventure.Hunter.Desecrated.Pontific;
 using Robust.Client.GameObjects;
 
-namespace Content.Client.AdventureSpace.GameRules.Hunter.Desecrated;
+namespace Content.Client._Adventure.GameRules.Hunter.Desecrated;
 
 public sealed class PontificDamageStateVisualizerSystem : VisualizerSystem<PontificVisualsComponent>
 {

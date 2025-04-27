@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+namespace Content.Server._Adventure.Medical.Disease.Prototypes;
 
 [Prototype("diseaseBlacklistPrototype")]
 public sealed class DiseaseBlacklistPrototype : IPrototype

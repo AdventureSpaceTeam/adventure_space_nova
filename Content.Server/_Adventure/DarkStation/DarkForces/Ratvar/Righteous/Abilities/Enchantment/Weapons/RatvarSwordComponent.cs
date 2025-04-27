@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Weapons;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Weapons;
 
 [RegisterComponent]
 public sealed partial class RatvarSwordComponent : Component

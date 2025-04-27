@@ -1,13 +1,13 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Blindness;
-using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
-using Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Cultist.Blindness;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+﻿using Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Blindness;
+using Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
+using Content.Server._Adventure.DarkForces.Saint.Saintable.Events;
+using Content.Shared._Adventure.DarkForces.Narsi.Cultist.Blindness;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.StatusEffect;
 using NarsiCultistBlindnessEvent =
-    Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistBlindnessEvent;
+    Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistBlindnessEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

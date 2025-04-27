@@ -1,18 +1,18 @@
-using Content.Server.AdventureSpace.GameRules.Vampire.Role.Events;
-using Content.Server.AdventureSpace.GameRules.Vampire.Role.Trall;
+using Content.Server._Adventure.GameRules.Vampire.Role.Events;
+using Content.Server._Adventure.GameRules.Vampire.Role.Trall;
 using Content.Server.DoAfter;
 using Content.Server.Popups;
 using Content.Server.Stunnable;
 using Content.Shared.Actions;
-using Content.Shared.AdventureSpace.Vampire;
+using Content.Shared._Adventure.Vampire;
 using Content.Shared.Damage;
 using Content.Shared.Popups;
 using Robust.Shared.Console;
 using Robust.Shared.Timing;
-using VampireComponent = Content.Shared.AdventureSpace.DarkForces.Vampire.Components.VampireComponent;
+using VampireComponent = Content.Shared._Adventure.DarkForces.Vampire.Components.VampireComponent;
 
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire.Role.Abilities;
+namespace Content.Server._Adventure.GameRules.Vampire.Role.Abilities;
 
 public sealed partial class VampireAbilitiesSystem : EntitySystem
 {

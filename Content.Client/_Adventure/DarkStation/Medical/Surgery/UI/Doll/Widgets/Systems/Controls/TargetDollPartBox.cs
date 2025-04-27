@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Body.Part;
 
-namespace Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems.Controls;
+namespace Content.Client._Adventure.Medical.Surgery.UI.Doll.Widgets.Systems.Controls;
 
 public sealed class TargetDollPartBox
 {

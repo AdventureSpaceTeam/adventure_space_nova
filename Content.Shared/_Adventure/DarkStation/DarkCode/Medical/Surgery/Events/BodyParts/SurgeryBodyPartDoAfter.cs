@@ -1,7 +1,7 @@
 ﻿using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Medical.Surgery.Events.BodyParts;
+namespace Content.Shared._Adventure.Medical.Surgery.Events.BodyParts;
 
 [Serializable, NetSerializable]
 public partial class SurgeryBodyPartDoAfter : DoAfterEvent

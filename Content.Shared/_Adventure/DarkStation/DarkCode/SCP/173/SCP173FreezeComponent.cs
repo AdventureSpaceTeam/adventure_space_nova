@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.SCP._173;
+namespace Content.Shared._Adventure.SCP._173;
 
 [RegisterComponent, NetworkedComponent]
 [Access(typeof(SharedSCP173System))]

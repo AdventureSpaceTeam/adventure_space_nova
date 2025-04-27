@@ -1,10 +1,10 @@
-using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals;
+using Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals;
 using Content.Shared.DoAfter;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar;
 
 [RegisterComponent]
 public sealed partial class NarsiAltarComponent : Component

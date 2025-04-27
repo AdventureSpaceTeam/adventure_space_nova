@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Content.Server.Body.Components;
 using Content.Server.Body.Events;
-using Content.Shared.AdventureSpace.Medical.Surgery.Events.Organs;
+using Content.Shared._Adventure.Medical.Surgery.Events.Organs;
 using Content.Shared.Damage;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Nutrition.Components;
@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 using Robust.Shared.Configuration;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Heart;
+namespace Content.Server._Adventure.Medical.Surgery.Organs.Heart;
 
 [UsedImplicitly]
 public sealed class CirculatoryPumpSystem : SurgeryOrganSystem<CirculatoryPumpComponent, CirculatoryPumpMarkerComponent>

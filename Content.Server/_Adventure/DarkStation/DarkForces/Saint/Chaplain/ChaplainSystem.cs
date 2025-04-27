@@ -1,8 +1,8 @@
 ﻿using Content.Server.Actions;
 using ChaplainComponent =
-    Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components.ChaplainComponent;
+    Content.Server._Adventure.DarkForces.Saint.Chaplain.Components.ChaplainComponent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain;
+namespace Content.Server._Adventure.DarkForces.Saint.Chaplain;
 
 public sealed partial class ChaplainSystem : EntitySystem
 {

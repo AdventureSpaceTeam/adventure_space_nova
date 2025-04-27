@@ -1,4 +1,4 @@
-namespace Content.Client.AdventureSpace.GameRules.Hunter.Desecrated;
+namespace Content.Client._Adventure.GameRules.Hunter.Desecrated;
 
 [RegisterComponent]
 public sealed partial class PontificVisualsComponent : Component

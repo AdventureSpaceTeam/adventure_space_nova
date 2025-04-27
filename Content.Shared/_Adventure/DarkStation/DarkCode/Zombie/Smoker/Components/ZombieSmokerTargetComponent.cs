@@ -1,7 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+namespace Content.Shared._Adventure.Zombie.Smoker.Components;
 
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]

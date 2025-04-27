@@ -1,9 +1,9 @@
-﻿using Content.Shared.AdventureSpace.DarkForces.Vampire.Components;
+﻿using Content.Shared._Adventure.DarkForces.Vampire.Components;
 using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;
-using VampireComponent = Content.Shared.AdventureSpace.DarkForces.Vampire.Components.VampireComponent;
+using VampireComponent = Content.Shared._Adventure.DarkForces.Vampire.Components.VampireComponent;
 
-namespace Content.Client.AdventureSpace.DarkForces.Vampire.Overlay;
+namespace Content.Client._Adventure.DarkForces.Vampire.Overlay;
 
 public sealed class VampireIconsSystem : EntitySystem
 {

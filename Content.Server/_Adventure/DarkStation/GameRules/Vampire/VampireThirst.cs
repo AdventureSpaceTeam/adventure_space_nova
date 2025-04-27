@@ -4,7 +4,7 @@ using Content.Shared.Nutrition.Components;
 using Content.Shared.Nutrition.EntitySystems;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.GameRules.Vampire;
+namespace Content.Server._Adventure.GameRules.Vampire;
 
 public sealed partial class VampireThirst : EntityEffect
 {

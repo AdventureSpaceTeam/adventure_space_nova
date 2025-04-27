@@ -3,7 +3,7 @@ using System.Numerics;
 using Content.Shared.Body.Part;
 using Robust.Client.UserInterface.Controls;
 
-namespace Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems.Controls;
+namespace Content.Client._Adventure.Medical.Surgery.UI.Doll.Widgets.Systems.Controls;
 
 public sealed class TargetDollTextureButton : TextureButton
 {

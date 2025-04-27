@@ -1,9 +1,9 @@
-﻿using Content.Shared.AdventureSpace.Zombie.Hunter;
+﻿using Content.Shared._Adventure.Zombie.Hunter;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 
-namespace Content.Server.AdventureSpace.Zombie.Hunter;
+namespace Content.Server._Adventure.Zombie.Hunter;
 
 [RegisterComponent]
 public sealed partial class ZombieHunterComponent : Component

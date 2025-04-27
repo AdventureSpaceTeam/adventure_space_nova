@@ -1,7 +1,7 @@
 ﻿using Content.Server._c4llv07e.Bridges;
-using Content.Server.AdventureSpace.DarkForces.Saint.Saintable;
+using Content.Server._Adventure.DarkForces.Saint.Saintable;
 
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Items;
+namespace Content.Server._Adventure.DarkForces.Saint.Items;
 
 public sealed class SaintedBridge : ISaintedBridge
 {

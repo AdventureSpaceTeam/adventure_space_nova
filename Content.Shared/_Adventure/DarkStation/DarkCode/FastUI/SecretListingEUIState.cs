@@ -1,5 +1,5 @@
 using Content.Shared.Eui;
-using Content.Shared.AdventureSpace.FastUI;
+using Content.Shared._Adventure.FastUI;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.FastUI;

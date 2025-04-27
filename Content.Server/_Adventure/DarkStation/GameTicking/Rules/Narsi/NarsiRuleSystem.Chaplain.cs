@@ -1,9 +1,9 @@
 using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Roles.Narsi;
-using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Abilities;
+using Content.Server._Adventure.DarkForces.Narsi.Cultist.Roles.Narsi;
+using Content.Server._Adventure.DarkForces.Saint.Chaplain.Abilities;
 using Content.Shared.Audio;
 
-namespace Content.Server.AdventureSpace.GameTicking.Rules.Narsi;
+namespace Content.Server._Adventure.GameTicking.Rules.Narsi;
 
 public sealed partial class NarsiRuleSystem
 {

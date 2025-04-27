@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Bank.Transactions;
+namespace Content.Shared._Adventure.Bank.Transactions;
 
 [Serializable, NetSerializable]
 public sealed class BankTransaction

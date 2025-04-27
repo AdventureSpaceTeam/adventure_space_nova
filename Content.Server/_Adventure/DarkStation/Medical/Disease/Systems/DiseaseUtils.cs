@@ -1,9 +1,9 @@
-using Content.Server.AdventureSpace.Medical.Disease.Components;
-using Content.Server.AdventureSpace.Medical.Disease.Data;
-using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+using Content.Server._Adventure.Medical.Disease.Components;
+using Content.Server._Adventure.Medical.Disease.Data;
+using Content.Server._Adventure.Medical.Disease.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
+namespace Content.Server._Adventure.Medical.Disease.Systems;
 
 public static class DiseaseUtils
 {

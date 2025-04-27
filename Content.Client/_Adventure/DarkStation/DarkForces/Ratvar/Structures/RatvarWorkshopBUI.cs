@@ -1,6 +1,6 @@
-﻿using Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+﻿using Content.Shared._Adventure.DarkForces.Ratvar.UI;
 
-namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Structures;
+namespace Content.Client._Adventure.DarkForces.Ratvar.Structures;
 
 public sealed class RatvarWorkshopBUI : BoundUserInterface
 {

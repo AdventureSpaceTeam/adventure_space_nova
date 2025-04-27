@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Narsi.Cultist.Shadow;
+namespace Content.Shared._Adventure.DarkForces.Narsi.Cultist.Shadow;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class NarsiCultistShadowVisualizeComponent : Component

@@ -6,7 +6,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
+namespace Content.Server._Adventure.DarkForces.Narsi.Progress;
 
 public sealed partial class NarsiCultProgressSystem : EntitySystem
 {

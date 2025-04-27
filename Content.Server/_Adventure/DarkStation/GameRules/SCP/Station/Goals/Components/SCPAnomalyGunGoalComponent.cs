@@ -1,6 +1,6 @@
 using Content.Shared.Anomaly;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Components;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Goals.Components;
 
 [RegisterComponent]
 public sealed partial class SCPAnomalyGunGoalComponent : Component

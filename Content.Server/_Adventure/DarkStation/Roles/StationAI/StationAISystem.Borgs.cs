@@ -1,11 +1,11 @@
 ﻿using Content.Server.PowerCell;
 using Content.Server.Silicons.Laws;
-using Content.Shared.AdventureSpace.Roles.StationAI.Components;
-using Content.Shared.AdventureSpace.Roles.StationAI.UI;
+using Content.Shared._Adventure.Roles.StationAI.Components;
+using Content.Shared._Adventure.Roles.StationAI.UI;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Silicons.Borgs.Components;
 
-namespace Content.Server.AdventureSpace.Roles.StationAI;
+namespace Content.Server._Adventure.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

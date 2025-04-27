@@ -1,6 +1,6 @@
 using System.Numerics;
 using Content.Server.Actions;
-using Content.Shared.AdventureSpace.SCP.Soap;
+using Content.Shared._Adventure.SCP.Soap;
 using Content.Shared.Slippery;
 using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
@@ -9,7 +9,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.SOAP;
+namespace Content.Server._Adventure.GameRules.SCP.SOAP;
 
 public sealed class SCPSoapSystem : EntitySystem
 {

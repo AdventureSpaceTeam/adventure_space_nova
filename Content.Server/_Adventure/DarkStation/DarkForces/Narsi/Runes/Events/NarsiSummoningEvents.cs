@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Events;
+namespace Content.Server._Adventure.DarkForces.Narsi.Runes.Events;
 
 public sealed class NarsiSummoningStartEvent : CancellableEntityEventArgs
 {

@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.FastUI;
+namespace Content.Shared._Adventure.FastUI;
 
 [Serializable, NetSerializable]
 public enum SecretListingKey : byte

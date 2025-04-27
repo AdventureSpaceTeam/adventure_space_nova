@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Components;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Goals.Components;
 
 [RegisterComponent]
 public sealed partial class SCPTransferGoalComponent : Component

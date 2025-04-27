@@ -1,7 +1,7 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.UI;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.UI;
 
 [Serializable, NetSerializable]
 public enum RatvarWorkshopKey

@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Offering;
+﻿namespace Content.Server._Adventure.DarkForces.Narsi.Progress.Objectives.Offering;
 
 [RegisterComponent]
 public sealed partial class NarsiCultOfferObjectiveComponent : Component

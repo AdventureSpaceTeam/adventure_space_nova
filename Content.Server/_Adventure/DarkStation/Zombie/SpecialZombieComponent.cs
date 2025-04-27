@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.Zombie;
+﻿namespace Content.Server._Adventure.Zombie;
 
 [RegisterComponent]
 public sealed partial class SpecialZombieComponent : Component

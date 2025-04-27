@@ -1,7 +1,7 @@
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Ratvar.DoAfterEvents;
+namespace Content.Shared._Adventure.DarkForces.Ratvar.DoAfterEvents;
 
 [Serializable, NetSerializable]
 public sealed partial class RatvarSoulVesselDoAfterEvent : DoAfterEvent

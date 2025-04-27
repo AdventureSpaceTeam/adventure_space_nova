@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventureSpace.Medical.Disease.Data;
+﻿using Content.Server._Adventure.Medical.Disease.Data;
 using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+namespace Content.Server._Adventure.Medical.Disease.Prototypes;
 
 [Prototype("diseaseStage")]
 public sealed class DiseasesStagePrototype : IPrototype

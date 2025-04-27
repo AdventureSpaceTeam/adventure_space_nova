@@ -1,4 +1,4 @@
-namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Abilities;
+namespace Content.Server._Adventure.DarkForces.Saint.Chaplain.Abilities;
 
 public sealed class ChaplainNarsiExileEnableEvent : CancellableEntityEventArgs
 {

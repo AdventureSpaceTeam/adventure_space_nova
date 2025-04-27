@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventureSpace.GameRules.SCP.Station.Components;
+﻿using Content.Server._Adventure.GameRules.SCP.Station.Components;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Systems;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Systems;
 
 public sealed class SCPStationSystem : EntitySystem
 {

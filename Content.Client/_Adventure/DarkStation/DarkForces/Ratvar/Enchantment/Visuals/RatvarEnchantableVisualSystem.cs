@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Client.Items.Systems;
-using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
+using Content.Shared._Adventure.DarkForces.Ratvar.Righteous.Abilities;
 using Content.Shared.Hands;
 using Content.Shared.Item;
 using Robust.Client.GameObjects;
@@ -9,7 +9,7 @@ using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Enchantment.Visuals;
+namespace Content.Client._Adventure.DarkForces.Ratvar.Enchantment.Visuals;
 
 public sealed class RatvarEnchantableVisualSystem : EntitySystem
 {

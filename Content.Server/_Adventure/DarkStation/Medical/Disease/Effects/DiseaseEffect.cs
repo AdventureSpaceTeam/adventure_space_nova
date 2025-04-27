@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventureSpace.Medical.Surgery.Organs.Events;
+﻿using Content.Server._Adventure.Medical.Surgery.Organs.Events;
 using Content.Server.Body.Systems;
 using Content.Shared.Damage;
 using OrganType = Content.Shared.Body.Organ.OrganType;
 
-namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
+namespace Content.Server._Adventure.Medical.Disease.Effects;
 
 [ImplicitDataDefinitionForInheritors]
 public abstract partial class DiseaseEffect

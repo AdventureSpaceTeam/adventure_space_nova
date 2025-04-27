@@ -1,9 +1,9 @@
-using Content.Shared.AdventureSpace.Medical.Surgery.Components;
+using Content.Shared._Adventure.Medical.Surgery.Components;
 using Content.Shared.Body.Part;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Body;
+namespace Content.Server._Adventure.Medical.Surgery.Body;
 
 public sealed partial class SurgeryBodySystem
 {

@@ -2,7 +2,7 @@ using Content.Shared.Actions;
 using Content.Shared.DoAfter;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Saint.Chaplain.Events;
+namespace Content.Shared._Adventure.DarkForces.Saint.Chaplain.Events;
 
 public sealed partial class ChaplainStartExorcismEvent : EntityTargetActionEvent
 {

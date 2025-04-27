@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.Bonus;
+﻿namespace Content.Server._Adventure.DarkForces.Desecrated.Pontific.Bonus;
 
 public sealed class PontificBonusEndEvent : EntityEventArgs
 {

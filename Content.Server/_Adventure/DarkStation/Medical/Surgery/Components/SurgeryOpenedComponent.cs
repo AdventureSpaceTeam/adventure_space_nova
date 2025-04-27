@@ -2,7 +2,7 @@
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Components;
+namespace Content.Server._Adventure.Medical.Surgery.Components;
 
 [RegisterComponent]
 public sealed partial class SurgeryOpenedComponent : Component

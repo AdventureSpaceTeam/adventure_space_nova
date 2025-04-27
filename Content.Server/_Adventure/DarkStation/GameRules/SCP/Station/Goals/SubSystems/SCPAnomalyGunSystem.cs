@@ -2,9 +2,9 @@ using Content.Server.Anomaly.Components;
 using Content.Shared.Anomaly;
 using Robust.Shared.Physics.Events;
 using SCPAnomalyGunGoalComponent =
-    Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Components.SCPAnomalyGunGoalComponent;
+    Content.Server._Adventure.GameRules.SCP.Station.Goals.Components.SCPAnomalyGunGoalComponent;
 
-namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.SubSystems;
+namespace Content.Server._Adventure.GameRules.SCP.Station.Goals.SubSystems;
 
 public sealed class SCPAnomalyGunSystem : EntitySystem
 {

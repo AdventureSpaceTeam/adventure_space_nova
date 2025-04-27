@@ -1,6 +1,6 @@
 using Content.Shared.Damage;
 
-namespace Content.Shared.AdventureSpace.DarkForces.Saint.Saintable;
+namespace Content.Shared._Adventure.DarkForces.Saint.Saintable;
 
 [RegisterComponent]
 public sealed partial class SaintSilverComponent : Component

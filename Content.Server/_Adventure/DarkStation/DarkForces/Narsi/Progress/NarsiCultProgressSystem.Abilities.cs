@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Prototype;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Abilities;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Prototype;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings.Altar.Abilities;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
+namespace Content.Server._Adventure.DarkForces.Narsi.Progress;
 
 public sealed partial class NarsiCultProgressSystem
 {

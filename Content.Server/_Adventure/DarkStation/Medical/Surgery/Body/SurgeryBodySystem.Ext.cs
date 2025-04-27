@@ -3,7 +3,7 @@ using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
 using Content.Shared.Body.Systems;
 
-namespace Content.Server.AdventureSpace.Medical.Surgery.Body;
+namespace Content.Server._Adventure.Medical.Surgery.Body;
 
 public sealed partial class SurgeryBodySystem
 {

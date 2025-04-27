@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+namespace Content.Shared._Adventure.Zombie.Smoker.Components;
 
 [Serializable, NetSerializable]
 public enum ZombieSmokerVisuals : byte

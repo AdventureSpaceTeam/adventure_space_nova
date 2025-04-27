@@ -1,11 +1,11 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Rituals;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals;
+﻿using Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
+using Content.Server._Adventure.DarkForces.Narsi.Progress.Objectives.Rituals;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings.Altar;
+using Content.Shared._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals;
 using Content.Shared.Buckle.Components;
 using Content.Shared.DoAfter;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar;
 
 public sealed partial class NarsiAltarSystem
 {

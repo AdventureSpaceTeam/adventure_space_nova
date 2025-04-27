@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Bank.BUI;
+namespace Content.Shared._Adventure.Bank.BUI;
 
 [NetSerializable, Serializable]
 public sealed class BankATMMenuInterfaceState : BoundUserInterfaceState

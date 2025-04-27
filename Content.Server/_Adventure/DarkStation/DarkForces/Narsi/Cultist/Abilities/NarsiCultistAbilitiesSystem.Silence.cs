@@ -1,13 +1,13 @@
-﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Silence;
-using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
-using Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Cultist.Muzzle;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+﻿using Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities.Silence;
+using Content.Server._Adventure.DarkForces.Saint.Reagent.Events;
+using Content.Server._Adventure.DarkForces.Saint.Saintable.Events;
+using Content.Shared._Adventure.DarkForces.Narsi.Cultist.Muzzle;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Speech.Muting;
 using NarsiCultistSilenceEvent =
-    Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistSilenceEvent;
+    Content.Shared._Adventure.DarkForces.Narsi.Abilities.Events.NarsiCultistSilenceEvent;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server._Adventure.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

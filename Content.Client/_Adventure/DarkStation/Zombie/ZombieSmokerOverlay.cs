@@ -1,9 +1,9 @@
-﻿using Content.Shared.AdventureSpace.Zombie.Smoker.Components;
+﻿using Content.Shared._Adventure.Zombie.Smoker.Components;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 
-namespace Content.Client.AdventureSpace.Zombie;
+namespace Content.Client._Adventure.Zombie;
 
 public sealed class ZombieSmokerOverlay : Overlay
 {

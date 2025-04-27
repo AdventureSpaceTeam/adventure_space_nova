@@ -1,11 +1,11 @@
 using System.Linq;
-using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Polymorth;
-using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
+using Content.Server._Adventure.DarkForces.Narsi.Buildings.Altar.Rituals.Polymorth;
+using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Content.Shared.Damage;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Pilon;
+namespace Content.Server._Adventure.DarkForces.Narsi.Buildings.Pilon;
 
 public sealed class NarsiCultPilonSystem : EntitySystem
 {

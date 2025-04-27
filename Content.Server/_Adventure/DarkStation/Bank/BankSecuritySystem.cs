@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventureSpace.Bank.Components;
+﻿using Content.Server._Adventure.Bank.Components;
 using Content.Server.Cargo.Components;
 using Content.Shared.Examine;
 using Content.Shared.Stacks;
 using Robust.Shared.Configuration;
 
-namespace Content.Server.AdventureSpace.Bank;
+namespace Content.Server._Adventure.Bank;
 
 public sealed class BankSecuritySystem : EntitySystem
 {
@@ -25,7 +25,7 @@ public sealed class BankSecuritySystem : EntitySystem
         BankSecureCashComponent component,
         StacksAddContainerAttempt args)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         var donor = GetEntity(args.Donor);
@@ -37,7 +37,7 @@ public sealed class BankSecuritySystem : EntitySystem
 
     private void OnStacksMergeAttempt(EntityUid uid, BankSecureCashComponent component, StacksMergeAttemptEvent args)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         var donor = GetEntity(args.Donor);
@@ -60,7 +60,7 @@ public sealed class BankSecuritySystem : EntitySystem
 
     private void OnExaminedEvent(EntityUid uid, BankSecureCashComponent component, ExaminedEvent args)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         if (args.IsInDetailsRange)
@@ -69,7 +69,7 @@ public sealed class BankSecuritySystem : EntitySystem
 
     private void OnStackMerged(EntityUid uid, BankSecureCashComponent component, StacksMergedEvent args)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         if (HasComp<BankSecureCashComponent>(GetEntity(args.Donor)))
@@ -78,7 +78,7 @@ public sealed class BankSecuritySystem : EntitySystem
 
     private void OnCargoSaleEvent(CargoSaleEvent args)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         EnsureComp<BankSecureCashComponent>(args.CashStack);
@@ -86,7 +86,7 @@ public sealed class BankSecuritySystem : EntitySystem
 
     private void OnStackSplitEvent(EntityUid uid, BankSecureCashComponent component, ref StackSplitEvent args)
     {
-        if (!_cfg.GetCVar(Shared.AdventureSpace.CCVars.SecretCCVars.EconomyEnabled))
+        if (!_cfg.GetCVar(Shared._Adventure.CCVars.SecretCCVars.EconomyEnabled))
             return;
 
         EnsureComp<BankSecureCashComponent>(args.NewId);

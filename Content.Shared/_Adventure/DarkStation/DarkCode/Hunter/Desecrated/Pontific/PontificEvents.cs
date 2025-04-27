@@ -1,6 +1,6 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific;
+namespace Content.Shared._Adventure.Hunter.Desecrated.Pontific;
 
 public interface IPontificAction
 {

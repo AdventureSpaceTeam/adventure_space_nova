@@ -2,7 +2,7 @@
 using Content.Shared.Body.Part;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.AdventureSpace.Medical.Surgery;
+namespace Content.Shared._Adventure.Medical.Surgery;
 
 [Serializable, NetSerializable]
 public sealed class SharedPartStatus

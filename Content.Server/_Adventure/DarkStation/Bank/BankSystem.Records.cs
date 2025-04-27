@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Content.Shared.AdventureSpace.Bank.Transactions;
+using Content.Shared._Adventure.Bank.Transactions;
 using Content.Shared.StationRecords;
 
-namespace Content.Server.AdventureSpace.Bank;
+namespace Content.Server._Adventure.Bank;
 
 public sealed partial class BankSystem
 {

@@ -1,6 +1,6 @@
-﻿using Content.Shared.AdventureSpace.Roles.StationAI.UI;
+﻿using Content.Shared._Adventure.Roles.StationAI.UI;
 
-namespace Content.Client.AdventureSpace.Roles.StationAI.UI.Borgs;
+namespace Content.Client._Adventure.Roles.StationAI.UI.Borgs;
 
 public sealed class StationAIBorgsInterface : BoundUserInterface
 {

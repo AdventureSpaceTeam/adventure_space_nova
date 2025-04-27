@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Containers.ItemSlots;
 
-namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Gear;
+namespace Content.Server._Adventure.DarkForces.Ratvar.Righteous.Gear;
 
 [RegisterComponent]
 public sealed partial class RatvarGearTargetComponent : Component
