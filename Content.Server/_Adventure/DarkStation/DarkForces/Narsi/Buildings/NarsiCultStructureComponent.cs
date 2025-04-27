@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Building;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Building;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings;
 
 [RegisterComponent]
 public sealed partial class NarsiCultStructureComponent : Component

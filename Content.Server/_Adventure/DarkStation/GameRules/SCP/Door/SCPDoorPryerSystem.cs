@@ -3,7 +3,7 @@ using Content.Shared.AdventureSpace.SCP;
 using Content.Shared.Doors.Components;
 using Content.Shared.Doors.Systems;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Door;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Door;
 
 public sealed class SCPDoorPryerSystem : EntitySystem
 {

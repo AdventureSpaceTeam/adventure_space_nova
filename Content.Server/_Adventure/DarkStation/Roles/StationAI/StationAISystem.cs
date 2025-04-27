@@ -1,6 +1,6 @@
 ﻿using Content.Server.Administration.Logs;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Midas;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Midas;
 using Content.Server.Audio;
 using Content.Server.Chat.Systems;
 using Content.Server.Radio.Components;
@@ -20,7 +20,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.StationAI;
+namespace Content.Server.AdventureSpace.Roles.StationAI;
 
 public sealed partial class StationAISystem : SharedStationAISystem
 {

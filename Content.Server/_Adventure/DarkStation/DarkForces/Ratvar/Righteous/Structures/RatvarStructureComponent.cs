@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures;
 
 [RegisterComponent]
 public sealed partial class RatvarStructureComponent : Component

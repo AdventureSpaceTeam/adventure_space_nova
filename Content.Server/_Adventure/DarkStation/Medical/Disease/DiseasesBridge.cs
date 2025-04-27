@@ -1,8 +1,8 @@
 ﻿using Content.Server._c4llv07e.Bridges;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Systems;
+using Content.Server.AdventureSpace.Medical.Disease.Systems;
 using Content.Shared.FixedPoint;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease;
+namespace Content.Server.AdventureSpace.Medical.Disease;
 
 public sealed class DiseasesBridge : IDiseasesBridge
 {

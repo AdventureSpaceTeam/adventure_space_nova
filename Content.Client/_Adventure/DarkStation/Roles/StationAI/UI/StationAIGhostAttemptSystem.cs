@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.Roles.StationAI.Components;
 using Content.Shared.Interaction.Events;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.StationAI.UI;
+namespace Content.Client.AdventureSpace.Roles.StationAI.UI;
 
 public sealed class StationAIGhostAttemptSystem : EntitySystem
 {

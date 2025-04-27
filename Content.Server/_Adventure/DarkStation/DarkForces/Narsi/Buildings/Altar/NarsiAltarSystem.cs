@@ -1,5 +1,5 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
 using Content.Server.Polymorph.Systems;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
@@ -12,7 +12,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
 
 public sealed partial class NarsiAltarSystem : EntitySystem
 {

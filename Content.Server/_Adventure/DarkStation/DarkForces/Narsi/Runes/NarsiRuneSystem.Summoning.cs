@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
 using Content.Shared.AdventureSpace.Cult.Runes;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
 using Content.Shared.AdventureSpace.FastUI;
@@ -9,7 +9,7 @@ using Content.Shared.Movement.Pulling.Systems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes;
 
 public sealed partial class NarsiRuneSystem
 {

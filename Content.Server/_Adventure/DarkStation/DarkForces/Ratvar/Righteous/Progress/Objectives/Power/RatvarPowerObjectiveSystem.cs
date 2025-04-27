@@ -1,7 +1,7 @@
 ﻿using Content.Shared.Objectives.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Power;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Power;
 
 public sealed class RatvarPowerObjectiveSystem : EntitySystem
 {

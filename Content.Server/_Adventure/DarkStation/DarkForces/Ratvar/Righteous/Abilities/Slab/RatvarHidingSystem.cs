@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
 using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Roles;
 using Content.Shared.Examine;
 using Content.Shared.GameTicking;
@@ -7,9 +7,9 @@ using Content.Shared.Hands.EntitySystems;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 using RatvarStructureComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.RatvarStructureComponent;
+    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.RatvarStructureComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Slab;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Slab;
 
 public sealed class RatvarHidingSystem : EntitySystem
 {

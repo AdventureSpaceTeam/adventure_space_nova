@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific.DarkAltar;
+namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.DarkAltar;
 
 [RegisterComponent]
 public sealed partial class PontificDarkAltarComponent : Component

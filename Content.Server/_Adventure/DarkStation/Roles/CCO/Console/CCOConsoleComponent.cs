@@ -3,7 +3,7 @@ using Content.Shared.NPC.Prototypes;
 using Robust.Shared.Prototypes;
 using Color = Robust.Shared.Maths.Color;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.CCO.Console;
+namespace Content.Server.AdventureSpace.Roles.CCO.Console;
 
 [RegisterComponent]
 public sealed partial class CcoConsoleComponent : Component

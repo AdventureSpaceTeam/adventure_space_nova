@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Prototypes;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
+namespace Content.Server.AdventureSpace.Medical.Disease.Components;
 
 [RegisterComponent]
 public sealed partial class DiseasesOnSpawnComponent : Component

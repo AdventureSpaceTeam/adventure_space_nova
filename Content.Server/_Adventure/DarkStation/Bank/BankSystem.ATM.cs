@@ -1,4 +1,4 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Bank.Components;
+﻿using Content.Server.AdventureSpace.Bank.Components;
 using Content.Shared.AdventureSpace.Bank;
 using Content.Shared.AdventureSpace.Bank.BUI;
 using Content.Shared.AdventureSpace.Bank.Events;
@@ -11,7 +11,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using BankATMComponent = Content.Shared.AdventureSpace.Bank.Components.BankATMComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.Bank;
+namespace Content.Server.AdventureSpace.Bank;
 
 public sealed partial class BankSystem
 {

@@ -2,7 +2,7 @@
 using Content.Shared.AdventureSpace.Roles.StationAI.Events;
 using Content.Shared.Destructible;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.StationAI;
+namespace Content.Server.AdventureSpace.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

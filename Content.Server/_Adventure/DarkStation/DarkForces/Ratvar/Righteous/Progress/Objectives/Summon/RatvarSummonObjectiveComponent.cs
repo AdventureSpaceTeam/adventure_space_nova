@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon;
 
 [RegisterComponent]
 public sealed partial class RatvarSummonObjectiveComponent : Component

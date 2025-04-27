@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Vampire.Components;
+namespace Content.Server.AdventureSpace.DarkForces.Vampire.Components;
 
 [RegisterComponent]
 public sealed partial class VampireHypnosisImmunityComponent : Component

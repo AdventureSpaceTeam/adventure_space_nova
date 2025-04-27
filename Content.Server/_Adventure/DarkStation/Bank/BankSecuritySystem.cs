@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Bank.Components;
+﻿using Content.Server.AdventureSpace.Bank.Components;
 using Content.Server.Cargo.Components;
 using Content.Shared.Examine;
 using Content.Shared.Stacks;
 using Robust.Shared.Configuration;
 
-namespace Content.Server.AdventurePrivate._Alteros.Bank;
+namespace Content.Server.AdventureSpace.Bank;
 
 public sealed class BankSecuritySystem : EntitySystem
 {

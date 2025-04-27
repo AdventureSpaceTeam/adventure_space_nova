@@ -1,5 +1,5 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities.Prototype;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Prototype;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Shared.Actions;
@@ -9,7 +9,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem : EntitySystem
 {

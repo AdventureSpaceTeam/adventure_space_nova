@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.Roles.Salary;
+using Content.Server.AdventureSpace.Roles.Salary;
 using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
 using Content.Server.CrewManifest;
@@ -14,7 +14,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.CCO.Console;
+namespace Content.Server.AdventureSpace.Roles.CCO.Console;
 
 //shit code. I know :)
 public sealed class CcoConsoleSystem : EntitySystem

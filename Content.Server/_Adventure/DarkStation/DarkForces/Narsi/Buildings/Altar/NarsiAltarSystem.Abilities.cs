@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Abilities;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar;
 
 public sealed partial class NarsiAltarSystem
 {

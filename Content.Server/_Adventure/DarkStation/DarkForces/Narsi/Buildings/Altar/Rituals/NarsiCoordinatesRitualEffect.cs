@@ -1,7 +1,7 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
 using Content.Shared.Popups;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals;
 
 public sealed partial class NarsiCoordinatesRitualEffect : NarsiRitualEffect
 {

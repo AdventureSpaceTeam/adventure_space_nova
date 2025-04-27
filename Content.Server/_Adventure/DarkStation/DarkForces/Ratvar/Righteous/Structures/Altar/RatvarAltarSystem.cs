@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Content.Server._c4llv07e.Bridges;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
 using Content.Server.Mind;
 using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Structures;
 using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Roles;
@@ -12,7 +12,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Altar;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Altar;
 
 public sealed class RatvarAltarSystem : EntitySystem
 {

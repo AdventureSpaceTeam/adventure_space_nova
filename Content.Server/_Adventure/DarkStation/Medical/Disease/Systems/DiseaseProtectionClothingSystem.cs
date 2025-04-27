@@ -1,11 +1,11 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
+using Content.Server.AdventureSpace.Medical.Disease.Data;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Systems;
+namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
 
 public sealed class DiseaseProtectionClothingSystem : EntitySystem
 {

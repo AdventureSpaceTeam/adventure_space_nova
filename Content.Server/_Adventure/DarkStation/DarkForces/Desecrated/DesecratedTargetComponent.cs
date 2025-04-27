@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Desecrated;
 
 [RegisterComponent]
 public sealed partial class DesecratedTargetComponent : Component

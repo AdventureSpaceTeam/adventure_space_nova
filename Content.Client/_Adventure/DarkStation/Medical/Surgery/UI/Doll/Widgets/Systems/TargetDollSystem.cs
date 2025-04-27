@@ -6,7 +6,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using SecretCCVars = Content.Shared.AdventureSpace.CCVars.SecretCCVars;
 
-namespace Content.Client.AdventurePrivate._Alteros.Medical.Surgery.UI.Doll.Widgets.Systems;
+namespace Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems;
 
 public sealed class TargetDollSystem : EntitySystem
 {

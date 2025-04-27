@@ -2,7 +2,7 @@
 using Robust.Client.Graphics;
 using Robust.Client.Input;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Enchantment;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Enchantment;
 
 public sealed class RatvarEnchantmentBUI : BoundUserInterface
 {

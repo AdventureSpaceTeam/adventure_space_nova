@@ -1,11 +1,11 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.CreatureEgg;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.CreatureEgg;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Progress.Objectives;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Egg;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Egg;
 
 public sealed class NarsiCultCreatureEggSystem : EntitySystem
 {

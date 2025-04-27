@@ -1,10 +1,10 @@
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Components;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Offering;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Offering;
+using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes;
 
 public sealed partial class NarsiRuneSystem
 {

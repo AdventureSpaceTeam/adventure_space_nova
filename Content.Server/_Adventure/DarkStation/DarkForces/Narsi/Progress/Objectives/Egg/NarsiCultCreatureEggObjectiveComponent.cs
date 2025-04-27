@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Egg;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Egg;
 
 [RegisterComponent]
 public sealed partial class NarsiCultCreatureEggObjectiveComponent : Component

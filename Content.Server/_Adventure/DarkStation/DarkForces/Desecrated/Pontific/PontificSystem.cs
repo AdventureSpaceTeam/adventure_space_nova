@@ -2,7 +2,7 @@
 using Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific;
 using Content.Shared.Alert;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific;
+namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific;
 
 public sealed partial class PontificSystem : EntitySystem
 {

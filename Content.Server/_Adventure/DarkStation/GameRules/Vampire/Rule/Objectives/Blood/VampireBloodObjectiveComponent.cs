@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Rule.Objectives.Blood;
+﻿namespace Content.Server.AdventureSpace.GameRules.Vampire.Rule.Objectives.Blood;
 
 [RegisterComponent]
 public sealed partial class VampireBloodObjectiveComponent : Component

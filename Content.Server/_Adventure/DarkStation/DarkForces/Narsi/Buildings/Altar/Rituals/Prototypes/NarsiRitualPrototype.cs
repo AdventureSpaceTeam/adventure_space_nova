@@ -1,8 +1,8 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
 
 [Prototype]
 public sealed class NarsiRitualPrototype : IPrototype

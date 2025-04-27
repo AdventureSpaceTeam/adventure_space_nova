@@ -4,7 +4,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Forge;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Forge;
 
 [RegisterComponent]
 public sealed partial class NarsiCultForgeComponent : Component

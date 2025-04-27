@@ -7,7 +7,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Utility;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.StationAI.UI.Borgs;
+namespace Content.Client.AdventureSpace.Roles.StationAI.UI.Borgs;
 
 [GenerateTypedNameReferences]
 public sealed partial class StationAIBorgsWindow : FancyWindow

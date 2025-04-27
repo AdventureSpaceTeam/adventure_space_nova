@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Weapons;
+﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Weapons;
 using Content.Shared.Humanoid;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Physics.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
 
 public sealed partial class RatvarAbilitiesSystem
 {

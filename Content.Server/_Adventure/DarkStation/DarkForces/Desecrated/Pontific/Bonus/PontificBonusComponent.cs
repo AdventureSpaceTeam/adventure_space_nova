@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific.Bonus;
+namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.Bonus;
 
 [RegisterComponent]
 public sealed partial class PontificBonusComponent : Component

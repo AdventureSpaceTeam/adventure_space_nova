@@ -2,7 +2,7 @@
 using Robust.Client.Graphics;
 using Robust.Client.Input;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Midas;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Midas;
 
 public sealed class RatvarMidasTouchBUI : BoundUserInterface
 {

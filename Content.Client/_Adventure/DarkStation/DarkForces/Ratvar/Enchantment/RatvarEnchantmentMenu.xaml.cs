@@ -6,7 +6,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Enchantment;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Enchantment;
 
 [GenerateTypedNameReferences]
 public sealed partial class RatvarEnchantmentMenu : RadialMenu

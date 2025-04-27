@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Slab;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Altar;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Slab;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Altar;
 using Content.Server.Doors.Systems;
 using Content.Server.Emp;
 using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
@@ -17,7 +17,7 @@ using Content.Shared.Tools.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
 
 public sealed partial class RatvarAbilitiesSystem
 {

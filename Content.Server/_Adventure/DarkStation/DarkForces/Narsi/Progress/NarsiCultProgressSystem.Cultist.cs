@@ -4,7 +4,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
 
 public sealed partial class NarsiCultProgressSystem
 {

@@ -1,13 +1,13 @@
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Offering;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Offering;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using Content.Shared.Rejuvenate;
 using Robust.Shared.Player;
 using ReviveNarsiRuneDoAfterEvent = Content.Shared.AdventureSpace.Cult.Runes.ReviveNarsiRuneDoAfterEvent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes;
 
 public sealed partial class NarsiRuneSystem
 {

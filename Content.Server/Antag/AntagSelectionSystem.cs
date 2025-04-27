@@ -13,7 +13,6 @@ using Content.Server.Roles.Jobs;
 using Content.Server.Shuttles.Components;
 using Content.Shared.Antag;
 using Content.Shared.Clothing;
-using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Ghost;
 using Content.Shared.Humanoid;

@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.Roles.CCO;
 using Robust.Shared.Utility;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.CCO.Console;
+namespace Content.Client.AdventureSpace.Roles.CCO.Console;
 
 public sealed partial class CcoConsoleWindow
 {

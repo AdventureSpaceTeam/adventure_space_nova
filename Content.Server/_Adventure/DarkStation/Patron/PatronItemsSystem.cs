@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using Content.Server.AdventurePrivate._Alteros.Roles.Spawners;
+using Content.Server.AdventureSpace.Roles.Spawners;
 using Content.Server.GameTicking;
 using Content.Shared.Preferences;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Patron;
+namespace Content.Server.AdventureSpace.Patron;
 
 public sealed class PatronItemsSystem : EntitySystem
 {

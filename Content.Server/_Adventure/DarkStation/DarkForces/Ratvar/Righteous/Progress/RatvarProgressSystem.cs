@@ -7,12 +7,12 @@ using Content.Shared.Objectives.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using RatvarPortalComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Portal.RatvarPortalComponent;
+    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Portal.RatvarPortalComponent;
 using RatvarSummonObjectiveComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon.
+    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon.
     RatvarSummonObjectiveComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
 
 public sealed partial class RatvarProgressSystem : EntitySystem
 {

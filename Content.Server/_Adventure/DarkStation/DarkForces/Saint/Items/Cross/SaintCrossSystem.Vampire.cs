@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.Vampire.Attempt;
 using Content.Shared.Inventory;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Items.Cross;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross;
 
 public sealed partial class SaintCrossSystem
 {

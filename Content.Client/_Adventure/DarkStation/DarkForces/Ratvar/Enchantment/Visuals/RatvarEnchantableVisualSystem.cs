@@ -9,7 +9,7 @@ using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Enchantment.Visuals;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Enchantment.Visuals;
 
 public sealed class RatvarEnchantableVisualSystem : EntitySystem
 {

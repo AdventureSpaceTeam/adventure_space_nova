@@ -3,7 +3,7 @@ using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 
-namespace Content.Server.AdventurePrivate._Alteros.Zombie.Hunter;
+namespace Content.Server.AdventureSpace.Zombie.Hunter;
 
 [RegisterComponent]
 public sealed partial class ZombieHunterComponent : Component

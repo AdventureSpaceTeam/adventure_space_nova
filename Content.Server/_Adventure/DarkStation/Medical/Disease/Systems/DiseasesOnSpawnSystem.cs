@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Systems;
+namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
 
 public sealed class DiseasesOnSpawnSystem : EntitySystem
 {

@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.Events;
+using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Events;
 using Content.Server.Chat.Managers;
 using Content.Server.DoAfter;
 using Content.Server.Flash;
@@ -15,7 +15,7 @@ using Robust.Shared.Player;
 using SCP049Component = Content.Shared.AdventureSpace.SCP.SCP_049.Components.SCP049Component;
 using SCP049ThrallComponent = Content.Shared.AdventureSpace.SCP.SCP_049.Components.SCP049ThrallComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.SCP049;
+namespace Content.Server.AdventureSpace.GameRules.SCP.SCP049;
 
 public sealed class SCP049System : SharedSCP049System
 {

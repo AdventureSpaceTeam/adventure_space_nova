@@ -1,6 +1,6 @@
 ﻿using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Roles;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
 
 public sealed partial class RatvarProgressSystem
 {

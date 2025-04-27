@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Altar;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Altar;
 
 [RegisterComponent]
 public sealed partial class RatvarAltarComponent : Component

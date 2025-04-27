@@ -1,7 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.SOAP;
+namespace Content.Server.AdventureSpace.GameRules.SCP.SOAP;
 
 [RegisterComponent]
 public sealed partial class SCPSoapComponent : Component

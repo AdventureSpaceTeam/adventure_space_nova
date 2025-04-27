@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 using Robust.Shared.Configuration;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Heart;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Heart;
 
 [UsedImplicitly]
 public sealed class CirculatoryPumpSystem : SurgeryOrganSystem<CirculatoryPumpComponent, CirculatoryPumpMarkerComponent>

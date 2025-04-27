@@ -5,7 +5,7 @@ using Content.Server.Nutrition.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Lungs;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Lungs;
 
 public sealed class SurgeryLungsSystem : SurgeryOrganSystem<DLungsComponent, LungsMarkerComponent>
 {

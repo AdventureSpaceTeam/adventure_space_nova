@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Diagnosis.Swab;
+﻿namespace Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Swab;
 
 [RegisterComponent]
 public sealed partial class DiseaseSwabComponent : Component

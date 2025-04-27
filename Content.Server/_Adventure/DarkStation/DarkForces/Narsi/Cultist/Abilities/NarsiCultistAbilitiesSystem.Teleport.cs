@@ -4,9 +4,9 @@ using Robust.Shared.Random;
 using NarsiCultistTeleportEvent =
     Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistTeleportEvent;
 using NarsiTeleportRuneComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components.NarsiTeleportRuneComponent;
+    Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components.NarsiTeleportRuneComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

@@ -1,4 +1,4 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Gear;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Gear;
 using Content.Server.Materials;
 using Content.Shared.AdventureSpace.Cult;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Buildings;
@@ -11,7 +11,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Forge;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Forge;
 
 public sealed class NarsiCultForgeSystem : EntitySystem
 {

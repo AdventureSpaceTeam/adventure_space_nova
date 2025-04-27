@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Weapons;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Weapons;
 
 [RegisterComponent]
 public sealed partial class RatvarHammerComponent : Component

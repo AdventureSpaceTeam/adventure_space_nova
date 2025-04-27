@@ -2,7 +2,7 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
+namespace Content.Server.AdventureSpace.Medical.Disease.Data;
 
 [Serializable]
 [DataDefinition]

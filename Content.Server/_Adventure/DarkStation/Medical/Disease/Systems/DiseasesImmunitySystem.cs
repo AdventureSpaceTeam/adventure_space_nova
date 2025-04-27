@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
+using Content.Server.AdventureSpace.Medical.Disease.Data;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Systems;
+namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
 
 public sealed class DiseasesImmunitySystem : EntitySystem
 {

@@ -1,7 +1,7 @@
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.SCP173;
+namespace Content.Server.AdventureSpace.GameRules.SCP.SCP173;
 
 [RegisterComponent]
 [Access(typeof(SCP173System))]

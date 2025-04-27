@@ -3,7 +3,7 @@ using Content.Shared.StatusIcon.Components;
 using Robust.Shared.Prototypes;
 using VampireComponent = Content.Shared.AdventureSpace.DarkForces.Vampire.Components.VampireComponent;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Vampire.Overlay;
+namespace Content.Client.AdventureSpace.DarkForces.Vampire.Overlay;
 
 public sealed class VampireIconsSystem : EntitySystem
 {

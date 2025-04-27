@@ -3,7 +3,7 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Components;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components;
 
 [RegisterComponent]
 public sealed partial class ChaplainComponent : Component

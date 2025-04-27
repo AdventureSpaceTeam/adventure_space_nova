@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
 using Content.Server.Popups;
 using Content.Shared.AdventureSpace.Cult.Runes;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
@@ -12,7 +12,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes;
 
 public sealed partial class NarsiRuneSystem : EntitySystem
 {

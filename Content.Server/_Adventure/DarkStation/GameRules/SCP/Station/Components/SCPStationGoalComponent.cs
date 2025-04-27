@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Components;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Components;
 
 [RegisterComponent]
 public sealed partial class SCPStationGoalComponent : Component

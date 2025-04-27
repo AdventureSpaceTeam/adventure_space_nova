@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Components;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Components;
 
 public interface IIntervalOrgan
 {

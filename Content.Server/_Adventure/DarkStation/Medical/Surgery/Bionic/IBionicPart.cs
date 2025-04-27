@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Bionic;
+﻿namespace Content.Server.AdventureSpace.Medical.Surgery.Bionic;
 
 public interface IBionicPart
 {

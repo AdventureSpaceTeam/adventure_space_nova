@@ -1,5 +1,5 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities.FireArms;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Reagent.Events;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.FireArms;
+using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
 using Content.Server.Atmos.EntitySystems;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Cultist.FireArms;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
@@ -9,7 +9,7 @@ using Content.Shared.Weapons.Melee.Events;
 using NarsiCultistFireArmsEvent =
     Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistFireArmsEvent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

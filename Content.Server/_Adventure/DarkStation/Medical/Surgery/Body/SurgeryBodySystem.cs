@@ -1,12 +1,12 @@
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Events;
+using Content.Server.AdventureSpace.Medical.Surgery.Components;
+using Content.Server.AdventureSpace.Medical.Surgery.Events;
 using Content.Shared.AdventureSpace.Medical.Surgery.Components;
 using Content.Shared.Body.Events;
 using Content.Shared.Body.Part;
 using Content.Shared.Humanoid;
 using Robust.Shared.Containers;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Body;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Body;
 
 public sealed partial class SurgeryBodySystem : EntitySystem
 {

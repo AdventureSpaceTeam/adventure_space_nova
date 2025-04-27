@@ -1,6 +1,6 @@
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Components.Base;
+using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components.Base;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Lungs;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Lungs;
 
 [RegisterComponent]
 public sealed partial class DLungsComponent : BaseOrganComponent

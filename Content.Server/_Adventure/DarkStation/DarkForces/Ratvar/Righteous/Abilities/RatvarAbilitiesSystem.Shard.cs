@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Items;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Altar;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Enchantment.Items;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress;
+using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Altar;
 using Content.Server.Mind;
 using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
 using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Items;
@@ -15,7 +15,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities;
 
 public sealed partial class RatvarAbilitiesSystem
 {

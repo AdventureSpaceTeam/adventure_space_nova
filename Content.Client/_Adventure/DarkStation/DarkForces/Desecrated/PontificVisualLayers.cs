@@ -1,4 +1,4 @@
-﻿namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Desecrated;
+﻿namespace Content.Client.AdventureSpace.DarkForces.Desecrated;
 
 public enum PontificVisualLayers : byte
 {

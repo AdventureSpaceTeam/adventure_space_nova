@@ -7,7 +7,7 @@ using Robust.Client.Graphics;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Utility;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.StationAI.UI.Cameras;
+namespace Content.Client.AdventureSpace.Roles.StationAI.UI.Cameras;
 
 [GenerateTypedNameReferences]
 public sealed partial class StationAICameras : FancyWindow

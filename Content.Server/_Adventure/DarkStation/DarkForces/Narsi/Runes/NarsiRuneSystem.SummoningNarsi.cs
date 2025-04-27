@@ -1,11 +1,11 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Events;
-using Content.Server.AdventurePrivate._Alteros.Utils;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Events;
+using Content.Server.AdventureSpace.Utils;
 using Content.Shared.AdventureSpace.Cult.Runes;
 using Content.Shared.DoAfter;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes;
 
 public sealed partial class NarsiRuneSystem
 {

@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Power;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Power;
 
 [RegisterComponent]
 public sealed partial class RatvarPowerObjectiveComponent : Component

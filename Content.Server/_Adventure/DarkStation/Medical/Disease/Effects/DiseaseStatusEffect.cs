@@ -1,7 +1,7 @@
 ﻿using Content.Shared.StatusEffect;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Effects;
+namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
 
 [DataDefinition]
 public sealed partial class DiseaseStatusEffect : DiseaseEffect

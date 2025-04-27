@@ -3,7 +3,7 @@ using Content.Server.SurveillanceCamera;
 using Content.Shared.AdventureSpace.Roles.StationAI.Components;
 using Content.Shared.AdventureSpace.Roles.StationAI.UI;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.StationAI;
+namespace Content.Server.AdventureSpace.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

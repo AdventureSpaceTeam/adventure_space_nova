@@ -12,7 +12,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Zombie.Smoker;
+namespace Content.Server.AdventureSpace.Zombie.Smoker;
 
 public sealed partial class ZombieSmokerSystem : SharedZombieSmokerSystem
 {

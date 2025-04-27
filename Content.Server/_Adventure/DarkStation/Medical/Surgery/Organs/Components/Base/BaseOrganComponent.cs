@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Body.Organ;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Components.Base;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Components.Base;
 
 [ImplicitDataDefinitionForInheritors]
 public abstract partial class BaseOrganComponent : Component

@@ -3,7 +3,7 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Client.AdventurePrivate._Alteros.SCP;
+namespace Content.Client.AdventureSpace.SCP;
 
 public sealed class SCP173System : SharedSCP173System
 {

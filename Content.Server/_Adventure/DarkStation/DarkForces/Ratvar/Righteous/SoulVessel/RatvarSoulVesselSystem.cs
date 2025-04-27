@@ -9,7 +9,7 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Silicons.Borgs.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.SoulVessel;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.SoulVessel;
 
 public sealed class RatvarSoulVesselSystem : EntitySystem
 {

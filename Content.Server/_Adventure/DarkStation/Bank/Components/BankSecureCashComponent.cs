@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Bank.Components;
+﻿namespace Content.Server.AdventureSpace.Bank.Components;
 
 [RegisterComponent]
 public sealed partial class BankSecureCashComponent : Component

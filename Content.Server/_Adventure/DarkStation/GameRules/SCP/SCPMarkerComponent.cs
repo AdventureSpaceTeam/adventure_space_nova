@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP;
+namespace Content.Server.AdventureSpace.GameRules.SCP;
 
 [RegisterComponent]
 public sealed partial class SCPMarkerComponent : Component

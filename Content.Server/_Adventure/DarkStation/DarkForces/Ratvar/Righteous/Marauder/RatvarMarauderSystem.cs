@@ -5,7 +5,7 @@ using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Mind.Components;
 using Robust.Shared.Containers;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Marauder;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Marauder;
 
 public sealed class RatvarMarauderSystem : EntitySystem
 {

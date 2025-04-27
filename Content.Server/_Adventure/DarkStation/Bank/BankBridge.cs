@@ -2,7 +2,7 @@
 using Content.Shared.AdventureSpace.Bank.Transactions;
 using Robust.Shared.Network;
 
-namespace Content.Server.AdventurePrivate._Alteros.Bank;
+namespace Content.Server.AdventureSpace.Bank;
 
 public sealed class BankBridge : IBankBridge
 {

@@ -1,9 +1,9 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Bank.PDA.Components;
+﻿using Content.Server.AdventureSpace.Bank.PDA.Components;
 using Content.Server.PDA.Ringer;
 using Content.Shared.CartridgeLoader;
 using Robust.Shared.Containers;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Salary;
+namespace Content.Server.AdventureSpace.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {

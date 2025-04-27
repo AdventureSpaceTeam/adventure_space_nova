@@ -1,8 +1,8 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
+﻿using Content.Server.AdventureSpace.Medical.Surgery.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Standing;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery;
+namespace Content.Server.AdventureSpace.Medical.Surgery;
 
 public sealed partial class SurgerySystem
 {

@@ -1,12 +1,12 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Events;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Tools.Components;
+﻿using Content.Server.AdventureSpace.Medical.Surgery.Components;
+using Content.Server.AdventureSpace.Medical.Surgery.Events;
+using Content.Server.AdventureSpace.Medical.Surgery.Tools.Components;
 using Content.Shared.AdventureSpace.Medical.Surgery.Events.BodyParts;
 using Content.Shared.AdventureSpace.Medical.Surgery.Events.Organs;
 using Content.Shared.Body.Organ;
 using Content.Shared.Hands.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Tools;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Tools;
 
 public sealed partial class SurgeryToolsSystem
 {

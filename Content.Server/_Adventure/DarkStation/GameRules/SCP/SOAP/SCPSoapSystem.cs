@@ -9,7 +9,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.SOAP;
+namespace Content.Server.AdventureSpace.GameRules.SCP.SOAP;
 
 public sealed class SCPSoapSystem : EntitySystem
 {

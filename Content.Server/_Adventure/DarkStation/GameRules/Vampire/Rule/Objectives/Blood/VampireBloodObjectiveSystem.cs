@@ -3,7 +3,7 @@ using Content.Shared.Objectives.Components;
 using Robust.Shared.Configuration;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Rule.Objectives.Blood;
+namespace Content.Server.AdventureSpace.GameRules.Vampire.Rule.Objectives.Blood;
 
 public sealed class VampireBloodObjectiveSystem : EntitySystem
 {

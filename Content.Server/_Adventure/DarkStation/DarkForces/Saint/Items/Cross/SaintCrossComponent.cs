@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Items.Cross;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Items.Cross;
 
 [RegisterComponent]
 public sealed partial class SaintCrossComponent : Component

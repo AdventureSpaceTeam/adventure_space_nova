@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Diagnosis.Diagnoser.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Prototypes;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Systems;
+using Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Diagnoser.Components;
+using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
+using Content.Server.AdventureSpace.Medical.Disease.Systems;
 using Content.Server.Popups;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
@@ -13,7 +13,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Diagnosis.Vaccinator;
+namespace Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Vaccinator;
 
 public sealed class DiseaseVaccinatorSystem : EntitySystem
 {

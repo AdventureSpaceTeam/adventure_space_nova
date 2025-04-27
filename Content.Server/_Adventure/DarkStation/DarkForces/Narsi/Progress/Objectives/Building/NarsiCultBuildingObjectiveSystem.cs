@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Progress.Objectives;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Building;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Building;
 
 public sealed class NarsiCultBuildingObjectiveSystem : EntitySystem
 {

@@ -1,8 +1,8 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Reagent.Events;
+﻿using Content.Server.AdventureSpace.DarkForces.Saint.Reagent.Events;
 using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Reagent;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Reagent;
 
 public sealed partial class SaintWaterFlammableEffect : EntityEffect
 {

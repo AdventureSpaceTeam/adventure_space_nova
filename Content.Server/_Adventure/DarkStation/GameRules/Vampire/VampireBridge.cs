@@ -1,10 +1,10 @@
 using Content.Server._c4llv07e.Bridges;
-using Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Role.Components;
+using Content.Server.AdventureSpace.GameRules.Vampire.Role.Components;
 using Content.Shared.AdventureSpace.DarkForces.Vampire.Components;
 using Content.Shared.Mind;
 using Content.Shared.Roles;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire;
+namespace Content.Server.AdventureSpace.GameRules.Vampire;
 
 public sealed class VampireBridge : IVampireBridge
 {

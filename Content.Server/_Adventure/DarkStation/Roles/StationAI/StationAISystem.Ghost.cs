@@ -4,7 +4,7 @@ using Content.Shared.Random.Helpers;
 using Content.Shared.Silicons.Laws;
 using Content.Shared.Silicons.Laws.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.StationAI;
+namespace Content.Server.AdventureSpace.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

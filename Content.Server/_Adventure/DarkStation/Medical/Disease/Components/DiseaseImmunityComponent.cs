@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
+﻿namespace Content.Server.AdventureSpace.Medical.Disease.Components;
 
 /**
  * Полный иммунитет к болезни можно получить лишь в процессе болезни или раундстартом

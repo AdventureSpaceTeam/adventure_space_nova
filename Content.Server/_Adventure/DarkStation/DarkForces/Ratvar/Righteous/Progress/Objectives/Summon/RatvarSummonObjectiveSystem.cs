@@ -4,7 +4,7 @@ using Content.Shared.Objectives.Components;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Summon;
 
 public sealed class RatvarSummonObjectiveSystem : EntitySystem
 {

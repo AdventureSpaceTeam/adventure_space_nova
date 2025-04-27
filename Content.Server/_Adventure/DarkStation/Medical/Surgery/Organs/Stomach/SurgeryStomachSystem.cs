@@ -3,7 +3,7 @@ using Content.Server.Body.Events;
 using Content.Shared.Chemistry.Reagent;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Stomach;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Stomach;
 
 public sealed class SurgeryStomachSystem : SurgeryOrganSystem<DStomachComponent, StomachMarkerComponent>
 {

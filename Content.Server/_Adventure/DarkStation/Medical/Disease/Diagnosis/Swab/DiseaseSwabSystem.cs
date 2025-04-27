@@ -1,4 +1,4 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
 using Content.Server.DoAfter;
 using Content.Server.Nutrition.Components;
 using Content.Server.Popups;
@@ -8,7 +8,7 @@ using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Diagnosis.Swab;
+namespace Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Swab;
 
 public sealed class DiseaseSwabSystem : EntitySystem
 {

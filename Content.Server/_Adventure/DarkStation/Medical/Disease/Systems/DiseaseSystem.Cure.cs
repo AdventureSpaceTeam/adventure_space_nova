@@ -1,14 +1,14 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
-using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Prototypes;
+using Content.Server.AdventureSpace.Medical.Disease.Components;
+using Content.Server.AdventureSpace.Medical.Disease.Data;
+using Content.Server.AdventureSpace.Medical.Disease.Prototypes;
 using Content.Server.Medical.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.GameTicking;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Systems;
+namespace Content.Server.AdventureSpace.Medical.Disease.Systems;
 
 public sealed partial class DiseaseSystem
 {

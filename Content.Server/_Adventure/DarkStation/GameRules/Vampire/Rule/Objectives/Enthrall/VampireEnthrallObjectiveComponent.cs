@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Rule.Objectives.Enthrall;
+﻿namespace Content.Server.AdventureSpace.GameRules.Vampire.Rule.Objectives.Enthrall;
 
 [RegisterComponent]
 public sealed partial class VampireEnthrallObjectiveComponent : Component

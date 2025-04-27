@@ -19,7 +19,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.Zombie.Hunter;
+namespace Content.Server.AdventureSpace.Zombie.Hunter;
 
 public sealed class ZombieHunterSystem : EntitySystem
 {

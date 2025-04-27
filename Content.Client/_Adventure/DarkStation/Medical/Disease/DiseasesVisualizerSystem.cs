@@ -2,7 +2,7 @@
 using Robust.Client.GameObjects;
 using Robust.Shared.Utility;
 
-namespace Content.Client.AdventurePrivate._Alteros.Medical.Disease;
+namespace Content.Client.AdventureSpace.Medical.Disease;
 
 public sealed class DiseasesVisualizerSystem : VisualizerSystem<DiseasesVisualsComponent>
 {

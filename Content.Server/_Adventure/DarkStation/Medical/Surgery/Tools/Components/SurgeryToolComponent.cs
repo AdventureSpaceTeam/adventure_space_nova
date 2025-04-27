@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Audio;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Tools.Components;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Tools.Components;
 
 [RegisterComponent]
 public sealed partial class SurgeryToolComponent : Component

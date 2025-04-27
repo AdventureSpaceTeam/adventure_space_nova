@@ -2,7 +2,7 @@
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Rule.Objectives.Enthrall;
+namespace Content.Server.AdventureSpace.GameRules.Vampire.Rule.Objectives.Enthrall;
 
 public sealed class VampireEnthrallObjectiveSystem : EntitySystem
 {

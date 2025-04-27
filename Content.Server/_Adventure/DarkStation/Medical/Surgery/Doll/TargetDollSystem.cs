@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.Medical.Surgery;
 using Content.Shared.AdventureSpace.Medical.Surgery.Events.Doll;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Doll;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Doll;
 
 public sealed class TargetDollSystem : EntitySystem
 {

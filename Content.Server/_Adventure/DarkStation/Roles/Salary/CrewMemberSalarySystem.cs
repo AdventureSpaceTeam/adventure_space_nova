@@ -9,9 +9,9 @@ using Content.Shared.StationRecords;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using BankSystem = Content.Server.AdventurePrivate._Alteros.Bank.BankSystem;
+using BankSystem = Content.Server.AdventureSpace.Bank.BankSystem;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Salary;
+namespace Content.Server.AdventureSpace.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem : EntitySystem
 {

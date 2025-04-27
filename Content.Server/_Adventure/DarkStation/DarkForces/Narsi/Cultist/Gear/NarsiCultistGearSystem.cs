@@ -1,9 +1,9 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Components;
+using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
 using Content.Shared.Item;
 using Content.Shared.Popups;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Gear;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Gear;
 
 public sealed class NarsiCultistGearSystem : EntitySystem
 {

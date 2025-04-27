@@ -12,7 +12,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Structures;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Structures;
 
 [GenerateTypedNameReferences]
 public sealed partial class RatvarWorkshopWindow : FancyWindow

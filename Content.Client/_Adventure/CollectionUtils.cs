@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace Content.Client.AdventurePrivate._Alteros;
+namespace Content.Client.AdventureSpace;
 
 public static class CollectionUtils
 {

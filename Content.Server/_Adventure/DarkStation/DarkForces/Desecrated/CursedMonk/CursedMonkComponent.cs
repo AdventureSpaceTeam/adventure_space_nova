@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.CursedMonk;
+namespace Content.Server.AdventureSpace.DarkForces.Desecrated.CursedMonk;
 
 [RegisterComponent]
 public sealed partial class CursedMonkComponent : Component

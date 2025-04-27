@@ -10,7 +10,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using SecretCCVars = Content.Shared.AdventureSpace.CCVars.SecretCCVars;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.CCO.Console;
+namespace Content.Client.AdventureSpace.Roles.CCO.Console;
 
 [GenerateTypedNameReferences]
 public sealed partial class CcoConsoleWindow : FancyWindow

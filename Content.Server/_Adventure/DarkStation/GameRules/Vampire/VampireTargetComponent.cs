@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire;
+namespace Content.Server.AdventureSpace.GameRules.Vampire;
 
 [RegisterComponent]
 public sealed partial class VampireTargetComponent : Component

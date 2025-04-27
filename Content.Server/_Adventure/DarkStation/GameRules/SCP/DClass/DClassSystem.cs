@@ -3,7 +3,7 @@ using Content.Shared.Implants;
 using Content.Shared.Implants.Components;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.DClass;
+namespace Content.Server.AdventureSpace.GameRules.SCP.DClass;
 
 public sealed class DClassSystem : EntitySystem
 {

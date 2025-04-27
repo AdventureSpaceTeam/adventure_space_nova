@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.EUI;
-using Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Role.Abilities;
-using Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Role.Events;
+﻿using Content.Server.AdventureSpace.GameRules.Vampire.EUI;
+using Content.Server.AdventureSpace.GameRules.Vampire.Role.Abilities;
+using Content.Server.AdventureSpace.GameRules.Vampire.Role.Events;
 using Content.Server.EUI;
 using Content.Server.Mind;
 using Content.Server.Objectives;
@@ -14,7 +14,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Role;
+namespace Content.Server.AdventureSpace.GameRules.Vampire.Role;
 
 public sealed partial class VampireSystem : EntitySystem
 {

@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Damage;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Saintable.Events;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
 
 public sealed class OnSaintEntityTryPickedUp : HandledEntityEventArgs, ISaintEntityEvent
 {

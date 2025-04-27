@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Base;
 using Content.Server.Polymorph.Systems;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Humanoid;
 using Content.Shared.Polymorph;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals;
 
 [DataDefinition]
 public sealed partial class NarsiDarknessBlowoutRitualEffect : NarsiRitualEffect

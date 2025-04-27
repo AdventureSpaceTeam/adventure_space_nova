@@ -1,8 +1,8 @@
-using Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.Components;
-using Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.Events;
+using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Components;
+using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Events;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.SubSystems;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.SubSystems;
 
 public sealed class SCPHealGoalSystem : EntitySystem
 {

@@ -1,5 +1,5 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Items.Events;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Saintable.Events;
+﻿using Content.Server.AdventureSpace.DarkForces.Saint.Items.Events;
+using Content.Server.AdventureSpace.DarkForces.Saint.Saintable.Events;
 using Content.Server.Popups;
 using Content.Shared.AdventureSpace.DarkForces.Saint.Saintable;
 using Content.Shared.Damage;
@@ -11,7 +11,7 @@ using Content.Shared.Timing;
 using Robust.Server.GameObjects;
 using Robust.Shared.Physics.Events;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Saintable;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Saintable;
 
 public sealed class SaintedSystem : EntitySystem
 {

@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Door;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Door;
 
 [RegisterComponent]
 public sealed partial class SCPDoorPryerComponent : Component

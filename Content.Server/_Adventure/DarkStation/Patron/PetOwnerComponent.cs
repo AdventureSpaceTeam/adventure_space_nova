@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.Patron.Pets;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Patron;
+namespace Content.Server.AdventureSpace.Patron;
 
 [RegisterComponent]
 public sealed partial class PetOwnerComponent : Component

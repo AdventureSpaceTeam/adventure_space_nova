@@ -19,7 +19,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
+using Content.Server.AdventureSpace.Medical.Surgery.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Medical.Events;
 using Content.Shared.Body.Components;

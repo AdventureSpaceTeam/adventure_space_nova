@@ -1,11 +1,11 @@
 ﻿using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Events;
+using Content.Server.AdventureSpace.Medical.Surgery.Components;
+using Content.Server.AdventureSpace.Medical.Surgery.Events;
 using Content.Server.Body.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Speech;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery;
+namespace Content.Server.AdventureSpace.Medical.Surgery;
 
 public sealed partial class SurgerySystem
 {

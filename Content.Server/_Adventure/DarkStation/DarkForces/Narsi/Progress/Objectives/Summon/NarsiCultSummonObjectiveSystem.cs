@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Components;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Events;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Events;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Summon;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Summon;
 
 public sealed class NarsiCultSummonObjectiveSystem : EntitySystem
 {

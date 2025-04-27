@@ -1,14 +1,10 @@
 using Content.Shared.Body.Components;
-using Content.Shared.Body.Systems;
-using Robust.Shared.Containers;
-using Robust.Shared.GameStates;
 using Content.Shared.Body.Organ;
-using Robust.Shared.Serialization;
+using Robust.Shared.GameStates;
 
 namespace Content.Shared.Body.Part;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedBodySystem))]
 public sealed partial class BodyPartComponent : Component
 {
     [DataField]

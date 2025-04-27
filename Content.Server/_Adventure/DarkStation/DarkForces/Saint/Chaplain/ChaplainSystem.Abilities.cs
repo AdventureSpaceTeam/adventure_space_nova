@@ -1,5 +1,5 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Abilities;
-using Content.Server.AdventurePrivate._Alteros.Utils;
+﻿using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Abilities;
+using Content.Server.AdventureSpace.Utils;
 using Content.Server.Popups;
 using Content.Shared.AdventureSpace.DarkForces.Saint.Chaplain.Events;
 using Content.Shared.AdventureSpace.DarkForces.Saint.Chaplain.Events.Narsi;
@@ -9,9 +9,9 @@ using Content.Shared.Mobs.Components;
 using Robust.Server.Audio;
 using Robust.Shared.Player;
 using ChaplainComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Components.ChaplainComponent;
+    Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components.ChaplainComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain;
 
 public sealed partial class ChaplainSystem
 {

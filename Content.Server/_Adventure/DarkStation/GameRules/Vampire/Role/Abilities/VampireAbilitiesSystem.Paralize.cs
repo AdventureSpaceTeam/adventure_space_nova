@@ -5,7 +5,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Humanoid;
 using VampireComponent = Content.Shared.AdventureSpace.DarkForces.Vampire.Components.VampireComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Role.Abilities;
+namespace Content.Server.AdventureSpace.GameRules.Vampire.Role.Abilities;
 
 public sealed partial class VampireAbilitiesSystem
 {

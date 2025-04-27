@@ -3,10 +3,10 @@ using Content.Shared.AdventureSpace.Roles.Salary;
 using Content.Shared.GameTicking;
 using Content.Shared.StationRecords;
 using CrewMemberStationSalaryComponent =
-    Content.Server.AdventurePrivate._Alteros.Roles.Salary.Components.CrewMemberStationSalaryComponent;
+    Content.Server.AdventureSpace.Roles.Salary.Components.CrewMemberStationSalaryComponent;
 
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Salary;
+namespace Content.Server.AdventureSpace.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {

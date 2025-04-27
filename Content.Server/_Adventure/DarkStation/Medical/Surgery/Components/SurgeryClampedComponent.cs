@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Components;
 
 [RegisterComponent]
 public sealed partial class SurgeryClampedComponent : Component

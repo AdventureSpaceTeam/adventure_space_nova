@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific.Bonus;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific.DarkAltar;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific.Prayer;
-using Content.Server.AdventurePrivate._Alteros.SecretCCVars;
+﻿using Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.Bonus;
+using Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.DarkAltar;
+using Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific.Prayer;
+using Content.Server.AdventureSpace.SecretCCVars;
 using Content.Server.Beam;
 using Content.Shared.AdventureSpace.DarkForces.Desecrated;
 using Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific;
@@ -24,7 +24,7 @@ using PontificPrayerDoAfterEvent = Content.Shared.AdventureSpace.Hunter.Desecrat
 using PontificSpawnGuardianEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificSpawnGuardianEvent;
 using PontificSpawnMonkEvent = Content.Shared.AdventureSpace.Hunter.Desecrated.Pontific.PontificSpawnMonkEvent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Desecrated.Pontific;
+namespace Content.Server.AdventureSpace.DarkForces.Desecrated.Pontific;
 
 public sealed partial class PontificSystem
 {

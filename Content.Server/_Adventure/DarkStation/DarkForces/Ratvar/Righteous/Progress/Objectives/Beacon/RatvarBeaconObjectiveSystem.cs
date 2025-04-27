@@ -2,9 +2,9 @@
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Random;
 using RatvarBeaconComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Beacon.RatvarBeaconComponent;
+    Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Beacon.RatvarBeaconComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Beacon;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Beacon;
 
 public sealed class RatvarBeaconObjectiveSystem : EntitySystem
 {

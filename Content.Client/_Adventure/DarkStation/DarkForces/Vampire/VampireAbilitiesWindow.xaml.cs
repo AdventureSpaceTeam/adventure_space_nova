@@ -12,7 +12,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Vampire;
+namespace Content.Client.AdventureSpace.DarkForces.Vampire;
 
 [GenerateTypedNameReferences]
 public sealed partial class VampireAbilitiesWindow : DefaultWindow

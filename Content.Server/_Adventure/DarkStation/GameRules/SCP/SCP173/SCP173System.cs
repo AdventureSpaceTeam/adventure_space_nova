@@ -21,7 +21,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.SCP173;
+namespace Content.Server.AdventureSpace.GameRules.SCP.SCP173;
 
 public sealed class SCP173System : SharedSCP173System
 {

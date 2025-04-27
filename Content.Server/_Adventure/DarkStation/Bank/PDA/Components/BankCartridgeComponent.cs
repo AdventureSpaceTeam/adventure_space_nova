@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Bank.PDA.Components;
+﻿namespace Content.Server.AdventureSpace.Bank.PDA.Components;
 
 [RegisterComponent]
 public sealed partial class BankCartridgeComponent : Component

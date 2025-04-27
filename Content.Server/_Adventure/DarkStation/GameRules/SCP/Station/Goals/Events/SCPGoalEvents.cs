@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.Events;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Events;
 
 public sealed class SCPHealEvent : EntityEventArgs
 {

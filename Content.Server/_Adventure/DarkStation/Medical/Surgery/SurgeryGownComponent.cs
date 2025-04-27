@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery;
+﻿namespace Content.Server.AdventureSpace.Medical.Surgery;
 
 [RegisterComponent]
 public sealed partial class SurgeryGownComponent : Component

@@ -2,7 +2,7 @@
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 
-namespace Content.Server.AdventurePrivate._Alteros.Utils;
+namespace Content.Server.AdventureSpace.Utils;
 
 public static class CoordinatesHelper
 {

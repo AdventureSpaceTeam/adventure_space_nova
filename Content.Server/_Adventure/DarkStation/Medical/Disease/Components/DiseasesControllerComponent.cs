@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Data;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
+namespace Content.Server.AdventureSpace.Medical.Disease.Components;
 
 [RegisterComponent]
 public sealed partial class DiseasesControllerComponent : Component

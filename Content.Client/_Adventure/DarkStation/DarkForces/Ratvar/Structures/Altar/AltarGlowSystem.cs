@@ -2,7 +2,7 @@
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Structures.Altar;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Structures.Altar;
 
 public sealed class AltarGlowSystem : EntitySystem
 {

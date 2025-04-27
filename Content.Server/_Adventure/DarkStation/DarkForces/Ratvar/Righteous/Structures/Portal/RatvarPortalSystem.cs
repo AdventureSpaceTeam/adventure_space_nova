@@ -1,8 +1,8 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Events;
+﻿using Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Events;
 using Content.Shared.Destructible;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Portal;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Portal;
 
 public sealed class RatvarPortalSystem : EntitySystem
 {

@@ -1,8 +1,8 @@
-using Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.Components;
+using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Components;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.SubSystems;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.SubSystems;
 
 public sealed class SCPTransferSystem : EntitySystem
 {

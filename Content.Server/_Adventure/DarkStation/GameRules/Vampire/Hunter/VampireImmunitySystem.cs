@@ -1,8 +1,8 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Vampire.Components;
+using Content.Server.AdventureSpace.DarkForces.Vampire.Components;
 using Content.Shared.AdventureSpace.Vampire.Attempt;
 using Content.Shared.Inventory;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Hunter;
+namespace Content.Server.AdventureSpace.GameRules.Vampire.Hunter;
 
 public sealed class VampireImmnutiySystem : EntitySystem
 {

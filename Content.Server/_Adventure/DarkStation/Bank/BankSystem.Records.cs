@@ -2,7 +2,7 @@
 using Content.Shared.AdventureSpace.Bank.Transactions;
 using Content.Shared.StationRecords;
 
-namespace Content.Server.AdventurePrivate._Alteros.Bank;
+namespace Content.Server.AdventureSpace.Bank;
 
 public sealed partial class BankSystem
 {

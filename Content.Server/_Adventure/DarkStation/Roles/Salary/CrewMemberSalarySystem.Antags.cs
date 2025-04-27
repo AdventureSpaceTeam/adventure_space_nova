@@ -4,7 +4,7 @@ using Content.Shared.Objectives.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Salary;
+namespace Content.Server.AdventureSpace.Roles.Salary;
 
 public sealed partial class CrewMemberSalarySystem
 {

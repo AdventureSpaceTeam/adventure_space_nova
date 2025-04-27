@@ -3,7 +3,7 @@ using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Robust.Server.GameObjects;
 
-namespace Content.Server.AdventurePrivate._Alteros.Utils;
+namespace Content.Server.AdventureSpace.Utils;
 
 public static class StationUtils
 {

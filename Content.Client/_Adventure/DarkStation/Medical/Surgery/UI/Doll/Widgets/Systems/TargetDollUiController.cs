@@ -7,7 +7,7 @@ using Robust.Client.UserInterface.Controllers;
 using Robust.Shared.Configuration;
 using SecretCCVars = Content.Shared.AdventureSpace.CCVars.SecretCCVars;
 
-namespace Content.Client.AdventurePrivate._Alteros.Medical.Surgery.UI.Doll.Widgets.Systems;
+namespace Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems;
 
 public sealed class TargetDollUiController : UIController, IOnStateEntered<GameplayState>,
     IOnSystemChanged<TargetDollSystem>

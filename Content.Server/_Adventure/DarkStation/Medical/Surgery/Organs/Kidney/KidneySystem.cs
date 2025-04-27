@@ -1,6 +1,6 @@
 ﻿using Content.Server.Body.Events;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Kidney;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs.Kidney;
 
 public sealed class KidneySystem : SurgeryOrganSystem<ToxinRemoverComponent, ToxinRemoverMarkerComponent>
 {

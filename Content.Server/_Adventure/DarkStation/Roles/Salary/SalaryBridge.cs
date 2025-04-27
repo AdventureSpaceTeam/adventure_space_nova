@@ -2,7 +2,7 @@
 using Content.Shared.AdventureSpace.Roles.Salary;
 using Content.Shared.StationRecords;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Salary;
+namespace Content.Server.AdventureSpace.Roles.Salary;
 
 public sealed class SalaryBridge : ISalaryBridge
 {

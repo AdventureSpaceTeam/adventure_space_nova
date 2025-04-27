@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Convert;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Convert;
 
 [RegisterComponent]
 public sealed partial class RatvarConvertObjectiveComponent : Component

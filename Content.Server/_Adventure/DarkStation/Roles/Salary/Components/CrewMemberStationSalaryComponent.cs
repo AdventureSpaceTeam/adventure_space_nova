@@ -2,7 +2,7 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Salary.Components;
+namespace Content.Server.AdventureSpace.Roles.Salary.Components;
 
 [RegisterComponent]
 public sealed partial class CrewMemberStationSalaryComponent : Component

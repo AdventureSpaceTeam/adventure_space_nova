@@ -5,7 +5,7 @@ using Content.Shared.AdventureSpace.Roles.StationAI.UI;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Silicons.Borgs.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.StationAI;
+namespace Content.Server.AdventureSpace.Roles.StationAI;
 
 public sealed partial class StationAISystem
 {

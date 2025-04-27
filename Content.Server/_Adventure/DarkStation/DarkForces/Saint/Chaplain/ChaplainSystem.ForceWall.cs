@@ -1,10 +1,10 @@
 ﻿using System.Numerics;
 using System.Threading.Tasks;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Abilities;
+using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Abilities;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain;
 
 public sealed partial class ChaplainSystem
 {

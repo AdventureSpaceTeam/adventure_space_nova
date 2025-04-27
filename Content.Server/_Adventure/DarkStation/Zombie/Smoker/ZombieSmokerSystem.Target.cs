@@ -4,7 +4,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Zombies;
 using Robust.Shared.Player;
 
-namespace Content.Server.AdventurePrivate._Alteros.Zombie.Smoker;
+namespace Content.Server.AdventureSpace.Zombie.Smoker;
 
 public sealed partial class ZombieSmokerSystem
 {

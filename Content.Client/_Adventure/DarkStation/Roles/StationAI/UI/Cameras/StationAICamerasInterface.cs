@@ -1,6 +1,6 @@
 ﻿using Content.Shared.AdventureSpace.Roles.StationAI.UI;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.StationAI.UI.Cameras;
+namespace Content.Client.AdventureSpace.Roles.StationAI.UI.Cameras;
 
 /// <summary>
 ///     Initializes a <see cref="StationAICameraList" /> and updates it when new server messages are received.

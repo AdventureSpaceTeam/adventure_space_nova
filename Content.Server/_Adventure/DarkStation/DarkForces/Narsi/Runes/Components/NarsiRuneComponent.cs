@@ -1,6 +1,6 @@
 using Content.Shared.AdventureSpace.Cult.Runes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
 
 [RegisterComponent]
 public sealed partial class NarsiRuneComponent : SharedNarsiRuneComponent

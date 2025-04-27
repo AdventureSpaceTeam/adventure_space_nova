@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Buildings.Altar.Rituals.Prototypes;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Rituals;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Rituals;
 
 [RegisterComponent]
 public sealed partial class NarsiCultRitualObjectiveComponent : Component

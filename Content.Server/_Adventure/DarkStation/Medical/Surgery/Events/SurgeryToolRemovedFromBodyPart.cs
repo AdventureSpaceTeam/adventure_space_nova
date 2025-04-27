@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Body.Part;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Events;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Events;
 
 /**
  * Raised when tool removed from slot with body part

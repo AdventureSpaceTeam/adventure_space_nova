@@ -4,7 +4,7 @@ using Content.Shared.AdventureSpace.DarkForces.Ratvar.Righteous.Roles;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Progress.Objectives.Convert;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Progress.Objectives.Convert;
 
 public sealed class RatvarConvertObjectiveSystem : EntitySystem
 {

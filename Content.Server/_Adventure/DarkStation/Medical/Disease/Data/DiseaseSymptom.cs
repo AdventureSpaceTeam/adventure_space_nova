@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Effects;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Effects;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
+namespace Content.Server.AdventureSpace.Medical.Disease.Data;
 
 [DataDefinition]
 public sealed partial class DiseaseSymptom

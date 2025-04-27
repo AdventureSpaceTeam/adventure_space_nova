@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities.Stealth;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities.Stealth;
 
 [RegisterComponent]
 public sealed partial class NarsiCultistStealthComponent : Component

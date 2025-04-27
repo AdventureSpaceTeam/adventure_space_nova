@@ -15,7 +15,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameTicking.Rules.Pontific;
+namespace Content.Server.AdventureSpace.GameTicking.Rules.Pontific;
 
 public sealed class PontificRuleSystem : GameRuleSystem<PontificRuleComponent>
 {

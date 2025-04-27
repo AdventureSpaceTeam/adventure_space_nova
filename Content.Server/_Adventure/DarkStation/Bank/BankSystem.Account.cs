@@ -6,7 +6,7 @@ using Content.Shared.Preferences;
 using Robust.Shared.Network;
 using BankAccountComponent = Content.Shared.AdventureSpace.Bank.Components.BankAccountComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.Bank;
+namespace Content.Server.AdventureSpace.Bank;
 
 public sealed partial class BankSystem : EntitySystem
 {

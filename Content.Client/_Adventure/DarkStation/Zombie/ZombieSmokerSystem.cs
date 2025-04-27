@@ -7,7 +7,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Dynamics.Joints;
 
-namespace Content.Client.AdventurePrivate._Alteros.Zombie;
+namespace Content.Client.AdventureSpace.Zombie;
 
 public sealed class ZombieSmokerSystem : SharedZombieSmokerSystem
 {

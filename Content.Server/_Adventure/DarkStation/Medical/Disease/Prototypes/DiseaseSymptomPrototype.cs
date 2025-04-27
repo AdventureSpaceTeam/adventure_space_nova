@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Effects;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Effects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Prototypes;
+namespace Content.Server.AdventureSpace.Medical.Disease.Prototypes;
 
 [Prototype("symptom")]
 public sealed class DiseaseSymptomPrototype : IPrototype

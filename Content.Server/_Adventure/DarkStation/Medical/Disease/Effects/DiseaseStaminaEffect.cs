@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Damage.Systems;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Effects;
+namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
 
 [DataDefinition]
 public sealed partial class DiseaseStaminaEffect : DiseaseEffect

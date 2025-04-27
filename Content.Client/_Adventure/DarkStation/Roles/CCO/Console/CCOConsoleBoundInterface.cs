@@ -1,6 +1,6 @@
 ﻿using Content.Shared.AdventureSpace.Roles.CCO;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.CCO.Console;
+namespace Content.Client.AdventureSpace.Roles.CCO.Console;
 
 public sealed class CcoConsoleBoundInterface : BoundUserInterface
 {

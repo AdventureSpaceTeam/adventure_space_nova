@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Disease.Components;
+﻿using Content.Server.AdventureSpace.Medical.Disease.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Data;
+namespace Content.Server.AdventureSpace.Medical.Disease.Data;
 
 [Serializable]
 [DataDefinition]

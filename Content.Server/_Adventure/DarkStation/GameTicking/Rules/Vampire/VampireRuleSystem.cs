@@ -4,7 +4,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.Objectives;
 using Content.Shared.Mind;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameTicking.Rules.Vampire;
+namespace Content.Server.AdventureSpace.GameTicking.Rules.Vampire;
 
 public sealed class VampireRuleSystem : GameRuleSystem<VampireRuleComponent>
 {

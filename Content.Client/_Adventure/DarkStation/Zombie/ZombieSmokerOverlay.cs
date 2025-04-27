@@ -3,7 +3,7 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
 
-namespace Content.Client.AdventurePrivate._Alteros.Zombie;
+namespace Content.Client.AdventureSpace.Zombie;
 
 public sealed class ZombieSmokerOverlay : Overlay
 {

@@ -1,6 +1,6 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Objectives.Building;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Objectives.Building;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Buildings;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Buildings;
 
 public sealed class NarsiCultStructureSystem : EntitySystem
 {

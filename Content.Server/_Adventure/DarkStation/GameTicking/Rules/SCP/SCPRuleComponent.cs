@@ -1,7 +1,7 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Utility;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameTicking.Rules.SCP;
+namespace Content.Server.AdventureSpace.GameTicking.Rules.SCP;
 
 [RegisterComponent]
 public sealed partial class SCPRuleComponent : Component

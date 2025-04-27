@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Dagger;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Dagger;
 
 [RegisterComponent]
 public sealed partial class NarsiRitualDaggerComponent : Component

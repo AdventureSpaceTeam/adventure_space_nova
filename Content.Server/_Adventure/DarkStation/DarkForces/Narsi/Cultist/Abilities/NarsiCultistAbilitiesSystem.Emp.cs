@@ -2,7 +2,7 @@
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
 using NarsiCultistEmpEvent = Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistEmpEvent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

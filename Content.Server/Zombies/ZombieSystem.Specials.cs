@@ -1,4 +1,3 @@
-
 using System.Linq;
 using Content.Server.Polymorph.Systems;
 using Content.Shared.Damage;
@@ -8,6 +7,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Polymorph;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Prototypes;
+
 namespace Content.Server.Zombies;
 public sealed partial class ZombieSystem
 {

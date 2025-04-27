@@ -1,6 +1,6 @@
 ﻿using Robust.Shared.Serialization.TypeSerializers.Implementations;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Structures.Portal;
+namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Structures.Portal;
 
 [RegisterComponent]
 public sealed partial class RatvarPortalComponent : Component

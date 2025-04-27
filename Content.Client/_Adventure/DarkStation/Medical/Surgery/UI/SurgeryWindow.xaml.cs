@@ -11,11 +11,15 @@ using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.AdventurePrivate._Alteros.Medical.Surgery.UI;
+namespace Content.Client.AdventureSpace.Medical.Surgery.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class SurgeryWindow : DefaultWindow
 {
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
+    public event Action<BaseButton.ButtonEventArgs, SurgerySlotButton>? OnSurgerySlotButtonPressed;
+    public event Action<BaseButton.ButtonEventArgs, OrganSlotButton>? OnOrganSlotButtonPressed;
     public static int DefaultButtonSize = 112;
 
     private static readonly string BasePath = "/Textures/DarkStation/MainGame/Interface/Default/SurgerySlots/";
@@ -23,19 +27,15 @@ public sealed partial class SurgeryWindow : DefaultWindow
     private static readonly string BleedingIcon = BasePath + "Bleeding_Icon";
     private static readonly string FallBackIcon = BasePath + "Fallback_Icon";
     private static readonly string FallBackSlotOrPart = BasePath + "Fallback_Part";
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     /// <summary>
+    ///
     /// </summary>
     public SurgeryWindow()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
     }
-
-    public event Action<BaseButton.ButtonEventArgs, SurgerySlotButton>? OnSurgerySlotButtonPressed;
-    public event Action<BaseButton.ButtonEventArgs, OrganSlotButton>? OnOrganSlotButtonPressed;
 
     private string GetPartStatusStr(SurgeryBodyPartComponent part, SharedPartStatus status)
     {
@@ -66,7 +66,7 @@ public sealed partial class SurgeryWindow : DefaultWindow
     }
 
     /// <summary>
-    ///     Adding body part slots to interface, part slot buttons are assigned to rows based on their type
+    /// Adding body part slots to interface, part slot buttons are assigned to rows based on their type
     /// </summary>
     public void UpdateSurgeryMenu(SurgeryBoundUserInterfaceState state)
     {
@@ -121,12 +121,15 @@ public sealed partial class SurgeryWindow : DefaultWindow
             }
 
             if (bodyPartSlot.Cauterised)
+            {
                 cautIcon.TextureNormal = Theme.ResolveTexture(CauterisedIcon);
+            }
 
             var partUid = _entityManager.GetEntity(bodyPartSlot.BodyPart);
-            if (!bodyPartSlot.Cauterised && attachmentUid is null &&
-                partUid is null) //this is currently assuming any attachment will prevent bleeding... which is fine for now but may need to change
+            if (!bodyPartSlot.Cauterised && attachmentUid is null && partUid is null) //this is currently assuming any attachment will prevent bleeding... which is fine for now but may need to change
+            {
                 bleedIcon.TextureNormal = Theme.ResolveTexture(BleedingIcon);
+            }
 
             iconRow.Children.Add(attchIcon);
             iconRow.Children.Add(cautIcon);
@@ -143,8 +146,7 @@ public sealed partial class SurgeryWindow : DefaultWindow
                 if (_entityManager.TryGetComponent<SpriteComponent?>(partUid, out var sprite))
                 {
                     var bodyPartSprite = new BodyPartSprite();
-                    if (surgeryBodyPart != null && bodyPart is not null && bodyPartSlot.BodyPart != null &&
-                        slotParts.TryGetValue(bodyPartSlot.BodyPart.Value, out var slotValue))
+                    if (surgeryBodyPart != null && bodyPart is not null && bodyPartSlot.BodyPart != null && slotParts.TryGetValue(bodyPartSlot.BodyPart.Value, out var slotValue))
                     {
                         var status = GetPartStatusStr(surgeryBodyPart, slotValue);
                         sprite.LayerSetState(0, FormatState(bodyPart.Symmetry.ToString(), slotType, status));
@@ -181,33 +183,31 @@ public sealed partial class SurgeryWindow : DefaultWindow
                         if (list[j].SlotType == button.SlotType && !list[j].Counterpart)
                         {
                             counterpartFound = true;
-                            if (button.Symmetry ==
-                                "Left") //if we have assigned a left value from the constituent body part above, it overrides here
+                            if (button.Symmetry == "Left") //if we have assigned a left value from the constituent body part above, it overrides here
                             {
                                 list.Insert(0, button);
                                 break;
                             }
-
-                            button.Symmetry =
-                                "Right"; //right now we are assuming left is always found first, followed by right... this is not necessarily correct //TODO fix by assigning symmetry to the slot
-                            button.Counterpart = true;
-                            if (list.Count > 0)
-                                list.Insert(list.Count - (j - 1), button);
                             else
-                                list.Insert(0, button);
-                            break;
+                            {
+                                button.Symmetry = "Right"; //right now we are assuming left is always found first, followed by right... this is not necessarily correct //TODO fix by assigning symmetry to the slot
+                                button.Counterpart = true;
+                                if (list.Count > 0)
+                                    list.Insert(list.Count - (j - 1), button);
+                                else
+                                    list.Insert(0, button);
+                                break;
+                            }
                         }
                     }
 
                     if (!counterpartFound)
                     {
-                        if (button.Symmetry ==
-                            "Right") //if we have assigned a right value from the constituent body part above, it overrides here
+                        if (button.Symmetry == "Right") //if we have assigned a right value from the constituent body part above, it overrides here
                         {
                             button.Counterpart = true;
                             if (list.Count > 0)
-                                list.Insert(list.Count - 1,
-                                    button); //TODO fix still not ideal but better than assuming its position, just wouldn't work on something with four arms as well
+                                list.Insert(list.Count - 1, button); //TODO fix still not ideal but better than assuming its position, just wouldn't work on something with four arms as well
                             else
                                 list.Insert(0, button);
                         }
@@ -254,29 +254,19 @@ public sealed partial class SurgeryWindow : DefaultWindow
         }
 
         for (var i = 0; i < headWingSlotButtons.Count; i++)
-        {
             headWingSlotsRow.Children.Add(headWingSlotButtons[i]);
-        }
 
         for (var i = 0; i < armTorsoSlotButtons.Count; i++)
-        {
             armTorsoSlotsRow.Children.Add(armTorsoSlotButtons[i]);
-        }
 
         for (var i = 0; i < handOtherSlotButtons.Count; i++)
-        {
             handOtherSlotsRow.Children.Add(handOtherSlotButtons[i]);
-        }
 
         for (var i = 0; i < legTailSlotButtons.Count; i++)
-        {
             legTailSlotsRow.Children.Add(legTailSlotButtons[i]);
-        }
 
         for (var i = 0; i < footSlotButtons.Count; i++)
-        {
             footSlotsRow.Children.Add(footSlotButtons[i]);
-        }
 
         bodyPartSlotList.Children.Add(headWingSlotsRow);
         bodyPartSlotList.Children.Add(armTorsoSlotsRow);
@@ -304,9 +294,7 @@ public sealed partial class SurgeryWindow : DefaultWindow
 
             if (attachmentUid is not null)
             {
-                if (IoCManager.Resolve<IEntityManager>()
-                    .TryGetComponent<SpriteComponent?>(_entityManager.GetEntity(state.OrganSlots[i].Attachment),
-                        out var isprite))
+                if (IoCManager.Resolve<IEntityManager>().TryGetComponent<SpriteComponent?>(_entityManager.GetEntity(state.OrganSlots[i].Attachment), out var isprite))
                 {
                     var attachmentSprite = new StatusIconSprite();
                     attachmentSprite.SetEntity(_entityManager.GetEntity(state.OrganSlots[i].Attachment));
@@ -316,19 +304,21 @@ public sealed partial class SurgeryWindow : DefaultWindow
             }
 
             if (state.OrganSlots[i].Cauterised)
+            {
                 cautIcon.TextureNormal = Theme.ResolveTexture(CauterisedIcon);
+            }
 
             if (!state.OrganSlots[i].Cauterised && attachmentUid is null && state.OrganSlots[i].Child is null)
+            {
                 bleedIcon.TextureNormal = Theme.ResolveTexture(BleedingIcon);
+            }
 
             iconRow.Children.Add(attchIcon);
             iconRow.Children.Add(cautIcon);
             iconRow.Children.Add(bleedIcon);
 
             //add button sprite
-            if (state.OrganSlots[i].Child != null && IoCManager.Resolve<IEntityManager>()
-                    .TryGetComponent<SpriteComponent?>(_entityManager.GetEntity(state.OrganSlots[i].Child),
-                        out var sprite))
+            if (state.OrganSlots[i].Child != null && IoCManager.Resolve<IEntityManager>().TryGetComponent<SpriteComponent?>(_entityManager.GetEntity(state.OrganSlots[i].Child), out var sprite))
             {
                 var organSprite = new BodyPartSprite();
                 organSprite.SetEntity(_entityManager.GetEntity(state.OrganSlots[i].Child));
@@ -339,8 +329,7 @@ public sealed partial class SurgeryWindow : DefaultWindow
             {
                 partOrgans.Add(state.OrganSlots[i].Parent.ToString(), new OrganSlotCol());
                 if (slotParts.ContainsKey(state.OrganSlots[i].Parent))
-                    partOrgans[state.OrganSlots[i].Parent.ToString()]
-                        .Children.Add(new Label { Text = slotParts[state.OrganSlots[i].Parent].PartType.ToString() });
+                    partOrgans[state.OrganSlots[i].Parent.ToString()].Children.Add(new Label {Text = slotParts[state.OrganSlots[i].Parent].PartType.ToString()});
                 ;
             }
 
@@ -354,7 +343,7 @@ public sealed partial class SurgeryWindow : DefaultWindow
         SurgeryLayout.Children.Add(bodyPartSlotList);
         //iterate partOrgans, add cols to surgery menu
         var width = 625;
-        foreach (var entry in partOrgans)
+        foreach (KeyValuePair<string, OrganSlotCol> entry in partOrgans)
         {
             width += 100;
             SurgeryLayout.Children.Add(new Padding());
@@ -365,19 +354,21 @@ public sealed partial class SurgeryWindow : DefaultWindow
     }
 
     /// <summary>
-    ///     Update the UI state when new state data is received from the server.
+    /// Update the UI state when new state data is received from the server.
     /// </summary>
     /// <param name="state">State data sent by the server.</param>
     public void UpdateState(BoundUserInterfaceState state)
     {
-        var castState = (SurgeryBoundUserInterfaceState)state;
+        var castState = (SurgeryBoundUserInterfaceState) state;
         UpdateSurgeryMenu(castState);
     }
 
     public sealed class SlotButtonContainer : BoxContainer
     {
-        public bool Counterpart;
+        public BodyPartSlot Slot { get; }
         public string Symmetry = "None";
+        public bool Counterpart = false;
+        public string SlotType { get; }
 
         public SlotButtonContainer(BodyPartSlot slot, string slotType)
         {
@@ -386,9 +377,6 @@ public sealed partial class SurgeryWindow : DefaultWindow
             Orientation = LayoutOrientation.Horizontal;
             Align = AlignMode.Center;
         }
-
-        public BodyPartSlot Slot { get; }
-        public string SlotType { get; }
     }
 
     public sealed class OrganSlotButtonContainer : BoxContainer
@@ -424,6 +412,9 @@ public sealed partial class SurgeryWindow : DefaultWindow
 
     public sealed class SurgerySlotButton : TextureButton
     {
+        public BodyPartSlot Slot { get; }
+        public string SlotType { get; }
+
         public SurgerySlotButton(BodyPartSlot slot, string slotType)
         {
             Slot = slot;
@@ -436,13 +427,13 @@ public sealed partial class SurgeryWindow : DefaultWindow
             else
                 TextureNormal = Theme.ResolveTexture(FallBackIcon);
         }
-
-        public BodyPartSlot Slot { get; }
-        public string SlotType { get; }
     }
 
     public sealed class OrganSlotButton : TextureButton
     {
+        public OrganSlot Slot { get; }
+        public string SlotType { get; }
+
         public OrganSlotButton(OrganSlot slot, string slotType)
         {
             Slot = slot;
@@ -455,9 +446,6 @@ public sealed partial class SurgeryWindow : DefaultWindow
             else
                 TextureNormal = Theme.ResolveTexture(FallBackIcon);
         }
-
-        public OrganSlot Slot { get; }
-        public string SlotType { get; }
     }
 
     public sealed class Padding : Control
@@ -509,7 +497,7 @@ public sealed partial class SurgeryWindow : DefaultWindow
         public StatusIconSprite()
         {
             OverrideDirection = Direction.South;
-            Scale = new Vector2(2, 2);
+            Scale = new(2, 2);
         }
     }
 }

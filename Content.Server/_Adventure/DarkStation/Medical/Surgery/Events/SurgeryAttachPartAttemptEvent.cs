@@ -1,4 +1,4 @@
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Events;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Events;
 
 [ByRefEvent]
 public record struct SurgeryAttachPartAttemptEvent(bool Canceled, string Reason);

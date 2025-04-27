@@ -1,7 +1,7 @@
 using Content.Server.GameTicking;
 using Content.Server.Spawners.Components;
 
-namespace Content.Server.AdventurePrivate._Alteros.Roles.Spawners;
+namespace Content.Server.AdventureSpace.Roles.Spawners;
 
 public sealed class AdditionalJobsSpawnSystem : EntitySystem
 {

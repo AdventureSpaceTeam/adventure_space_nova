@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Components;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Components;
 
 [RegisterComponent]
 public sealed partial class NarsiObjectiveComponent : Component

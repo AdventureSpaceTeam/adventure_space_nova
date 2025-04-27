@@ -2,7 +2,7 @@ using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.Vampire.Role.Abilities;
+namespace Content.Server.AdventureSpace.GameRules.Vampire.Role.Abilities;
 
 [RegisterComponent]
 public sealed partial class VampireRegenComponent : Component

@@ -5,7 +5,7 @@ using Robust.Shared.Spawners;
 using NarsiCultistGhostWeaponEvent =
     Content.Shared.AdventureSpace.DarkForces.Narsi.Abilities.Events.NarsiCultistGhostWeaponEvent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Cultist.Abilities;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Cultist.Abilities;
 
 public sealed partial class NarsiCultistAbilitiesSystem
 {

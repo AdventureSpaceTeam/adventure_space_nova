@@ -1,7 +1,7 @@
 using System.Linq;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Body;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Events;
+using Content.Server.AdventureSpace.Medical.Surgery.Body;
+using Content.Server.AdventureSpace.Medical.Surgery.Components;
+using Content.Server.AdventureSpace.Medical.Surgery.Events;
 using Content.Server.Body.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Kitchen.Components;
@@ -16,7 +16,7 @@ using Content.Shared.Projectiles;
 using Robust.Shared.Configuration;
 using Robust.Shared.Random;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Wounds;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Wounds;
 
 public sealed partial class SurgeryDamageSystem : EntitySystem
 {

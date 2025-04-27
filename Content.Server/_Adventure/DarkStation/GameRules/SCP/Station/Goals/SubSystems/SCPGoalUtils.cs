@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Components;
-using Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.Events;
+﻿using Content.Server.AdventureSpace.GameRules.SCP.Station.Components;
+using Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.Events;
 
-namespace Content.Server.AdventurePrivate._Alteros.GameRules.SCP.Station.Goals.SubSystems;
+namespace Content.Server.AdventureSpace.GameRules.SCP.Station.Goals.SubSystems;
 
 public static class SCPGoalUtils
 {

@@ -1,10 +1,10 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress.Components;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Progress.Components;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Progress.Objectives;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Progress;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Progress;
 
 public sealed partial class NarsiCultProgressSystem
 {

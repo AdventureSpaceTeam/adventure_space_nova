@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.GameTicking.Rules.Vampire;
+﻿namespace Content.Server.AdventureSpace.GameTicking.Rules.Vampire;
 
 [RegisterComponent]
 [Access(typeof(VampireRuleSystem))]

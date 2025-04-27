@@ -1,6 +1,6 @@
 ﻿using Content.Server.Medical;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Effects;
+namespace Content.Server.AdventureSpace.Medical.Disease.Effects;
 
 public sealed partial class DiseaseVomitEffect : DiseaseEffect
 {

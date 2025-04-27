@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Ratvar.Righteous.Abilities.Midas;
+﻿namespace Content.Server.AdventureSpace.DarkForces.Ratvar.Righteous.Abilities.Midas;
 
 [ByRefEvent]
 public record MidasTargetEvent(EntityUid User);

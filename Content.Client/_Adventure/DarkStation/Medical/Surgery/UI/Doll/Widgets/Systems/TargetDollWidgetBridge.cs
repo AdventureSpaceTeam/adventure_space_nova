@@ -1,9 +1,9 @@
 ﻿using Content.Client._c4llv07e.Bridges;
-using Content.Client.AdventurePrivate._Alteros.Medical.Surgery.UI.Doll.Widgets.Systems.Controls;
+using Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems.Controls;
 using Content.Shared.Body.Part;
 using Robust.Client.UserInterface;
 
-namespace Content.Client.AdventurePrivate._Alteros.Medical.Surgery.UI.Doll.Widgets.Systems;
+namespace Content.Client.AdventureSpace.Medical.Surgery.UI.Doll.Widgets.Systems;
 
 public sealed class TargetDollWidgetBridge : ITargetDollWidgetBridge
 {

@@ -1,4 +1,4 @@
-﻿namespace Content.Server.AdventurePrivate._Alteros.Medical.Disease.Diagnosis.Vaccinator;
+﻿namespace Content.Server.AdventureSpace.Medical.Disease.Diagnosis.Vaccinator;
 
 [RegisterComponent]
 public sealed partial class DiseaseVaccinatorComponent : Component

@@ -7,7 +7,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.AdventurePrivate._Alteros.DarkForces.Ratvar.Midas;
+namespace Content.Client.AdventureSpace.DarkForces.Ratvar.Midas;
 
 [GenerateTypedNameReferences]
 public sealed partial class RatvarMidasTouchMenu : RadialMenu

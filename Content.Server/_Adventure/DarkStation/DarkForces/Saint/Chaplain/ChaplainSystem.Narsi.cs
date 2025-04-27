@@ -1,12 +1,12 @@
-﻿using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Events;
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Abilities;
+﻿using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Events;
+using Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Abilities;
 using Content.Server.Afk;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Player;
 using ChaplainComponent =
-    Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain.Components.ChaplainComponent;
+    Content.Server.AdventureSpace.DarkForces.Saint.Chaplain.Components.ChaplainComponent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Saint.Chaplain;
+namespace Content.Server.AdventureSpace.DarkForces.Saint.Chaplain;
 
 public sealed partial class ChaplainSystem
 {

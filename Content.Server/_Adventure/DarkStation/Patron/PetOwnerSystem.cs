@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Numerics;
-using Content.Server.AdventurePrivate._Alteros.Roles.Spawners;
+using Content.Server.AdventureSpace.Roles.Spawners;
 using Content.Server.GameTicking;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Mind;
@@ -23,7 +23,7 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.AdventurePrivate._Alteros.Patron;
+namespace Content.Server.AdventureSpace.Patron;
 
 public sealed class PatronPetsSystem : EntitySystem
 {

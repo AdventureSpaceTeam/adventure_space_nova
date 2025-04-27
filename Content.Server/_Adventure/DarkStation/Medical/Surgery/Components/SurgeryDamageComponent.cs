@@ -1,7 +1,7 @@
-﻿using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Tools;
+﻿using Content.Server.AdventureSpace.Medical.Surgery.Tools;
 using Content.Shared.Damage;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Components;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Components;
 
 [RegisterComponent]
 public sealed partial class SurgeryDamageComponent : Component

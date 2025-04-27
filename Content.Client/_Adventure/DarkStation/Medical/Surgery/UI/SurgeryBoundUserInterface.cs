@@ -1,7 +1,7 @@
 ﻿using Content.Shared.AdventureSpace.Medical.Surgery;
 using JetBrains.Annotations;
 
-namespace Content.Client.AdventurePrivate._Alteros.Medical.Surgery.UI;
+namespace Content.Client.AdventureSpace.Medical.Surgery.UI;
 
 /// <summary>
 ///     Initializes a <see cref="SurgeryWindow" /> and updates it when new server messages are received.

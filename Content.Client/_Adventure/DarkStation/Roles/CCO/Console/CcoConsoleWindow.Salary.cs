@@ -7,7 +7,7 @@ using Content.Shared.StatusIcon;
 using Robust.Client.UserInterface.Controls;
 using SecretCCVars = Content.Shared.AdventureSpace.CCVars.SecretCCVars;
 
-namespace Content.Client.AdventurePrivate._Alteros.Roles.CCO.Console;
+namespace Content.Client.AdventureSpace.Roles.CCO.Console;
 
 public sealed partial class CcoConsoleWindow
 {

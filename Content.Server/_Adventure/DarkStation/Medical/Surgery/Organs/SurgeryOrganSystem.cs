@@ -1,6 +1,6 @@
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Components;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Components.Base;
-using Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs.Events;
+using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components;
+using Content.Server.AdventureSpace.Medical.Surgery.Organs.Components.Base;
+using Content.Server.AdventureSpace.Medical.Surgery.Organs.Events;
 using Content.Server.Medical.Events;
 using Content.Server.Popups;
 using Content.Shared.Body.Events;
@@ -11,7 +11,7 @@ using Content.Shared.Rejuvenate;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Timing;
 
-namespace Content.Server.AdventurePrivate._Alteros.Medical.Surgery.Organs;
+namespace Content.Server.AdventureSpace.Medical.Surgery.Organs;
 
 public abstract class SurgeryOrganSystem<T, TY> : EntitySystem
     where T : BaseOrganComponent

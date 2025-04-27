@@ -1,4 +1,4 @@
-using Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Runes.Components;
+using Content.Server.AdventureSpace.DarkForces.Narsi.Runes.Components;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Dagger;
 using Content.Shared.AdventureSpace.DarkForces.Narsi.Roles;
 using Content.Shared.AdventureSpace.FastUI;
@@ -16,7 +16,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using CreateNarsiRuneDoAfterEvent = Content.Shared.AdventureSpace.Cult.Runes.CreateNarsiRuneDoAfterEvent;
 
-namespace Content.Server.AdventurePrivate._Alteros.DarkForces.Narsi.Dagger;
+namespace Content.Server.AdventureSpace.DarkForces.Narsi.Dagger;
 
 public sealed class NarsiRitualDaggerSystem : EntitySystem
 {
