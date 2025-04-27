@@ -24,7 +24,8 @@ public sealed partial class SCP173TileReaction : ITileReaction
     public FixedPoint2 TileReact(TileRef tile,
         ReagentPrototype reagent,
         FixedPoint2 reactVolume,
-        IEntityManager entityManager)
+        IEntityManager entityManager,
+        List<ReagentData>? reagents = null)
     {
         var lookupSystem = entityManager.System<EntityLookupSystem>();
         var turf = entityManager.System<TurfSystem>();

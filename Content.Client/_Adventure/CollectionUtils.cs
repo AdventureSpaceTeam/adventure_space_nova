@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace Content.Client.AdventureSpace;
+namespace Content.Client._Adventure;
 
 public static class CollectionUtils
 {

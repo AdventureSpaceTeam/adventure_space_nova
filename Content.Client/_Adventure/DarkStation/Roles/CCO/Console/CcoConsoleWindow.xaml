@@ -1,5 +1,6 @@
 ﻿<ui:FancyWindow xmlns="https://spacestation14.io"
-                xmlns:x="http://schemas.microsoft.com/winfx/2007/xaml"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                x:Class="Content.Client._Adventure.Roles.CCO.Console.CcoConsoleWindow"
                 xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
                 xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                 MinSize="256 256"

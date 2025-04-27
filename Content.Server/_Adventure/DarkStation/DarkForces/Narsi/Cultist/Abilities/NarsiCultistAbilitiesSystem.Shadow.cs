@@ -1,4 +1,4 @@
-﻿using Content.Shared.AdventureSpace;
+﻿using Content.Shared._Adventure;
 using Content.Shared._Adventure.DarkForces.Narsi.Cultist.Shadow;
 using Content.Shared._Adventure.DarkForces.Narsi.Roles;
 using Robust.Shared.Spawners;

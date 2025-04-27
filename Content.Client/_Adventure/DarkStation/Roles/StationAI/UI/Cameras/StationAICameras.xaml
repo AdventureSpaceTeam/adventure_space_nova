@@ -1,5 +1,6 @@
 ﻿<controls1:FancyWindow xmlns="https://spacestation14.io"
                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       x:Class="Content.Client._Adventure.Roles.StationAI.UI.Cameras.StationAICameras"
                        xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
                        xmlns:ui="clr-namespace:Content.Client.SurveillanceCamera.UI;assembly=Content.Client"
                        MinWidth="450" MinHeight="350" Title="Камеры доступные ИИ">

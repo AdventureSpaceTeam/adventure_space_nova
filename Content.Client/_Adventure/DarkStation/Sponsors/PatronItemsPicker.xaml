@@ -1,4 +1,6 @@
 <Control xmlns="https://spacestation14.io"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         x:Class="Content.Client._c4llv07e.Sponsors.PatronItemsPicker"
          xmlns:sponsors1="clr-namespace:Content.Client._c4llv07e.Sponsors">
     <BoxContainer Orientation="Vertical" HorizontalExpand="True">
 

@@ -1,4 +1,4 @@
-namespace Content.Shared.AdventureSpace;
+namespace Content.Shared._Adventure;
 
 public static class SharedUtils
 {

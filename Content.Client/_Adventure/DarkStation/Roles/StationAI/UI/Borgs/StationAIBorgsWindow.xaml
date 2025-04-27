@@ -1,5 +1,6 @@
 ﻿<controls1:FancyWindow xmlns="https://spacestation14.io"
                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       x:Class="Content.Client._Adventure.Roles.StationAI.UI.Borgs.StationAIBorgsWindow"
                        xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls;assembly=Content.Client"
                        xmlns:customControls1="clr-namespace:Content.Client.Administration.UI.CustomControls;assembly=Content.Client"
                        xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
