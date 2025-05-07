@@ -1,0 +1,117 @@
+﻿- type: entity
+  abstract: true
+  parent: BaseItem
+  id: ClothingEliteEyesAndroidBaseUnshaded
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+    state: icon
+  - type: Clothing
+    slots: [eyes]
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+  - type: Item
+    size: Small
+    storedRotation: -90
+
+- type: entity
+  parent: ClothingEliteEyesAndroidBaseUnshaded
+  id: ClothingCyanLinses
+  name: Голубые линзы
+  description: Светящиеся линзы голубого цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/cyan_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/cyan_linses.rsi
+    
+- type: entity
+  parent: ClothingEliteEyesAndroidBaseUnshaded
+  id: ClothingRedLinses
+  name: Красные линзы
+  description: Светящиеся линзы красного цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/red_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/red_linses.rsi
+
+- type: entity
+  parent: ClothingEliteEyesAndroidBaseUnshaded
+  id: ClothingYellowLinses
+  name: Жёлтые линзы
+  description: Светящиеся линзы жёлтого цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/yellow_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/yellow_linses.rsi
+    
+- type: entity
+  parent: ClothingEliteEyesAndroidBaseUnshaded
+  id: ClothingLimeLinses
+  name: Лаймовые линзы
+  description: Светящиеся линзы лаймового цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/lime_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/lime_linses.rsi
+    
+- type: entity
+  parent: ClothingEliteEyesAndroidBaseUnshaded
+  id: ClothingWhiteLinses
+  name: Белые линзы
+  description: Светящиеся линзы белого цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/white_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/white_linses.rsi
+    
+- type: entity
+  parent: ClothingEliteEyesAndroidBaseUnshaded
+  id: ClothingBlackLinses
+  name: Чёрные линзы
+  description: Светящиеся линзы чёрного цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/black_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/black_linses.rsi
+    
+- type: entity
+  parent: ClothingEliteEyesBaseUnshaded
+  id: ClothingPurpleLinses
+  name: Фиолетовые линзы
+  description: Светящиеся линзы фиолетового цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/violet_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/violet_linses.rsi
+    
+- type: entity
+  parent: ClothingEliteEyesBaseUnshaded
+  id: ClothingOrangeLinses
+  name: Ораньжевые линзы
+  description: Светящиеся линзы ораньжевые цвета.
+  suffix: Genesis_Dynamics
+  components:
+  - type: Sprite
+    sprite: _CyberneticGenesis/orange_linses.rsi
+  - type: Clothing
+    sprite: _CyberneticGenesis/orange_linses.rsi
