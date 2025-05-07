@@ -543,8 +543,10 @@
 
 # Belts without visualizers
 
+# COTULa start
+
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase, BaseSecurityBartenderContraband]
+  parent: [ClothingBeltStorageBase, BaseSecurityBartenderContraband]
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -555,11 +557,13 @@
     sprite: Clothing/Belt/bandolier.rsi
   - type: Item
     size: Huge
-  - type: BallisticAmmoProvider
+  - type: Storage
+    grid:
+    - 0,0,11,1
     whitelist:
       tags:
         - ShellShotgun
-    capacity: 14
+# COTULa end
 
 - type: entity
   parent: ClothingBeltBase
