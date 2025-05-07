@@ -39,7 +39,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/cyan_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/cyan_linses.rsi
       state: icon
       
       #
@@ -85,7 +85,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/red_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/red_linses.rsi
       state: icon
       
 #
@@ -131,7 +131,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/lime_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/lime_linses.rsi
       state: icon
       
       #
@@ -177,7 +177,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/yellow_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/yellow_linses.rsi
       state: icon
       
 #
@@ -223,7 +223,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/violet_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/violet_linses.rsi
       state: icon
       
 #
@@ -268,7 +268,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/white_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/white_linses.rsi
       state: icon
       
 #
@@ -313,7 +313,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/orange_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/orange_linses.rsi
       state: icon
       
 #
@@ -359,7 +359,7 @@
     itemIconStyle: BigAction
     priority: -20
     icon:
-      sprite: _CyberneticGenesis/black_linses.rsi
+      sprite: Adventure/_CyberneticGenesis/black_linses.rsi
       state: icon
       
 #

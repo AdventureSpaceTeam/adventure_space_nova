@@ -28,9 +28,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/cyan_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/cyan_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/cyan_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/cyan_linses.rsi
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -40,9 +40,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/red_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/red_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/red_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/red_linses.rsi
 
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -52,9 +52,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/yellow_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/yellow_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/yellow_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/yellow_linses.rsi
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -64,9 +64,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/lime_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/lime_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/lime_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/lime_linses.rsi
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -76,9 +76,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/white_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/white_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/white_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/white_linses.rsi
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -88,9 +88,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/black_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/black_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/black_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/black_linses.rsi
     
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
@@ -100,9 +100,9 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/violet_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/violet_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/violet_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/violet_linses.rsi
     
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
@@ -112,6 +112,6 @@
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
-    sprite: _CyberneticGenesis/orange_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/orange_linses.rsi
   - type: Clothing
-    sprite: _CyberneticGenesis/orange_linses.rsi
+    sprite: Adventure/_CyberneticGenesis/orange_linses.rsi
