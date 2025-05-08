@@ -275,7 +275,7 @@
 - type: entity
   id: OrangeLinsesImplanter
   name: Имплантер оранжевых глаз
-  description: Имплантер даёт пользователю специальные линзы ораньжевого цвета.
+  description: Имплантер даёт пользователю специальные линзы оранжевого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
   components:
