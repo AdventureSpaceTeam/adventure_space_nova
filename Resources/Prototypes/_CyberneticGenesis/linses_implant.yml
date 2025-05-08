@@ -274,7 +274,7 @@
 #
 - type: entity
   id: OrangeLinsesImplanter
-  name: Имплантер ораньжевых глаз
+  name: Имплантер оранжевых глаз
   description: Имплантер даёт пользователю специальные линзы ораньжевого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
