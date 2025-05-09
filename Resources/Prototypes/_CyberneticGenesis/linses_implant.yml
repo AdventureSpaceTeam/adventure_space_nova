@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: CyanLinsesImplanter
-  name: Имплантер голубых линз
+  name: имплантер голубых линз
   description: Имплантер даёт пользователю специальные линзы голубого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -12,7 +12,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: CyanLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы голубого цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -29,7 +29,7 @@
 
 - type: entity
   id: ActionToggleLinsesCyan
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
@@ -46,7 +46,7 @@
       
 - type: entity
   id: RedLinsesImplanter
-  name: Имплантер красных линз
+  name: имплантер красных линз
   description: Имплантер даёт пользователю специальные линзы красного цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -58,7 +58,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: RedLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы красного цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -75,7 +75,7 @@
 
 - type: entity
   id: ActionToggleLinsesRed
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
@@ -92,7 +92,7 @@
 
 - type: entity
   id: LimeLinsesImplanter
-  name: Имплантер лаймовых глаз
+  name: имплантер лаймовых глаз
   description: Имплантер даёт пользователю специальные линзы лаймового цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -104,7 +104,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: LimeLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы лаймового цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -121,7 +121,7 @@
 
 - type: entity
   id: ActionToggleLinsesLime
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
@@ -138,7 +138,7 @@
       
 - type: entity
   id: YellowLinsesImplanter
-  name: Имплантер жёлтых глаз
+  name: имплантер жёлтых глаз
   description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -150,7 +150,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: YellowLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -167,7 +167,7 @@
 
 - type: entity
   id: ActionToggleLinsesYellow
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
@@ -184,7 +184,7 @@
 
 - type: entity
   id: PurpleLinsesImplanter
-  name: Имплантер фиолетовых глаз
+  name: имплантер фиолетовых глаз
   description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -196,7 +196,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: PurpleLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы фиолетового цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -213,7 +213,7 @@
 
 - type: entity
   id: ActionToggleLinsesPurple
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
@@ -229,7 +229,7 @@
 #
 - type: entity
   id: WhiteLinsesImplanter
-  name: Имплантер белых глаз
+  name: имплантер белых глаз
   description: Имплантер даёт пользователю специальные линзы белого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -241,7 +241,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: WhiteLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы белого цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -258,7 +258,7 @@
 
 - type: entity
   id: ActionToggleLinsesWhite
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
@@ -274,8 +274,8 @@
 #
 - type: entity
   id: OrangeLinsesImplanter
-  name: Имплантер ораньжевых глаз
-  description: Имплантер даёт пользователю специальные линзы ораньжевого цвета.
+  name: имплантер оранжевых глаз
+  description: Имплантер даёт пользователю специальные линзы оранжевого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
   components:
@@ -286,8 +286,8 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: OrangeLinsesImplant
-  name: Имплантер
-  description: Имплантер даёт пользователю специальные линзы ораньжевого цвета.
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы оранжевого цвета.
   categories: [ HideSpawnMenu ]
   components:
     - type: SubdermalImplant
@@ -303,7 +303,7 @@
 
 - type: entity
   id: ActionToggleLinsesOrange
-  name: Активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
