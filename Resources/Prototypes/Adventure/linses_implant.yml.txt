@@ -1,0 +1,365 @@
+﻿- type: entity
+  id: CyanLinsesImplanter
+  name: имплантер голубых линз
+  description: Имплантер даёт пользователю специальные линзы голубого цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: CyanLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: CyanLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы голубого цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesCyan
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingCyanLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesCyan
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/cyan_linses.rsi
+      state: icon
+      
+      #
+      
+- type: entity
+  id: RedLinsesImplanter
+  name: имплантер красных линз
+  description: Имплантер даёт пользователю специальные линзы красного цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: RedLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: RedLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы красного цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesRed
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingRedLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesRed
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/red_linses.rsi
+      state: icon
+      
+#
+
+- type: entity
+  id: LimeLinsesImplanter
+  name: имплантер лаймовых глаз
+  description: Имплантер даёт пользователю специальные линзы лаймового цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: LimeLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: LimeLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы лаймового цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesLime
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingLimeLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesLime
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/lime_linses.rsi
+      state: icon
+      
+      #
+      
+- type: entity
+  id: YellowLinsesImplanter
+  name: имплантер жёлтых глаз
+  description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: YellowLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: YellowLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesYellow
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingYellowLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesYellow
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/yellow_linses.rsi
+      state: icon
+      
+#
+
+- type: entity
+  id: PurpleLinsesImplanter
+  name: имплантер фиолетовых глаз
+  description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: PurpleLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: PurpleLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы фиолетового цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesPurple
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingPurpleLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesPurple
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/violet_linses.rsi
+      state: icon
+      
+#
+- type: entity
+  id: WhiteLinsesImplanter
+  name: имплантер белых глаз
+  description: Имплантер даёт пользователю специальные линзы белого цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: WhiteLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: WhiteLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы белого цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesWhite
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingWhiteLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesWhite
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/white_linses.rsi
+      state: icon
+      
+#
+- type: entity
+  id: OrangeLinsesImplanter
+  name: имплантер оранжевых глаз
+  description: Имплантер даёт пользователю специальные линзы оранжевого цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: OrangeLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: OrangeLinsesImplant
+  name: имплантер
+  description: Имплантер даёт пользователю специальные линзы оранжевого цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesOrange
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingOrangeLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesOrange
+  name: активировать линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/orange_linses.rsi
+      state: icon
+      
+#
+
+- type: entity
+  id: BlackLinsesImplanter
+  name: Имплантер чёрных глаз
+  description: Имплантер даёт пользователю специальные линзы чёрного цвета.
+  suffix: Genesis_Dynamics
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: BlackLinsesImplant
+
+- type: entity
+  suffix: Genesis_Dynamics
+  parent: BaseSubdermalImplant
+  id: BlackLinsesImplant
+  name: Имплантер
+  description: Имплантер даёт пользователю специальные линзы ораньжевого цвета.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionToggleLinsesBlack
+      permanent: true
+    - type: ToggleableClothing
+      clothingPrototype: ClothingBlackLinses
+      slot: eyes
+    - type: ContainerContainer
+      containers:
+        toggleable-clothing: !type:ContainerSlot {}
+    - type: TriggerImplantAction
+
+- type: entity
+  id: ActionToggleLinsesBlack
+  name: Активировать Линзы
+  description: Активирует линзы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Adventure/_CyberneticGenesis/black_linses.rsi
+      state: icon
+      
+#
