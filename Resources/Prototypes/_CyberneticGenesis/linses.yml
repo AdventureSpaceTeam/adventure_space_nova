@@ -23,7 +23,7 @@
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingCyanLinses
-  name: Голубые линзы
+  name: голубые линзы
   description: Светящиеся линзы голубого цвета.
   suffix: Genesis_Dynamics
   components:
@@ -35,7 +35,7 @@
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingRedLinses
-  name: Красные линзы
+  name: красные линзы
   description: Светящиеся линзы красного цвета.
   suffix: Genesis_Dynamics
   components:
@@ -47,7 +47,7 @@
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingYellowLinses
-  name: Жёлтые линзы
+  name: жёлтые линзы
   description: Светящиеся линзы жёлтого цвета.
   suffix: Genesis_Dynamics
   components:
@@ -59,7 +59,7 @@
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingLimeLinses
-  name: Лаймовые линзы
+  name: лаймовые линзы
   description: Светящиеся линзы лаймового цвета.
   suffix: Genesis_Dynamics
   components:
@@ -71,7 +71,7 @@
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingWhiteLinses
-  name: Белые линзы
+  name: белые линзы
   description: Светящиеся линзы белого цвета.
   suffix: Genesis_Dynamics
   components:
@@ -83,7 +83,7 @@
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingBlackLinses
-  name: Чёрные линзы
+  name: чёрные линзы
   description: Светящиеся линзы чёрного цвета.
   suffix: Genesis_Dynamics
   components:
@@ -95,7 +95,7 @@
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
   id: ClothingPurpleLinses
-  name: Фиолетовые линзы
+  name: фиолетовые линзы
   description: Светящиеся линзы фиолетового цвета.
   suffix: Genesis_Dynamics
   components:
@@ -107,8 +107,8 @@
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
   id: ClothingOrangeLinses
-  name: Ораньжевые линзы
-  description: Светящиеся линзы ораньжевые цвета.
+  name: оранжевые линзы
+  description: Светящиеся линзы оранжевые цвета.
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
