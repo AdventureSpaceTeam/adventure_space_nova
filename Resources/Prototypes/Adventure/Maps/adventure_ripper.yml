@@ -1,0 +1,58 @@
+- type: gameMap
+  id: AdventureRipper 
+  mapName: 'Ripper Ship' 
+  mapPath: /Maps/Adventure/Ripper.yml 
+  minPlayers: 0 
+  maxPlayers: 25 
+  stations:
+    ripper: 
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} "Потрошитель" {1}' 
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'BR' 
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_omega.yml 
+        - type: StationJobs
+          overflowJobs: 
+            - Passenger
+          availableJobs:
+            # service
+            HeadOfPersonnel: [ 1, 1 ] 
+            Passenger: [ -1, -1 ]
+            ServiceWorker: [ 2, 2 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            Chef: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            # command
+            Captain: [ 1, 1 ]
+            # engineering
+            ChiefEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 2, 2 ]
+            StationEngineer: [ 3, 3 ]
+            TechnicalAssistant: [ 2, 2 ]
+            # medical
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Paramedic: [ 1, 1 ]
+            Chemist: [ 1, 1 ]
+            MedicalDoctor: [ 2, 2 ]
+            MedicalIntern: [ 2, 2 ]
+            # science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 2, 2 ]
+            ResearchAssistant: [ 2, 2 ]
+            Borg: [ 2, 2 ] # Adventure
+            # security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            SecurityOfficer: [ 3, 3 ]
+            SecurityCadet: [ 2, 2 ]
+            # cargo
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 4, 4 ]
+            CargoTechnician: [ 2, 2 ]
+            #Adventure
+            Blueshield: [ 1, 1 ]

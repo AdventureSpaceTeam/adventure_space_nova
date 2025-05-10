@@ -22,6 +22,14 @@
     {
       "name": "bulge",
       "directions": 4
+    },
+    {
+      "name": "Snake_tail_giant",
+      "directions": 4
+    },
+    {
+      "name": "giant",
+      "directions": 4
     }
   ]
 }

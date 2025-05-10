@@ -38,6 +38,18 @@
     {
       "name": "wide_1",
       "directions": 4
+    },
+    {
+      "name": "Imperial",
+      "directions": 4
+    },
+    {
+      "name": "Imperial_1",
+      "directions": 4
+    },
+    {
+      "name": "Imperial_spike",
+      "directions": 4
     }
   ]
 }

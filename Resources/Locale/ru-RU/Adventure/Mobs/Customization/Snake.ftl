@@ -24,21 +24,14 @@ marking-SnakeChin-chin = Зерах, морда (Подбородок от бр�
 marking-SnakeChin = Зерах, морда (Подбородок от брюха)
 marking-SnakeTailsBigBulge-Snake_tail_bulge = Зерах, хвост (Выпуклый)
 marking-SnakeTailsBigBulge = Зерах, хвост (Выпуклый) 
- 
-
-
- 
-
- 
-
-
-
- 
-
-
-
-
-
+marking-SnakeCollarImperial-Imperial = Зерах, воротник (Императорский)
+marking-SnakeCollarImperial = Зерах, воротник (Императорский) 
+marking-SnakeCollarImperialSpike-Imperial_spike  = Зерах, воротник (Императорский с шипами)
+marking-SnakeCollarImperialSpike = Зерах, воротник (Императорский с шипами) 
+marking-SnakeTailsGiant-Snake_tail_giant = Зерах, хвост (Гигантский)
+marking-SnakeTailsGiant = Зерах, хвост (Гигантский) 
+marking-SnakeTongue-Tongue = Зерах, морда (Язык)
+marking-SnakeTongue = Зерах, морда (Язык)
 
 
 

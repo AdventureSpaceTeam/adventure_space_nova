@@ -113,3 +113,49 @@
   - sprite: Adventure/Races/Snake/Customization/Tails48.rsi
     state: bulge
 
+- type: marking
+  id: SnakeCollarImperial
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial_1
+
+- type: marking
+  id: SnakeCollarImperialSpike
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial_spike
+  - sprite: Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial_1
+
+- type: marking
+  id: SnakeTailsGiant
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/Tails48.rsi
+    state: Snake_tail_giant
+  - sprite: Adventure/Races/Snake/Customization/Tails48.rsi
+    state: giant
+
+- type: marking
+  id: SnakeTongue
+  bodyPart: HeadSide
+  markingCategory: Snout
+  speciesRestriction: [Zerah]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Adventure/Races/Snake/Customization/snout.rsi
+    state: Tongue
