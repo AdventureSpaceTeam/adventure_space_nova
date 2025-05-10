@@ -46,7 +46,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Emerald }
   color: "#2ad75a"
-  price: 20
+  price: 12
 
 #рубин
 - type: entity
@@ -96,7 +96,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Ruby }
   color: "#f24646"
-  price: 20
+  price: 10
 
 #сапфир
 - type: entity
@@ -146,7 +146,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Sapphire }
   color: "#305de4"
-  price: 20
+  price: 8
 
 #топаз
 - type: entity
@@ -196,7 +196,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Topaz }
   color: "#f29d46"
-  price: 20
+  price: 15
 
 #драконий рубин
 - type: entity

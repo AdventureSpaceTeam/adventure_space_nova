@@ -89,7 +89,7 @@
             enabled: true
             inherent: true
           protos:
-          - VGRoid # Adventure-lavaLand
+          - AdventureLava # Adventure-lavaLand
 
 - type: entity
   id: BaseStationCentcomm
