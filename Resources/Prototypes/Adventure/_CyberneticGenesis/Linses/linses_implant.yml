@@ -314,7 +314,7 @@
 #
 - type: entity
   id: BlackLinsesImplanter
-  name: Имплантер чёрных глаз
+  name: имплантер чёрных глаз
   description: Имплантер даёт пользователю специальные линзы чёрного цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -326,7 +326,7 @@
   suffix: Genesis_Dynamics
   parent: BaseSubdermalImplant
   id: BlackLinsesImplant
-  name: Имплантер
+  name: имплантер
   description: Имплантер даёт пользователю специальные линзы ораньжевого цвета.
   categories: [ HideSpawnMenu ]
   components:
@@ -343,7 +343,7 @@
 
 - type: entity
   id: ActionToggleLinsesBlack
-  name: Активировать Линзы
+  name: активировать Линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
