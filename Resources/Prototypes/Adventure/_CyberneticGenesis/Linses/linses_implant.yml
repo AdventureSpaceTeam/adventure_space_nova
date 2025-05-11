@@ -343,7 +343,7 @@
 
 - type: entity
   id: ActionToggleLinsesBlack
-  name: активировать Линзы
+  name: активировать линзы
   description: Активирует линзы.
   categories: [ HideSpawnMenu ]
   components:
