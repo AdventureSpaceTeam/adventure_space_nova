@@ -108,7 +108,7 @@
   parent: ClothingEliteEyesBaseUnshaded
   id: ClothingOrangeLinses
   name: оранжевые линзы
-  description: Светящиеся линзы ораньжевые цвета.
+  description: Светящиеся линзы оранжевые цвета.
   suffix: Genesis_Dynamics
   components:
   - type: Sprite
