@@ -4,14 +4,14 @@
   description: job-description-detective
   playTimeTracker: JobDetective
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 36000 # 10 hours # Adventure
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 36000 # 10 hours # Adventure
 # Adventure-edit-start
-    - !type:SpeciesRequirement
-      inverted: true
-      species:
-      - PigMan
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - PigMan
 # Adventure-edit-end
   startingGear: DetectiveGear
   icon: "JobIconDetective"

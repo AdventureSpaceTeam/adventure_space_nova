@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "by borkroman",
+  "copyright": "Taken from https://github.com/tgstation/tgstation at 04e43d8c1d5097fdb697addd4395fb849dd341bd",
   "size": {
     "x": 32,
     "y": 32
@@ -23,18 +23,12 @@
       "name": "closing",
       "delays": [
         [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
         ]
       ]
     },
@@ -52,16 +46,6 @@
       ]
     },
     {
-      "name": "deny",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
       "name": "deny_unlit",
       "delays": [
         [
@@ -72,27 +56,18 @@
       ]
     },
     {
-      "name": "locked"
-    },
-    {
       "name": "open"
     },
     {
       "name": "opening",
       "delays": [
         [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
         ]
       ]
     },
@@ -115,16 +90,11 @@
         [
           0.1,
           0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.07,
+          0.07,
+          0.07,
+          0.07,
+          0.27
         ]
       ]
     },
@@ -135,18 +105,13 @@
       "name": "panel_opening",
       "delays": [
         [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.2,
+          0.07,
+          0.07,
+          0.07,
+          0.07,
+          0.07,
+          0.2
         ]
       ]
     },
@@ -163,6 +128,60 @@
           0.4,
           0.4
         ]
+      ]
+    },
+    {
+      "name": "pressure_unlit",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "base_pressure_unlit",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "pressure_unlit_flat",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "temperature_unlit",
+      "delays": [
+        [
+          0.8,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "base_temperature_unlit",
+      "delays": [
+          [
+              0.8,
+              0.4
+          ]
+      ]
+    },
+    {
+      "name": "temperature_unlit_flat",
+      "delays": [
+          [
+              0.8,
+              0.4
+          ]
       ]
     }
   ]

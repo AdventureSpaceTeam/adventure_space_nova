@@ -233,24 +233,6 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стена шаттла [Внутренняя](wall) # Adventure
-  id: InteriorShuttleWall
-  graph: Girder
-  startNode: start
-  targetNode: shuttleInteriorWall
-  category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи. # Adventure
-  icon:
-    sprite: Structures/Walls/shuttleinterior.rsi
-    state: full
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
   name: стена шаттла [Диагональная](wall) # Adventure
   id: DiagonalShuttleWall
   graph: Girder
@@ -813,6 +795,23 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  name: турникет # Adventure
+  id: Turnstile
+  graph: Turnstile
+  startNode: start
+  targetNode: turnstile
+  category: construction-category-structures
+  description: A mechanical door that permits one-way access and prevents tailgating.
+  icon:
+    sprite: Structures/Doors/turnstile.rsi
+    state: turnstile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
 
 - type: construction
   name: ставни # Adventure

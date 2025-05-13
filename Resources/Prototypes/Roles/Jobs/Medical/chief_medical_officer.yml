@@ -15,8 +15,6 @@
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 54000 #15 hrs # Adventure
-#    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
     - !type:AgeRequirement
       requiredAge: 30 # Adventure
 # Adventure-edit-start
@@ -28,7 +26,6 @@
       - PigMan
       - Vox
 # Adventure-edit-end
-  weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain
