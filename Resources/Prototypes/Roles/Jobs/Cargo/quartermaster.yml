@@ -4,20 +4,20 @@
   description: job-description-qm
   playTimeTracker: JobQuartermaster
   requirements:
+# adventure begin
 #    - !type:RoleTimeRequirement
 #      role: JobCargoTechnician
 #      time: 21600 #6 hrs
+# adventure end
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
-      time: 10800 #3 hrs
+      time: 9000 #2.5 hrs
     - !type:DepartmentTimeRequirement
       department: Cargo
       time: 36000 #10 hours
-#    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
+# Adventure begin
     - !type:AgeRequirement
       requiredAge: 30 # Adventure
-# Adventure-edit-start
     - !type:SpeciesRequirement
       inverted: true
       species:
@@ -25,7 +25,7 @@
       - Zerah
       - PigMan
       - Vox
-# Adventure-edit-end
+# Adventure end
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
