@@ -1,0 +1,10 @@
+## Dynamic
+
+# Shared with protolathe
+- type: latheRecipePack
+  id: ChemistryPlus
+  recipes:
+  - ChemBagBlueSpace #CyberneticGenesis
+  - BS-Jug #CyberneticGenesis
+  - BSPillCanister #CyberneticGenesis
+  - BaseBSChemistryEmptyVial #CyberneticGenesis
