@@ -7,17 +7,17 @@
   description: Стреляет кинетическими зарядами с низким уроном на короткое расстояние.
   components:
   - type: Sprite
-    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter/industrial_kinetic_cutter.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter.rsi
     layers:
     - state: icon
       map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
     slots:
     - suitStorage
-    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter/industrial_kinetic_cutter.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter.rsi
   - type: Item
     size: Large
-    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter/industrial_kinetic_cutter.rsi
+    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
@@ -38,11 +38,6 @@
     minAngle: -30
     maxAngle: -30
   - type: AmmoCounter
-  - type: ClothingSlotAmmoProvider 
-    targetSlot: suitStorage
-    providerWhitelist:
-      tags:
-      - ProtoKineticBattery
   - type: Appearance
   - type: ClothingSpeedModifier
     walkModifier: 0.90
@@ -50,56 +45,24 @@
   - type: HeldSpeedModifier
   - type: UseDelay
     delay: 0.5
-
-#кинетическая батарея
-- type: Tag
-  id: ProtoKineticBattery
-
-- type: entity
-  id: ProtoKineticBattery
-  suffix: LavaLand
-  name: кинетическая батарея
-  description: Специальная батарея, надеваемая поверх скафандра, оснащена переключателем с тремя типамы стрельбы.
-  parent: BaseItem
-  components:
   - type: Battery
-    maxCharge: 1000
-    startingCharge: 1000
+    maxCharge: 100
+    startingCharge: 100
     pricePerJoule: 0.15
-  - type: Tag
-    tags:
-      - ProtoKineticBattery
   - type: ProjectileBatteryAmmoProvider
     proto: BulletKinetic
-    fireCost: 10
+    fireCost: 1
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: BulletKinetic
-      fireCost: 10
+      fireCost: 1
     - proto: BulletKineticCutterSpread
-      fireCost: 50
+      fireCost: 5
     - proto: BulletKineticCutterSpreadSix
-      fireCost: 100
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-  - type: Item
-    size: Ginormous
-    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter/battery.rsi
-  - type: Sprite
-    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter/battery.rsi
-    layers:
-    - state: icon
-      map: ["enum.GunVisualLayers.Base"]
-  - type: Appearance
-  - type: Clothing
-    slots:
-    - suitStorage
-    sprite: Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter/battery.rsi
-  - type: ClothingSpeedModifier
-    walkModifier: 0.95
-    sprintModifier: 0.95
-  - type: HeldSpeedModifier
+      fireCost: 10
+  - type: BatterySelfRecharger
+    autoRechargeRate: 2
+    autoRecharge: true
 
 - type: entity
   id: BulletKineticCutterSpreadSix

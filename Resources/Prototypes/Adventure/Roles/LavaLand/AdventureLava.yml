@@ -181,6 +181,12 @@
       minGroupSize: 8
       maxGroupSize: 12
     - !type:OreDunGen
+      replacement: WallRockBasaltGold
+      entity: WallRockBasaltGoldWarm
+      count: 20
+      minGroupSize: 2
+      maxGroupSize: 5
+    - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltSilver
       count: 35

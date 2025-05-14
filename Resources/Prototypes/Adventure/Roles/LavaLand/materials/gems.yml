@@ -252,3 +252,122 @@
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone }
   color: "#ee5858"
   price: 40
+
+#бароксульдий
+- type: entity
+  parent: MaterialBase
+  id: Phoron
+  name: бароксульдий
+  description: Обработанный драгоценный камень.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Phoron
+  - type: Appearance
+  - type: Stack
+    stackType: Phoron
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ProcessedPhoron: 100
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#cb5ee5"
+
+- type: latheRecipe
+  id: Phoron
+  result: Phoron1
+  completetime: 0
+  materials:
+    RawPharo: 100
+
+- type: entity
+  parent: Phoron
+  id: Phoron1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Phoron
+  name: бароксульдий
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron }
+  spawn: Phoron1
+  maxCount: 30
+
+- type: material
+  id: ProcessedPhoron
+  name: бароксульдий
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron }
+  color: "#cb5ee5"
+  price: 30
+
+#рупериум
+- type: entity
+  parent: MaterialBase
+  id: Rupee
+  name: рупериум
+  description: Обработанный драгоценный камень.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Rupee
+  - type: Appearance
+  - type: Stack
+    stackType: Rupee
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ProcessedRupee: 100
+
+- type: latheRecipe
+  id: Rupee
+  result: Rupee1
+  completetime: 0
+  materials:
+    RawRupee: 100
+
+- type: entity
+  parent: Rupee
+  id: Rupee1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Rupee
+  name: рупериум
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee }
+  spawn: Rupee1
+  maxCount: 30
+
+- type: material
+  id: ProcessedRupee
+  name: рупериум
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee }
+  color: "#d6fe36"
+  price: 30
+
+- type: entity
+  id: WallRockBasaltGoldWarm
+  name: базальт
+  description: Рудная жила, богатая золотом.
+  parent: WallRockBasaltGold
+  suffix: рудожор LavaLand
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: OreGoldWarm
+
+- type: ore
+  id: OreGoldWarm
+  oreEntity: MobLavaLandGoldWarm

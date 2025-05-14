@@ -430,6 +430,69 @@
   - type: StaticPrice
     price: 500
 
+#Рудожор
+- type: entity
+  id: MobLavaLandGoldWarm
+  parent: BaseMobLavaLand
+  suffix: LavaLand
+  name: рудожор
+  description: Преувеличенно толстый червяк золотистого цвета
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/mobs/gold_warm.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.00
+    baseSprintSpeed : 2.00
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MeleeWeapon
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.75
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 10
+        Piercing: 5
+  - type: Butcherable
+    spawned:
+    - id: OreRupee1
+      amount: 1
+    - id: GoldOre1
+      amount: 3
+    - id: SpawnOreGemRandom
+      amount: 3
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound  
+    - LavaMob
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: LarvaRun
+      params: 
+        volume: -1
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard: 
+      VisionRadius: !type:Single
+        15
+      AggroVisionRadius: !type:Single
+        15
+
 #Антиабуз
 - type: entity
   id: MobLavaLandGoliathEmpty
