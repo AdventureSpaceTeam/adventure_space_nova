@@ -2,7 +2,7 @@
   name: блюспейс баночка для таблеток
   id: BSPillCanister
   parent: BaseStorageItem
-  description: Может содержать очень много таблеток.
+  description: Баночка, работает на экспериментальной блюспейс технологии.
   components:
   - type: Item
     size: Tiny
