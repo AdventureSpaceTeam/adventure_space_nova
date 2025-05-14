@@ -2,7 +2,7 @@
   name: блюспейс кувшин
   parent: BaseItem
   id: BS-Jug
-  description: Кувшин позволяющий хранить до 2500 унций реагентов.
+  description: Кувшин, работает на экспериментальной блюспейс технологии.
   suffix: Genesis_Dynamics
   components:
     - type: SolutionContainerManager
