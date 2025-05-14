@@ -2,7 +2,7 @@
   name: блюспейс сумка химика
   id: ChemBagBlueSpace
   parent: BaseStorageItem
-  description: Сумка в которой можно хранить большое количество мензурок, бутылочек и шприцов.
+  description: Сумка работающая на экспериментальной блюспейс технологии.
   components:
   - type: Sprite
     sprite: Adventure/_CyberneticGenesis/bluespacechem/BS-chem_bag.rsi
