@@ -225,7 +225,7 @@
     state: beakerbluespace
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 25000
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
