@@ -146,6 +146,16 @@
       maxCount: 1
       table:
         id: LavalendRoomMarker28
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: LavalendRoomMarker29
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: LavalendRoomMarker30
 #Rooms
     - !type:PrototypeDunGen
       proto: LavaFill
@@ -266,33 +276,33 @@
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: CoalMushroom
-      count: 50
-      minGroupSize: 2
-      maxGroupSize: 5
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 3
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: PorciniMushroom
-      count: 45
-      minGroupSize: 2
-      maxGroupSize: 5
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 3
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: InocybeMushroom
-      count: 40
-      minGroupSize: 2
-      maxGroupSize: 5
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 3
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: PolyporeMushroom
-      count: 30
-      minGroupSize: 2
-      maxGroupSize: 5
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 3
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: SpaceCactus
       count: 20
-      minGroupSize: 2
-      maxGroupSize: 5
+      minGroupSize: 1
+      maxGroupSize: 3
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: FloorChasmEntity
