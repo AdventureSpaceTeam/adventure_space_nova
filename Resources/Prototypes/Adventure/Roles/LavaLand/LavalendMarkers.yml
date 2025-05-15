@@ -699,3 +699,29 @@
     roomWhitelist:
       tags:
       - Lavalend27
+
+#28
+- type: dungeonRoom
+  id: LavalendMarkerRoomsGoldMine
+  size: 23,23
+  atlas: /Maps/Adventure/LavaLand/BorkMaps.yml
+  offset: 24,36
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - Lavalend28
+
+- type: Tag
+  id: Lavalend28
+
+- type: entity
+  id: LavalendRoomMarker28
+  categories: [ HideSpawnMenu ]
+  parent: BaseRoomMarker
+  name: Рандом комната Лаваленда
+  components:
+  - type: RoomFill
+    minSize: 10,10
+    maxSize: 50,50
+    roomWhitelist:
+      tags:
+      - Lavalend28
