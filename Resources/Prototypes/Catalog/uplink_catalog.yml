@@ -394,10 +394,41 @@
       - NukeOpsUplink
 
 - type: listing
+  id: UplinkEMPSyndicateBomb
+  name: ЭМИ бомба
+  description: Большой механизм, работающий как бомба синдиката, но в отличии от неё, создаёт огромный ЭМИ импульс, способный поразить целый отдел.
+  productEntity: EMPSyndicateBomb
+  cost:
+    Telecrystal: 11
+  categories:
+    - UplinkExplosives
+  restockTime: 900
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
   id: UplinkSyndicateBombNukie
   name: uplink-exploding-syndicate-bomb-name
   description: uplink-exploding-syndicate-bomb-desc
   productEntity: SyndicateBomb
+  cost:
+    Telecrystal: 11
+  categories:
+    - UplinkExplosives
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkEMPSyndicateBombNukie
+  name: ЭМИ бомба
+  description: Большой механизм, работающий как бомба синдиката, но в отличии от неё, создаёт огромный ЭМИ импульс, способный поразить целый отдел.
+  productEntity: EMPSyndicateBomb
   cost:
     Telecrystal: 11
   categories:
