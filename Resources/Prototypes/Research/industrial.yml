@@ -63,12 +63,13 @@
     state: building
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 12500 #CyberneticGenesis - (10000)
   recipeUnlocks:
   - AutolatheHyperConvectionMachineCircuitboard
   - ProtolatheHyperConvectionMachineCircuitboard
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - SheetifierMachineCircuitboard
+  - HyperExosuitFabricatorMachineCircuitboard #CyberneticGenesis
 
 - type: technology
   id: PowerGeneration
