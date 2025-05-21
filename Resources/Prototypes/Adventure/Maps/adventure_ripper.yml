@@ -2,7 +2,7 @@
   id: AdventureRipper 
   mapName: 'Ripper Ship' 
   mapPath: /Maps/Adventure/Ripper.yml 
-  minPlayers: 0 
+  minPlayers: 5 
   maxPlayers: 25 
   stations:
     ripper: 
@@ -31,8 +31,8 @@
             Captain: [ 1, 1 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
-            AtmosphericTechnician: [ 2, 2 ]
-            StationEngineer: [ 3, 3 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            StationEngineer: [ 2, 2 ]
             TechnicalAssistant: [ 2, 2 ]
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
@@ -48,7 +48,7 @@
             # security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
-            SecurityOfficer: [ 3, 3 ]
+            SecurityOfficer: [ 2, 2 ]
             SecurityCadet: [ 2, 2 ]
             # cargo
             Quartermaster: [ 1, 1 ]
