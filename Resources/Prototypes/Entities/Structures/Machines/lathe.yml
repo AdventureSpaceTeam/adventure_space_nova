@@ -270,7 +270,7 @@
     - MechBoards
     - ShuttleBoards
     - CircuitAdventureDynamic # Adventure
-    - LathPlus #CyberneticGenesis
+    - LathPlus # Adventure CyberneticGenesis
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
