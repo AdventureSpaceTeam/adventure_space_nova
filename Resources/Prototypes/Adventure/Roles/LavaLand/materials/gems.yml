@@ -23,7 +23,7 @@
   result: Emerald1
   completetime: 0
   materials:
-    RawEmerald: 100
+    RawEmerald: 400
 
 - type: entity
   parent: Emerald
@@ -73,7 +73,7 @@
   result: Ruby1
   completetime: 0
   materials:
-    RawRuby: 100
+    RawRuby: 400
 
 - type: entity
   parent: Ruby
@@ -123,7 +123,7 @@
   result: Sapphire1
   completetime: 0
   materials:
-    RawSapphire: 100
+    RawSapphire: 400
 
 - type: entity
   parent: Sapphire
@@ -173,7 +173,7 @@
   result: Topaz1
   completetime: 0
   materials:
-    RawTopaz: 100
+    RawTopaz: 400
 
 - type: entity
   parent: Topaz
@@ -228,7 +228,7 @@
   result: DragonRuby1
   completetime: 0
   materials:
-    RawDragon: 200
+    RawDragon: 1000
 
 - type: entity
   parent: DragonRuby
@@ -251,7 +251,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone }
   color: "#ee5858"
-  price: 40
+  price: 80
 
 #бароксульдий
 - type: entity
@@ -282,7 +282,7 @@
   result: Phoron1
   completetime: 0
   materials:
-    RawPharo: 100
+    RawPharo: 200
 
 - type: entity
   parent: Phoron
@@ -332,7 +332,7 @@
   result: Rupee1
   completetime: 0
   materials:
-    RawRupee: 100
+    RawRupee: 800
 
 - type: entity
   parent: Rupee
