@@ -1,0 +1,12 @@
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: HyperExosuitFabricatorMachineCircuitboard
+  result: HyperExosuitFabricatorMachineCircuitboard
+
+## Dynamic
+
+# Shared with protolathe
+- type: latheRecipePack
+  id: LathPlus
+  recipes:
+  - HyperExosuitFabricatorMachineCircuitboard #CyberneticGenesis

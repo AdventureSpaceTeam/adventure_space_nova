@@ -181,6 +181,8 @@
     availableModes:
     - SemiAuto
     soundGunshot: /Audio/Magic/fireball.ogg 
+  - type: Bloodstream
+    bloodMaxVolume: 0
 
 #лавовый краб
 - type: entity
@@ -455,7 +457,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      200: Dead
   - type: MeleeWeapon
     soundHit:
       path: "/Audio/Weapons/smash.ogg"
@@ -465,15 +467,15 @@
     damage:
       types:
         Slash: 10
-        Piercing: 5
+        Piercing: 10
   - type: Butcherable
     spawned:
-    - id: OreRupee1
+    - id: SpawnOreRupeeRandom
       amount: 1
     - id: GoldOre1
-      amount: 3
+      amount: 1
     - id: SpawnOreGemRandom
-      amount: 3
+      amount: 2
   - type: Tag
     tags:
     - CannotSuicide
@@ -492,6 +494,15 @@
         15
       AggroVisionRadius: !type:Single
         15
+
+- type: entity
+  id: SpawnOreRupeeRandom
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - OreRupee1
+      - UraniumOre1
 
 #Антиабуз
 - type: entity

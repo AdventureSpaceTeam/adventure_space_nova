@@ -1,0 +1,10 @@
+- type: entity
+  id: HyperExosuitFabricator
+  parent: [ExosuitFabricator, BaseHyperlathe]
+  name: гипер фабрикатор экзокостюмов
+  description: Высоко-экспериментальный прототип фабрикатора экзокостюмов.
+  components:
+  - type: Sprite
+    sprite: Adventure/_CyberneticGenesis/laths/exosuit_fabricator_hypercon.rsi
+  - type: Machine
+    board: ProtolatheHyperConvectionMachineCircuitboard
