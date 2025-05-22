@@ -89,7 +89,7 @@
 #
 - type: entity
   id: LimeLinsesImplanter
-  name: имплантер лаймовых глаз
+  name: имплантер лаймовых линз
   description: Имплантер даёт пользователю специальные линзы лаймового цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -134,7 +134,7 @@
 #   
 - type: entity
   id: YellowLinsesImplanter
-  name: имплантер жёлтых глаз
+  name: имплантер жёлтых линз
   description: Имплантер даёт пользователю специальные линзы жёлтого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -224,7 +224,7 @@
 #
 - type: entity
   id: WhiteLinsesImplanter
-  name: имплантер белых глаз
+  name: имплантер белых линз
   description: Имплантер даёт пользователю специальные линзы белого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -269,7 +269,7 @@
 #
 - type: entity
   id: OrangeLinsesImplanter
-  name: имплантер оранжевых глаз
+  name: имплантер оранжевых линз
   description: Имплантер даёт пользователю специальные линзы оранжевого цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
@@ -314,7 +314,7 @@
 #
 - type: entity
   id: BlackLinsesImplanter
-  name: имплантер чёрных глаз
+  name: имплантер чёрных линз
   description: Имплантер даёт пользователю специальные линзы чёрного цвета.
   suffix: Genesis_Dynamics
   parent: BaseImplantOnlyImplanter
