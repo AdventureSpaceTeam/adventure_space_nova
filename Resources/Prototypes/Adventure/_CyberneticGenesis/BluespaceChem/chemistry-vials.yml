@@ -1,0 +1,82 @@
+# TODO: Have a seperate lid state that can be popped on and off (not as a seperate item) that changes whether the vial can be spilled or not.
+
+- type: entity
+  name: блюспейс пробирка
+  parent: BaseItem
+  id: BaseBSChemistryEmptyVial
+  description: Пробирка, работает на экспериментальной блюспейс технологии.
+  components:
+  - type: Tag
+    tags:
+    - CentrifugeCompatible
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 25
+  - type: FitsInDispenser
+    solution: beaker
+  - type: Sprite
+    sprite: Adventure/_CyberneticGenesis/bluespacechem/BS-vial.rsi
+    layers:
+      - state: vial
+      - state: vial-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 0
+    fillBaseName: vial-1-
+    inHandsMaxFillLevels: 0
+    inHandsFillBaseName: -fill-
+  - type: Drink
+    solution: beaker
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+  - type: MixableSolution
+    solution: beaker
+  - type: RefillableSolution
+    solution: beaker
+  - type: DrainableSolution
+    solution: beaker
+  - type: ExaminableSolution
+    solution: beaker
+  - type: DrawableSolution
+    solution: beaker
+  - type: SolutionTransfer
+    maxTransferAmount: 30
+    canChangeTransferAmount: true
+  - type: SolutionItemStatus
+    solution: beaker
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Item
+    size: Tiny
+    sprite: Adventure/_CyberneticGenesis/bluespacechem/BS-vial.rsi
+    shape:
+    - 0,0,0,0
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+  - type: TrashOnSolutionEmpty
+    solution: beaker
+  - type: StaticPrice
+    price: 100
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 2
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Spillable
+    solution: beaker
+  - type: DnaSubstanceTrace

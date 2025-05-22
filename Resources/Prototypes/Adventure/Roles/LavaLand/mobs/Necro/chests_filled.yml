@@ -1,5 +1,5 @@
 - type: entity
-  parent: CrateGeneric
+  parent: BaseStructureDynamic
   id: OldChest
   suffix: Пустой LavaLand
   name: старый сундук
@@ -8,30 +8,57 @@
   - type: Transform
     anchored: true
   - type: Sprite
+    noRot: true
     sprite: Adventure/Roles/LavaLand/necro_spike/oldChest.rsi
     layers:
-    - state: base
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: closed
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "0.0,-0.09375"
-      map: ["enum.PaperLabelVisuals.Layer"]
+    - state: icon
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: icon-open }
+          False: { state: icon }
+  - type: Storage
+    grid:
+    - 0,0,9,5
+    maxItemSize: Ginormous
+    storageOpenSound: /Audio/Effects/closetopen.ogg
+    storageCloseSound: /Audio/Effects/closetclose.ogg
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 20
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
   - type: Icon
-    sprite: Adventure/Roles/LavaLand/crates/base.rsi
+    sprite: Adventure/Roles/LavaLand/necro_spike/oldChest.rsi
     state: icon
   - type: Appearance
-  - type: EntityStorageVisuals
-    stateDoorOpen: open
-    stateDoorClosed: closed
   - type: PointLight
     radius: 2
     energy: 1.5
     color: "#f2511e"
+
+- type: entity
+  id: OldChestRandomLootNecro
+  categories: [ HideSpawnMenu ]
+  parent: OldChestRandomLoot
+  components:
+  - type: TimedDespawn
+    lifetime: 10
 
 - type: entity
   id: OldChestRandomLoot
@@ -43,29 +70,38 @@
       - id: OreDragon1
         amount: 1
         prob: 0.2
+      - id: OreDragon1
+        amount: 2
+        prob: 0.2
       - id: OrganFelinidHeart
         prob: 0.2
       - id: ClothingShoesCult
-        prob: 0.5
+        prob: 0.2
       - id: RitualDagger
-        amount: 2
+        amount: 1
         prob: 0.3
       - id: ClothingHeadHatHoodCulthood
-        amount: 2
+        amount: 1
         prob: 0.5
       - id: SpawnSpellbook
         amount: 1
         prob: 0.2
       - id: ClothingOuterArmorPodWars
         amount: 1
-        prob: 0.3
+        prob: 0.2
       - id: ClothingOuterRobesCult
         amount: 1
-        prob: 0.5
+        prob: 0.3
       - id: Ointment1
         amount: 2
         prob: 0.3
       - id: Ointment1
+        amount: 1
+        prob: 0.3
+      - id: Gauze1
+        amount: 2
+        prob: 0.3
+      - id: Gauze1
         amount: 1
         prob: 0.3
       - id: Brutepack1
@@ -78,6 +114,9 @@
         amount: 1
         prob: 0.2
       - id: Ointment
+        amount: 1
+        prob: 0.1
+      - id: Gauze
         amount: 1
         prob: 0.1
       - id: Brutepack
@@ -116,6 +155,18 @@
       - id: WeaponCrusherGlaive  
         amount: 1
         prob: 0.02
+      - id: TechnologyDisk  
+        amount: 1
+        prob: 0.05
+      - id: ResearchDisk  
+        amount: 1
+        prob: 0.08
+      - id: ResearchDisk5000  
+        amount: 1
+        prob: 0.05
+      - id: ResearchDisk10000  
+        amount: 1
+        prob: 0.01
       - id: WeaponCrusher  
         amount: 1
         prob: 0.02
@@ -124,13 +175,49 @@
         prob: 0.02
       - id: WeaponProtoKineticCutter  
         amount: 1
-        prob: 0.02
+        prob: 0.08
       - id: MiningDrill
         amount: 1
-        prob: 0.02
+        prob: 0.08
       - id: MiningDrillDiamond
         amount: 1
-        prob: 0.02
+        prob: 0.08
       - id: MiningJackhammer
         amount: 1
+        prob: 0.05
+      - id: DrinkSakeBottleFull  
+        amount: 1
         prob: 0.02
+      - id: ChemistryBottleEphedrine  
+        amount: 1
+        prob: 0.02
+      - id: ChemistryBottleCognizine  
+        amount: 1
+        prob: 0.03
+      - id: ChemistryBottleOmnizine  
+        amount: 1
+        prob: 0.01
+      - id: CombatMedipen  
+        amount: 1
+        prob: 0.05
+      - id: ReusableMedipen  
+        amount: 1
+        prob: 0.01
+      - id: ShuttleGunKineticCircuitboard  
+        amount: 1
+        prob: 0.01
+      - id: JawsOfLife  
+        amount: 1
+        prob: 0.01
+      - id: WelderExperimental  
+        amount: 1
+        prob: 0.02
+      - id: PowerDrill  
+        amount: 1
+        prob: 0.02
+      - id: ResearchAndDevelopmentServerMachineCircuitboard  
+        amount: 1
+        prob: 0.01
+      - id: ClothingOuterHardsuitLuxury  
+        amount: 1
+        prob: 0.01

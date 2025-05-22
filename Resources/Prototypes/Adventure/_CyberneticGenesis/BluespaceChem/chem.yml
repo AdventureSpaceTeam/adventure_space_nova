@@ -1,0 +1,41 @@
+- type: latheRecipe
+  id: ChemBagBlueSpace
+  result: ChemBagBlueSpace
+  completetime: 2
+  materials:
+    Steel: 300
+    Plastic: 1000
+    Plasma: 250
+    Silver: 50
+    
+- type: latheRecipe
+  id: BS-Jug
+  result: BS-Jug
+  completetime: 2
+  materials:
+    Steel: 500
+    Plastic: 200
+    Plasma: 300
+    Silver: 50
+    Gold: 50
+    
+- type: latheRecipe
+  id: BSPillCanister
+  result: BSPillCanister
+  completetime: 2
+  materials:
+    Steel: 250
+    Plastic: 150
+    Plasma: 100
+    Silver: 50
+    Gold: 50
+    
+- type: latheRecipe
+  id: BaseBSChemistryEmptyVial
+  result: BaseBSChemistryEmptyVial
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 200
+    Plasma: 200
+    Gold: 50

@@ -243,7 +243,7 @@
   id: RandomOreGem
   oreEntity: SpawnOreGemRandom
   minOreYield: 1
-  maxOreYield: 3
+  maxOreYield: 2
 
 - type: entity
   id: SpawnOreGemRandom
@@ -381,3 +381,115 @@
   oreEntity: OreDragon1
   minOreYield: 1
   maxOreYield: 2
+
+#бароксульдивая руда
+- type: entity
+  parent: OreBase
+  id: OrePharo
+  name: бароксульдивая руда
+  description: Кусок неообработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Phoron_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OrePharo
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawPharo: 100
+  - type: Extractable
+    grindableSolutionName: pharo
+  - type: SolutionContainerManager
+    solutions:
+      pharo:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#cb5ee5"
+
+- type: entity
+  parent: OrePharo
+  id: OrePharo1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OrePharo
+  name: бароксульдивая руда
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron_ore }
+  spawn: OrePharo1
+  maxCount: 30
+
+- type: material
+  id: RawPharo
+  name: бароксульдивая руда
+  stackEntity: OrePharo1
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron_ore }
+  color: "#cb5ee5"
+  price: 0.5
+
+#рупериумовая руда
+- type: entity
+  parent: OreBase
+  id: OreRupee
+  name: рупериумовая руда
+  description: Кусок неообработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Rupee_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreRupee
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawRupee: 100
+  - type: Extractable
+    grindableSolutionName: rupee
+  - type: SolutionContainerManager
+    solutions:
+      rupee:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreRupee
+  id: OreRupee1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreRupee
+  name: рупериумовая руда
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee_ore }
+  spawn: OreRupee1
+  maxCount: 30
+
+- type: material
+  id: RawRupee
+  name: рупериумовая руда
+  stackEntity: OreRupee1
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee_ore }
+  color: "#d6fe36"
+  price: 0.5
