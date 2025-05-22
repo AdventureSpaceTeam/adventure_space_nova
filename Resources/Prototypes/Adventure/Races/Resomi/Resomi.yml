@@ -66,13 +66,13 @@
     implicitHeatRegulation: 250
     sweatHeatRegulation: 500
     shiveringHeatRegulation: 500
-    normalBodyTemperature: 293.15 # температура тела не поднимается сама по себе.
+    normalBodyTemperature: 291.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 2
   - type: NoInteractionInHands
   - type: Temperature
     heatDamageThreshold: 298.15 # 25с - начинаем получать урон.
     coldDamageThreshold: 213
-    currentTemperature: 293.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
+    currentTemperature: 291.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
     coldDamage: 
       types:
         Cold : 0.1
