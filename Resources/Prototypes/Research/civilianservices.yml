@@ -225,8 +225,12 @@
     state: beakerbluespace
   discipline: CivilianServices
   tier: 3
-  cost: 10000
+  cost: 25000 #Adventure 
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace
   - ReusableMedipen #Adventure
+  - ChemBagBlueSpace #CyberneticGenesis
+  - BS-Jug #CyberneticGenesis
+  - BSPillCanister #CyberneticGenesis
+  - BaseBSChemistryEmptyVial #CyberneticGenesis

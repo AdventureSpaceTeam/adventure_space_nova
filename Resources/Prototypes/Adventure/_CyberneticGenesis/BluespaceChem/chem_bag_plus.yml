@@ -1,0 +1,34 @@
+- type: entity
+  name: блюспейс сумка химика
+  id: ChemBagBlueSpace
+  parent: BaseStorageItem
+  description: Сумка работающая на экспериментальной блюспейс технологии.
+  components:
+  - type: Sprite
+    sprite: Adventure/_CyberneticGenesis/bluespacechem/BS-chem_bag.rsi
+    state: icon
+  - type: Clothing
+    sprite: Adventure/_CyberneticGenesis/bluespacechem/BS-chem_bag.rsi
+    quickEquip: false
+    slots:
+    - belt
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Normal # allow up to 5 large beakers / 10 beakers / 10 pill canisters
+    grid:
+    - 0,0,19,9
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      components:
+        - FitsInDispenser
+        - Pill
+      tags:
+        - Document
+        - PillCanister
+        - Bottle
+        - Syringe
+        - Dropper
+        - ChemDispensable
+  - type: Dumpable

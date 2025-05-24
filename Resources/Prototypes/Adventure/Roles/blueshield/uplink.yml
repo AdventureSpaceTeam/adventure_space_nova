@@ -305,7 +305,7 @@
   id: OmnizineChemistryBottleShop
   name: Бутылочка омнизина
   description: Химичское вещество позволяющее вылечить большинство повреждений.
-  productEntity: OmnizineChemistryBottle
+  productEntity: ChemistryBottleOmnizine
   cost:
     CentCommCrystal: 3
   categories:

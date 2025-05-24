@@ -181,6 +181,8 @@
     availableModes:
     - SemiAuto
     soundGunshot: /Audio/Magic/fireball.ogg 
+  - type: Bloodstream
+    bloodMaxVolume: 0
 
 #лавовый краб
 - type: entity
@@ -429,6 +431,78 @@
     size: Normal
   - type: StaticPrice
     price: 500
+
+#Рудожор
+- type: entity
+  id: MobLavaLandGoldWarm
+  parent: BaseMobLavaLand
+  suffix: LavaLand
+  name: рудожор
+  description: Преувеличенно толстый червяк золотистого цвета
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/mobs/gold_warm.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.00
+    baseSprintSpeed : 2.00
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: MeleeWeapon
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.75
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 10
+        Piercing: 10
+  - type: Butcherable
+    spawned:
+    - id: SpawnOreRupeeRandom
+      amount: 1
+    - id: GoldOre1
+      amount: 1
+    - id: SpawnOreGemRandom
+      amount: 2
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound  
+    - LavaMob
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: LarvaRun
+      params: 
+        volume: -1
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard: 
+      VisionRadius: !type:Single
+        15
+      AggroVisionRadius: !type:Single
+        15
+
+- type: entity
+  id: SpawnOreRupeeRandom
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - OreRupee1
+      - UraniumOre1
 
 #Антиабуз
 - type: entity

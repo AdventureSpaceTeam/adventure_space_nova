@@ -23,7 +23,7 @@
   result: Emerald1
   completetime: 0
   materials:
-    RawEmerald: 100
+    RawEmerald: 400
 
 - type: entity
   parent: Emerald
@@ -46,7 +46,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Emerald }
   color: "#2ad75a"
-  price: 20
+  price: 12
 
 #рубин
 - type: entity
@@ -73,7 +73,7 @@
   result: Ruby1
   completetime: 0
   materials:
-    RawRuby: 100
+    RawRuby: 400
 
 - type: entity
   parent: Ruby
@@ -96,7 +96,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Ruby }
   color: "#f24646"
-  price: 20
+  price: 10
 
 #сапфир
 - type: entity
@@ -123,7 +123,7 @@
   result: Sapphire1
   completetime: 0
   materials:
-    RawSapphire: 100
+    RawSapphire: 400
 
 - type: entity
   parent: Sapphire
@@ -146,7 +146,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Sapphire }
   color: "#305de4"
-  price: 20
+  price: 8
 
 #топаз
 - type: entity
@@ -173,7 +173,7 @@
   result: Topaz1
   completetime: 0
   materials:
-    RawTopaz: 100
+    RawTopaz: 400
 
 - type: entity
   parent: Topaz
@@ -196,7 +196,7 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Topaz }
   color: "#f29d46"
-  price: 20
+  price: 15
 
 #драконий рубин
 - type: entity
@@ -228,7 +228,7 @@
   result: DragonRuby1
   completetime: 0
   materials:
-    RawDragon: 200
+    RawDragon: 1000
 
 - type: entity
   parent: DragonRuby
@@ -251,4 +251,123 @@
   unit: materials-unit-piece
   icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone }
   color: "#ee5858"
-  price: 40
+  price: 80
+
+#бароксульдий
+- type: entity
+  parent: MaterialBase
+  id: Phoron
+  name: бароксульдий
+  description: Обработанный драгоценный камень.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Phoron
+  - type: Appearance
+  - type: Stack
+    stackType: Phoron
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ProcessedPhoron: 100
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#cb5ee5"
+
+- type: latheRecipe
+  id: Phoron
+  result: Phoron1
+  completetime: 0
+  materials:
+    RawPharo: 200
+
+- type: entity
+  parent: Phoron
+  id: Phoron1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Phoron
+  name: бароксульдий
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron }
+  spawn: Phoron1
+  maxCount: 30
+
+- type: material
+  id: ProcessedPhoron
+  name: бароксульдий
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron }
+  color: "#cb5ee5"
+  price: 30
+
+#рупериум
+- type: entity
+  parent: MaterialBase
+  id: Rupee
+  name: рупериум
+  description: Обработанный драгоценный камень.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Rupee
+  - type: Appearance
+  - type: Stack
+    stackType: Rupee
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ProcessedRupee: 100
+
+- type: latheRecipe
+  id: Rupee
+  result: Rupee1
+  completetime: 0
+  materials:
+    RawRupee: 800
+
+- type: entity
+  parent: Rupee
+  id: Rupee1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: Rupee
+  name: рупериум
+  icon: { sprite: /Textures/Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee }
+  spawn: Rupee1
+  maxCount: 30
+
+- type: material
+  id: ProcessedRupee
+  name: рупериум
+  unit: materials-unit-piece
+  icon: { sprite: Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee }
+  color: "#d6fe36"
+  price: 30
+
+- type: entity
+  id: WallRockBasaltGoldWarm
+  name: базальт
+  description: Рудная жила, богатая золотом.
+  parent: WallRockBasaltGold
+  suffix: рудожор LavaLand
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: OreGoldWarm
+
+- type: ore
+  id: OreGoldWarm
+  oreEntity: MobLavaLandGoldWarm

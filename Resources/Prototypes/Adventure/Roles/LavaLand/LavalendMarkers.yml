@@ -699,3 +699,81 @@
     roomWhitelist:
       tags:
       - Lavalend27
+
+#28
+- type: dungeonRoom
+  id: LavalendMarkerRoomsGoldMine
+  size: 23,23
+  atlas: /Maps/Adventure/LavaLand/BorkMaps.yml
+  offset: 24,36
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - Lavalend28
+
+- type: Tag
+  id: Lavalend28
+
+- type: entity
+  id: LavalendRoomMarker28
+  categories: [ HideSpawnMenu ]
+  parent: BaseRoomMarker
+  name: Рандом комната Лаваленда
+  components:
+  - type: RoomFill
+    minSize: 10,10
+    maxSize: 50,50
+    roomWhitelist:
+      tags:
+      - Lavalend28
+
+#29
+- type: dungeonRoom
+  id: LavalendMarkerRoomsX
+  size: 11,11
+  atlas: /Maps/Adventure/LavaLand/BorkMaps.yml
+  offset: 24,24
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - Lavalend29
+
+- type: Tag
+  id: Lavalend29
+
+- type: entity
+  id: LavalendRoomMarker29
+  categories: [ HideSpawnMenu ]
+  parent: BaseRoomMarker
+  name: Рандом комната Лаваленда
+  components:
+  - type: RoomFill
+    minSize: 10,10
+    maxSize: 50,50
+    roomWhitelist:
+      tags:
+      - Lavalend29
+
+#30
+- type: dungeonRoom
+  id: LavalendMarkerRoomsY
+  size: 11,11
+  atlas: /Maps/Adventure/LavaLand/BorkMaps.yml
+  offset: 36,24
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - Lavalend30
+
+- type: Tag
+  id: Lavalend30
+
+- type: entity
+  id: LavalendRoomMarker30
+  categories: [ HideSpawnMenu ]
+  parent: BaseRoomMarker
+  name: Рандом комната Лаваленда
+  components:
+  - type: RoomFill
+    minSize: 10,10
+    maxSize: 50,50
+    roomWhitelist:
+      tags:
+      - Lavalend30

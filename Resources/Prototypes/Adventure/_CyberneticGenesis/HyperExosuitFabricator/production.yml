@@ -1,0 +1,17 @@
+﻿- type: entity
+  id: HyperExosuitFabricatorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: плата гипер фабрикатора экзокостюмов
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: HyperExosuitFabricator
+    stackRequirements:
+      MatterBin: 3
+      Manipulator: 4
+      Glass: 5
+      Plasma: 5
+  - type: GuideHelp
+    guides:
+    - Robotics

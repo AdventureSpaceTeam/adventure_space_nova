@@ -1,0 +1,295 @@
+#угольный гриб
+- type: entity
+  name: угольный гриб
+  parent: BaseStructure
+  id: CoalMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+      state: coal_mushroom
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.2
+    - type: InteractionOutline
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: CoalMushroomGather
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 150
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+
+- type: entityLootTable
+  id: CoalMushroomGather
+  entries:
+  - id: FoodCoalMushroom
+    amount: 1
+    maxAmount: 1
+
+- type: entity
+  name: угольный гриб
+  parent: FoodProduceBase
+  id: FoodCoalMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Produce
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+    state: coal_mushroom_Gather
+  - type: FlavorProfile
+    flavors:
+      - spaceshroom
+  - type: Extractable
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 2
+  - type: StaticPrice
+    price: 20
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 1
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: Tag
+    tags:
+    - Meat
+    - ClothMade
+
+#боровик
+- type: entity
+  name: боровик
+  parent: CoalMushroom
+  id: PorciniMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+      state: porcini_mushroom
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: PorciniMushroomGather
+
+- type: entityLootTable
+  id: PorciniMushroomGather
+  entries:
+  - id: FoodPorciniMushroom
+    amount: 1
+    maxAmount: 1
+
+- type: entity
+  name: боровик
+  parent: FoodCoalMushroom
+  id: FoodPorciniMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+    state: porcini_mushroom_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Saline
+          Quantity: 3
+        - ReagentId: Nicotine
+          Quantity: 2
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 2
+
+#волоконница
+- type: entity
+  name: волоконница
+  parent: CoalMushroom
+  id: InocybeMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+      state: inocybe_mushroom
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: InocybeMushroomGather
+
+- type: entityLootTable
+  id: InocybeMushroomGather
+  entries:
+  - id: FoodInocybeMushroom
+    amount: 1
+    maxAmount: 1
+
+- type: entity
+  name: волоконница
+  parent: FoodCoalMushroom
+  id: FoodInocybeMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+    state: inocybe_mushroom_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: THC
+          Quantity: 3
+        - ReagentId: Ephedrine
+          Quantity: 5
+        - ReagentId: Amatoxin
+          Quantity: 3
+
+#трутовик
+- type: entity
+  name: трутовик
+  parent: CoalMushroom
+  id: PolyporeMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+      state: polypore_mushroom
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: PolyporeMushroomGather
+
+- type: entityLootTable
+  id: PolyporeMushroomGather
+  entries:
+  - id: FoodPolyporeMushroom
+    amount: 1
+    maxAmount: 1
+
+- type: entity
+  name: трутовик
+  parent: FoodCoalMushroom
+  id: FoodPolyporeMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+    state: polypore_mushroom_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 5
+
+#космический кактус
+- type: entity
+  name: космический кактус
+  parent: CoalMushroom
+  id: SpaceCactus
+  suffix: LavaLand
+  description: Группа кактусов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+      state: cactus
+      drawdepth: LowFloors
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: SpaceCactusGather
+    - type: DamageContacts
+      damage:
+        types:
+          Piercing: 1
+      ignoreWhitelist:
+        tags:
+        - LavaMob
+    - type: SpeedModifierContacts
+      walkSpeedModifier: 0.9
+      sprintSpeedModifier: 0.9
+      ignoreWhitelist:
+        tags:
+        - LavaMob
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+          - MidImpassable
+
+- type: entityLootTable
+  id: SpaceCactusGather
+  entries:
+  - id: FoodSpaceCactus
+    amount: 1
+    maxAmount: 1
+
+- type: entity
+  name: космический кактус
+  parent: FoodCoalMushroom
+  id: FoodSpaceCactus
+  description: Группа кактусов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
+    state: cactus_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 5

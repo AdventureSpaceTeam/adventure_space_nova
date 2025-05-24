@@ -16,6 +16,14 @@
       "directions": 4
     },
     {
+      "name": "pressure_unlit",
+      "directions": 4
+    },
+    {
+      "name": "temperature_unlit",
+      "directions": 4
+    },
+    {
       "name": "closed",
       "directions": 4
     },

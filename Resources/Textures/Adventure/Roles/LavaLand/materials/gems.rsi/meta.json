@@ -8,7 +8,7 @@
   },
   "states": [
     {
-      "name": "Dragon_pearl"
+      "name": "Amber"
     },
     {
       "name": "Dragon_stone"
@@ -48,6 +48,18 @@
     },
     {
       "name": "core2"
+    },
+    {
+      "name": "Rupee"
+    },
+    {
+      "name": "Phoron"
+    },
+    {
+      "name": "Phoron_ore"
+    },
+    {
+      "name": "Rupee_ore"
     }
   ]
 }

@@ -613,7 +613,9 @@
 
 - type: listing
   id: OmnizineChemistryBottleERT
-  productEntity: OmnizineChemistryBottle
+  name: Бутылочка омнизина
+  description: Химичское вещество позволяющее вылечить большинство повреждений.
+  productEntity: ChemistryBottleOmnizine
   cost:
     CentCommCrystal: 4
   categories:

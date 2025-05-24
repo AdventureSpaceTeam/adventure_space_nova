@@ -1,0 +1,10 @@
+- type: entity
+  parent: PlushieWiki
+  id: PlushieResomi
+  name: плюшевый резоми
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, низковатая...
+  components:
+  - type: Sprite
+    sprite: Adventure/_CyberneticGenesis/resomi/resomi.rsi
+    state: icon

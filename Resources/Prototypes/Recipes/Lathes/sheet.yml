@@ -193,7 +193,7 @@
   result: MaterialDiamond1
   completetime: 0
   materials:
-    RawDiamond: 100
+    RawDiamond: 400 #Adventure-Lavaland-balans
 
 - type: latheRecipe
   id: SheetUranium1
