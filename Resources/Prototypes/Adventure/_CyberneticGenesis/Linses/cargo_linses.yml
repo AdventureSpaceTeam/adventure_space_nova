@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: FunLinsesVariety
   icon:
-    sprite: Adventure/_CyberneticGenesis/linses/cyan_linses.rsi
+    sprite: Objects/Specific/Medical/implanter.rsi
     state: icon
   product: LinsesCrate
   cost: 3500

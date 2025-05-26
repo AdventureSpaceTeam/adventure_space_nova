@@ -1,4 +1,7 @@
-﻿marking-SynthAltron-Altron = КПБ, экран (Альтрон)
+﻿ipc-component-ready = Зарядка батареи включена.
+ipc-component-disabled = Зарядка батареи отключена.
+
+marking-SynthAltron-Altron = КПБ, экран (Альтрон)
 marking-SynthAltron = КПБ, экран (Альтрон)
 marking-SynthBigEyes-Bigeyes = КПБ, экран (Большие глаза)
 marking-SynthBigEyes = КПБ, экран (Большие глаза)
@@ -94,3 +97,11 @@ marking-SynthChestBody-body = КПБ, Краска (Тело)
 marking-SynthChestBody = КПБ, Краска (Тело)
 marking-SynthChestHead-head = КПБ, Краска (Голова)
 marking-SynthChestHead = КПБ, Краска (Голова)
+marking-SynthChestBody1-body1 = КПБ, Корпус (Нова)
+marking-SynthChestBody1 = КПБ, Корпус (Нова)
+marking-SynthChestBody2-body2 = КПБ, Корпус (Литой)
+marking-SynthChestBody2 = КПБ, Корпус (Литой)
+marking-SynthChestHole-hole = КПБ, Корпус (Дыра)
+marking-SynthChestHole = КПБ, Корпус (Дыра)
+marking-SynthChestWoman-woman = КПБ, Корпус (Женский корпус)
+marking-SynthChestWoman = КПБ, Корпус (Женский корпус)

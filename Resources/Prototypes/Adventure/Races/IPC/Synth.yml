@@ -278,3 +278,14 @@
             32:
               sprite: Adventure/Races/IPC/displacement.rsi
               state: pants
+
+- type: entity
+  id: ActionDrainBattery
+  name: Зарядить батарею
+  description: Зарядите свою батарею от источников энергии.
+  components:
+  - type: InstantAction
+    icon: Adventure/Interface/Actions/off.png
+    iconOn: Adventure/Interface/Actions/on.png
+    itemIconStyle: NoItem
+    event: !type:ToggleDrainActionEvent

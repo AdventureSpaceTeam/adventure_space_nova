@@ -70,6 +70,22 @@
     {
       "name": "head",
       "directions": 4
-    }
+    },
+    {
+      "name": "body1",
+      "directions": 4
+    },
+    {
+      "name": "body2",
+      "directions": 4
+    },
+    {
+      "name": "hole",
+      "directions": 4
+    },
+    {
+      "name": "woman",
+      "directions": 4
+    }   
   ]
 }

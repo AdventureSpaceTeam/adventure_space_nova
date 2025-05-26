@@ -93,12 +93,12 @@
     implicitHeatRegulation: 250
     sweatHeatRegulation: 500
     shiveringHeatRegulation: 500
-    normalBodyTemperature: 293.15 # температура тела не поднимается сама по себе.
+    normalBodyTemperature: 291.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
     heatDamageThreshold: 353.15
     coldDamageThreshold: 288.15
-    currentTemperature: 293.15
+    currentTemperature: 291.15
     coldDamage: 
       types:
         Cold : 1.5

@@ -58,12 +58,12 @@
     implicitHeatRegulation: 250 # Adventure
     sweatHeatRegulation: 500 # Adventure
     shiveringHeatRegulation: 500 # Adventure
-    normalBodyTemperature: 293.15 # Adventure
+    normalBodyTemperature: 291.15 # Adventure
     thermalRegulationTemperatureThreshold: 2 # Adventure
   - type: Temperature
     heatDamageThreshold: 400
     coldDamageThreshold: 273.15 # Adventure 0с
-    currentTemperature: 293.15 # Adventure
+    currentTemperature: 291.15 # Adventure
     specificHeat: 42
     coldDamage:
       types:

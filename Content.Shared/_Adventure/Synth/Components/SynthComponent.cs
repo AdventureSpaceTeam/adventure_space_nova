@@ -1,4 +1,5 @@
 ﻿using Content.Shared.Alert;
+using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Containers;
@@ -28,5 +29,17 @@ public sealed partial class SynthComponent : Component
 
     [DataField("empParalyzeTime")]
     public float EmpParalyzeTime = 10;
+
+    [DataField]
+    public EntProtoId DrainBatteryAction = "ActionDrainBattery";
+
+    [DataField]
+    public EntityUid? ActionEntity;
+
+    public bool DrainActivated;
+}
+
+public sealed partial class ToggleDrainActionEvent : InstantActionEvent
+{
 
 }
