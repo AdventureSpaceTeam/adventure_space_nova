@@ -24,6 +24,10 @@ using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Shared.Ninja.Components;
+using Content.Shared.Ninja.Systems;
+using Content.Shared.Popups;
+using Content.Shared.Actions;
 
 
 namespace Content.Server._Adventure.Synth;
@@ -47,6 +51,9 @@ public sealed partial class SynthSystem : SharedSynthSystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly SharedBatteryDrainerSystem _batteryDrainer = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly SharedActionsSystem _action = default!;
 
     public override void Initialize()
     {
@@ -57,6 +64,8 @@ public sealed partial class SynthSystem : SharedSynthSystem
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
         SubscribeLocalEvent<SynthComponent, ItemToggledEvent>(OnToggled);
+        SubscribeLocalEvent<SynthComponent, ToggleDrainActionEvent>(OnToggleAction);
+        SubscribeLocalEvent<SynthComponent, ComponentShutdown>(OnComponentShutdown);
 
         InitializeUI();
 
@@ -72,6 +81,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     {
         UpdateBatteryAlert((uid, component));
         _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
+        _action.AddAction(uid, ref component.ActionEntity, component.DrainBatteryAction);
     }
 
     private void UpdateBatteryAlert(Entity<SynthComponent> ent, PowerCellSlotComponent? slotComponent = null)
@@ -121,5 +131,29 @@ public sealed partial class SynthSystem : SharedSynthSystem
         UpdateUI(uid, comp);
 
         _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
+    }
+    private void OnToggleAction(EntityUid uid, SynthComponent component, ToggleDrainActionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        component.DrainActivated = !component.DrainActivated;
+        _action.SetToggled(component.ActionEntity, component.DrainActivated);
+        args.Handled = true;
+
+        if (component.DrainActivated && _powerCell.TryGetBatteryFromSlot(uid, out var battery, out var _))
+        {
+            EnsureComp<BatteryDrainerComponent>(uid);
+            _batteryDrainer.SetBattery(uid, battery);
+        }
+        else
+            RemComp<BatteryDrainerComponent>(uid);
+
+        var message = component.DrainActivated ? "ipc-component-ready" : "ipc-component-disabled";
+        _popup.PopupEntity(Loc.GetString(message), uid, uid);
+    }
+    private void OnComponentShutdown(EntityUid uid, SynthComponent component, ComponentShutdown args)
+    {
+        _action.RemoveAction(uid, component.ActionEntity);
     }
 }
