@@ -124,6 +124,7 @@
         layer:
         - MobLayer
   - type: Inventory
+    speciesId: resomi
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
