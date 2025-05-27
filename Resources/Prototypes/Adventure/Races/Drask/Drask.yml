@@ -133,6 +133,7 @@
     hideLayersOnEquip:
     - HeadSide
   - type: Inventory
+    speciesId: drask
     templateId: Drask
   - type: Sprite
     noRot: true
