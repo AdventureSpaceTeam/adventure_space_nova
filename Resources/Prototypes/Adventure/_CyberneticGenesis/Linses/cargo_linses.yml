@@ -1,9 +1,0 @@
-- type: cargoProduct
-  id: FunLinsesVariety
-  icon:
-    sprite: Objects/Specific/Medical/implanter.rsi
-    state: implanter0
-  product: LinsesCrate
-  cost: 3500
-  category: cargoproduct-category-name-fun
-  group: market
