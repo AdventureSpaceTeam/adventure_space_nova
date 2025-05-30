@@ -1,0 +1,9 @@
+- type: vendingMachineInventory
+  id: NanoDroidInventory
+  startingInventory:
+    HandheldHealthAnalyzer: 3
+    BoxBottle: 2
+    Syringe: 5
+    Nanopack: 5
+    Tereumpack: 5
+    Toolpack: 5

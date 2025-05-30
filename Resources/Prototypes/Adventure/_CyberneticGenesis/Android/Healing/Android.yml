@@ -1,0 +1,121 @@
+- type: entity
+  parent: BaseItem
+  id: BaseHealingItemAndroid
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi
+  - type: Item
+    size: Small
+    sprite: Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi
+    heldPrefix: ointment
+  # Inherited
+  - type: StaticPrice
+    price: 0
+
+- type: entity
+  name: Нано Набор
+  description: Набор содержающий иструментальный аналог, излечивающий Андроида.
+  parent: BaseHealingItemAndroid
+  id: Nanopack
+  suffix: Genesis_Dynamics
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    state: nanopack
+  - type: Healing
+    damageContainers:
+      - Android
+    damage:
+      groups:
+        Brute: -25 # 5 for each type in the group
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: Brutepack
+    count: 10
+  - type: StackPrice
+    price: 5
+    
+- type: entity
+  id: Nanopack1
+  parent: Nanopack
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: Brutepack
+    count: 1
+    
+- type: entity
+  name: Пакет тереума
+  description: Своейобразный пакет с кровью, но вместо него тереум позволяющий Андроидам работать.
+  parent: BaseHealingItemAndroid
+  id: Tereumpack
+  suffix: Genesis_Dynamics
+  components:
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: tereumpack
+  - type: Healing
+    damageContainers:
+      - Android
+    damage:
+      types:
+        Bloodloss: -2 #lowers bloodloss damage
+    ModifyBloodLevel: 25 #restores about 5% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: Bloodpack
+    count: 10
+  - type: StackPrice
+    price: 10
+    
+- type: entity
+  name: Набор физлечения Андроидов
+  description: Специальный набор инструментов и жидкости для лечения физического урона Андроидов.
+  parent: BaseHealingItemAndroid
+  id: Toolpack
+  suffix: Genesis_Dynamics
+  components:
+  - type: Tag
+    tags:
+    - Ointment
+  - type: Sprite
+    state: toolpack
+  - type: Item
+    heldPrefix: ointment
+  - type: Healing
+    damageContainers:
+      - Android
+    damage:
+      types:
+        Heat: -8
+        Cold: -8
+        Shock: -8
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+  - type: Stack
+    stackType: Ointment
+    count: 10
+  - type: StackPrice
+    price: 5
+
+- type: entity
+  id: Toolpack1
+  parent: Toolpack
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: Ointment
+    count: 1

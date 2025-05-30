@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesAndroidMale
+  values:
+    prefix: names-Android-male-dataset-
+    count: 30
+
+- type: localizedDataset
+  id: NamesAndroidFemale
+  values:
+    prefix: names-Android-female-dataset-
+    count: 30
