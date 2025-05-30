@@ -1,0 +1,63 @@
+- type: reagent
+  id: TereumAndroid
+  parent: Blood
+  name: Тереум
+  group: Biological
+  desc: Тереум используемый как кровь для Андроидов, способна восстановить механические показатели Андроида
+  physicalDesc: Тереум
+  flavor: metallic
+  color: "#42aaff"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+  
+- type: reagent
+  id: ActiveTereumAndroid
+  parent: Blood
+  name: Активный тереум
+  group: Biological
+  desc: Активный тереум используемый как кровь для Андроидов, способна восстановить физические показатели Андроида
+  physicalDesc: Активный Тереум
+  flavor: metallic
+  color: "#42aaff"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2
+
+- type: reaction
+  id: TereumCraft
+  reactants:
+    Mercury:
+      amount: 1
+    Iron:
+      amount: 1
+    Tricordrazine:
+      amount: 1
+    Copper:
+      amount: 1
+  products:
+    TereumAndroid: 2
+    
+- type: reaction
+  id: ActiveTereumCraft
+  reactants:
+    TereumAndroid:
+      amount: 1
+    SpaceLube:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+      catalyst: true
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    ActiveTereumAndroid: 2

@@ -1,0 +1,20 @@
+- type: damageContainer
+  id: Android
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+  - Cold
+  - Bloodloss
+
+- type: damageModifierSet
+  id: Android
+  coefficients:
+    Blunt: 0.9
+    Slash: 1
+    Piercing: 1
+    Heat: 1
+    Shock: 2
+    Cold: 1.5
+    Bloodloss: 0.9

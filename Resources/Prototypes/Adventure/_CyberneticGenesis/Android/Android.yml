@@ -1,0 +1,265 @@
+#Андроидный
+- type: radioChannel
+  id: Android
+  name: Андроидный
+  keycode: 'а'
+  frequency: 123
+  color: "#00bfff"
+  longRange: true
+
+- type: entity
+  save: false
+  name: Урист макАндроид
+  parent: BaseMobAndroid
+  id: MobAndroid
+  components:
+  - type: ItemToggle
+    onActivate: false 
+    activated: false 
+    onUse: false 
+
+- type: entity
+  abstract: true
+  save: false
+  name: Урист макАндроид
+  parent:
+  - MobFlammable
+  - BaseMobSpeciesInorganicAndroid
+  - MobBloodstream
+  #- BaseMobSpeciesOrganic
+  id: BaseMobAndroid
+  components:
+  - type: BodyEmotes
+    soundsId: SynthBodyEmotes
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ SpaceLube ]
+      methods: [ Touch ]
+      effects: 
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Cold: -2
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Обледенение отпадает от вашего корпуса" ]
+        probability: 0.25
+    - reagents: [ TereumAndroid ]
+      methods: [ Touch ]
+      effects: 
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          groups:
+            Brute: -1.5
+    - reagents: [ ActiveTereumAndroid ]
+      methods: [ Touch ]
+      effects: 
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Heat: -0.75
+            Shock: -0.75
+            Cold: -0.75
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 25
+  - type: AtmosExposed
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.60
+  - type: Temperature
+    heatDamageThreshold: 773.15
+    coldDamageThreshold: 173
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 0.1 
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage: 
+      types:
+        Heat: 0.75
+  - type: TemperatureSpeed
+    thresholds:
+      233: 0.8
+      228: 0.6
+      225: 0.4
+  - type: StatusEffects
+    allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Stutter
+      - Electrocution
+      - SlurredSpeech
+      - RatvarianLanguage
+      - PressureImmunity
+      - TemporaryBlindness
+      - Pacified
+      - Flashed
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 1000
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: Deathgasp
+    prototype: SynthDeathgasp
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: Bloodstream
+    bloodMaxVolume: 250 # на 150 больше
+    bloodReagent: TereumAndroid
+    bloodRefreshAmount: 0
+    chemicalMaxVolume: 0
+  - type: HumanoidAppearance
+    species: Android
+  - type: Icon
+    sprite: Mobs/Species/Human/parts.rsi
+    state: full
+  - type: Body
+    prototype: Android
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Android
+    damageModifierSet: Android
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#8a8a9e"
+  - type: MobState
+ ## - type: MobStateActions
+ ##   actions:
+ ##     Critical:
+ ##     - ActionCritSuccumb
+ ##     - ActionCritFakeDeath
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      ##100: Critical
+      175: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      ##Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: true
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+      - Cold
+  - type: TransferMindOnGib
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:GibBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.9
+      80: 0.7
+      100: 0.5
+      120: 0.3
+      140: 0.2
+      160: 0.1
+  - type: Speech
+    speechSounds: Alto
+    speechVerb: Default
+  - type: ZombieImmune
+  - type: Vocal
+    sounds:
+      Male: MaleHuman
+      Female: FemaleHuman
+      Unsexed: MaleHuman
+  - type: FireVisuals
+    alternateState: Standing
+  - type: TypingIndicator
+    proto: robot
+  - type: Repairable
+    doAfterDelay: 5
+    damage:
+      types:
+        Slash: -8
+        Piercing: -8
+    allowSelfRepair: true
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Android
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Android
+  - type: ActiveRadio
+    channels:
+      - Android
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+  - type: GuideHelp
+    guides:
+    - Species
+  - type: Inventory
+    #templateId: Android
+    displacements:
+      pants:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobAndroidDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: Android
+    - type: Inventory
+      #templateId: Android
+      displacements:
+        pants:
+          sizeMaps:
+            32:
+              sprite: Mobs/Species/Human/displacement.rsi
+              state: jumpsuit-female
