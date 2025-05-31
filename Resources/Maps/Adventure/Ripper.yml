@@ -14519,7 +14519,7 @@ entities:
     - type: Transform
       pos: -34.63051,4.8847356
       parent: 2
-- proto: ClothingNeckCloakMiner
+- proto: ClothingNeckCloakSalvagerSupreme
   entities:
   - uid: 2284
     components:

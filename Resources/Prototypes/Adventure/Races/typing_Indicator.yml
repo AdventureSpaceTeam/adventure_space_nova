@@ -1,0 +1,5 @@
+﻿- type: typingIndicator
+  id: Ghost
+  spritePath: Adventure/Interface/Speech.rsi
+  typingState: ghost
+  idleState: ghost

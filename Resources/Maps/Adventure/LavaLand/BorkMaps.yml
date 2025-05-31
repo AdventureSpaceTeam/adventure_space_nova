@@ -3891,7 +3891,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingNeckCloakMiner
+- proto: ClothingNeckCloakSalvagerSupreme
   entities:
   - uid: 828
     components:

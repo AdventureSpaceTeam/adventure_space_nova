@@ -258,7 +258,7 @@
   result: ProcessedMagmatite1
   completetime: 0
   materials:
-    MagmatiteFragment: 600
+    MagmatiteFragment: 1000
 
 - type: entity
   parent: ProcessedMagmatite

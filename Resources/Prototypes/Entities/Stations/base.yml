@@ -110,8 +110,13 @@
           - type: Gravity
             enabled: true
             inherent: true
+# Adventure-lavaLand-start
+          - type: IFF
+            flags: HideLabel
+            color: "#e82020"
           protos:
-          - AdventureLava # Adventure-lavaLand
+          - AdventureLava 
+# Adventure-lavaLand-end
 
 - type: entity
   id: BaseStationCentcomm

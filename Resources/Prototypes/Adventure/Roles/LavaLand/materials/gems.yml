@@ -23,7 +23,7 @@
   result: Emerald1
   completetime: 0
   materials:
-    RawEmerald: 400
+    RawEmerald: 800
 
 - type: entity
   parent: Emerald
@@ -73,7 +73,7 @@
   result: Ruby1
   completetime: 0
   materials:
-    RawRuby: 400
+    RawRuby: 800
 
 - type: entity
   parent: Ruby
@@ -123,7 +123,7 @@
   result: Sapphire1
   completetime: 0
   materials:
-    RawSapphire: 400
+    RawSapphire: 800
 
 - type: entity
   parent: Sapphire
@@ -173,7 +173,7 @@
   result: Topaz1
   completetime: 0
   materials:
-    RawTopaz: 400
+    RawTopaz: 800
 
 - type: entity
   parent: Topaz
@@ -282,7 +282,7 @@
   result: Phoron1
   completetime: 0
   materials:
-    RawPharo: 200
+    RawPharo: 400
 
 - type: entity
   parent: Phoron
@@ -332,7 +332,7 @@
   result: Rupee1
   completetime: 0
   materials:
-    RawRupee: 800
+    RawRupee: 1000
 
 - type: entity
   parent: Rupee
