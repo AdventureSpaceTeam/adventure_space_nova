@@ -324,33 +324,6 @@ namespace Content.Server.Atmos.EntitySystems
         /// </summary>
         public ReactionResult React(GasMixture mixture, IGasMixtureHolder? holder)
         {
-            // Adventure hyper-noblium effect start
-            var hnMoles = mixture.GetMoles(Gas.HyperNoblium);
-            if (hnMoles > 0 && mixture.TotalMoles > Atmospherics.GasMinMoles)
-            {
-                var hnFraction = hnMoles / mixture.TotalMoles;
-                if (hnFraction >= Atmospherics.HyperNobliumFullSuppressionThresholdPercentage)
-                {
-                    var savedResults = mixture.ReactionResults.ToArray();
-                    Array.Clear(mixture.ReactionResults, 0, mixture.ReactionResults.Length);
-                    foreach (var prototype in GasReactions)
-                    {
-                        if (prototype.ID == "HyperNobliumProduction")
-                        {
-                            prototype.React(mixture, holder, this, HeatScale);
-                            break;
-                        }
-                    }
-                    for (int i = 0; i < savedResults.Length; i++)
-                    {
-                        mixture.ReactionResults[i] = 0;
-                    }
-
-                    return ReactionResult.StopReactions;
-                }
-            }
-            // Adventure hyper-noblium effect end
-
             var reaction = ReactionResult.NoReaction;
             var temperature = mixture.Temperature;
             var energy = GetThermalEnergy(mixture);

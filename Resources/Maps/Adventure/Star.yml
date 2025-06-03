@@ -10565,7 +10565,7 @@ entities:
     - type: Transform
       pos: 52.5,3.5
       parent: 2
-- proto: BorgModuleAdvanchedMining
+- proto: BorgModuleAdvancedMining
   entities:
   - uid: 11675
     components:

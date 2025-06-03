@@ -1,142 +1,103 @@
 - type: construction
-  name: скафандр клоуна # Adventure
   id: ClownHardsuit
   graph: ClownHardsuit
   startNode: start
   targetNode: clownHardsuit
   category: construction-category-clothing
-  description: Модифицированный скафандр, идеально подходящий для клоуна.  # Adventure
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/clown.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: скафандр мима # Adventure
   id: MimeHardsuit
   graph: MimeHardsuit
   startNode: start
   targetNode: mimeHardsuit
   category: construction-category-clothing
-  description: Модифицированный скафандр, идеально подходящий для мима. # Adventure
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/mime.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: костяной доспех # Adventure
   id: BoneArmor
   graph: BoneArmor
   startNode: start
   targetNode: armor
   category: construction-category-clothing
-  description: Доспех, созданный из костей. # Adventure
-  icon: { sprite: Clothing/OuterClothing/Armor/bone_armor.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: костяной шлем # Adventure
   id: BoneHelmet
   graph: BoneHelmet
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Шлем, созданный из костей. # Adventure
-  icon: { sprite: Clothing/Head/Helmets/bone_helmet.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: банановые маска и парик клоуна # Adventure
   id: BananaClownMask
   graph: BananaClownMask
   startNode: start
   targetNode: mask
   category: construction-category-clothing
-  description: Маска и парик клоуна, улучшенные кожурками бананов. # Adventure
-  icon: { sprite: Clothing/Mask/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: банановый костюм клоуна # Adventure
   id: BananaClownJumpsuit
   graph: BananaClownJumpsuit
   startNode: start
   targetNode: jumpsuit
   category: construction-category-clothing
-  description: Костюм клоуна, улучшенный кожурками бананов. # Adventure
-  icon: { sprite: Clothing/Uniforms/Jumpsuit/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: банановые клоунские туфли # Adventure
   id: BananaClownShoes
   graph: BananaClownShoes
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Пара клоунских туфель, улучшенных кожурками бананов. # Adventure
-  icon: { sprite: Clothing/Shoes/Specific/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: мед-охранный визор # Adventure
   id: ClothingEyesHudMedSec
   graph: HudMedSec
   startNode: start
   targetNode: medsecHud
   category: construction-category-clothing
-  description: Два интерфейса, соединённые воедино силой инженерного мастерства. # Adventure
-  icon: { sprite: Clothing/Eyes/Hud/medsec.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: тапки-уточки # Adventure
   id: ClothingShoeSlippersDuck
   graph: ClothingShoeSlippersDuck
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Уютные, но преследуемые призраками уток, которых ты в детстве кормил хлебом. # Adventure
-  icon: { sprite: Clothing/Shoes/Misc/duck-slippers.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: вех-тапочки # Adventure
   id: ClothingShoeSlippersLizard
   graph: ClothingShoeSlippersLizard
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Очаровательная пара тапочек, похожих на унатха. Сочетайте их с другой зелёной одеждой — и вы будете самым крутым членом экипажа на станции! # Adventure
-  icon: { sprite: Clothing/Shoes/Misc/lizard-slippers.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: очки охраны # Adventure
   id: ClothingEyesGlassesSecurity
   graph: GlassesSecHUD
   startNode: start
   targetNode: glassesSec
   category: construction-category-clothing
-  description: Солнцезащитные очки, улучшенные встроенным охранным визором. # Adventure
-  icon: { sprite: Clothing/Eyes/Glasses/secglasses.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: колчан # Adventure
   id: ClothingBeltQuiver
   graph: Quiver
   startNode: start
   targetNode: Quiver
   category: construction-category-clothing
-  description: Вмещает до 15 стрел и плотно сидит на поясе. # Adventure
-  icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: шлем правосудия # Adventure
   id: ClothingHeadHelmetJustice
   graph: HelmetJustice
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Продвинутое снаряжение службы безопасности. Защищает станцию от никчёмных сотрудников. # Adventure
-  icon: { sprite: Clothing/Head/Helmets/justice.rsi, state: icon }
   objectType: Item

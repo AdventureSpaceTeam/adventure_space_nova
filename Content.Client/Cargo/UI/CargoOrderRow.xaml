@@ -40,12 +40,11 @@
                           HorizontalExpand="True"
                           VerticalExpand="True">
 
-                <Label Name="ProductName"
+                <RichTextLabel Name="ProductName"
                        Access="Public"
                        HorizontalExpand="True"
                        VerticalExpand="True"
-                       StyleClasses="LabelSubText"
-                       ClipText="True" />
+                       StyleClasses="LabelSubText" />
 
                 <Label Name="Description"
                        Access="Public"

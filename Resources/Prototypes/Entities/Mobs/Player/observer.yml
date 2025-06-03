@@ -70,6 +70,7 @@
     proto: Ghost
 # Adventure-Speech-end
   - type: PointLight
+    netsync: false
     radius: 6
     castShadows: false
     enabled: false

@@ -6587,7 +6587,7 @@ entities:
     - type: Transform
       pos: 55.5,-3.5
       parent: 2
-- proto: BorgModuleAdvanchedMining
+- proto: BorgModuleAdvancedMining
   entities:
   - uid: 2283
     components:
@@ -14519,7 +14519,7 @@ entities:
     - type: Transform
       pos: -34.63051,4.8847356
       parent: 2
-- proto: ClothingNeckCloakMiner
+- proto: ClothingNeckCloakSalvagerSupreme
   entities:
   - uid: 2284
     components:

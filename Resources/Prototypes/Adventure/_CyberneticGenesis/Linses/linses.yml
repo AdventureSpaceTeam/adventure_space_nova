@@ -44,9 +44,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
     
 - type: entity
@@ -73,9 +81,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
 
 - type: entity
@@ -102,9 +118,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
     
 - type: entity
@@ -131,9 +155,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
     
 - type: entity
@@ -160,9 +192,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
     
 - type: entity
@@ -189,9 +229,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
     
 - type: entity
@@ -218,9 +266,17 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded
     
 - type: entity
@@ -247,7 +303,15 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-zerah:
+      eyes-Zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
         shader: unshaded

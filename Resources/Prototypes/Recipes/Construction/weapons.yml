@@ -1,197 +1,167 @@
 - type: construction
-  name: серая плоская кепка # Adventure
   id: BladedFlatcapGrey
   graph: BladedFlatcapGrey
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Острый козырёк скрывает битое стекло. # Adventure
-  icon: { sprite: Clothing/Head/Hats/greyflatcap.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: коричневая плоская кепка # Adventure
   id: BladedFlatcapBrown
   graph: BladedFlatcapBrown
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Острый козырёк скрывает битое стекло. # Adventure
-  icon: { sprite: Clothing/Head/Hats/brownflatcap.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: заточка(shiv) # Adventure
   id: Shiv
   graph: Shiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Грубое оружие, сделанное из куска ткани и осколка стекла. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: усиленная заточка(shiv) # Adventure
   id: ReinforcedShiv
   graph: ReinforcedShiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Грубое оружие, сделанное из куска ткани и осколка бронестекла. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/reinforced_shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: плазменная заточка(shiv) # Adventure
   id: PlasmaShiv
   graph: PlasmaShiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Грубое оружие, сделанное из куска ткани и осколка плазменного стекла. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/plasma_shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: урановая заточка(shiv) # Adventure
   id: UraniumShiv
   graph: UraniumShiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Грубое оружие, сделанное из куска ткани и осколка уранового стекла. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/uranium_shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: копьё(spear) # Adventure
   id: Spear
   graph: Spear
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Копьё с осколком стекла в качестве наконечника. Идеально подходит для создания отверстий в ком-то. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: усиленное копьё(spear) # Adventure
   id: SpearReinforced
   graph: SpearReinforced
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Копьё с осколком бронестекла в качестве наконечника. Идеально подходит для создания отверстий в ком-то. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/reinforced_spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: плазменное копьё(spear) # Adventure
   id: SpearPlasma
   graph: SpearPlasma
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Копьё с осколком плазменного стекла в качестве наконечника. Идеально подходит для создания отверстий в ком-то. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/plasma_spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: урановое копьё(spear) # Adventure
   id: SpearUranium
   graph: SpearUranium
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Копьё с осколком уранового стекла в качестве наконечника. Идеально подходит для создания отверстий в ком-то. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/uranium_spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: самодельная бола # Adventure
+  id: SpearSharkMinnow
+  graph: SpearSharkMinnow
+  startNode: start
+  targetNode: spear
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
   id: Bola
   graph: Bola
   startNode: start
   targetNode: bola
   category: construction-category-weapons
-  description: Простое оружие для сковывания движений цели. # Adventure
-  icon: { sprite: Objects/Weapons/Throwable/bola.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: деревянный баклер # Adventure
   id: WoodenBuckler
   graph: WoodenBuckler
   startNode: start
   targetNode: woodenBuckler
   category: construction-category-weapons
-  description: Небольшой круглый деревянный самодельный щит. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: buckler-icon }
   objectType: Item
 
 - type: construction
-  name: импровизированный щит # Adventure
   id: MakeshiftShield
   graph: MakeshiftShield
   startNode: start
   targetNode: makeshiftShield
   category: construction-category-weapons
-  description: Ветхий на вид щит, мало на что пригодный. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: makeshift-icon }
   objectType: Item
 
 - type: construction
-  name: стрела из осколка стекла # Adventure
   id: ImprovisedArrow
   graph: ImprovisedArrow
   startNode: start
   targetNode: ImprovisedArrow
   category: construction-category-weapons
-  description: Стрела с наконечником из осколка стекла. # Adventure
-  icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
 - type: construction
-  name: стрела из осколка плазменного стекла # Adventure
+  id: ImprovisedArrowCarp
+  graph: ImprovisedArrowCarp
+  startNode: start
+  targetNode: ImprovisedArrowCarp
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
   id: ImprovisedArrowPlasma
   graph: ImprovisedArrowPlasma
   startNode: start
   targetNode: ImprovisedArrowPlasma
   category: construction-category-weapons
-  description: Стрела с наконечником из осколка плазменного стекла. # Adventure
-  icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
 - type: construction
-  name: стрела из осколка уранового стекла # Adventure
   id: ImprovisedArrowUranium
   graph: ImprovisedArrowUranium
   startNode: start
   targetNode: ImprovisedArrowUranium
   category: construction-category-weapons
-  description: Стрела с наконечником из осколка уранового стекла. # Adventure
-  icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
 - type: construction
-  name: импровизированный лук # Adventure
   id: ImprovisedBow
   graph: ImprovisedBow
   startNode: start
   targetNode: ImprovisedBow
   category: construction-category-weapons
-  description: Некачественный лук, сделанный из дерева и ткани. # Adventure
-  icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: unwielded }
   objectType: Item
 
 - type: construction
-  name: костяное копьё(spear) # Adventure
   id: SpearBone
   graph: SpearBone
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Копьё, сделанное из костей. # Adventure
-  icon: { sprite: Objects/Weapons/Melee/bone_spear.rsi, state: spear }
+  objectType: Item
+
+- type: construction
+  id: ClothingHandsKnuckleDustersBrass
+  graph: ClothingHandsKnuckleDustersBrass
+  startNode: start
+  targetNode: icon
+  category: construction-category-weapons
   objectType: Item
