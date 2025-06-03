@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "CyberneticGenesis",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon-unshaded"
+        },
+        {
+            "name": "equipped-EYES",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-resomi",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded-resomi",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-moth",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded-moth",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-zerah",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded-zerah",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-arachnid",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded-arachnid",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-drask",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded-drask",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}
