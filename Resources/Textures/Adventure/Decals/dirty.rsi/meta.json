@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "dirt1"
+    },
+    {
+      "name": "dirt2"
+    },
+    {
+      "name": "dirt3"
+    },
+    {
+      "name": "dirt4"
+    },
+    {
+      "name": "mould1"
+    },
+    {
+      "name": "mould2"
+    },
+    {
+      "name": "mould3"
+    },
+    {
+      "name": "mould4"
+    },
+    {
+      "name": "mould5"
+    },
+    {
+      "name": "mould6"
+    },
+    {
+      "name": "mould7"
+    },
+    {
+      "name": "mould8"
+    },
+    {
+      "name": "mould9"
+    },
+    {
+      "name": "mould10"
+    }
+  ]
+}

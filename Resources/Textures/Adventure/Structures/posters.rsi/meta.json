@@ -8,10 +8,19 @@
   },
   "states": [
     {
-      "name": "nukegen"
+      "name": "Uzhasi"
     },
     {
-      "name": "supergen"
+      "name": "erp"
+    },
+    {
+      "name": "admin"
+    },
+    {
+      "name": "nabeg"
+    },
+    {
+      "name": "nuke"
     }
   ]
 }

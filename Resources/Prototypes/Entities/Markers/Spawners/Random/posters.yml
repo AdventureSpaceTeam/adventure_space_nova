@@ -95,6 +95,11 @@
       - PosterContrabandExoAcid
       - PosterContrabandExoRun
       - PosterContrabandExoChomp
+# Adventure-start
+      - PosterContrabandERP
+      - PosterContrabandAdmin
+      - PosterContrabandNuke
+# Adventure-end
     chance: 1
 
 - type: entity
@@ -160,4 +165,8 @@
       - PosterLegitSafetyMothSSD
       - PosterLegitOppenhopper
       - PosterLegitTyrone
+# Adventure-start
+      - PosterLegitNabeg
+      - PosterLegitZhuzhasi
+# Adventure-end
     chance: 1

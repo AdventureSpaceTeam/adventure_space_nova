@@ -3,15 +3,15 @@
   "license": "CC-BY-SA-3.0",
   "copyright": "made by borkroman",
   "size": {
-    "x": 32,
-    "y": 32
+    "x": 224,
+    "y": 96
   },
   "states": [
     {
-      "name": "nukegen"
+      "name": "supergen"
     },
     {
-      "name": "supergen"
+      "name": "supergen_on_unlit"
     }
   ]
 }
