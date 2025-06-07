@@ -5,6 +5,7 @@
       proto: LavaBlob
     - !type:PrototypeDunGen
       proto: LavaSmallPaths
+      inheritDungeons: All
 #Rooms
     - !type:EntityTableDunGen
       minCount: 1
@@ -159,6 +160,7 @@
 #Rooms
     - !type:PrototypeDunGen
       proto: LavaFill
+      inheritDungeons: All
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltBananium
@@ -252,7 +254,7 @@
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: FloorLavaEntity
-      count: 350
+      count: 250
       minGroupSize: 3
       maxGroupSize: 15
     - !type:OreDunGen
@@ -265,8 +267,8 @@
       replacement: FloorLavaEntity
       entity: BasaltRandom
       count: 200
-      minGroupSize: 1
-      maxGroupSize: 3
+      minGroupSize: 3
+      maxGroupSize: 6
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: NecroSpike
@@ -346,17 +348,20 @@
   - !type:MobsDunGen
     minCount: 30
     maxCount: 40
-    groups:
+    contents: LavaLandSmallPathsMobs
+
+- type: entityTable
+  id: LavaLandSmallPathsMobs
+  table: !type:GroupSelector
+    children:
     - id: SalvageSpawnerMobLavaLand
       amount: 1
 
 - type: dungeonConfig
   id: LavaFill
-  data:
-    entities:
-      Fill: WallRockBasalt
   layers:
   - !type:FillGridDunGen
+    entity: WallRockBasalt
     allowedTiles:
     - FloorBasaltLavaLand
 

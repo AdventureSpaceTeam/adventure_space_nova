@@ -31,6 +31,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/cyan_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/cyan_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -43,6 +68,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/red_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/red_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
 
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -55,6 +105,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/yellow_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/yellow_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -67,6 +142,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/lime_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/lime_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -79,6 +179,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/white_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/white_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
     
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
@@ -91,6 +216,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/black_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/black_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
     
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
@@ -103,6 +253,31 @@
     sprite: Adventure/_CyberneticGenesis/linses/violet_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/violet_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded
     
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
@@ -115,3 +290,28 @@
     sprite: Adventure/_CyberneticGenesis/linses/orange_linses.rsi
   - type: Clothing
     sprite: Adventure/_CyberneticGenesis/linses/orange_linses.rsi
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+      - state: equipped-EYES-unshaded
+        shader: unshaded
+      eyes-resomi:
+      - state: equipped-EYES-resomi
+      - state: equipped-EYES-unshaded-resomi
+        shader: unshaded
+      eyes-moth:
+      - state: equipped-EYES-moth
+      - state: equipped-EYES-unshaded-moth
+        shader: unshaded
+      eyes-Zerah:
+      - state: equipped-EYES-zerah
+      - state: equipped-EYES-unshaded-zerah
+        shader: unshaded
+      eyes-arachnid:
+      - state: equipped-EYES-arachnid
+      - state: equipped-EYES-unshaded-arachnid
+        shader: unshaded
+      eyes-drask:
+      - state: equipped-EYES-drask
+      - state: equipped-EYES-unshaded-drask
+        shader: unshaded

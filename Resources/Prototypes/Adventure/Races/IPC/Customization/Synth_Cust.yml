@@ -491,3 +491,47 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Body.rsi
     state: head
+
+- type: marking
+  id: SynthChestBody1
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: body1
+
+- type: marking
+  id: SynthChestBody2
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: body2
+
+- type: marking
+  id: SynthChestHole
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: hole
+
+- type: marking
+  id: SynthChestWoman
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: woman

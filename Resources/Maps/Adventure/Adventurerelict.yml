@@ -39457,7 +39457,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterHardsuitBasic
+- proto: ClothingOuterHardsuitEVA
   entities:
   - uid: 5012
     components:

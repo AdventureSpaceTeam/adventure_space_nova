@@ -25,7 +25,9 @@
         components:
           - Hands
       loot:
-        All: CoalMushroomGather
+        All: !type:GroupSelector
+          children:
+          - id: FoodCoalMushroomchilder
     - type: Damageable
       damageContainer: StructuralInorganic
       damageModifierSet: Wood
@@ -37,13 +39,6 @@
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
-
-- type: entityLootTable
-  id: CoalMushroomGather
-  entries:
-  - id: FoodCoalMushroom
-    amount: 1
-    maxAmount: 1
 
 - type: entity
   name: угольный гриб
@@ -104,14 +99,11 @@
         components:
           - Hands
       loot:
-        All: PorciniMushroomGather
-
-- type: entityLootTable
-  id: PorciniMushroomGather
-  entries:
-  - id: FoodPorciniMushroom
-    amount: 1
-    maxAmount: 1
+        All: !type:GroupSelector
+          children:
+          - id: FoodPorciniMushroom
+            amount: 1
+            maxAmount: 1
 
 - type: entity
   name: боровик
@@ -152,14 +144,11 @@
         components:
           - Hands
       loot:
-        All: InocybeMushroomGather
-
-- type: entityLootTable
-  id: InocybeMushroomGather
-  entries:
-  - id: FoodInocybeMushroom
-    amount: 1
-    maxAmount: 1
+        All: !type:GroupSelector
+          children:
+          - id: FoodInocybeMushroom
+            amount: 1
+            maxAmount: 1
 
 - type: entity
   name: волоконница
@@ -198,14 +187,11 @@
         components:
           - Hands
       loot:
-        All: PolyporeMushroomGather
-
-- type: entityLootTable
-  id: PolyporeMushroomGather
-  entries:
-  - id: FoodPolyporeMushroom
-    amount: 1
-    maxAmount: 1
+        All: !type:GroupSelector
+          children:
+          - id: FoodPolyporeMushroom
+            amount: 1
+            maxAmount: 1
 
 - type: entity
   name: трутовик
@@ -243,7 +229,11 @@
         components:
           - Hands
       loot:
-        All: SpaceCactusGather
+        All: !type:GroupSelector
+          children:
+          - id: FoodSpaceCactus
+            amount: 1
+            maxAmount: 1
     - type: DamageContacts
       damage:
         types:
@@ -267,13 +257,6 @@
             bounds: "-0.5,-0.5,0.5,0.5"
           layer:
           - MidImpassable
-
-- type: entityLootTable
-  id: SpaceCactusGather
-  entries:
-  - id: FoodSpaceCactus
-    amount: 1
-    maxAmount: 1
 
 - type: entity
   name: космический кактус

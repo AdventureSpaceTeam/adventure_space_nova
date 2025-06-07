@@ -40,6 +40,7 @@ namespace Content.Client.IoC
             collection.Register<SponsorsManager>(); // Adventure sponsor
             collection.Register<DiscordAuthLinkManager>(); // Adventure discord Auth
             collection.Register<IParallaxManager, ParallaxManager>();
+            collection.Register<GeneratedParallaxCache>();
             collection.Register<IChatManager, ChatManager>();
             collection.Register<ISharedChatManager, ChatManager>();
             collection.Register<IClientPreferencesManager, ClientPreferencesManager>();

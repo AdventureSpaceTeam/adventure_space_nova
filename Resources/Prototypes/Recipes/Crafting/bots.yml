@@ -1,90 +1,55 @@
 - type: construction
-  name: чистобот # Adventure
   id: cleanbot
   graph: CleanBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: Ужас автоматизации теперь угрожает и космическим уборщикам. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/cleanbot.rsi
-    state: cleanbot
 
 - type: construction
-  name: пожарбот # Adventure
   id: firebot
   graph: FireBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: Маленький бот для тушения пожаров. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/firebot.rsi
-    state: firebot
 
 - type: construction
-  name: хонкбот # Adventure
   id: honkbot
   graph: HonkBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: Этот бот хонкает и на нём подскальзываются люди. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/honkbot.rsi
-    state: honkbot
 
 - type: construction
-  name: кринжбот # Adventure
   id: jonkbot
   graph: JonkBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: Этот бот проклято хонкает, смеётся и на нём подскальзываются люди. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/honkbot.rsi
-    state: jonkbot
 
 - type: construction
-  name: медибот # Adventure
   id: medibot
   graph: MediBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: Этот бот может помочь с базовым лечением. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/medibot.rsi
-    state: medibot
 
 - type: construction
-  name: мимбот # Adventure
   id: mimebot
   graph: MimeBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: Этот бот знает как махать рукой. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/mimebot.rsi
-    state: mimebot
 
 - type: construction
-  name: грузобот # Adventure
   id: supplybot
   graph: SupplyBot
   startNode: start
   targetNode: bot
   category: construction-category-utilities
   objectType: Item
-  description: В этого бота можно что-то загрузить. # Adventure
-  icon:
-    sprite: Mobs/Silicon/Bots/supplybot.rsi
-    state: supplybot

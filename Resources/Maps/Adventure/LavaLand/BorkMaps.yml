@@ -2362,7 +2362,7 @@ entities:
     - type: Transform
       pos: 9.5,45.5
       parent: 1653
-- proto: BorgModuleAdvanchedMining
+- proto: BorgModuleAdvancedMining
   entities:
   - uid: 1741
     components:
@@ -3891,7 +3891,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingNeckCloakMiner
+- proto: ClothingNeckCloakSalvagerSupreme
   entities:
   - uid: 828
     components:

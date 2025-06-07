@@ -22,7 +22,7 @@ cargo-console-menu-requests-label = Requests
 cargo-console-menu-orders-label = Orders
 cargo-console-menu-populate-categories-all-text = All
 cargo-console-menu-order-row-title = Order from {$orderRequester} (${$orderPrice})
-cargo-console-menu-order-row-product-name = Order {$productName} (x{$orderAmount})
+cargo-console-menu-populate-orders-cargo-order-row-product-name-text = {$productName} (x{$orderAmount}) by {$orderRequester} from [color={$accountColor}]{$account}[/color]
 cargo-console-menu-order-row-product-description = Reason: {$orderReason}
 cargo-console-menu-order-row-button-approve = Approve
 cargo-console-menu-order-row-button-cancel = Cancel
@@ -89,3 +89,15 @@ cargo-funding-alloc-console-label-save-fail = [bold]Revenue Divisions Invalid![/
     [1] +
     *[-1] -
 }{$val}%)[/color]
+
+# Slip template
+cargo-acquisition-slip-body = [head=3]Asset Detail[/head]
+    {"[bold]Product:[/bold]"} {$product}
+    {"[bold]Description:[/bold]"} {$description}
+    {"[bold]Unit cost:[/bold"}] ${$unit}
+    {"[bold]Amount:[/bold]"} {$amount}
+    {"[bold]Cost:[/bold]"} ${$cost}
+
+    {"[head=3]Purchase Detail[/head]"}
+    {"[bold]Orderer:[/bold]"} {$orderer}
+    {"[bold]Reason:[/bold]"} {$reason}

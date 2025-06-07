@@ -1,131 +1,95 @@
 ﻿- type: construction
-  name: металлический стержень(metal rod) # Adventure
   id: MetalRod
   graph: MetalRod
   startNode: start
   targetNode: MetalRod
   category: construction-category-materials
-  description: Прочный металлический стержень, который можно использовать для различных целей. # Adventure
-  icon: { sprite: Objects/Materials/parts.rsi, state: rods }
   objectType: Item
 
 - type: construction
-  name: бронестекло(reinforced glass) # Adventure
-  description: Лист армированного стекла. # Adventure
   id: SheetRGlass
   graph: Glass
   startNode: start
   targetNode: SheetRGlass
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: rglass }
   objectType: Item
 
 - type: construction
-  name: заводное стекло(glass) # Adventure
-  description: Лист укреплённого латунью стекла. # Adventure
   id: SheetClockworkGlass
   graph: Glass
   startNode: start
   targetNode: SheetClockworkGlass
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: cglass }
   objectType: Item
 
 - type: construction
-  name: плазменное стекло(plasma glass) # Adventure
-  description: Лист полупрозрачной плазмы. # Adventure
   id: SheetPGlass
   graph: Glass
   startNode: start
   targetNode: SheetPGlass
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: pglass }
   objectType: Item
 
 - type: construction
-  name: плазменное бронестекло(reinforced plasma glass) # Adventure
-  description: Лист армированной полупрозрачной плазмы. # Adventure
   id: SheetRPGlass
   graph: Glass
   startNode: start
   targetNode: SheetRPGlass
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: rpglass }
   objectType: Item
 
 - type: construction
-  name: плазменное бронестекло(reinforced plasma glass) # Adventure
-  description: Лист армированной полупрозрачной плазмы. # Adventure
   id: SheetRPGlass0
   graph: Glass
   startNode: start
   targetNode: SheetRPGlass0
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: rpglass }
   objectType: Item
 
 - type: construction
-  name: плазменное бронестекло(reinforced plasma glass) # Adventure
-  description: Лист армированной полупрозрачной плазмы. # Adventure
   id: SheetRPGlass1
   graph: Glass
   startNode: start
   targetNode: SheetRPGlass1
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: rpglass }
   objectType: Item
 
 - type: construction
-  name: дюраткань(durathread) # Adventure
   id: MaterialDurathread
   graph: Durathread
   startNode: start
   targetNode: MaterialDurathread
   category: construction-category-materials
-  description: Высококачественная ткань, используемая для изготовления прочной одежды. # Adventure
-  icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
   objectType: Item
 
 - type: construction
-  name: урановое стекло(uranium glass) # Adventure
-  description: Лист уранового стекла. # Adventure
   id: SheetUGlass
   graph: Glass
   startNode: start
   targetNode: SheetUGlass
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: uglass }
   objectType: Item
 
 - type: construction
-  name: урановое бронестекло(reinforced uranium glass) # Adventure
-  description: Лист армированного уранового стекла. # Adventure
   id: SheetRUGlass
   graph: Glass
   startNode: start
   targetNode: SheetRUGlass
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: ruglass }
   objectType: Item
 
 - type: construction
-  name: урановое бронестекло(reinforced uranium glass) # Adventure
-  description: Лист армированного уранового стекла. # Adventure
   id: SheetRUGlass0
   graph: Glass
   startNode: start
   targetNode: SheetRUGlass0
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: ruglass }
   objectType: Item
 
 - type: construction
-  name: урановое бронестекло(reinforced uranium glass) # Adventure
-  description: Лист армированного уранового стекла. # Adventure
   id: SheetRUGlass1
   graph: Glass
   startNode: start
   targetNode: SheetRUGlass1
   category: construction-category-materials
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: ruglass }
   objectType: Item

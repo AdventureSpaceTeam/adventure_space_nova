@@ -34,7 +34,7 @@
       - PosterContrabandFreeTonto
       - PosterContrabandAtmosiaDeclarationIndependence
       - PosterContrabandFunPolice
-      - PosterContrabandLustyExomorph
+      - PosterContrabandRealExomorph
       - PosterContrabandSyndicateRecruitment
       - PosterContrabandClown
       - PosterContrabandSmoke
@@ -65,7 +65,7 @@
       - PosterContrabandPunchShit
       - PosterContrabandTheGriffin
       - PosterContrabandFreeDrone
-      - PosterContrabandBustyBackdoorExoBabes6
+      - PosterContrabandRouny
       - PosterContrabandRobustSoftdrinks
       - PosterContrabandShamblersJuice
       - PosterContrabandPwrGame
@@ -92,6 +92,14 @@
       - PosterContrabandInterdyne
       - PosterContrabandWaffleCorp
       - PosterContrabandMissingSpacepen
+      - PosterContrabandExoAcid
+      - PosterContrabandExoRun
+      - PosterContrabandExoChomp
+# Adventure-start
+      - PosterContrabandERP
+      - PosterContrabandAdmin
+      - PosterContrabandNuke
+# Adventure-end
     chance: 1
 
 - type: entity
@@ -157,4 +165,8 @@
       - PosterLegitSafetyMothSSD
       - PosterLegitOppenhopper
       - PosterLegitTyrone
+# Adventure-start
+      - PosterLegitNabeg
+      - PosterLegitZhuzhasi
+# Adventure-end
     chance: 1

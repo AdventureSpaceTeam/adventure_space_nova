@@ -1,54 +1,39 @@
 - type: construction
-  name: факел # Adventure
   id: LightTorch
   graph: LightTorch
   startNode: start
   targetNode: torch
   category: construction-category-tools
-  description: Сделанный из дерева факел. # Adventure
-  icon: { sprite: Objects/Misc/torch.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: логический элемент # Adventure
   id: LogicGate
   graph: LogicGate
   startNode: start
   targetNode: logic_gate
   category: construction-category-tools
-  description: Логический элемент с двумя портами на вход и одним на выход. # Adventure
-  icon: { sprite: Objects/Devices/gates.rsi, state: or_icon }
   objectType: Item
 
 - type: construction
-  name: детектор сигнала # Adventure
   id: EdgeDetector
   graph: LogicGate
   startNode: start
   targetNode: edge_detector
   category: construction-category-tools
-  description: Определяет уровень сигнала и разделяет его. # Adventure
-  icon: { sprite: Objects/Devices/gates.rsi, state: edge_detector }
   objectType: Item
 
 - type: construction
-  name: датчик питания # Adventure
   id: PowerSensor
   graph: LogicGate
   startNode: start
   targetNode: power_sensor
   category: construction-category-tools
-  description: Генерирует сигналы в ответ на изменение напряжения в сети. # Adventure
-  icon: { sprite: Objects/Devices/gates.rsi, state: power_sensor }
   objectType: Item
 
 - type: construction
-  name: ячейка памяти # Adventure
   id: MemoryCell
   graph: LogicGate
   startNode: start
   targetNode: memory_cell
   category: construction-category-tools
-  description: Ячейка памяти для сигналов. # Adventure
-  icon: { sprite: Objects/Devices/gates.rsi, state: memory_cell }
   objectType: Item

@@ -1,15 +1,10 @@
 #bureaucracy
 - type: construction
   id: FilingCabinet
-  name: картотечный шкаф # Adventure
-  description: Шкаф для хранения всего, что пожелаете. # Adventure
   graph: FilingCabinet
   startNode: start
   targetNode: filingCabinet
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/cabinets.rsi
-    state: filingcabinet
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -18,15 +13,10 @@
 
 - type: construction
   id: TallCabinet
-  name: высокий шкаф # Adventure
-  description: Шкаф для хранения всего, что пожелаете. # Adventure
   graph: FilingCabinet
   startNode: start
   targetNode: tallCabinet
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/cabinets.rsi
-    state: tallcabinet
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -35,15 +25,10 @@
 
 - type: construction
   id: ChestDrawer
-  name: комод # Adventure
-  description: Маленький шкафчик для хранения предметов. Теперь на колёсиках! # Adventure
   graph: FilingCabinet
   startNode: start
   targetNode: chestDrawer
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/cabinets.rsi
-    state: chestdrawer
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -53,15 +38,10 @@
 # ItemCabinets
 - type: construction
   id: ShowCase
-  name: стеклянный короб # Adventure
-  description: Прочная витрина для дорогостоящего экспоната. # Adventure
   graph: GlassBox
   startNode: start
   targetNode: glassBox
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/glassbox.rsi
-    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -72,15 +52,9 @@
 # Normals
 - type: construction
   id: ShelfWood
-  name: деревянная полка # Adventure
-  description: Удобное место для размещения, ээ, да чего угодно. # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfWood
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -89,15 +63,9 @@
 
 - type: construction
   id: ShelfMetal
-  name: металлическая полка # Adventure
-  description: Прочное место для размещения, ээ, да чего угодно. # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfMetal
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/metal.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -106,15 +74,9 @@
 
 - type: construction
   id: ShelfGlass
-  name: стеклянная полка # Adventure
-  description: Такая же как обычная полка! Но хрупкая и без стенок! # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfGlass
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/glass.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -124,15 +86,9 @@
 # Reinforced
 - type: construction
   id: ShelfRWood
-  name: прочная деревянная полка # Adventure
-  description: Безопасное место, куда можно убрать любимую бутылку виски. # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfRWood
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: rbase
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -141,15 +97,9 @@
 
 - type: construction
   id: ShelfRMetal
-  name: прочная металлическая полка # Adventure
-  description: Прочное и блестящее место для хранения всех ваших склянок. # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfRMetal
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/metal.rsi
-    state: rbase
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -158,15 +108,9 @@
 
 - type: construction
   id: ShelfRGlass
-  name: прочная стеклянная полка # Adventure
-  description: Кристально чистые дверцы из армированного стекла позволят выставить напоказ все ваши модные бутылки, за которые вы точно не продали любимую таракамольку коллеги. # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfRGlass
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/glass.rsi
-    state: rbase
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -176,15 +120,9 @@
 # Departmental
 - type: construction
   id: ShelfBar
-  name: барная полка # Adventure
-  description: Изготовлена из отборной синтетической древесины для хранения алкоголя. # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfBar
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/Departments/Service/bar.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -193,15 +131,9 @@
 
 - type: construction
   id: ShelfKitchen
-  name: кухонная полка # Adventure
-  description: Для хранения ножей, специй и всего прочего! # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfKitchen
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/Departments/Service/kitchen.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -210,15 +142,9 @@
 
 - type: construction
   id: ShelfChemistry
-  name: химическая полка # Adventure
-  description: Держите все ваши химикаты в безопасности и подальше от клоу ... эээ... публики! # Adventure
   graph: Shelf
   startNode: start
   targetNode: ShelfChemistry
-  category: construction-category-storage # Adventure
-  icon:
-    sprite: Structures/Storage/Shelfs/Departments/Medical/chemistry.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true

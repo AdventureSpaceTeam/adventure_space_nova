@@ -18,7 +18,8 @@
   - AdventureSilly      #min 0  max 25
   - AdventureTrain      #min 20 max 120
 # - Starquest           #min 0  max 20 # До лучших времён
-  - AdventureRipper     #min 5  max 25
+  - AdventureRipper     #min 0  max 25
+# - AdventureStar       #min 10  max 25 # на доработку
 
 # original list
 #  - Amber              #min 15 max 50

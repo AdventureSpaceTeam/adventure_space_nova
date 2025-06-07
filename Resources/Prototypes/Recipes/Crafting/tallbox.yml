@@ -1,56 +1,41 @@
 - type: construction
   id: ClosetSteel
-  name: шкаф # Adventure
   graph: ClosetSteel
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Высокий стальной шкаф, который не может быть заперт. # Adventure
-  icon: { sprite: Structures/Storage/closet.rsi, state: generic_icon }
   objectType: Structure
 
 - type: construction
   id: ClosetSteelSecure
-  name: защищённый шкаф # Adventure
   graph: ClosetSteelSecure
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Высокий стальной шкаф, который может быть заперт. # Adventure
-  icon: { sprite: Structures/Storage/closet.rsi, state: secure_icon }
   objectType: Structure
 
 - type: construction
   id: ClosetFreezer
-  name: холодильник # Adventure
   graph: ClosetFreezer
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Высокий стальной шкаф с морозильными способностями. # Adventure
-  icon: { sprite: Structures/Storage/closet.rsi, state: freezer_icon }
   objectType: Structure
 
 - type: construction
   id: GunSafe
-  name: оружейный сейф # Adventure
   graph: GunSafe
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Прочный оружейный сейф, который может быть заперт. # Adventure
-  icon: { sprite: Structures/Storage/closet.rsi, state: shotguncase }
   objectType: Structure
 
 - type: construction
   id: ClosetWall
-  name: настенный шкаф # Adventure
   graph: ClosetWall
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Стандартное хранилище Nanotrasen, теперь и на стене. # Adventure
-  icon: { sprite: Structures/Storage/wall_locker.rsi, state: generic_icon }
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

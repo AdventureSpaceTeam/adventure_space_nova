@@ -1,10 +1,7 @@
 - type: construction
-  name: бананиумовый клаксон # Adventure
   id: HornBananium
   graph: BananiumHorn
   startNode: start
   targetNode: bananiumHorn
-  category: construction-category-misc # Adventure
-  description: Клаксон, сделанный из бананиума. # Adventure
-  icon: { sprite: Objects/Fun/bananiumhorn.rsi, state: icon }
+  category: construction-category-weapons
   objectType: Item

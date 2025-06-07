@@ -1,0 +1,184 @@
+- type: entity
+  id: SuperGenerator
+  description: СТГ (супер-термогенератор), предназначенный для питания крупных кораблей.
+  name: СТГ
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: AmbientSound
+    range: 8
+    volume: 3
+    sound:
+      path: /Audio/Adventure/Machines/SGWork.ogg
+    enabled: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-3.29,-1.49,3.29,1.49" 
+        density: 10000
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+    noRot: false
+  - type: Sprite
+    sprite: Adventure/Structures/Machines/SuperGen.rsi
+    layers:
+      - state: supergen
+        map: [ "enum.GeneratorVisualLayers.Body" ]
+      - state: supergen_on_unlit
+        map: [ "enum.GeneratorVisualLayers.Unlit" ]
+        shader: unshaded
+        visible: false
+    snapCardinals: false
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      output:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: PowerMonitoringDevice
+    group: Generator
+    loadNode: output
+    sprite: Adventure/Interface/Icons.rsi
+    state: supergen
+  - type: Anchorable
+    delay: 30
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: PacifismDangerousAttack
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 1000
+    intensitySlope: 10
+    totalIntensity: 100000
+  - type: Electrified
+    onHandInteract: false
+    onInteractUsing: false
+    onBump: false
+    requirePower: true
+    highVoltageNode: output
+  - type: UserInterface
+    interfaces:
+      enum.GeneratorComponentUiKey.Key:
+        type: PortableGeneratorBoundUserInterface
+  - type: ActivatableUI
+    key: enum.GeneratorComponentUiKey.Key
+  - type: GenericVisualizer
+    visuals:
+      enum.GeneratorVisuals.Running:
+        enum.GeneratorVisualLayers.Body:
+          True: { state: supergen }
+          False: { state: supergen }
+        enum.GeneratorVisualLayers.Unlit:
+          True: { visible: true }
+          False: { visible: false }
+  - type: FuelGenerator
+    minTargetPower: 100000
+    maxTargetPower: 300000
+    targetPower: 300000
+    optimalPower: 300000
+    optimalBurnRate: 0.008333
+    fuelEfficiencyConstant: 0.1
+  - type: SolidFuelGeneratorAdapter
+    fuelMaterial: Uranium
+    multiplier: 0.01
+  - type: MaterialStorage
+    storageLimit: 3000
+    materialWhiteList: [Uranium]
+  - type: PowerSupplier
+    supplyRampRate: 7500
+    supplyRampTolerance: 2500
+  - type: PortableGenerator
+    startChance: 0.5
+    startSoundEmpty: { collection: SupGenEmpty }
+    startSound: { collection: SupGenStart }
+  - type: GeneratorExhaustGas
+    gasType: CarbonDioxide
+    moleRatio: 2
+  - type: Appearance
+  - type: Construction
+    graph: SuperGenerator
+    node: supergenerator
+
+- type: soundCollection
+  id: SupGenEmpty
+  files:
+    - /Audio/Adventure/Machines/SGEmpty1.ogg
+    - /Audio/Adventure/Machines/SGEmpty2.ogg
+
+- type: soundCollection
+  id: SupGenStart
+  files:
+    - /Audio/Adventure/Machines/SGStart1.ogg
+    - /Audio/Adventure/Machines/SGStart2.ogg
+
+# упаковка 
+- type: entity
+  parent: BaseFlatpack
+  id: SuperGeneratorFlatpack
+  name: упаковка СТГ
+  description: Универсально-сборная упаковка, используемая для сборки СТГ.
+  components:
+  - type: Flatpack
+    entity: SuperGenerator
+  - type: Sprite
+    layers:
+    - state: ame-part
+  - type: StaticPrice
+    price: 100
+
+- type: constructionGraph
+  id: SuperGenerator
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: supergenerator
+          steps:
+            - tag: SuperGeneratorFlatpack
+              name: детали для сборки СТГ
+              icon:
+                sprite: Objects/Devices/flatpack.rsi
+                state: ame-part
+              doAfter: 1
+
+    - node: supergenerator
+      entity: SuperGenerator
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SuperGeneratorFlatpack
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 30

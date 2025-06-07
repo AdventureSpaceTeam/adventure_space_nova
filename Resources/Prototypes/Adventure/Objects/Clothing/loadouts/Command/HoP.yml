@@ -114,7 +114,7 @@
 
 #скаф 
 - type: entity
-  parent: [ClothingOuterHardsuitBasic, BaseCommandContraband]
+  parent: [ClothingOuterHardsuitEVA, BaseCommandContraband]
   id: ClothingOuterHardsuitHOP
   name: скафандр главы персонала
   description: Базовый скафандр для командования станции.
