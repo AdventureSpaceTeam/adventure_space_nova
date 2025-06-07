@@ -365,35 +365,6 @@
   flavor: fizzy
   color: "#619494"
   fizziness: 0.8
-#Adventure-edit-start
-  metabolisms:
-    Drink:
-      effects:
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-      - !type:SatiateThirst
-        factor: 3
-  reactiveEffects:
-    Extinguish:
-      methods: [ Touch ]
-      effects:
-      - !type:ExtinguishReaction
-  plantMetabolism:
-  - !type:PlantAdjustWater
-    amount: 1
-  tileReactions:
-  - !type:ExtinguishTileReaction { }
-  - !type:SpillIfPuddlePresentTileReaction { }
-#Adventure-edit-end
-
 
 - type: reagent
   id: SoyLatte

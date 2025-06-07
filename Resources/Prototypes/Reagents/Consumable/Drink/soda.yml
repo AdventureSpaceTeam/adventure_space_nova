@@ -22,18 +22,6 @@
         key: Drowsiness
         time: 1.0
         type: Remove
-#Adventure-edit-start
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-#Adventure-edit-end
 
 - type: reagent
   id: RoyRogers
@@ -54,18 +42,6 @@
       effects:
       - !type:SatiateThirst
         factor: 4
-#Adventure-edit-start
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-#Adventure-edit-end
 
 - type: reagent
   id: ChangelingSting
@@ -102,18 +78,6 @@
   metabolisms:
     Drink:
       effects:
-#Adventure-edit-start
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-#Adventure-edit-end
       - !type:SatiateThirst
         factor: 2
       - !type:GenericStatusEffect
@@ -244,18 +208,6 @@
       effects:
       - !type:SatiateThirst
         factor: 4
-#Adventure-edit-start
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-#Adventure-edit-end
 
 - type: reagent
   id: SpaceMountainWind
@@ -318,18 +270,6 @@
       - !type:AdjustReagent
         reagent: Theobromine
         amount: 0.1
-#Adventure-edit-start
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-#Adventure-edit-end
     Poison:
       effects:
       - !type:HealthChange

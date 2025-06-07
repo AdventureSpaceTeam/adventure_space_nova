@@ -30,18 +30,6 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-#Adventure-edit-start
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-#Adventure-edit-end
   plantMetabolism:
   - !type:PlantAdjustNutrition
     amount: 0.1
