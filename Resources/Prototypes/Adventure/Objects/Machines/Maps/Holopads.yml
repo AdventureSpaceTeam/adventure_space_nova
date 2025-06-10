@@ -1,0 +1,19 @@
+- type: entity
+  parent: Holopad
+  name: голопад
+  description: Напольное устройство для проецирования голографических изображений.
+  id: HolopadCommandBS
+  suffix: ОСЩ
+  components:
+  - type: Label
+    currentLabel: holopad-command-blueshield
+
+- type: entity
+  parent: Holopad
+  name: голопад
+  description: Напольное устройство для проецирования голографических изображений.
+  id: HolopadEngineeringSG
+  suffix: СТГ
+  components:
+  - type: Label
+    currentLabel: holopad-engineering-SG

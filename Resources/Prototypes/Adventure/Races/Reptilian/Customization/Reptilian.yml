@@ -427,3 +427,13 @@
   sprites:
   - sprite: Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_beak
+
+- type: marking
+  id: LizardSnoutSmall
+  bodyPart: Snout
+  markingCategory: Snout
+  forcedColoring: true
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: Adventure/Races/Reptilian/Customization/snout.rsi
+    state: snout_small

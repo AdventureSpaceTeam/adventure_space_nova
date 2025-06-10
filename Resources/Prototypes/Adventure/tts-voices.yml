@@ -1324,3 +1324,106 @@
   description: Голос персонажа из игры Dota 2
   speaker: zeus_dota_2
   id: zeus_dota_2
+
+#New TTS
+- type: ttsVoice
+  name: Джон Генри Эдем
+  description: Голос персонажа из игры Fallout 3
+  speaker: john_henry_eden_fl3
+  id: john_henry_eden_fl3
+
+- type: ttsVoice
+  name: Супер-Мутант
+  description: Голос персонажа из игры Fallout 3
+  speaker: super_mutant_fl3
+  id: super_mutant_fl3
+
+- type: ttsVoice
+  name: Весемир
+  description: Голос персонажа из игры Ведьмак 3
+  speaker: vesemir
+  id: vesemir
+
+- type: ttsVoice
+  name: Гильом де Лонфаль
+  description: Голос персонажа из игры Ведьмак 3
+  speaker: guillaume_de_launfal
+  id: guillaume_de_launfal
+
+- type: ttsVoice
+  name: Филиппа Эйльхарт
+  description: Голос персонажа из игры Ведьмак 3
+  speaker: philippa_eilhart
+  id: philippa_eilhart
+
+- type: ttsVoice
+  name: Эвальд Борсоди
+  description: Голос персонажа из игры Ведьмак 3
+  speaker: ewald_borsodi
+  id: ewald_borsodi
+
+- type: ttsVoice
+  name: Лютик
+  description: Голос персонажа из игры Ведьмак 3
+  speaker: dandelion
+  id: dandelion
+
+- type: ttsVoice
+  name: Шани
+  description: Голос персонажа из игры Ведьмак 3
+  speaker: shani
+  id: shani
+
+- type: ttsVoice
+  name: PlayBoyzTV
+  description: Голос PlayBoyzTV
+  speaker: playboyztv
+  id: playboyztv
+
+- type: ttsVoice
+  name: Эверетт Клоптон
+  description: Голос персонажа из игры Hogwarts Legacy
+  speaker: everett_clopton
+  id: everett_clopton
+
+- type: ttsVoice
+  name: Гоблин Б
+  description: Голос персонажа из игры Hogwarts Legacy
+  speaker: generic_goblin_b
+  id: generic_goblin_b
+
+- type: ttsVoice
+  name: Домовой эльф из святилища
+  description: Голос персонажа из игры Hogwarts Legacy
+  speaker: sanctuary_house_elf
+  id: sanctuary_house_elf
+
+- type: ttsVoice
+  name: Мита
+  description: Голос персонажа из игры MiSide
+  speaker: mita
+  id: mita
+
+- type: ttsVoice
+  name: Сонная Мита
+  description: Голос персонажа из игры MiSide
+  speaker: mitadream
+  id: mitadream
+
+- type: ttsVoice
+  name: Мита Призрак
+  description: Голос персонажа из игры MiSide
+  speaker: mitaghost
+  id: mitaghost
+
+- type: ttsVoice
+  name: Добрая Мита
+  description: Голос персонажа из игры MiSide
+  speaker: mitakind
+  id: mitakind
+
+- type: ttsVoice
+  name: Коротковолосая Мита
+  description: Голос персонажа из игры MiSide
+  speaker: mitashorthairs
+  id: mitashorthairs

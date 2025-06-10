@@ -20,6 +20,7 @@
 # - Starquest           #min 0  max 20 # До лучших времён
   - AdventureRipper     #min 0  max 25
 # - AdventureStar       #min 10  max 25 # на доработку
+# - AdventureShipyard   #min 0  max 25 # На тесте
 
 # original list
 #  - Amber              #min 15 max 50

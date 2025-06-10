@@ -84,3 +84,5 @@ marking-LizardFrillsRidgeFull-frills_ridge_full = Унатх, Воротник (
 marking-LizardFrillsRidgeFull = Унатх, Воротник (Полноголовый плавник)
 marking-LizardFrillsRidgeSmall-frills_ridge_small = Унатх, Воротник (Маленький плавник)
 marking-LizardFrillsRidgeSmall = Унатх, Воротник (Маленький плавник)
+marking-LizardSnoutSmall-snout_small = Унатх, Морда (Маленький нос)
+marking-LizardSnoutSmall = Унатх, Морда (Маленький нос)
