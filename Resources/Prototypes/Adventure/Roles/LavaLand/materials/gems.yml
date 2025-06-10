@@ -370,4 +370,13 @@
 
 - type: ore
   id: OreGoldWarm
-  oreEntity: MobLavaLandGoldWarm
+  oreEntity: SpawnOreGoldAndWarmRandom
+
+- type: entity
+  id: SpawnOreGoldAndWarmRandom
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - MobLavaLandGoldWarm
+      - GoldOre1
