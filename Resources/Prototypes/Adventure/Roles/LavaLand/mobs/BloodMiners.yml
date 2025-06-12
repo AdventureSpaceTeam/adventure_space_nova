@@ -31,6 +31,26 @@
       damage:
         types:
           Heat: 0.0
+    - type: StatusEffects
+      allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Stutter
+      - SeeingRainbows
+      - Electrocution
+      - Drunk
+      - SlurredSpeech
+      - RatvarianLanguage
+      - PressureImmunity
+      - Muted
+      - TemporaryBlindness
+      - Pacified
+      - StaminaModifier
+      - Flashed
+      - RadiationProtection
+      - Drowsiness
+      - Adrenaline
 
 - type: startingGear
   id: BloodMinerCutterGear

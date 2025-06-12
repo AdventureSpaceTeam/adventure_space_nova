@@ -50,6 +50,7 @@ public sealed partial class TTSSystem : EntitySystem
         SubscribeLocalEvent<TransformSpeechEvent>(OnTransformSpeech);
         SubscribeLocalEvent<TTSComponent, EntitySpokeEvent>(OnEntitySpoke);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
+        SubscribeLocalEvent<ActorComponent, TTSRadioPlayEvent>(OnTTSRadioPlayEvent);
 
         SubscribeNetworkEvent<RequestPreviewTTSEvent>(OnRequestPreviewTTS);
         SubscribeNetworkEvent<ClientOptionTTSEvent>(OnClientOptionTTS);
@@ -109,6 +110,18 @@ public sealed partial class TTSSystem : EntitySystem
         }
 
         HandleSay(uid, args.Message, protoVoice.Speaker);
+    }
+
+    private async void OnTTSRadioPlayEvent(EntityUid uid, ActorComponent comp, TTSRadioPlayEvent args)
+    {
+        HandleReceiveRadio(uid, args.Message, args.Voice);
+    }
+
+    private async void HandleReceiveRadio(EntityUid uid, string message, string speaker)
+    {
+        var soundData = await GenerateTTS(message, speaker, "radio");
+        if (soundData is null) return;
+        RaiseNetworkEvent(new PlayTTSEvent(soundData, null), uid);
     }
 
     private async void HandleSay(EntityUid uid, string message, string speaker)

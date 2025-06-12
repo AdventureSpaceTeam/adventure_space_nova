@@ -254,7 +254,7 @@
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: FloorLavaEntity
-      count: 250
+      count: 200
       minGroupSize: 3
       maxGroupSize: 15
     - !type:OreDunGen
@@ -272,7 +272,7 @@
     - !type:OreDunGen
       replacement: BasaltRandom
       entity: NecroSpike
-      count: 100
+      count: 50
       minGroupSize: 1
       maxGroupSize: 1
     - !type:OreDunGen

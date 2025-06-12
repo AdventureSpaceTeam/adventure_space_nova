@@ -26,6 +26,10 @@
     {
       "name": "snout_beak",
       "directions": 4
+    },
+    {
+      "name": "snout_small",
+      "directions": 4
     }
   ]
 }

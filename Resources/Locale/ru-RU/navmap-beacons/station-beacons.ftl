@@ -66,3 +66,8 @@ station-beacon-tools = Хранилище инструментов
 station-beacon-disposals = Мусоросброс
 station-beacon-cryosleep = Криосон
 station-beacon-escape-pod = Спасательная капсула
+#Adventure-start
+station-beacon-blueshield = Кабинет ОСЩ
+station-beacon-SG = СТГ
+station-beacon-docking-arm = Стыковочная зона
+#Adventure-end
