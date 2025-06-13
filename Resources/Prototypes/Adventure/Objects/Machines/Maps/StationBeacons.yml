@@ -17,3 +17,13 @@
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-SG
+
+- type: entity
+  name: станционный маяк
+  description: Небольшое устройство, передающее информацию на карты станций. Может быть сконфигурировано.
+  parent: DefaultStationBeaconEngineering
+  id: DefaultStationBeaconShip
+  suffix: Верфь
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-Ship

@@ -17,3 +17,13 @@
   components:
   - type: Label
     currentLabel: holopad-engineering-SG
+
+- type: entity
+  parent: Holopad
+  name: голопад
+  description: Напольное устройство для проецирования голографических изображений.
+  id: HolopadEngineeringShip
+  suffix: СТГ
+  components:
+  - type: Label
+    currentLabel: holopad-engineering-Ship

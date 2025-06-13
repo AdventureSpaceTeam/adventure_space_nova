@@ -285,6 +285,9 @@ ent-HolopadEngineeringSG = { ent-Holopad }
 ent-HolopadCommandBS = { ent-Holopad }
     .desc = { ent-Holopad.desc }
     .suffix = Кабинет ОСЩ
+ent-HolopadEngineeringShip = { ent-Holopad }
+    .desc = { ent-Holopad.desc }
+    .suffix = Верфь
 
 # Specific
 ent-HolopadServiceClownMime = { ent-Holopad }
@@ -420,6 +423,7 @@ holopad-engineering-ame = Инж. отдел - ДАМ
 holopad-engineering-power = Инж. отдел - СМЭС
 holopad-engineering-main = Инж. отдел - Холл
 holopad-engineering-SG = Инж. отдел - СТГ
+holopad-engineering-Ship = Инж. отдел - Верфь
 
 # Security
 holopad-security-front = Служба безопасности - Стойка

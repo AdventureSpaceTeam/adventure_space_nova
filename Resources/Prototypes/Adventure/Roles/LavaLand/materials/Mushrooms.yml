@@ -27,7 +27,7 @@
       loot:
         All: !type:GroupSelector
           children:
-          - id: FoodCoalMushroomchilder
+          - id: FoodCoalMushroom
     - type: Damageable
       damageContainer: StructuralInorganic
       damageModifierSet: Wood

@@ -70,4 +70,5 @@ station-beacon-escape-pod = Спасательная капсула
 station-beacon-blueshield = Кабинет ОСЩ
 station-beacon-SG = СТГ
 station-beacon-docking-arm = Стыковочная зона
+station-beacon-Ship = Верфь
 #Adventure-end
