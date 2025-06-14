@@ -130,13 +130,6 @@
         Radiation: 0.25
   - type: ToggleableClothing
     slot: head
-  - type: Inject # imperial hardsuit injection
-  - type: ItemSlots # imperial hardsuit injection
-    slots: # imperial hardsuit injection
-      beakerSlot: # imperial hardsuit injection
-        whitelist: # imperial hardsuit injection
-          tags: # imperial hardsuit injection
-          - FitsHardsuit # imperial hardsuit injection
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}

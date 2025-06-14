@@ -218,7 +218,6 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
-  - type: InjectNeed # imperial hardsuit injection
 
 - type: entity
   save: false
