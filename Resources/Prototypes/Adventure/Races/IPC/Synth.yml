@@ -280,12 +280,14 @@
               state: pants
 
 - type: entity
+  parent: BaseAction
   id: ActionDrainBattery
   name: Зарядить батарею
   description: Зарядите свою батарею от источников энергии.
   components:
-  - type: InstantAction
+  - type: Action
     icon: Adventure/Interface/Actions/off.png
     iconOn: Adventure/Interface/Actions/on.png
     itemIconStyle: NoItem
+  - type: InstantAction
     event: !type:ToggleDrainActionEvent

@@ -8,8 +8,7 @@
   - type: MachineBoard
     prototype: HyperExosuitFabricator
     stackRequirements:
-      MatterBin: 3
-      Manipulator: 4
+      Manipulator: 7
       Glass: 5
       Plasma: 5
   - type: GuideHelp

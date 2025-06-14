@@ -1,18 +1,20 @@
 - type: entity
+  parent: BaseAction
   id: BorgCuffed
   name: Заковать
   description: Заковать нарушителя стяжками.
   categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     icon: { sprite: Adventure/Roles/BorgDep/SecBorg/modul.rsi, state: SecBorgCuff }
     itemIconStyle: NoItem
+    priority: 9
+  - type: TargetAction
+    useDelay: 15
+    range: 2
+  - type: EntityTargetAction
+    event: !type:BorgCuffedActionEvent
+    canTargetSelf: false
     whitelist:
       components:
       - Cuffable
-    canTargetSelf: false
-    useDelay: 15
-    checkCanAccess: true
-    range: 2
-    event: !type:BorgCuffedActionEvent
-    priority: 9

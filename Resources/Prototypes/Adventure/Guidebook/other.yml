@@ -7,9 +7,4 @@
   id: NuclearGenerator
   name: Ядерный генератор
   text: "/ServerInfo/Adventure/Guidebook/NuclearGenerator.xml"
-
-- type: guideEntry
-  id: HungerSwarm
-  name: Пожирающий рой
-  text: "/ServerInfo/Adventure/Guidebook/HungerSwarm.xml"
   

@@ -495,6 +495,12 @@
       AggroVisionRadius: !type:Single
         15
 
+- type: soundCollection
+  id: LarvaRun
+  files:
+  - /Audio/Adventure/Hungry_Swarm/larva_run1.ogg
+  - /Audio/Adventure/Hungry_Swarm/larva_run2.ogg
+
 - type: entity
   id: SpawnOreRupeeRandom
   parent: MarkerBase
