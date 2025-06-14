@@ -1,0 +1,29 @@
+- type: cargoProduct
+  id: MedTereumCrate
+  icon:
+    sprite: Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi
+    state: tereumpack
+  product: TereumCrate
+  cost: 5000
+  category: cargoproduct-category-name-fun
+  group: market
+  
+- type: cargoProduct
+  id: MedMachineAndroid
+  icon:
+    sprite: Adventure/_CyberneticGenesis/androids/androidmedical.rsi
+    state: off
+  product: VendingMachineMedicalAndroid
+  cost: 17500
+  category: cargoproduct-category-name-fun
+  group: market
+  
+- type: cargoProduct
+  id: MedRestockAndroid
+  icon:
+    sprite: Adventure/_CyberneticGenesis/androids/vending_machine_restock.rsi
+    state: base
+  product: VendingMachineRestockMedicalAndroid
+  cost: 15000
+  category: cargoproduct-category-name-fun
+  group: market
