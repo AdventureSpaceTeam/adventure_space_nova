@@ -130,7 +130,7 @@
     - type: MachineBoard
       prototype: NuclearGenerator
       stackRequirements:
-        Capacitor: 10
+        Manipulator: 10
         Steel: 30
         CableHV: 30
         Cable: 10

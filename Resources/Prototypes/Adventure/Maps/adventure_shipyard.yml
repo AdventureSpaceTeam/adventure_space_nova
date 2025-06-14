@@ -1,0 +1,62 @@
+- type: gameMap
+  id: AdventureShipyard 
+  mapName: 'Shipyard' 
+  mapPath: /Maps/Adventure/Shipyard.yml 
+  minPlayers: 0
+  maxPlayers: 25 
+  stations:
+    shipyard: 
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} "Shipyard" {1}' 
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14SP' 
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
+        - type: StationJobs
+          overflowJobs: 
+            - Passenger
+          availableJobs:
+            # service
+            HeadOfPersonnel: [ 1, 1 ] 
+            Passenger: [ -1, -1 ]
+            ServiceWorker: [ 2, 2 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            Chef: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            Clown: [ 1, 1 ]
+            Mime: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            # command
+            Captain: [ 1, 1 ]
+            Blueshield: [ 1, 1 ]
+            # engineering
+            ChiefEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 2, 2 ]
+            StationEngineer: [ 2, 2 ]
+            TechnicalAssistant: [ 2, 2 ]
+            # medical
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Paramedic: [ 1, 1 ]
+            Chemist: [ 1, 1 ]
+            MedicalDoctor: [ 2, 2 ]
+            MedicalIntern: [ 2, 2 ]
+            # science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 2, 2 ]
+            ResearchAssistant: [ 2, 2 ]
+            Borg: [ 4, 4 ] # Adventure
+            # security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            SecurityOfficer: [ 2, 2 ]
+            SecurityCadet: [ 2, 2 ]
+            Detective: [ 1, 1 ]
+            Brigmedic: [ 1, 1 ]
+            # cargo
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 3, 3 ]
+            CargoTechnician: [ 2, 2 ]

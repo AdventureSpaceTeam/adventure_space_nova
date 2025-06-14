@@ -780,6 +780,7 @@
    #- state: idcluwne Adventure-Respriteer  
   - type: IdCard
     jobTitle: job-title-cluwne
+    jobIcon: JobIconCluwne
   - type: Unremoveable
 
 - type: entity

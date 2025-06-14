@@ -327,13 +327,20 @@
       displayName: Brass
 
 - type: entity
+  parent: BaseAction
   id: ActionDevourZerah
   name: "[color=red]Поглотить[/color]"
   description: Другие точно не оценят ваш поступок.
-  noSpawn: true
   components:
-  - type: EntityTargetAction
+  - type: Action
     icon: { sprite : Interface/Actions/devour.rsi, state: icon }
     iconOn: { sprite : Interface/Actions/devour.rsi, state: icon-on }
-    event: !type:DevourActionEvent
+    itemIconStyle: BigAction
     priority: 1
+  - type: TargetAction
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - MobState
+    event: !type:DevourActionEvent

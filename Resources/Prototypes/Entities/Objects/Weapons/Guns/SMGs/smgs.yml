@@ -146,12 +146,13 @@
       burstFireRate: 6 # Adventure
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      selectedMode: Burst
       availableModes:
       - Burst
       - FullAuto
       - SemiAuto
       shotsPerBurst: 3
-      burstCooldown: 0.25
+      burstCooldown: 0.375
     - type: ItemSlots
       slots:
         gun_magazine:
@@ -173,7 +174,7 @@
               - CartridgePistol
     - type: MagazineVisuals
       magState: mag
-      steps: 1
+      steps: 5
       zeroVisible: true
     - type: Appearance
 

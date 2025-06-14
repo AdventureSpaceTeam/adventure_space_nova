@@ -92,8 +92,7 @@
     - type: MachineBoard
       prototype: Printer
       requirements:
-        MatterBin: 3
-        Manipulator: 1
+        Manipulator: 3
       materialRequirements:
         Glass: 1
 

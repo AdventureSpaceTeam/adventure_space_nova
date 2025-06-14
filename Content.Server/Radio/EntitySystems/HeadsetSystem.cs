@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS; // adventure tts
 using Content.Server.Chat.Systems;
 using Content.Server.Emp;
 using Content.Server.Radio.Components;
@@ -100,7 +101,16 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
     private void OnHeadsetReceive(EntityUid uid, HeadsetComponent component, ref RadioReceiveEvent args)
     {
         if (TryComp(Transform(uid).ParentUid, out ActorComponent? actor))
+        // adventure tts begin
+        {
             _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+            if (args.Voice is string voice)
+            {
+                var ev = new TTSRadioPlayEvent(args.Message, voice);
+                RaiseLocalEvent(Transform(uid).ParentUid, ev);
+            }
+        }
+        // adventure tts end
     }
 
     private void OnEmpPulse(EntityUid uid, HeadsetComponent component, ref EmpPulseEvent args)
