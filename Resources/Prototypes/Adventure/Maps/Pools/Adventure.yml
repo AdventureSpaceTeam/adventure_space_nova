@@ -13,14 +13,14 @@
   - AdventureMaus       #min 0  max 40
   - AdventureOmega      #min 0  max 25
   - AdventurePacked     #min 0  max 25
-  - AdventurePlasma     #min 15 max 80
+# - AdventurePlasma     #min 15 max 80 #Сломался
 # - AdventureRelict     #min 0  max 25
+  - AdventureRipper     #min 0  max 25
+  - AdventureShipyard   #min 0  max 25
   - AdventureSilly      #min 0  max 25
+# - AdventureStar       #min 10  max 25 # на доработку
   - AdventureTrain      #min 20 max 120
 # - Starquest           #min 0  max 20 # До лучших времён
-  - AdventureRipper     #min 0  max 25
-# - AdventureStar       #min 10  max 25 # на доработку
-  - AdventureShipyard   #min 0  max 25 
 
 # original list
 #  - Amber              #min 15 max 50
