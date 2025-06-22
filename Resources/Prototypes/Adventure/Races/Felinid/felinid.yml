@@ -32,6 +32,7 @@
   - type: Item
     size: Ginormous
   - type: MultiHandedItem
+  - type: NoInteractionInHands
   - type: Body
     prototype: Felinid
     requiredLegs: 2
