@@ -3,30 +3,30 @@
   result: SheetSteel1
   completetime: 0
   materials:
-    RawIron: 200 #Adventure-LavalandBalans
-    Coal: 200 #Adventure-LavalandBalans
+    RawIron: 100
+    Coal: 30
 
 - type: latheRecipe
   id: SheetSteel30
   result: SheetSteel
   completetime: 2
   materials:
-    RawIron: 6000 #Adventure-LavalandBalans
-    Coal: 6000 #Adventure-LavalandBalans
+    RawIron: 3000
+    Coal: 1000
 
 - type: latheRecipe
   id: SheetGlass1
   result: SheetGlass1
   completetime: 0
   materials:
-    RawQuartz: 200 #Adventure-LavalandBalans
+    RawQuartz: 100
 
 - type: latheRecipe
   id: SheetGlass30
   result: SheetGlass
   completetime: 2
   materials:
-    RawQuartz: 6000 #Adventure-LavalandBalans
+    RawQuartz: 3000
 
 # This version is for the autolathe
 - type: latheRecipe
@@ -43,150 +43,150 @@
   result: SheetRGlass1
   completetime: 0
   materials:
-    RawQuartz: 200 #Adventure-LavalandBalans
-    RawIron: 200 #Adventure-LavalandBalans
-    Coal: 200 #Adventure-LavalandBalans
+    RawQuartz: 100
+    RawIron: 50
+    Coal: 15
 
 - type: latheRecipe
   id: SheetRGlass30
   result: SheetRGlass
   completetime: 2
   materials:
-    RawQuartz: 6000 #Adventure-LavalandBalans
-    RawIron: 6000 #Adventure-LavalandBalans
-    Coal: 6000 #Adventure-LavalandBalans
+    RawQuartz: 3000
+    RawIron: 1500
+    Coal: 500
 
 - type: latheRecipe
   id: SheetPGlass1
   result: SheetPGlass1
   completetime: 0
   materials:
-    RawQuartz: 200 #Adventure-LavalandBalans
-    RawPlasma: 200 #Adventure-LavalandBalans
+    RawQuartz: 100
+    RawPlasma: 100
 
 - type: latheRecipe
   id: SheetPGlass30
   result: SheetPGlass
   completetime: 2
   materials:
-    RawQuartz: 6000 #Adventure-LavalandBalans
-    RawPlasma: 6000 #Adventure-LavalandBalans
+    RawQuartz: 3000
+    RawPlasma: 3000
 
 - type: latheRecipe
   id: SheetRPGlass1
   result: SheetRPGlass1
   completetime: 0
   materials:
-    RawQuartz: 200 #Adventure-LavalandBalans
-    RawPlasma: 200 #Adventure-LavalandBalans
-    RawIron: 200 #Adventure-LavalandBalans
-    Coal: 200 #Adventure-LavalandBalans
+    RawQuartz: 100
+    RawPlasma: 100
+    RawIron: 50
+    Coal: 15
 
 - type: latheRecipe
   id: SheetRPGlass30
   result: SheetRPGlass
   completetime: 2
   materials:
-    RawQuartz: 6000 #Adventure-LavalandBalans
-    RawPlasma: 6000 #Adventure-LavalandBalans
-    RawIron: 6000 #Adventure-LavalandBalans
-    Coal: 6000 #Adventure-LavalandBalans
+    RawQuartz: 3000
+    RawPlasma: 3000
+    RawIron: 1500
+    Coal: 500
 
 - type: latheRecipe
   id: SheetPlasma1
   result: SheetPlasma1
   completetime: 0
   materials:
-    RawPlasma: 200 #Adventure-LavalandBalans
+    RawPlasma: 100
 
 - type: latheRecipe
   id: SheetPlasma30
   result: SheetPlasma
   completetime: 2
   materials:
-    RawPlasma: 6000 #Adventure-LavalandBalans
+    RawPlasma: 3000
 
 - type: latheRecipe
   id: SheetPlasteel1
   result: SheetPlasteel1
   completetime: 0
   materials:
-    RawPlasma: 200 #Adventure-LavalandBalans
-    RawIron: 300 #Adventure-LavalandBalans
-    Coal: 200 #Adventure-LavalandBalans
+    RawPlasma: 100
+    RawIron: 200 #Twice as durable as steel, Twice the material cost
+    Coal: 30
 
 - type: latheRecipe
   id: SheetPlasteel30
   result: SheetPlasteel
   completetime: 5
   materials:
-    RawPlasma: 6000 #Adventure-LavalandBalans
-    RawIron: 9000 #Adventure-LavalandBalans
-    Coal: 6000 #Adventure-LavalandBalans
+    RawPlasma: 3000
+    RawIron: 6000 #Twice as durable as steel, Twice the material cost
+    Coal: 1000
 
 - type: latheRecipe
   id: SheetUranium30
   result: SheetUranium
   completetime: 2
   materials:
-    RawUranium: 9000 #Adventure-LavalandBalans
+    RawUranium: 3000
 
 - type: latheRecipe
   id: SheetUGlass1
   result: SheetUGlass1
   completetime: 0
   materials:
-    RawUranium: 200 #Adventure-LavalandBalans
-    RawQuartz: 200 #Adventure-LavalandBalans
+    RawUranium: 100
+    RawQuartz: 100
 
 - type: latheRecipe
   id: SheetUGlass30
   result: SheetUGlass
   completetime: 2
   materials:
-    RawUranium: 6000 #Adventure-LavalandBalans
-    RawQuartz: 6000 #Adventure-LavalandBalans
+    RawUranium: 3000
+    RawQuartz: 3000
 
 - type: latheRecipe
   id: SheetRUGlass1
   result: SheetRUGlass1
   completetime: 0
   materials:
-    RawUranium: 200 #Adventure-LavalandBalans
-    RawQuartz: 200 #Adventure-LavalandBalans
-    RawIron: 200 #Adventure-LavalandBalans
-    Coal: 200 #Adventure-LavalandBalans
+    RawUranium: 100
+    RawQuartz: 100
+    RawIron: 50
+    Coal: 15
 
 - type: latheRecipe
   id: SheetRUGlass30
   result: SheetRUGlass
   completetime: 2
   materials:
-    RawUranium: 6000 #Adventure-LavalandBalans
-    RawQuartz: 6000 #Adventure-LavalandBalans
-    RawIron: 6000 #Adventure-LavalandBalans
-    Coal: 6000 #Adventure-LavalandBalans
+    RawUranium: 3000
+    RawQuartz: 3000
+    RawIron: 1500
+    Coal: 500
 
 - type: latheRecipe
   id: IngotGold30
   result: IngotGold
   completetime: 2
   materials:
-    RawGold: 6000 #Adventure-LavalandBalans
+    RawGold: 3000
 
 - type: latheRecipe
   id: IngotSilver30
   result: IngotSilver
   completetime: 2
   materials:
-    RawSilver: 6000 #Adventure-LavalandBalans
+    RawSilver: 3000
 
 - type: latheRecipe
   id: MaterialBananium10
   result: MaterialBananium
   completetime: 2
   materials:
-    RawBananium: 9000 #Adventure-LavalandBalans
+    RawBananium: 3000
 
 - type: latheRecipe
   id: MaterialDiamond
@@ -200,21 +200,21 @@
   result: SheetUranium1
   completetime: 0
   materials:
-    RawUranium: 300 #Adventure-LavalandBalans
+    RawUranium: 100
 
 - type: latheRecipe
   id: IngotGold1
   result: IngotGold1
   completetime: 0
   materials:
-    RawGold: 200 #Adventure-LavalandBalans
+    RawGold: 100
 
 - type: latheRecipe
   id: IngotSilver1
   result: IngotSilver1
   completetime: 0
   materials:
-    RawSilver: 200 #Adventure-LavalandBalans
+    RawSilver: 100
 
 - type: latheRecipe
   id: SheetPlastic
@@ -229,7 +229,7 @@
   result: MaterialBananium1
   completetime: 0
   materials:
-    RawBananium: 300 #Adventure-LavalandBalans
+    RawBananium: 100
 
 - type: latheRecipe
   id: MaterialSheetMeat
