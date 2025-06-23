@@ -54034,7 +54034,7 @@ entities:
     - type: Geiger
       isEnabled: True
     - type: RadiationReceiver
-- proto: ClothingOuterHardsuitSyndicate
+- proto: ClothingOuterEVASuitSyndicate
   entities:
   - uid: 6644
     components:

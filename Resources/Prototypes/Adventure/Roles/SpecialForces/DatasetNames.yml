@@ -1,43 +1,25 @@
 # Имена солдат
-- type: dataset
+- type: localizedDataset
   id: FirstNamesSoldiers
   values:
-  - Рядовой
-  - Ефрейтор
-  - Сержант
-  - Капрал
+    prefix: names-soldiers-first-dataset-
+    count: 4
 
-- type: dataset
+- type: localizedDataset
   id: LastNamesSoldiers
   values:
-  - Ястреб
-  - Ворон
-  - Бугор
-  - Браво
-  - Фокс
-  - Гроза
-  - Геварра
-  - Рекс
-  - Вольф
-  - Бизон
-  - Дефолт
-  - Фраск
-  - Кац
+    prefix: names-soldiers-last-dataset-
+    count: 12
 
 # Имена офицеров
-- type: dataset
+- type: localizedDataset
   id: FirstNamesOfficers
   values:
-  - Лейтенант
-  - Командир
-  - Капитан
-  - Майор
+    prefix: names-officers-first-dataset-
+    count: 4
 
-- type: dataset
+- type: localizedDataset
   id: LastNamesOfficers
   values:
-  - Хикс
-  - Каир
-  - Райт
-  - Фишер
-  - Найт
+    prefix: names-officers-last-dataset-
+    count: 6

@@ -13,7 +13,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackDuffelCBURN
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -25,6 +25,7 @@
     nameSegments:
     - FirstNamesSoldiers
     - LastNamesSoldiers
+    nameFormat: name-format-soldiers
   - type: MindShield
   - type: BibleUser
   - type: RandomHumanoidAppearance
@@ -56,7 +57,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackDuffelCBURN
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -68,6 +69,7 @@
     nameSegments:
     - FirstNamesOfficers
     - LastNamesOfficers
+    nameFormat: name-format-officers
   - type: MindShield
   - type: BibleUser
   - type: RandomHumanoidAppearance
