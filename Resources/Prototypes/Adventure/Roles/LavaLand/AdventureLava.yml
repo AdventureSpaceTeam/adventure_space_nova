@@ -305,12 +305,6 @@
       count: 20
       minGroupSize: 1
       maxGroupSize: 3
-    - !type:OreDunGen
-      replacement: WallRockBasalt
-      entity: FloorChasmEntity
-      count: 50
-      minGroupSize: 3
-      maxGroupSize: 10
 
 - type: dungeonConfig
   id: LavaBlob
@@ -398,3 +392,9 @@
   id: FloorBasaltLavaLand
   parent: FloorBasalt
   name: пол базальт
+
+- type: localizedDataset
+  id: LavaName
+  values:
+    prefix: names-lavaland-dataset-
+    count: 1
