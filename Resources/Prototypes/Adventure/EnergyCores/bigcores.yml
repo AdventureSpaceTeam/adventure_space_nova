@@ -36,7 +36,7 @@
       types:
         Heat: 0.125
     timeOfLife: 480
-    enablingLenght: 2.6
+    enablingLength: 2.6
     baseSupply: 260000
     secPerMoles: 0.25
   - type: PowerSupplier
@@ -55,7 +55,7 @@
       types:
         Heat: 0.1
     timeOfLife: 600
-    enablingLenght: 7.7
+    enablingLength: 7.7
     baseSupply: 300000
     secPerMoles: 0.375
   - type: PowerSupplier
@@ -77,7 +77,7 @@
       types:
         Heat: 0.125
     timeOfLife: 500
-    enablingLenght: 1.0
+    enablingLength: 1.0
     baseSupply: 320000
     secPerMoles: 0.25
   - type: PowerSupplier

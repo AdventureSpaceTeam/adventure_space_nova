@@ -613,13 +613,13 @@
         doAfter: 2
 
 - type: construction
-  name: Большое энергоядро НаноТрейзен
+  name: большое энерго-ядро НаноТрейзен
   id: EnergyCoreBigConstructionNT
   graph: EnergyCoreBigNT
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-blue.rsi
     state: icon
@@ -633,13 +633,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Большое энергоядро Синдиката
+  name: большое энерго-ядро Синдиката
   id: EnergyCoreBigConstructionSyn
   graph: EnergyCoreBigSyn
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-redspace.rsi
     state: icon
@@ -653,13 +653,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Большое энергоядро РнД
+  name: большое энерго-ядро РнД
   id: EnergyCoreBigConstructionRnD
   graph: EnergyCoreBigRnD
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-RnD.rsi
     state: icon
@@ -673,13 +673,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Большое самодельное энергоядро
+  name: большое самодельное энерго-ядро
   id: EnergyCoreBigConstructionHM
   graph: EnergyCoreBigHM
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-yellow.rsi
     state: icon
