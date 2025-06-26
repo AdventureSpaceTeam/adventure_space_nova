@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 261.2.0
   forkId: ""
   forkVersion: ""
-  time: 06/08/2025 20:10:59
-  entityCount: 6125
+  time: 06/23/2025 08:22:41
+  entityCount: 6126
 maps:
 - 1
 grids:
@@ -19190,6 +19190,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -12.5,-12.5
+      parent: 2
+- proto: ComputerShuttleSalvage
+  entities:
+  - uid: 6126
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -7.5,-9.5
       parent: 2
 - proto: ComputerStationRecords
   entities:

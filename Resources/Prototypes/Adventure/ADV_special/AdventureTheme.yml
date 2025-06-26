@@ -20,4 +20,5 @@
     dangerousRedFore: "#FFF5EE"
     disabledFore: "#FFF5EE"
     _itemstatus_content_margin_right: "#06060404"
-    _itemstatus_content_margin_left: "#04060604"   
+    _itemstatus_content_margin_left: "#04060604" 
+    _itemstatus_patch_margin: "#07060404"  

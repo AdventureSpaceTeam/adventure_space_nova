@@ -20,6 +20,7 @@
     - id: AstroNavCartridge
     - id: ClothingHandsKnuckleDustersQM
     - id: MailTeleporterMachineCircuitboard
+    - id: SalvageShuttleConsoleCircuitboard # Adventure salvage shuttle return
 
 - type: entity
   id: LockerQuarterMasterFilled

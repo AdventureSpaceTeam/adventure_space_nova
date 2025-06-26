@@ -7,6 +7,7 @@
   description: Группа грибов, которые каким-то чудом тут выживают.
   components:
     - type: Sprite
+      noRot: true
       sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
       state: coal_mushroom
     - type: Transform
@@ -94,6 +95,7 @@
   description: Группа грибов, которые каким-то чудом тут выживают.
   components:
     - type: Sprite
+      noRot: true
       sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
       state: porcini_mushroom
     - type: Gatherable
@@ -139,6 +141,7 @@
   description: Группа грибов, которые каким-то чудом тут выживают.
   components:
     - type: Sprite
+      noRot: true
       sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
       state: inocybe_mushroom
     - type: Gatherable
@@ -182,6 +185,7 @@
   description: Группа грибов, которые каким-то чудом тут выживают.
   components:
     - type: Sprite
+      noRot: true
       sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
       state: polypore_mushroom
     - type: Gatherable
@@ -223,6 +227,7 @@
   description: Группа кактусов, которые каким-то чудом тут выживают.
   components:
     - type: Sprite
+      noRot: true
       sprite: Adventure/Roles/LavaLand/materials/mushrooms.rsi
       state: cactus
       drawdepth: LowFloors

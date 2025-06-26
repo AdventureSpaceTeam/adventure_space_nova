@@ -272,6 +272,19 @@
   - type: Objective
     difficulty: 0.7
 
+# Adventure salvage shuttle return start
+- type: entity
+  parent: BaseThiefStealObjective
+  id: SalvageShuttleCircuitboardStealObjective
+  components:
+  - type: NotJobRequirement
+    job: SalvageSpecialist
+  - type: StealCondition
+    stealGroup: SalvageShuttleConsoleCircuitboard
+  - type: Objective
+    difficulty: 0.7
+# Adventure salvage shuttle return start
+
 - type: entity                                      #Service subgroup
   parent: BaseThiefStealObjective
   id: ClothingEyesHudBeerStealObjective

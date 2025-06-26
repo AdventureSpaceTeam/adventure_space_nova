@@ -414,6 +414,10 @@
     tags:
     - Meat
     - ClothMade
+    - LegionHeart
+
+- type: Tag
+  id: LegionHeart
 
 - type: entity
   id: FoodLegionHeartDead

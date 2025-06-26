@@ -242,6 +242,15 @@
     sprite: Objects/Misc/module.rsi
     state: cpuboard
 
+# Adventure salvage shuttle return start
+- type: stealTargetGroup
+  id: SalvageShuttleConsoleCircuitboard
+  name: salvage shuttle console board
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: cpuboard
+# Adventure salvage shuttle return end
+
 - type: stealTargetGroup
   id: ClothingEyesHudBeer
   name: steal-target-groups-clothing-eyes-hud-beer

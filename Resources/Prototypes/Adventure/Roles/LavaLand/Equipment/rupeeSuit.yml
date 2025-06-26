@@ -1,0 +1,187 @@
+#рупериумовый скафандр шахтёра
+- type: entity
+  parent: ClothingOuterHardsuitGoliath
+  id: ClothingOuterHardsuitRupeeSalvage
+  suffix: LavaLand
+  name: рупериумный скафандр шахтёра
+  description: Скафандр шахтёра, укреплённый рупериумом.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/suit.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/suit.rsi 
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.5
+        Piercing: 0.6
+        Heat: 0.6
+        Radiation: 0.0
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitRupeeSalvage
+  - type: Construction
+    graph: HardsuitRupeeSalvage
+    node: hardsuitrupeesalvage
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#5ecc38"
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitRupeeSalvage
+  name: шлем рупериумного скафандра шахтёра
+  description: Шлем шахтёра в рупериумной обёртке.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/helmet.rsi 
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/helmet.rsi 
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: PointLight
+    color: "#d6fe36" 
+    radius: 9
+    energy: 5
+
+- type: constructionGraph
+  id: HardsuitRupeeSalvage
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: hardsuitrupeesalvage
+      steps:
+      - tag: HardsuitSalvage
+        icon:
+          sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
+          state: icon
+        name: mining hardsuit
+        doAfter: 10
+      - material: Durathread
+        amount: 10
+        doAfter: 10
+      - material: OreRupee
+        amount: 30
+        doAfter: 10
+  - node: hardsuitrupeesalvage
+    entity: ClothingOuterHardsuitRupeeSalvage
+
+- type: construction
+  name: рупериумный скафандр шахтёра
+  id: HardsuitRupeeSalvage
+  graph: HardsuitRupeeSalvage
+  startNode: start
+  targetNode: hardsuitrupeesalvage
+  category: construction-category-clothing
+  objectType: Item
+  description: Скафандр шахтёра, укреплённый рупериумом.
+  icon:
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/suit.rsi
+    state: icon
+
+#рупериумовый скафандр утилизатора
+- type: entity
+  parent: ClothingOuterHardsuitGoliath
+  id: ClothingOuterHardsuitRupee
+  suffix: LavaLand
+  name: рупериумный скафандр утилизатора
+  description: Скафандр утилизатора, укреплённый рупериумом.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/suit.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/suit.rsi 
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.6
+        Radiation: 0.0
+        Caustic: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitRupee
+  - type: Construction
+    graph: HardsuitRupeeSalvage
+    node: hardsuitrupeesalvage
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#5ecc38"
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitRupee
+  name: шлем рупериумного скафандра утилизатора
+  description: Шлем утилизатора в рупериумной обёртке.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/helmet.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/helmet.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: PointLight
+    color: "#d6fe36" 
+    radius: 7
+    energy: 5
+
+- type: constructionGraph
+  id: HardsuitRupee
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: hardsuitrupee
+      steps:
+      - tag: HardsuitSpatio
+        icon:
+          sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
+          state: icon
+        name: spationaut hardsuit
+        doAfter: 10
+      - material: Durathread
+        amount: 10
+        doAfter: 10
+      - material: OreRupee
+        amount: 30
+        doAfter: 10
+  - node: hardsuitrupee
+    entity: ClothingOuterHardsuitRupee
+
+- type: construction
+  name: рупериумный скафандр утилизатора
+  id: HardsuitRupee
+  graph: HardsuitRupee
+  startNode: start
+  targetNode: hardsuitrupee
+  category: construction-category-clothing
+  objectType: Item
+  description: Скафандр утилизатора, укреплённый рупериумом.
+  icon:
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/suit.rsi
+    state: icon

@@ -59,6 +59,11 @@
             - type: TradeStation
           paths:
             - /Maps/Shuttles/trading_outpost.yml
+        # Adventure salvage shuttle return start
+        mining: !type:GridSpawnGroup
+          paths:
+          - /Maps/Corvax/Shuttles/corvax_mining.yml
+        # Adventure salvage shuttle return end
         # Spawn last
         ruins: !type:GridSpawnGroup
           hide: true
@@ -104,7 +109,7 @@
         vgroid: !type:DungeonSpawnGroup
           minimumDistance: 300
           maximumDistance: 350
-          nameDataset: NamesBorer
+          nameDataset: LavaName # Adventure-lavaLand
           stationGrid: false
           addComponents:
           - type: Gravity
@@ -115,7 +120,7 @@
             flags: HideLabel
             color: "#e82020"
           protos:
-          - AdventureLava 
+          - AdventureLava
 # Adventure-lavaLand-end
 
 - type: entity

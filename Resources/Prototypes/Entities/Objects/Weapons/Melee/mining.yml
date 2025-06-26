@@ -113,6 +113,7 @@
   - type: Tag
     tags:
       - Pickaxe
+      - CrusherAxe #Adventure-LavaLand
   - type: Sprite
     sprite: Objects/Weapons/Melee/crusher.rsi
     state: icon
@@ -223,3 +224,4 @@
   - type: Tag
     tags:
       - Pickaxe
+      - CrusherGlaive #Adventure-LavaLand

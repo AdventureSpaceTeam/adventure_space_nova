@@ -56,7 +56,7 @@
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
         shader: unshaded
-    
+
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingRedLinses
@@ -130,7 +130,7 @@
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
         shader: unshaded
-    
+
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingLimeLinses
@@ -167,7 +167,7 @@
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
         shader: unshaded
-    
+
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingWhiteLinses
@@ -204,7 +204,7 @@
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
         shader: unshaded
-    
+
 - type: entity
   parent: ClothingEliteEyesAndroidBaseUnshaded
   id: ClothingBlackLinses
@@ -241,7 +241,7 @@
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
         shader: unshaded
-    
+
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
   id: ClothingPurpleLinses
@@ -278,7 +278,7 @@
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
         shader: unshaded
-    
+
 - type: entity
   parent: ClothingEliteEyesBaseUnshaded
   id: ClothingOrangeLinses

@@ -41,7 +41,7 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/cyan_linses.rsi
       state: icon
-#
+
 - type: entity
   id: RedLinsesImplanter
   name: имплантер красных линз
@@ -85,8 +85,8 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/red_linses.rsi
       state: icon
-      
-#
+
+
 - type: entity
   id: LimeLinsesImplanter
   name: имплантер лаймовых линз
@@ -130,8 +130,8 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/lime_linses.rsi
       state: icon
-      
-#   
+
+
 - type: entity
   id: YellowLinsesImplanter
   name: имплантер жёлтых линз
@@ -175,8 +175,8 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/yellow_linses.rsi
       state: icon
-      
-#
+
+
 - type: entity
   id: PurpleLinsesImplanter
   name: имплантер фиолетовых глаз
@@ -220,8 +220,8 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/violet_linses.rsi
       state: icon
-      
-#
+
+
 - type: entity
   id: WhiteLinsesImplanter
   name: имплантер белых линз
@@ -265,8 +265,8 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/white_linses.rsi
       state: icon
-      
-#
+
+
 - type: entity
   id: OrangeLinsesImplanter
   name: имплантер оранжевых линз
@@ -310,8 +310,8 @@
     icon:
       sprite: Adventure/_CyberneticGenesis/linses/orange_linses.rsi
       state: icon
-      
-#
+
+
 - type: entity
   id: BlackLinsesImplanter
   name: имплантер чёрных линз
