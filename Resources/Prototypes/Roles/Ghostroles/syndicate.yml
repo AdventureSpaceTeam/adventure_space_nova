@@ -27,6 +27,13 @@
   entityPrototype: MobMonkeySyndicateAgentNukeops
 
 - type: ghostRole
+  id: SyndicateCat
+  name: ghost-role-information-SyndiCat-name
+  description: ghost-role-information-SyndiCat-description
+  rules: ghost-role-information-SyndiCat-rules
+  entityPrototype: MobCatSyndy
+
+- type: ghostRole
   id: SyndicateAgentMedic
   name: ghost-role-information-syndicate-reinforcement-medic-name
   description: ghost-role-information-syndicate-reinforcement-medic-description
