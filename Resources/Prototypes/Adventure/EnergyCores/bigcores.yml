@@ -29,7 +29,7 @@
   parent: [BaseBigCore, BaseRNDCore]
   id: RnDBigCore
   description: Ядро для больших шаттлов, которое может изготовить каждая космическая станция типа "14", при имении ресурсов.
-  name: Большое ядро РнД.
+  name: большое ядро РнД
   components:
   - type: EnergyCore
     damage:
@@ -38,7 +38,7 @@
     timeOfLife: 480
     enablingLength: 2.6
     baseSupply: 260000
-    secPerMoles: 0.25
+    secPerMoles: 2.5
   - type: PowerSupplier
     supplyRate: 260000
   - type: Sprite
@@ -48,7 +48,7 @@
   parent: [BaseBigCore, BaseNTCore]
   id: NTBigCore
   description: Ядро, работающее на передовых технологиях НаноТрейзен. Сложнее в исполнении, чем ядра РнД, используют при работе БС энергию.
-  name: Большое ядро НаноТрейзен.
+  name: большое ядро НаноТрейзен
   components:
   - type: EnergyCore
     damage:
@@ -57,7 +57,7 @@
     timeOfLife: 600
     enablingLength: 7.7
     baseSupply: 300000
-    secPerMoles: 0.375
+    secPerMoles: 3.75
   - type: PowerSupplier
     supplyRate: 300000
   - type: Sprite
@@ -69,8 +69,8 @@
 - type: entity
   parent: [BaseBigCore, BaseSYNCore]
   id: SyndicateBigCore
-  description: Ядро, изготвливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
-  name: Большое ядро Синдиката.
+  description: Ядро, изготавливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
+  name: большое ядро Синдиката
   components:
   - type: EnergyCore
     damage:
@@ -79,7 +79,7 @@
     timeOfLife: 500
     enablingLength: 1.0
     baseSupply: 320000
-    secPerMoles: 0.25
+    secPerMoles: 2.5
   - type: PowerSupplier
     supplyRate: 320000
   - type: Sprite
@@ -92,7 +92,7 @@
   parent: [BaseBigCore, BaseHMCore]
   id: HandMadeBigCore
   description: Ядро, изготовленное из первого, что попалось под руку. Ненадежно, но просто в создании.
-  name: Большое самодельное ядро.
+  name: большое самодельное ядро
   components:
   - type: EnergyCore
     damage:
@@ -100,7 +100,7 @@
         Heat: 0.25
     timeOfLife: 400
     baseSupply: 200000
-    secPerMoles: 0.01875
+    secPerMoles: 0.1875
   - type: PowerSupplier
     supplyRate: 200000
   - type: Sprite
