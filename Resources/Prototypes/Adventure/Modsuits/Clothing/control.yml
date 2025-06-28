@@ -89,9 +89,9 @@
   id: ClothingControlModsuitEngineerSealed
   components:
   - type: Sprite
-    sprite: Adventure/Modsuits/Clothing/Back/engineer.rsi
+    sprite: Adventure/Modsuits/Clothing/Back/engineer2.rsi
   - type: Clothing
-    sprite: Adventure/Modsuits/Clothing/Back/engineer.rsi
+    sprite: Adventure/Modsuits/Clothing/Back/engineer2.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterChestplateModsuitEngineerSealed
   - type: Storage
@@ -516,9 +516,9 @@
   id: ClothingControlModsuitEngineer2Sealed
   components:
   - type: Sprite
-    sprite: Adventure/Modsuits/Clothing/Back/engineer2.rsi
+    sprite: Adventure/Modsuits/Clothing/Back/engineer.rsi
   - type: Clothing
-    sprite: Adventure/Modsuits/Clothing/Back/engineer2.rsi
+    sprite: Adventure/Modsuits/Clothing/Back/engineer.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterChestplateModsuitEngineer2Sealed
   - type: Storage

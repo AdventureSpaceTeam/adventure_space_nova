@@ -22,6 +22,6 @@
     sprite: Adventure/Modsuits/constructing_modsuit.rsi
     state: mod-core
   product: CrateModsuitsBasic
-  cost: 1500
-  category: Инженерное дело
+  cost: 3000
+  category: Инженерия
   group: market

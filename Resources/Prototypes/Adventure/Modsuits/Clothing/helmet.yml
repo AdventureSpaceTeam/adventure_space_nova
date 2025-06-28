@@ -55,9 +55,9 @@
   id: ClothingHeadHelmetModsuitEngineerSealed
   components:
   - type: Sprite
-    sprite: Adventure/Modsuits/Clothing/Head/engineer.rsi
+    sprite: Adventure/Modsuits/Clothing/Head/engineer2.rsi
   - type: Clothing
-    sprite: Adventure/Modsuits/Clothing/Head/engineer.rsi
+    sprite: Adventure/Modsuits/Clothing/Head/engineer2.rsi
     equipSound: /Audio/Imperial/Modsuits/ballin.ogg
     unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
   - type: Armor
@@ -439,9 +439,9 @@
   id: ClothingHeadHelmetModsuitEngineer2Sealed
   components:
   - type: Sprite
-    sprite: Adventure/Modsuits/Clothing/Head/engineer2.rsi
+    sprite: Adventure/Modsuits/Clothing/Head/engineer.rsi
   - type: Clothing
-    sprite: Adventure/Modsuits/Clothing/Head/engineer2.rsi
+    sprite: Adventure/Modsuits/Clothing/Head/engineer.rsi
     equipSound: /Audio/Imperial/Modsuits/ballin.ogg
     unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
   - type: Armor

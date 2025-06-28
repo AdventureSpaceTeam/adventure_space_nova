@@ -6,7 +6,7 @@
     state: icon
   discipline: Industrial
   tier: 1
-  cost: 5000
+  cost: 10000
   recipeUnlocks:
   - PlatingSecurityModsuitConstructing
   - PlatingAsteroidModsuitConstructing
@@ -20,7 +20,7 @@
     state: icon
   discipline: Industrial
   tier: 1
-  cost: 2500
+  cost: 5000
   recipeUnlocks:
   - PlatingEngineeringModsuitConstructing
   - PlatingAtmosphericModsuitConstructing
@@ -34,7 +34,7 @@
     state: icon
   discipline: Industrial
   tier: 2
-  cost: 7500
+  cost: 12500
   recipeUnlocks:
   - PlatingCEModsuitConstructing
   - PlatingMagnateModsuitConstructing

@@ -1,5 +1,5 @@
 - type: construction
-  name: Р.И.ГАтмосферного Техника
+  name: Атмосферный Р.И.Г
   id: ModsuitAtmospheric
   graph: ModsuitAtmospheric
   startNode: start
@@ -17,7 +17,7 @@
   targetNode: modsuitengineer
   category: construction-category-clothing
   description: Р.И.Г, созданный специально под нужды профессии.
-  icon: { sprite: Adventure/Modsuits/Clothing/Back/engineer.rsi, state: icon }
+  icon: { sprite: Adventure/Modsuits/Clothing/Back/engineer2.rsi, state: icon }
   objectType: Item
 
 - type: construction

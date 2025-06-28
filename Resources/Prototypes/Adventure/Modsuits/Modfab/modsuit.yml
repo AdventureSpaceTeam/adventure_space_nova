@@ -1,3 +1,5 @@
+#region Recipes
+
 - type: latheRecipe
   id: ControlModsuitConstructingStart
   result: ControlModsuitConstructingStart
@@ -123,3 +125,37 @@
     Plasma: 1000
     Uranium: 1000
     Gold: 1000
+
+#region Packs
+
+- type: latheRecipePack
+  id: ModSuitStatic
+  recipes:
+  - ControlModsuitConstructingStart
+  - HelmetModsuitConstructing
+  - ChestplateModsuitConstructing
+  - GauntletsModsuitConstructing
+  - BootsModsuitConstructing
+  - PlatingCivillianModsuitConstructing
+  - PlatingMedicalModsuitConstructing
+
+- type: latheRecipePack
+  id: ModSuitAdvanced
+  recipes:
+  - PlatingCEModsuitConstructing
+  - PlatingMagnateModsuitConstructing
+  - PlatingHOSModsuitConstructing
+
+- type: latheRecipePack
+  id: ModSuitCombat
+  recipes:
+  - PlatingSecurityModsuitConstructing
+  - PlatingAsteroidModsuitConstructing
+  - PlatingRNDModsuitConstructing
+
+- type: latheRecipePack
+  id: ModSuitWorker
+  recipes:
+  - PlatingEngineeringModsuitConstructing
+  - PlatingAtmosphericModsuitConstructing
+  - PlatingCMOModsuitConstructing
