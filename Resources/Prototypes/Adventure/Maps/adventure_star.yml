@@ -1,15 +1,15 @@
 - type: gameMap
   id: AdventureStar 
-  mapName: 'White Star' 
+  mapName: 'Star' 
   mapPath: /Maps/Adventure/Star.yml 
-  minPlayers: 10
-  maxPlayers: 25 
+  minPlayers: 0
+  maxPlayers: 35 
   stations:
     star: 
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} "Белая Звезда" {1}' 
+          mapNameTemplate: '{0} "Star" {1}' 
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: 'VKS' 
