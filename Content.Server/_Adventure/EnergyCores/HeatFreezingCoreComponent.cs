@@ -15,7 +15,7 @@ public sealed partial class HeatFreezingCoreComponent : Component
     };
 
     [DataField]
-    public float FilterTemperature = Atmospherics.T0C + 50;
+    public float FilterTemperature = Atmospherics.T0C + 470;
 
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float MaxPressure = 3000;
@@ -25,5 +25,5 @@ public sealed partial class HeatFreezingCoreComponent : Component
 
     [DataField]
     public Gas AbsorbGas = Gas.Frezon;
-    
+
 }

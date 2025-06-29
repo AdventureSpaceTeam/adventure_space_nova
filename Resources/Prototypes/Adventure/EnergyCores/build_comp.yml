@@ -2,8 +2,8 @@
   id: BaseEnergyBuildComp
   parent: BaseItem
   categories: [ HideSpawnMenu ]
-  name: Базовая составляющая Энергоядра
-  description: Кругленькая красивенькая, но очень функциональная и хрупкая вещица. Является "центральным процессором" Энергоядра.
+  name: базовая составляющая энерго-ядра
+  description: Кругленькая красивенькая, но очень функциональная и хрупкая вещица. Является "центральным процессором" энерго-ядра.
   components:
     - type: Sprite
       sprite: Adventure/EnergyCores/mini_core-RnD.rsi
@@ -21,7 +21,7 @@
 - type: entity
   parent: BaseEnergyBuildComp
   id: RnDEnergyCoreCPU
-  name: Центральный процессор ядра РнД
+  name: центральный процессор ядра РнД
   components:
     - type: Sprite
       sprite: Adventure/EnergyCores/mini_core-RnD.rsi
@@ -30,7 +30,7 @@
 - type: entity
   parent: RnDEnergyCoreCPU
   id: RNDECCPU1
-  name: ЦПУ РНД
+  name: ЦП РНД
   suffix: Single
   components:
   - type: Sprite
@@ -41,7 +41,7 @@
 - type: entity
   id: SyndicateEnergyCoreCPU
   parent: BaseEnergyBuildComp
-  name: Центральный процессор ядра Синдиката
+  name: центральный процессор ядра Синдиката
   components:
     - type: Sprite
       sprite: Adventure/EnergyCores/mini_core-redspace.rsi
@@ -50,7 +50,7 @@
 - type: entity
   parent: SyndicateEnergyCoreCPU
   id: SYNECCPU1
-  name: ЦПУ Синдиката
+  name: ЦП Синдиката
   suffix: Single
   components:
   - type: Sprite
@@ -61,7 +61,7 @@
 - type: entity
   id: NanoTrasenEnergyCoreCPU
   parent: BaseEnergyBuildComp
-  name: Центральный процессор ядра НаноТрейзен
+  name: центральный процессор ядра НаноТрейзен
   components:
     - type: Sprite
       sprite: Adventure/EnergyCores/mini_core-blue.rsi
@@ -70,7 +70,7 @@
 - type: entity
   parent: NanoTrasenEnergyCoreCPU
   id: NTECCPU1
-  name: ЦПУ НаноТрейзен
+  name: ЦП НаноТрейзен
   suffix: Single
   components:
   - type: Sprite
@@ -81,7 +81,7 @@
 - type: entity
   id: HandMadeEnergyCoreCPU
   parent: BaseEnergyBuildComp
-  name: Центральный процессор самодельного ядра
+  name: центральный процессор самодельного ядра
   components:
     - type: Sprite
       sprite: Adventure/EnergyCores/mini_core-yellow.rsi
@@ -90,7 +90,7 @@
 - type: entity
   parent: HandMadeEnergyCoreCPU
   id: HMECCPU1
-  name: Самодельный ЦПУ
+  name: самодельный ЦП
   suffix: Single
   components:
   - type: Sprite
@@ -100,28 +100,28 @@
 
 - type: stack
   id: HMECCPU
-  name: самодельное ЦПУ
+  name: самодельное ЦП
   icon: { sprite: Adventure/EnergyCores/mini_core-yellow.rsi, state: icon }
   spawn: HMECCPU1
   maxCount: 1
 
 - type: stack
   id: SYNECCPU
-  name: ЦПУ Синдиката
+  name: ЦП Синдиката
   icon: { sprite: Adventure/EnergyCores/mini_core-redspace.rsi, state: icon }
   spawn: SYNECCPU1
   maxCount: 1
 
 - type: stack
   id: NTECCPU
-  name: ЦПУ НаноТрейзен
+  name: ЦП НаноТрейзен
   icon: { sprite: Adventure/EnergyCores/mini_core-blue.rsi, state: icon }
   spawn: NTECCPU1
   maxCount: 1
 
 - type: stack
   id: RNDECCPU
-  name: рнд ЦПУ
+  name: ЦП РнД
   icon: { sprite: Adventure/EnergyCores/mini_core-RnD.rsi, state: icon }
   spawn: RNDECCPU1
   maxCount: 1
@@ -129,7 +129,7 @@
 - type: material
   id: HMECCPU
   stackEntity: HMECCPU1
-  name: самодельное ЦПУ
+  name: самодельное ЦП
   unit: ядра
   icon: { sprite: Adventure/EnergyCores/mini_core-yellow.rsi, state: icon }
   color: "#C0C0C0"
@@ -138,7 +138,7 @@
 - type: material
   id: RNDECCPU
   stackEntity: RNDECCPU1
-  name: рнд ЦПУ
+  name: ЦП РнД
   unit: ядра
   icon: { sprite: Adventure/EnergyCores/mini_core-RnD.rsi, state: icon }
   color: "#C0C0C0"
@@ -147,7 +147,7 @@
 - type: material
   id: NTECCPU
   stackEntity: NTECCPU1
-  name: ЦПУ НаноТрейзен
+  name: ЦП НаноТрейзен
   unit: ядра
   icon: { sprite: Adventure/EnergyCores/mini_core-blue.rsi, state: icon }
   color: "#C0C0C0"
@@ -156,7 +156,7 @@
 - type: material
   id: SYNECCPU
   stackEntity: SYNECCPU1
-  name: ЦПУ Синдиката
+  name: ЦП Синдиката
   unit: ядра
   icon: { sprite: Adventure/EnergyCores/mini_core-redspace.rsi, state: icon }
   color: "#C0C0C0"
@@ -167,8 +167,8 @@
   id: EnergyCoreFrame
   parent: BaseStructureDynamic
   categories: [ HideSpawnMenu ]
-  name: каркас базового энергоядра
-  description: Это каркас базового энергоядра.
+  name: каркас базового энерго-ядра
+  description: Это каркас базового энерго-ядра.
   placement:
     mode: SnapgridCenter
   components:
@@ -227,7 +227,7 @@
 - type: entity
   id: EnergyCoreBigFrame
   parent: EnergyCoreFrame
-  name: Большой каркас энергоядра
+  name: Большой каркас энерго-ядра
   components:
   - type: Sprite
     sprite: Adventure/EnergyCores/ec_const_big.rsi
@@ -281,7 +281,7 @@
 - type: entity
   id: EnergyCoreMiniFrame
   parent: EnergyCoreFrame
-  name: Малый каркас энергоядра
+  name: малый каркас энерго-ядра
   components:
   - type: Sprite
     sprite: Adventure/EnergyCores/ec_const_small.rsi
@@ -335,7 +335,7 @@
 - type: entity
   id: EnergyCoreMediumFrame
   parent: EnergyCoreFrame
-  name: Средний каркас энергоядра
+  name: средний каркас энерго-ядра
   components:
   - type: Sprite
     sprite: Adventure/EnergyCores/ec_const_medium.rsi

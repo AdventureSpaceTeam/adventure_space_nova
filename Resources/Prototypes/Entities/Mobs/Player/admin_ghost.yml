@@ -123,6 +123,11 @@
   name: Solar Control Interface
   description: View a Solar Control Interface.
   components:
+  - type: Action
+    icon: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    keywords: [ "AI", "console", "interface" ]
+    priority: -3
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
 
@@ -160,6 +165,11 @@
   name: Cargo Ordering Interface
   description: View a Cargo Ordering Interface.
   components:
+  - type: Action
+    icon: Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
+    iconOn: Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
+    keywords: [ "AI", "console", "interface" ]
+    priority: -5
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
 

@@ -29,16 +29,16 @@
   parent: [BaseMediumCore, BaseRNDCore]
   id: RnDMediumCore
   description: Ядро, которое может изготовить каждая космическая станция типа "14", при имении ресурсов.
-  name: Среднее ядро РнД.
+  name: среднее ядро РнД
   components:
   - type: EnergyCore
     damage:
       types:
         Heat: 0.07
     timeOfLife: 480
-    enablingLenght: 2.6
+    enablingLength: 2.6
     baseSupply: 180000
-    secPerMoles: 0.5
+    secPerMoles: 5
   - type: PowerSupplier
     supplyRate: 180000
   - type: Sprite
@@ -51,16 +51,16 @@
   parent: [BaseMediumCore, BaseNTCore]
   id: NTMediumCore
   description: Ядро, работающее на передовых технологиях НаноТрейзен. Сложнее в исполнении, чем ядра РнД, используют при работе БС энергию.
-  name: Среднее ядро НаноТрейзен.
+  name: среднее ядро НаноТрейзен
   components:
   - type: EnergyCore
     damage:
       types:
         Heat: 0.03
     timeOfLife: 600
-    enablingLenght: 7.7
+    enablingLength: 7.7
     baseSupply: 200000
-    secPerMoles: 0.75
+    secPerMoles: 7.5
   - type: PowerSupplier
     supplyRate: 200000
   - type: Sprite
@@ -72,17 +72,17 @@
 - type: entity
   parent: [BaseMediumCore, BaseSYNCore]
   id: SyndicateMediumCore
-  description: Ядро для средних шаттлов, изготвливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
-  name: Среднее ядро Синдиката.
+  description: Ядро для средних шаттлов, изготавливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
+  name: среднее ядро Синдиката
   components:
   - type: EnergyCore
     damage:
       types:
         Heat: 0.07
     timeOfLife: 500
-    enablingLenght: 1.0
+    enablingLength: 1.0
     baseSupply: 220000
-    secPerMoles: 0.5
+    secPerMoles: 5
   - type: PowerSupplier
     supplyRate: 220000
   - type: Sprite
@@ -95,7 +95,7 @@
   parent: [BaseMediumCore, BaseHMCore]
   id: HandMadeMediumCore
   description: Ядро, изготовленное из первого, что попалось под руку. Ненадежно, но просто в создании.
-  name: Среднее самодельное ядро.
+  name: среднее самодельное ядро
   components:
   - type: EnergyCore
     damage:
@@ -103,7 +103,7 @@
         Heat: 0.125
     timeOfLife: 400
     baseSupply: 160000
-    secPerMoles: 0.028125
+    secPerMoles: 0.28125
   - type: PowerSupplier
     supplyRate: 160000
   - type: Sprite

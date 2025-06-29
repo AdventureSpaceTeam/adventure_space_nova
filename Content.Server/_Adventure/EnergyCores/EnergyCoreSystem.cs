@@ -1,28 +1,31 @@
-using Content.Shared.NodeContainer;
-using Content.Server.Atmos.Piping.Unary.EntitySystems;
-using Content.Shared._Adventure.EnergyCores;
-using Robust.Shared.Timing;
-using Content.Server.Atmos.EntitySystems;
-using Content.Shared.Atmos.Piping.Unary.Components;
-using Robust.Server.GameObjects;
-using Content.Server.Power.Components;
 using Content.Server.Administration.Logs;
-using Robust.Server.Audio;
-using Robust.Shared.Audio;
-using Content.Shared.Database;
-using Content.Server.NodeContainer;
-using Content.Server.NodeContainer.Nodes;
+using Content.Server.Atmos.EntitySystems;
 using Content.Server.Atmos.Piping.Components;
-using Content.Shared.Atmos;
+using Content.Server.Atmos.Piping.Unary.EntitySystems;
+using Content.Server.Gravity;
+using Content.Server.NodeContainer;
 using Content.Server.NodeContainer.EntitySystems;
+using Content.Server.NodeContainer.Nodes;
+using Content.Server.Power.Components;
+using Content.Server.Radio.EntitySystems;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
+using Content.Shared._Adventure.EnergyCores;
+using Content.Shared.Atmos;
+using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.Damage;
+using Content.Shared.Database;
+using Content.Shared.DeviceLinking.Events;
 using Content.Shared.DoAfter;
 using Content.Shared.Gravity;
-using Content.Server.Gravity;
-using Content.Server.Shuttles.Systems;
-using Content.Server.Shuttles.Components;
-using Content.Shared.DeviceLinking.Events;
+using Content.Shared.NodeContainer;
+using Content.Shared.Radio;
 using Content.Shared.UserInterface;
+using Robust.Server.Audio;
+using Robust.Server.GameObjects;
+using Robust.Shared.Audio;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Server._Adventure.EnergyCores;
 
@@ -42,6 +45,8 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     [Dependency] private readonly GravitySystem _gravitySystem = default!;
     [Dependency] private readonly ThrusterSystem _thrusterSystem = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
+    [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!;
     private EntityQuery<PowerSupplierComponent> _recQuery;
     private TimeSpan _nextTickCore = TimeSpan.FromSeconds(1);
 
@@ -74,6 +79,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         if (args.Grid is not { } grid)
             return;
         if (!TryComp(uid, out EnergyCoreComponent? core)) return;
+
         var position = _transformSystem.GetGridTilePositionOrDefault(uid);
         var environment = _atmosphereSystem.GetTileMixture(grid, args.Map, position, true);
         if (environment == null) return;
@@ -81,21 +87,51 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         var enumerator = _atmosphereSystem.GetAdjacentTileMixtures(grid, position, false, true);
         while (enumerator.MoveNext(out var adjacent))
         {
-            Scrub(timeDelta, portableNode, adjacent, component);
-            if (core.TimeOfLife < 1000)
+            if (core.TimeOfLife <= 2600)
+            {
+                Scrub(timeDelta, portableNode, adjacent, component);
                 core.TimeOfLife += portableNode.Air.GetMoles(component.AbsorbGas) * core.SecPerMoles;
-            else
-                core.TimeOfLife = 1000;
-            portableNode.Air.Clear();
-            //Pump(adjacent, portableNode, component); // попросили убрать для хардкорности ситуации
+                core.TimeOfLife = Math.Min(core.TimeOfLife, 2700);
+                portableNode.Air.Clear();
+            }
+
+            if (core.TimeOfLife > 600)
+            {
+                core.LowTimeWarningSent = false;
+            }
+            else if (core.TimeOfLife < 600 && !core.LowTimeWarningSent)
+            {
+                var message = Loc.GetString("energy-core-low-time-warning");
+                _radio.SendRadioMessage(uid, message,
+                    _prototype.Index<RadioChannelPrototype>(core.EngineeringChannel),
+                    uid);
+                core.LowTimeWarningSent = true;
+            }
+
+            if (core.Working && !core.ForceDisabled)
+            {
+                if (core.Size == 2)
+                    _atmosphereSystem.AddHeat(environment, 2000);
+                else if (core.Size == 3)
+                    _atmosphereSystem.AddHeat(environment, 4000);
+            }
+
             if (core.TimeOfLife > 0 && core.ForceDisabled)
                 core.ForceDisabled = false;
             if (adjacent.Temperature >= 750)
-                OverHeating(core);
+            {
+                if (!core.Overheat)
+                {
+                    OverHeating(core);
+                }
+            }
+            else if (core.Overheat)
+            {
+                core.Overheat = false;
+                core.OverheatSent = false;
+            }
         }
-
     }
-
 
     private bool Scrub(float timeDelta, PipeNode scrubber, GasMixture tile, HeatFreezingCoreComponent target)
     {
@@ -120,7 +156,15 @@ public sealed partial class EnergyCoreSystem : EntitySystem
 
     private void OverHeating(EnergyCoreComponent component)
     {
-        if (!component.Overheat) component.Overheat = true;
+        if (!component.OverheatSent)
+        {
+            component.Overheat = true;
+            component.OverheatSent = true;
+            var message = Loc.GetString("energy-core-overheat-warning");
+            _radio.SendRadioMessage(component.Owner, message,
+                _prototype.Index<RadioChannelPrototype>(component.EngineeringChannel),
+                component.Owner);
+        }
         _damageable.TryChangeDamage(component.Owner, component.Damage, true);
 
         var environment = _atmosphereSystem.GetTileMixture(component.Owner);
@@ -155,10 +199,6 @@ public sealed partial class EnergyCoreSystem : EntitySystem
                 component.TimeOfLife -= 1;
                 if (component.TimeOfLife <= 0 && !component.isUndead)
                     OverHeating(component);
-                if (component.Size == 2)
-                    _atmosphereSystem.AddHeat(environment, 4000);
-                else if (component.Size == 3)
-                    _atmosphereSystem.AddHeat(environment, 8000);
             }
             else
             {
@@ -205,7 +245,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         else
             dataForSet = EnergyCoreState.Disabling;
         _appearance.SetData(uid, EnergyCoreVisualLayers.IsOn, dataForSet);
-        var time = receiver.PowerDisabled ? core.EnablingLenght : core.DisablingLenght;
+        var time = receiver.PowerDisabled ? core.EnablingLength : core.DisablingLenght;
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(_e, uid, TimeSpan.FromSeconds(time), new TogglePowerDoAfterEvent(_e.GetNetEntity(user)), uid, target: uid, used: uid));
     }
     private void TogglePowerDoAfter(EntityUid uid, EnergyCoreComponent component, TogglePowerDoAfterEvent args)

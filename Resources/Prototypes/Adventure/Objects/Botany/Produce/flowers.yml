@@ -1,3 +1,11 @@
+- type: entity
+  parent: BaseItem
+  id: AdvProduceBase
+  abstract: true
+  components:
+  - type: Sprite
+    state: produce
+
 # carnation
 - type: seed
   id: carnation
@@ -34,7 +42,7 @@
       sprite: Adventure/Objects/Botany/Produce/Flovers/carnation.rsi
 
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, AdvProduceBase ]
   id: Carnation
   name: гвоздика
   suffix: AdvBotany
@@ -47,6 +55,7 @@
     state: icon
   - type: Item
     sprite: Adventure/Objects/Botany/Produce/Flovers/carnation.rsi
+    heldPrefix: produce
 
 # orchid
 - type: seed
@@ -84,7 +93,7 @@
       sprite: Adventure/Objects/Botany/Produce/Flovers/orchid.rsi
 
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, AdvProduceBase ]
   id: Orchid
   name: орхидея
   suffix: AdvBotany
@@ -97,6 +106,7 @@
     state: icon
   - type: Item
     sprite: Adventure/Objects/Botany/Produce/Flovers/orchid.rsi
+    heldPrefix: produce
 
 #rose_red
 - type: seed
@@ -134,7 +144,7 @@
       sprite: Adventure/Objects/Botany/Produce/Flovers/rose_red.rsi
 
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, AdvProduceBase ]
   id: RoseRed
   name: красная роза
   suffix: AdvBotany
@@ -147,6 +157,7 @@
     state: icon
   - type: Item
     sprite: Adventure/Objects/Botany/Produce/Flovers/rose_red.rsi
+    heldPrefix: produce
 
 #rose_white
 - type: seed
@@ -184,7 +195,7 @@
       sprite: Adventure/Objects/Botany/Produce/Flovers/rose_white.rsi
 
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, AdvProduceBase ]
   id: RoseWhite
   name: белая роза
   suffix: AdvBotany
@@ -197,6 +208,7 @@
     state: icon
   - type: Item
     sprite: Adventure/Objects/Botany/Produce/Flovers/rose_white.rsi
+    heldPrefix: produce
 
 # tulip
 - type: seed
@@ -234,7 +246,7 @@
       sprite: Adventure/Objects/Botany/Produce/Flovers/tulip.rsi
 
 - type: entity
-  parent: BaseItem
+  parent: [ BaseItem, AdvProduceBase ]
   id: Tulip
   name: тюльпан
   suffix: AdvBotany
@@ -247,3 +259,4 @@
     state: icon
   - type: Item
     sprite: Adventure/Objects/Botany/Produce/Flovers/tulip.rsi
+    heldPrefix: produce
