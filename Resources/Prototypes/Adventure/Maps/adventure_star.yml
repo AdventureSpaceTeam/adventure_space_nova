@@ -1,26 +1,26 @@
 - type: gameMap
-  id: AdventureStar 
-  mapName: 'Star' 
-  mapPath: /Maps/Adventure/Star.yml 
+  id: AdventureStar
+  mapName: 'Star'
+  mapPath: /Maps/Adventure/Star.yml
   minPlayers: 0
-  maxPlayers: 35 
+  maxPlayers: 35
   stations:
-    star: 
+    star:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} "Star" {1}' 
+          mapNameTemplate: '{0} "Star" {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'VKS' 
+            prefixCreator: 'VKS'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
         - type: StationJobs
-          overflowJobs: 
+          overflowJobs:
             - Passenger
           availableJobs:
             # service
-            HeadOfPersonnel: [ 1, 1 ] 
+            HeadOfPersonnel: [ 1, 1 ]
             Passenger: [ -1, -1 ]
             ServiceWorker: [ 2, 2 ]
             Bartender: [ 1, 1 ]
