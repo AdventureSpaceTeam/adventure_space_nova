@@ -535,3 +535,47 @@
   sprites:
   - sprite: Adventure/Races/IPC/Customization/Body.rsi
     state: woman
+
+- type: marking
+  id: SynthChestSkeleton
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Body.rsi
+    state: skeleton
+
+- type: marking
+  id: SynthHeadArmored
+  bodyPart: Head
+  markingCategory: Head
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: armored
+
+- type: marking
+  id: SynthHeadOld
+  bodyPart: Head
+  markingCategory: Head
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: old
+
+- type: marking
+  id: SynthHeadNew
+  bodyPart: Head
+  markingCategory: Head
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: Adventure/Races/IPC/Customization/Head.rsi
+    state: new

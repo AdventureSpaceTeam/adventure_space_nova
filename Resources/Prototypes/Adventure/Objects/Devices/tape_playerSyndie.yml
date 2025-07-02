@@ -55,6 +55,72 @@
   - type: MusicTape
     sound: "/Audio/Adventure/TapePlayer/NukeTracks/Collapse4.ogg"
 
+- type: entity
+  parent: MusicTape421
+  id: MusicTape425
+  name: Кассета (Blood)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/blood.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape426
+  name: Кассета (Land)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/deutschland.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape427
+  name: Кассета (Heart)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/herz.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape428
+  name: Кассета (Links)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/links.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape429
+  name: Кассета (Chad)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/NukeChad.ogg"
+
+- type: entity
+  parent: MusicTape421
+  id: MusicTape430
+  name: Кассета (Rein)
+  description:
+  components:
+  - type: Sprite
+    state: tape42
+  - type: MusicTape
+    sound: "/Audio/Adventure/TapePlayer/NukeTracks/rein.ogg"
+
 # набор бешенного музла
 - type: entity
   id: CrateSyndieMusic
@@ -70,6 +136,12 @@
       - id: MusicTape422
       - id: MusicTape423
       - id: MusicTape424
+      - id: MusicTape425
+      - id: MusicTape426
+      - id: MusicTape427
+      - id: MusicTape428
+      - id: MusicTape429
+      - id: MusicTape430
 
 # набор бешенного музла в каталоге
 - type: listing
