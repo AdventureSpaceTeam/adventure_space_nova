@@ -107,6 +107,13 @@
   solids:
     FoodBlueAgava: 1
 
+- type: stack
+  id: AgavaCream
+  name: stack-agava-cream
+  icon: { sprite: "/Adventure/Objects/Botany/Produce/blueagava.rsi", state: cream }
+  spawn: AgavaCream
+  maxCount: 10
+
 - type: microwaveMealRecipe
   id: RecipeRegenerativeMeshAgava
   name: regenerative mesh recipe
