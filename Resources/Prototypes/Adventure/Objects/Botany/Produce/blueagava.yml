@@ -12,7 +12,7 @@
 
 - type: seed
   id: blueagava
-  name: семена голубой агавы
+  name: голубая агава
   noun: seeds-noun-seeds
   displayName: голубая агава
   plantRsi: Adventure/Objects/Botany/Produce/blueagava.rsi
@@ -64,3 +64,59 @@
   - type: Tag
     tags:
     - Vegetable
+
+- type: entity
+  name: крем агавы
+  description: Крем для наружного применения при ожогах. Немного токсичный.
+  parent: Ointment
+  id: AgavaCream
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/blueagava.rsi
+    state: cream
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -5
+        Cold: -5
+        Shock: -5
+        Caustic: -5
+        Poison: +3
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: AgavaCream
+    count: 10
+
+- type: microwaveMealRecipe
+  id: RecipeAgavaCream
+  name: agava cream recipe
+  result: AgavaCream
+  time: 10
+  group: Medicinal
+  solids:
+    FoodBlueAgava: 1
+
+- type: microwaveMealRecipe
+  id: RecipeRegenerativeMeshAgava
+  name: regenerative mesh recipe
+  result: RegenerativeMesh
+  time: 10
+  group: Medicinal
+  solids:
+    FoodBlueAgava: 1
+    Ointment: 1
+    MaterialCloth1: 1
+  reagents:
+    Sigynate: 20
+    Dermaline: 20

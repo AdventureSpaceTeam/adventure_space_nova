@@ -12,7 +12,7 @@
 
 - type: seed  # Растение
   id: spaceberries
-  name: семена космических ягод
+  name: космические ягоды
   noun: seeds-noun-seeds
   displayName: космические ягоды
   plantRsi: Adventure/Objects/Botany/Produce/spaceberries.rsi

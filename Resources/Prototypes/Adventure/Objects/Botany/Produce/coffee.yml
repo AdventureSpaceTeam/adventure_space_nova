@@ -12,7 +12,7 @@
 
 - type: seed  # Растение
   id: CoffeePlant
-  name: Семена кофейного дерева
+  name: кофейное дерево
   noun: seeds-noun-seeds
   displayName: кофейное дерево
   plantRsi: Adventure/Objects/Botany/Produce/coffee.rsi

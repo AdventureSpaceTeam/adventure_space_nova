@@ -12,7 +12,7 @@
 
 - type: seed  # Растение
   id: glowingmushroom
-  name: пакет спор (светящийся гриб)
+  name: светящийся гриб
   noun: seeds-noun-seeds
   displayName: светящийся гриб
   plantRsi: Adventure/Objects/Botany/Produce/glowingmushrooms.rsi

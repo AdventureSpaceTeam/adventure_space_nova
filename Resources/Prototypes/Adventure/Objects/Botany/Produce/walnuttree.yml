@@ -12,9 +12,9 @@
 
 - type: seed  # Растение
   id: walnuttree
-  name: семена орехового дерева
+  name: ореховое дерево
   noun: seeds-noun-seeds
-  displayName: Ореховое дерево
+  displayName: ореховое дерево
   plantRsi: Adventure/Objects/Botany/Produce/walnuttree.rsi
   packetPrototype: NutSeeds
   productPrototypes:
@@ -37,7 +37,7 @@
       PotencyDivisor: 5
 
 - type: entity  # Продукт
-  name: Орехи
+  name: орехи
   suffix: AdvBotany
   parent: FoodProduceBase
   id: FoodNut

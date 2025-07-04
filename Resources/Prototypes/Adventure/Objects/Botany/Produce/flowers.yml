@@ -9,7 +9,7 @@
 # carnation
 - type: seed
   id: carnation
-  name: семена гвоздик
+  name: гвоздика
   suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: гвоздика
@@ -60,7 +60,7 @@
 # orchid
 - type: seed
   id: orchid
-  name: семена орхидеи
+  name: орхидея
   suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: орхидея
@@ -111,7 +111,7 @@
 #rose_red
 - type: seed
   id: rosered
-  name: семена красной розы
+  name: красная роза
   suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: красная роза
@@ -119,6 +119,8 @@
   packetPrototype: RoseRedSeeds
   productPrototypes:
     - RoseRed
+  mutationPrototypes:
+    - roseplasma
   lifespan: 25
   maturation: 8
   production: 1
@@ -162,7 +164,7 @@
 #rose_white
 - type: seed
   id: rosewhite
-  name: семена белой розы
+  name: белая роза
   suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: белая роза
@@ -213,7 +215,7 @@
 # tulip
 - type: seed
   id: tulip
-  name: семена тюльпанов
+  name: тюльпан
   suffix: AdvBotany
   noun: seeds-noun-seeds
   displayName: тюльпан

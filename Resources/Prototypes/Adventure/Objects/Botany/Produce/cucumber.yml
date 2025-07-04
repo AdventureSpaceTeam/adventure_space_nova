@@ -11,7 +11,7 @@
 
 - type: seed
   id: cucumber
-  name: семена огурца
+  name: огурец
   noun: seeds-noun-seeds
   displayName: огурец
   plantRsi: Adventure/Objects/Botany/Produce/cucumber.rsi

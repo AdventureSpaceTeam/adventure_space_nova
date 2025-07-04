@@ -1173,6 +1173,7 @@
     - FoodPoppy
   mutationPrototypes:
     - lily
+    - sleepypoppy # Adventure
   lifespan: 25
   maturation: 10
   production: 3
@@ -1255,6 +1256,10 @@
   packetPrototype: LingzhiSeeds
   productPrototypes:
     - FoodLingzhi
+# Adventure botany start
+  mutationPrototypes:
+    - ammonialingzhi
+# Adventure botany end
   lifespan: 25
   maturation: 10
   production: 3
@@ -1616,6 +1621,10 @@
   packetPrototype: GrapeSeeds
   productPrototypes:
     - FoodGrape
+# Adventure botany start
+  mutationPrototypes:
+    - silvergrape
+# Adventure botany end
   lifespan: 50
   maturation: 6
   production: 5

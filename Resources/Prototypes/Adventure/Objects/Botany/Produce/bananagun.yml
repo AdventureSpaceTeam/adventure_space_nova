@@ -2,7 +2,7 @@
   parent: SeedBase
   name: пакет семян (бананаган)
   suffix: AdvBotany
-  description: "пахнет бананом"
+  description: "Пахнет бананом."
   id: BananaGunSeeds
   components:
     - type: Seed
@@ -12,7 +12,7 @@
 
 - type: seed #Растение
   id: BananaGunPlant
-  name: семена бананагана
+  name: бананагановое дерево
   noun: seeds-noun-seeds
   displayName: бананагановое дерево
   plantRsi: Adventure/Objects/Botany/Produce/bananagundop.rsi
@@ -110,7 +110,7 @@
     size: Small
     shape:
     - 0,0,1,0
-    - 0,1,0,1   
+    - 0,1,0,1
   - type: Tag
     tags:
     - Sidearm
