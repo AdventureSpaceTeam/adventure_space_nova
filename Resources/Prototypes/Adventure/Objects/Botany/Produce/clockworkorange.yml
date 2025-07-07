@@ -11,7 +11,7 @@
 
 - type: seed
   id: clockworkorange
-  name: семена заводного апельсина
+  name: заводной апельсин
   noun: seeds-noun-seeds
   displayName: заводной апельсин
   plantRsi: Adventure/Objects/Botany/Produce/clockworkorange.rsi

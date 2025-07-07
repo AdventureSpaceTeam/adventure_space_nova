@@ -69,11 +69,14 @@
     - state: icon-lava
       shader: unshaded
     - state: icon-flash
-    - state: icon-lava
       visible: false
-      shader: unshaded
       map: [ "light" ]
-  - type: ToggleableLightVisuals
+    - state: icon-lava
+      shader: unshaded
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/helmet.rsi
     spriteLayer: light
     clothingVisuals:
       head:
@@ -187,11 +190,14 @@
     - state: icon-lava
       shader: unshaded
     - state: icon-flash
-    - state: icon-lava
       visible: false
-      shader: unshaded
       map: [ "light" ]
-  - type: ToggleableLightVisuals
+    - state: icon-lava
+      shader: unshaded
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/salvage.rsi
     spriteLayer: light
     clothingVisuals:
       head:

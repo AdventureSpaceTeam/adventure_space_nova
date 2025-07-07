@@ -58,6 +58,18 @@
     {
       "name": "cable2",
       "directions": 4
+    },
+    {
+      "name": "armored",
+      "directions": 4
+    },
+    {
+      "name": "old",
+      "directions": 4
+    },
+    {
+      "name": "new",
+      "directions": 4
     }
   ]
 }

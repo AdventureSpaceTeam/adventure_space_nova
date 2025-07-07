@@ -254,8 +254,8 @@
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: FloorLavaEntity
-      count: 200
-      minGroupSize: 3
+      count: 150
+      minGroupSize: 8
       maxGroupSize: 15
     - !type:OreDunGen
       replacement: WallRockBasalt

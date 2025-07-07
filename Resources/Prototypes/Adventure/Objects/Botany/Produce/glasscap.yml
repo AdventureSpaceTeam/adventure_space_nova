@@ -11,7 +11,7 @@
 
 - type: seed
   id: glasscap
-  name: семена стеклошляпника
+  name: стеклошляпник
   noun: seeds-noun-spores
   displayName: стеклошляпник
   plantRsi: Adventure/Objects/Botany/Produce/glasscap.rsi
@@ -29,7 +29,7 @@
   nutrientConsumption: 0.80
   lightTolerance: 6
   idealHeat: 288
-  
+
 - type: entity
   name: бревно стеклошляпника
   suffix: AdvBotany

@@ -12,7 +12,7 @@
 
 - type: seed  # Растение
   id: coolpineapple
-  name: семена крутого ананаса
+  name: крутой ананас
   noun: seeds-noun-seeds
   displayName: крутой ананас
   plantRsi: Adventure/Objects/Botany/Produce/coolpineapple.rsi

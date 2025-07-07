@@ -232,8 +232,8 @@
         Base: dead5
         BaseUnshaded: light_dead5
   - type: MovementSpeedModifier
-    baseWalkSpeed : 4.0
-    baseSprintSpeed : 4.0
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 3.5
   - type: MobThresholds
     thresholds:
       0: Alive

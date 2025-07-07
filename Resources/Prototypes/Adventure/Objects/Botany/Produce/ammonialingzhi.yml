@@ -1,0 +1,72 @@
+- type: seed
+  id: ammonialingzhi
+  name: линчжисмрадник
+  suffix: AdvBotany
+  noun: seeds-noun-seeds
+  displayName: линчжисмрадник
+  plantRsi: Adventure/Objects/Botany/Produce/ammonialingzhi.rsi
+  packetPrototype: AmmoniaLingzhiSeeds
+  productPrototypes:
+    - AmmoniaLingzhi
+  lifespan: 25
+  maturation: 10
+  production: 3
+  yield: 3
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.60
+  exudeGasses:
+   Ammonia: 0.5
+  chemicals:
+    Ammonia:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 5
+    Ipecac:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 5
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (линчжисмрадник)
+  id: AmmoniaLingzhiSeeds
+  components:
+    - type: Seed
+      seedId: ammonialingzhi
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/ammonialingzhi.rsi
+
+- type: entity
+  parent: [ BaseItem, AdvProduceBase ]
+  id: AmmoniaLingzhi
+  name: линчжисмрадник
+  description: Сильнодействующий лекарственный гриб. Пахнет гнильцой.
+  suffix: AdvBotany
+  components:
+  - type: FlavorProfile
+    flavors:
+      - mushroom
+      - medicine
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/ammonialingzhi.rsi
+    state: icon
+  - type: Item
+    sprite: Adventure/Objects/Botany/Produce/ammonialingzhi.rsi
+    heldPrefix: produce
+  - type: Produce
+    seedId: ammonialingzhi
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Ammonia
+          Quantity: 20
+        - ReagentId: Ipecac
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Mushroom

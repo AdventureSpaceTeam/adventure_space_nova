@@ -24,6 +24,6 @@
     attackRate: 5
     damage:
       groups:
-        Brute: 5
+        Brute: 15
       types:
         Structural: 35

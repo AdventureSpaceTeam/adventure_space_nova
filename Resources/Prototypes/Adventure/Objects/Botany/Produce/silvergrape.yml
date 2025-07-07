@@ -1,0 +1,90 @@
+- type: entity
+  parent: SeedBase
+  name: пакет семян (серебряный виноград)
+  suffix: AdvBotany
+  description: "Блестящее"
+  id: SilverGrapeSeeds
+  components:
+    - type: Seed
+      seedId: silvergrape
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/silvergrape.rsi
+
+- type: seed
+  id: silvergrape
+  name: серебряный виноград
+  noun: seeds-noun-seeds
+  displayName: серебряный виноград
+  plantRsi: Adventure/Objects/Botany/Produce/silvergrape.rsi
+  packetPrototype: SilverGrapeSeeds
+  productPrototypes:
+    - FoodSilverGrape
+  lifespan: 50
+  maturation: 6
+  production: 5
+  yield: 3
+  potency: 10
+  growthStages: 2
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+    Silver:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Diphenhydramine:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 25
+
+- type: entity
+  name: серебряный виноград
+  parent: FoodProduceBase
+  id: FoodSilverGrape
+  description: Пища императоров, жителей космической Франции (обычно в виде вина) и занятых мамочек. Когда-нибудь его можно будет использовать в производстве вина для бармена, если оно вдруг закончится.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - grape
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 17
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 4
+        - ReagentId: Silver
+          Quantity: 5
+        - ReagentId: Diphenhydramine
+          Quantity: 3
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/silvergrape.rsi
+  - type: Item
+    heldPrefix: produce
+  - type: Produce
+    seedId: silvergrape
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceSilverGrape
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: reagent
+  id: JuiceSilverGrape
+  name: виноградный сок
+  parent: BaseJuice
+  desc: Свежевыжатый сок из серебряного винограда. Довольно сладкий, имеет металлическое послевкусие.
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: juice
+  color: "#d0d0d0"

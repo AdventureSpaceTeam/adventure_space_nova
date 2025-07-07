@@ -5,8 +5,6 @@
   description: Новый двойной пластиковый меч от Sandy-Cat! В два раза больше эпика и громких звуков!
   components:
     - type: EnergySword
-      colorOptions:
-        - Orangered
     - type: ItemToggle
       onUse: false # wielding events control it instead
       onActivate: false # prevents the weapon from being able to be turned on when it is on the ground
@@ -77,7 +75,7 @@
       color: white
       netsync: false
     - type: Appearance
-    - type: ToggleableLightVisuals
+    - type: ToggleableVisuals
       spriteLayer: blade
       inhandVisuals:
         left:

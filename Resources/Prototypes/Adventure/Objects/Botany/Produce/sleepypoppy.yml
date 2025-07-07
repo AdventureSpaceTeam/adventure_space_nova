@@ -1,0 +1,69 @@
+- type: entity
+  name: сонный мак
+  parent: FoodProduceBase
+  id: SleepyPoppy
+  description: Цветок, экстракты которого часто используются в производстве снотворного.
+  components:
+  - type: Clothing
+    slots:
+    - HEAD
+    quickEquip: false
+  - type: FlavorProfile
+    flavors:
+      - medicine
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: ChloralHydrate
+          Quantity: 5
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/sleepypoppy.rsi
+  - type: Produce
+    seedId: sleepypoppy
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Flower
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (сонный мак)
+  suffix: AdvBotany
+  description: "Усыпляющее"
+  id: SleepyPoppySeeds
+  components:
+    - type: Seed
+      seedId: sleepypoppy
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/sleepypoppy.rsi
+
+- type: seed
+  id: sleepypoppy
+  name: сонный мак
+  noun: seeds-noun-seeds
+  displayName: сонный мак
+  plantRsi: Adventure/Objects/Botany/Produce/sleepypoppy.rsi
+  packetPrototype: SleepyPoppySeeds
+  productPrototypes:
+    - FoodPoppy
+  lifespan: 25
+  maturation: 10
+  production: 3
+  yield: 3
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.60
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 50
+    ChloralHydrate:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 5

@@ -86,6 +86,10 @@
     {
       "name": "woman",
       "directions": 4
-    }   
+    },
+    {
+      "name": "skeleton",
+      "directions": 4
+    }     
   ]
 }

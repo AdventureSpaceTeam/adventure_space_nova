@@ -11,7 +11,7 @@
 
 - type: seed  # Растение
   id: linen
-  name: семена льна
+  name: лён
   noun: seeds-noun-seeds
   displayName: лён
   plantRsi: Adventure/Objects/Botany/Produce/linen.rsi

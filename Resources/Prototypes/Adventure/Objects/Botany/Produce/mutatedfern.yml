@@ -12,7 +12,7 @@
 
 - type: seed  # Растение
   id: mutatedfern
-  name: семена папоротника мутанта
+  name: папоротник мутант
   noun: seeds-noun-seeds
   displayName: папоротник мутант
   plantRsi: Adventure/Objects/Botany/Produce/mutatedfern.rsi

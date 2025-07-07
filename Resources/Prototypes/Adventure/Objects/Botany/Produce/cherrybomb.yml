@@ -12,9 +12,9 @@
 
 - type: seed  #Растение
   id: CherryBombPlant
-  name: семена бах-вишни
+  name: бах-вишневое дерево
   noun: seeds-noun-seeds
-  displayName: бахвишнёвое дерево
+  displayName: бах-вишневое дерево
   plantRsi: Adventure/Objects/Botany/Produce/cherrybomb.rsi
   packetPrototype: CherryBombSeeds
   productPrototypes:

@@ -74,7 +74,7 @@
         amount: 10
         doAfter: 10
       - material: OreRupee
-        amount: 30
+        amount: 20
         doAfter: 10
   - node: hardsuitrupeesalvage
     entity: ClothingOuterHardsuitRupeeSalvage
@@ -168,7 +168,7 @@
         amount: 10
         doAfter: 10
       - material: OreRupee
-        amount: 30
+        amount: 20
         doAfter: 10
   - node: hardsuitrupee
     entity: ClothingOuterHardsuitRupee

@@ -1,0 +1,65 @@
+- type: seed
+  id: roseplasma
+  name: плазменная роза
+  suffix: AdvBotany
+  noun: seeds-noun-seeds
+  displayName: плазменная роза
+  plantRsi: Adventure/Objects/Botany/Produce/Flovers/plasma_rose.rsi
+  packetPrototype: RosePlasmaSeeds
+  productPrototypes:
+    - RosePlasma
+  lifespan: 25
+  maturation: 8
+  production: 1
+  yield: 1
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.60
+  exudeGasses:
+   Plasma: 0.18
+  chemicals:
+    Fiber:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 20
+    Plasma:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 25
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (плазменная роза)
+  id: RosePlasmaSeeds
+  components:
+    - type: Seed
+      seedId: roseplasma
+    - type: Sprite
+      sprite: Adventure/Objects/Botany/Produce/Flovers/plasma_rose.rsi
+
+- type: entity
+  parent: [ BaseItem, AdvProduceBase ]
+  id: RosePlasma
+  name: плазменная роза
+  suffix: AdvBotany
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Botany/Produce/Flovers/plasma_rose.rsi
+    state: icon
+  - type: Item
+    sprite: Adventure/Objects/Botany/Produce/Flovers/plasma_rose.rsi
+    heldPrefix: produce
+  - type: Produce
+    seedId: roseplasma
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 3
+        - ReagentId: Fiber
+          Quantity: 2
