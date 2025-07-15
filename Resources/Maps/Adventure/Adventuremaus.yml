@@ -102554,7 +102554,7 @@ entities:
     - type: Transform
       pos: -30.5,-14.5
       parent: 2
-- proto: PrinterDoc
+- proto: Printer
   entities:
   - uid: 12631
     components:

@@ -33547,7 +33547,7 @@ entities:
     - type: Transform
       pos: -17.531164,9.377331
       parent: 2
-- proto: PrinterDoc
+- proto: Printer
   entities:
   - uid: 3786
     components:

@@ -522,8 +522,8 @@
   - Board's
 
 - type: listing
-  id: PrinterDocMachineCircuitboardBuildUplink
-  productEntity: PrinterDocMachineCircuitboard
+  id: PrinterMachineCircuitboard
+  productEntity: PrinterMachineCircuitboard
   description: Плата принтера документов
   cost: 
     BuildCrystal: 1 
