@@ -5,12 +5,12 @@
     Blunt: 1.30
     Slash: 1.30
     Piercing: 1.30
-    Heat: 1.30
+    Heat: 1.50
     Shock: 1.30
     Cold: 0.70
     Caustic: 1.30
-    Asphyxiation: 1.30
-    Bloodloss: 1.30
+    Asphyxiation: 1
+    Bloodloss: 1
     Poison: 1.30
     Radiation: 1.30
     Cellular: 1.30
@@ -44,11 +44,12 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    scale: 0.8, 0.8
+    scale: 0.75, 0.75
   - type: Item
     size: Ginormous
   - type: MultiHandedItem
   - type: CanEscapeInventory # надо
+    baseResistTime: 0
   - type: Bloodstream
     bloodMaxVolume: 180 # на 40% меньше
     bloodReagent: ResomiBlood
