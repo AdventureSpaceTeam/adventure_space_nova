@@ -1,0 +1,24 @@
+- type: entity
+  id: CrateEmergencyFlarePack
+  parent: CrateGenericSteel
+  name: ящик фальшфейеров
+  description: Содержит 2 набора для временного освещения территории.
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxFlare
+        amount: 2
+      - id: BoxShotgunFlare
+        amount: 2
+      - id: WeaponFlareGun
+        amount: 2
+
+- type: cargoProduct
+  id: EmergencyFlare
+  icon:
+    sprite: Objects/Misc/flare.rsi
+    state: icon
+  product: CrateEmergencyFlarePack
+  cost: 1500
+  category: cargoproduct-category-name-emergency
+  group: market
