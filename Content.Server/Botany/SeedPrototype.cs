@@ -6,7 +6,6 @@ using Content.Shared.EntityEffects;
 using Content.Shared.Random;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Random; // Adventure botany
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
 using Robust.Shared.Utility;
@@ -340,6 +339,7 @@ public partial class SeedData
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
             ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
+            ForceGasTransfer = other.ForceGasTransfer, // Adventure botany
 
             NutrientConsumption = NutrientConsumption,
             WaterConsumption = WaterConsumption,
@@ -378,35 +378,10 @@ public partial class SeedData
             Unique = true,
         };
             // Adventure botany start
-        newSeed.ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses);
-        newSeed.ExudeGasses = new Dictionary<Gas, float>(ExudeGasses);
-
-        var random = IoCManager.Resolve<IRobustRandom>();
         if (other.ForceGasTransfer)
         {
-            foreach (var gas in other.ConsumeGasses)
-            {
-                newSeed.ConsumeGasses[gas.Key] = gas.Value;
-            }
-            foreach (var gas in other.ExudeGasses)
-            {
-                newSeed.ExudeGasses[gas.Key] = gas.Value;
-            }
-        }
-        else
-        {
-            var randomGenerator = IoCManager.Resolve<IRobustRandom>();
-
-            foreach (var gas in other.ConsumeGasses)
-            {
-                if (randomGenerator.Prob(0.5f))
-                    newSeed.ConsumeGasses[gas.Key] = gas.Value;
-            }
-            foreach (var gas in other.ExudeGasses)
-            {
-                if (randomGenerator.Prob(0.5f))
-                    newSeed.ExudeGasses[gas.Key] = gas.Value;
-            }
+            newSeed.ConsumeGasses = new Dictionary<Gas, float>(other.ConsumeGasses);
+            newSeed.ExudeGasses = new Dictionary<Gas, float>(other.ExudeGasses);
         }
             // Adventure botany end
 
