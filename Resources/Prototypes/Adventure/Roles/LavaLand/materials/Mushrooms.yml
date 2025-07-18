@@ -127,20 +127,20 @@
   nutrientConsumption: 0.10
   chemicals:
     SpaceDrugs:
-      Min: 2
-      Max: 6
+      Min: 1
+      Max: 5
       PotencyDivisor: 20
     Nutriment:
-      Min: 2
-      Max: 6
+      Min: 1
+      Max: 5
       PotencyDivisor: 20
     Dermaline:
-      Min: 2
-      Max: 6
+      Min: 1
+      Max: 5
       PotencyDivisor: 20
     Bicaridine:
-      Min: 2
-      Max: 6
+      Min: 1
+      Max: 5
       PotencyDivisor: 20
 
 #боровик
@@ -230,11 +230,11 @@
   nutrientConsumption: 0.50
   chemicals:
     Saline:
-      Min: 4
+      Min: 1
       Max: 10
       PotencyDivisor: 20
     Nicotine:
-      Min: 2
+      Min: 1
       Max: 5
       PotencyDivisor: 20
     Nutriment:
@@ -331,15 +331,15 @@
   nutrientConsumption: 0.20
   chemicals:
     THC:
-      Min: 3
+      Min: 1
       Max: 7
       PotencyDivisor: 20
     Ephedrine:
-      Min: 2
+      Min: 1
       Max: 5
       PotencyDivisor: 20
     Amatoxin:
-      Min: 5
+      Min: 1
       Max: 8
       PotencyDivisor: 20
 
@@ -426,11 +426,11 @@
   nutrientConsumption: 0.80
   chemicals:
     Nutriment:
-      Min: 5
+      Min: 1
       Max: 10
       PotencyDivisor: 20
     Vitamin:
-      Min: 5
+      Min: 1
       Max: 10
       PotencyDivisor: 20
 
@@ -543,11 +543,11 @@
   nutrientConsumption: 0.10
   chemicals:
     Nutriment:
-      Min: 2
+      Min: 1
       Max: 5
       PotencyDivisor: 20
     Vitamin:
-      Min: 3
+      Min: 1
       Max: 7
       PotencyDivisor: 20
     Omnizine:
