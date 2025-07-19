@@ -142,6 +142,8 @@ public partial class SeedData
 
     [DataField] public Dictionary<Gas, float> ExudeGasses = new();
 
+    [DataField] public bool ForceGasTransfer = false; // Adventure botany
+
     #endregion
 
     #region Tolerances
@@ -275,6 +277,7 @@ public partial class SeedData
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
             ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
+            ForceGasTransfer = ForceGasTransfer, // Adventure botany
 
             NutrientConsumption = NutrientConsumption,
             WaterConsumption = WaterConsumption,
@@ -336,6 +339,7 @@ public partial class SeedData
             Chemicals = new Dictionary<string, SeedChemQuantity>(Chemicals),
             ConsumeGasses = new Dictionary<Gas, float>(ConsumeGasses),
             ExudeGasses = new Dictionary<Gas, float>(ExudeGasses),
+            ForceGasTransfer = other.ForceGasTransfer, // Adventure botany
 
             NutrientConsumption = NutrientConsumption,
             WaterConsumption = WaterConsumption,
@@ -373,6 +377,13 @@ public partial class SeedData
             // Newly cloned seed is unique. No need to unnecessarily clone if repeatedly modified.
             Unique = true,
         };
+            // Adventure botany start
+        if (other.ForceGasTransfer)
+        {
+            newSeed.ConsumeGasses = new Dictionary<Gas, float>(other.ConsumeGasses);
+            newSeed.ExudeGasses = new Dictionary<Gas, float>(other.ExudeGasses);
+        }
+            // Adventure botany end
 
         // Adding the new chemicals from the new species.
         foreach (var otherChem in other.Chemicals)
