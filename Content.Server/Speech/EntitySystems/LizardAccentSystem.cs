@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
 using Robust.Shared.Random;
+using Content.Shared.Speech;
 
 namespace Content.Server.Speech.EntitySystems;
 
@@ -87,44 +88,44 @@ public sealed class LizardAccentSystem : EntitySystem
         // Corvax-Localization-End
 
         // Adventure-Localization-Start
-        // ж => жжж 
+        // ж => жжж
         message = Regex.Replace(
             message,
             "ж+",
             _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" })
         );
-        // Ж => ЖЖЖ 
+        // Ж => ЖЖЖ
         message = Regex.Replace(
             message,
             "Ж+",
             _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" })
         );
-        // щ => щщщ,шшш 
+        // щ => щщщ,шшш
         message = Regex.Replace(
             message,
             "щ+",
             _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" })
         );
-        // Щ => ЩЩЩ,ШШШ 
+        // Щ => ЩЩЩ,ШШШ
         message = Regex.Replace(
             message,
             "Щ+",
             _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" })
         );
-        // ц => ссс 
+        // ц => ссс
         message = Regex.Replace(
             message,
             "ц+",
             _random.Pick(new List<string> { "сс", "ссс" })
         );
-        // Ц => ССС 
+        // Ц => ССС
         message = Regex.Replace(
             message,
             "Ц+",
             _random.Pick(new List<string> { "СС", "ССС" })
         );
         // Adventure-Localization-End
-        
+
         args.Message = message;
     }
 }
