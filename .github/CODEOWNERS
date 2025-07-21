@@ -8,14 +8,5 @@
 # Так что добавляем сюда с умом, чтобы не ломать ничего.
 
 * @c4llv07e @Siginanto
-/Content.*/_Adventure/TTS/ @c4llv07e
-/Content.*/_Adventure/Sponsors/ @c4llv07e
-
-/Content.Shared/_Adventure/Abilities/ @borkroman
-/Content.Server/_Adventure/Abilities/ @borkroman
-/Content.Server/_Adventure/SnakeAccent/ @borkroman
-/Content.Server/_Adventure/UrUAccent/ @borkroman
-
-/Content.Server/_Adventure/Atmospherics/ @Siginanto
 
 # TODO(c4): Добавить овнеров для ресурсов.
