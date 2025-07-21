@@ -18,3 +18,7 @@ marking-BodyHairM = Волосы на теле (Мужские)
 marking-BodyHairF = Волосы на теле (Женские)
 marking-BodyHairHand = Волосы на теле (Волосатые руки)
 marking-BodyHairLeg = Волосы на теле (Волосатые ноги)
+marking-HumanHairPunkBig = Анархист
+marking-HumanFacialHairDwarfBig = Борода (Дварфийские косы)
+marking-HumanFacialHairBismark = Усы (Бисмарк)
+marking-HumanFacialHairBrutalBig = Борода (Заросли)

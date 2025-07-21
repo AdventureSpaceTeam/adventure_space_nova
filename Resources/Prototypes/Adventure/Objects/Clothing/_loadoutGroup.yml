@@ -29,7 +29,7 @@
 
 - type: loadoutGroup
   id: BrassGroup
-  name: Бюстгальтеры 
+  name: Бюстгальтеры
   minLimit: 0
   loadouts:
   - BaseClothingBrass
@@ -64,10 +64,20 @@
   - ClothingBrassBlue4
   - ClothingBrassRed4
   - ClothingBrassPink4
+  - ClothingMaikaWhite
+  - ClothingMaikaBlack
+  - ClothingMaikaOrange
+  - ClothingMaikaGreen
+  - ClothingMaikaCyan
+  - ClothingMaikaBlue
+  - ClothingMaikaRed
+  - ClothingMaikaPink
+  - ClothingMaikaVDV
+  - ClothingMaikaAlkash
 
 - type: loadoutGroup
   id: PantsGroup
-  name: Трусы 
+  name: Трусы
   minLimit: 0
   loadouts:
   - BaseClothingPants
@@ -104,6 +114,14 @@
   - ClothingPantsPink4
   - ClothingPantsHearts
   - ClothingPantsZasranes
+  - ClothingSuperStringWhite
+  - ClothingSuperStringBlack
+  - ClothingSuperStringOrange
+  - ClothingSuperStringGreen
+  - ClothingSuperStringCyan
+  - ClothingSuperStringBlue
+  - ClothingSuperStringRed
+  - ClothingSuperStringPink
 
 - type: loadoutGroup
   id: SalvageSpecialistJumpsuit
@@ -112,3 +130,10 @@
   - SalvageSpecialistJumpsuit
   - SalvageSpecialistWorkJumpsuit
   - SalvageSpecialistUndershirt
+
+- type: loadoutGroup
+  id: SalvageSpecialistNeck
+  name: Утилизатор, шея
+  minLimit: 0
+  loadouts:
+  - NeckMining

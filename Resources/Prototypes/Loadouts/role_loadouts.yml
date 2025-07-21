@@ -265,6 +265,7 @@
   id: JobSalvageSpecialist
   groups:
   - GroupTankHarness
+  - SalvageSpecialistNeck # Adventure
   - SalvageSpecialistJumpsuit #Adventure
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing

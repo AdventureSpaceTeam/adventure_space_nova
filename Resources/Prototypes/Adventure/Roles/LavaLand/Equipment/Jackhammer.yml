@@ -14,6 +14,12 @@
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/Equipment/Jackhammer.rsi
     state: Jackhammer
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/Jackhammer.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
   - type: MultiHandedItem
   - type: MeleeWeapon
     autoAttack: true
@@ -24,6 +30,6 @@
     attackRate: 5
     damage:
       groups:
-        Brute: 15
+        Brute: 8
       types:
         Structural: 35

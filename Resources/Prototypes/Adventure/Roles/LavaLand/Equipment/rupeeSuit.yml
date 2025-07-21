@@ -9,7 +9,7 @@
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/suit.rsi
   - type: Clothing
-    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/suit.rsi 
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/suit.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -45,14 +45,14 @@
   description: Шлем шахтёра в рупериумной обёртке.
   components:
   - type: Sprite
-    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/helmet.rsi 
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/helmet.rsi
   - type: Clothing
-    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/helmet.rsi 
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/salvage/helmet.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: PointLight
-    color: "#d6fe36" 
+    color: "#d6fe36"
     radius: 9
     energy: 5
 
@@ -74,7 +74,7 @@
         amount: 10
         doAfter: 10
       - material: OreRupee
-        amount: 20
+        amount: 15
         doAfter: 10
   - node: hardsuitrupeesalvage
     entity: ClothingOuterHardsuitRupeeSalvage
@@ -103,7 +103,7 @@
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/suit.rsi
   - type: Clothing
-    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/suit.rsi 
+    sprite: Adventure/Roles/LavaLand/Equipment/RupeeSuit/spatio/suit.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -146,7 +146,7 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: PointLight
-    color: "#d6fe36" 
+    color: "#d6fe36"
     radius: 7
     energy: 5
 
@@ -168,7 +168,7 @@
         amount: 10
         doAfter: 10
       - material: OreRupee
-        amount: 20
+        amount: 15
         doAfter: 10
   - node: hardsuitrupee
     entity: ClothingOuterHardsuitRupee

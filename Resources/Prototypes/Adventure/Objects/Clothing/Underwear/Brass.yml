@@ -541,3 +541,177 @@
       brass:
       - state: equipped-string2
         color: "#f785f0"
+
+#майки
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingMaikaWhite
+  description: Стандартная модель майки.
+  name: белая майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaBlack
+  name: чёрная майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#292739"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaOrange
+  name: оранжевая майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#d5801c"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaGreen
+  name: зелёная майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#1cd543"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaCyan
+  name: голубая майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#21eae3"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaBlue
+  name: синяя майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#6c72f3"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaRed
+  name: красная майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#fb0808"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  id: ClothingMaikaPink
+  name: розовая майка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+        color: "#f785f0"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  description: ЗА ДВД!!!
+  id: ClothingMaikaVDV
+  name: тельняшка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+    - state: icon-telnashka
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+      - state: equipped-telnashka
+        color: "#6c72f3"
+
+- type: entity
+  parent: ClothingMaikaWhite
+  description: Майка настоящего скуфяры.
+  id: ClothingMaikaAlkash
+  name: майка-алкашка
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    layers:
+    - state: icon-maika
+    - state: icon-alkash
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Lifaki.rsi
+    clothingVisuals:
+      brass:
+      - state: equipped-maika
+      - state: equipped-alkash

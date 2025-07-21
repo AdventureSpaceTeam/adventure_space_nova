@@ -68,7 +68,7 @@
       - BuildCrystal
     balance:
       BuildCrystal: 50
-    
+
 - type: entity
   parent: BaseItem
   id: BuildUplink100
@@ -149,7 +149,7 @@
   id: SheetSteelBuildUplink
   productEntity: SheetSteel
   description: 30 листов стали
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -158,7 +158,7 @@
   id: SheetGlassBuildUplink
   productEntity: SheetGlass
   description: 30 листов стекла
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -167,8 +167,8 @@
   id: SheetPlasteelBuildUplink
   productEntity: SheetPlasteel
   description: 30 листов пластали
-  cost: 
-    BuildCrystal: 2 
+  cost:
+    BuildCrystal: 2
   categories:
   - Materials
 
@@ -176,7 +176,7 @@
   id: SheetUraniumBuildUplink
   productEntity: SheetUranium
   description: 30 листов урана
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -185,7 +185,7 @@
   id: SheetPlasmaBuildUplink
   productEntity: SheetPlasma
   description: 30 листов плазмы
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -194,7 +194,7 @@
   id: MaterialBananiumBuildUplink
   productEntity: MaterialBananium
   description: 30 связок бананиму
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -203,7 +203,7 @@
   id: MaterialWoodPlankBuildUplink
   productEntity: MaterialWoodPlank
   description: 30 досок дерева
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -212,7 +212,7 @@
   id: SheetPlasticBuildUplink
   productEntity: SheetPlastic
   description: 30 листов пластика
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -221,16 +221,16 @@
   id: SheetBrassBuildUplink
   productEntity: SheetBrass
   description: 30 листов латуни
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Materials
 
 - type: listing
   id: MaterialSheetMeatBuildUplink
   productEntity: MaterialSheetMeat
-  description: 30 кусочков мяса # Зачем я это добавил? 
-  cost: 
+  description: 30 кусочков мяса # Зачем я это добавил?
+  cost:
     BuildCrystal: 1
   categories:
   - Materials
@@ -239,7 +239,7 @@
   id: IngotGoldBuildUplink
   productEntity: IngotGold
   description: 30 слитков золота
-  cost: 
+  cost:
     BuildCrystal: 3
   categories:
   - Materials
@@ -248,7 +248,7 @@
   id: IngotSilverBuildUplink
   productEntity: IngotSilver
   description: 30 слитков серебра
-  cost: 
+  cost:
     BuildCrystal: 2
   categories:
   - Materials
@@ -265,7 +265,7 @@
   id: CableApcStackBuildUplink
   productEntity: CableApcStack
   description: 30 кусочков НВ кабеля
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Cabels
@@ -274,7 +274,7 @@
   id: CableMVStackBuildUplink
   productEntity: CableMVStack
   description: 30 кусочков СВ кабеля
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Cabels
@@ -283,7 +283,7 @@
   id: CableHVStackBuildUplink
   productEntity: CableHVStack
   description: 30 кусочков ВВ кабеля
-  cost: 
+  cost:
     BuildCrystal: 1
   categories:
   - Cabels
@@ -299,8 +299,8 @@
 - type: listing
   id: ClothingBeltUtilityFilledBuildUplink
   productEntity: ClothingBeltUtilityFilled
-  description: Пояс с простыми инструментами  
-  cost: 
+  description: Пояс с простыми инструментами.
+  cost:
     BuildCrystal: 1
   categories:
   - Equipment
@@ -308,8 +308,8 @@
 - type: listing
   id: ClothingBeltChiefEngineerFilledBuildUplink
   productEntity: ClothingBeltChiefEngineerFilled
-  description: Пояс с элитными инструментами
-  cost: 
+  description: Пояс с продвинутыми инструментами.
+  cost:
     BuildCrystal: 3
   categories:
   - Equipment
@@ -318,35 +318,35 @@
 - type: listing
   id: ClothingOuterHardsuitEngineeringBuildUplink
   productEntity: ClothingOuterHardsuitEngineering
-  description: Обычный скафандр станционного инженера. Подходит для работы в вакууме
-  cost: 
-    BuildCrystal: 2 
+  description: Обычный скафандр станционного инженера. Подходит для работы в вакууме.
+  cost:
+    BuildCrystal: 2
   categories:
   - Equipment
 
 - type: listing
   id: ClothingOuterHardsuitERTJanitorBuildUplink
   productEntity: ClothingOuterHardsuitERTJanitor
-  description: Скафандр инженера ОБР. Идеально подходит для работы в вакууме
-  cost: 
-    BuildCrystal: 4 
+  description: Скафандр инженера ОБР. Идеально подходит для работы в вакууме.
+  cost:
+    BuildCrystal: 4
   categories:
   - Equipment
 
 - type: listing
   id: ClothingEyesGlassesCEBuildUplink
   productEntity: ClothingEyesGlassesCE
-  description: Очки для настоящих строителей  
-  cost: 
-    BuildCrystal: 1 
+  description: Очки для настоящих строителей.
+  cost:
+    BuildCrystal: 1
   categories:
   - Equipment
 
 - type: listing
   id: ClothingBackpackSatchelHoldingBuildUplink
   productEntity: ClothingBackpackSatchelHolding
-  description: Сумка для того, чтобы не отвлекаться на переноску материалов
-  cost: 
+  description: Сумка для того, чтобы не отвлекаться на переноску материалов.
+  cost:
     BuildCrystal: 10
   categories:
   - Equipment
@@ -354,8 +354,8 @@
 - type: listing
   id: FloodlightBuildUplink
   productEntity: Floodlight
-  description: Прожектор для того, чтобы видеть в самых тёмных местах
-  cost: 
+  description: Прожектор для того, чтобы видеть в самых тёмных местах.
+  cost:
     BuildCrystal: 1
   categories:
   - Equipment
@@ -363,8 +363,8 @@
 - type: listing
   id: JetpackBlackFilledBuildUplink
   productEntity: JetpackBlackFilled
-  description: Джетпак. Топливо входит в стоимость
-  cost: 
+  description: Джетпак. Топливо входит в стоимость.
+  cost:
     BuildCrystal: 1
   categories:
   - Equipment
@@ -372,18 +372,18 @@
 - type: listing
   id: JetpackVoidFilledBuildUplink
   productEntity: JetpackVoidFilled
-  description: Джетпак получше. Топливо так же входит в стоимость
-  cost: 
-    BuildCrystal: 3 
+  description: Джетпак получше. Топливо так же входит в стоимость.
+  cost:
+    BuildCrystal: 3
   categories:
   - Equipment
 
 - type: listing
   id: OxygenTankFilledBuildUplink
   productEntity: OxygenTankFilled
-  description: Баллон с кислородом. Полностью заправлен
-  cost: 
-    BuildCrystal: 1 
+  description: Баллон с кислородом. Полностью заправлен.
+  cost:
+    BuildCrystal: 1
   categories:
   - Equipment
 
@@ -399,8 +399,8 @@
   id: ChemMasterMachineCircuitboardBuildUplink
   productEntity: ChemMasterMachineCircuitboard
   description: Плата химмастера 4000
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -408,8 +408,8 @@
   id: HotplateMachineCircuitboardBuildUplink
   productEntity: HotplateMachineCircuitboard
   description: Плата электроплитки
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -417,8 +417,8 @@
   id: StationAnchorCircuitboardBuildUplink
   productEntity: StationAnchorCircuitboard
   description: Плата станционного маяка
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -426,8 +426,8 @@
   id: TelecomServerCircuitboardBuildUplink
   productEntity: TelecomServerCircuitboard
   description: Плата телекоммуникационного сервера
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -435,8 +435,8 @@
   id: BodyScannerComputerCircuitboardBuildUplink
   productEntity: BodyScannerComputerCircuitboard
   description: Плата сканера тела
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -444,8 +444,8 @@
   id: ResearchAndDevelopmentServerMachineCircuitboardBuildUplink
   productEntity: ResearchAndDevelopmentServerMachineCircuitboard
   description: Плата сервера РНД
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -453,8 +453,8 @@
   id: AnomalyVesselCircuitboardBuildUplink
   productEntity: AnomalyVesselCircuitboard
   description: Плата сосуда аномалий
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -462,8 +462,8 @@
   id: ThrusterMachineCircuitboardBuildUplink
   productEntity: ThrusterMachineCircuitboard
   description: Плата ракетного двигателя
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -471,8 +471,8 @@
   id: BorgChargerCircuitboardBuildUplink
   productEntity: BorgChargerCircuitboard
   description: Плата станции зарядки боргов
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -480,8 +480,8 @@
   id: ChemDispenserMachineCircuitboardBuildUplink
   productEntity: ChemDispenserMachineCircuitboard
   description: Плата раздатчика химикатов
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -489,17 +489,17 @@
   id: CircuitImprinterMachineCircuitboardBuildUplink
   productEntity: CircuitImprinterMachineCircuitboard
   description: Плата принтера схем
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
 - type: listing
   id: TurboItemRechargerCircuitboardBuildUplink
-  productEntity: TurboItemRechargerCircuitboard 
+  productEntity: TurboItemRechargerCircuitboard
   description: Плата турбозарядника
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -507,8 +507,8 @@
   id: UniformPrinterMachineCircuitboardBuildUplink
   productEntity: UniformPrinterMachineCircuitboard
   description: Плата принтера униформ
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -516,17 +516,17 @@
   id: ProtolatheMachineCircuitboardBuildUplink
   productEntity: ProtolatheMachineCircuitboard
   description: Плата протолата
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
 - type: listing
-  id: PrinterDocMachineCircuitboardBuildUplink
-  productEntity: PrinterDocMachineCircuitboard
+  id: PrinterMachineCircuitboard
+  productEntity: PrinterMachineCircuitboard
   description: Плата принтера документов
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -534,8 +534,8 @@
   id: SubstationMachineCircuitboardBuildUplink
   productEntity: SubstationMachineCircuitboard
   description: Плата подстанции
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -543,8 +543,8 @@
   id: OreProcessorMachineCircuitboardBuildUplink
   productEntity: OreProcessorMachineCircuitboard
   description: Плата переработчика руды
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -552,8 +552,8 @@
   id: BiomassReclaimerMachineCircuitboardBuildUplink
   productEntity: BiomassReclaimerMachineCircuitboard
   description: Плата переработчика биомасс
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -561,17 +561,17 @@
   id: SecurityTechFabCircuitboardBuildUplink
   productEntity: SecurityTechFabCircuitboard
   description: Плата охранного техфаба
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
 - type: listing
   id: MiniGravityGeneratorCircuitboardBuildUplink
   productEntity: MiniGravityGeneratorCircuitboard
-  description: Плата минигенератора гравитации
-  cost: 
-    BuildCrystal: 1 
+  description: Плата мини-генератора гравитации
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -579,8 +579,8 @@
   id: MicrowaveMachineCircuitboardBuildUplink
   productEntity: MicrowaveMachineCircuitboard
   description: Плата микроволновки
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -588,8 +588,8 @@
   id: MedicalScannerMachineCircuitboardBuildUplink
   productEntity: MedicalScannerMachineCircuitboard
   description: Плата медицинского сканера
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -597,8 +597,8 @@
   id: MedicalTechFabCircuitboardBuildUplink
   productEntity: MedicalTechFabCircuitboard
   description: Плата медицинского техфаба
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -606,8 +606,8 @@
   id: SalvageMagnetMachineCircuitboardBuildUplink
   productEntity: SalvageMagnetMachineCircuitboard
   description: Плата магнита обломков
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -615,8 +615,8 @@
   id: CryoPodMachineCircuitboardBuildUplink
   productEntity: CryoPodMachineCircuitboard
   description: Плата криокапсул
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -624,8 +624,8 @@
   id: SalvageExpeditionsComputerCircuitboardBuildUplink
   productEntity: SalvageExpeditionsComputerCircuitboard
   description: Плата консолей экспедиции
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -633,8 +633,8 @@
   id: ShuttleConsoleCircuitboardBuildUplink
   productEntity: ShuttleConsoleCircuitboard
   description: Плата управления шаттлом
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -642,8 +642,8 @@
   id: ComputerIFFCircuitboardBuildUplink
   productEntity: ComputerIFFCircuitboard
   description: Плата системы опознования шаттла
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -651,17 +651,17 @@
   id: CommsComputerCircuitboardBuildUplink
   productEntity: CommsComputerCircuitboard
   description: Плата консоли связи
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
 - type: listing
   id: CargoSaleComputerCircuitboardBuildUplink
-  productEntity: CargoSaleComputerCircuitboard 
+  productEntity: CargoSaleComputerCircuitboard
   description: Плата продажи товаров
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -669,8 +669,8 @@
   id: CloningConsoleComputerCircuitboardBuildUplink
   productEntity: CloningConsoleComputerCircuitboard
   description: Плата консоли клонирования
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -678,8 +678,8 @@
   id: CargoRequestComputerCircuitboardBuildUplink
   productEntity: CargoRequestComputerCircuitboard
   description: Плата заказов грузов
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -687,8 +687,8 @@
   id: ResearchComputerCircuitboardBuildUplink
   productEntity: ResearchComputerCircuitboard
   description: Плата исследовательской консоли
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -696,8 +696,8 @@
   id: ReagentGrinderMachineCircuitboardBuildUplink
   productEntity: ReagentGrinderMachineCircuitboard
   description: Плата измельчителя реагентов
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -705,8 +705,8 @@
   id: CellRechargerCircuitboardBuildUplink
   productEntity: CellRechargerCircuitboard
   description: Плата зарядки батарей
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -714,8 +714,8 @@
   id: GyroscopeMachineCircuitboardBuildUplink
   productEntity: GyroscopeMachineCircuitboard
   description: Плата гироскопа
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -723,8 +723,8 @@
   id: HydroponicsTrayMachineCircuitboardBuildUplink
   productEntity: HydroponicsTrayMachineCircuitboard
   description: Плата гидропонного лотка
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -732,8 +732,8 @@
   id: AnalysisComputerCircuitboardBuildUplink
   productEntity: AnalysisComputerCircuitboard
   description: Плата аналитической консоли
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -741,8 +741,8 @@
   id: AmmoTechFabCircuitboardBuildUplink
   productEntity: AmmoTechFabCircuitboard
   description: Плата техфаба патронов
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -750,8 +750,8 @@
   id: APCElectronicsBuildUplink
   productEntity: APCElectronics
   description: Микросхема ЛКП
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Board's
 
@@ -766,29 +766,11 @@
   name: Компоненты
 
 - type: listing
-  id: MatterBinStockPartBuildUplink
-  productEntity: MatterBinStockPart
-  description: Ёмкость материи
-  cost: 
-    BuildCrystal: 1 
-  categories:
-  - Components
-
-- type: listing
-  id: CapacitorStockPartBuildUplink
-  productEntity: CapacitorStockPart
-  description: Конденсатор
-  cost: 
-    BuildCrystal: 1 
-  categories:
-  - Components
-
-- type: listing
   id: MicroManipulatorStockPartBuildUplink
   productEntity: MicroManipulatorStockPart
   description: Манипулятор
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Components
 
@@ -796,8 +778,8 @@
   id: PowerCellSmallBuildUplink
   productEntity: PowerCellSmall
   description: Батарея малой ёмкости
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Components
 
@@ -805,8 +787,8 @@
   id: PowerCellMediumBuildUplink
   productEntity: PowerCellMedium
   description: Батарея средней ёмкости
-  cost: 
-    BuildCrystal: 1 
+  cost:
+    BuildCrystal: 1
   categories:
   - Components
 
@@ -814,8 +796,8 @@
   id: PowerCellHighBuildUplink
   productEntity: PowerCellHigh
   description: Батарея высокой ёмкости
-  cost: 
-    BuildCrystal: 2 
+  cost:
+    BuildCrystal: 2
   categories:
   - Components
 
@@ -823,7 +805,7 @@
   id: PowerCellHyperBuildUplink
   productEntity: PowerCellHyper
   description: Батарея гиперёмкости
-  cost: 
+  cost:
     BuildCrystal: 3
   categories:
   - Components

@@ -23,7 +23,7 @@
       - DoorBumpOpener
       - LavaMob
     - type: Temperature
-      heatDamageThreshold: 100273,15 
+      heatDamageThreshold: 100273,15
       specificHeat: 10000
     - type: Flammable
       fireSpread: false
@@ -31,26 +31,6 @@
       damage:
         types:
           Heat: 0.0
-    - type: StatusEffects
-      allowed:
-      - Stun
-      - KnockedDown
-      - SlowedDown
-      - Stutter
-      - SeeingRainbows
-      - Electrocution
-      - Drunk
-      - SlurredSpeech
-      - RatvarianLanguage
-      - PressureImmunity
-      - Muted
-      - TemporaryBlindness
-      - Pacified
-      - StaminaModifier
-      - Flashed
-      - RadiationProtection
-      - Drowsiness
-      - Adrenaline
 
 - type: startingGear
   id: BloodMinerCutterGear
@@ -61,12 +41,18 @@
     back: OxygenTank
     shoes: ClothingShoesBootsSalvage
     belt: OreBag
+    neck: ClothingNeckMantleMiningBlood
   inhand:
     - WeaponProtoKineticCutter
   storage:
     belt:
-    - OreDragon1 
+    - OreDragon1
+    - OreDragon1
     - OreRuby1
+    - OreRuby1
+    - OreRuby1
+    - OreRuby1
+    - OrePharo1
     - OrePharo1
 
 #С протокинетом
@@ -88,12 +74,19 @@
     back: OxygenTank
     shoes: ClothingShoesBootsSalvage
     belt: OreBag
+    neck: ClothingNeckMantleMiningBlood
   inhand:
     - WeaponProtoKineticAccelerator
   storage:
     belt:
-    - OreSapphire1 
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
     - MaterialMagmatiteFragment1
+    - MaterialMagmatiteFragment1
+    - MaterialMagmatiteFragment1
+    - OrePharo1
     - OrePharo1
 
 #С буром
@@ -115,12 +108,20 @@
     back: OxygenTank
     shoes: ClothingShoesBootsSalvage
     belt: OreBag
+    neck: ClothingNeckMantleMiningBlood
   inhand:
     - MiningJackhammer
   storage:
     belt:
-    - OreEmerald1 
+    - OreEmerald1
+    - OreEmerald1
+    - OreEmerald1
+    - OreEmerald1
     - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - OrePharo1
     - OrePharo1
 
 - type: entity

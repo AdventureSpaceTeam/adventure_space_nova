@@ -159,6 +159,82 @@
   equipment:
     brass: ClothingBrassPink4
 
+
+
+- type: loadout
+  id: ClothingMaikaWhite
+  equipment:
+    brass: ClothingMaikaWhite
+
+- type: loadout
+  id: ClothingMaikaBlack
+  equipment:
+    brass: ClothingMaikaBlack
+
+- type: loadout
+  id: ClothingMaikaOrange
+  equipment:
+    brass: ClothingMaikaOrange
+
+- type: loadout
+  id: ClothingMaikaGreen
+  equipment:
+    brass: ClothingMaikaGreen
+
+- type: loadout
+  id: ClothingMaikaCyan
+  equipment:
+    brass: ClothingMaikaCyan
+
+- type: loadout
+  id: ClothingMaikaBlue
+  equipment:
+    brass: ClothingMaikaBlue
+
+- type: loadout
+  id: ClothingMaikaRed
+  equipment:
+    brass: ClothingMaikaRed
+
+- type: loadout
+  id: ClothingMaikaPink
+  equipment:
+    brass: ClothingMaikaPink
+
+- type: loadout
+  id: ClothingMaikaVDV
+  equipment:
+    brass: ClothingMaikaVDV
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ClothingMaikaVDV
+
+- type: loadoutEffectGroup
+  id: ClothingMaikaVDV
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPassenger
+      time: 36000 #10 hrs
+
+- type: loadout
+  id: ClothingMaikaAlkash
+  equipment:
+    brass: ClothingMaikaAlkash
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ClothingMaikaAlkash
+
+- type: loadoutEffectGroup
+  id: ClothingMaikaAlkash
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobPassenger
+      time: 36000 #10 hrs
+
 #Трусы
 - type: loadout
   id: BaseClothingPants
@@ -353,3 +429,43 @@
       !type:RoleTimeRequirement
       role: JobCaptain
       time: 180000 #50 hrs
+
+- type: loadout
+  id: ClothingSuperStringWhite
+  equipment:
+    pants: ClothingSuperStringWhite
+
+- type: loadout
+  id: ClothingSuperStringBlack
+  equipment:
+    pants: ClothingSuperStringBlack
+
+- type: loadout
+  id: ClothingSuperStringOrange
+  equipment:
+    pants: ClothingSuperStringOrange
+
+- type: loadout
+  id: ClothingSuperStringGreen
+  equipment:
+    pants: ClothingSuperStringGreen
+
+- type: loadout
+  id: ClothingSuperStringCyan
+  equipment:
+    pants: ClothingSuperStringCyan
+
+- type: loadout
+  id: ClothingSuperStringBlue
+  equipment:
+    pants: ClothingSuperStringBlue
+
+- type: loadout
+  id: ClothingSuperStringRed
+  equipment:
+    pants: ClothingSuperStringRed
+
+- type: loadout
+  id: ClothingSuperStringPink
+  equipment:
+    pants: ClothingSuperStringPink

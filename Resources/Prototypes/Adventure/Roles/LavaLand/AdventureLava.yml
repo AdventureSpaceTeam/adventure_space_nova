@@ -374,7 +374,7 @@
     table: !type:GroupSelector
       children:
       - id: MobLavaLandGoliath
-        weight: 25
+        weight: 20
       - id: MobLavaLandGoliathAncient
         weight: 15
       - id: MobWatcherLavaLandFire
@@ -382,11 +382,11 @@
       - id: MobLavaLandLegion
         weight: 30
       - id: MobSkeletonBloodMinerCutter
-        weight: 2
+        weight: 5
       - id: MobSkeletonBloodMinerAccelerator
-        weight: 4
+        weight: 5
       - id: MobSkeletonBloodMinerMiningDrill
-        weight: 4
+        weight: 5
 
 - type: tile
   id: FloorBasaltLavaLand

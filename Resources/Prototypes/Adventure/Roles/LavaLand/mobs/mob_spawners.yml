@@ -67,3 +67,19 @@
   - type: ConditionalSpawner
     prototypes:
       - MobLavaLandLegion
+
+- type: entity
+  name: спавнер кровожадного шахтёра
+  id: SpawnMobLavaLandBloodMinerRandom
+  suffix: LavaLand, рандомный шахтёр
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobSkeletonBloodMinerCutter
+      - MobSkeletonBloodMinerAccelerator
+      - MobSkeletonBloodMinerMiningDrill

@@ -79,6 +79,14 @@
     - sprite: Adventure/Races/Human_hair.rsi
       state: new_Russian
 
+- type: marking
+  id: HumanHairPunkBig
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: punk_big
+
 # бороды
 - type: marking
   id: HumanFacialHairDED
@@ -127,6 +135,30 @@
   sprites:
     - sprite: Adventure/Races/Human_hair.rsi
       state: Brutal
+
+- type: marking
+  id: HumanFacialHairDwarfBig
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: Dwarf
+
+- type: marking
+  id: HumanFacialHairBismark
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: bismark
+
+- type: marking
+  id: HumanFacialHairBrutalBig
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: Adventure/Races/Human_hair.rsi
+      state: big_Brutal
 
 #тело
 - type: marking

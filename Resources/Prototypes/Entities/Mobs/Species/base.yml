@@ -171,7 +171,7 @@
       types:
         Blunt: 5
   - type: SleepEmitSound
-  - type: SSDIndicator
+#  - type: SSDIndicator
   - type: StandingState
   - type: Dna
   - type: MindContainer
@@ -289,6 +289,7 @@
   - type: GuideHelp # Adventure
     guides:
     - Species
+  - type: SSDIndicator # Adventure
 
 - type: entity
   save: false

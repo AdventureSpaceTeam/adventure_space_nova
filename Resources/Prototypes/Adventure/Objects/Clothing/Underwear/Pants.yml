@@ -680,3 +680,138 @@
   - type: Storage
     grid:
     - 0,0,1,1
+
+#трусы на лямках
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringWhite
+  name: трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringBlack
+  name: чёрные трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringOrange
+  name: оранжевые трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#d5801c"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#d5801c"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringGreen
+  name: зелёные трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#1cd543"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#1cd543"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringCyan
+  name: голубые трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#21eae3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#21eae3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringBlue
+  name: синие трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#6c72f3"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#6c72f3"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringRed
+  name: красные трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#fb0808"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#fb0808"
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingSuperStringPink
+  name: розовые трусы на лямках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    layers:
+    - state: icon-superstring
+      color: "#f785f0"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/underwear/Trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-superstring
+        color: "#f785f0"
