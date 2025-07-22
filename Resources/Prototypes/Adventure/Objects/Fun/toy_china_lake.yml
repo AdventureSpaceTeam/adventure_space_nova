@@ -40,9 +40,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: Objects/Fun/toys.rsi
+    sprite: Objects/Fun/snap_pops.rsi
     layers:
-    - state: snappop
+    - state: icon
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default

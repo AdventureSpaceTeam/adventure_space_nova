@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
 using Content.Server.Chat.Systems;
+using Content.Shared.Speech;
 using Robust.Shared.Random;
 
 namespace Content.Server.Speech.EntitySystems;
@@ -24,7 +25,7 @@ public sealed class HypomaniaAccentSystem : EntitySystem
         message = message.Replace(".", "!");
 
         /// <summary>
-        /// Если последний символ в сообщении не '?', добавляем в конец '!'.  
+        /// Если последний символ в сообщении не '?', добавляем в конец '!'.
         /// Эта проверка должна выполняться перед заменой '?', чтобы избежать двойного восклицания в вопросительных предложениях.
         /// <summary>
         if (message[message.Length - 1] != '?')

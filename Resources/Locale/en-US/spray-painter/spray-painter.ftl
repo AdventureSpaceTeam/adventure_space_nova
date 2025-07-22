@@ -51,6 +51,8 @@ spray-painter-tab-category-decals = Decals
 # Groups (subtabs)
 spray-painter-tab-group-airlockstandard = Standard
 spray-painter-tab-group-airlockglass = Glass
+spray-painter-tab-group-glassdouble = Double Glass
+spray-painter-tab-group-glasstriple = Triple Glass
 
 spray-painter-tab-group-cratesteel = Steel
 spray-painter-tab-group-crateplastic = Plastic
@@ -62,7 +64,7 @@ spray-painter-tab-group-wallcloset = Unlocked (Wall)
 spray-painter-tab-group-walllocker = Secure (Wall)
 
 # Airlocks
-spray-painter-style-airlockstandard-atmospherics = Atmospheric
+spray-painter-style-airlockstandard-atmospherics = Atmospherics
 spray-painter-style-airlockstandard-basic = Basic
 spray-painter-style-airlockstandard-cargo = Cargo
 spray-painter-style-airlockstandard-chemistry = Chemistry
@@ -76,6 +78,25 @@ spray-painter-style-airlockstandard-salvage = Salvage
 spray-painter-style-airlockstandard-science = Science
 spray-painter-style-airlockstandard-security = Security
 spray-painter-style-airlockstandard-virology = Virology
+
+spray-painter-style-glassdouble-atmospherics = Atmospherics
+spray-painter-style-glassdouble-basic = Basic
+spray-painter-style-glassdouble-cargo = Cargo
+spray-painter-style-glassdouble-command = Command
+spray-painter-style-glassdouble-engineering = Engineering
+spray-painter-style-glassdouble-hydroponics = Hydroponics
+spray-painter-style-glassdouble-medical = Medical
+spray-painter-style-glassdouble-science = Science
+spray-painter-style-glassdouble-security = Security
+
+spray-painter-style-glasstriple-atmospherics = Atmospherics
+spray-painter-style-glasstriple-basic = Basic
+spray-painter-style-glasstriple-cargo = Cargo
+spray-painter-style-glasstriple-command = Command
+spray-painter-style-glasstriple-engineering = Engineering
+spray-painter-style-glasstriple-medical = Medical
+spray-painter-style-glasstriple-science = Science
+spray-painter-style-glasstriple-security = Security
 
 spray-painter-style-airlockglass-atmospherics = Atmospherics
 spray-painter-style-airlockglass-basic = Basic

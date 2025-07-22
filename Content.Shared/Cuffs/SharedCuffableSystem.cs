@@ -487,8 +487,8 @@ namespace Content.Shared.Cuffs
             UpdateHeldItems(target, handcuff, component);
 
             // Adventure-Start
-            var ev = new CuffedEvent(user, target);
-            RaiseLocalEvent(target, ref ev);
+            var cev = new CuffedEvent(user, target);
+            RaiseLocalEvent(target, ref cev);
             // Adventure-End
 
             return true;

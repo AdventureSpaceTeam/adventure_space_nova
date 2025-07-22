@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Content.Server.Speech;
+using Content.Shared.Speech;
 using Robust.Shared.Random;
 
 namespace Content.Server._Adventure.UrUAccent;
@@ -42,61 +42,61 @@ public sealed class UrUAccentSystem : EntitySystem
             "Р+",
             _random.Pick(new List<string> { "Р", "РР", "РРР" })
         );
-        // в => ввв 
+        // в => ввв
         message = Regex.Replace(
             message,
             "в+",
             _random.Pick(new List<string> { "в", "вв", "ввв" })
         );
-        // В => ВВВ 
+        // В => ВВВ
         message = Regex.Replace(
             message,
             "В+",
             _random.Pick(new List<string> { "В", "ВВ", "ВВВ" })
         );
-        // а => ааа 
+        // а => ааа
         message = Regex.Replace(
             message,
             "а+",
             _random.Pick(new List<string> { "а", "аа", "ааа" })
         );
-        // А => ААА 
+        // А => ААА
         message = Regex.Replace(
             message,
             "А+",
             _random.Pick(new List<string> { "А", "АА", "ААА" })
         );
-        // н => ннн 
+        // н => ннн
         message = Regex.Replace(
             message,
             "н+",
             _random.Pick(new List<string> { "н", "нн", "ннн" })
         );
-        // Н => ННН 
+        // Н => ННН
         message = Regex.Replace(
             message,
             "Н+",
             _random.Pick(new List<string> { "Н", "НН", "ННН" })
         );
-        // м => ммм 
+        // м => ммм
         message = Regex.Replace(
             message,
             "м+",
             _random.Pick(new List<string> { "м", "мм", "ммм" })
         );
-        // М => МММ 
+        // М => МММ
         message = Regex.Replace(
             message,
             "М+",
             _random.Pick(new List<string> { "М", "ММ", "МММ" })
         );
-        // г => ггг 
+        // г => ггг
         message = Regex.Replace(
             message,
             "г+",
             _random.Pick(new List<string> { "г", "гг", "ггг" })
         );
-        // Г => ГГГ 
+        // Г => ГГГ
         message = Regex.Replace(
             message,
             "Г+",
