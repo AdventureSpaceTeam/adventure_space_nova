@@ -27,9 +27,6 @@
         - GlassAirlockLayer
   - type: Transform
     noRot: false
-  - type: IconSmooth # из-за своей физики расположения одна часть не соединяется со стеной, а тройная дверь так и вообще двумя сторонами, поэтому пусть не соединяются вообще, ниче страшного.
-    key: state
-    base: state_
   - type: Construction
     graph: AirlockDouble
     node: glassAirlockDouble
@@ -65,9 +62,6 @@
         - GlassAirlockLayer
   - type: Transform
     noRot: false
-  - type: IconSmooth
-    key: state
-    base: state_
   - type: Construction
     graph: AirlockTriple
     node: glassAirlockTriple

@@ -3,6 +3,8 @@
   groups:
   - AirlockStandard
   - AirlockGlass
+  - GlassDouble # Adventure-Airlocks
+  - GlassTriple # Adventure-Airlocks
 
 - type: paintableGroupCategory
   id: Canisters
