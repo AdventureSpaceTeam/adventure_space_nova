@@ -15,6 +15,7 @@
   potency: 10
   growthStages: 3
   waterConsumption: 0.60
+  forceGasTransfer: true
   exudeGasses:
    Ammonia: 0.5
   chemicals:

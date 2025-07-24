@@ -16,6 +16,7 @@
   idealLight: 8
   growthStages: 3
   waterConsumption: 0.60
+  forceGasTransfer: true
   exudeGasses:
    Plasma: 0.18
   chemicals:
