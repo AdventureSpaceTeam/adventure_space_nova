@@ -58,6 +58,7 @@
       - HideContextMenu
 # Adventure-LavaLand-start
   - type: AmbientSound
+    volume: -15
     range: 5
     sound:
       path: /Audio/Adventure/LavaLand/Magma.ogg
