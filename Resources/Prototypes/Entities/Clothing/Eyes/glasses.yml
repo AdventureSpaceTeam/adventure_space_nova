@@ -276,6 +276,9 @@
     sprite: Clothing/Eyes/Glasses/noir.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
   - type: Construction
     graph: GlassesSecHUD
     node: glassesSec
