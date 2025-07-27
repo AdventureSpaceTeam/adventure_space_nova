@@ -16,6 +16,7 @@
     storedRotation: -90
   - type: ActivatableUI
     key: enum.PlantAnalyzerUiKey.Key
+    requireActiveHand: false
     inHandsOnly: true
   - type: UserInterface
     interfaces:
@@ -23,8 +24,8 @@
         type: PlantAnalyzerBoundUserInterface
   - type: PlantAnalyzer
     settings:
-      scanDelay: 10
-      advScanDelay: 20
+      scanDelay: 1
+      advScanDelay: 5
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
   - type: Appearance
@@ -34,6 +35,9 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
+  - type: Tag
+    tags:
+    - PlantAnalyzer
 
 - type: entity
   id: PlantAnalyzer
