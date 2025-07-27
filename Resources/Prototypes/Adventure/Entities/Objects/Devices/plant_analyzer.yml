@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: _NF/Objects/Devices/plant_analyzer.rsi
+    sprite: Adventure/Objects/Devices/plant_analyzer.rsi
     layers:
     - state: plantanalyzer
     - state: unlit

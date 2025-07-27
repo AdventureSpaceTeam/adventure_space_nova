@@ -1,7 +1,7 @@
-using Content.Shared._NF.PlantAnalyzer;
+using Content.Shared._Adventure.PlantAnalyzer;
 using JetBrains.Annotations;
 
-namespace Content.Client._NF.PlantAnalyzer.UI;
+namespace Content.Client._Adventure.PlantAnalyzer.UI;
 
 [UsedImplicitly]
 public sealed class PlantAnalyzerBoundUserInterface : BoundUserInterface
