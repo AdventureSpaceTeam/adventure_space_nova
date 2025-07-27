@@ -543,8 +543,7 @@
 
 # Belts without visualizers
 
-# COTULa start
-
+# Adventure start
 - type: entity
   parent: [ClothingBeltStorageBase, BaseSecurityBartenderContraband]
   id: ClothingBeltBandolier
@@ -559,11 +558,11 @@
     size: Huge
   - type: Storage
     grid:
-    - 0,0,11,1
+    - 0,0,6,1
     whitelist:
       tags:
         - ShellShotgun
-# COTULa end
+# Adventure end
 
 - type: entity
   parent: ClothingBeltBase
