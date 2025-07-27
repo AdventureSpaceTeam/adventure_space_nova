@@ -15,5 +15,7 @@ ent-GasPipeTJunction = { ent-GasPipeBase }
 ent-GasPipeFourway = { ent-GasPipeBase }
     .suffix = Четверная
     .desc = { ent-GasPipeBase.desc }
+ent-GasPipeManifold = коллектор газовых труб
+    .desc = Позволяет объединять газовые трубы разных контуров в единую систему.
 ent-GasPipeBroken = сломанная труба
     .desc = Раньше в ней содержался газ.

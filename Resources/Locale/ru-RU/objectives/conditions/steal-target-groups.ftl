@@ -5,12 +5,14 @@ steal-target-groups-clothing-outer-hardsuit-rd = экспериментальн�
 steal-target-groups-hand-teleporter = ручной телепортер
 steal-target-groups-clothing-shoes-boots-mag-adv = продвинутые магнитные сапоги
 steal-target-groups-box-folder-qm-clipboard = цифровой планшет заявок
+steal-target-groups-clothing-hands-knuckledusters-qm = золотые кастеты
 steal-target-groups-food-meat-corgi = первосортное мясо корги
 steal-target-groups-captain-id-card = ID-карта капитана
 steal-target-groups-jetpack-captain-filled = джетпак капитана
 steal-target-groups-weapon-antique-laser = антикварный лазерный пистолет
 steal-target-groups-nuke-disk = диск ядерной аутентификации
 steal-target-groups-weapon-energy-shot-gun = энергетический дробовик
+
 # Thief Collection
 steal-target-groups-figurines = фигурки
 steal-target-groups-heads-cloaks = плащи глав
@@ -19,8 +21,10 @@ steal-target-groups-stamps = печати
 steal-target-groups-door-remotes = пульты от шлюзов
 steal-target-groups-encryption-keys = ключи шифрования
 steal-target-groups-technology-disks = технологические диски
+steal-target-groups-mail = mail
 steal-target-groups-id-cards = ID-карты
 steal-target-groups-lamps = ЛАМПЫ
+
 # Thief single item
 steal-target-groups-forensic-scanner = криминалистический сканер
 steal-target-groups-flippo-engraved-lighter = гравированная зажигалка флиппо детектива
@@ -39,10 +43,12 @@ steal-target-groups-bible = библия
 steal-target-groups-clothing-neck-goldmedal = золотая медаль мастерства экипажа
 steal-target-groups-clothing-neck-clownmedal = медаль клоуна
 steal-target-groups-wanted-list-cartridge = картридж Список разыскиваемых
+
 # Thief structures
 steal-target-groups-teg = часть термоэлектрического генератора
 steal-target-groups-freezer-heater = нагреватель или охладитель
 steal-target-groups-altar-nanotrasen = алтарь Nanotrasen (любой)
+
 steal-target-groups-nuclear-bomb = ядерная боеголовка
 steal-target-groups-fax-machine-captain = факс дальнего действия капитана
 steal-target-groups-chem-dispenser = химический раздатчик
@@ -50,8 +56,10 @@ steal-target-groups-xeno-artifact = инопланетный артефакт
 steal-target-groups-booze-dispenser = раздатчик алкоголя
 steal-target-groups-plant-rd = "комнатное растение научрука"
 steal-target-groups-toilet-golden-dirty-water = золотой унитаз
+
 # Thief Animal
 steal-target-groups-animal-named-cat = кот главного врача
+
 steal-target-groups-animal-ian = Иан
 steal-target-groups-animal-mc-griff = МакГрифф
 steal-target-groups-animal-walter = Уолтер
