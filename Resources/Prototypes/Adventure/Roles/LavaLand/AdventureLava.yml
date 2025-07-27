@@ -484,7 +484,7 @@
             collection: GlassBreak
       - trigger:
           !type:DamageTrigger
-          damage: 1000 
+          damage: 1000
         behaviors:
         - !type:DoActsBehavior
           acts: ["Destruction"]
