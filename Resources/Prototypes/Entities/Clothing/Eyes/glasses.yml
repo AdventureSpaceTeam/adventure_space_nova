@@ -290,6 +290,12 @@
     sprite: Clothing/Eyes/Glasses/noir.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: ShowJobIcons #Adventure
+  - type: ShowMindShieldIcons #Adventure
+  - type: ShowCriminalRecordIcons #Adventure
+  - type: Construction #Adventure
+    graph: GlassesSecHUD #Adventure
+    node: glassesSec #Adventure
   - type: IdentityBlocker
     coverage: EYES
   - type: FlashImmunity
