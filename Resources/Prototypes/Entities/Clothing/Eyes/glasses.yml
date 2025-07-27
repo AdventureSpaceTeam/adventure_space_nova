@@ -276,6 +276,9 @@
     sprite: Clothing/Eyes/Glasses/noir.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Construction
+    graph: GlassesSecHUD
+    node: glassesSec
   - type: IdentityBlocker
     coverage: EYES
   - type: FlashImmunity
