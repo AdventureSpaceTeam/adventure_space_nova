@@ -28,7 +28,7 @@
       color: "#9f9f00"
   - type: Access
     groups:
-    - Command
+    - AllAccess # Adventure
   - type: DoorRemote
 
 - type: entity
@@ -92,9 +92,33 @@
       color: "#58c800"
     - state: door_remotescreencolour
       color: "#3a7231"
+# Adventure start
   - type: Access
-    groups:
+    tags:
+    - Command
+    - HeadOfPersonnel
+    - Bar
     - Service
+    - Maintenance
+    - Janitor
+    - Theatre
+    - Kitchen
+    - Chapel
+    - Hydroponics
+    - External
+    - Cryogenics
+    - Chemistry
+    - Engineering
+    - Research
+    - Detective
+    - Salvage
+    - Security
+    - Brig
+    - Lawyer
+    - Cargo
+    - Atmospherics
+    - Medical
+# Adventure end
 
 - type: entity
   parent: [DoorRemoteDefault, BaseCommandContraband]
