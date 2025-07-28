@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using Content.Server.Speech;
+using Content.Shared.Speech;
 using Robust.Shared.Random;
 
 namespace Content.Server._Adventure.DwarfAccent;
@@ -18,7 +18,7 @@ public sealed class DwarfAccentSystem : EntitySystem
     {
         var message = args.Message;
 
-        // э => йе 
+        // э => йе
         message = Regex.Replace(
             message,
             "э+",
@@ -36,13 +36,13 @@ public sealed class DwarfAccentSystem : EntitySystem
             "е+",
             _random.Pick(new List<string> { "э" })
         );
-        // Е => Э 
+        // Е => Э
         message = Regex.Replace(
             message,
             "Е+",
             _random.Pick(new List<string> { "Э" })
         );
-        // и => ые 
+        // и => ые
         message = Regex.Replace(
             message,
             "и+",

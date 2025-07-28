@@ -50,7 +50,7 @@
   plantRsi: Adventure/Objects/Botany/Produce/sleepypoppy.rsi
   packetPrototype: SleepyPoppySeeds
   productPrototypes:
-    - FoodPoppy
+    - SleepyPoppy
   lifespan: 25
   maturation: 10
   production: 3

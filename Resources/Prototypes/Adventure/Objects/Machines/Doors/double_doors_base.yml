@@ -19,21 +19,18 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,1.49,0.49" 
+          bounds: "-0.49,-0.49,1.49,0.49"
         density: 100
         mask:
         - FullTileMask
-        layer:     
+        layer:
         - GlassAirlockLayer
   - type: Transform
     noRot: false
-  - type: IconSmooth # из-за своей физики расположения одна часть не соединяется со стеной, а тройная дверь так и вообще двумя сторонами, поэтому пусть не соединяются вообще, ниче страшного.
-    key: state
-    base: state_
   - type: Construction
     graph: AirlockDouble
     node: glassAirlockDouble
-  - type: PaintableAirlock
+  - type: Paintable
     group: GlassDouble
 
 - type: entity
@@ -57,21 +54,18 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.49,-0.49,1.49,0.49" 
+          bounds: "-1.49,-0.49,1.49,0.49"
         density: 100
         mask:
         - FullTileMask
-        layer:     
+        layer:
         - GlassAirlockLayer
   - type: Transform
     noRot: false
-  - type: IconSmooth
-    key: state
-    base: state_
   - type: Construction
     graph: AirlockTriple
     node: glassAirlockTriple
-  - type: PaintableAirlock
+  - type: Paintable
     group: GlassTriple
 
 #из-за невозможности растянуть тень по размерам шлюзов, шлюзы не являющиеся стеклянными не будут работать корректно, поэтому придётся ограниться тоглько стеклянными.
@@ -98,7 +92,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,1.49,0.49" 
+          bounds: "-0.49,-0.49,1.49,0.49"
         density: 110
         mask:
         - FullTileMask
@@ -129,7 +123,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.49,-0.49,1.49,0.49" 
+          bounds: "-1.49,-0.49,1.49,0.49"
         density: 110
         mask:
         - FullTileMask
@@ -140,29 +134,34 @@
     node: assembly
 
 # для поскасчика шлюзов
-- type: AirlockGroup
-  id: GlassDouble
-  iconPriority: 30
-  stylePaths:
-    glass: Adventure/Structures/Doors/Double/double_glass.rsi
-    atmospherics: Adventure/Structures/Doors/Double/atmospherics.rsi
-    cargo:       Adventure/Structures/Doors/Double/cargo.rsi
-    command:     Adventure/Structures/Doors/Double/command.rsi
-    science:     Adventure/Structures/Doors/Double/science.rsi
-    engineering: Adventure/Structures/Doors/Double/engineering.rsi
-    hydroponics: Adventure/Structures/Doors/Double/hydroponics.rsi
-    medical:     Adventure/Structures/Doors/Double/medical.rsi
-    security:    Adventure/Structures/Doors/Double/security.rsi
 
-- type: AirlockGroup
+- type: paintableGroup
+  id: GlassDouble
+  time: 3
+  cost: 3
+  defaultStyle: basic
+  styles:
+    atmospherics: DoubleGlassAirlockAtmospherics
+    basic: DoubleGlassAirlock
+    cargo: DoubleGlassAirlockCargo
+    command: DoubleGlassAirlockCommand
+    engineering: DoubleGlassAirlockEngineering
+    hydroponics: DoubleGlassAirlockHydroponics
+    medical: DoubleGlassAirlockMedical
+    science: DoubleGlassAirlockScience
+    security: DoubleGlassAirlockSecurity
+
+- type: paintableGroup
   id: GlassTriple
-  iconPriority: 30
-  stylePaths:
-    glass: Adventure/Structures/Doors/Triple/triple_glass.rsi
-    atmospherics: Adventure/Structures/Doors/Triple/atmospherics.rsi
-    cargo:       Adventure/Structures/Doors/Triple/cargo.rsi
-    command:     Adventure/Structures/Doors/Triple/command.rsi
-    science:     Adventure/Structures/Doors/Triple/science.rsi
-    engineering: Adventure/Structures/Doors/Triple/engineering.rsi
-    medical:     Adventure/Structures/Doors/Triple/medical.rsi
-    security:    Adventure/Structures/Doors/Triple/security.rsi
+  time: 3
+  cost: 3
+  defaultStyle: basic
+  styles:
+    atmospherics: TripleGlassAirlockAtmospherics
+    basic: TripleGlassAirlock
+    cargo: TripleGlassAirlockCargo
+    command: TripleGlassAirlockCommand
+    engineering: TripleGlassAirlockEngineering
+    medical: TripleGlassAirlockMedical
+    science: TripleGlassAirlockScience
+    security: TripleGlassAirlockSecurity

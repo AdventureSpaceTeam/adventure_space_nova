@@ -14,8 +14,8 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
     ejectDelay: 0.6
-  - type: Advertise
-    pack: NanoMedAds
+  - type: DatasetVocalizer
+    dataset: NanoMedAds
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite

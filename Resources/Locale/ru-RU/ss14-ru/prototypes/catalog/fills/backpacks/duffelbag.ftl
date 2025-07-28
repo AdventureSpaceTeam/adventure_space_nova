@@ -66,6 +66,9 @@ ent-ClothingBackpackDuffelSyndicateMedicalBundleFilled = { ent-ClothingBackpackD
 ent-ClothingBackpackDuffelSyndicateDecoyKitFilled = { ent-ClothingBackpackDuffelSyndicate }
     .suffix = набор обманок
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
+ent-ClothingBackpackDuffelSyndicateFilledStarterKit = стандартный набор оперативника
+    .suffix = стандартный набор оперативника
+    .desc = Содержит оружие, медикаменты, инструменты для взлома, запас патронов и базовое снаряжение.
 
 # Corvax-HiddenDesc-End
 

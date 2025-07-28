@@ -13,6 +13,7 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
+  - PlantAnalyzer # Adventure
 
 - type: technology
   id: CritterMechs
@@ -222,7 +223,7 @@
     state: beakerbluespace
   discipline: CivilianServices
   tier: 3
-  cost: 25000 #Adventure 
+  cost: 25000 #Adventure
   recipeUnlocks:
   - BluespaceBeaker
   - SyringeBluespace

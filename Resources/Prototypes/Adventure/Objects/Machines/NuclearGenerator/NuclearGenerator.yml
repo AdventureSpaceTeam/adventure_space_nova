@@ -10,7 +10,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.0,-1.0,1.0,1.0" 
+          bounds: "-1.0,-1.0,1.0,1.0"
         density: 1500
         mask:
         - MachineMask
@@ -39,13 +39,13 @@
         Brute: -100
         Burn: -100
       types:
-        Radiation: -100  
-        Structural: -100 
+        Radiation: -100
+        Structural: -100
   - type: Damageable
     damageContainer: StructuralInorganicNuclear
     damageModifierSet: MetallicNuclear
   - type: RadiationSource
-    slope: 1 
+    slope: 1
     intensity: 5
   - type: Sprite
     sprite: Adventure/Structures/Machines/NukeGen.rsi
@@ -159,19 +159,11 @@
   - NuclearGeneratorMachineCircuitboard
 
 # уровни разрушения
-- type: examinableDamage
+- type: localizedDataset
   id: NuclearGeneratorMessages
-  messages:
-    - comp-nukegen-damaged-1
-    - comp-nukegen-damaged-2
-    - comp-nukegen-damaged-3
-    - comp-nukegen-damaged-4
-    - comp-nukegen-damaged-5
-    - comp-nukegen-damaged-6
-    - comp-nukegen-damaged-7
-    - comp-nukegen-damaged-8
-    - comp-nukegen-damaged-9
-    - comp-nukegen-damaged-10
+  values:
+    prefix: comp-nukegen-damaged-
+    count: 10
 
 # источник радиации
 - type: entity

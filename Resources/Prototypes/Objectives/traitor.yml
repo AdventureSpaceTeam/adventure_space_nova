@@ -86,7 +86,7 @@
   description: Do it however you like, just make sure they don't get off the station.
   components:
   - type: Objective
-    difficulty: 1.75
+    difficulty: 3.5 # Adventure
     unique: false
   - type: TargetObjective
     title: objective-condition-maroon-person-title
@@ -101,7 +101,7 @@
   components:
   - type: Objective
     # technically its still possible for KillRandomPersonObjective to roll a head but this is guaranteed, so higher difficulty
-    difficulty: 3.0
+    difficulty: 4.0 # Adventure
     # killing 1 head is enough
     unique: true
   - type: TargetObjective

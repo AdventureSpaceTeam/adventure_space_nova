@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using Content.Server.Corvax.Speech.Components;
-using Content.Server.Speech;
+using Content.Shared.Speech;
 using Robust.Shared.Random;
 
 namespace Content.Server.Corvax.Speech.EntitySystems;
@@ -46,25 +46,25 @@ public sealed class GrowlingAccentSystem : EntitySystem
         );
 
         // Adventure-Localization-Start
-        // в => ввв 
+        // в => ввв
         message = Regex.Replace(
             message,
             "в+",
             _random.Pick(new List<string> { "вв", "ввв" })
         );
-        // В => ВВВ 
+        // В => ВВВ
         message = Regex.Replace(
             message,
             "В+",
             _random.Pick(new List<string> { "ВВ", "ВВВ" })
         );
-        // ф => ффф 
+        // ф => ффф
         message = Regex.Replace(
             message,
             "ф+",
             _random.Pick(new List<string> { "фф", "ффф" })
         );
-        // Ф => ФФФ 
+        // Ф => ФФФ
         message = Regex.Replace(
             message,
             "Ф+",

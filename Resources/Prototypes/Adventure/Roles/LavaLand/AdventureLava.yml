@@ -170,31 +170,31 @@
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltTin
-      count: 35
+      count: 30
       minGroupSize: 8
       maxGroupSize: 12
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltCoal
-      count: 35
+      count: 30
       minGroupSize: 8
       maxGroupSize: 12
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltQuartz
-      count: 35
+      count: 30
       minGroupSize: 10
       maxGroupSize: 15
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltSalt
-      count: 35
+      count: 30
       minGroupSize: 8
       maxGroupSize: 12
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltGold
-      count: 35
+      count: 30
       minGroupSize: 8
       maxGroupSize: 12
     - !type:OreDunGen
@@ -206,39 +206,39 @@
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltSilver
-      count: 35
+      count: 30
       minGroupSize: 8
       maxGroupSize: 12
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltPlasma
-      count: 35
+      count: 30
       minGroupSize: 4
       maxGroupSize: 8
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltUranium
-      count: 35
+      count: 30
       minGroupSize: 4
       maxGroupSize: 8
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltArtifactFragment
-      count: 25
+      count: 20
       minGroupSize: 1
       maxGroupSize: 3
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltDiamond
-      count: 15
+      count: 10
       minGroupSize: 1
       maxGroupSize: 2
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltMagmatite
-      count: 25
-      minGroupSize: 6
-      maxGroupSize: 10
+      count: 30
+      minGroupSize: 15
+      maxGroupSize: 30
     - !type:OreDunGen
       replacement: WallRockBasaltMagmatite
       entity: WallRockBasaltMagmatiteCrab
@@ -252,59 +252,65 @@
       minGroupSize: 3
       maxGroupSize: 6
     - !type:OreDunGen
-      replacement: WallRockBasalt
+      replacement: WallRockBasaltMagmatite
       entity: FloorLavaEntity
-      count: 150
+      count: 50
       minGroupSize: 8
       maxGroupSize: 15
     - !type:OreDunGen
       replacement: WallRockBasalt
-      entity: BasaltRandom
+      entity: BasaltRandomLava
       count: 350
       minGroupSize: 3
       maxGroupSize: 10
     - !type:OreDunGen
-      replacement: FloorLavaEntity
-      entity: BasaltRandom
-      count: 200
-      minGroupSize: 3
-      maxGroupSize: 6
-    - !type:OreDunGen
-      replacement: BasaltRandom
+      replacement: BasaltRandomLava
       entity: NecroSpike
-      count: 50
+      count: 30
       minGroupSize: 1
       maxGroupSize: 1
     - !type:OreDunGen
-      replacement: BasaltRandom
+      replacement: BasaltRandomLava
       entity: CoalMushroom
       count: 20
       minGroupSize: 1
       maxGroupSize: 3
     - !type:OreDunGen
-      replacement: BasaltRandom
+      replacement: BasaltRandomLava
       entity: PorciniMushroom
       count: 20
       minGroupSize: 1
       maxGroupSize: 3
     - !type:OreDunGen
-      replacement: BasaltRandom
+      replacement: BasaltRandomLava
       entity: InocybeMushroom
       count: 20
       minGroupSize: 1
       maxGroupSize: 3
     - !type:OreDunGen
-      replacement: BasaltRandom
+      replacement: BasaltRandomLava
       entity: PolyporeMushroom
       count: 20
       minGroupSize: 1
       maxGroupSize: 3
     - !type:OreDunGen
-      replacement: BasaltRandom
+      replacement: BasaltRandomLava
       entity: SpaceCactus
       count: 20
       minGroupSize: 1
       maxGroupSize: 3
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltLavaland
+      count: 70
+      minGroupSize: 15
+      maxGroupSize: 35
+    - !type:OreDunGen
+      replacement: WallRockBasaltLavaland
+      entity: WallRockBasaltGibtonite
+      count: 15
+      minGroupSize: 1
+      maxGroupSize: 1
 
 - type: dungeonConfig
   id: LavaBlob
@@ -398,3 +404,88 @@
   values:
     prefix: names-lavaland-dataset-
     count: 1
+
+- type: entity
+  id: BasaltRandomLava
+  parent: BasaltOne
+  suffix: Рандомный лавалендский, так надо карочи.
+  components:
+    - type: RandomSprite
+      available:
+        - 0:
+            basalt1: ""
+            basalt2: ""
+            basalt3: ""
+            basalt4: ""
+            basalt5: ""
+
+- type: entity
+  id: WallRockBasaltLavaland
+  name: базальт
+  suffix: базальт LavaLand
+  description: Удерживает воздух внутри, а ассистентов снаружи.
+  parent: WallRock
+  components:
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_wall
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock_wall
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_wall_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_wall_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_wall_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_wall_west
+
+- type: entity
+  id: WallRockBasaltGibtonite
+  name: базальт
+  description: Удерживает воздух внутри, а ассистентов снаружи.
+  parent: [ BaseRockGibtonite, AsteroidRock ]
+  suffix: Гибтонит LavaLand
+  components:
+    - type: Sprite
+      layers:
+        - state: rock_wall
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_wall_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_wall_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_wall_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_wall_west
+        - state: gibtonite_inactive
+          visible: false
+          map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+    - type: RandomTimerTrigger
+      min: 2
+      max: 5
+    - type: Explosive
+      explosionType: DemolitionCharge
+      totalIntensity: 200
+      intensitySlope: 3
+      maxIntensity: 10
+      canCreateVacuum: false
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 3
+        behaviors:
+        - !type:TimerStartBehavior
+        - !type:PlaySoundBehavior
+          sound:
+            collection: GlassBreak
+      - trigger:
+          !type:DamageTrigger
+          damage: 1000
+        behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:TriggerBehavior
