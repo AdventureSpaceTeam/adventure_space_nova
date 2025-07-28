@@ -17,7 +17,7 @@
     Bucket: 3
     BoxMouthSwab: 1
     BoxAgrichem: 1
-    PlantAnalyzer: 1 # Adventure
+    PlantAnalyzer: 2 # Adventure
   contrabandInventory:
     ChemistryBottleUnstableMutagen: 1
     Joint: 1
