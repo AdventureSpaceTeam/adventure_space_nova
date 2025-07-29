@@ -446,7 +446,7 @@
     Reboot:
       collection: RebootCollectionSinth # Adventure
     Load:
-      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg # Adventure
+      collection: RoboLoadCollection # Adventure
 
 - type: emoteSounds
   id: UnisexSiliconSyndicate
@@ -474,7 +474,7 @@
     Reboot:
       collection: RebootCollectionSinth # Adventure
     Load:
-      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg # Adventure
+      collection: RoboLoadCollection # Adventure
 
 - type: emoteSounds
   id: UnisexSiliconXenoborg

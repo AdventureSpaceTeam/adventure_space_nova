@@ -39,6 +39,7 @@
     damage:
       types:
         Shock: 0.5
+  - type: ProtectedFromStepTriggers
 
 - type: entity
   abstract: true

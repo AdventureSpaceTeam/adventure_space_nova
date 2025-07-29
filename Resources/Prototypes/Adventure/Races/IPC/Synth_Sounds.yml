@@ -73,6 +73,21 @@
   - /Audio/Adventure/Voice/IPC/SynthReboot.ogg
   - /Audio/Adventure/Voice/IPC/SynthReboot2.ogg
 
+#загрузка
+- type: soundCollection
+  id: RoboLoadCollection
+  files:
+  - /Audio/Adventure/Voice/IPC/SynthLoad1.ogg
+  - /Audio/Adventure/Voice/IPC/SynthLoad2.ogg
+  - /Audio/Adventure/Voice/IPC/SynthLoad3.ogg 
+
+#плач
+- type: soundCollection
+  id: RoboCryCollection
+  files:
+  - /Audio/Adventure/Voice/IPC/RobotCry1.ogg
+  - /Audio/Adventure/Voice/IPC/RobotCry2.ogg
+
 #Смерть
 - type: emote
   id: SynthDeathgasp
@@ -163,7 +178,9 @@
     Reboot:
       collection: RebootCollectionSinth
     Load:
-      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg
+      collection: RoboLoadCollection  
+    Crying:
+      collection: RoboCryCollection  
 
 - type: emoteSounds
   id: SynthBodyEmotes
@@ -176,6 +193,8 @@
       collection: RoboFacepalmCollection 
     Clap:
       collection: Claps
+    ClapSingle:
+      collection: ClapSingle
     Snap:
       collection: Snaps
       params:
