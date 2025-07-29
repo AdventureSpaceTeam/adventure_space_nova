@@ -155,6 +155,64 @@
         - !type:ReagentThreshold
           reagent: BZ
           min: 1
+    Poison:
+      effects:
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.5
+        - !type:OrganType
+          type: Slime
+        type: Local
+        visualType: Medium
+        messages: [ "effect-sleepy" ]
+        probability: 0.1
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 1
+        - !type:OrganType
+          type: Slime
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 1.8
+        - !type:OrganType
+          type: Slime
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 3
+        type: Add
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.5
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 0.25
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 1
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 500
+        refresh: false
+      - !type:Drunk
+        boozePower: 500
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 1
 
 #region Галон
 
@@ -288,6 +346,34 @@
           type: Plant
           shouldHave: false
         factor: -4
+    Poison:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plant
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plant
+          shouldHave: false
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 0.5
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              0.8
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plant
+          shouldHave: false
+        factor: -4
 
 #region  Хилиум
 
@@ -392,6 +478,29 @@
   color: "#d97e7e"
   metabolisms:
     Gas:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 1
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          groups:
+            Brute: -1
+            Burn: -1
+            Toxin: -2.5
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 2
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 3
+        type: Add
+    Poison:
       effects:
       - !type:HealthChange
         conditions:
@@ -787,6 +896,56 @@
             type: Vox
         clear: true
         time: 5
+    Poison:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Human
+        factor: 8
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Animal
+        factor: 8
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Rat
+        factor: 8
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plant
+        factor: 8
+      # Convert Oxygen into CO2.
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        ratios:
+          CarbonDioxide: 1.0
+          Pluoxium: -1.0
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Vox
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              56
+      - !type:AdjustAlert
+        alertType: Toxins
+        conditions:
+          - !type:ReagentThreshold
+            min: 0.0625
+          - !type:OrganType
+            type: Vox
+        clear: true
+        time: 5
 
 - type: alarmThreshold
   id: stationPluoxium
@@ -957,7 +1116,41 @@
           - !type:ReagentThreshold
             reagent: Nitrium
             min: 3
-        statusLifetime: 2
+        statusLifetime: 20
+        walkSpeedModifier: 1.5
+        sprintSpeedModifier: 1.5
+      - !type:HealthChange
+        conditions:
+          - !type:ReagentThreshold
+            reagent: Nitrium
+            min: 9
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 0.05
+    Poison:
+      effects:
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+            min: 6
+        key: Stun
+        time: 1
+        type: Remove
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+            min: 6
+        key: KnockedDown
+        time: 4
+        type: Remove
+      - !type:MovespeedModifier
+        conditions:
+          - !type:ReagentThreshold
+            reagent: Nitrium
+            min: 3
+        statusLifetime: 20
         walkSpeedModifier: 1.5
         sprintSpeedModifier: 1.5
       - !type:HealthChange
@@ -1508,6 +1701,35 @@
   meltingPoint: -259.2
   metabolisms:
     Gas:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Zauker
+          min: 0.25
+          max: 8
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Slash: 0.75
+            Heat: 0.25
+            Poison: 0.25
+            Bloodloss: 0.25
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Zauker
+          min: 8
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Slash: 0.015
+            Heat: 0.005
+            Poison: 0.005
+            Bloodloss: 0.005
+    Poison:
       effects:
       - !type:HealthChange
         conditions:
