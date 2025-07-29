@@ -211,6 +211,7 @@
     - FauxTiles
     - AdventureSolarSail # Adventure
     - ChemistryPlus #CyberneticGenesis
+    - AdventureEnergyCores # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo

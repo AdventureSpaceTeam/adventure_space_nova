@@ -12,8 +12,8 @@
 - type: entity
   parent: BaseComputerCircuitboard
   id: EnergyCoreCircuitboard
-  name: Плата консоли контроля ядра
-  description: Консольная плата для консоли контроля энергоядра
+  name: плата консоли контроля энерго-ядра
+  description: Консольная плата для консоли контроля энерго-ядра.
   components:
     - type: Sprite
       state: cpu_engineering
@@ -28,8 +28,8 @@
 - type: entity
   parent: BaseComputer
   id: ComputerEnergyCoreControl
-  name: Консоль контроля энергоядра
-  description: Консоль для контроля и мониторинга работы энергоядра
+  name: консоль контроля энерго-ядра
+  description: Консоль для контроля и мониторинга работы энерго-ядра.
   components:
   - type: Sprite
     sprite: Adventure/EnergyCores/computers.rsi
@@ -88,4 +88,3 @@
   id: EnergyCoresGuide
   name: Энергоядра и с чем их есть
   text: "/Prototypes/Adventure/EnergyCores/EnergyCoresGB.xml"
-  
