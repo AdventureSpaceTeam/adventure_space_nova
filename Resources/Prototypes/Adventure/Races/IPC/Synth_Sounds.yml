@@ -38,8 +38,8 @@
   - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm1.ogg
   - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm2.ogg
   - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm3.ogg
-  - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm4.ogg    
-  
+  - /Audio/Adventure/Voice/RobotEmotions/RobotFacepalm4.ogg
+
 #РобоЧесотка
 - type: soundCollection
   id: RoboScratchingCollection
@@ -55,7 +55,7 @@
   - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch1.ogg
   - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch2.ogg
   - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch3.ogg
-  - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch4.ogg 
+  - /Audio/Adventure/Voice/RobotEmotions/RobotcCrunch4.ogg
 
 #Зависание
 - type: soundCollection
@@ -79,7 +79,7 @@
   files:
   - /Audio/Adventure/Voice/IPC/SynthLoad1.ogg
   - /Audio/Adventure/Voice/IPC/SynthLoad2.ogg
-  - /Audio/Adventure/Voice/IPC/SynthLoad3.ogg 
+  - /Audio/Adventure/Voice/IPC/SynthLoad3.ogg
 
 #плач
 - type: soundCollection
@@ -178,9 +178,9 @@
     Reboot:
       collection: RebootCollectionSinth
     Load:
-      collection: RoboLoadCollection  
+      collection: RoboLoadCollection
     Crying:
-      collection: RoboCryCollection  
+      collection: RoboCryCollection
 
 - type: emoteSounds
   id: SynthBodyEmotes
@@ -190,7 +190,7 @@
     Crunch:
       collection: RoboCrunchCollection
     Facepalm:
-      collection: RoboFacepalmCollection 
+      collection: RoboFacepalmCollection
     Clap:
       collection: Claps
     ClapSingle:
