@@ -16,3 +16,5 @@
     maxFillLevels: 10
     fillBaseName: fill-
   - type: Sealable
+  - type: Label
+    currentLabel: reagent-name-campari
