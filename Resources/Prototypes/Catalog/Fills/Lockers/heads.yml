@@ -149,6 +149,7 @@
     - id: ClothingEyesHudCommand
     - id: ClothingOuterCoatHOP # Corvax-Resprite
     - id: ClothingOuterHardsuitHOP # Adventure
+    - id: PrinterFlatpack # Adventure
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
