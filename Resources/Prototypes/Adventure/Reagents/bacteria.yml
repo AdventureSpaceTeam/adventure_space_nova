@@ -8,7 +8,6 @@
   color: "#FFFFE5"
   metabolisms:
     Food:
-      metabolismRate: 0.20
       effects:
       - !type:Emote
         emote: Fart

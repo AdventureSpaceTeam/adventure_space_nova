@@ -500,8 +500,6 @@
 - type: emoteSounds
   id: GeneralBodyEmotes
   sounds:
-    BruhAll:
-      collection: BruhCollection # Adventure
     Facepalm:
       collection: FacepalmCollection # Adventure
     Scratch:
@@ -541,8 +539,6 @@
 - type: emoteSounds
   id: ReptilianBodyEmotes
   sounds:
-    BruhAll:
-      collection: BruhCollection # Adventure
     Facepalm:
       collection: FacepalmCollection # Adventure
     Scratch:
