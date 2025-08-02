@@ -97,6 +97,13 @@
     - type: StationLimitedNetwork
     - type: WirelessNetworkConnection
       range: 500
+# Adventure start
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Critical
+    - type: Rattle
+      radioChannel: "Security"
+# Adventure end
 
 #Traitor implants
 
