@@ -22,7 +22,6 @@ salv-job-board-name-BountyTeethSpaceCarp = Космический карп
 salv-job-board-name-BountySalvageScrap = Космический мусор
 salv-job-board-name-BountySalvageOreGold = Золото (Руда)
 salv-job-board-name-BountySalvageOreSilver = Серебро (Руда)
-
 salv-job-board-name-BountySalvageOreUranium = Уран (Руда)
 salv-job-board-name-BountySalvageOrePlasma = Плазма (Руда)
 salv-job-board-name-BountySalvageOreBananium = Бананиум (Руда)

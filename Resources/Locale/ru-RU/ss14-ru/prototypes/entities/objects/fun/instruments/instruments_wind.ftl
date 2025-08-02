@@ -1,9 +1,7 @@
 ent-SaxophoneInstrument = саксофон
     .desc = Инструмент. Вероятно, вы можете перемолоть его в сырой джаз.
-ent-AccordionInstrument = аккордеон
-    .desc = { ent-BaseHandheldInstrument.desc }
 ent-HarmonicaInstrument = губная гармошка
-    .desc = { ent-BaseHandheldInstrument.desc }
+    .desc = { ent-BaseWoodwindInstrument.desc }
 ent-ClarinetInstrument = кларнет
     .desc = Фаворит осьминога со дна океана.
 ent-FluteInstrument = флейта

@@ -1,17 +1,12 @@
-cargo-account-cargo-name = Бюджет станционного снабжения
-cargo-account-cargo-code = SUP
-
-cargo-account-engineering-name = Фонд технического обслуживания
-cargo-account-engineering-code = ENG
-
-cargo-account-medical-name = Фонд медицинского обеспечения
-cargo-account-medical-code = MED
-
+cargo-account-cargo-name = Бюджет снабжения станции
+cargo-account-cargo-code = СНБ
+cargo-account-engineering-name = Сбережения техобслуживания
+cargo-account-engineering-code = ИНЖ
+cargo-account-medical-name = Фонд здравоохранения экипажа
+cargo-account-medical-code = МЕД
 cargo-account-science-name = Фонд межзвёздных разработок
-cargo-account-science-code = RND
-
-cargo-account-security-name = Резерв обороны станции
-cargo-account-security-code = SEC
-
-cargo-account-service-name = Общий сервисный фонд
-cargo-account-service-code = SRV
+cargo-account-science-code = РНД
+cargo-account-security-name = Резервы обороны станции
+cargo-account-security-code = СБ
+cargo-account-service-name = Совместные вклады сервиса
+cargo-account-service-code = СРВ

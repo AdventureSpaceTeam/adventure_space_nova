@@ -66,6 +66,8 @@ ent-ClothingUniformJumpsuitHoSGrey = серый комбинезон главы 
     .desc = Серый комбинезон главы службы безопасности, который делает его несколько похожим на ассистента.
 ent-ClothingUniformJumpsuitHoSParadeMale = парадная форма главы службы безопасности
     .desc = Одежда класса люкс для мужчин, возглавляющих службу безопасности, для особых случаев.
+ent-ClothingUniformJumpsuitCommandGeneric = комбинезон командования
+    .desc = Универсальный комбинезон цвета командования, не связанный с каким-либо конкретным отделом.
 ent-ClothingUniformJumpsuitHydroponics = комбинезон ботаника
     .desc = Имеет сильный запах земли. Будем надеяться, что он просто грязный, а не весь в земле.
 ent-ClothingUniformJumpsuitJanitor = комбинезон уборщика
@@ -136,7 +138,6 @@ ent-ClothingUniformJumpsuitCentcomFormal = торжественный костю
     .desc = Костюм для особых случаев.
 ent-ClothingUniformJumpsuitHosFormal = торжественный костюм главы службы безопасности
     .desc = Костюм для особых случаев.
-# Corvax-HiddenDesc-Start
 ent-ClothingUniformJumpsuitOperative = комбинезон оперативника
     .desc = Униформа для сложных и опасных операций в глубоком космосе.
 # Corvax-HiddenDesc-End

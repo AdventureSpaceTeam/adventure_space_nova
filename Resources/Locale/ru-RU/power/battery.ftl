@@ -1,19 +1,19 @@
 ﻿## Strings for the battery (SMES/substation) menu
 
-battery-menu-footer-left = Опасность: высокое напряжение
+battery-menu-footer-left = Опасно: высокое напряжение
 battery-menu-footer-right = 7.2 REV 6
-battery-menu-out = ВЫХОД
-battery-menu-in = ВХОД
-battery-menu-charge-header = Цепь заряда
-battery-menu-discharge-header = Цепь разряда
-battery-menu-storage-header = Энергохранилище
-battery-menu-passthrough = Прямая передача
+battery-menu-out = ВЫВОД
+battery-menu-in = ВВОД
+battery-menu-charge-header = Заряд цепи
+battery-menu-discharge-header = Разряд цепи
+battery-menu-storage-header = Ячейки хранения
+battery-menu-passthrough = Пропуск
 battery-menu-max = Макс:
-battery-menu-current = Текущий:
-battery-menu-stored = Запасено:
+battery-menu-current = Текущее:
+battery-menu-stored = Заряд:
 battery-menu-energy = Энергия:
-battery-menu-eta-full = До полной зарядки:
-battery-menu-eta-empty = До разрядки:
+battery-menu-eta-full = Время (зарядка):
+battery-menu-eta-empty = Время (разрядка):
 battery-menu-eta-value = ~{ $minutes } мин
 battery-menu-eta-value-max = >{ $minutes } мин
 battery-menu-eta-value-na = Н/Д
