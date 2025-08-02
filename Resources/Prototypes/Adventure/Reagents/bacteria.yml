@@ -13,7 +13,7 @@
         emote: Fart
         showInChat: true
         probability: 0.05
-      - !type:PopupMessage 
+      - !type:PopupMessage
         type: Local
         visualType: Medium
         messages:
