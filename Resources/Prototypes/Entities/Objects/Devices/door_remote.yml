@@ -28,7 +28,7 @@
       color: "#9f9f00"
   - type: Access
     groups:
-    - AllAccess # Adventure
+    - Command
   - type: DoorRemote
 
 - type: entity
