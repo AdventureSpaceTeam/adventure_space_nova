@@ -65,7 +65,12 @@
         - ReagentId: MindbreakerToxin
           Quantity: 4
   - type: Extractable
-    grindableSolutionName: food
+    juiceSolution:
+      reagents:
+      - ReagentId: Milk
+        Quantity: 5
+      - ReagentId: Stimulants
+        Quantity: 4
   - type: Tag
     tags:
     - Fruit
