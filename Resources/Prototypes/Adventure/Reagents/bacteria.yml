@@ -8,13 +8,12 @@
   color: "#FFFFE5"
   metabolisms:
     Food:
-      metabolismRate: 0.20
       effects:
       - !type:Emote
         emote: Fart
         showInChat: true
         probability: 0.05
-      - !type:PopupMessage 
+      - !type:PopupMessage
         type: Local
         visualType: Medium
         messages:

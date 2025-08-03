@@ -1,5 +1,7 @@
 ent-Turnstile = турникет
     .desc = Контрольный дверной механизм - пропускает только поодиночке в заданном направлении.
+ent-TurnstileArrow = { "" }
+    .desc = { "" }
 ent-TurnstileGenpopEnter = { ent-Turnstile }
     .desc = { ent-Turnstile.desc }
     .suffix = Бриг вход

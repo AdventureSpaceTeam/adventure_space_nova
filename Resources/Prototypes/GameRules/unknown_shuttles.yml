@@ -21,6 +21,7 @@
     - id: UnknownShuttleMicroshuttle
     - id: UnknownShuttleSpacebus
     - id: HoboSpawn # Adventure
+    - id: WaWaSpawn # Adventure
 
 - type: entityTable
   id: UnknownShuttlesFreelanceTable

@@ -14,3 +14,16 @@
     storage: StorageCanister
     tritium: TritiumCanister
     water-vapor: WaterVaporCanister
+    # Adventure gases start
+    bz: BZCanister
+    halon: HalonCanister
+    healium: HealiumCanister
+    hyper-noblium: HyperNobliumCanister
+    hydrogen: HydrogenCanister
+    pluoxium: PluoxiumCanister
+    nitrium: NitriumCanister
+    helium: HeliumCanister
+    anti-noblium: AntiNobliumCanister
+    proto-nitrate: ProtoNitrateCanister
+    zauker: ZaukerCanister
+    # Adventure gases end

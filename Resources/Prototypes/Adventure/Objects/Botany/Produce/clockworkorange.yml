@@ -53,11 +53,24 @@
     sprite: Adventure/Objects/Botany/Produce/clockworkorange.rsi
   - type: Produce
     seedId: clockworkorange
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 13
+        reagents:
+        - ReagentId: Milk
+          Quantity: 5
+        - ReagentId: Stimulants
+          Quantity: 4
+        - ReagentId: MindbreakerToxin
+          Quantity: 4
   - type: Extractable
     juiceSolution:
       reagents:
       - ReagentId: Milk
         Quantity: 5
+      - ReagentId: Stimulants
+        Quantity: 4
   - type: Tag
     tags:
     - Fruit

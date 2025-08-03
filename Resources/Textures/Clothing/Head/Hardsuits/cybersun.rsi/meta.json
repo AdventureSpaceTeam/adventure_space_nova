@@ -37,6 +37,22 @@
     {
       "name": "on-equipped-HELMET-reptilian",
       "directions": 4
+    },
+    {
+      "name": "off-equipped-HELMET-dog",
+      "directions": 4
+    },
+    {
+      "name": "on-equipped-HELMET-dog",
+      "directions": 4
+    },
+    {
+      "name": "off-equipped-HELMET-monkey",
+      "directions": 4
+    },
+    {
+      "name": "on-equipped-HELMET-monkey",
+      "directions": 4
     }
   ]
 }

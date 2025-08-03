@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "big_spike",
+      "directions": 4
+    },
+    {
+      "name": "beak_vulture",
+      "directions": 4
+    },
+    {
+      "name": "beak_penguin",
+      "directions": 4
+    }
+  ]
+}

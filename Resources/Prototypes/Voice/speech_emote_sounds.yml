@@ -247,15 +247,24 @@
   id: UnisexVox
   sounds:
     Scream:
-      path: /Audio/Voice/Vox/shriek1.ogg
+      collection: VoxScreamCollection # Adventure
     Laugh:
-      path: /Audio/Voice/Vox/vox_laugh.ogg
+      collection: VoxLaughCollection # Adventure
     Honk:
       collection: BikeHorn
     Weh:
       collection: Weh
     Hew:
       collection: Hew
+# Adventure-start
+    Whistle:
+      collection: Whistles
+    Snore:
+      collection: Snores
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
   params:
     variation: 0.125
     # We need vox sounds for the other emotes
@@ -446,7 +455,7 @@
     Reboot:
       collection: RebootCollectionSinth # Adventure
     Load:
-      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg # Adventure
+      collection: RoboLoadCollection # Adventure
 
 - type: emoteSounds
   id: UnisexSiliconSyndicate
@@ -474,7 +483,7 @@
     Reboot:
       collection: RebootCollectionSinth # Adventure
     Load:
-      path: /Audio/Adventure/Voice/IPC/SynthLoad.ogg # Adventure
+      collection: RoboLoadCollection # Adventure
 
 - type: emoteSounds
   id: UnisexSiliconXenoborg
@@ -500,8 +509,6 @@
 - type: emoteSounds
   id: GeneralBodyEmotes
   sounds:
-    BruhAll:
-      collection: BruhCollection # Adventure
     Facepalm:
       collection: FacepalmCollection # Adventure
     Scratch:
@@ -541,8 +548,6 @@
 - type: emoteSounds
   id: ReptilianBodyEmotes
   sounds:
-    BruhAll:
-      collection: BruhCollection # Adventure
     Facepalm:
       collection: FacepalmCollection # Adventure
     Scratch:

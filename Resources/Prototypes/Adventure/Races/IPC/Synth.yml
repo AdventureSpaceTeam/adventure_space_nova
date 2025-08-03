@@ -15,14 +15,14 @@
   components:
   - type: ContainerContainer
     containers:
-      cell_slot: !type:ContainerSlot 
+      cell_slot: !type:ContainerSlot
   - type: PowerCellSlot
     cellSlotId: cell_slot
     fitsInCharger: true
   - type: ItemToggle
-    onActivate: false 
-    activated: false 
-    onUse: false 
+    onActivate: false
+    activated: false
+    onUse: false
   - type: PowerCellDraw
     drawRate: 0.6
   - type: ItemSlots
@@ -39,6 +39,7 @@
     damage:
       types:
         Shock: 0.5
+  - type: ProtectedFromStepTriggers
 
 - type: entity
   abstract: true
@@ -73,7 +74,7 @@
         probability: 0.1
     - reagents: [ SpaceLube ]
       methods: [ Touch ]
-      effects: 
+      effects:
       - !type:HealthChange
         scaleByQuantity: true
         damage:
@@ -108,11 +109,11 @@
         Cold: 0.1
     heatDamage:
       types:
-        Heat: 0.1 
+        Heat: 0.1
   - type: Flammable
     fireSpread: true
     canResistFire: true
-    damage: 
+    damage:
       types:
         Heat: 0.75
   - type: TemperatureSpeed

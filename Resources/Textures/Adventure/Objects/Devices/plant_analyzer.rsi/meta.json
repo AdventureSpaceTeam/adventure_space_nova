@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/blob/4397d63a55dac7d0536eb9bcc0a0f68634858c50/code/modules/hydroponics/hydroitemdefines.dm",
+    "copyright": "Made by RumiTiger based on the health analyzer sprite made by SeamLesss (github)",
     "states":
     [
         {
@@ -13,13 +13,8 @@
         },
         {
             "name": "unlit",
-            "delays":
-            [
+            "delays": [
                 [
-                    0.1,
-                    0.1,
-                    0.1,
-                    0.1,
                     0.1,
                     0.1,
                     0.1,
@@ -30,6 +25,14 @@
                     0.1
                 ]
             ]
+        },
+        {
+            "name": "analyzer-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "analyzer-inhand-right",
+            "directions": 4
         },
         {
             "name": "icon"

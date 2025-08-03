@@ -7,11 +7,18 @@
   id: CircuitAdventureDynamic
   recipes:
   - NuclearGeneratorMachineCircuitboard
+  - EnergyCoreCircuitboard
 
 - type: latheRecipePack
   id: AdventureSolarSail
   recipes:
   - SolarSailAssemblyFlatpack
+
+- type: latheRecipePack
+  id: AdventureEnergyCores
+  recipes:
+  - EnergyCoreRnD
+  - EnergyCoreHM
 
 - type: latheRecipePack
   id: SecurityAdventure

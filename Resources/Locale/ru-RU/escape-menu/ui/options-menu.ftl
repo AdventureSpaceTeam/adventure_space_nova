@@ -2,14 +2,17 @@
 
 ui-options-title = Игровые настройки
 ui-options-tab-accessibility = Доступность
+ui-options-tab-admin = Админ
 ui-options-tab-graphics = Графика
 ui-options-tab-controls = Управление
 ui-options-tab-audio = Аудио
 ui-options-tab-network = Сеть
 ui-options-tab-misc = Основные
+
 ui-options-apply = Сохранить и применить
 ui-options-reset-all = Сброс изменений
 ui-options-default = Сброс к настройкам по умолчанию
+
 ui-options-value-percent = { TOSTRING($value, "P0") }
 
 # Misc/General menu
@@ -37,13 +40,18 @@ ui-options-event-music = Музыка событий
 ui-options-admin-sounds = Музыка админов
 ui-options-bwoink-sound = Звук уведомления Ахелпа
 ui-options-volume-label = Громкость
+
+## Graphics menu
+
 ui-options-display-label = Дисплей
 ui-options-quality-label = Качество
 ui-options-misc-label = Разное
 ui-options-interface-label = Интерфейс
 
-## Graphics menu
 
+ui-options-auto-fill-highlights = Автоматически заполнять подсвеченные слова информацией о персонаже
+ui-options-highlights-color = Цвет подсветки:
+ui-options-highlights-color-example = Это подсвеченный текст!
 ui-options-show-held-item = Показать удерживаемый элемент рядом с курсором
 ui-options-show-combat-mode-indicators = Показать индикатор боевого режима рядом с курсором
 ui-options-opaque-storage-window = Непрозрачность окна хранилища
@@ -92,6 +100,7 @@ ui-options-vp-vertical-fit-tooltip =
     то это приведёт к его обрезанию по горизонтальной оси.
 ui-options-vp-low-res = Изображение низкого разрешения
 ui-options-parallax-low-quality = Низкокачественный параллакс (фон)
+ui-options-ambient-occlusion = Окружающее затенение
 ui-options-fps-counter = Показать счётчик FPS
 ui-options-vp-width = Ширина окна игры:
 ui-options-hud-layout = Тип HUD:
@@ -103,6 +112,7 @@ ui-options-binds-explanation = ЛКМ — изменить кнопку, ПКМ 
 ui-options-unbound = Пусто
 ui-options-bind-reset = Сбросить
 ui-options-key-prompt = Нажмите кнопку...
+
 ui-options-header-movement = Перемещение
 ui-options-header-camera = Камера
 ui-options-header-interaction-basic = Базовые взаимодействия
@@ -114,19 +124,28 @@ ui-options-header-shuttle = Шаттл
 ui-options-header-map-editor = Редактор карт
 ui-options-header-dev = Разработка
 ui-options-header-general = Основное
+ui-options-header-text-cursor = Текстовый курсор
+ui-options-header-text-cursor-select = Текстовое выделение
+ui-options-header-text-edit = Текстовое редактирование
+ui-options-header-text-chat = Чат
+ui-options-header-text-other = Другие функции ввода
+
 ui-options-hotkey-keymap = Использовать клавиши QWERTY (США)
 ui-options-hotkey-toggle-walk = Переключать шаг\бег
+
 ui-options-function-move-up = Двигаться вверх
 ui-options-function-move-left = Двигаться налево
 ui-options-function-move-down = Двигаться вниз
 ui-options-function-move-right = Двигаться направо
 ui-options-function-walk = Идти
+
 ui-options-function-camera-rotate-left = Повернуть налево
 ui-options-function-camera-rotate-right = Повернуть направо
 ui-options-function-camera-reset = Сбросить камеру
 ui-options-function-zoom-in = Приблизить
 ui-options-function-zoom-out = Отдалить
 ui-options-function-reset-zoom = Сбросить
+
 ui-options-function-use = Использовать
 ui-options-function-use-secondary = Использовать вторично
 ui-options-function-alt-use = Альтернативное использование
@@ -138,10 +157,12 @@ ui-options-function-alt-activate-item-in-world = Альтернативно ис
 ui-options-function-drop = Положить предмет
 ui-options-function-examine-entity = Осмотреть
 ui-options-function-swap-hands = Поменять руки
+ui-options-function-swap-hands-reverse = Поменять руки (в другую сторону)
 ui-options-function-move-stored-item = Переместить хранящийся объект
 ui-options-function-rotate-stored-item = Повернуть хранящийся объект
 ui-options-function-save-item-location = Сохранить расположение объекта
 ui-options-static-storage-ui = Закрепить интерфейс хранилища на хотбаре
+
 ui-options-function-smart-equip-backpack = Умная экипировка в рюкзак
 ui-options-function-smart-equip-belt = Умная экипировка на пояс
 ui-options-function-open-backpack = Открыть рюкзак
@@ -154,6 +175,7 @@ ui-options-function-point = Указать на что-либо
 ui-options-function-rotate-object-clockwise = Повернуть по часовой стрелке
 ui-options-function-rotate-object-counterclockwise = Повернуть против часовой стрелки
 ui-options-function-flip-object = Перевернуть
+
 ui-options-function-focus-chat-input-window = Писать в чат
 ui-options-function-focus-local-chat-window = Писать в чат (IC)
 ui-options-function-focus-emote = Писать в чат (Emote)
@@ -184,9 +206,11 @@ ui-options-function-window-close-all = Закрыть все окна
 ui-options-function-window-close-recent = Закрыть текущее окно
 ui-options-function-show-escape-menu = Переключить игровое меню
 ui-options-function-escape-context = Закрыть текущее окно или переключить игровое меню
+
 ui-options-function-take-screenshot = Сделать скриншот
 ui-options-function-take-screenshot-no-ui = Сделать скриншот (без интерфейса)
 ui-options-function-toggle-fullscreen = Переключить полноэкранный режим
+
 ui-options-function-editor-place-object = Разместить объект
 ui-options-function-editor-cancel-place = Отменить размещение
 ui-options-function-editor-grid-place = Размещать в сетке
@@ -194,30 +218,51 @@ ui-options-function-editor-line-place = Размещать в линию
 ui-options-function-editor-rotate-object = Повернуть
 ui-options-function-editor-flip-object = Перевернуть
 ui-options-function-editor-copy-object = Копировать
+
 ui-options-function-show-debug-console = Открыть консоль
 ui-options-function-show-debug-monitors = Показать дебаг информацию
 ui-options-function-inspect-entity = Изучить сущность
 ui-options-function-hide-ui = Спрятать интерфейс
-ui-options-function-hotbar1 = 1 слот хотбара
-ui-options-function-hotbar2 = 2 слот хотбара
-ui-options-function-hotbar3 = 3 слот хотбара
-ui-options-function-hotbar4 = 4 слот хотбара
-ui-options-function-hotbar5 = 5 слот хотбара
-ui-options-function-hotbar6 = 6 слот хотбара
-ui-options-function-hotbar7 = 7 слот хотбара
-ui-options-function-hotbar8 = 8 слот хотбара
-ui-options-function-hotbar9 = 9 слот хотбара
-ui-options-function-hotbar0 = 0 слот хотбара
-ui-options-function-loadout1 = 1 страница хотбара
-ui-options-function-loadout2 = 2 страница хотбара
-ui-options-function-loadout3 = 3 страница хотбара
-ui-options-function-loadout4 = 4 страница хотбара
-ui-options-function-loadout5 = 5 страница хотбара
-ui-options-function-loadout6 = 6 страница хотбара
-ui-options-function-loadout7 = 7 страница хотбара
-ui-options-function-loadout8 = 8 страница хотбара
-ui-options-function-loadout9 = 9 страница хотбара
-ui-options-function-loadout0 = 0 страница хотбара
+ui-options-function-hotbar1 = Слот хотбара 1
+ui-options-function-hotbar2 = Слот хотбара 2
+ui-options-function-hotbar3 = Слот хотбара 3
+ui-options-function-hotbar4 = Слот хотбара 4
+ui-options-function-hotbar5 = Слот хотбара 5
+ui-options-function-hotbar6 = Слот хотбара 6
+ui-options-function-hotbar7 = Слот хотбара 7
+ui-options-function-hotbar8 = Слот хотбара 8
+ui-options-function-hotbar9 = Слот хотбара 9
+ui-options-function-hotbar0 = Слот хотбара 0
+ui-options-function-hotbar-shift1 = Слот хотбара Shift+1
+ui-options-function-hotbar-shift2 = Слот хотбара Shift+2
+ui-options-function-hotbar-shift3 = Слот хотбара Shift+3
+ui-options-function-hotbar-shift4 = Слот хотбара Shift+4
+ui-options-function-hotbar-shift5 = Слот хотбара Shift+5
+ui-options-function-hotbar-shift6 = Слот хотбара Shift+6
+ui-options-function-hotbar-shift7 = Слот хотбара Shift+7
+ui-options-function-hotbar-shift8 = Слот хотбара Shift+8
+ui-options-function-hotbar-shift9 = Слот хотбара Shift+9
+ui-options-function-hotbar-shift0 = Слот хотбара Shift+0
+ui-options-function-loadout1 = Страница хотбара 1
+ui-options-function-loadout2 = Страница хотбара 2
+ui-options-function-loadout3 = Страница хотбара 3
+ui-options-function-loadout4 = Страница хотбара 4
+ui-options-function-loadout5 = Страница хотбара 5
+ui-options-function-loadout6 = Страница хотбара 6
+ui-options-function-loadout7 = Страница хотбара 7
+ui-options-function-loadout8 = Страница хотбара 8
+ui-options-function-loadout9 = Страница хотбара 9
+ui-options-function-loadout0 = Страница хотбара 0
+ui-options-function-loadoutshift1 = Страница хотбара Shift+1
+ui-options-function-loadoutshift2 = Страница хотбара Shift+2
+ui-options-function-loadoutshift3 = Страница хотбара Shift+3
+ui-options-function-loadoutshift4 = Страница хотбара Shift+4
+ui-options-function-loadoutshift5 = Страница хотбара Shift+5
+ui-options-function-loadoutshift6 = Страница хотбара Shift+6
+ui-options-function-loadoutshift7 = Страница хотбара Shift+7
+ui-options-function-loadoutshift8 = Страница хотбара Shift+8
+ui-options-function-loadoutshift9 = Страница хотбара Shift+9
+ui-options-function-loadoutshift0 = Страница хотбара Shift+0
 ui-options-function-shuttle-strafe-up = Стрейф вверх
 ui-options-function-shuttle-strafe-right = Стрейф вправо
 ui-options-function-shuttle-strafe-left = Стрейф влево
@@ -225,8 +270,48 @@ ui-options-function-shuttle-strafe-down = Стрейф вниз
 ui-options-function-shuttle-rotate-left = Поворот налево
 ui-options-function-shuttle-rotate-right = Поворот направо
 ui-options-function-shuttle-brake = Торможение
-ui-options-net-interp-ratio = Сетевое сглаживание
+
+ui-options-function-text-cursor-left = Сдвинуть курсор влево
+ui-options-function-text-cursor-right = Сдвинуть курсор вправо
+ui-options-function-text-cursor-up = Сдвинуть курсор вверх
+ui-options-function-text-cursor-down = Сдвинуть курсор вниз
+ui-options-function-text-cursor-word-left = Сдвинуть курсор влево на слово
+ui-options-function-text-cursor-word-right = Сдвинуть курсор вправо на слово
+ui-options-function-text-cursor-begin = Сдвинуть курсор в начало
+ui-options-function-text-cursor-end = Сдвинуть курсор в конец
+ui-options-function-text-cursor-select = Выделить текст
+ui-options-function-text-cursor-select-left = Расширить выделение влево
+ui-options-function-text-cursor-select-right = Расширить выделение вправо
+ui-options-function-text-cursor-select-up = Расширить выделение вверх
+ui-options-function-text-cursor-select-down = Расширить выделение вниз
+ui-options-function-text-cursor-select-word-left = Расширить выделение влево на слово
+ui-options-function-text-cursor-select-word-right = Расширить выделение вправо на слово
+ui-options-function-text-cursor-select-begin = Расширить выделение до начала
+ui-options-function-text-cursor-select-end = Расширить выделение до конца
+ui-options-function-text-backspace = Стереть
+ui-options-function-text-delete = Удалить
+ui-options-function-text-word-backspace = Стереть слово
+ui-options-function-text-word-delete = Удалить слово
+ui-options-function-text-newline = Новая строка
+ui-options-function-text-submit = Отправить
+ui-options-function-multiline-text-submit = Сохранить
+ui-options-function-text-select-all = Выделить всё
+ui-options-function-text-copy = Копировать
+ui-options-function-text-cut = Вырезать
+ui-options-function-text-paste = Вставить
+ui-options-function-text-history-prev = Прошлый из истории
+ui-options-function-text-history-next = Следующий из истории
+ui-options-function-text-release-focus = Выйти из ввода
+ui-options-function-text-scroll-to-bottom = Переместиться в конец
+ui-options-function-text-tab-complete = Завершение табуляции
+ui-options-function-text-complete-next = Завершить следующее
+ui-options-function-text-complete-prev = Завершить предыдущее
+
+## Network menu
+
 ui-options-net-predict = Предугадывание на стороне клиента
+
+ui-options-net-interp-ratio = Сетевое сглаживание
 ui-options-net-interp-ratio-tooltip =
     Увеличение этого параметра, как правило, делает игру
     более устойчивой к потере пакетов, однако при этом
@@ -254,10 +339,63 @@ ui-options-net-pvs-leave-tooltip =
     сущности вне поля зрения. Снижение этого параметра может помочь
     уменьшить "захлёбывания" при ходьбе, но иногда может
     привести к неправильным предугадываниям и другим проблемам.
+
+## Toggle window console command
 cmd-options-desc = Открывает меню опций, опционально с конкретно выбранной вкладкой.
 cmd-options-help = Использование: options [tab]
+
+## Accessibility menu
+
+ui-options-accessability-header-visuals = Визуал
+ui-options-accessability-header-content = Контент
+
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
-ui-options-chat-window-opacity = Прозрачность окна чата
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
+
+ui-options-chat-window-opacity = Прозрачность окна чата
+ui-options-speech-bubble-text-opacity = Прозрачность облачка текста
+ui-options-speech-bubble-speaker-opacity = Прозрачность говоящего облачка текста
+ui-options-speech-bubble-background-opacity = Прозрачность фона облачка текста
+
+ui-options-censor-nudity = Цензура наготы
+
+## Admin menu
+
+ui-options-admin-player-panel = Админ меню Список игроков
+
+ui-options-admin-player-tab-symbol-setting = Столбец персонажей, символ антагониста
+ui-options-admin-player-tab-symbol-setting-off = Не показывать
+ui-options-admin-player-tab-symbol-setting-basic = Показывать обычный
+ui-options-admin-player-tab-symbol-setting-specific = Показывать специфичный
+
+ui-options-admin-player-tab-role-setting = Настройка отображения роли
+ui-options-admin-player-tab-role-setting-roletype = Показывать тип роли
+ui-options-admin-player-tab-role-setting-subtype = Показывать подтип
+ui-options-admin-player-tab-role-setting-roletypesubtype = Показывать тип роли и подтип
+ui-options-admin-player-tab-role-setting-subtyperoletype = Показывать подтип и тип роли
+
+ui-options-admin-player-tab-color-setting = Настройка цвета
+ui-options-admin-player-tab-color-setting-off = Я ненавижу цвета
+ui-options-admin-player-tab-color-setting-character = Раскрасить имена антагонистов
+ui-options-admin-player-tab-color-setting-roletype = Раскрасить все типы ролей
+ui-options-admin-player-tab-color-setting-both = Раскрасить оба
+
+ui-options-admin-overlay-title = Админ оверлей
+
+ui-options-admin-overlay-antag-format = Стиль метки антагониста
+ui-options-admin-overlay-antag-format-binary = Показывать статус антагониста
+ui-options-admin-overlay-antag-format-roletype = Показывать тип роли
+ui-options-admin-overlay-antag-format-subtype = Показывать подтип
+
+ui-options-admin-overlay-antag-symbol = Стиль символа антагониста
+ui-options-admin-overlay-antag-symbol-off = Не показывать символ
+ui-options-admin-overlay-antag-symbol-basic = Показывать обычный
+ui-options-admin-overlay-antag-symbol-specific = Показывать специфичный
+
+ui-options-admin-enable-overlay-playtime = Показывать наигранное время
+ui-options-admin-enable-overlay-starting-job = Показывать стартовую профессию
+ui-options-admin-overlay-merge-distance = Дистанция скопления
+ui-options-admin-overlay-ghost-fade-distance = Расстояние от мыши для затухания оверлея призраков
+ui-options-admin-overlay-ghost-hide-distance = Расстояние от мыши для исчезновения оверлея призраков
