@@ -1,0 +1,13 @@
+- type: reaction
+  id: SheetBrass
+  impact: Low
+  quantized: true
+  minTemp: 720
+  reactants:
+    Copper:
+      amount: 7
+    Zinc:
+      amount: 3
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: SheetBrass1
