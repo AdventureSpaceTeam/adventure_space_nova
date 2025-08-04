@@ -31,3 +31,5 @@
     damageCoefficient: 0.7
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetCBURNLeader
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.01
