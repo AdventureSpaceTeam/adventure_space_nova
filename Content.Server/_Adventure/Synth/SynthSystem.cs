@@ -74,7 +74,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     private void OnEmpPulse(EntityUid uid, SynthComponent component, EmpPulseEvent ev)
     {
         _damageableSystem.TryChangeDamage(uid, component.EmpDamage, true);
-        _stunSystem.TryParalyze(uid, TimeSpan.FromSeconds(component.EmpParalyzeTime), true);
+        _stunSystem.TryUpdateParalyzeDuration(uid, TimeSpan.FromSeconds(component.EmpParalyzeTime));
     }
 
     private void OnMapInit(EntityUid uid, SynthComponent component, MapInitEvent args)
@@ -121,7 +121,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         UpdateUI(uid, component);
     }
 
-    private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args) 
+    private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args)
     {
         var (uid, comp) = ent;
 

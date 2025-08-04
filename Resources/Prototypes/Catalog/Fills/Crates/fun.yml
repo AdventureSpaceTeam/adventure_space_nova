@@ -56,6 +56,19 @@
     - id: PlushieResomi
 # Adventure_plushie_end
 
+- type: entity
+  id: CratePlants
+  parent: CrateGenericSteel
+  name: plant crate
+  description: A variety pack of potted plants to spruce up your station!
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: AllPottedPlantsTable
+        rolls: !type:ConstantNumberSelector
+          value: 5
+
 - type: entityTable
   id: AllPottedPlantsTable
   table: !type:GroupSelector
@@ -85,19 +98,6 @@
     - id: PottedPlant23
     - id: PottedPlant24
     - id: PottedPlant26
-
-- type: entity
-  id: CratePlants
-  parent: CrateGenericSteel
-  name: plant crate
-  description: A variety pack of potted plants to spruce up your station!
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:NestedSelector
-        tableId: AllPottedPlantsTable
-        rolls: !type:ConstantNumberSelector
-          value: 5
 
 - type: entity
   id: CrateFunPlushie
