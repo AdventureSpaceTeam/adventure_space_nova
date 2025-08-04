@@ -25,6 +25,11 @@
     solutions:
       battery:
         maxVol: 5
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Zinc
+          Quantity: 5
   - type: InjectableSolution
     solution: battery
   - type: DrawableSolution
@@ -42,6 +47,8 @@
   - type: ProjectileBatteryAmmoProvider
     proto: BulletPlasmaLaserSniper
     fireCost: 333.33
+  - type: Food
+    requiresSpecialDigestion: true
 
 - type: entity
   id: PlasmaSniperMagazinePrint

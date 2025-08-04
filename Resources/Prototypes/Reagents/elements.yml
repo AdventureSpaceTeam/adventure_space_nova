@@ -360,3 +360,13 @@
   color: "#bababa"
   meltingPoint: 419.5
   boilingPoint: 907.0
+# Adventure-edit-start
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 1
+        conditions:
+        - !type:OrganType
+          type: Vox
+# Adventure-edit-end

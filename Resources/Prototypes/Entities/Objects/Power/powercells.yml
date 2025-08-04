@@ -18,6 +18,13 @@
     solutions:
       battery:
         maxVol: 5
+#Adventure-edit-start
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Zinc
+          Quantity: 5
+#Adventure-edit-end
   - type: InjectableSolution
     solution: battery
   - type: DrawableSolution
@@ -33,6 +40,10 @@
   - type: Appearance
   - type: PowerCellVisuals
   - type: Riggable
+#Adventure-edit-start
+  - type: Food
+    requiresSpecialDigestion: true
+#Adventure-edit-end
 
 - type: entity
   name: potato battery
@@ -279,6 +290,13 @@
     solutions:
       battery:
         maxVol: 15
+#Adventure-edit-start
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Zinc
+          Quantity: 15
+#Adventure-edit-end
   - type: Extractable
     juiceSolution:
       reagents:
@@ -291,6 +309,10 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
+#Adventure-edit-start
+  - type: Food
+    requiresSpecialDigestion: true
+#Adventure-edit-end
 
 - type: entity
   id: PowerCageSmall

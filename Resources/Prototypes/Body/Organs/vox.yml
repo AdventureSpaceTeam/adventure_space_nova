@@ -27,7 +27,18 @@
     specialDigestible:
       tags:
       - Trash
+      - PowerCell #Adventure-edit
+      - PotatoBattery #Adventure-edit
+      - PowerCellSmall #Adventure-edit
+      - PowerCage #Adventure-edit
+      - PlasmaMag #Adventure-edit
+      - PlasmaMagSniper #Adventure-edit
     isSpecialDigestibleExclusive: false
+#Adventure-edit-start
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi
+    state: stomach
+#Adventure-edit-end
 
 - type: entity
   parent: OrganHumanLiver
@@ -37,6 +48,11 @@
   components:
   - type: Metabolizer
     metabolizerTypes: [Vox]
+#Adventure-edit-start
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi
+    state: liver
+#Adventure-edit-end
 
 - type: entity
   parent: OrganHumanHeart
@@ -46,3 +62,8 @@
   components:
   - type: Metabolizer
     metabolizerTypes: [Vox]
+#Adventure-edit-start
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi
+    state: heart
+#Adventure-edit-end

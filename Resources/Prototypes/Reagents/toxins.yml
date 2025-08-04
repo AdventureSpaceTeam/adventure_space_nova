@@ -769,3 +769,7 @@
         conditions:
         - !type:OrganType
           type: Vox
+# Adventure-edit-start
+        - !type:OrganType
+          type: PigMan
+# Adventure-edit-end
