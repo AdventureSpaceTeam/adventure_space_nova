@@ -8,7 +8,7 @@
   - AdventureBoxNew     #min 25 max 120 #rework (too big, original min 50)
   - AdventureCluster    #min 0  max 35
   - AdventureDelta      #min 30 max N/A
-  - AdventureEclipse    #min 0  max 60
+# - AdventureEclipse    #min 0  max 60  #огрызок, надо реворкать
   - AdventureLoop       #min 25 max 70
   - AdventureMarathon   #min 25 max 70
   - AdventureMaus       #min 0  max 40
