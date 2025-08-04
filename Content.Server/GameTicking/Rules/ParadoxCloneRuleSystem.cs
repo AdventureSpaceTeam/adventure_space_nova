@@ -3,6 +3,7 @@ using Content.Server.Cloning;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Medical.SuitSensors;
 using Content.Server.Objectives.Components;
+using Content.Shared._Adventure.TTS; // Adventure tts fix
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Gibbing.Components;
 using Content.Shared.Medical.SuitSensor;
@@ -92,6 +93,15 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
         _sensor.SetAllSensors(clone.Value, SuitSensorMode.SensorOff);
 
         args.Entity = clone;
+
+        if (ent.Comp.OriginalBody != null && clone != null)
+        {
+            if (TryComp<TTSComponent>(ent.Comp.OriginalBody.Value, out var originalTTS))
+            {
+                var cloneTTS = EnsureComp<TTSComponent>(clone.Value);
+                cloneTTS.VoicePrototypeId = originalTTS.VoicePrototypeId;
+            }
+        }
     }
 
     private void AfterAntagEntitySelected(Entity<ParadoxCloneRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
