@@ -1,4 +1,5 @@
 using Content.Server.Humanoid;
+using Content.Shared._Adventure.TTS; // Adventure TTS fix
 using Content.Shared.Administration.Logs;
 using Content.Shared.Cloning;
 using Content.Shared.Cloning.Events;
@@ -133,6 +134,14 @@ public sealed partial class CloningSystem : EntitySystem
 
         var cloningEv = new CloningEvent(settings, clone);
         RaiseLocalEvent(original, ref cloningEv); // used for datafields that cannot be directly copied using CopyComp
+
+        // Adventure TTS fix start
+        if (TryComp<TTSComponent>(original, out var originalTTS))
+        {
+            var cloneTTS = EnsureComp<TTSComponent>(clone);
+            cloneTTS.VoicePrototypeId = originalTTS.VoicePrototypeId;
+        }
+        // Adventure TTS fix end
     }
 
     /// <summary>
