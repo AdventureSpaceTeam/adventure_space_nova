@@ -53,6 +53,10 @@
   - type: Tag
     tags:
       - InHandsMob
+      - CanPilot
+      - FootstepSound
+      - DoorBumpOpener
+      - AnomalyHost
   - type: MultiHandedItem
   - type: CanEscapeInventory # надо
   - type: Bloodstream
