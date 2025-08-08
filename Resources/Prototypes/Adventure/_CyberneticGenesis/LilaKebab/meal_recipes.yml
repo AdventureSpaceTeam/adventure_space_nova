@@ -1,0 +1,17 @@
+#Pizzas TODO: contruction graph based pizza
+- type: microwaveMealRecipe
+  id: RecipeLilaKebabShaurma
+  name: шаурма ли ла кебаб
+  result: FoodMealLilaKebab
+  time: 30
+  group: Savory
+  reagents:
+    BbqSauce: 5
+    Ketchup: 5
+  solids:
+    FoodDoughFlat: 3
+    FoodTomato: 1
+    FoodMeatBacon: 2
+    FoodMeat: 1
+    FoodOnionSlice: 1
+    FoodCabbage: 1
