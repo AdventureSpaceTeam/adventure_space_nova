@@ -44,7 +44,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCorePyroclastic
         coreInertPrototype: AnomalyCorePyroclasticInert
         supercriticalSoundAtAnimationStart:
@@ -76,7 +76,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreElectricity
         coreInertPrototype: AnomalyCoreElectricityInert
         supercriticalSoundAtAnimationStart:
@@ -108,7 +108,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreShadow
         coreInertPrototype: AnomalyCoreShadowInert
         supercriticalSoundAtAnimationStart:
@@ -140,7 +140,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreIce
         coreInertPrototype: AnomalyCoreIceInert
         supercriticalSoundAtAnimationStart:
@@ -172,7 +172,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreFlora
         coreInertPrototype: AnomalyCoreFloraInert
         supercriticalSoundAtAnimationStart:
@@ -204,7 +204,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreBluespace
         coreInertPrototype: AnomalyCoreBluespaceInert
         supercriticalSoundAtAnimationStart:
@@ -236,7 +236,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreFlesh
         coreInertPrototype: AnomalyCoreFleshInert
         supercriticalSoundAtAnimationStart:
@@ -268,7 +268,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreGravity
         coreInertPrototype: AnomalyCoreGravityInert
         supercriticalSoundAtAnimationStart:
@@ -301,7 +301,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreTech
         coreInertPrototype: AnomalyCoreTechInert
         supercriticalSoundAtAnimationStart:
@@ -334,7 +334,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreRock
         coreInertPrototype: AnomalyCoreRockInert
         supercriticalSoundAtAnimationStart:
@@ -366,7 +366,7 @@
     injectionComponents:
       - type: Anomaly
         deleteEntity: false
-        maxPointsPerSecond: 100
+        maxPointsPerSecond: 18 # Adventure rnd nerf
         corePrototype: AnomalyCoreSanta
         coreInertPrototype: AnomalyCoreSantaInert
         supercriticalSoundAtAnimationStart:
