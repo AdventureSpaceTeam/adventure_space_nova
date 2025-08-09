@@ -26,7 +26,7 @@
   molarMass: 100
   color: c56091
   reagent: BZ
-  pricePerMole: 2
+  pricePerMole: 4
 
 - type: entity
   parent: GasCanister
@@ -244,7 +244,7 @@
   gasOverlayState: halon
   color: 99ccff
   reagent: Halon
-  pricePerMole: 4
+  pricePerMole: 8
 
 - type: entity
   parent: GasCanister
@@ -557,7 +557,7 @@
   gasVisbilityFactor: 1000
   color: 0066ff
   reagent: HyperNoblium
-  pricePerMole: 15
+  pricePerMole: 30
 
 - type: entity
   parent: GasCanister
@@ -768,7 +768,7 @@
   gasVisbilityFactor: 1000
   color: 25aef7
   reagent: Pluoxium
-  pricePerMole: 5
+  pricePerMole: 10
 
 - type: entity
   parent: GasCanister
@@ -1016,7 +1016,7 @@
   gasVisbilityFactor: 500
   color: b65d40
   reagent: Nitrium
-  pricePerMole: 12
+  pricePerMole: 24
 
 - type: entity
   parent: GasCanister
@@ -1174,7 +1174,7 @@
   molarMass: 4
   color: acac00
   reagent: Helium
-  pricePerMole: 7
+  pricePerMole: 14
 
 - type: entity
   parent: GasCanister
@@ -1268,7 +1268,7 @@
   gasVisbilityFactor: 100
   color: 003000
   reagent: AntiNoblium
-  pricePerMole: 20
+  pricePerMole: 40
 
 - type: entity
   parent: GasCanister
@@ -1469,7 +1469,7 @@
   gasVisbilityFactor: 800
   color: 00cd0d
   reagent: ProtoNitrate
-  pricePerMole: 5
+  pricePerMole: 10
 
 - type: entity
   parent: GasCanister
@@ -1617,7 +1617,7 @@
   gasVisbilityFactor: 100
   color: 000031
   reagent: Zauker
-  pricePerMole: 30
+  pricePerMole: 3000
 
 - type: entity
   parent: GasCanister
