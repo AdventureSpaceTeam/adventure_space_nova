@@ -244,7 +244,7 @@
   gasOverlayState: halon
   color: 99ccff
   reagent: Halon
-  pricePerMole: 8
+  pricePerMole: 16
 
 - type: entity
   parent: GasCanister
@@ -404,7 +404,7 @@
   gasOverlayState: healium
   color: 512525
   reagent: Healium
-  pricePerMole: 12
+  pricePerMole: 24
 
 - type: entity
   parent: GasCanister
@@ -665,7 +665,7 @@
   molarMass: 2
   color: e1e1e1
   reagent: Hydrogen
-  pricePerMole: 5
+  pricePerMole: 10
 
 - type: entity
   parent: GasCanister
