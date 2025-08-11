@@ -19,7 +19,6 @@
       - id: C8GCard
       - id: C9GCard
       - id: C10GCard
-      - id: CardHolder
       - id: PqGCard
       - id: PaGCard
       - id: PjGCard
@@ -33,7 +32,6 @@
       - id: P8GCard
       - id: P9GCard
       - id: P10GCard
-      - id: CardHolder
       - id: BqGCard
       - id: BaGCard
       - id: BjGCard
@@ -47,7 +45,6 @@
       - id: B8GCard
       - id: B9GCard
       - id: B10GCard
-      - id: CardHolder
       - id: KqGCard
       - id: KaGCard
       - id: KjGCard
@@ -61,7 +58,6 @@
       - id: K8GCard
       - id: K9GCard
       - id: K10GCard
-      - id: CardHolder
   - type: Sprite
     sprite: Adventure/Objects/Fun/cards.rsi
     state: card_box
