@@ -165,7 +165,7 @@
   id: BodyHairM
   bodyPart: Chest
   markingCategory: Overlay
-  speciesRestriction: [Human, Dwarf]
+  speciesRestriction: [Human, Dwarf, Felinid]
   coloring:
     default:
       type:
@@ -183,7 +183,7 @@
   id: BodyHairF
   bodyPart: Chest
   markingCategory: Overlay
-  speciesRestriction: [Human, Dwarf]
+  speciesRestriction: [Human, Dwarf, Felinid]
   coloring:
     default:
       type:
@@ -201,7 +201,7 @@
   id: BodyHairLeg
   bodyPart: LLeg
   markingCategory: Overlay
-  speciesRestriction: [Human, Dwarf, PigMan]
+  speciesRestriction: [Human, Dwarf, PigMan, Felinid]
   coloring:
     default:
       type:
@@ -219,7 +219,7 @@
   id: BodyHairHand
   bodyPart: LArm
   markingCategory: Overlay
-  speciesRestriction: [Human, Dwarf, PigMan]
+  speciesRestriction: [Human, Dwarf, PigMan, Felinid]
   coloring:
     default:
       type:
