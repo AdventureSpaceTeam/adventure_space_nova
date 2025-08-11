@@ -21,6 +21,9 @@
   parent: BaseMobResomi
   id: MobResomi
 
+- type: Tag
+  id: InHandsMob
+
 - type: entity
   abstract: true
   save: false
@@ -47,6 +50,13 @@
     scale: 0.8, 0.8
   - type: Item
     size: Ginormous
+  - type: Tag
+    tags:
+      - InHandsMob
+      - CanPilot
+      - FootstepSound
+      - DoorBumpOpener
+      - AnomalyHost
   - type: MultiHandedItem
   - type: CanEscapeInventory # надо
   - type: Bloodstream
@@ -73,18 +83,18 @@
     heatDamageThreshold: 298.15 # 25с - начинаем получать урон.
     coldDamageThreshold: 213
     currentTemperature: 291.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
-    coldDamage: 
+    coldDamage:
       types:
         Cold : 0.1
     specificHeat: 42
-    heatDamage: 
+    heatDamage:
       types:
         Heat : 1.5
   - type: TemperatureSpeed # так как данный компонент не расчитан на установку понижения скокрости от жары, то первая строчка установлена на невозможную температуру тела.
     thresholds:
       10273: 0.4 # *невозможное число* (чтобы резоми резко не ускорялся при темпе выше 25с,а продолжал ходить медленно).
-      298: 0.7 
-      295: 0.9 # с этого значения и до невозможного числа резоми теряет скорость от жары. 
+      298: 0.7
+      295: 0.9 # с этого значения и до невозможного числа резоми теряет скорость от жары.
       294: 1.0 # так как пороги скорости работают от верхнего числа к нижнему, порог от 294 до 275кпа нужен, чтобы имел свою нормальную скорость в комфортных условиях.
       275.15: 1.1 # отсюда и до 225 резоми получает 10% буста к скорости, потому что ему кайф.
       225: 0.9 # отсюда резоми начинает терять скорость, чтоб не втыкал.
@@ -97,10 +107,11 @@
     prototype: Resomi
     requiredLegs: 2
   - type: Hunger
-  - type: Icon 
+  - type: Icon
     sprite: Adventure/Races/Resomi/Species/parts.rsi
     state: full
   - type: Thirst
+
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -112,7 +123,7 @@
     - HeadTop
     - Hair
   - type: Fixtures
-    fixtures: 
+    fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle

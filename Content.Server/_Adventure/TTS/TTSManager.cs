@@ -106,7 +106,9 @@ public sealed class TTSManager
 
             var soundData = await response.Content.ReadAsByteArrayAsync();
 
-            _cache.Add(cacheKey, soundData);
+            // Because internet is slow and mutexes is hard in sandbox, we might override previous cache, but it doesn't
+            // really matter.
+            _cache[cacheKey] = soundData;
             _cacheKeysSeq.Add(cacheKey);
             if (_cache.Count > _maxCachedCount)
             {

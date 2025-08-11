@@ -5,7 +5,7 @@
   forcedColoring: true
   speciesRestriction: [Vox]
   sprites:
-  - sprite: Adventure/Races/Vox/Customization.rsi
+  - sprite: Adventure/Races/Vox/Customization/parts.rsi
     state: beak_vulture
   coloring:
     default:
@@ -20,7 +20,7 @@
   forcedColoring: true
   speciesRestriction: [Vox]
   sprites:
-  - sprite: Adventure/Races/Vox/Customization.rsi
+  - sprite: Adventure/Races/Vox/Customization/parts.rsi
     state: beak_penguin
   coloring:
     default:
@@ -35,5 +35,5 @@
   speciesRestriction: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Adventure/Races/Vox/Customization.rsi
+  - sprite: Adventure/Races/Vox/Customization/parts.rsi
     state: big_spike

@@ -74,9 +74,6 @@ public sealed class TTSSystem : EntitySystem
 
         _sawmill.Debug($"Playing TTS audio {ev.Data.Length} bytes from {ev.SourceUid} entity");
 
-        if (ev.SourceUid is { Id: 0 } || !(ev.SourceUid?.Valid ?? false))
-            return;
-
         if (ev.SourceUid != null)
         {
             var sourceUid = GetEntity(ev.SourceUid.Value);

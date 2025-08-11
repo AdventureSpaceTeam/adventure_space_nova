@@ -1,0 +1,33 @@
+- type: entity
+  id: OrganVoxBrain
+  parent: OrganHumanBrain
+  name: мозг вокса
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganVoxEyes
+  parent: OrganHumanEyes
+  name: глаза 
+  description: Я тебя вижу
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  id: OrganVoxKidneys
+  parent: OrganHumanKidneys
+  name: почки
+  description: Выводит токсины из кровотока.
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r

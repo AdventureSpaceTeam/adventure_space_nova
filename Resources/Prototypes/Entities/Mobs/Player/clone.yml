@@ -62,6 +62,12 @@
   - SouthernAccent
   - SpanishAccent
   - StutteringAccent
+  # Adventure components start
+  - UrUAccent
+  - DwarfAccent
+  - SnakeAccent
+  - TTS
+  # Adventure components end
   blacklist:
     components:
     - AttachedClothing # helmets, which are part of the suit

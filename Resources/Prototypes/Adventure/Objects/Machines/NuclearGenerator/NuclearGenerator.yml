@@ -136,6 +136,9 @@
         Cable: 10
         Uranium: 30
         NukeActivator: 1
+    - type: Tag
+      tags:
+        - NukeGenerator
 
 - type: latheRecipe
   id: NuclearGeneratorMachineCircuitboard
@@ -199,6 +202,9 @@
 
 - type: Tag
   id: NukeActivator
+
+- type: Tag
+  id: NukeGenerator
 
 - type: stack
   id: NukeActivator

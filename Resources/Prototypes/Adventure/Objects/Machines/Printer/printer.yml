@@ -26,6 +26,8 @@
     #   map: ["enum.MaterialStorageVisualLayers.Inserting"]
   - type: MaterialStorage
     useInsertingAnimation: false
+    canEjectStoredMaterials: false
+    dropOnDeconstruct: false
     whitelist:
       tags:
         - Document
