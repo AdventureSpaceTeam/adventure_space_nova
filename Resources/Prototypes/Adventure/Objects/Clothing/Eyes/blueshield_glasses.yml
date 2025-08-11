@@ -1,0 +1,10 @@
+- type: entity
+  parent: [ClothingEyesGlassesSecurity, ShowMedicalIcons]
+  id: ClothingEyesGlassesBlueShield
+  name: очки синего щита
+  description: Модифицированная версия солнцезащитных очков службы безопасности, с встроенным визором здоровья.
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/Eyes/blueshield_glasses.rsi
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/Eyes/blueshield_glasses.rsi
