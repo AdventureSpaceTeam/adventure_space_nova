@@ -913,9 +913,17 @@ public sealed class EntityEffectSystem : EntitySystem
 
         var gasses = plantholder.Seed.ConsumeGasses;
 
+        // Adventure gases begin
+        var availableGases = Enum.GetValues(typeof(Gas))
+            .Cast<Gas>()
+            .Where(g => g != Gas.Zauker && g != Gas.ProtoNitrate && g != Gas.Nitrium)
+            .ToList();
+        if (availableGases.Count == 0)
+            return;
+        // Adventure gases end
         // Add a random amount of a random gas to this gas dictionary
         float amount = _random.NextFloat(args.Effect.MinValue, args.Effect.MaxValue);
-        Gas gas = _random.Pick(Enum.GetValues(typeof(Gas)).Cast<Gas>().ToList());
+        Gas gas = _random.Pick(availableGases); // Adventure gases
         if (gasses.ContainsKey(gas))
         {
             gasses[gas] += amount;
