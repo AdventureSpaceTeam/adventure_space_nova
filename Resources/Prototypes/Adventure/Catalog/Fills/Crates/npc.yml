@@ -1,8 +1,0 @@
-- type: entity
-  id: CrateNPCGoliath
-  parent: CrateLivestock
-  suffix: Голиаф
-  components:
-  - type: StorageFill
-    contents:
-      - id: MobGoliath
