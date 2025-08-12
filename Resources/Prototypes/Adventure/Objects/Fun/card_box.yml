@@ -58,6 +58,10 @@
       - id: K8GCard
       - id: K9GCard
       - id: K10GCard
+      - id: CardHolder
+      - id: CardHolder
+      - id: CardHolder
+      - id: CardHolder
   - type: Sprite
     sprite: Adventure/Objects/Fun/cards.rsi
     state: card_box
@@ -68,6 +72,7 @@
   - type: Storage
     grid:
     - 0,0,13,3
+    maxItemSize: Small
     quickInsert: true
     areaInsert: true
     whitelist:
