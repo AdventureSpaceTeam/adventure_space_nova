@@ -62,18 +62,29 @@ public enum MutationFlags : byte
 }
 
 [Flags]
-public enum GasFlags : short
+public enum GasFlags : int
 {
     None = 0,
-    Nitrogen = 1,
-    Oxygen = 2,
-    CarbonDioxide = 4,
-    Plasma = 8,
-    Tritium = 16,
-    WaterVapor = 32,
-    Ammonia = 64,
-    NitrousOxide = 128,
-    Frezon = 256,
+    Nitrogen = 1 << 0,
+    Oxygen = 1 << 1,
+    CarbonDioxide = 1 << 2,
+    Plasma = 1 << 3,
+    Tritium = 1 << 4,
+    WaterVapor = 1 << 5,
+    Ammonia = 1 << 6,
+    NitrousOxide = 1 << 7,
+    Frezon = 1 << 8,
+    BZ = 1 << 9,
+    Halon = 1 << 10,
+    Healium = 1 << 11,
+    HyperNoblium = 1 << 12,
+    Hydrogen = 1 << 13,
+    Pluoxium = 1 << 14,
+    Nitrium = 1 << 15,
+    Helium = 1 << 16,
+    AntiNoblium = 1 << 17,
+    ProtoNitrate = 1 << 18,
+    Zauker = 1 << 19,
 }
 
 public enum AnalyzerHarvestType : byte

@@ -239,6 +239,39 @@ public sealed class PlantAnalyzerSystem : EntitySystem
                 case Gas.Frezon:
                     gasFlags |= GasFlags.Frezon;
                     break;
+                case Gas.BZ:
+                    gasFlags |= GasFlags.BZ;
+                    break;
+                case Gas.Halon:
+                    gasFlags |= GasFlags.Halon;
+                    break;
+                case Gas.Healium:
+                    gasFlags |= GasFlags.Healium;
+                    break;
+                case Gas.HyperNoblium:
+                    gasFlags |= GasFlags.HyperNoblium;
+                    break;
+                case Gas.Hydrogen:
+                    gasFlags |= GasFlags.Hydrogen;
+                    break;
+                case Gas.Pluoxium:
+                    gasFlags |= GasFlags.Pluoxium;
+                    break;
+                case Gas.Nitrium:
+                    gasFlags |= GasFlags.Nitrium;
+                    break;
+                case Gas.Helium:
+                    gasFlags |= GasFlags.Helium;
+                    break;
+                case Gas.AntiNoblium:
+                    gasFlags |= GasFlags.AntiNoblium;
+                    break;
+                case Gas.ProtoNitrate:
+                    gasFlags |= GasFlags.ProtoNitrate;
+                    break;
+                case Gas.Zauker:
+                    gasFlags |= GasFlags.Zauker;
+                    break;
             }
         }
         return gasFlags;
