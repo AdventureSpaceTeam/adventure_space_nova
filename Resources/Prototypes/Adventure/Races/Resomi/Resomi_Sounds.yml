@@ -1,6 +1,4 @@
-﻿
-
-- type: soundCollection
+﻿- type: soundCollection
   id: ResomiScreamCollection
   files:
   - /Audio/Adventure/Voice/Resomi/ResomiScream1.ogg

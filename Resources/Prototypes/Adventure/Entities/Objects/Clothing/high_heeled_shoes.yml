@@ -1,0 +1,94 @@
+#каблуки
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: BaseClothingShoesHeeled
+  suffix: BORK, AdvClothing
+  description: Неудобно, но элегантно.
+  name: чёрные туфли на каблуках
+  components:
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHighHeels
+      params:
+        variation: 0.09
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 2
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    layers:
+    - state: icon
+      color: "#292739"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped
+        color: "#292739"
+      shoes-reptilian:
+      - state: equipped-rep
+        color: "#292739"
+
+- type: entity
+  parent: BaseClothingShoesHeeled
+  suffix: BORK, AdvClothing
+  id: ClothingShoesHeeledGreen
+  name: зелёные туфли на каблуках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    layers:
+    - state: icon
+      color: "#5eb8b8"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped
+        color: "#5eb8b8"
+      shoes-reptilian:
+      - state: equipped-rep
+        color: "#5eb8b8"
+
+- type: entity
+  parent: BaseClothingShoesHeeled
+  id: ClothingShoesHeeledBlue
+  suffix: BORK, AdvClothing
+  name: синие туфли на каблуках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    layers:
+    - state: icon
+      color: "#3e6588"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped
+        color: "#3e6588"
+      shoes-reptilian:
+      - state: equipped-rep
+        color: "#3e6588"
+
+- type: entity
+  parent: BaseClothingShoesHeeled
+  id: ClothingShoesHeeledRed
+  suffix: BORK, AdvClothing
+  name: красные туфли на каблуках
+  components:
+  - type: Sprite
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    layers:
+    - state: icon
+      color: "#a52f29"
+  - type: Clothing
+    sprite: Adventure/Objects/Clothing/high_heeled_shoes.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped
+        color: "#a52f29"
+      shoes-reptilian:
+      - state: equipped-rep
+        color: "#a52f29"

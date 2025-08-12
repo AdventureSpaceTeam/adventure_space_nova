@@ -2,7 +2,7 @@
 - type: entity
   parent: BaseItem
   id: CLEAuplink
-  name: Терминал ЦСС
+  name: терминал ЦСС
   suffix: Adventure
   description: Терминал, разработанный специально для центральных силовых структур NT
   components:
@@ -32,13 +32,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 20
+      CentCommCrystal: 30
 
 # Аплинк лидера
 - type: entity
   parent: BaseItem
   id: CLEAuplinkleader
-  name: Терминал ЦСС лидера
+  name: терминал ЦСС лидера
   suffix: Adventure
   description: Тот же самый терминал для центральных силовых структур NT, но уже для офицеров отрядов
   components:
@@ -69,7 +69,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 40
 
 # Предметы аплинка - Оружие
 - type: storeCategory
@@ -79,23 +79,23 @@
 - type: listing
   id: WeaponPistolMk58CLEA
   productEntity: WeaponPistolMk58
-  cost: 
-    CentCommCrystal: 2 
+  cost:
+    CentCommCrystal: 2
   categories:
   - CLEAweapons
 
 - type: listing
   id: WeaponDisablerCLEA
   productEntity: WeaponDisabler
-  cost: 
-    CentCommCrystal: 3 
+  cost:
+    CentCommCrystal: 3
   categories:
   - CLEAweapons
 
 - type: listing
   id: WeaponLaserCarbineCLEA
   productEntity: WeaponLaserCarbine
-  cost: 
+  cost:
     CentCommCrystal: 10
   categories:
   - CLEAweapons
@@ -103,7 +103,7 @@
 - type: listing
   id: WeaponSubMachineGunDrozdCLEA
   productEntity: WeaponSubMachineGunDrozd
-  cost: 
+  cost:
     CentCommCrystal: 12
   categories:
   - CLEAweapons
@@ -111,7 +111,7 @@
 - type: listing
   id: WeaponRifleLecterCLEA
   productEntity: WeaponRifleLecter
-  cost: 
+  cost:
     CentCommCrystal: 12
   categories:
   - CLEAweapons
@@ -119,7 +119,7 @@
 - type: listing
   id: WeaponShotgunKammererCLEA
   productEntity: WeaponShotgunKammerer
-  cost: 
+  cost:
     CentCommCrystal: 12
   categories:
   - CLEAweapons
@@ -127,8 +127,8 @@
 - type: listing
   id: WeaponLaserCannonCLEA
   productEntity: WeaponLaserCannon
-  cost: 
-    CentCommCrystal: 15 
+  cost:
+    CentCommCrystal: 15
   categories:
   - CLEAweapons
 # /Предметы аплинка - Оружие
@@ -159,7 +159,7 @@
 - type: listing
   id: MagazinePistolSubMachineGunCLEA
   productEntity: MagazinePistolSubMachineGun
-  description:  Магазин калибра 35. Идеально подходит для крупных пистолетов пулемётов. 
+  description:  Магазин калибра 35. Идеально подходит для крупных пистолетов пулемётов.
   cost:
     CentCommCrystal: 2
   categories:
@@ -324,7 +324,7 @@
     CentCommCrystal: 1
   categories:
   - CLEAmedicine
-  
+
 - type: listing
   id: HandheldHealthAnalyzerCLEA
   productEntity: HandheldHealthAnalyzer
@@ -381,7 +381,7 @@
 
 - type: listing
   id: WeaponRifleAkCLEA
-  productEntity: WeaponRifleAk 
+  productEntity: WeaponRifleAk
   cost:
     CentCommCrystal: 15
   categories:

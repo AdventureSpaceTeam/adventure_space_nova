@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: BlueShieldArmoredTrench
-  name: Укреплённый тренч офицера синий щит
+  name: укреплённый тренч офицера синий щит
   description: Тренч из самых лучших синтетических материалов и с прочными вставками из керамических пластин. Не мешает движениям, но защищает на ура.
   components:
   - type: Sprite

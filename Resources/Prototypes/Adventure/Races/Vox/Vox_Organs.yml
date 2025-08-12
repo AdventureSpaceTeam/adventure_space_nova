@@ -11,7 +11,7 @@
 - type: entity
   id: OrganVoxEyes
   parent: OrganHumanEyes
-  name: глаза 
+  name: глаза
   description: Я тебя вижу
   components:
   - type: Sprite

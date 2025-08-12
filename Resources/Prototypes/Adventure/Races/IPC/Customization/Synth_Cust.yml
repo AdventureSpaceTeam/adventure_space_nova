@@ -186,7 +186,7 @@
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
     state: screen
   - sprite: Adventure/Races/IPC/Customization/Face.rsi
-    state: face  
+    state: face
 
 - type: marking
   id: SynthFace

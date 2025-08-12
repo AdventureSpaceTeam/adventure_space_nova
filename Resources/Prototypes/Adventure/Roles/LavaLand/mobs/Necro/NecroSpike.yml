@@ -53,7 +53,7 @@
         mask:
         - MobMask
         layer:
-        - MobLayer 
+        - MobLayer
   - type: CombatMode
     toggleMouseRotator: false
   - type: NoRotateOnInteract
@@ -93,7 +93,7 @@
     prototypes:
       - MobLavaLandLegionEmpty
       - MobWatcherLavaLandFireEmpty
-      - MobLavaLandGoliathEmpty  
+      - MobLavaLandGoliathEmpty
 
 # обвал
 - type: entity

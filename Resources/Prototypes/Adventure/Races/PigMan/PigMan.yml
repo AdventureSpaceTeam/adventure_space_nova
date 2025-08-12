@@ -25,11 +25,11 @@
     heatDamageThreshold: 325
     coldDamageThreshold: 243.15
     currentTemperature: 310.15
-    coldDamage: 
+    coldDamage:
       types:
         Cold : 0.1
     specificHeat: 42
-    heatDamage: 
+    heatDamage:
       types:
         Heat : 1.5
   - type: TemperatureSpeed
@@ -65,7 +65,7 @@
     requiredLegs: 2
   - type: Hunger
     baseDecayRate: 0.0664
-  - type: Icon 
+  - type: Icon
     sprite: Adventure/Races/PigMan/Species/parts.rsi
     state: full
   - type: Butcherable

@@ -35,7 +35,7 @@
     - LavaMob
   - type: NoSlip
   - type: Temperature
-    heatDamageThreshold: 100273,15 
+    heatDamageThreshold: 100273,15
     specificHeat: 10000
   - type: ExplosionResistance
     damageCoefficient: 0.5
@@ -100,7 +100,7 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound  
+    - FootstepSound
     - LavaMob
   - type: PointLight
     radius: 2
@@ -180,7 +180,7 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    soundGunshot: /Audio/Magic/fireball.ogg 
+    soundGunshot: /Audio/Magic/fireball.ogg
   - type: Bloodstream
     bloodMaxVolume: 0
 
@@ -267,7 +267,7 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound  
+    - FootstepSound
     - LavaMob
 
 #легион
@@ -281,7 +281,7 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound 
+    - FootstepSound
     - LavaMob
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/mobs/legions/legion.rsi
@@ -338,7 +338,7 @@
   - type: AmbientSound
     range: 5
     sound:
-      path: /Audio/Adventure/LavaLand/legion_whispers.ogg 
+      path: /Audio/Adventure/LavaLand/legion_whispers.ogg
 
 - type: entity
   id: MobLavaLandLegionSkull
@@ -381,7 +381,7 @@
   - type: AmbientSound
     range: 5
     sound:
-      path: /Audio/Adventure/LavaLand/legion_whispers.ogg 
+      path: /Audio/Adventure/LavaLand/legion_whispers.ogg
 
 - type: entity
   id: FoodLegionHeart
@@ -404,7 +404,7 @@
   - type: Item
     size: Normal
   - type: Perishable
-    rotAfter: 120 
+    rotAfter: 120
     molsPerSecondPerUnitMass: 0
     forceRotProgression: true
   - type: RotInto
@@ -483,17 +483,17 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound  
+    - FootstepSound
     - LavaMob
   - type: FootstepModifier
     footstepSoundCollection:
       collection: LarvaRun
-      params: 
+      params:
         volume: -1
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
-    blackboard: 
+    blackboard:
       VisionRadius: !type:Single
         15
       AggroVisionRadius: !type:Single

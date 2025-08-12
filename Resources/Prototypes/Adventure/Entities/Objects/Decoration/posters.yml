@@ -1,0 +1,54 @@
+- type: entity
+  parent: PosterBase
+  id: PosterLegitZhuzhasi
+  suffix: Adventure
+  name: Жужасы
+  description: Рекламный постер какого-то фильма жужжасов.
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/posters.rsi
+    state: Uzhasi
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandERP
+  suffix: Adventure
+  name: Скажи "ДА" ЕРП!
+  description: Этот плакат нельзя читать, никогда и ни за что!!
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/posters.rsi
+    state: erp
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandAdmin
+  suffix: Adventure
+  name: Красный бог следит
+  description: Этот плакат напонимает экипажу станции, что они всегда под надзором.
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/posters.rsi
+    state: admin
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitNabeg
+  suffix: Adventure
+  name: Внимание! росыскивается хулиган
+  description: Если вы видели человека с этого объявления, то сообщите СБ или молитесь богу.
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/posters.rsi
+    state: nabeg
+
+- type: entity
+  parent: PosterBase
+  id: PosterContrabandNuke
+  suffix: Adventure
+  name: "Раньше было лучше"
+  description: Этот плакат напоминает бывалым жителям космоса, что раньше было лучше.
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/posters.rsi
+    state: nuke

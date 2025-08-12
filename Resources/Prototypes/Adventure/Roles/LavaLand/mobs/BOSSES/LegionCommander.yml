@@ -26,7 +26,7 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          LegionBossStage2: 
+          LegionBossStage2:
             min: 1
             max: 1
       - !type:PlaySoundBehavior
@@ -39,7 +39,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.70,-0.70,0.70,0.70" 
+          bounds: "-0.70,-0.70,0.70,0.70"
         density: 20000
         mask:
         - MachineMask
@@ -74,7 +74,7 @@
   - type: AmbientSound
     range: 5
     sound:
-      path: /Audio/Adventure/LavaLand/legion_boss.ogg 
+      path: /Audio/Adventure/LavaLand/legion_boss.ogg
   - type: HTN
     rootTask:
       task: SimpleMeleeRangedHostileCompoundAudioTrigger
@@ -84,7 +84,7 @@
       AggroVisionRadius: !type:Single
         8
       SoundTargetInLOS: !type:SoundPathSpecifier
-        path: /Audio/Adventure/LavaLand/ghost.ogg   
+        path: /Audio/Adventure/LavaLand/ghost.ogg
 
 - type: entity
   id: LegionBossStage2
@@ -113,7 +113,7 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          LegionBossStage3: 
+          LegionBossStage3:
             min: 1
             max: 1
       - !type:PlaySoundBehavior
@@ -153,7 +153,7 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          LegionBossStage4: 
+          LegionBossStage4:
             min: 1
             max: 1
       - !type:PlaySoundBehavior
@@ -193,7 +193,7 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          MobSpawnLegionCommander: 
+          MobSpawnLegionCommander:
             min: 1
             max: 1
       - !type:PlaySoundBehavior
@@ -287,7 +287,7 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    soundGunshot: /Audio/Adventure/LavaLand/ghost.ogg  
+    soundGunshot: /Audio/Adventure/LavaLand/ghost.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
@@ -303,7 +303,7 @@
       AggroVisionRadius: !type:Single
         9
       SoundTargetInLOS: !type:SoundPathSpecifier
-        path: /Audio/Adventure/LavaLand/ghost.ogg   
+        path: /Audio/Adventure/LavaLand/ghost.ogg
   - type: Destructible
     thresholds:
     - trigger:
@@ -313,7 +313,7 @@
   - type: AmbientSound
     range: 5
     sound:
-      path: /Audio/Adventure/LavaLand/legion_boss.ogg 
+      path: /Audio/Adventure/LavaLand/legion_boss.ogg
 
 # Спавн
 - type: entity
@@ -336,7 +336,7 @@
       portalFixture:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.70,-0.70,0.70,0.70" 
+          bounds: "-0.70,-0.70,0.70,0.70"
         mask:
         - FullTileMask
         layer:

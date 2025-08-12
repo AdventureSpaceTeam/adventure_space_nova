@@ -38,6 +38,11 @@
   - ReusableMedipen
 
 - type: latheRecipePack
+  id: CloneFactory
+  recipes:
+  - BaseMobHumanCloneFactory
+
+- type: latheRecipePack
   id: AdvPrinter
   recipes:
   - Document0

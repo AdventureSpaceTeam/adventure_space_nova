@@ -1,26 +1,26 @@
 - type: gameMap
-  id: AdventureRipper 
-  mapName: 'Ripper Ship' 
-  mapPath: /Maps/Adventure/Ripper.yml 
-  minPlayers: 0 
-  maxPlayers: 25 
+  id: AdventureRipper
+  mapName: 'Ripper Ship'
+  mapPath: /Maps/Adventure/Ripper.yml
+  minPlayers: 0
+  maxPlayers: 25
   stations:
-    ripper: 
+    ripper:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} "Потрошитель" {1}' 
+          mapNameTemplate: '{0} "Потрошитель" {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'BR' 
+            prefixCreator: 'BR'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
         - type: StationJobs
-          overflowJobs: 
+          overflowJobs:
             - Passenger
           availableJobs:
             # service
-            HeadOfPersonnel: [ 1, 1 ] 
+            HeadOfPersonnel: [ 1, 1 ]
             Passenger: [ -1, -1 ]
             ServiceWorker: [ 2, 2 ]
             Bartender: [ 1, 1 ]
