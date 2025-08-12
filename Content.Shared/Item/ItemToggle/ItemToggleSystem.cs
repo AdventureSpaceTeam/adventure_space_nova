@@ -9,7 +9,7 @@ using Content.Shared.Wieldable;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
-using Robust.Shared.Timing;
+using Robust.Shared.Timing; // Adventure WizDen PR merge
 
 namespace Content.Shared.Item.ItemToggle;
 /// <summary>
@@ -24,7 +24,7 @@ public sealed class ItemToggleSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!; // Adventure WizDen PR merge
 
     private EntityQuery<ItemToggleComponent> _query;
 
