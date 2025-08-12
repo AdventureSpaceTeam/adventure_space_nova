@@ -1,5 +1,5 @@
 - type: entity
-  name: шаурма лю ля кебаб
+  name: шаурма люля-кебаб
   parent: FoodMealBase
   id: FoodMealLilaKebab
   description: Большая и аппетитная шаурма, её вкус определённо скрасит ваш будний день, а его содержимое поднимет сил.
