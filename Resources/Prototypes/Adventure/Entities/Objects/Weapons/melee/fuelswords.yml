@@ -101,7 +101,7 @@
     qualities: Welding
     speedModifier: 1.5
   - type: Welder
-    fuelConsumption: 10
+    fuelConsumption: 5
   - type: PointLight
     enabled: false
     radius: 2
@@ -165,8 +165,6 @@
       params:
         variation: 0.250
         volume: -2
-  - type: ItemToggleActiveSound
-    activeSound: null
   - type: ItemToggleMeleeWeapon
     activatedSoundOnHit:
       path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
@@ -182,7 +180,7 @@
       collection: MetalThud
     activatedDamage:
         types:
-          Heat: 12
+          Heat: 18
   - type: ComponentToggler
     components:
     - type: DisarmMalus
