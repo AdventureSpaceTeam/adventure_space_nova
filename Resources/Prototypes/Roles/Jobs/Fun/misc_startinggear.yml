@@ -156,6 +156,8 @@
     - trayScanner
     - AccessConfiguratorUniversal
     - Multitool
+    - AppraisalTool # Adventure
+    - DoorRemoteAll # Adventure
 
 #Gladiator with spear
 - type: startingGear

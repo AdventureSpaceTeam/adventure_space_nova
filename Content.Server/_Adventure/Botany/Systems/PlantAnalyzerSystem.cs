@@ -5,7 +5,6 @@ using Content.Shared.Interaction;
 using Content.Shared._Adventure.PlantAnalyzer;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using System.Linq;
 using System.Text;
@@ -87,10 +86,10 @@ public sealed class PlantAnalyzerSystem : EntitySystem
 
     private void OpenUserInterface(EntityUid user, EntityUid analyzer)
     {
-        if (!TryComp<ActorComponent>(user, out var actor) || !_uiSystem.HasUi(analyzer, PlantAnalyzerUiKey.Key))
+        if (!_uiSystem.HasUi(analyzer, PlantAnalyzerUiKey.Key))
             return;
 
-        _uiSystem.OpenUi(analyzer, PlantAnalyzerUiKey.Key, actor.PlayerSession);
+        _uiSystem.OpenUi(analyzer, PlantAnalyzerUiKey.Key, user);
     }
 
     public void UpdateScannedUser(Entity<PlantAnalyzerComponent> ent, EntityUid target)

@@ -85,3 +85,4 @@ wanted-list-history-table-reason-col = Преступление
 wanted-list-history-table-initiator-col = Инициатор
 # Adventure
 gas-analyzer-program-name = Газоанализатор
+plant-analyzer-program-name = АгроСкан 3000
