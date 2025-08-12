@@ -150,6 +150,7 @@
     - id: ClothingOuterCoatHOP # Corvax-Resprite
     - id: ClothingOuterHardsuitHOP # Adventure
     - id: PrinterFlatpack # Adventure
+    - id: PlantAnalyzerCartridge # Adventure
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
