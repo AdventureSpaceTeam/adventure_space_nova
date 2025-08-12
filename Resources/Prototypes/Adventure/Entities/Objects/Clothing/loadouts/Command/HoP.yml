@@ -31,7 +31,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtJacketHoP
 
-#фуражка 
+#фуражка
 - type: entity
   parent: ClothingHeadHatHopcap
   id: ClothingHeadHatHopHat
@@ -52,7 +52,7 @@
   equipment:
     head: ClothingHeadHatHopHat
 
-#пальто 
+#пальто
 - type: entity
   parent: ClothingOuterCoatHOP
   id: ClothingOuterCoatHOPGreatcoat
@@ -69,7 +69,7 @@
   equipment:
     outerClothing: ClothingOuterCoatHOPGreatcoat
 
-#сумки 
+#сумки
 - type: entity
   parent: [ClothingBackpack, BaseCommandContraband]
   id: ClothingBackpackHOP
@@ -112,7 +112,7 @@
   equipment:
     back: ClothingBackpackSatchelHOP
 
-#скаф 
+#скаф
 - type: entity
   parent: [ClothingOuterHardsuitEVA, BaseCommandContraband]
   id: ClothingOuterHardsuitHOP
