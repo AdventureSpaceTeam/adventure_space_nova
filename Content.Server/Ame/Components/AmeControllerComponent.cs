@@ -79,7 +79,7 @@ public sealed partial class AmeControllerComponent : SharedAmeControllerComponen
     /// </summary>
     [DataField("updatePeriod")]
     [ViewVariables(VVAccess.ReadWrite)]
-    public TimeSpan UpdatePeriod = TimeSpan.FromSeconds(10.0);
+    public TimeSpan UpdatePeriod = TimeSpan.FromSeconds(60.0); // Adventure WL features
 
     /// <summary>
     /// The maximum amount of time that passes between UI updates.

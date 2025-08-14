@@ -61,7 +61,7 @@
     radiationReactiveGases:
       - reactantPrototype: Plasma
         powerGenerationEfficiency: 1
-        reactantBreakdownRate: 0.0001
+        reactantBreakdownRate: 0.00005 # Adventure WL Features
   - type: RadiationReceiver
   - type: PowerSupplier
   - type: Anchorable
