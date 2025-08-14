@@ -25,7 +25,7 @@
         - !type:OrganType
           type: Zerah
           shouldHave: false
-      - !type:PopupMessage 
+      - !type:PopupMessage
         type: Local
         visualType: Medium
         messages:

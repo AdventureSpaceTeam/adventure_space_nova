@@ -11,7 +11,7 @@
   - type: Sprite
     sprite: Adventure/EnergyCores/sphere/sphere_big.rsi
     layers:
-      - state: crutch
+      - state: icon
         map: ["enum.GravityGeneratorVisualLayers.Base"]
       - state: crutch
         map: ["enum.GravityGeneratorVisualLayers.Core"]
@@ -30,6 +30,7 @@
         visible: false
       - state: fly
         map: [ "enum.EnergyCoreVisualLayers.IsOn" ]
+        visible: false
   - type: NodeContainer
     examinable: true
     nodes:

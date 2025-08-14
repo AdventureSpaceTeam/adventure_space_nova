@@ -5,7 +5,6 @@ using Content.Shared.Interaction;
 using Content.Shared._Adventure.PlantAnalyzer;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using System.Linq;
 using System.Text;
@@ -87,10 +86,10 @@ public sealed class PlantAnalyzerSystem : EntitySystem
 
     private void OpenUserInterface(EntityUid user, EntityUid analyzer)
     {
-        if (!TryComp<ActorComponent>(user, out var actor) || !_uiSystem.HasUi(analyzer, PlantAnalyzerUiKey.Key))
+        if (!_uiSystem.HasUi(analyzer, PlantAnalyzerUiKey.Key))
             return;
 
-        _uiSystem.OpenUi(analyzer, PlantAnalyzerUiKey.Key, actor.PlayerSession);
+        _uiSystem.OpenUi(analyzer, PlantAnalyzerUiKey.Key, user);
     }
 
     public void UpdateScannedUser(Entity<PlantAnalyzerComponent> ent, EntityUid target)
@@ -239,6 +238,39 @@ public sealed class PlantAnalyzerSystem : EntitySystem
                     break;
                 case Gas.Frezon:
                     gasFlags |= GasFlags.Frezon;
+                    break;
+                case Gas.BZ:
+                    gasFlags |= GasFlags.BZ;
+                    break;
+                case Gas.Halon:
+                    gasFlags |= GasFlags.Halon;
+                    break;
+                case Gas.Healium:
+                    gasFlags |= GasFlags.Healium;
+                    break;
+                case Gas.HyperNoblium:
+                    gasFlags |= GasFlags.HyperNoblium;
+                    break;
+                case Gas.Hydrogen:
+                    gasFlags |= GasFlags.Hydrogen;
+                    break;
+                case Gas.Pluoxium:
+                    gasFlags |= GasFlags.Pluoxium;
+                    break;
+                case Gas.Nitrium:
+                    gasFlags |= GasFlags.Nitrium;
+                    break;
+                case Gas.Helium:
+                    gasFlags |= GasFlags.Helium;
+                    break;
+                case Gas.AntiNoblium:
+                    gasFlags |= GasFlags.AntiNoblium;
+                    break;
+                case Gas.ProtoNitrate:
+                    gasFlags |= GasFlags.ProtoNitrate;
+                    break;
+                case Gas.Zauker:
+                    gasFlags |= GasFlags.Zauker;
                     break;
             }
         }

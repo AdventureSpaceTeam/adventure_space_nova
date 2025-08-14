@@ -1,6 +1,4 @@
-﻿
-
-- type: soundCollection
+﻿- type: soundCollection
   id: ReptilianScreamCollectionADV
   files:
   - /Audio/Adventure/Voice/Reptilian/Scream1.ogg

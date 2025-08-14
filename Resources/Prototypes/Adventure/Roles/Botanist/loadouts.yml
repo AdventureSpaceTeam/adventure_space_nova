@@ -1,0 +1,29 @@
+# Genius Botanist Time
+- type: loadoutEffectGroup
+  id: GeniusBotanist
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBotanist
+      time: 180000 #50 hrs, special reward for Botanist mains
+
+- type: loadout
+  id: SeniorBotanistPDA
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GeniusBotanist
+  equipment:
+    id: SeniorBotanistPDA
+
+- type: loadout
+  id: BotanistPDA
+  equipment:
+    id: BotanistPDA
+
+- type: loadoutGroup
+  id: BotanistID
+  name: loadout-group-botanist-id
+  loadouts:
+  - BotanistPDA
+  - SeniorBotanistPDA

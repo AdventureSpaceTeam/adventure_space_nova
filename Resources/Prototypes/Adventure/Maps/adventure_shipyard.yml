@@ -1,26 +1,26 @@
 - type: gameMap
-  id: AdventureShipyard 
-  mapName: 'Shipyard' 
-  mapPath: /Maps/Adventure/Shipyard.yml 
+  id: AdventureShipyard
+  mapName: 'Shipyard'
+  mapPath: /Maps/Adventure/Shipyard.yml
   minPlayers: 0
-  maxPlayers: 25 
+  maxPlayers: 25
   stations:
-    shipyard: 
+    shipyard:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} "Shipyard" {1}' 
+          mapNameTemplate: '{0} "Shipyard" {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: '14SP' 
+            prefixCreator: '14SP'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_crimson.yml
         - type: StationJobs
-          overflowJobs: 
+          overflowJobs:
             - Passenger
           availableJobs:
             # service
-            HeadOfPersonnel: [ 1, 1 ] 
+            HeadOfPersonnel: [ 1, 1 ]
             Passenger: [ -1, -1 ]
             ServiceWorker: [ 2, 2 ]
             Bartender: [ 1, 1 ]

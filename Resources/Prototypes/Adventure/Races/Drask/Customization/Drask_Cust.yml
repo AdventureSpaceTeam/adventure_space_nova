@@ -19,7 +19,7 @@
   sprites:
   - sprite: Adventure/Races/Drask/Customization/Face.rsi
     state: tentacles
-  
+
 - type: marking
   id: FaceDraskDouble
   bodyPart: Snout

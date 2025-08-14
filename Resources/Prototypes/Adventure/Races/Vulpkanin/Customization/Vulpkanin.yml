@@ -62,7 +62,7 @@
 #Хвосты
 - type: marking
   id: TailDocked
-  name: Купированный 
+  name: Купированный
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vulpkanin]

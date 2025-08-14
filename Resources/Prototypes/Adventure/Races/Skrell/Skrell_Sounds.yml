@@ -1,6 +1,4 @@
-﻿
-
-- type: soundCollection
+﻿- type: soundCollection
   id: SkrellScreamCollection
   files:
   - /Audio/Adventure/Voice/Skrell/skrell_scream1.ogg

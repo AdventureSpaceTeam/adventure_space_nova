@@ -12,13 +12,13 @@
 
 - type: ttsVoice
   name: Дмитрий Пучков
-  description: 
+  description:
   speaker: puchkow
   id: puchkow
 
 - type: ttsVoice
   name: Мориарти
-  description: 
+  description:
   speaker: moriarti
   id: moriarti
 
@@ -978,7 +978,7 @@
   id: clockwerk_dota_2
 
 - type: ttsVoice
-  name: Crystal Maiden 
+  name: Crystal Maiden
   description: Голос персонажа из игры Dota 2
   speaker: crystal_maiden_dota_2
   id: crystal_maiden_dota_2
@@ -1000,7 +1000,7 @@
   description: Голос персонажа из игры Dota 2
   speaker: doom_dota_2
   id: doom_dota_2
-  
+
 - type: ttsVoice
   name: Dragon Knight
   description: Голос персонажа из игры Dota 2
@@ -1170,7 +1170,7 @@
   id: phantom_assassin_arcana_dota_2
 
 - type: ttsVoice
-  name: Phantom Assassin 
+  name: Phantom Assassin
   description: Голос персонажа из игры Dota 2
   speaker: phantom_assassin_dota_2
   id: phantom_assassin_dota_2

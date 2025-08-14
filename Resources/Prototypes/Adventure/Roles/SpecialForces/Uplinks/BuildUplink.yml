@@ -2,7 +2,7 @@
 - type: entity
   parent: BaseItem
   id: BuildUplink20
-  name: Строительный аплинк
+  name: строительный аплинк
   suffix: Adventure, Для ивентов, 20 СК
   description: Строительный терминал. Поможет построить всё, что можно и нельзя
   components:
@@ -37,7 +37,7 @@
 - type: entity
   parent: BaseItem
   id: BuildUplink50
-  name: Строительный аплинк
+  name: строительный аплинк
   suffix: Adventure, Для ивентов, 50 СК
   description: Строительный терминал. Поможет построить всё, что можно и нельзя
   components:
@@ -72,7 +72,7 @@
 - type: entity
   parent: BaseItem
   id: BuildUplink100
-  name: Строительный аплинк
+  name: строительный аплинк
   suffix: Adventure, Для ивентов, 100 СК
   description: Строительный терминал. Поможет построить всё, что можно и нельзя
   components:
@@ -107,7 +107,7 @@
 - type: entity
   parent: BaseItem
   id: BuildUplinkdebug
-  name: Строительный аплинк
+  name: строительный аплинк
   suffix: Adventure, Для ивентов, Debug
   description: Строительный терминал. Поможет построить всё, что можно и нельзя
   components:

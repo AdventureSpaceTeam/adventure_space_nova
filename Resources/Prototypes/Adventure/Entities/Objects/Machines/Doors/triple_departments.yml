@@ -1,0 +1,134 @@
+# не закрытые
+- type: entity
+  parent: TripleGlassAirlock
+  id: TripleGlassAirlockCommand
+  suffix: Тройной, Командование
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/command.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: TripleGlassAirlock
+  id: TripleGlassAirlockSecurity
+  suffix: Тройной, Служба безопасности
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/security.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: TripleGlassAirlock
+  id: TripleGlassAirlockCargo
+  suffix: Тройной, Снабжение
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/cargo.rsi
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: TripleGlassAirlock
+  id: TripleGlassAirlockEngineering
+  suffix: Тройной, Инженерный
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/engineering.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: TripleGlassAirlock
+  id: TripleGlassAirlockMedical
+  suffix: Тройной, Медицинский
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/medical.rsi
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: TripleGlassAirlock
+  id: TripleGlassAirlockScience
+  suffix: Тройной, Научный
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/science.rsi
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  parent: TripleGlassAirlockEngineering
+  id: TripleGlassAirlockAtmospherics
+  suffix: Тройной, Атмосферный
+  components:
+  - type: Sprite
+    sprite: Adventure/Structures/Doors/Triple/atmospherics.rsi
+
+# закрытые
+- type: entity
+  parent: TripleGlassAirlockCommand
+  id: TripleGlassAirlockCommandLocked
+  suffix: Тройной, Командование, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]
+
+- type: entity
+  parent: TripleGlassAirlockSecurity
+  id: TripleGlassAirlockSecurityLocked
+  suffix: Тройной, Служба безопасности, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: TripleGlassAirlockCargo
+  id: TripleGlassAirlockCargoLocked
+  suffix: Тройной, Снабжение, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+
+- type: entity
+  parent: TripleGlassAirlockEngineering
+  id: TripleGlassAirlockEngineeringLocked
+  suffix: Тройной, Инженерный, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+
+- type: entity
+  parent: TripleGlassAirlockMedical
+  id: TripleGlassAirlockMedicalLocked
+  suffix: Тройной, Медицинский, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+
+- type: entity
+  parent: TripleGlassAirlockScience
+  id: TripleGlassAirlockScienceLocked
+  suffix: Тройной, Научный, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearch ]
+
+- type: entity
+  parent: TripleGlassAirlockAtmospherics
+  id: TripleGlassAirlockAtmosphericsLocked
+  suffix: Тройной, Атмосферный, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAtmospherics ]

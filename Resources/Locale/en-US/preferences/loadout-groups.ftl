@@ -71,6 +71,7 @@ loadout-group-botanist-head = Botanist head
 loadout-group-botanist-jumpsuit = Botanist jumpsuit
 loadout-group-botanist-backpack = Botanist backpack
 loadout-group-botanist-outerclothing = Botanist outer clothing
+loadout-group-botanist-id = Botanist ID
 
 loadout-group-clown-head = Clown head
 loadout-group-clown-jumpsuit = Clown jumpsuit

@@ -106,10 +106,12 @@
         type: InstrumentBoundUserInterface
       enum.HealthAnalyzerUiKey.Key:
         type: HealthAnalyzerBoundUserInterface
-      # Adventure cartridge gas analyzer begin
+      # Adventure cartridges begin
       enum.GasAnalyzerUiKey.Key:
         type: GasAnalyzerBoundUserInterface
-      # Adventure cartridge gas analyzer end
+      enum.PlantAnalyzerUiKey.Key:
+        type: PlantAnalyzerBoundUserInterface
+      # Adventure cartridges end
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -965,6 +967,12 @@
     maxScanRange: null
     scanDelay: 0
     silent: true
+  # Adventure start
+  - type: PlantAnalyzer
+    settings:
+      scanDelay: 0.1
+      advScanDelay: 0.5
+  # Adventure end
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     notificationsEnabled: false
@@ -977,6 +985,7 @@
       - WantedListCartridge
       - MedTekCartridge
       - AstroNavCartridge
+      - PlantAnalyzerCartridge # Adventure
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener

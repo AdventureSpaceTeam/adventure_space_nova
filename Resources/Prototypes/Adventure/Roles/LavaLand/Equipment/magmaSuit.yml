@@ -13,7 +13,7 @@
     - state: icon-lava
       shader: unshaded
   - type: Clothing
-    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/suit.rsi  
+    sprite: Adventure/Roles/LavaLand/Equipment/MagmaSuit/suit.rsi
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
@@ -107,7 +107,7 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 1000
   - type: PointLight
-    color: "#fda144" 
+    color: "#fda144"
     radius: 7
     energy: 5
 
@@ -220,7 +220,7 @@
       - state: equipped-HELMET-lava
         shader: unshaded
   - type: PointLight
-    color: "#fda144" 
+    color: "#fda144"
     radius: 9
     energy: 5
 

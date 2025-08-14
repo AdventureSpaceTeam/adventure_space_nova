@@ -178,7 +178,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_spiky2
 
-- type: marking  
+- type: marking
   id: LizardTailRidge
   bodyPart: Tail
   markingCategory: Tail
@@ -191,7 +191,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_ridge3
 
-- type: marking  
+- type: marking
   id: LizardTailSpike
   bodyPart: Tail
   markingCategory: Tail
@@ -202,7 +202,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_spike2
 
-- type: marking  
+- type: marking
   id: LizardTailOverBig
   bodyPart: Tail
   markingCategory: Tail
@@ -213,7 +213,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_big2
 
-- type: marking  
+- type: marking
   id: LizardTailOverBigSpike
   bodyPart: Tail
   markingCategory: Tail
@@ -224,7 +224,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_big2
 
-- type: marking  
+- type: marking
   id: LizardTailUltraBig
   bodyPart: Tail
   markingCategory: Tail
@@ -235,7 +235,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails48.rsi
     state: down
 
-- type: marking  
+- type: marking
   id: LizardTailUltraBigSpike
   bodyPart: Tail
   markingCategory: Tail
@@ -246,7 +246,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/tails48.rsi
     state: down
 
-- type: marking  
+- type: marking
   id: LizardTailUltraBigRidge
   bodyPart: Tail
   markingCategory: Tail
@@ -317,7 +317,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_collar2
 
-- type: marking 
+- type: marking
   id: LizardFrillsFins
   bodyPart: HeadSide
   markingCategory: HeadSide
@@ -328,7 +328,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_fins2
 
-- type: marking 
+- type: marking
   id: LizardFrillsFinsKing
   bodyPart: HeadSide
   markingCategory: HeadSide
@@ -339,7 +339,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_finsking2
 
-- type: marking 
+- type: marking
   id: LizardFrillsFinsBig
   bodyPart: HeadSide
   markingCategory: HeadSide
@@ -350,7 +350,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_fins_big2
 
-- type: marking 
+- type: marking
   id: LizardFrillsRidge
   bodyPart: HeadSide
   markingCategory: HeadSide
@@ -359,7 +359,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge
 
-- type: marking 
+- type: marking
   id: LizardFrillsRidgeFull
   bodyPart: HeadSide
   markingCategory: HeadSide
@@ -368,7 +368,7 @@
   - sprite: Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge_full
 
-- type: marking 
+- type: marking
   id: LizardFrillsRidgeSmall
   bodyPart: HeadSide
   markingCategory: HeadSide

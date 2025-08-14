@@ -1,9 +1,9 @@
 #Created: raidgo Transferred:  depresh
 - type: entity
-  name: Гипоспрей ОБР
+  name: гипоспрей ОБР
   suffix: Adventure
   parent: BaseItem
-  description: Очень дорогой, расчитанный на скорость гипоспрей. Производится на заводах дочерней компании Nanotrasen.
+  description: Очень дорогой, рассчитанный на скорость гипоспрей. Производится на заводах дочерней компании Nanotrasen.
   id: HyposprayERT
   components:
   - type: Sprite

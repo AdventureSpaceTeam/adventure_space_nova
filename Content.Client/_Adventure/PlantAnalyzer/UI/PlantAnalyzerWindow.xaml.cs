@@ -213,6 +213,61 @@ public sealed partial class PlantAnalyzerWindow : FancyWindow
             output.Append(IndentedNewline);
             output.Append(Loc.GetString("gases-frezon"));
         }
+        if (flags.HasFlag(GasFlags.BZ))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-bz"));
+        }
+        if (flags.HasFlag(GasFlags.Halon))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-halon"));
+        }
+        if (flags.HasFlag(GasFlags.Healium))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-healium"));
+        }
+        if (flags.HasFlag(GasFlags.HyperNoblium))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-hyper-noblium"));
+        }
+        if (flags.HasFlag(GasFlags.Hydrogen))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-hydrogen"));
+        }
+        if (flags.HasFlag(GasFlags.Pluoxium))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-pluoxium"));
+        }
+        if (flags.HasFlag(GasFlags.Nitrium))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-nitrium"));
+        }
+        if (flags.HasFlag(GasFlags.Helium))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-helium"));
+        }
+        if (flags.HasFlag(GasFlags.AntiNoblium))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-anti-noblium"));
+        }
+        if (flags.HasFlag(GasFlags.ProtoNitrate))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-proto-nitrate"));
+        }
+        if (flags.HasFlag(GasFlags.Zauker))
+        {
+            output.Append(IndentedNewline);
+            output.Append(Loc.GetString("gases-zauker"));
+        }
         return output;
     }
 }

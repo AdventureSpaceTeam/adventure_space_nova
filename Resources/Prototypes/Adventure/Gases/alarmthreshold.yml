@@ -1,0 +1,6 @@
+- type: alarmThreshold
+  id: stationPluoxium
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.0375  # 0.3 / 8
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.1     # 0.8 / 8

@@ -23,11 +23,16 @@ public sealed partial class PlantAnalyzerComponent : Component
     }
 
     [DataField, ViewVariables]
-    public PlantAnalyzerSetting Settings = new();
+    public PlantAnalyzerSetting Settings = new()
+    {
+        AdvancedScan = false,
+        ScanDelay = 1.0f,
+        AdvScanDelay = 5.0f
+    };
 
     [DataField, ViewVariables(VVAccess.ReadOnly)]
     public DoAfterId? DoAfter;
 
     [DataField]
-    public SoundSpecifier? ScanningEndSound;
+    public SoundSpecifier ScanningEndSound = new SoundPathSpecifier("/Audio/Items/Medical/healthscanner.ogg");
 }

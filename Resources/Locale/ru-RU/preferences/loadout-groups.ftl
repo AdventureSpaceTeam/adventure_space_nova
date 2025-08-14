@@ -59,6 +59,7 @@ loadout-group-botanist-head = Ботаник, голова
 loadout-group-botanist-jumpsuit = Ботаник, комбинезон
 loadout-group-botanist-backpack = Ботаник, рюкзак
 loadout-group-botanist-outerclothing = Ботаник, верхняя одежда
+loadout-group-botanist-id = Ботаник, ID
 loadout-group-clown-head = Клоун, голова
 loadout-group-clown-jumpsuit = Клоун, комбинезон
 loadout-group-clown-backpack = Клоун, рюкзак
