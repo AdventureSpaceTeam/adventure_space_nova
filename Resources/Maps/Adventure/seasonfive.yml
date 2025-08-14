@@ -33561,7 +33561,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -22.5,-4.5
       parent: 8364
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 3771
     components:
@@ -33571,23 +33571,19 @@ entities:
       parent: 8364
     - type: AtmosDevice
       joinedGrid: 8364
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 3772
     components:
     - type: Transform
       pos: -36.5,-13.5
       parent: 8364
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 3773
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -38.5,-13.5
       parent: 8364
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServerFilled
   entities:
   - uid: 4834

@@ -117458,7 +117458,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 14782
     components:
@@ -117466,7 +117466,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -60.5,16.5
       parent: 2
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 14783
     components:
@@ -117474,15 +117474,11 @@ entities:
       rot: 3.141592653589793 rad
       pos: -61.5,16.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 14784
     components:
     - type: Transform
       pos: -59.5,16.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServer
   entities:
   - uid: 18314

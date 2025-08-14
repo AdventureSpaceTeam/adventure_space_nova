@@ -96323,7 +96323,7 @@ entities:
         [color=#ff0000][head=2]                    PARENT FORM: PRF07     [/head]
                          -- This document is tied to Child Forms:--         [/color]
                                                 [head=3]NotATrasen[/ head]
-        [color=#1b67a5]█▄ █ ▀█▀ [head=3]Author: Command Secretary[/head] █ ▀█     █    
+        [color=#1b67a5]█▄ █ ▀█▀ [head=3]Author: Command Secretary[/head] █ ▀█     █
 
         (* = A Required Field)
 
@@ -114269,14 +114269,14 @@ entities:
     - type: Transform
       pos: 82.5,-14.5
       parent: 2
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 6710
     components:
     - type: Transform
       pos: 0.5,-8.5
       parent: 2
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 6708
     components:
@@ -114284,16 +114284,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 0.5,-9.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 6709
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 0.5,-7.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServerCircuitboard
   entities:
   - uid: 6581

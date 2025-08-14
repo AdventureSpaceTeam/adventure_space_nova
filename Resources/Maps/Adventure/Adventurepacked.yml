@@ -84263,14 +84263,14 @@ entities:
     - type: Transform
       pos: 27.5,8.5
       parent: 2
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 13127
     components:
     - type: Transform
       pos: 40.5,-46.5
       parent: 2
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 13128
     components:
@@ -84278,16 +84278,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 40.5,-47.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 13129
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 40.5,-45.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServer
   entities:
   - uid: 533

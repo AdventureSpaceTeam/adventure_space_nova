@@ -40606,7 +40606,7 @@ entities:
       - stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
       content: >-
-        Для того чтобы ядро заработало нужно заполнить камеру нужным газом. К примеру - ядро затмения требует оксид азота. 
+        Для того чтобы ядро заработало нужно заполнить камеру нужным газом. К примеру - ядро затмения требует оксид азота.
 
 
         После заполнения камеры газом необходимо подойти к консоли и нажать "Вкл". После - нужно подождать активации и вуаля всё работает.
@@ -50044,7 +50044,7 @@ entities:
     - type: Transform
       pos: -16.5,30.5
       parent: 1
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 6966
     components:
@@ -50054,7 +50054,7 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerDisabled: True
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 6967
     components:
@@ -50062,16 +50062,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 27.5,8.5
       parent: 1
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 6968
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 27.5,4.5
       parent: 1
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServerFilledCargo
   entities:
   - uid: 6969

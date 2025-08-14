@@ -91125,7 +91125,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -4.5,46.5
       parent: 2
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 12593
     components:
@@ -91133,7 +91133,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.5,-11.5
       parent: 2
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 1552
     components:
@@ -91141,15 +91141,11 @@ entities:
       rot: 3.141592653589793 rad
       pos: 8.5,-11.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 12591
     components:
     - type: Transform
       pos: 10.5,-11.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServerFilledCargo
   entities:
   - uid: 1500

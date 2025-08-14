@@ -82334,14 +82334,14 @@ entities:
     - type: Transform
       pos: 37.5,13.5
       parent: 2
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 4145
     components:
     - type: Transform
       pos: 0.5,-28.5
       parent: 2
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 6945
     components:
@@ -82349,16 +82349,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,-27.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 6946
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,-29.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServerFilledCargo
   entities:
   - uid: 10189

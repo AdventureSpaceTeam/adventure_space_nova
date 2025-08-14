@@ -128113,9 +128113,9 @@ entities:
         stampedName: TB Engineering
       content: >2
 
-        [head=1]Теплоэлектрогенератор 
+        [head=1]Теплоэлектрогенератор
 
-        класса 
+        класса
 
         "Пещерный человек"[/head]
 
@@ -128235,9 +128235,9 @@ entities:
         stampedName: TB Engineering
       content: >2
 
-        [head=1]Теплоэлектрогенератор 
+        [head=1]Теплоэлектрогенератор
 
-        класса 
+        класса
 
         "Пещерный человек"[/head]
 
@@ -148595,7 +148595,7 @@ entities:
     - type: Transform
       pos: -39.5,0.5
       parent: 2
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 674
     components:
@@ -148603,7 +148603,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -147.5,-7.5
       parent: 2
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 5921
     components:
@@ -148611,16 +148611,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -147.5,-6.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 5922
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -147.5,-8.5
       parent: 2
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServer
   entities:
   - uid: 15019
