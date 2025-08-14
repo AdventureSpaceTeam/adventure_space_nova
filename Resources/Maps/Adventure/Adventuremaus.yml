@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 261.2.0
+  engineVersion: 265.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/23/2025 08:15:54
-  entityCount: 20412
+  time: 08/14/2025 11:40:16
+  entityCount: 20413
 maps:
 - 1
 grids:
@@ -92623,7 +92623,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 3.517624,-6.217499
+      pos: 3.5,-6.5
       parent: 18619
     - type: DeviceLinkSource
       linkedPorts:
@@ -102554,14 +102554,17 @@ entities:
     - type: Transform
       pos: -30.5,-14.5
       parent: 2
-- proto: Printer
-  entities:
-  - uid: 12631
+  - uid: 14079
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: -53.5,-50.5
       parent: 2
+    - type: TechnologyDatabase
+      supportedDisciplines:
+      - Industrial
+      - Arsenal
+      - Experimental
+      - CivilianServices
 - proto: Protolathe
   entities:
   - uid: 12633
@@ -109484,7 +109487,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -47.5,-24.375
+      pos: -47.5,-24.5
       parent: 2
 - proto: SignDirectionalBridge
   entities:
@@ -109492,13 +109495,13 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -44.5,-20.75
+      pos: -44.5,-20.5
       parent: 2
   - uid: 13609
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -27.5,-20.375
+      pos: -27.5,-20.5
       parent: 2
 - proto: SignDirectionalBrig
   entities:
@@ -109506,7 +109509,7 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -27.5,-53.25
+      pos: -27.5,-53.5
       parent: 2
   - uid: 13611
     components:
@@ -109539,13 +109542,13 @@ entities:
   - uid: 13615
     components:
     - type: Transform
-      pos: -47.5,-24.625
+      pos: -47.5,-24.5
       parent: 2
   - uid: 13616
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -26.5,-24.625
+      pos: -26.5,-24.5
       parent: 2
 - proto: SignDirectionalEng
   entities:
@@ -109567,7 +109570,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -44.5,-20.25
+      pos: -44.5,-20.5
       parent: 2
 - proto: SignDirectionalLibrary
   entities:
@@ -109582,7 +109585,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -26.5,-24.375
+      pos: -26.5,-24.5
       parent: 2
 - proto: SignDirectionalSalvage
   entities:
@@ -109597,7 +109600,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -27.5,-53.75
+      pos: -27.5,-53.5
       parent: 2
 - proto: SignDirectionalSolar
   entities:
@@ -109612,7 +109615,7 @@ entities:
   - uid: 13625
     components:
     - type: Transform
-      pos: -27.5,-20.625
+      pos: -27.5,-20.5
       parent: 2
 - proto: SignDirectionalWash
   entities:
@@ -112209,24 +112212,24 @@ entities:
     - type: Transform
       pos: 7.5,-30.5
       parent: 2
-- proto: SolarTracker
+- proto: SolarSail
   entities:
-  - uid: 14078
+  - uid: 12631
     components:
     - type: Transform
       pos: -44.5,31.5
       parent: 2
-  - uid: 14079
+  - uid: 12920
     components:
     - type: Transform
       pos: 14.5,-35.5
       parent: 2
-  - uid: 14080
+  - uid: 13720
     components:
     - type: Transform
       pos: -54.5,-97.5
       parent: 2
-  - uid: 14081
+  - uid: 14078
     components:
     - type: Transform
       pos: -117.5,-38.5
@@ -117137,6 +117140,11 @@ entities:
       parent: 18619
 - proto: TableWood
   entities:
+  - uid: 6852
+    components:
+    - type: Transform
+      pos: -53.5,-50.5
+      parent: 2
   - uid: 12136
     components:
     - type: Transform
