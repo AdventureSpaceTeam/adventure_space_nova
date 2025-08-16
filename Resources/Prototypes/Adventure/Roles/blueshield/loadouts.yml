@@ -110,6 +110,12 @@
   - BSSatchel
   - BSDuffel
 
+- type: loadouts
+  id: BSEyes
+  name: ОСЩ, очки
+  equipment:
+     eyes: ClothingEyesGlassesBlueShield
+
 # лодаут роли
 - type: roleLoadout
   id: JobBlueshield
@@ -117,6 +123,7 @@
   - BSHelmets
   - BSJumpsuits
   - BSBackpacks
+  - BSEyes
   - BSOuterClothing
   - BSBoots
   - SurvivalSecurity
