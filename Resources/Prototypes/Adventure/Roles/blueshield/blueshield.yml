@@ -46,7 +46,7 @@
 - type: startingGear
   id: BlueshieldGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesBlueShield
     id: BlueshieldPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltCommand
