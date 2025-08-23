@@ -29,16 +29,16 @@
   parent: [BaseSmallCore, BaseRNDCore]
   id: RnDSmallCore
   description: Ядро, которое может изготовить каждая космическая станция типа "14", при имении ресурсов.
-  name: Малое ядро РнД.
+  name: малое ядро РнД
   components:
   - type: EnergyCore
     damage:
       types:
         Heat: 0.05
     timeOfLife: 480
-    enablingLenght: 2.6
+    enablingLength: 2.6
     baseSupply: 60000
-    secPerMoles: 1
+    secPerMoles: 10
   - type: PowerSupplier
     supplyRate: 60000
   - type: Sprite
@@ -51,16 +51,16 @@
   parent: [BaseSmallCore, BaseNTCore]
   id: NTSmallCore
   description: Ядро, работающее на передовых технологиях НаноТрейзен. Сложнее в исполнении, чем ядра РнД, используют при работе БС энергию.
-  name: Малое ядро НаноТрейзен.
+  name: малое ядро НаноТрейзен
   components:
   - type: EnergyCore
     damage:
       types:
         Heat: 0.01
     timeOfLife: 600
-    enablingLenght: 7.7
+    enablingLength: 7.7
     baseSupply: 80000
-    secPerMoles: 1.5
+    secPerMoles: 15
   - type: PowerSupplier
     supplyRate: 80000
   - type: Sprite
@@ -72,17 +72,17 @@
 - type: entity
   parent: [BaseSmallCore, BaseSYNCore]
   id: SyndicateSmallCore
-  description: Ядро, изготвливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
-  name: Малое ядро Синдиката.
+  description: Ядро, изготавливаемое на теневых производствах корпораций Синдиката. Используют в работе редспейс.
+  name: малое ядро Синдиката
   components:
   - type: EnergyCore
     damage:
       types:
         Heat: 0.05
     timeOfLife: 500
-    enablingLenght: 1.0
+    enablingLength: 1.0
     baseSupply: 100000
-    secPerMoles: 1
+    secPerMoles: 10
   - type: PowerSupplier
     supplyRate: 100000
   - type: Sprite
@@ -95,7 +95,7 @@
   parent: [BaseSmallCore, BaseHMCore]
   id: HandMadeSmallCore
   description: Ядро, изготовленное из первого, что попалось под руку. Ненадежно, но просто в создании.
-  name: Малое самодельное ядро шаттла.
+  name: малое самодельное ядро
   components:
   - type: EnergyCore
     damage:
@@ -103,7 +103,7 @@
         Heat: 0.1
     timeOfLife: 400
     baseSupply: 45000
-    secPerMoles: 0.00375
+    secPerMoles: 0.0375
   - type: PowerSupplier
     supplyRate: 45000
   - type: Sprite

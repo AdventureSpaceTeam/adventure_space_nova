@@ -279,6 +279,15 @@ ent-HolopadAiEntrance = { ent-Holopad }
 ent-HolopadAiChute = { ent-Holopad }
     .desc = { ent-Holopad.desc }
     .suffix = Переход ИИ
+ent-HolopadEngineeringSG = { ent-Holopad }
+    .desc = { ent-Holopad.desc }
+    .suffix = СТГ
+ent-HolopadCommandBS = { ent-Holopad }
+    .desc = { ent-Holopad.desc }
+    .suffix = Кабинет ОСЩ
+ent-HolopadEngineeringShip = { ent-Holopad }
+    .desc = { ent-Holopad.desc }
+    .suffix = Верфь
 
 # Specific
 ent-HolopadServiceClownMime = { ent-Holopad }
@@ -367,6 +376,7 @@ holopad-command-qm = Командование - Кабинет КМ
 holopad-command-ce = Командование - Кабинет СИ
 holopad-command-rd = Командование - Кабинет НР
 holopad-command-hos = Командование - Кабинет ГСБ
+holopad-command-blueshield = Командование - Кабинет ОСЩ
 
 # Science
 holopad-science-anomaly = Научный отдел - Аномалистика
@@ -412,6 +422,8 @@ holopad-engineering-tech-vault = Инж. отдел - Технологическ
 holopad-engineering-ame = Инж. отдел - ДАМ
 holopad-engineering-power = Инж. отдел - СМЭС
 holopad-engineering-main = Инж. отдел - Холл
+holopad-engineering-SG = Инж. отдел - СТГ
+holopad-engineering-Ship = Инж. отдел - Верфь
 
 # Security
 holopad-security-front = Служба безопасности - Стойка

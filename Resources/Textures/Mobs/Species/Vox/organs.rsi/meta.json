@@ -20,6 +20,30 @@
         },
         {
             "name": "lung-r"
+        },
+        {
+            "name": "brain"
+        },
+        {
+            "name": "eyeball-l"
+        },
+        {
+            "name": "eyeball-r"
+        },
+        {
+            "name": "heart"
+        },
+        {
+            "name": "kidney-l"
+        },
+        {
+            "name": "kidney-r"
+        },
+        {
+            "name": "liver"
+        },
+        {
+            "name": "stomach"
         }
     ]
 }

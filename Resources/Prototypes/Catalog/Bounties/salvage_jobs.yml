@@ -143,19 +143,19 @@
       - GoliathPlate
 
 - type: cargoBounty
-  id: BountyHivelordRemains
+  id: BountyHivelordRemains # Adventure-LavaLand-Fix
   reward: 20000
   description: bounty-description-remains
   group: SalvageJobTier3
   sprite:
-    sprite: Mobs/Aliens/Asteroid/hivelord.rsi
-    state: hivelord
+    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    state: core1
   entries:
   - name: bounty-item-remains
     amount: 3
     whitelist:
       tags:
-      - HivelordRemains
+      - LegionHeart # Adventure-LavaLand-Fix
 
 - type: cargoBounty
   id: BountySalvageDiamond

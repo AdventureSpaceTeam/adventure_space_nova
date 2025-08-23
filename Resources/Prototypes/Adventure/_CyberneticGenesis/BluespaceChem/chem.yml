@@ -7,7 +7,7 @@
     Plastic: 1000
     Plasma: 250
     Silver: 50
-    
+
 - type: latheRecipe
   id: BS-Jug
   result: BS-Jug
@@ -18,7 +18,7 @@
     Plasma: 300
     Silver: 50
     Gold: 50
-    
+
 - type: latheRecipe
   id: BSPillCanister
   result: BSPillCanister
@@ -29,7 +29,7 @@
     Plasma: 100
     Silver: 50
     Gold: 50
-    
+
 - type: latheRecipe
   id: BaseBSChemistryEmptyVial
   result: BaseBSChemistryEmptyVial

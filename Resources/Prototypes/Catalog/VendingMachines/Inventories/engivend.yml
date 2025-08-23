@@ -10,6 +10,10 @@
     ClothingHandsGlovesColorYellow: 6
     BoxInflatable: 2
     ClothingHeadHatCone: 4
+    # Adventure start
+    SprayPainter: 3
+    SprayPainterAmmo: 5
+    # Adventure end
   contrabandInventory:
     CowToolboxFilled: 1
     DrinkBeerCan: 3

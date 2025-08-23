@@ -25,4 +25,7 @@
           - Item
         tags:
           - Structure
+      blacklist:
+        tags:
+          - InHandsMob
     - type: PhysicalComposition

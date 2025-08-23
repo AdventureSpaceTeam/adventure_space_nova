@@ -16,6 +16,7 @@
     - type: OwOAccent # Adventure
     - type: UrUAccent # Adventure-Accent
     - type: SnakeAccent # Adventure-Accent
+    - type: DwarfAccent # Adventure-Accent
     - type: GrowlingAccent # Adventure
     - type: ReplacementAccent
       accent: dwarf

@@ -12,4 +12,4 @@ ent-ClosetL3JanitorFilled = { ent-ClosetL3Janitor }
     .desc = { ent-ClosetL3Janitor.desc }
 ent-ClosetL3ScienceFilled = { ent-ClosetL3Virology }
     .suffix = Заполненный, Научный
-    .desc = { ent-ClosetL3Virology.desc }
+    .desc = { ent-ClosetL3Science.desc }

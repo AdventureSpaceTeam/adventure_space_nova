@@ -1,0 +1,88 @@
+#патрон 20 авто
+- type: entity
+  id: CartridgeRifleExplosive
+  name: патрон (.20 винтовочный разрывной)
+  parent: CartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: BulletRifleExplosive
+  - type: Sprite
+    noRot: false
+    sprite: Adventure/Objects/Weapons/Ammo/ExplosiveAmmo.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+
+- type: entity
+  id: BulletRifleExplosive
+  name: bullet (.20 explosive)
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Adventure/Objects/Weapons/Ammo/ExplosiveAmmo.rsi
+    layers:
+    - state: explosivebullet
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2 #ну типо ушибы от ударной волны
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: ExplosiveAmmo
+    maxIntensity: 0.01
+    intensitySlope: 1
+    totalIntensity: 0.01
+
+#эффект разрыва aka осколки
+- type: explosion
+  id: ExplosiveAmmo
+  damagePerIntensity:
+    types:
+      Slash: 500 # интенсивности взрыва в 0.01 не хватает, чтобы нанести 5 урона, поэтому ставим такое число.
+      Piercing: 700
+      Structural: 1200
+  lightColor: Orange
+  texturePath: /Textures/Effects/fire.rsi
+
+#коробка патронов 20 винтовочные разрывные
+- type: entity
+  parent: BaseMagazineBoxRifle
+  id: MagazineBoxRifleExplosive
+  name: коробка патронов (.20 винтовочные разрывные)
+  suffix: BORK, AdvAmmo
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifleExplosive
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: explosive
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineBoxRifleExplosive
+  result: MagazineBoxRifleExplosive
+  category: Ammo
+  completetime: 3
+  materials:
+    Plastic: 2000
+
+#изучение
+- type: technology
+  id: ExplosiveAmmo
+  name: Разрывные боеприпасы
+  icon:
+    sprite: Adventure/Objects/Weapons/Ammo/ExplosiveAmmo.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - MagazineBoxRifleExplosive

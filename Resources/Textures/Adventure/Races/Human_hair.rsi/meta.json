@@ -90,6 +90,22 @@
     {
       "name": "body_hair_hand",
       "directions": 4
+    },
+    {
+      "name": "Dwarf",
+      "directions": 4
+    },
+    {
+      "name": "bismark",
+      "directions": 4
+    },
+    {
+      "name": "punk_big",
+      "directions": 4
+    },
+    {
+      "name": "big_Brutal",
+      "directions": 4
     }
   ]
 }

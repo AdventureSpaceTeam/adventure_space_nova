@@ -74,7 +74,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idGenericSienc # Adventure-Resprite
+    - state: idGenericScience # Adventure-Resprite
 
 - type: entity
   parent: PassengerIDCard
@@ -240,7 +240,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idGenericSienc # Adventure-Resprite
+    - state: idGenericScience # Adventure-Resprite
   - type: PresetIdCard
     job: Scientist
 
@@ -580,7 +580,7 @@
 
 - type: entity
   name: passenger ID card
-  parent: IDCardStandard
+  parent: [IDCardStandard, BaseChameleon]
   id: AgentIDCard
   suffix: Agent
   components:
@@ -595,9 +595,11 @@
     - state: default
    #- state: idpassenger Adventure-Resprite
   - type: AgentIDCard
+  - type: UIRequiresLock
   - type: ActivatableUI
     key: enum.AgentIDCardUiKey.Key
     inHandsOnly: true
+    verbText: agent-id-open-ui-verb
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -777,9 +779,10 @@
   - type: Sprite
     layers:
     - state: default
-   #- state: idcluwne Adventure-Respriteer  
+   #- state: idcluwne Adventure-Respriteer
   - type: IdCard
     jobTitle: job-title-cluwne
+    jobIcon: JobIconCluwne
   - type: Unremoveable
 
 - type: entity
@@ -790,7 +793,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idGenericEng # Adventure-Respriteer 
+    - state: idGenericEng # Adventure-Respriteer
 
 - type: entity
   parent: ResearchIDCard
@@ -800,7 +803,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idGenericSienc # Adventure-Respriteer 
+    - state: idGenericScience # Adventure-Respriteer
 
 - type: entity
   parent: MedicalIDCard
@@ -810,7 +813,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idGenericMed # Adventure-Respriteer 
+    - state: idGenericMed # Adventure-Respriteer
 
 - type: entity
   parent: SecurityIDCard
@@ -820,7 +823,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idGenericSecurity # Adventure-Respriteer 
+    - state: idGenericSecurity # Adventure-Respriteer
 
 - type: entity
   parent: IDCardStandard
@@ -847,7 +850,7 @@
   - type: Sprite
     sprite: Objects/Misc/id_cards.rsi
     layers:
-    - state: gold # Adventure-Respriteer 
+    - state: gold # Adventure-Respriteer
     - state: idadmin
   - type: Clothing
     sprite: Objects/Misc/id_cards.rsi

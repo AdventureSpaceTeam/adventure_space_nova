@@ -140,6 +140,7 @@
   - ChaplainJumpsuit
   - CommonBackpack
   - ChaplainOuterClothing
+  - ChaplainBible
   - Glasses
   - Survival
   - Trinkets
@@ -172,6 +173,7 @@
   - BotanistJumpsuit
   - BotanistBackpack
   - BotanistOuterClothing
+  - BotanistID # Adventure
   - Glasses
   - Survival
   - Trinkets
@@ -265,6 +267,7 @@
   id: JobSalvageSpecialist
   groups:
   - GroupTankHarness
+  - SalvageSpecialistNeck # Adventure
   - SalvageSpecialistJumpsuit #Adventure
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing

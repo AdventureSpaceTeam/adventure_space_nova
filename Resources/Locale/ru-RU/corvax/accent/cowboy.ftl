@@ -10,7 +10,6 @@ corvax-accent-cowboy-replacement-4 = благодарствую
 corvax-accent-cowboy-words-501 = привет
 corvax-accent-cowboy-words-502 = здравствуй
 corvax-accent-cowboy-replacement-5 = хауди
-corvax-accent-cowboy-words-601 = пока
 corvax-accent-cowboy-words-602 = прощай
 corvax-accent-cowboy-replacement-6 = бывай
 corvax-accent-cowboy-words-7 = до свидания

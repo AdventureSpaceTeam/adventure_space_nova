@@ -12,9 +12,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
       - !type:AdjustReagent
         reagent: Theobromine
@@ -105,9 +105,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
 
 - type: reagent
@@ -161,9 +161,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
 
 - type: reagent
@@ -342,9 +342,9 @@
       effects:
       - !type:SatiateThirst
         factor: 6
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 3.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 3
         type: Remove
     Poison:
       effects:
@@ -363,35 +363,6 @@
   flavor: fizzy
   color: "#619494"
   fizziness: 0.8
-#Adventure-edit-start
-  metabolisms:
-    Drink:
-      effects:
-      - !type:Emote
-        emote: BruhAll
-        showInChat: true
-        probability: 0.05
-      - !type:PopupMessage 
-        type: Local
-        visualType: Medium
-        messages:
-        - "Ваши газы рвутся наружу."
-        probability: 0.05
-      - !type:SatiateThirst
-        factor: 3
-  reactiveEffects:
-    Extinguish:
-      methods: [ Touch ]
-      effects:
-      - !type:ExtinguishReaction
-  plantMetabolism:
-  - !type:PlantAdjustWater
-    amount: 1
-  tileReactions:
-  - !type:ExtinguishTileReaction { }
-  - !type:SpillIfPuddlePresentTileReaction { }
-#Adventure-edit-end
-
 
 - type: reagent
   id: SoyLatte
@@ -412,9 +383,9 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:GenericStatusEffect
-        key: Drowsiness
-        time: 2.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
         type: Remove
 
 - type: reagent

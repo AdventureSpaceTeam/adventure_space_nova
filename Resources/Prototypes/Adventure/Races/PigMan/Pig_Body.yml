@@ -8,6 +8,7 @@
   name: Желудок троттина
   components:
   - type: Sprite
+    sprite: Adventure/Races/PigMan/organs.rsi
     state: stomach
   - type: Organ
   - type: SolutionContainerManager
@@ -20,6 +21,10 @@
         - ReagentId: UncookedAnimalProteins
           Quantity: 7
   - type: Stomach
+    specialDigestible:
+      tags:
+      - Trash
+    isSpecialDigestibleExclusive: false
   - type: Metabolizer
     maxReagents: 5
     metabolizerTypes: [PigMan]
@@ -31,6 +36,9 @@
   description: тук тук
   categories: [ HideSpawnMenu ]
   components:
+  - type: Sprite
+    sprite: Adventure/Races/PigMan/organs.rsi
+    state: heart
   - type: Metabolizer
     maxReagents: 2
     metabolizerTypes: [ PigMan ]

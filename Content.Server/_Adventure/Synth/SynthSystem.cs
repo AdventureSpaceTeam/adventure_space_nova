@@ -12,6 +12,9 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Trigger;
+using Content.Shared.Trigger.Systems;
+using Content.Shared.Trigger.Components;
 using Content.Shared.PowerCell;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Mobs;
@@ -74,7 +77,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     private void OnEmpPulse(EntityUid uid, SynthComponent component, EmpPulseEvent ev)
     {
         _damageableSystem.TryChangeDamage(uid, component.EmpDamage, true);
-        _stunSystem.TryParalyze(uid, TimeSpan.FromSeconds(component.EmpParalyzeTime), true);
+        _stunSystem.TryUpdateParalyzeDuration(uid, TimeSpan.FromSeconds(component.EmpParalyzeTime));
     }
 
     private void OnMapInit(EntityUid uid, SynthComponent component, MapInitEvent args)
@@ -121,7 +124,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         UpdateUI(uid, component);
     }
 
-    private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args) 
+    private void OnToggled(Entity<SynthComponent> ent, ref ItemToggledEvent args)
     {
         var (uid, comp) = ent;
 

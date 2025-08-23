@@ -26,7 +26,7 @@
     - рыгнул
     - рыгнул!
 
-# Хрустеть    
+# Хрустеть
 - type: soundCollection
   id: CrunchCollection
   files:
@@ -57,7 +57,7 @@
     - хрустит пальцами
     - хрустит спиной
 
-# Пердеть    
+# Пердеть
 - type: soundCollection
   id: FartCollection
   files:
@@ -66,7 +66,7 @@
   - /Audio/Adventure/Voice/Emotions/fart3.ogg
   - /Audio/Adventure/Voice/Emotions/fart4.ogg
   - /Audio/Adventure/Voice/Emotions/fart5.ogg
-  
+
 - type: emote
   id: Fart
   name: пустить газы
@@ -88,7 +88,7 @@
   - /Audio/Adventure/Voice/Emotions/scratching2.ogg
   - /Audio/Adventure/Voice/Emotions/scratching3.ogg
   - /Audio/Adventure/Voice/Emotions/scratching4.ogg
-  
+
 - type: emote
   id: Scratch
   name: Чесаться
@@ -128,7 +128,7 @@
   - /Audio/Adventure/Voice/Emotions/facepalm2.ogg
   - /Audio/Adventure/Voice/Emotions/facepalm3.ogg
   - /Audio/Adventure/Voice/Emotions/facepalm4.ogg
-  
+
 - type: emote
   id: Facepalm
   name: Фейспалм
@@ -181,15 +181,3 @@
     - шипит
     - шипит.
     - шипит!
-
-#отрыжка от газировки
-- type: emote
-  id: BruhAll
-  name: рыгать
-  whitelist:
-    components:
-    - Respirator
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: ["рыгает"]

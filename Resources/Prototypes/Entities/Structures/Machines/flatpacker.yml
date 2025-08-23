@@ -69,6 +69,12 @@
           components:
           - MachineBoard
           - ComputerBoard
+# Adventure Nuke start
+        blacklist:
+          tags:
+          - NukeGenerator
+# Adventure Nuke end
+
   - type: ContainerContainer
     containers:
       machine_board: !type:Container

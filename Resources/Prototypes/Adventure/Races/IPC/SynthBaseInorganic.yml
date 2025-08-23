@@ -192,8 +192,8 @@
     attributes:
       proper: true
   - type: MobPrice
-    price: 1500 
-    deathPenalty: 0.01 
+    price: 1500
+    deathPenalty: 0.01
   - type: Tag
     tags:
     - CanPilot

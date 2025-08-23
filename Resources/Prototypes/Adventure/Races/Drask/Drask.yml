@@ -1,5 +1,5 @@
 - type: damageModifierSet
-  id: DraskCryo 
+  id: DraskCryo
   coefficients:
     Heat: 1.50
     Shock: 1.50
@@ -100,19 +100,19 @@
     heatDamageThreshold: 298.15
     coldDamageThreshold: 3.15
     currentTemperature: 291.15
-    coldDamage: 
+    coldDamage:
       types:
         Cold : 0.0
     specificHeat: 42
-    heatDamage: 
+    heatDamage:
       types:
         Heat : 2.0
   - type: TemperatureSpeed
     thresholds: # замедляются только при плюсовой температуре
-      10273: 0.4 
-      298: 0.7 
-      295: 0.9 
-      294: 1.0 
+      10273: 0.4
+      298: 0.7
+      295: 0.9
+      294: 1.0
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: DraskCryo
@@ -120,7 +120,7 @@
     prototype: Drask
     requiredLegs: 2
   - type: Hunger
-  - type: Icon 
+  - type: Icon
     sprite: Adventure/Races/Drask/Species/parts.rsi
     state: full
   - type: Butcherable
@@ -164,7 +164,7 @@
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "neck" ]
-    - map: [ "enum.HumanoidVisualLayers.Back" ] 
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
     - map: [ "back" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
@@ -222,7 +222,7 @@
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "neck" ]
-    - map: [ "enum.HumanoidVisualLayers.Back" ] 
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
     - map: [ "back" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]

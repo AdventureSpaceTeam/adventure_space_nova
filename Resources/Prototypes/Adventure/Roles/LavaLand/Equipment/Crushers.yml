@@ -1,0 +1,206 @@
+- type: Tag
+  id: CrusherAxe
+
+- type: Tag
+  id: CrusherGlaive
+
+- type: entity
+  id: BulletChargeBigAxe
+  parent: BulletCharge
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: DamageMarkerOnCollide
+    whitelist:
+      components:
+        - MobState
+    damage:
+      types:
+        Blunt: 20
+        Slash: 5
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Structural: 30
+
+#Алебарда
+- type: entity
+  parent: WeaponCrusher
+  id: WeaponCrusherAxeBig
+  name: алебарда-крушитель
+  description: Усиленная версия крушителя.
+  suffix: LavaLand
+  components:
+  - type: Tag
+    tags:
+      - Pickaxe
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher.rsi
+    state: icon
+  - type: Item
+    size: Ginormous
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: UseDelayOnShoot
+  - type: UseDelay
+    delay: 1
+  - type: LeechOnMarker
+    leech:
+      groups:
+        Brute: -20
+  - type: Gun
+    soundGunshot: /Audio/Weapons/plasma_cutter.ogg
+    fireRate: 1
+    useKey: false
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.5
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletChargeBigAxe
+    capacity: 1
+    count: 1
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 12
+        Slash: 8
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 5
+        Slash: 5
+        Structural: 30
+  - type: GunRequiresWield
+  - type: DisarmMalus
+  - type: Prying
+  - type: Construction
+    graph: CrusherAxe
+    node: crusheraxe
+
+- type: construction
+  name: алебарда-крушитель
+  id: CrusherAxe
+  graph: CrusherAxe
+  startNode: start
+  targetNode: crusheraxe
+  category: construction-category-weapons
+  description: Усиленная версия крушителя.
+  objectType: Item
+  icon:
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher.rsi
+    state: icon
+
+- type: constructionGraph
+  id: CrusherAxe
+  start: start
+  graph:
+    - node: start
+      edges:
+      - to: crusheraxe
+        steps:
+        - material: Plasteel
+          amount: 20
+        - material: Steel
+          amount: 30
+        - material: Diamond
+          amount: 5
+        - tag: LegionHeart
+          name: сердце легиона
+          icon:
+            sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+            state: core1
+        - tag: CrusherAxe
+          name: крушитель
+          icon:
+            sprite: Objects/Weapons/Melee/crusher.rsi
+            state: icon
+          doAfter: 30
+    - node: crusheraxe
+      entity: WeaponCrusherAxeBig
+
+#Глефа
+- type: entity
+  parent: WeaponCrusherAxeBig
+  id: WeaponCrusherGlaiveAxeBig
+  suffix: LavaLand
+  name: двойная глефа-крушитель
+  description: Усиленная версия глефы-крушителя.
+  components:
+  - type: Sprite
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher_glaive.rsi
+    state: icon
+  - type: Item
+    size: Ginormous
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher_glaive.rsi
+  - type: Clothing
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher_glaive.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: UseDelay
+    delay: 1.0
+  - type: LeechOnMarker
+    leech:
+      groups:
+        Brute: -25
+  - type: MeleeWeapon
+  - type: Tag
+    tags:
+      - Pickaxe
+  - type: Construction
+    graph: CrusherAxeGlaive
+    node: crusheraxeGlaive
+
+- type: construction
+  name: двойная глефа-крушитель
+  id: CrusherAxeGlaive
+  graph: CrusherAxeGlaive
+  startNode: start
+  targetNode: crusheraxeGlaive
+  category: construction-category-weapons
+  description: Усиленная версия глефы-крушителя.
+  objectType: Item
+  icon:
+    sprite: Adventure/Roles/LavaLand/Equipment/double_crusher_glaive.rsi
+    state: icon
+
+- type: constructionGraph
+  id: CrusherAxeGlaive
+  start: start
+  graph:
+    - node: start
+      edges:
+      - to: crusheraxeGlaive
+        steps:
+        - material: Plasteel
+          amount: 20
+        - material: Steel
+          amount: 30
+        - material: Diamond
+          amount: 5
+        - tag: LegionHeart
+          name: сердце легиона
+          icon:
+            sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+            state: core1
+        - tag: CrusherGlaive
+          name: глефа-крушитель
+          icon:
+            sprite: Objects/Weapons/Melee/crusher_glaive.rsi
+            state: icon
+          doAfter: 30
+    - node: crusheraxeGlaive
+      entity: WeaponCrusherGlaiveAxeBig

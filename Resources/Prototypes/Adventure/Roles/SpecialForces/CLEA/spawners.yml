@@ -23,7 +23,7 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplink
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 #ГИР Офицера ЦСС Base
 - type: startingGear
@@ -41,45 +41,47 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplinkleader
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 # госторолька солдат
 - type: randomHumanoidSettings
   id: CLEABase
   randomizeName: false
   components:
-    - type: MindShield
-    - type: GhostRole
-      name: Солдат ЦСС
-      description: Солдат отряда Центральных Силовых Структур. Пора решать проблемы.
-      job: CLEASoldier
-    - type: GhostTakeoverAvailable
-    - type: Loadout
-      prototypes: [ CLEAGearBase ]
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesSoldiers
-      - LastNamesSoldiers
-    - type: AntagImmune
-    # NOTE(c4llv07e): uncomment this on TTS merge
-    # - type: TTS
-    #   voice: officer_enclave
+  - type: MindShield
+  - type: GhostRole
+    name: Солдат ЦСС
+    description: Солдат отряда Центральных Силовых Структур. Пора решать проблемы.
+    job: CLEASoldier
+  - type: GhostTakeoverAvailable
+  - type: Loadout
+    prototypes: [ CLEAGearBase ]
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+    nameFormat: name-format-soldiers
+  - type: AntagImmune
+  # NOTE(c4llv07e): uncomment this on TTS merge
+  # - type: TTS
+  #   voice: officer_enclave
 
 - type: entity
   id: RandomHumanoidSpawnerCLEABase
   name: Солдат ЦСС
   suffix: BASE
   components:
-    - type: Sprite
-      sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
-      state: Solder
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesSoldiers
-      - LastNamesSoldiers
-    - type: RandomHumanoidSpawner
-      settings: CLEABase
-    - type: AntagImmune
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
+    state: Solder
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+    nameFormat: name-format-soldiers
+  - type: RandomHumanoidSpawner
+    settings: CLEABase
+  - type: AntagImmune
 # /госторолька солдат
 
 # госторолька офицер
@@ -87,38 +89,40 @@
   id: CLEAOfficer
   randomizeName: false
   components:
-    - type: MindShield
-    - type: GhostRole
-      name: Офицер ЦСС
-      description: Офицер отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
-      job: CLEAOfficer
-    - type: GhostTakeoverAvailable
-    - type: Loadout
-      prototypes: [ CLEAGearOfficerBase ]
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesOfficers
-      - LastNamesOfficers
-    - type: AntagImmune
-    # NOTE(c4llv07e): uncomment this on TTS merge
-    # - type: TTS
-    #   voice: officer_enclave
+  - type: MindShield
+  - type: GhostRole
+    name: Офицер ЦСС
+    description: Офицер отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
+    job: CLEAOfficer
+  - type: GhostTakeoverAvailable
+  - type: Loadout
+    prototypes: [ CLEAGearOfficerBase ]
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesOfficers
+    - LastNamesOfficers
+    nameFormat: name-format-officers
+  - type: AntagImmune
+  # NOTE(c4llv07e): uncomment this on TTS merge
+  # - type: TTS
+  #   voice: officer_enclave
 
 - type: entity
   id: RandomHumanoidSpawnerCLEAOfficer
   name: Офицер ЦСС
   suffix: BASE
   components:
-    - type: Sprite
-      sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
-      state: Officer
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesOfficers
-      - LastNamesOfficers
-    - type: RandomHumanoidSpawner
-      settings: CLEAOfficer
-    - type: AntagImmune
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
+    state: Officer
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesOfficers
+    - LastNamesOfficers
+    nameFormat: name-format-officers
+  - type: RandomHumanoidSpawner
+    settings: CLEAOfficer
+  - type: AntagImmune
 # /госторолька офицер
 
 # Стартовый гир FullEVA
@@ -136,7 +140,7 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplink
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 # Стартовый гир офицера FullEVA
 - type: startingGear
@@ -153,73 +157,77 @@
     ears: CLEAHeadsetAlt
     eyes: ClothingEyesGlassesCLEA
     pocket1: CLEAuplinkleader
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: randomHumanoidSettings
   id: CLEAOfficerEVA
   randomizeName: false
   components:
-    - type: MindShield
-    - type: GhostRole
-      name: Офицер ЦСС
-      description: Офицер отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
-    - type: GhostTakeoverAvailable
-    - type: Loadout
-      prototypes: [ CLEAGearOfficerFullEVA ]
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesOfficers
-      - LastNamesOfficers
-    - type: AntagImmune
+  - type: MindShield
+  - type: GhostRole
+    name: Офицер ЦСС
+    description: Офицер отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
+  - type: GhostTakeoverAvailable
+  - type: Loadout
+    prototypes: [ CLEAGearOfficerFullEVA ]
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesOfficers
+    - LastNamesOfficers
+    nameFormat: name-format-officers
+  - type: AntagImmune
 
 - type: entity
   id: RandomHumanoidSpawnerCLEAOfficerEVA
   name: Офицер ЦСС
   suffix: EVA
   components:
-    - type: Sprite
-      sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
-      state: Officer
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesOfficers
-      - LastNamesOfficers
-    - type: RandomHumanoidSpawner
-      settings: CLEAOfficerEVA
-    - type: AntagImmune
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
+    state: Officer
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesOfficers
+    - LastNamesOfficers
+    nameFormat: name-format-officers
+  - type: RandomHumanoidSpawner
+    settings: CLEAOfficerEVA
+  - type: AntagImmune
 
 - type: randomHumanoidSettings
   id: CLEABaseEVA
   randomizeName: false
   components:
-    - type: MindShield
-    - type: GhostRole
-      name: Солдат ЦСС
-      description: Солдат отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
-    - type: GhostTakeoverAvailable
-    - type: Loadout
-      prototypes: [ CLEAGearFullEVA ]
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesSoldiers
-      - LastNamesSoldiers
-    - type: AntagImmune
+  - type: MindShield
+  - type: GhostRole
+    name: Солдат ЦСС
+    description: Солдат отряда Центральных Силовых Структур. Пора решать проблемы. #придумаешь сам
+  - type: GhostTakeoverAvailable
+  - type: Loadout
+    prototypes: [ CLEAGearFullEVA ]
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+    nameFormat: name-format-soldiers
+  - type: AntagImmune
 
 - type: entity
   id: RandomHumanoidSpawnerCLEABaseEVA
   name: Солдат ЦСС
   suffix: EVA
   components:
-    - type: Sprite
-      sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
-      state: Solder
-    - type: RandomMetadata
-      nameSegments:
-      - FirstNamesSoldiers
-      - LastNamesSoldiers
-    - type: RandomHumanoidSpawner
-      settings: CLEABaseEVA
-    - type: AntagImmune
+  - type: Sprite
+    sprite: Adventure/Roles/SpecialForces/CLEA/other/CLEA_roles.rsi
+    state: Solder
+  - type: RandomMetadata
+    nameSegments:
+    - FirstNamesSoldiers
+    - LastNamesSoldiers
+    nameFormat: name-format-soldiers
+  - type: RandomHumanoidSpawner
+    settings: CLEABaseEVA
+  - type: AntagImmune
 
 # Джобки
 

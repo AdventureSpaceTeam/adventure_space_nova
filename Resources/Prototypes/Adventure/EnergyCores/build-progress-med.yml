@@ -613,13 +613,13 @@
         doAfter: 2
 
 - type: construction
-  name: Среднее энергоядро НаноТрейзен
+  name: среднее энерго-ядро НаноТрейзен
   id: EnergyCoreMediumConstructionNT
   graph: EnergyCoreMediumNT
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-blue.rsi
     state: icon
@@ -633,13 +633,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Среднее энергоядро Синдиката
+  name: среднее энерго-ядро Синдиката
   id: EnergyCoreMediumConstructionSyn
   graph: EnergyCoreMediumSyn
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-redspace.rsi
     state: icon
@@ -653,13 +653,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Среднее энергоядро РнД
+  name: среднее энерго-ядро РнД
   id: EnergyCoreMediumConstructionRnD
   graph: EnergyCoreMediumRnD
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-RnD.rsi
     state: icon
@@ -673,13 +673,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Среднее самодельное энергоядро
+  name: среднее самодельное энерго-ядро
   id: EnergyCoreMediumConstructionHM
   graph: EnergyCoreMediumHM
   startNode: start
   targetNode: EnergyCore
   category: construction-category-structures
-  description: СУПЕР ПУПЕР ЯДРО!
+  description: СУПЕР-ПУПЕР ЯДРО!
   icon:
     sprite: Adventure/EnergyCores/mini_core-yellow.rsi
     state: icon

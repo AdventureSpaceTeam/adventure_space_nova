@@ -2,7 +2,7 @@
 - type: entity
   parent: BaseItem
   id: ERTuplink
-  name: Терминал ОБР
+  name: терминал ОБР
   suffix: Adventure
   description: Терминал который использует ОБР в специальных операциях.
   components:
@@ -32,13 +32,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 40
 
 # Аплинк лидера
 - type: entity
   parent: BaseItem
   id: ERTuplinkleader
-  name: Терминал ОБР лидера
+  name: терминал ОБР лидера
   suffix: Adventure
   description: Терминал который используют ОБР лидеры в специальных операциях.
   components:
@@ -71,13 +71,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 40
+      CentCommCrystal: 50
 
 # Аплинк медика
 - type: entity
   parent: BaseItem
   id: ERTuplinkMED
-  name: Терминал ОБР медика
+  name: терминал ОБР медика
   suffix: Adventure
   description: Терминал который использует ОБР медики в специальных операциях.
   components:
@@ -108,13 +108,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 45
 
 # Аплинк инженера
 - type: entity
   parent: BaseItem
   id: ERTuplinkENGI
-  name: Терминал ОБР инженера
+  name: терминал ОБР инженера
   suffix: Adventure
   description: Терминал который используют ОБР инженеры в специальных операциях.
   components:
@@ -145,13 +145,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 45
 
 # Аплинк уборщика
 - type: entity
   parent: BaseItem
   id: ERTuplinkojanitor
-  name: Терминал ОБР уборщика
+  name: терминал ОБР уборщика
   suffix: Adventure
   description: Терминал который используют ОБР уборщики в специальных операциях.
   components:
@@ -182,13 +182,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 45
 
 # Аплинк священника
 - type: entity
   parent: BaseItem
   id: ERTuplinklight
-  name: Терминал ОБР священника
+  name: терминал ОБР священника
   suffix: Adventure
   description: Терминал который используют ОБР священники в специальных операциях.
   components:
@@ -219,7 +219,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 45
 
 # Предметы аплинка - Оружие
 - type: storeCategory

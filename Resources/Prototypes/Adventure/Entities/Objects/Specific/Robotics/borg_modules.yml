@@ -6,10 +6,10 @@
   name: боевой модуль киборга
   components:
   - type: ItemBorgModule
-    items:
-    - WeaponLaserSecBorg
-    - CombatKnife
-    - Truncheon
+    hands:
+    - item: WeaponLaserSecBorg
+    - item: CombatKnife
+    - item: Truncheon
 
 - type: latheRecipe
   id: BorgModuleCombat

@@ -152,28 +152,28 @@
       - id: ShardCrystalGreen
         amount: 1
         prob: 0.3
-      - id: WeaponCrusherGlaive  
+      - id: WeaponCrusherGlaive
         amount: 1
         prob: 0.02
-      - id: TechnologyDisk  
+      - id: TechnologyDisk
         amount: 1
         prob: 0.05
-      - id: ResearchDisk  
+      - id: ResearchDisk
         amount: 1
         prob: 0.08
-      - id: ResearchDisk5000  
+      - id: ResearchDisk5000
         amount: 1
         prob: 0.05
-      - id: ResearchDisk10000  
+      - id: ResearchDisk10000
         amount: 1
         prob: 0.01
-      - id: WeaponCrusher  
+      - id: WeaponCrusher
         amount: 1
         prob: 0.02
-      - id: WeaponCrusherDagger  
+      - id: WeaponCrusherDagger
         amount: 1
         prob: 0.02
-      - id: WeaponProtoKineticCutter  
+      - id: WeaponProtoKineticCutter
         amount: 1
         prob: 0.08
       - id: MiningDrill
@@ -185,39 +185,39 @@
       - id: MiningJackhammer
         amount: 1
         prob: 0.05
-      - id: DrinkSakeBottleFull  
+      - id: DrinkSakeBottleFull
         amount: 1
         prob: 0.02
-      - id: ChemistryBottleEphedrine  
+      - id: ChemistryBottleEphedrine
         amount: 1
         prob: 0.02
-      - id: ChemistryBottleCognizine  
+      - id: ChemistryBottleCognizine
         amount: 1
         prob: 0.03
-      - id: ChemistryBottleOmnizine  
+      - id: ChemistryBottleOmnizine
         amount: 1
         prob: 0.01
-      - id: CombatMedipen  
+      - id: CombatMedipen
         amount: 1
         prob: 0.05
-      - id: ReusableMedipen  
+      - id: ReusableMedipen
         amount: 1
         prob: 0.01
-      - id: ShuttleGunKineticCircuitboard  
+      - id: ShuttleGunKineticCircuitboard
         amount: 1
         prob: 0.01
-      - id: JawsOfLife  
+      - id: JawsOfLife
         amount: 1
         prob: 0.01
-      - id: WelderExperimental  
+      - id: WelderExperimental
         amount: 1
         prob: 0.02
-      - id: PowerDrill  
+      - id: PowerDrill
         amount: 1
         prob: 0.02
-      - id: ResearchAndDevelopmentServerMachineCircuitboard  
+      - id: ResearchAndDevelopmentServerMachineCircuitboard
         amount: 1
         prob: 0.01
-      - id: ClothingOuterHardsuitLuxury  
+      - id: ClothingOuterHardsuitLuxury
         amount: 1
         prob: 0.01

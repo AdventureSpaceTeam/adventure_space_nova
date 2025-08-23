@@ -143,5 +143,5 @@
       mobState:
       - Critical
       - Dead
-    - type: Rattle
+    - type: RattleOnTrigger
       radioChannel: CentCom

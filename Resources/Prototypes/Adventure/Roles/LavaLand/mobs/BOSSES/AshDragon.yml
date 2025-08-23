@@ -10,7 +10,7 @@
   - type: Tag
     tags:
     - CannotSuicide
-    - FootstepSound  
+    - FootstepSound
     - LavaMob
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/mobs/BOSSES/dragon.rsi
@@ -75,7 +75,7 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    soundGunshot: /Audio/Magic/fireball.ogg 
+    soundGunshot: /Audio/Magic/fireball.ogg
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
@@ -217,14 +217,14 @@
         acts: ["Destruction"]
       - !type:SpawnEntitiesBehavior
         spawn:
-          SpawnAshDragonSpawn: 
+          SpawnAshDragonSpawn:
             min: 1
             max: 1
           HeadSkeleton:
-            min: 1   
+            min: 1
             max: 1
           MaterialBones1:
-            min: 3 
+            min: 3
             max: 6
           FoodMeatRotten:
             min: 2
@@ -257,7 +257,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-1.49,-0.49,1.49,0.49" 
+          bounds: "-1.49,-0.49,1.49,0.49"
         density: 190
         mask:
         - MachineMask

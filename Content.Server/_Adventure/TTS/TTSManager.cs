@@ -70,15 +70,15 @@ public sealed class TTSManager
     public async Task<byte[]?> ConvertTextToSpeech(string speaker, string text, string? effect)
     {
         WantedCount.Inc();
-        var cacheKey = GenerateCacheKey(speaker, text);
+        var cacheKey = GenerateCacheKey(speaker, text, effect);
         if (_cache.TryGetValue(cacheKey, out var data))
         {
             ReusedCount.Inc();
-            _sawmill.Verbose($"Use cached sound for '{text}' speech by '{speaker}' speaker");
+            _sawmill.Verbose($"Use cached sound for '{text}' speech by '{speaker}'({effect}) speaker");
             return data;
         }
 
-        _sawmill.Verbose($"Generate new audio for '{text}' speech by '{speaker}' speaker");
+        _sawmill.Verbose($"Generate new audio for '{text}' speech by '{speaker}'({effect}) speaker");
 
         var reqTime = DateTime.UtcNow;
         try
@@ -88,8 +88,9 @@ public sealed class TTSManager
             // c4llv07e fix tts start
             if (effect == null)
                 effect = "";
-            var response = await _httpClient.GetAsync(
-                _apiUrl + $"?speaker={speaker}&text={text}&ext=wav&effect={effect}", cts.Token);
+            var requestUrl = _apiUrl + $"?speaker={speaker}&text={text}&ext=wav&effect={effect}";
+            var response = await _httpClient.GetAsync(requestUrl, cts.Token);
+            _sawmill.Debug($"requested api url: {requestUrl}");
             // c4llv07e fix tts end
             if (!response.IsSuccessStatusCode)
             {
@@ -105,7 +106,9 @@ public sealed class TTSManager
 
             var soundData = await response.Content.ReadAsByteArrayAsync();
 
-            _cache.Add(cacheKey, soundData);
+            // Because internet is slow and mutexes is hard in sandbox, we might override previous cache, but it doesn't
+            // really matter.
+            _cache[cacheKey] = soundData;
             _cacheKeysSeq.Add(cacheKey);
             if (_cache.Count > _maxCachedCount)
             {
@@ -114,7 +117,7 @@ public sealed class TTSManager
                 _cacheKeysSeq.Remove(firstKey);
             }
 
-            _sawmill.Debug($"Generated new audio for '{text}' speech by '{speaker}' speaker ({soundData.Length} bytes)");
+            _sawmill.Debug($"Generated new audio for '{text}' speech by '{speaker}'({effect}) speaker ({soundData.Length} bytes)");
             RequestTimings.WithLabels("Success").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
 
             return soundData;
@@ -122,13 +125,13 @@ public sealed class TTSManager
         catch (TaskCanceledException)
         {
             RequestTimings.WithLabels("Timeout").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
-            _sawmill.Error($"Timeout of request generation new audio for '{text}' speech by '{speaker}' speaker");
+            _sawmill.Error($"Timeout of request generation new audio for '{text}' speech by '{speaker}'({effect}) speaker");
             return null;
         }
         catch (Exception e)
         {
             RequestTimings.WithLabels("Error").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
-            _sawmill.Error($"Failed of request generation new sound for '{text}' speech by '{speaker}' speaker\n{e}");
+            _sawmill.Error($"Failed of request generation new sound for '{text}' speech by '{speaker}'({effect}) speaker\n{e}");
             return null;
         }
     }
@@ -139,9 +142,9 @@ public sealed class TTSManager
         _cacheKeysSeq.Clear();
     }
 
-    private string GenerateCacheKey(string speaker, string text)
+    private string GenerateCacheKey(string speaker, string text, string? effect)
     {
-        var key = $"{speaker}/{text}";
+        var key = $"{speaker}[{effect}]/{text}";
         byte[] keyData = Encoding.UTF8.GetBytes(key);
         var sha256 = System.Security.Cryptography.SHA256.Create();
         var bytes = sha256.ComputeHash(keyData);

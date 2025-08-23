@@ -190,6 +190,7 @@
         acts: [ "Destruction" ]
   - type: ApcPowerReceiver
     powerLoad: 1000
+    needsPower: false
   - type: StationAiCore
   - type: StationAiVision
   - type: InteractionOutline
@@ -218,7 +219,6 @@
     listeningRange: 0
     speakerVolume: Speak
     unlistedNumber: true
-    requiresPower: false
   - type: Holopad
   - type: StationAiWhitelist
   - type: UserInterface
@@ -323,6 +323,10 @@
     - state: ai_camera
       shader: unshaded
       map: ["base"]
+# Adventure Ai speed start
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 30
+# Adventure Ai speed end
 
 # The holographic representation of the AI that is projected from a holopad.
 - type: entity

@@ -26,6 +26,9 @@
       "name": "icon-string2"
     },
     {
+      "name": "icon-superstring"
+    },
+    {
       "name": "equipped-box",
       "directions": 4
     },
@@ -63,6 +66,10 @@
     },
     {
       "name": "equipped-string2-rep",
+      "directions": 4
+    },
+    {
+      "name": "equipped-superstring",
       "directions": 4
     }
   ]

@@ -1,0 +1,20 @@
+- type: entity
+  parent: AmeJar
+  id: AmeJarBig
+  name: объёмный топливный бак ДАМ
+  description: Герметичный сосуд с антивеществом использующийся в реакторе антиматерии.
+  components:
+  - type: AmeFuelContainer
+    fuelAmount: 1500
+    fuelCapacity: 1500
+
+- type: entity
+  id: CrateEngineeringAMEJarBig
+  parent: CrateEngineeringSecure
+  name: ящик расширенного антиматериевого топлива
+  description: Три канистр антиматериевого топлива, для заправки двигателя антиматерии.
+  components:
+  - type: StorageFill
+    contents:
+      - id: AmeJarBig
+        amount: 3

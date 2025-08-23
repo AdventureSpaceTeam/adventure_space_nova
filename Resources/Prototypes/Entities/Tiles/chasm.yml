@@ -47,6 +47,22 @@
   - type: Tag
     tags:
     - HideContextMenu
+#Adventure-LavaLand-start
+  - type: Drain
+  - type: DumpableSolution
+    solution: drainBuffer
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: fill-
+    solutionName: drainBuffer
+  - type: SolutionContainerManager
+    solutions:
+      drainBuffer:
+        maxVol: 1000
+  - type: DrainableSolution
+    solution: drainBuffer
+#Adventure-LavaLand-end
 
 - type: entity
   parent: FloorChasmEntity

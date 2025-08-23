@@ -20,6 +20,7 @@
     - id: AstroNavCartridge
     - id: ClothingHandsKnuckleDustersQM
     - id: MailTeleporterMachineCircuitboard
+    - id: SalvageShuttleConsoleCircuitboard # Adventure salvage shuttle return
 
 - type: entity
   id: LockerQuarterMasterFilled
@@ -43,7 +44,7 @@
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
-    - id: DoorRemoteCommand
+    - id: DoorRemoteCustom
     - id: MedalCase
     - id: NukeDisk
     - id: PinpointerNuclear
@@ -148,6 +149,8 @@
     - id: ClothingEyesHudCommand
     - id: ClothingOuterCoatHOP # Corvax-Resprite
     - id: ClothingOuterHardsuitHOP # Adventure
+    - id: PrinterFlatpack # Adventure
+    - id: PlantAnalyzerCartridge # Adventure
 
 - type: entity
   id: LockerHeadOfPersonnelFilled

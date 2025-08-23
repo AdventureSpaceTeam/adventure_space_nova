@@ -1,0 +1,39 @@
+- type: entity
+  parent: BasePDA
+  id: SeniorBotanistPDA
+  name: senior botanist PDA
+  description: Looks like it’s seen a lot over the years.
+  components:
+  - type: Pda
+    id: SeniorBotanistIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-seniorbotanist
+  - type: PdaBorderColor
+    borderColor: "#44843c"
+    accentVColor: "#152abe"
+  - type: Icon
+    state: pda-seniorbotanist
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    notificationsEnabled: false
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - PlantAnalyzerCartridge
+
+- type: entity
+  parent: IDCardStandard
+  id: SeniorBotanistIDCard
+  name: senior botanist ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: idGenericService
+    - type: PresetIdCard
+      job: Botanist

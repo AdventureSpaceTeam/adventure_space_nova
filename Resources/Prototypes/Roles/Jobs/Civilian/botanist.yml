@@ -22,9 +22,20 @@
   id: BotanistGear
   equipment:
     shoes: ClothingShoesColorBrown
-    id: BotanistPDA
+#   id: BotanistPDA # Adventure
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
   #storage:
     #back:
     #- Stuff
+
+- type: chameleonOutfit
+  id: BotanistChameleonOutfit
+  job: Botanist
+  equipment:
+    head: ClothingHeadBandBotany
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedGreen
+    outerClothing: ClothingOuterApronBotanist
+    gloves: ClothingHandsGlovesLeather

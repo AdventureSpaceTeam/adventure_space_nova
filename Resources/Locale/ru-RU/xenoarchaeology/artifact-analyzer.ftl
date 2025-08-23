@@ -27,7 +27,7 @@ analysis-console-info-effect-value = [font="Monospace" size=11][color=gray]{ $st
 analysis-console-info-trigger = [font="Monospace" size=11]Стимуляторы:[/font]
 analysis-console-info-triggered-value = [font="Monospace" size=11][color=gray]{$triggers}[/color][/font]
 analysis-console-info-scanner = Сканирование...
-analysis-console-info-scanner-paused = Приостановлено.
+analysis-console-info-scanner-paused = Пауза.
 analysis-console-progress-text =
     { $seconds ->
         [one] T-{ $seconds } секунда

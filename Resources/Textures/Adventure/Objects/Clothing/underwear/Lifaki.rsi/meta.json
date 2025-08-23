@@ -20,6 +20,15 @@
       "name": "icon-string2"
     },
     {
+      "name": "icon-maika"
+    },
+    {
+      "name": "icon-telnashka"
+    },
+    {
+      "name": "icon-alkash"
+    },
+    {
       "name": "equipped-box",
       "directions": 4
     },
@@ -33,6 +42,18 @@
     },
     {
       "name": "equipped-string2",
+      "directions": 4
+    },
+    {
+      "name": "equipped-maika",
+      "directions": 4
+    },
+    {
+      "name": "equipped-telnashka",
+      "directions": 4
+    },
+    {
+      "name": "equipped-alkash",
       "directions": 4
     }
   ]

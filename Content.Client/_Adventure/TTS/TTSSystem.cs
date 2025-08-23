@@ -72,8 +72,7 @@ public sealed class TTSSystem : EntitySystem
             .WithVolume(AdjustVolume(ev.IsWhisper))
             .WithMaxDistance(AdjustDistance(ev.IsWhisper));
 
-        if (ev.SourceUid is { Id: 0 })
-            return;
+        _sawmill.Debug($"Playing TTS audio {ev.Data.Length} bytes from {ev.SourceUid} entity");
 
         if (ev.SourceUid != null)
         {

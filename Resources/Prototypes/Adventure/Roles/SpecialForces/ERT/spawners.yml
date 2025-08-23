@@ -14,7 +14,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackERTSecurity
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -26,6 +26,7 @@
     nameSegments:
     - FirstNamesSoldiers
     - LastNamesSoldiers
+    nameFormat: name-format-soldiers
   - type: MindShield
   - type: RandomHumanoidAppearance
     randomizeName: false
@@ -56,7 +57,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackERTMedical
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -68,6 +69,7 @@
     nameSegments:
     - FirstNamesSoldiers
     - LastNamesSoldiers
+    nameFormat: name-format-soldiers
   - type: MindShield
   - type: RandomHumanoidAppearance
     randomizeName: false
@@ -98,7 +100,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackERTEngineer
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -110,6 +112,7 @@
     nameSegments:
     - FirstNamesSoldiers
     - LastNamesSoldiers
+    nameFormat: name-format-soldiers
   - type: MindShield
   - type: RandomHumanoidAppearance
     randomizeName: false
@@ -139,7 +142,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackERTJanitor
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -151,6 +154,7 @@
     nameSegments:
     - FirstNamesSoldiers
     - LastNamesSoldiers
+    nameFormat: name-format-soldiers
   - type: MindShield
   - type: RandomHumanoidAppearance
     randomizeName: false
@@ -181,7 +185,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackERTChaplain
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -193,6 +197,7 @@
     nameSegments:
     - FirstNamesSoldiers
     - LastNamesSoldiers
+    nameFormat: name-format-soldiers
   - type: MindShield
   - type: BibleUser
   - type: RandomHumanoidAppearance
@@ -224,7 +229,7 @@
     suitstorage: DoubleEmergencyOxygenTankFilled
     ears: ClothingHeadsetAltCentCom
     back: ClothingBackpackERTLeader
-    ipc: IPCModulSec 
+    ipc: IPCModulSec
 
 - type: entity
   parent: MobHuman
@@ -236,6 +241,7 @@
     nameSegments:
     - FirstNamesOfficers
     - LastNamesOfficers
+    nameFormat: name-format-officers
   - type: MindShield
   - type: BibleUser
   - type: RandomHumanoidAppearance

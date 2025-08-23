@@ -1,0 +1,111 @@
+- type: decal
+  id: Dirt1A
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: dirt1
+
+- type: decal
+  id: Dirt2A
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: dirt2
+
+- type: decal
+  id: Dirt3A
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: dirt3
+
+- type: decal
+  id: Dirt4A
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: dirt4
+
+- type: decal
+  id: Mould1
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould1
+
+- type: decal
+  id: Mould2
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould2
+
+- type: decal
+  id: Mould3
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould3
+
+- type: decal
+  id: Mould4
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould4
+
+- type: decal
+  id: Mould5
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould5
+
+- type: decal
+  id: Mould6
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould6
+
+- type: decal
+  id: Mould7
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould7
+
+- type: decal
+  id: Mould8
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould8
+
+- type: decal
+  id: Mould9
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould9
+
+- type: decal
+  id: Mould10
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: Adventure/Decals/dirty.rsi
+    state: mould10

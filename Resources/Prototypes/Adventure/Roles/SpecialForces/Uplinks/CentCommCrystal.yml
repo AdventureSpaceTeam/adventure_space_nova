@@ -1,6 +1,6 @@
 #Created: raidgo Transferred:  depresh
 - type: entity
-  name: Блюспейс Кристалл
+  name: блюспейс Кристалл
   parent: BaseItem
   id: CentCommCrystal
   suffix: 20 БК
@@ -25,7 +25,7 @@
 - type: entity
   parent: CentCommCrystal
   id: CentCommCrystal1
-  name: Блюспейс Кристалл
+  name: блюспейс Кристалл
   suffix: 1 БК
   components:
   - type: Stack

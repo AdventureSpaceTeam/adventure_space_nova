@@ -4,8 +4,8 @@
   name: Позитронный мозг КПБ
   parent: BaseItem
   components:
-  - type: TTS 
-    voice: glados 
+  - type: TTS
+    voice: glados
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Synth

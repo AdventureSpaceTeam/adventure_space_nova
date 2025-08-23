@@ -1,9 +1,9 @@
-#магматитовая стена 
+#магматитовая стена
 - type: entity
   parent: WallCobblebrick
   id: WallBasaltCobblebrickMagma
   suffix: LavaLand
-  name: магматитовая стена 
+  name: магматитовая стена
   description: Идеально подогнанные друг к другу кирпичик за кирпичиком образовали стену.
   components:
   - type: Sprite
@@ -30,13 +30,13 @@
     energy: 1.5
     color: "#f2511e"
 
-#магматитовая дверь 
+#магматитовая дверь
 - type: entity
   parent: BaseMaterialDoorNavMap
   id: MaterialDoorMagma
   suffix: LavaLand
   description: Дверь, куда она приведет?
-  name: магматитовая дверь 
+  name: магматитовая дверь
   components:
   - type: Sprite
     sprite: Adventure/Roles/LavaLand/materials/necro_door.rsi

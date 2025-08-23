@@ -2,7 +2,7 @@
 - type: entity
   parent: BaseItem
   id: Cburnuplink
-  name: Терминал РХБЗЗ
+  name: терминал РХБЗЗ
   suffix: Adventure
   description: Терминал который используют оперативники РХБЗЗ в специальных операциях.
   components:
@@ -32,13 +32,13 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 25
+      CentCommCrystal: 35
 
 # Аплинк Офицера
 - type: entity
   parent: BaseItem
   id: Cburnuplinkleader
-  name: Терминал командира РХБЗЗ
+  name: терминал командира РХБЗЗ
   suffix: Adventure
   description: Терминал который используют командиры РХБЗЗ в специальных операциях.
   components:
@@ -69,7 +69,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 45
 
 # Предметы аплинка - Оружие
 - type: storeCategory
@@ -142,7 +142,7 @@
 
 - type: listing
   id: FirethrowerGunCBURN
-  description: Топливный бак в комплект не входит. 
+  description: Топливный бак в комплект не входит.
   productEntity: FirethrowerGun
   cost:
     CentCommCrystal: 17
@@ -201,7 +201,7 @@
 
 - type: listing
   id: FuelTankFirethrowerCBURN
-  description: Топливный бак для огнемёта. Надеюсь вы не забыли его надеть на спину. 
+  description: Топливный бак для огнемёта. Надеюсь вы не забыли его надеть на спину.
   productEntity: FuelTankFirethrower
   cost:
     CentCommCrystal: 3
@@ -382,7 +382,7 @@
     CentCommCrystal: 1
   categories:
   - CBURNmedicine
-  
+
 - type: listing
   id: MedicatedSutureCBURN
   productEntity: MedicatedSuture
@@ -469,7 +469,7 @@
 - type: listing
   id: MagazineBoxLightRifleBigCBURN
   description: Коробка патронов калибра 30. Винтовочные подходящие для АКМС
-  productEntity: MagazineBoxLightRifleBig 
+  productEntity: MagazineBoxLightRifleBig
   cost:
     CentCommCrystal: 6
   categories:
