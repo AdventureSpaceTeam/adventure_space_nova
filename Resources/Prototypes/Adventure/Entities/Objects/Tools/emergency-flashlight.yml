@@ -22,7 +22,6 @@
         shader: unshaded
   - type: Sprite
     sprite: Adventure/Objects/Devices/emergency_flashlight.rsi
-    scale: 0.6, 0.6
     layers:
       - state: flashlight
       - state: flashlight-overlay
