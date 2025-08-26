@@ -1,0 +1,495 @@
+#изумрудная руда
+- type: entity
+  parent: OreBase
+  id: OreEmerald
+  name: изумрудная руда
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Emerald_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreEmerald
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawEmerald: 100
+  - type: Extractable
+    grindableSolutionName: emerald
+  - type: SolutionContainerManager
+    solutions:
+      emerald:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreEmerald
+  id: OreEmerald1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreEmerald
+  name: изумрудная руда
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Emerald_ore }
+  spawn: OreEmerald1
+  maxCount: 30
+
+- type: material
+  id: RawEmerald
+  stackEntity: OreEmerald1
+  name: изумрудная руда
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Emerald_ore }
+  color: "#2ad75a"
+  price: 0.5
+
+#рубиновая руда
+- type: entity
+  parent: OreBase
+  id: OreRuby
+  name: рубиновая руда
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Ruby_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreRuby
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawRuby: 100
+  - type: Extractable
+    grindableSolutionName: ruby
+  - type: SolutionContainerManager
+    solutions:
+      ruby:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreRuby
+  id: OreRuby1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreRuby
+  name: рубиновая руда
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Ruby_ore }
+  spawn: OreRuby1
+  maxCount: 30
+
+- type: material
+  id: RawRuby
+  stackEntity: OreRuby1
+  name: рубиновая руда
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Ruby_ore }
+  color: "#f24646"
+  price: 0.5
+
+#сапфировая руда
+- type: entity
+  parent: OreBase
+  id: OreSapphire
+  name: сапфировая руда
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Sapphire_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreSapphire
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawSapphire: 100
+  - type: Extractable
+    grindableSolutionName: sapphire
+  - type: SolutionContainerManager
+    solutions:
+      sapphire:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreSapphire
+  id: OreSapphire1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreSapphire
+  name: сапфировая руда
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Sapphire_ore }
+  spawn: OreSapphire1
+  maxCount: 30
+
+- type: material
+  id: RawSapphire
+  stackEntity: OreSapphire1
+  name: сапфировая руда
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Sapphire_ore }
+  color: "#305de4"
+  price: 0.5
+
+#топазовая руда
+- type: entity
+  parent: OreBase
+  id: OreTopaz
+  name: топазовая руда
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Topaz_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreTopaz
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawTopaz: 100
+  - type: Extractable
+    grindableSolutionName: topaz
+  - type: SolutionContainerManager
+    solutions:
+      topaz:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreTopaz
+  id: OreTopaz1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreTopaz
+  name: топазовая руда
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Topaz_ore }
+  spawn: OreTopaz1
+  maxCount: 30
+
+- type: material
+  id: RawTopaz
+  name: топазовая руда
+  stackEntity: OreTopaz1
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Topaz_ore }
+  color: "#f29d46"
+  price: 0.5
+
+#Залежи
+- type: entity
+  id: WallRockBasaltGem
+  name: базальт
+  parent: WallRockBasalt
+  description: Рудная жила, богатая драгоценными камнями.
+  suffix: Драгоценные камни LavaLand
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: RandomOreGem
+    - type: Sprite
+      layers:
+        - state: rock_wall
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_wall_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_wall_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_wall_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_wall_west
+        - state: rock_gem
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+
+- type: ore
+  id: RandomOreGem
+  oreEntity: SpawnOreGemRandom
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: entity
+  id: SpawnOreGemRandom
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - OreEmerald1
+      - OreRuby1
+      - OreSapphire1
+      - OreTopaz1
+
+#драконий камень
+- type: entity
+  parent: OreBase
+  id: OreDragon
+  name: драконий камень
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Dragon_stone_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreDragon
+    count: 10
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawDragon: 100
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#ee5858"
+  - type: Extractable
+    grindableSolutionName: dragon
+  - type: SolutionContainerManager
+    solutions:
+      dragon:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreDragon
+  id: OreDragon1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreDragon
+  name: драконий камень
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone_ore }
+  spawn: OreDragon1
+  maxCount: 10
+
+- type: material
+  id: RawDragon
+  stackEntity: OreDragon1
+  name: драконий камень
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Dragon_stone_ore }
+  color: "#ee5858"
+  price: 0.5
+
+#залежа драконьего камня
+- type: entity
+  id: RockDragonStone
+  parent: BaseStructure
+  suffix: LavaLand
+  name: драконий камень
+  description: Застывшая в лаве пламя дракона.
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: OreDragon
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/materials/dragon_stone.rsi
+    state: d1
+    layers:
+    - state: d1
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: RandomSprite
+    available:
+    - 0:
+        d1: ""
+    - 0:
+        d2: ""
+    - 0:
+        d3: ""
+    - 0:
+        d4: ""
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Rock
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 120
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Impassable
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#ee5858"
+
+- type: ore
+  id: OreDragon
+  oreEntity: OreDragon1
+  minOreYield: 1
+  maxOreYield: 2
+
+#бароксульдивая руда
+- type: entity
+  parent: OreBase
+  id: OrePharo
+  name: бароксульдивая руда
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Phoron_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OrePharo
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawPharo: 100
+  - type: Extractable
+    grindableSolutionName: pharo
+  - type: SolutionContainerManager
+    solutions:
+      pharo:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#cb5ee5"
+
+- type: entity
+  parent: OrePharo
+  id: OrePharo1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OrePharo
+  name: бароксульдивая руда
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron_ore }
+  spawn: OrePharo1
+  maxCount: 30
+
+- type: material
+  id: RawPharo
+  name: бароксульдивая руда
+  stackEntity: OrePharo1
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Phoron_ore }
+  color: "#cb5ee5"
+  price: 0.5
+
+#рупериумовая руда
+- type: entity
+  parent: OreBase
+  id: OreRupee
+  name: рупериумовая руда
+  description: Кусок необработанного драгоценного камня.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+    layers:
+    - state: Rupee_ore
+  - type: Appearance
+  - type: Stack
+    stackType: OreRupee
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      RawRupee: 100
+  - type: Extractable
+    grindableSolutionName: rupee
+  - type: SolutionContainerManager
+    solutions:
+      rupee:
+        reagents:
+        - ReagentId: Silicon
+          Quantity: 3
+        - ReagentId: Sulfur
+          Quantity: 2
+
+- type: entity
+  parent: OreRupee
+  id: OreRupee1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: OreRupee
+  name: рупериумовая руда
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee_ore }
+  spawn: OreRupee1
+  maxCount: 30
+
+- type: material
+  id: RawRupee
+  name: рупериумовая руда
+  stackEntity: OreRupee1
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: Rupee_ore }
+  color: "#d6fe36"
+  price: 0.5

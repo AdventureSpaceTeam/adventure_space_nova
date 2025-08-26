@@ -1,0 +1,157 @@
+﻿#Тело Драска
+- type: body
+  name: "Драск"
+  id: Drask
+  root: torso
+  slots:
+    head:
+      part: HeadDrask
+      connections:
+      - torso
+      organs:
+        brain: OrganDraskBrain
+        eyes: OrganDraskEyes
+        heart: OrganDraskHeart # сердце в голове
+    torso:
+      part: TorsoDrask
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        lungs: OrganDraskLungs
+        stomach: OrganDraskStomach
+        liver: OrganDraskLiver
+        kidneys: OrganDraskKidneys
+    right arm:
+      part: RightArmDrask
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmDrask
+      connections:
+      - left hand
+    right hand:
+      part: RightHandDrask
+    left hand:
+      part: LeftHandDrask
+    right leg:
+      part: RightLegDrask
+    left leg:
+      part: LeftLegDrask
+
+#Части Драска
+- type: entity
+  id: PartDrask
+  parent: [BaseItem, BasePart]
+  name: "Часть тела драска"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 10
+
+- type: entity
+  id: TorsoDrask
+  name: "Туловище драска"
+  parent: [PartDrask, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 20
+
+- type: entity
+  id: HeadDrask
+  name: "Голова драска"
+  parent: [PartDrask, BaseHead]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 10
+
+- type: entity
+  id: LeftArmDrask
+  name: "Левая рука драска"
+  parent: [PartDrask, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmDrask
+  name: "Правая рука драска"
+  parent: [PartDrask, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandDrask
+  name: "Левая рука драска"
+  parent: [PartDrask, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandDrask
+  name: "Правая рука драска"
+  parent: [PartDrask, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegDrask
+  name: "Левая нога драска"
+  parent: [PartDrask, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegDrask
+  name: "Правая нога драска"
+  parent: [PartDrask, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootDrask
+  name: "Левая нога драска"
+  parent: [PartDrask, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootDrask
+  name: "Правая нога драска"
+  parent: [PartDrask, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: "r_foot"

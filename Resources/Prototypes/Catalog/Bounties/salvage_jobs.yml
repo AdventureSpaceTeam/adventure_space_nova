@@ -148,7 +148,7 @@
   description: bounty-description-remains
   group: SalvageJobTier3
   sprite:
-    sprite: Adventure/Roles/LavaLand/materials/gems.rsi
+    sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
     state: core1
   entries:
   - name: bounty-item-remains

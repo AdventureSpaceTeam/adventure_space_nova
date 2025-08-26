@@ -1,0 +1,355 @@
+#Легион
+- type: entity
+  id: LegionBossStage1
+  parent: BaseStructure
+  suffix: Структурный босс LavaLand
+  name: легион
+  description: Огромный череп хранителя Некрополиса.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/legion.rsi
+    layers:
+    - state: alive1
+    - state: light_alive1
+      shader: unshaded
+  - type: Damageable
+    damageContainer: Biological
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          LegionBossStage2:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Adventure/LavaLand/ghost.ogg
+          params:
+            volume: -1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.70,-0.70,0.70,0.70"
+        density: 20000
+        mask:
+        - MachineMask
+        layer:
+        - Impassable
+  - type: PointLight
+    radius: 4
+    energy: 1.5
+    color: "#ee5858"
+  - type: CombatMode
+    toggleMouseRotator: false
+  - type: NoRotateOnInteract
+  - type: NoRotateOnMove
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    showExamineText: false
+    availableModes:
+    - SemiAuto
+    soundGunshot: null
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 5
+    rechargeSound: null
+  - type: BasicEntityAmmoProvider
+    proto: MobLavaLandLegionSkull
+    capacity: 1
+    count: 1
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/_Adventure/LavaLand/legion_boss.ogg
+  - type: HTN
+    rootTask:
+      task: SimpleMeleeRangedHostileCompoundAudioTrigger
+    blackboard:
+      VisionRadius: !type:Single
+        8
+      AggroVisionRadius: !type:Single
+        8
+      SoundTargetInLOS: !type:SoundPathSpecifier
+        path: /Audio/_Adventure/LavaLand/ghost.ogg
+
+- type: entity
+  id: LegionBossStage2
+  parent: LegionBossStage1
+  categories: [ HideSpawnMenu ]
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/legion.rsi
+    layers:
+    - state: alive2
+    - state: light_alive2
+      shader: unshaded
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 2
+    rechargeSound: null
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          LegionBossStage3:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Adventure/LavaLand/ghost.ogg
+          params:
+            volume: -1
+
+- type: entity
+  id: LegionBossStage3
+  parent: LegionBossStage1
+  categories: [ HideSpawnMenu ]
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/legion.rsi
+    layers:
+    - state: alive3
+    - state: light_alive3
+      shader: unshaded
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 10
+    rechargeSound: null
+  - type: BasicEntityAmmoProvider
+    proto: MobLavaLandLegionEmpty
+    capacity: 1
+    count: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          LegionBossStage4:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Adventure/LavaLand/ghost.ogg
+          params:
+            volume: -1
+
+- type: entity
+  id: LegionBossStage4
+  parent: LegionBossStage1
+  categories: [ HideSpawnMenu ]
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/legion.rsi
+    layers:
+    - state: alive4
+    - state: light_alive4
+      shader: unshaded
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 10
+    rechargeSound: null
+  - type: BasicEntityAmmoProvider
+    proto: NecroSpikeSpawnRandomMob
+    capacity: 1
+    count: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobSpawnLegionCommander:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Adventure/LavaLand/ghost.ogg
+          params:
+            volume: -1
+
+#командир легиона
+- type: entity
+  id: MobLavaLandLegionCommanderBOSS
+  parent: [ BaseMobLavaLand, FlyingMobBase ]
+  suffix: LavaLand
+  categories: [ HideSpawnMenu ]
+  name: командир легиона
+  description: Лучший из лучших.
+  components:
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - LavaMob
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/legion.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive5
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light_alive5
+      shader: unshaded
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive5
+        BaseUnshaded: light_alive5
+      Dead:
+        Base: dead5
+        BaseUnshaded: light_dead5
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 3.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1500: Dead
+  - type: ExplosionResistance
+    damageCoefficient: 0.0
+  - type: MeleeWeapon
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.75
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 10
+        Piercing: 10
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 10000
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: Butcherable
+    butcherDelay: 30
+    spawned:
+    - id: SalvageHumanCorpse
+      amount: 1
+    - id: Coal1
+      amount: 5
+    - id: Ruby1
+      amount: 5
+    - id: MaterialMagmatite1
+      amount: 5
+  - type: PointLight
+    radius: 4
+    energy: 1.5
+    color: "#f2511e"
+  - type: ProjectileBatteryAmmoProvider
+    proto: MobLavaLandLegionSkull
+    fireCost: 50
+  - type: Gun
+    maxAngle: 60
+    minAngle: 30
+    fireRate: 0.5
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/_Adventure/LavaLand/ghost.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10
+  - type: Battery
+    maxCharge: 50
+    startingCharge: 50
+  - type: HTN
+    rootTask:
+      task: SimpleMeleeRangedHostileCompoundAudioTrigger
+    blackboard:
+      VisionRadius: !type:Single
+        9
+      AggroVisionRadius: !type:Single
+        9
+      SoundTargetInLOS: !type:SoundPathSpecifier
+        path: /Audio/_Adventure/LavaLand/ghost.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageGroupTrigger
+        damageGroup: Brute
+        damage: 6000
+  - type: AmbientSound
+    range: 5
+    sound:
+      path: /Audio/_Adventure/LavaLand/legion_boss.ogg
+
+# Спавн
+- type: entity
+  id: MobSpawnLegionCommander
+  categories: [ HideSpawnMenu ]
+  name: легион
+  components:
+  - type: Transform
+    anchored: True
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/legion.rsi
+    layers:
+    - state: Spawn
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.70,-0.70,0.70,0.70"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: TimedDespawn
+    lifetime: 10.0
+  - type: SpawnOnDespawn
+    prototype: MobLavaLandLegionCommanderBOSS
+  - type: PointLight
+    radius: 4
+    energy: 1.5
+    color: "#f2511e"
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_Adventure/LavaLand/GhostStone.ogg

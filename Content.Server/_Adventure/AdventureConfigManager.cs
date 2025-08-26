@@ -9,7 +9,7 @@ public sealed class AdventureConfigManager
     [Dependency] private readonly ILogManager _log = default!;
     [Dependency] private readonly IResourceManager _res = default!;
 
-    private const string path = "/ConfigPresets/Adventure/config.toml";
+    private const string path = "/ConfigPresets/_Adventure/config.toml";
 
     public void Initialize()
     {

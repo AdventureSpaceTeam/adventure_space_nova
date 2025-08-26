@@ -27,18 +27,18 @@
   - type: ItemToggle
     predictable: false
     soundActivate:
-      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderactivate.ogg # Adventure
+      path: /Audio/_Adventure/Weapon/Melee/fuelswords/welderactivate.ogg # Adventure
       params:
         variation: 0.125
         volume: -5
     soundDeactivate:
-      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderdeactivate.ogg # Adventure
+      path: /Audio/_Adventure/Weapon/Melee/fuelswords/welderdeactivate.ogg # Adventure
       params:
         variation: 0.125
         volume: -5
   - type: ItemToggleActiveSound # Adventure
     activeSound:
-      path: /Audio/Adventure/Weapon/Melee/fuelswords/welderhum.ogg
+      path: /Audio/_Adventure/Weapon/Melee/fuelswords/welderhum.ogg
       params:
         variation: 0.125
         volume: -7

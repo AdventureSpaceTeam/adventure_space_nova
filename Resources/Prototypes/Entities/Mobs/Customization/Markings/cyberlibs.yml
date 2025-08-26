@@ -11,7 +11,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_arm
 
 - type: marking
@@ -26,7 +26,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_arm
 
 - type: marking
@@ -41,7 +41,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_hand
 
 - type: marking
@@ -56,7 +56,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_hand
 
 - type: marking
@@ -71,7 +71,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_leg
 
 - type: marking
@@ -86,7 +86,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_leg
 
 - type: marking
@@ -101,7 +101,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_foot
 
 - type: marking
@@ -116,7 +116,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_foot
 
 - type: marking
@@ -131,7 +131,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: torso
 
 # Hephaestus
@@ -147,7 +147,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_arm
 
 - type: marking
@@ -162,7 +162,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_arm
 
 - type: marking
@@ -177,7 +177,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_hand
 
 - type: marking
@@ -192,7 +192,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_hand
 
 - type: marking
@@ -207,7 +207,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_leg
 
 - type: marking
@@ -222,7 +222,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_leg
 
 - type: marking
@@ -237,7 +237,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_foot
 
 - type: marking
@@ -252,7 +252,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_foot
 
 - type: marking
@@ -267,7 +267,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: torso
 
 # Hephaestus Titan
@@ -283,7 +283,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_arm
 
 - type: marking
@@ -298,7 +298,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_arm
 
 - type: marking
@@ -313,7 +313,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_hand
 
 - type: marking
@@ -328,7 +328,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_hand
 
 - type: marking
@@ -343,7 +343,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_leg
 
 - type: marking
@@ -358,7 +358,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_leg
 
 - type: marking
@@ -373,7 +373,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_foot
 
 - type: marking
@@ -388,7 +388,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_foot
 
 - type: marking
@@ -403,7 +403,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: torso
 
 # Morpheus
@@ -419,7 +419,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_arm
 
 - type: marking
@@ -434,7 +434,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_arm
 
 - type: marking
@@ -449,7 +449,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_hand
 
 - type: marking
@@ -464,7 +464,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_hand
 
 - type: marking
@@ -479,7 +479,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_leg
 
 - type: marking
@@ -494,7 +494,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_leg
 
 - type: marking
@@ -509,7 +509,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_foot
 
 - type: marking
@@ -524,7 +524,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_foot
 
 - type: marking
@@ -539,7 +539,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: torso
 
 
@@ -556,7 +556,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_arm
 
 - type: marking
@@ -571,7 +571,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_arm
 
 - type: marking
@@ -586,7 +586,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_hand
 
 - type: marking
@@ -601,7 +601,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_hand
 
 - type: marking
@@ -616,7 +616,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_leg
 
 - type: marking
@@ -631,7 +631,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_leg
 
 - type: marking
@@ -646,7 +646,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_foot
 
 - type: marking
@@ -661,7 +661,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_foot
 
 - type: marking
@@ -677,7 +677,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: torso_m
 
 - type: marking
@@ -693,7 +693,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: torso_f
 
 # Zenghu
@@ -709,7 +709,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_arm
 
 - type: marking
@@ -724,7 +724,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_arm
 
 - type: marking
@@ -739,7 +739,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_hand
 
 - type: marking
@@ -754,7 +754,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_hand
 
 - type: marking
@@ -769,7 +769,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_leg
 
 - type: marking
@@ -784,7 +784,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_leg
 
 - type: marking
@@ -799,7 +799,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_foot
 
 - type: marking
@@ -814,7 +814,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_foot
 
 - type: marking
@@ -829,7 +829,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: torso
 
 # Nanotrasen
@@ -845,7 +845,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_arm
 
 - type: marking
@@ -860,7 +860,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_arm
 
 - type: marking
@@ -875,7 +875,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_hand
 
 - type: marking
@@ -890,7 +890,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_hand
 
 - type: marking
@@ -905,7 +905,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_leg
 
 - type: marking
@@ -920,7 +920,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_leg
 
 - type: marking
@@ -935,7 +935,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_foot
 
 - type: marking
@@ -950,7 +950,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_foot
 
 - type: marking
@@ -965,7 +965,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: torso
 
 # Xion
@@ -981,7 +981,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_arm
 
 - type: marking
@@ -996,7 +996,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_arm
 
 - type: marking
@@ -1011,7 +1011,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_hand
 
 - type: marking
@@ -1026,7 +1026,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_hand
 
 - type: marking
@@ -1041,7 +1041,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_leg
 
 - type: marking
@@ -1056,7 +1056,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_leg
 
 - type: marking
@@ -1071,7 +1071,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_foot
 
 - type: marking
@@ -1086,7 +1086,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_foot
 
 - type: marking
@@ -1101,5 +1101,5 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: torso

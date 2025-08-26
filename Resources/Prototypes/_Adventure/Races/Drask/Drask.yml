@@ -1,0 +1,245 @@
+- type: damageModifierSet
+  id: DraskCryo
+  coefficients:
+    Heat: 1.50
+    Shock: 1.50
+    Cold: 0.0
+    Asphyxiation: 2.0
+
+- type: reagent
+  id: CryoxadoneDrask # слабый криоксадон
+  name: reagent-name-cryoxadone
+  group: Toxins
+  desc: reagent-desc-cryoxadone
+  physicalDesc: reagent-physical-desc-fizzy
+  flavor: medicine
+  color: "#0091ff"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.50
+      effects:
+        - !type:HealthChange
+          conditions:
+          - !type:Temperature
+            max: 213.15
+          damage:
+            groups:
+              Burn: -2
+            types:
+              Slash: -2
+              Piercing: -2
+              Bloodloss: -2
+
+- type: entity
+  save: false
+  name: Урист макТентакль
+  parent: BaseMobDrask
+  id: MobDrask
+
+- type: entity
+  abstract: true
+  save: false
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobDrask
+  name: Урист макТентакль
+  components:
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 2
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: UrUAccent # Adventure-Accent
+  - type: SolutionContainerManager
+    solutions:
+      chemicals: # тупой, но рабочий костыль, 20u слабого приоксадона находятся в качестве введёного реагента и постоянно метаболизируются, но не реенерируют до достижения телом температуры в -40с.
+        reagents:
+        - ReagentId: CryoxadoneDrask
+          Quantity: 20
+  - type: SolutionRegeneration
+    solution: chemicals
+    generated:
+      reagents:
+      - ReagentId: CryoxadoneDrask
+        Quantity: 0.50
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 6
+        Structural: 5 #чуть структурного
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#0091ff"
+  - type: Bloodstream
+    bloodReagent: Cryoxadone
+  - type: Vocal
+    sounds:
+      Male: DraskEmote
+      Female: DraskEmote
+      Unsexed: DraskEmote
+  - type: Speech
+    speechSounds: DraskSpeach
+    speechVerb: Octo
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 250
+    sweatHeatRegulation: 500
+    shiveringHeatRegulation: 500
+    normalBodyTemperature: 291.15 # температура тела не поднимается сама по себе.
+    thermalRegulationTemperatureThreshold: 2
+  - type: Temperature
+    heatDamageThreshold: 298.15
+    coldDamageThreshold: 3.15
+    currentTemperature: 291.15
+    coldDamage:
+      types:
+        Cold : 0.0
+    specificHeat: 42
+    heatDamage:
+      types:
+        Heat : 2.0
+  - type: TemperatureSpeed
+    thresholds: # замедляются только при плюсовой температуре
+      10273: 0.4
+      298: 0.7
+      295: 0.9
+      294: 1.0
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: DraskCryo
+  - type: Body
+    prototype: Drask
+    requiredLegs: 2
+  - type: Hunger
+  - type: Icon
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: full
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatLizard
+      amount: 5
+  - type: HumanoidAppearance
+    species: Drask
+    hideLayersOnEquip:
+    - HeadSide
+  - type: Inventory
+    speciesId: drask
+    templateId: Drask
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    scale: 1, 1.1 # рост 2 метра.
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["brass"]
+    - map: ["pants"]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: ["jumpsuit"]
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "outerClothing" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
+    - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobDraskDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: Drask
+  - type: Inventory
+    templateId: Drask
+  - type: Sprite
+    scale: 1, 1.1
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["brass"]
+    - map: ["pants"]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: ["jumpsuit"]
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "outerClothing" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
+    - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false

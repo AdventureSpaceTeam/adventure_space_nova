@@ -24,10 +24,10 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
             ["Airlocks"] = ("rcd-component-airlocks", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/airlocks.png"))),
             ["Electrical"] = ("rcd-component-electrical", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/multicoil.png"))),
             ["Lighting"] = ("rcd-component-lighting", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lighting.png"))),
-            ["GasPipes"] = ("rcd-component-pipes", new SpriteSpecifier.Texture(new ResPath("/Textures/Adventure/Interface/RPD/pipe4.png"))),
-            ["PortsAndVents"] = ("rcd-component-ports-and-vents", new SpriteSpecifier.Texture(new ResPath("/Textures/Adventure/Interface/RPD/scrub.png"))),
-            ["Disposal"] = ("rcd-component-disposal", new SpriteSpecifier.Texture(new ResPath("/Textures/Adventure/Interface/RPD/pipe10.png"))),
-            ["GasMachine"] = ("rcd-component-atmosmachine", new SpriteSpecifier.Texture(new ResPath("/Textures/Adventure/Interface/RPD/pump.png"))),
+            ["GasPipes"] = ("rcd-component-pipes", new SpriteSpecifier.Texture(new ResPath("/Textures/_Adventure/Interface/RPD/pipe4.png"))),
+            ["PortsAndVents"] = ("rcd-component-ports-and-vents", new SpriteSpecifier.Texture(new ResPath("/Textures/_Adventure/Interface/RPD/scrub.png"))),
+            ["Disposal"] = ("rcd-component-disposal", new SpriteSpecifier.Texture(new ResPath("/Textures/_Adventure/Interface/RPD/pipe10.png"))),
+            ["GasMachine"] = ("rcd-component-atmosmachine", new SpriteSpecifier.Texture(new ResPath("/Textures/_Adventure/Interface/RPD/pump.png"))),
 
         };
 
