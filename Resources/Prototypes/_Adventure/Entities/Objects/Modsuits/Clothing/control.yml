@@ -70,7 +70,7 @@
     clothingPrototype: ClothingOuterChestplateModsuitCESealed
   - type: Storage
     grid:
-    - 0,0,8,4
+    - 0,0,9,6
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
@@ -174,6 +174,9 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Back/medical.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterChestplateModsuitMedicalSealed
+  - type: Storage
+    grid:
+    - 0,0,8,4
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
@@ -199,7 +202,7 @@
     clothingPrototype: ClothingOuterChestplateModsuitCMOSealed
   - type: Storage
     grid:
-    - 0,0,8,4
+    - 0,0,9,6
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
@@ -248,7 +251,7 @@
     clothingPrototype: ClothingOuterChestplateModsuitMagnateSealed
   - type: Storage
     grid:
-    - 0,0,8,4
+    - 0,0,9,6
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
@@ -274,7 +277,7 @@
     clothingPrototype: ClothingOuterChestplateModsuitSecuritySealed
   - type: Storage
     grid:
-    - 0,0,6,4
+    - 0,0,8,4
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
@@ -300,7 +303,7 @@
     clothingPrototype: ClothingOuterChestplateModsuitHOSSealed
   - type: Storage
     grid:
-    - 0,0,8,4
+    - 0,0,9,6
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
@@ -544,7 +547,7 @@
     clothingPrototype: ClothingOuterChestplateModsuitMedical2Sealed
   - type: Storage
     grid:
-    - 0,0,6,4
+    - 0,0,8,4
   - type: PointLight
     color: "#a0f1e8"
     enabled: false
