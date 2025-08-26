@@ -1,0 +1,41 @@
+- type: technology
+  id: СombatModsuits
+  name: research-technology-operative-modsuits
+  icon:
+    sprite: _Adventure/Objects/Modsuits/Clothing/Head/salvage.rsi
+    state: icon
+  discipline: Industrial
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - PlatingSecurityModsuitConstructing
+  - PlatingAsteroidModsuitConstructing
+  - PlatingRNDModsuitConstructing
+
+- type: technology
+  id: WorkModsuits
+  name: research-technology-work-modsuits
+  icon:
+    sprite: _Adventure/Objects/Modsuits/Clothing/Head/engineer.rsi
+    state: icon
+  discipline: Industrial
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - PlatingEngineeringModsuitConstructing
+  - PlatingAtmosphericModsuitConstructing
+  - PlatingCMOModsuitConstructing
+
+- type: technology
+  id: Advanced Modsuits
+  name: research-advanced-modsuits
+  icon:
+    sprite: _Adventure/Objects/Modsuits/Clothing/Head/magnate.rsi
+    state: icon
+  discipline: Industrial
+  tier: 2
+  cost: 12500
+  recipeUnlocks:
+  - PlatingCEModsuitConstructing
+  - PlatingMagnateModsuitConstructing
+  - PlatingHOSModsuitConstructing
