@@ -1,0 +1,38 @@
+- type: entity
+  name: Суши
+  suffix: AdvFood
+  parent: FoodMealBase
+  id: FoodMealSushi
+  description: Не стоит рассказывать Скреллам из чего это сделано...
+  components:
+  - type: Food
+    trash:
+    - FoodPlateSmall
+  - type: FlavorProfile
+    flavors:
+      - fishy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/sushi.rsi
+    state: sushi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 18
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+  - type: Tag
+    tags:
+    - Meat
+
+- type: microwaveMealRecipe
+  id: RecipeSushi
+  name: Рецепт суши
+  result: FoodMealSushi
+  time: 5
+  reagents:
+    Flour: 5
+  solids:
+    FoodMeatFish: 1
+    FoodCucumber: 1
+    FoodPlateSmall: 1

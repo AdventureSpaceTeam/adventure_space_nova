@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon-box"
+    },
+    {
+      "name": "icon-pant"
+    },
+    {
+      "name": "icon-string"
+    },
+    {
+      "name": "icon-string2"
+    },
+    {
+      "name": "icon-maika"
+    },
+    {
+      "name": "icon-telnashka"
+    },
+    {
+      "name": "icon-alkash"
+    },
+    {
+      "name": "equipped-box",
+      "directions": 4
+    },
+    {
+      "name": "equipped-pant",
+      "directions": 4
+    },
+    {
+      "name": "equipped-string",
+      "directions": 4
+    },
+    {
+      "name": "equipped-string2",
+      "directions": 4
+    },
+    {
+      "name": "equipped-maika",
+      "directions": 4
+    },
+    {
+      "name": "equipped-telnashka",
+      "directions": 4
+    },
+    {
+      "name": "equipped-alkash",
+      "directions": 4
+    }
+  ]
+}

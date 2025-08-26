@@ -1,0 +1,143 @@
+#С резаком
+- type: entity
+  parent: MobSkeletonPerson
+  id: MobSkeletonBloodMinerCutter
+  name: кровожадный шахтёр
+  suffix: Резек LavaLand
+  components:
+    - type: NpcFactionMember
+      factions:
+        - SimpleHostile
+    - type: Loadout
+      prototypes:
+        - BloodMinerCutterGear
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+    - type: Tag
+      tags:
+      - CanPilot
+      - FootstepSound
+      - DoorBumpOpener
+      - LavaMob
+    - type: Temperature
+      heatDamageThreshold: 100273,15
+      specificHeat: 10000
+    - type: Flammable
+      fireSpread: false
+      canResistFire: false
+      damage:
+        types:
+          Heat: 0.0
+
+- type: startingGear
+  id: BloodMinerCutterGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    mask: ClothingMaskGasExplorerBroken
+    outerClothing: ClothingOuterHardsuitSalvage
+    back: OxygenTank
+    shoes: ClothingShoesBootsSalvage
+    belt: OreBag
+    neck: ClothingNeckMantleMiningBlood
+  inhand:
+    - WeaponProtoKineticCutter
+  storage:
+    belt:
+    - OreDragon1
+    - OreDragon1
+    - OreRuby1
+    - OreRuby1
+    - OreRuby1
+    - OreRuby1
+    - OrePharo1
+    - OrePharo1
+
+#С протокинетом
+- type: entity
+  parent: MobSkeletonBloodMinerCutter
+  id: MobSkeletonBloodMinerAccelerator
+  suffix: Протокинетик LavaLand
+  components:
+    - type: Loadout
+      prototypes:
+        - BloodMinerAcceleratorGear
+
+- type: startingGear
+  id: BloodMinerAcceleratorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    mask: ClothingMaskGasExplorerBroken
+    outerClothing: ClothingOuterHardsuitSalvage
+    back: OxygenTank
+    shoes: ClothingShoesBootsSalvage
+    belt: OreBag
+    neck: ClothingNeckMantleMiningBlood
+  inhand:
+    - WeaponProtoKineticAccelerator
+  storage:
+    belt:
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - MaterialMagmatiteFragment1
+    - MaterialMagmatiteFragment1
+    - MaterialMagmatiteFragment1
+    - OrePharo1
+    - OrePharo1
+
+#С буром
+- type: entity
+  parent: MobSkeletonBloodMinerCutter
+  id: MobSkeletonBloodMinerMiningDrill
+  suffix: Бур LavaLand
+  components:
+    - type: Loadout
+      prototypes:
+        - BloodMinerMiningDrillGear
+
+- type: startingGear
+  id: BloodMinerMiningDrillGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+    mask: ClothingMaskGasExplorerBroken
+    outerClothing: ClothingOuterHardsuitSalvage
+    back: OxygenTank
+    shoes: ClothingShoesBootsSalvage
+    belt: OreBag
+    neck: ClothingNeckMantleMiningBlood
+  inhand:
+    - MiningJackhammer
+  storage:
+    belt:
+    - OreEmerald1
+    - OreEmerald1
+    - OreEmerald1
+    - OreEmerald1
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - OreSapphire1
+    - OrePharo1
+    - OrePharo1
+
+- type: entity
+  parent: [ClothingMaskBase, BaseCargoContraband]
+  id: ClothingMaskGasExplorerBroken #так как скелеты не могут дышать, спавн скелета в рабочих противогазах вызывает ошибки.
+  name: сломанный противогаз исследователя
+  description: Сломанный противогаз исследователя, не пригодный для дыхания.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/gasexplorer.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/gasexplorer.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.95

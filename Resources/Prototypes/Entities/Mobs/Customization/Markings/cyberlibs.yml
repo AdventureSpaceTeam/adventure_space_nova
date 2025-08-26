@@ -3,7 +3,7 @@
   id: CyberlimbRArmBishop
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -11,14 +11,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmBishop
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -26,14 +26,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandBishop
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -41,14 +41,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandBishop
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -56,14 +56,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegBishop
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -71,14 +71,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegBishop
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -86,14 +86,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootBishop
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -101,14 +101,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootBishop
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -116,14 +116,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoBishop
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -131,7 +131,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
       state: torso
 
 # Hephaestus
@@ -139,7 +139,7 @@
   id: CyberlimbRArmHephaestus
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -147,14 +147,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmHephaestus
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -162,14 +162,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandHephaestus
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -177,14 +177,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandHephaestus
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -192,14 +192,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegHephaestus
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -207,14 +207,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegHephaestus
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -222,14 +222,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootHephaestus
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -237,14 +237,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootHephaestus
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -252,14 +252,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoHephaestus
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -267,7 +267,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus.rsi
       state: torso
 
 # Hephaestus Titan
@@ -275,7 +275,7 @@
   id: CyberlimbRArmHephaestusTitan
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -283,14 +283,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmHephaestusTitan
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -298,14 +298,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandHephaestusTitan
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -313,14 +313,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandHephaestusTitan
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -328,14 +328,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegHephaestusTitan
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -343,14 +343,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegHephaestusTitan
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -358,14 +358,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootHephaestusTitan
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -373,14 +373,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootHephaestusTitan
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -388,14 +388,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoHephaestusTitan
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -403,7 +403,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/hephaestus_titan.rsi
       state: torso
 
 # Morpheus
@@ -411,7 +411,7 @@
   id: CyberlimbRArmMorpheus
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -419,14 +419,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmMorpheus
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -434,14 +434,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandMorpheus
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -449,14 +449,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandMorpheus
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -464,14 +464,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegMorpheus
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -479,14 +479,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegMorpheus
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -494,14 +494,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootMorpheus
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -509,14 +509,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootMorpheus
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -524,14 +524,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoMorpheus
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -539,7 +539,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/morpheus.rsi
       state: torso
 
 
@@ -548,7 +548,7 @@
   id: CyberlimbRArmWardtakahashi
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -556,14 +556,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmWardtakahashi
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -571,14 +571,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandWardtakahashi
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -586,14 +586,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandWardtakahashi
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -601,14 +601,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegWardtakahashi
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -616,14 +616,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegWardtakahashi
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -631,14 +631,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootWardtakahashi
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -646,14 +646,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootWardtakahashi
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -661,14 +661,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoWardtakahashiMale
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sexRestriction: Male
   sponsorOnly: true
   coloring:
@@ -677,14 +677,14 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: torso_m
 
 - type: marking
   id: CyberlimbTorsoWardtakahashiFemale
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sexRestriction: Female
   sponsorOnly: true
   coloring:
@@ -693,7 +693,7 @@
         !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/wardtakahashi.rsi
       state: torso_f
 
 # Zenghu
@@ -701,7 +701,7 @@
   id: CyberlimbRArmZenghu
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -709,14 +709,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmZenghu
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -724,14 +724,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandZenghu
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -739,14 +739,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandZenghu
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -754,14 +754,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegZenghu
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -769,14 +769,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegZenghu
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -784,14 +784,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootZenghu
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -799,14 +799,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootZenghu
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -814,14 +814,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoZenghu
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -829,7 +829,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/zenghu.rsi
       state: torso
 
 # Nanotrasen
@@ -837,7 +837,7 @@
   id: CyberlimbRArmNanotrasen
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -845,14 +845,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmNanotrasen
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -860,14 +860,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandNanotrasen
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -875,14 +875,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandNanotrasen
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -890,14 +890,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegNanotrasen
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan]
   sponsorOnly: true
   coloring:
     default:
@@ -905,14 +905,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegNanotrasen
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -920,14 +920,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootNanotrasen
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -935,14 +935,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootNanotrasen
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -950,14 +950,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoNanotrasen
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -965,7 +965,7 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: torso
 
 # Xion
@@ -973,7 +973,7 @@
   id: CyberlimbRArmXion
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -981,14 +981,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_arm
 
 - type: marking
   id: CyberlimbLArmXion
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -996,14 +996,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_arm
 
 - type: marking
   id: CyberlimbRHandXion
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -1011,14 +1011,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_hand
 
 - type: marking
   id: CyberlimbLHandXion
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan, Zerah ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan, Zerah ]
   sponsorOnly: true
   coloring:
     default:
@@ -1026,14 +1026,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_hand
 
 - type: marking
   id: CyberlimbRLegXion
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -1041,14 +1041,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_leg
 
 - type: marking
   id: CyberlimbLLegXion
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -1056,14 +1056,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_leg
 
 - type: marking
   id: CyberlimbLFootXion
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -1071,14 +1071,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: l_foot
 
 - type: marking
   id: CyberlimbRFootXion
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -1086,14 +1086,14 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: r_foot
 
 - type: marking
   id: CyberlimbTorsoXion
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Skrell, PigMan ]
+  speciesRestriction: [ Human, Dwarf, Felinid, Arachnid, Skrell, PigMan ]
   sponsorOnly: true
   coloring:
     default:
@@ -1101,5 +1101,5 @@
         !type:SimpleColoring
           color: "#FFFFFF"
   sprites:
-    - sprite: Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
+    - sprite: _Corvax/Mobs/Customization/Cyberlimbs/xion.rsi
       state: torso

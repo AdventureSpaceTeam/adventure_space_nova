@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cactus"
+    },
+    {
+      "name": "cactus_Gather"
+    },
+    {
+      "name": "coal_mushroom"
+    },
+    {
+      "name": "coal_mushroom_Gather"
+    },
+    {
+      "name": "inocybe_mushroom"
+    },
+    {
+      "name": "inocybe_mushroom_Gather"
+    },
+    {
+      "name": "porcini_mushroom"
+    },
+    {
+      "name": "porcini_mushroom_Gather"
+    },
+    {
+      "name": "polypore_mushroom"
+    },
+    {
+      "name": "polypore_mushroom_Gather"
+    },
+    {
+      "name": "cactus-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "cactus-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "coal-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "coal-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "polypore-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "polypore-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "porcini-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "porcini-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inocybe-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inocybe-inhand-right",
+      "directions": 4
+    }
+  ]
+}

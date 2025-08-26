@@ -1,0 +1,83 @@
+- type: entity # Семена
+  parent: SeedBase
+  name: пакет семян (кофе)
+  description: "пахнет кофе"
+  suffix: AdvBotany
+  id: CoffeeSeeds
+  components:
+    - type: Seed
+      seedId: CoffeePlant
+    - type: Sprite
+      sprite: _Adventure/Objects/Botany/Produce/coffee.rsi
+
+- type: seed  # Растение
+  id: CoffeePlant
+  name: кофейное дерево
+  noun: seeds-noun-seeds
+  displayName: кофейное дерево
+  plantRsi: _Adventure/Objects/Botany/Produce/coffee.rsi
+  packetPrototype: CoffeeSeeds
+  productPrototypes:
+    - CoffeeBeans
+  harvestRepeat: Repeat
+  lifespan: 75
+  maturation: 5
+  production: 4
+  yield: 2
+  potency: 20
+  growthStages: 5
+  waterConsumption: 0.6
+  idealLight: 9
+  idealHeat: 298
+  chemicals:
+    Vitamin:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+- type: entity  # Зёрна
+  name: кофейные зёрна
+  parent: ProduceBase
+  id: CoffeeBeans
+  description: "Стоит обжарить для готовки и употребления."
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/coffee.rsi
+  - type: Produce
+    seedId: CoffeePlant
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Water
+          Quantity: 1
+
+- type: entity  # Прожаренные зёрна
+  name: обжаренные кофейные зёрна
+  parent: BaseItem
+  id: HotCoffeeBeans
+  description: "Если измельчить - получите кофе. Горькие на вкус"
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/coffee.rsi
+    state: dried
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Coffee
+          Quantity: 6
+
+- type: microwaveMealRecipe # Рецепт Обжаренных зёрен.
+  id: CoffeeBeans
+  name: рецепт обжаренных зёрен
+  result: HotCoffeeBeans
+  time: 5 # Думаю, будет уместно. Чтобы много гемора не было.
+  solids:
+    CoffeeBeans: 1

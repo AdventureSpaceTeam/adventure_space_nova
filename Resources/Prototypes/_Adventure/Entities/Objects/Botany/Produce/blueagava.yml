@@ -1,0 +1,129 @@
+- type: entity
+  parent: SeedBase
+  name: пакет семян (голубая агава)
+  suffix: AdvBotany
+  description: "Бодрящее"
+  id: BlueAgavaSeeds
+  components:
+    - type: Seed
+      seedId: blueagava
+    - type: Sprite
+      sprite: _Adventure/Objects/Botany/Produce/blueagava.rsi
+
+- type: seed
+  id: blueagava
+  name: голубая агава
+  noun: seeds-noun-seeds
+  displayName: голубая агава
+  plantRsi: _Adventure/Objects/Botany/Produce/blueagava.rsi
+  packetPrototype: BlueAgavaSeeds
+  productPrototypes:
+    - FoodBlueAgava
+  lifespan: 25
+  maturation: 10
+  production: 3
+  yield: 3
+  potency: 10
+  growthStages: 5
+  waterConsumption: 0.60
+  chemicals:
+    Aloe:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    Tequila:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 4
+
+- type: entity
+  name: Голубая агава
+  suffix: AdvBotany
+  parent: FoodProduceBase
+  id: FoodBlueAgava
+  description: Какое опьяняющее алоэ!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - tequila
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Aloe
+          Quantity: 10
+        - ReagentId: Tequila
+          Quantity: 20
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/blueagava.rsi
+  - type: Produce
+    seedId: blueagava
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegetable
+
+- type: entity
+  name: крем агавы
+  description: Крем для наружного применения при ожогах. Немного токсичный.
+  parent: Ointment
+  id: AgavaCream
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/blueagava.rsi
+    state: cream
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -5
+        Cold: -5
+        Shock: -5
+        Caustic: -5
+        Poison: +3
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: AgavaCream
+    count: 10
+
+- type: microwaveMealRecipe
+  id: RecipeAgavaCream
+  name: agava cream recipe
+  result: AgavaCream
+  time: 10
+  group: Medicinal
+  solids:
+    FoodBlueAgava: 1
+
+- type: stack
+  id: AgavaCream
+  name: stack-agava-cream
+  icon: { sprite: "/_Adventure/Objects/Botany/Produce/blueagava.rsi", state: cream }
+  spawn: AgavaCream
+  maxCount: 10
+
+- type: microwaveMealRecipe
+  id: RecipeRegenerativeMeshAgava
+  name: regenerative mesh recipe
+  result: RegenerativeMesh
+  time: 10
+  group: Medicinal
+  solids:
+    FoodBlueAgava: 1
+    Ointment: 1
+    MaterialCloth1: 1
+  reagents:
+    Sigynate: 20
+    Dermaline: 20

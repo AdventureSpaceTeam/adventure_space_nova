@@ -1,5 +1,5 @@
 ent-BaseBarSign = вывеска бара
-    .desc = { ent-BaseStructure.desc }
+    .desc = { ent-BaseWallmountGlass.desc }
 ent-BarSign = вывеска бара
     .desc = { ent-BaseBarSign.desc }
     .suffix = Случайный
@@ -49,3 +49,7 @@ ent-BarSignEmprah = За Империю
     .desc = Нравится и фанатикам, и еретикам, и завсегдатаям с дефектами мозга.
 ent-BarSignSpacebucks = Спейсбакс.
     .desc = От них нельзя скрыться, даже в космосе, и даже после того, как некоторые стали называть их "срубли".
+ent-BarSignMaltroach = Пивная Моль
+    .desc = Сквик!
+ent-BarSignWhiskeyEchoes = Виски Эхо
+    .desc = Элитный бар для элитных опер... Подождите, это же станция Nanotrasen. Почему эта вывеска в базе данных?

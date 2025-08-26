@@ -2,14 +2,18 @@ general-station-record-console-window-title = Консоль станционн�
 general-station-record-console-select-record-info = Выберите запись слева.
 general-station-record-console-empty-state = Записей не найдено!
 general-station-record-console-no-record-found = Для выбранного сотрудника не найдено ни одной записи.
+
 general-station-record-console-record-age = Возраст: { $age }
 general-station-record-console-record-title = Должность: { $job }
-general-station-record-console-record-species = Раса: { $species }
+general-station-record-console-record-species = Вид: { $species }
 general-station-record-console-record-gender = Гендер: { $gender }
 general-station-record-console-record-fingerprint = Отпечатки пальцев: { $fingerprint }
 general-station-record-console-record-dna = ДНК: { $dna }
+
 general-station-record-for-filter-line-placeholder = Введите текст...
 general-station-record-name-filter = Имя сотрудника
+general-station-record-job-filter = Должность
+general-station-record-species-filter = Вид
 general-station-record-prints-filter = Отпечатки пальцев
 general-station-record-dna-filter = ДНК
 general-station-record-console-search-records = Поиск

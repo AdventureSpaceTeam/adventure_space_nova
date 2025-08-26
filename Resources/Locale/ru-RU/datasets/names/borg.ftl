@@ -1,5 +1,5 @@
 names-borg-dataset-1 = Боб
-names-borg-dataset-2 = Джо
+names-borg-dataset-2 = Джл
 names-borg-dataset-3 = Бип
 names-borg-dataset-4 = Бип II
 names-borg-dataset-5 = Бумбокс

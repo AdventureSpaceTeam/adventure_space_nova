@@ -1,0 +1,206 @@
+- type: reaction
+  id: ZerahBloodCollapsed
+  reactants:
+    ZerahBlood: # кровь зераха
+      amount: 1
+    TranexamicAcid: # сворчивает кровь для её расщипления. (просто усложняем проготовление)
+      amount: 1
+  products:
+    ZerahBloodCollapsed: 1
+
+- type: reagent
+  id: ZerahBloodCollapsed
+  parent: Blood
+  name: Свёрнутая кровь зераха
+  desc: Свёрнутая кровь зерах, готовая к добыче яда.
+  group: Biological
+  flavor: metallic
+  color: "#b08b18"
+
+# добыча яда
+- type: reaction
+  id:  ZerahBloodBreakdown
+  source: true
+  requiredMixerCategories:
+  - Centrifuge
+  reactants:
+    ZerahBloodCollapsed:
+      amount: 30
+  products:
+    Water: 10
+    Iron: 5
+    Nitrogen: 5
+    CarbonDioxide: 5
+    ZerahPoison: 5
+
+# промежуточный токсин для варки всего остального
+- type: reagent
+  id: ZToxin
+  name: Z-токсин
+  desc: Продукт труда безумных учёных.
+  group: Toxins
+  color: "#99b018"
+  physicalDesc: Токсичное
+  metabolisms:
+    Poison:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
+          conditions:
+          - !type:OrganType
+            type: Zerah
+            shouldHave: false
+
+- type: reaction
+  id: ZToxin
+  reactants:
+    ZerahPoison:
+      amount: 1
+    Ipecac:
+      amount: 1
+    Haloperidol:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    ZToxin: 1
+
+# безболезненный яд, хорошо подойдёт для проведения процедуры казни (возможна лёгкая реанимация)
+- type: reagent
+  id: BlackMamba
+  name: Чёрная мамба
+  desc: Последнее что вы пьёте.
+  group: Toxins
+  color: "#1f1d17"
+  physicalDesc: Опасное
+  metabolisms:
+    Poison:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: 5
+        - !type:GenericStatusEffect
+          key: Muted
+          component: Muted
+          type: Add
+          time: 10
+          refresh: false
+        - !type:GenericStatusEffect
+          key: ForcedSleep
+          component: ForcedSleeping
+          refresh: false
+          type: Add
+        - !type:GenericStatusEffect
+          key: TemporaryBlindness
+          component: TemporaryBlindness
+
+- type: reaction
+  id: BlackMamba
+  reactants:
+    ZToxin:
+      amount: 1
+    ZerahPoison:
+      amount: 1
+    UnstableMutagen:
+      amount: 1
+    Dexalin:
+      amount: 1
+    Pax:
+      amount: 1
+  products:
+    BlackMamba: 1
+
+# типо мазь из змеиного яда, горько, невкусно, лучше мыться
+- type: reagent
+  id: SkhariSyrup
+  name: Сироп Схари
+  desc: Вредно для уротребления внутрь.
+  group: Medicine
+  color: "#fdd891"
+  physicalDesc: Шипучее
+  metabolisms:
+    Poison:
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+        - !type:HealthChange
+          damage:
+            types:
+              Heat: -2
+              Shock: -2
+              Cold: -2
+              Caustic: -2
+
+- type: reaction
+  id: SkhariSyrup
+  reactants:
+    ZToxin:
+      amount: 1
+    Dermaline:
+      amount: 1
+    FluorosulfuricAcid:
+      amount: 1
+  products:
+    SkhariSyrup: 1
+
+# супер крепкий алкоголь
+- type: reagent
+  id: GoodMorning
+  name: "Доброе утро"
+  parent: BaseAlcohol
+  desc: А утро то ни разу не доброе.
+  flavor: alcohol
+  color: "#ed660c"
+  physicalDesc: Шипучее
+  metabolisms:
+    Alcohol:
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        component: Drowsiness
+        time: 4
+        type: Add
+        refresh: false
+      - !type:Emote
+        emote: Yawn
+        showInChat: true
+        probability: 0.1
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 10
+        refresh: false
+      - !type:Drunk
+        boozePower: 4
+      - !type:ChemVomit
+        probability: 0.04
+        conditions:
+        - !type:ReagentThreshold
+          reagent: GoodMorning
+          min: 10
+
+- type: reaction
+  id: GoodMorning
+  reactants:
+    ZToxin:
+      amount: 1
+    Ethanol:
+      amount: 2
+    ChloralHydrate:
+      amount: 2
+  products:
+    GoodMorning: 1

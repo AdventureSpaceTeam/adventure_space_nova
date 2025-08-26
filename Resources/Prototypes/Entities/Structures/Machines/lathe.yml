@@ -211,6 +211,7 @@
     - FauxTiles
     - AdventureSolarSail # Adventure
     - ChemistryPlus #CyberneticGenesis
+    - AdventureEnergyCores # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -270,7 +271,6 @@
     - MechBoards
     - ShuttleBoards
     - CircuitAdventureDynamic # Adventure
-    - LathPlus # Adventure CyberneticGenesis
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards

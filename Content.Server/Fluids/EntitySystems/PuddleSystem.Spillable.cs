@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.Bartender.Systems; // Adventure
 using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -14,12 +15,15 @@ using Content.Shared.Popups;
 using Content.Shared.Spillable;
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Melee.Events;
+using Robust.Shared.Physics.Systems; // Adventure
 using Robust.Shared.Player;
 
 namespace Content.Server.Fluids.EntitySystems;
 
 public sealed partial class PuddleSystem
 {
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!; // Adventure
+    [Dependency] private readonly SpillProofThrowerSystem _nonspillthrower = default!; // Adventure
     protected override void InitializeSpillable()
     {
         base.InitializeSpillable();
@@ -69,7 +73,8 @@ public sealed partial class PuddleSystem
         if (totalSplit == 0)
             return;
 
-        args.Handled = true;
+        // Optionally allow further melee handling occur
+        args.Handled = entity.Comp.PreventMelee;
 
         // First update the hit count so anything that is not reactive wont count towards the total!
         foreach (var hit in args.HitEntities)
@@ -113,6 +118,14 @@ public sealed partial class PuddleSystem
 
         if (args.User != null)
         {
+            // Adventure start
+            if (_nonspillthrower.GetSpillProofThrow(args.User.Value))
+            {
+                _physics.SetAngularVelocity(entity, 0);
+                Transform(entity).LocalRotation = Angle.Zero;
+                return;
+            }
+            // Adventure end
             _adminLogger.Add(LogType.Landed,
                 $"{ToPrettyString(entity.Owner):entity} spilled a solution {SharedSolutionContainerSystem.ToPrettyString(solution):solution} on landing");
         }
@@ -134,6 +147,10 @@ public sealed partial class PuddleSystem
         if (!_solutionContainerSystem.TryGetSolution(ent.Owner, ent.Comp.SolutionName, out _, out var solution) || solution.Volume <= 0)
             return;
 
+        // Adventure start
+        if (_nonspillthrower.GetSpillProofThrow(args.PlayerUid))
+            return;
+        // Adventure end
         args.Cancel("pacified-cannot-throw-spill");
     }
 

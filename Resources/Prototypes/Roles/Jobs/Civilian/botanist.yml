@@ -22,7 +22,7 @@
   id: BotanistGear
   equipment:
     shoes: ClothingShoesColorBrown
-    id: BotanistPDA
+#   id: BotanistPDA # Adventure
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
   #storage:

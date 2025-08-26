@@ -62,7 +62,7 @@
         # Adventure salvage shuttle return start
         mining: !type:GridSpawnGroup
           paths:
-          - /Maps/Corvax/Shuttles/corvax_mining.yml
+          - /Maps/_Corvax/Shuttles/corvax_mining.yml
         # Adventure salvage shuttle return end
         # Spawn last
         ruins: !type:GridSpawnGroup
@@ -128,7 +128,7 @@
   abstract: true
   components:
     - type: StationCentcomm
-      map: "/Maps/Corvax/corvax_centcomm.yml" # Corvax-Mapping
+      map: "/Maps/_Corvax/corvax_centcomm.yml" # Corvax-Mapping
 
 - type: entity
   id: BaseStationEvacuation

@@ -1,0 +1,20 @@
+- type: entity
+  name: шахтёрский навигатор
+  description: Специальный навигатор, способный отслеживать голопад-маяк, находящийся на аванпосту Лаваленда.
+  id: PinpointerMining
+  suffix: LavaLand
+  parent: PinpointerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: pinpointer-miner
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    state: pinpointer-syndicate
+  - type: Pinpointer
+    component: MiningOutpost
+    targetName: голопад-маяк

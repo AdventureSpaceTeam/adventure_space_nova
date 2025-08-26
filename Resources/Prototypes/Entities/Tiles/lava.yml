@@ -58,9 +58,10 @@
       - HideContextMenu
 # Adventure-LavaLand-start
   - type: AmbientSound
+    volume: -15
     range: 5
     sound:
-      path: /Audio/Adventure/LavaLand/Magma.ogg
+      path: /Audio/_Adventure/LavaLand/Magma.ogg
   - type: DamageContacts
     damage:
       types:

@@ -8,6 +8,7 @@
     state: icon
   - type: Instrument
   - type: ActivatableUI
+    requireActiveHand: false # Adventure
     inHandsOnly: true
     singleUser: true
     verbText: verb-instrument-openui

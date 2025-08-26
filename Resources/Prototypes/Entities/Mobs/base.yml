@@ -46,6 +46,7 @@
   - type: RequireProjectileTarget
     active: False
   - type: FlipAnimation # yes, it is vital that every mob has this!
+  - type: StunVisuals
 
 - type: entity
   save: false
@@ -109,6 +110,8 @@
     - Shock
     - Cold
     - Caustic
+    - Asphyxiation
+    - Radiation
   - type: DamageOnHighSpeedImpact
     damage:
       types:

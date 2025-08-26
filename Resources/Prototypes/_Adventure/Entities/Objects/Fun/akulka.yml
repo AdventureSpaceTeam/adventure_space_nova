@@ -1,0 +1,16 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieSharki_Makcu
+  name: Акулка
+  suffix: AdvFun
+  description: На этикетке написано "Макси Колоскова".
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/akulka.rsi
+    layers:
+      - state: icon
+  - type: Item
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: MultiHandedItem

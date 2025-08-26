@@ -17,10 +17,8 @@
     Bucket: 3
     BoxMouthSwab: 1
     BoxAgrichem: 1
-    #TO DO:
-    #plant analyzer
+    PlantAnalyzer: 2 # Adventure
   contrabandInventory:
     ChemistryBottleUnstableMutagen: 1
     Joint: 1
-  emaggedInventory:
     ChemistryBottleLeft4Zed: 1

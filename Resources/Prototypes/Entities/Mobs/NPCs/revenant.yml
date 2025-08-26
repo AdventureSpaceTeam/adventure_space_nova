@@ -8,6 +8,8 @@
   components:
   - type: TTS # Adventure
     voice: hermaeus_mora
+  - type: Emag
+    emagType: All
   - type: Input
     context: "ghost"
   - type: Spectral

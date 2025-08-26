@@ -78,7 +78,7 @@
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
     startAudio:
-      path: /Audio/Corvax/Announcements/flux.ogg # Corvax-Announcements
+      path: /Audio/_Corvax/Announcements/flux.ogg # Corvax-Announcements
       params:
         volume: -4
     weight: 8
@@ -96,7 +96,7 @@
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
     startAudio:
-      path: /Audio/Corvax/Announcements/blusp_anomalies.ogg # Corvax-Announcements
+      path: /Audio/_Corvax/Announcements/blusp_anomalies.ogg # Corvax-Announcements
       params:
         volume: -4
     weight: 8
@@ -395,7 +395,7 @@
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio: # Corvax-Announcements
-      path: /Audio/Corvax/Announcements/comms_blackout.ogg
+      path: /Audio/_Corvax/Announcements/comms_blackout.ogg
       params:
         volume: -4
     duration: 120

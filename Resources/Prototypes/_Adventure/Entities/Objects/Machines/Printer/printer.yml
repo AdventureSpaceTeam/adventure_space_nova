@@ -1,0 +1,116 @@
+- type: latheRecipe
+  id: Document
+  result: Paper
+  completetime: 1
+  materials:
+    PaperDocument: 100
+
+- type: entity
+  id: Printer
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  name: принтер
+  suffix: AdvPrinter, AdvMapping
+  description: Позволяет печатать документы.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/Machines/printer.rsi
+    drawdepth: SmallObjects
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    # - state: inserting
+    #   map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: MaterialStorage
+    useInsertingAnimation: false
+    canEjectStoredMaterials: false
+    dropOnDeconstruct: false
+    whitelist:
+      tags:
+        - Document
+    storage:
+      Paper: 0
+  - type: Machine
+    board: PrinterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: icon
+    runningState: building
+    staticPacks:
+      - AdvPrinter
+  - type: Appearance
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 25
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: StaticPrice
+    price: 800
+  - type: ResearchClient
+  - type: TechnologyDatabase
+
+- type: entity
+  id: PrinterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: принтер (машинная плата)
+  description: Микросхема для создания принтера.
+  components:
+    - type: Sprite
+      state: cpuboard_adv
+    - type: MachineBoard
+      prototype: Printer
+      requirements:
+        Manipulator: 3
+      materialRequirements:
+        Glass: 1
+
+- type: latheRecipe
+  id: PrinterMachineCircuitboard
+  result: PrinterMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 900
+
+- type: entity
+  parent: BaseFlatpack
+  id: PrinterFlatpack
+  name: упакованный принтер
+  description: Упаковка, при помощи которой можно создать принтер.
+  components:
+  - type: Flatpack
+    entity: Printer

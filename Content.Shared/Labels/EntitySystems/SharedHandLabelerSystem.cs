@@ -79,7 +79,10 @@ public abstract class SharedHandLabelerSystem : EntitySystem
 
     private void OnUtilityVerb(EntityUid uid, HandLabelerComponent handLabeler, GetVerbsEvent<UtilityVerb> args)
     {
-        if (args.Target is not { Valid: true } target || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target) || !args.CanAccess)
+        if (args.Target is not { Valid: true } target // Adventure races start
+            || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target)
+            || _whitelistSystem.IsBlacklistPass(handLabeler.Blacklist, target)
+            || !args.CanAccess) // Adventure races end
             return;
 
         var labelerText = handLabeler.AssignedLabel == string.Empty ? Loc.GetString("hand-labeler-remove-label-text") : Loc.GetString("hand-labeler-add-label-text");
@@ -98,7 +101,10 @@ public abstract class SharedHandLabelerSystem : EntitySystem
 
     private void AfterInteractOn(EntityUid uid, HandLabelerComponent handLabeler, AfterInteractEvent args)
     {
-        if (args.Target is not { Valid: true } target || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target) || !args.CanReach)
+        if (args.Target is not { Valid: true } target // Adventure races start
+            || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target)
+            || _whitelistSystem.IsBlacklistPass(handLabeler.Blacklist, target)
+            || !args.CanReach) // Adventure races end
             return;
 
         Labeling(uid, target, args.User, handLabeler);

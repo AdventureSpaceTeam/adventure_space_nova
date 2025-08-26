@@ -1,0 +1,343 @@
+- type: entity
+  id: RPD
+  parent: RCD
+  name: УПТ
+  description: Новейшее ручное устройство подачи труб, которое может быстро размещать трубы и вентиляции.
+  components:
+  - type: RCD
+    deviceType: RPD
+    availablePrototypes:
+    - GasPipeStraight
+    - GasPipeBend
+    - GasPipeTJunction
+    - GasPipeFourway
+    - GasPressurePump
+    - GasVolumePump
+    - GasPort
+    - GasVentPump
+    - GasPassiveVent
+    - GasVentScrubber
+    - GasMixer
+    - GasMixerFlip
+    - GasFilter
+    - GasFilterFlip
+    - DisposalBend
+    - DisposalTrunk
+    - DisposalPipe
+    - DisposalTagger
+    - DisposalJunction
+    - DisposalRouter
+    - DisposalYJunction
+    - GasOutletInjector
+    - GasValve
+    - HeatExchangerBend
+    - HeatExchanger
+    - Deconstruct
+  - type: Sprite
+    sprite: _Adventure/Objects/Tools/rpd.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/Objects/Tools/rpd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+- type: rcd
+  id: GasPipeStraight
+  category: GasPipes
+  sprite: /Textures/_Adventure/Interface/RPD/pipe1.png
+  mode: ConstructObject
+  prototype: GasPipeStraight
+  cost: 1
+  delay: 0
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasPipeBend
+  category: GasPipes
+  sprite: /Textures/_Adventure/Interface/RPD/pipeG.png
+  mode: ConstructObject
+  prototype: GasPipeBend
+  cost: 1
+  delay: 0
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasPipeTJunction
+  category: GasPipes
+  sprite: /Textures/_Adventure/Interface/RPD/pipe3.png
+  mode: ConstructObject
+  prototype: GasPipeTJunction
+  cost: 1
+  delay: 0
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasPipeFourway
+  category: GasPipes
+  sprite: /Textures/_Adventure/Interface/RPD/pipe4.png
+  mode: ConstructObject
+  prototype: GasPipeFourway
+  cost: 1
+  delay: 0
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: DisposalBend
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe2.png
+  mode: ConstructObject
+  prototype: DisposalBend
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalTrunk
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe9.png
+  mode: ConstructObject
+  prototype: DisposalTrunk
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalPipe
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe10.png
+  mode: ConstructObject
+  prototype: DisposalPipe
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalTagger
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe6.png
+  mode: ConstructObject
+  prototype: DisposalTagger
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalJunction
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe8.png
+  mode: ConstructObject
+  prototype: DisposalJunction
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalRouter
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe5.png
+  mode: ConstructObject
+  prototype: DisposalRouter
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: DisposalYJunction
+  category: Disposal
+  sprite: /Textures/_Adventure/Interface/RPD/pipe7.png
+  mode: ConstructObject
+  prototype: DisposalYJunction
+  cost: 1
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPort
+  category: PortsAndVents
+  sprite: /Textures/_Adventure/Interface/RPD/Port.png
+  mode: ConstructObject
+  prototype: GasPort
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasVentPump
+  category: PortsAndVents
+  sprite: /Textures/_Adventure/Interface/RPD/vent.png
+  mode: ConstructObject
+  prototype: GasVentPump
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPassiveVent
+  category: PortsAndVents
+  sprite: /Textures/_Adventure/Interface/RPD/passvent.png
+  mode: ConstructObject
+  prototype: GasPassiveVent
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasVentScrubber
+  category: PortsAndVents
+  sprite: /Textures/_Adventure/Interface/RPD/scrub.png
+  mode: ConstructObject
+  prototype: GasVentScrubber
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasMixer
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/gasMix.png
+  mode: ConstructObject
+  prototype: GasMixer
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasMixerFlip
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/gasMixFlip.png
+  mode: ConstructObject
+  prototype: GasMixerFlipped
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasFilter
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/gasFilter.png
+  mode: ConstructObject
+  prototype: GasFilter
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasFilterFlip
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/gasFilterFlip.png
+  mode: ConstructObject
+  prototype: GasFilterFlipped
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: GasPressurePump
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/pump.png
+  mode: ConstructObject
+  prototype: GasPressurePump
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasOutletInjector
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/injector.png
+  mode: ConstructObject
+  prototype: GasOutletInjector
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasVolumePump
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/pumpVolume.png
+  mode: ConstructObject
+  prototype: GasVolumePump
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: GasValve
+  category: GasMachine
+  sprite: /Textures/_Adventure/Interface/RPD/pumpManualValve.png
+  mode: ConstructObject
+  prototype: GasValve
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: HeatExchangerBend
+  category: GasPipes
+  sprite: /Textures/_Adventure/Interface/RPD/radiator2.png
+  mode: ConstructObject
+  prototype: HeatExchangerBend
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: HeatExchanger
+  category: GasPipes
+  sprite: /Textures/_Adventure/Interface/RPD/radiator1.png
+  mode: ConstructObject
+  prototype: HeatExchanger
+  cost: 2
+  delay: 1
+  rules:
+  - MustBuildOnSubfloor
+  fx: EffectRCDConstruct2

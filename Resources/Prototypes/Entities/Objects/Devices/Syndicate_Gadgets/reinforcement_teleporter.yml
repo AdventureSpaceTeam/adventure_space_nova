@@ -97,6 +97,7 @@
       settings: default
   - type: GhostRoleMobSpawner
     prototype: MobCatSyndy
+    selectablePrototypes: ["SyndicateCat"]
   - type: EmitSoundOnUse
     sound: /Audio/Animals/cat_meow.ogg
 

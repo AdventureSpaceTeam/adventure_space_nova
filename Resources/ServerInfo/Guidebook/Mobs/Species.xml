@@ -8,19 +8,20 @@
   <GuideEntityEmbed Entity="MobDiona" Caption="Диона"/>
   <GuideEntityEmbed Entity="MobDwarf" Caption="Дворф"/>
   <GuideEntityEmbed Entity="MobHuman" Caption="Человек"/>
-  </Box>
-  <Box>
   <GuideEntityEmbed Entity="MobMoth" Caption="Ниан"/>
-  <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
-  <GuideEntityEmbed Entity="MobVulpkanin" Caption="Вульпканин"/>
-  <GuideEntityEmbed Entity="MobSlimePerson" Caption="Слаймолюд"/>
-  <GuideEntityEmbed Entity="MobFelinid" Caption="Фелинид"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="MobSkrell" Caption="Скрелл"/>
-  <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>
-  <GuideEntityEmbed Entity="MobZerah" Caption="Зерах"/>
+  <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
+  <GuideEntityEmbed Entity="MobSlimePerson" Caption="Слаймолюд"/>
+  <GuideEntityEmbed Entity="MobVulpkanin" Caption="Вульпканин"/>
+  <GuideEntityEmbed Entity="MobVox" Caption="Вокс"/>
   <GuideEntityEmbed Entity="MobSynth" Caption="КПБ"/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>
+  <GuideEntityEmbed Entity="MobSkrell" Caption="Скрелл"/>
+  <GuideEntityEmbed Entity="MobFelinid" Caption="Фелинид"/>
+  <GuideEntityEmbed Entity="MobZerah" Caption="Зерах"/>
   <GuideEntityEmbed Entity="MobResomi" Caption="Резоми"/>
   <GuideEntityEmbed Entity="MobDrask" Caption="Драск"/>
   </Box>

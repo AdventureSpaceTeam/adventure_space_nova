@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: AtmosphericsNitrousOxide
+  icon:
+    sprite: Structures/Storage/canister.rsi
+    state: redws
+  product: NitrousOxideCanister
+  cost: 1150
+  category: cargoproduct-category-name-atmospherics
+  group: market

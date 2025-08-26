@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "cart-atmo made by ExTreeMe, cart-agro made by discord @_monkeygaming",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cart-atmo"
+    },
+    {
+      "name": "cart-agro"
+    }
+  ]
+}

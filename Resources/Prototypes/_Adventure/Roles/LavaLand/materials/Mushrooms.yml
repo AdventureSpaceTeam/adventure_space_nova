@@ -1,0 +1,556 @@
+#угольный гриб
+- type: entity
+  name: угольный гриб
+  parent: BaseStructure
+  id: CoalMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+      state: coal_mushroom
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.2
+    - type: InteractionOutline
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:GroupSelector
+          children:
+          - id: FoodCoalMushroom
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 150
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+
+- type: entity
+  name: угольный гриб
+  parent: FoodProduceBase
+  id: FoodCoalMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Produce
+    seedId: CoalMushroom
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    state: coal_mushroom_Gather
+  - type: FlavorProfile
+    flavors:
+      - spaceshroom
+  - type: Extractable
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Dermaline
+          Quantity: 5
+        - ReagentId: Bicaridine
+          Quantity: 5
+  - type: StaticPrice
+    price: 20
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 1
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: Tag
+    tags:
+    - Meat
+    - ClothMade
+    - Fruit
+  - type: Item
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    inhandVisuals:
+      left:
+      - state: coal-inhand-left
+      right:
+      - state: coal-inhand-right
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (угольный гриб)
+  suffix: AdvBotany
+  id: CoalMushroomSeeds
+  components:
+    - type: Seed
+      seedId: CoalMushroom
+    - type: Sprite
+      sprite: _Adventure/Roles/LavaLand/materials/service/botany/coal_mushroom.rsi
+
+- type: seed
+  id: CoalMushroom
+  name: угольный гриб
+  noun: seeds-noun-spores
+  displayName: угольный гриб
+  plantRsi: _Adventure/Roles/LavaLand/materials/service/botany/coal_mushroom.rsi
+  packetPrototype: CoalMushroomSeeds
+  productPrototypes:
+    - FoodCoalMushroom
+  lifespan: 100
+  maturation: 12
+  production: 3
+  yield: 3
+  idealLight: 3
+  idealHeat: 313
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.10
+  nutrientConsumption: 0.10
+  chemicals:
+    SpaceDrugs:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Nutriment:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Dermaline:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Bicaridine:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+#боровик
+- type: entity
+  name: боровик
+  parent: CoalMushroom
+  id: PorciniMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+      state: porcini_mushroom
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:GroupSelector
+          children:
+          - id: FoodPorciniMushroom
+            amount: 1
+            maxAmount: 1
+
+- type: entity
+  name: боровик
+  parent: FoodCoalMushroom
+  id: FoodPorciniMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    state: porcini_mushroom_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Saline
+          Quantity: 10
+        - ReagentId: Nicotine
+          Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 2
+  - type: Item
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    inhandVisuals:
+      left:
+      - state: porcini-inhand-left
+      right:
+      - state: porcini-inhand-right
+  - type: Produce
+    seedId: PorciniMushroom
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (боровик)
+  suffix: AdvBotany
+  id: PorciniMushroomSeeds
+  components:
+    - type: Seed
+      seedId: PorciniMushroom
+    - type: Sprite
+      sprite: _Adventure/Roles/LavaLand/materials/service/botany/porcini_mushroom.rsi
+
+- type: seed
+  id: PorciniMushroom
+  name: боровик
+  noun: seeds-noun-spores
+  displayName: боровик
+  plantRsi: _Adventure/Roles/LavaLand/materials/service/botany/porcini_mushroom.rsi
+  packetPrototype: PorciniMushroomSeeds
+  productPrototypes:
+    - FoodPorciniMushroom
+  lifespan: 50
+  maturation: 12
+  production: 3
+  yield: 4
+  idealLight: 6
+  idealHeat: 298
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.50
+  nutrientConsumption: 0.50
+  chemicals:
+    Saline:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 20
+    Nicotine:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Nutriment:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 20
+    Vitamin:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 20
+
+#волоконница
+- type: entity
+  name: волоконница
+  parent: CoalMushroom
+  id: InocybeMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+      state: inocybe_mushroom
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:GroupSelector
+          children:
+          - id: FoodInocybeMushroom
+            amount: 1
+            maxAmount: 1
+
+- type: entity
+  name: волоконница
+  parent: FoodCoalMushroom
+  id: FoodInocybeMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    state: inocybe_mushroom_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: THC
+          Quantity: 7
+        - ReagentId: Ephedrine
+          Quantity: 5
+        - ReagentId: Amatoxin
+          Quantity: 8
+  - type: Item
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    inhandVisuals:
+      left:
+      - state: inocybe-inhand-left
+      right:
+      - state: inocybe-inhand-right
+  - type: Produce
+    seedId: InocybeMushroom
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (волоконница)
+  suffix: AdvBotany
+  id: InocybeMushroomSeeds
+  components:
+    - type: Seed
+      seedId: InocybeMushroom
+    - type: Sprite
+      sprite: _Adventure/Roles/LavaLand/materials/service/botany/inocybe_mushroom.rsi
+
+- type: seed
+  id: InocybeMushroom
+  name: волоконница
+  noun: seeds-noun-spores
+  displayName: волоконница
+  plantRsi: _Adventure/Roles/LavaLand/materials/service/botany/inocybe_mushroom.rsi
+  packetPrototype: InocybeMushroomSeeds
+  productPrototypes:
+    - FoodInocybeMushroom
+  lifespan: 20
+  maturation: 6
+  production: 3
+  yield: 2
+  idealLight: 1
+  idealHeat: 263
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.20
+  nutrientConsumption: 0.20
+  chemicals:
+    THC:
+      Min: 1
+      Max: 7
+      PotencyDivisor: 20
+    Ephedrine:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Amatoxin:
+      Min: 1
+      Max: 8
+      PotencyDivisor: 20
+
+#трутовик
+- type: entity
+  name: трутовик
+  parent: CoalMushroom
+  id: PolyporeMushroom
+  suffix: LavaLand
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+      state: polypore_mushroom
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:GroupSelector
+          children:
+          - id: FoodPolyporeMushroom
+            amount: 1
+            maxAmount: 1
+
+- type: entity
+  name: трутовик
+  parent: FoodCoalMushroom
+  id: FoodPolyporeMushroom
+  description: Группа грибов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    state: polypore_mushroom_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 10
+  - type: Item
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    inhandVisuals:
+      left:
+      - state: polypore-inhand-left
+      right:
+      - state: polypore-inhand-right
+  - type: Produce
+    seedId: PolyporeMushroom
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (трутовик)
+  suffix: AdvBotany
+  id: PolyporeMushroomSeeds
+  components:
+    - type: Seed
+      seedId: PolyporeMushroom
+    - type: Sprite
+      sprite: _Adventure/Roles/LavaLand/materials/service/botany/polypore_mushroom.rsi
+
+- type: seed
+  id: PolyporeMushroom
+  name: трутовик
+  noun: seeds-noun-spores
+  displayName: трутовик
+  plantRsi: _Adventure/Roles/LavaLand/materials/service/botany/polypore_mushroom.rsi
+  packetPrototype: PolyporeMushroomSeeds
+  productPrototypes:
+    - FoodPolyporeMushroom
+  lifespan: 80
+  maturation: 7
+  production: 3
+  yield: 2
+  idealLight: 1
+  idealHeat: 293
+  potency: 10
+  growthStages: 2
+  waterConsumption: 0.20
+  nutrientConsumption: 0.80
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 20
+    Vitamin:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 20
+
+#космический кактус
+- type: entity
+  name: космический кактус
+  parent: CoalMushroom
+  id: SpaceCactus
+  suffix: LavaLand
+  description: Группа кактусов, которые каким-то чудом тут выживают.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+      state: cactus
+      drawdepth: LowFloors
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:GroupSelector
+          children:
+          - id: FoodSpaceCactus
+            amount: 1
+            maxAmount: 1
+    - type: DamageContacts
+      damage:
+        types:
+          Piercing: 1
+      ignoreWhitelist:
+        tags:
+        - LavaMob
+    - type: SpeedModifierContacts
+      walkSpeedModifier: 0.9
+      sprintSpeedModifier: 0.9
+      ignoreWhitelist:
+        tags:
+        - LavaMob
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+          - MidImpassable
+
+- type: entity
+  name: космический кактус
+  parent: FoodCoalMushroom
+  id: FoodSpaceCactus
+  description: Группа кактусов, которые каким-то чудом тут выживают.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    state: cactus_Gather
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 7
+        - ReagentId: Omnizine
+          Quantity: 8
+  - type: Item
+    sprite: _Adventure/Roles/LavaLand/materials/service/mushrooms.rsi
+    inhandVisuals:
+      left:
+      - state: cactus-inhand-left
+      right:
+      - state: cactus-inhand-right
+  - type: Produce
+    seedId: SpaceCactus
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (космический кактус)
+  suffix: AdvBotany
+  id: SpaceCactusSeeds
+  components:
+    - type: Seed
+      seedId: SpaceCactus
+    - type: Sprite
+      sprite: _Adventure/Roles/LavaLand/materials/service/botany/cactus.rsi
+
+- type: seed
+  id: SpaceCactus
+  name: космический кактус
+  noun: seeds-noun-seeds
+  displayName: космический кактус
+  plantRsi: _Adventure/Roles/LavaLand/materials/service/botany/cactus.rsi
+  packetPrototype: SpaceCactusSeeds
+  productPrototypes:
+    - FoodSpaceCactus
+  lifespan: 120
+  maturation: 15
+  production: 5
+  yield: 3
+  idealLight: 1
+  idealHeat: 333
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.05
+  nutrientConsumption: 0.10
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Vitamin:
+      Min: 1
+      Max: 7
+      PotencyDivisor: 20
+    Omnizine:
+      Min: 1
+      Max: 8
+      PotencyDivisor: 20
