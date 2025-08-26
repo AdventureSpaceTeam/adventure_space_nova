@@ -235,13 +235,16 @@
     - id: BoxEncryptionKeyMedical
     - id: ClothingBackpackDuffelSurgeryFilled
     - id: ClothingCloakCmo
-    - id: ClothingEyesHudCMO # Adventure
     - id: ClothingHandsGlovesNitrile
     - id: ClothingHeadHatBeretCmo
     - id: ClothingHeadsetAltMedical
     - id: ClothingMaskSterile
     - id: DoorRemoteMedical
     - id: HandheldCrewMonitor
+    # Adventure start
+    - id: ClothingEyesHudCMO
+    - id: CompactDefibrillator
+    # Adventure end
     - id: Hypospray
     - id: MedicalTechFabCircuitboard
     - id: CargoRequestMedicalComputerCircuitboard
