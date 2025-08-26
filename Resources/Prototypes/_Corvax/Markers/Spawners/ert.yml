@@ -6,7 +6,7 @@
   components:
   - type: DeviceLinkSink
     ports:
-    - Trigger  
+    - Trigger
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: BasicDevice

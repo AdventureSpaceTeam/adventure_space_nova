@@ -63,7 +63,7 @@
 - type: reaction
   id: BadTouch
   reactants:
-    Vodka: 
+    Vodka:
       amount: 1
     LemonLime:
       amount: 1
@@ -79,7 +79,7 @@
 - type: reaction
   id: DarkAndStormy
   reactants:
-    Rum: 
+    Rum:
       amount: 1
     Ale: # Must be ginger beer
       amount: 2
