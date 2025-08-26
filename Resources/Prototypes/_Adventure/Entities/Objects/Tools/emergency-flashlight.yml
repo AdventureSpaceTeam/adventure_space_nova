@@ -2,7 +2,7 @@
   name: аварийный фонарик
   parent: FlashlightLantern
   id: FlashlightEmergency
-  description: Маленький фонарик, не эффективен но зачастую легкодоступен и легко укладывается в рюкзак
+  description: Компактный фонарик, хоть и не очень мощный, зато часто под рукой и легко помещается в рюкзак.
   components:
   - type: ItemSlots
     slots:
@@ -21,7 +21,7 @@
       - state: inhand-right-light
         shader: unshaded
   - type: Sprite
-    sprite: Adventure/Objects/Devices/emergency_flashlight.rsi
+    sprite: _Adventure/Objects/Devices/emergency_flashlight.rsi
     layers:
       - state: flashlight
       - state: flashlight-overlay
@@ -36,13 +36,13 @@
     soundHit:
       collection: MetalThud
   - type: Item
-    sprite: Adventure/Objects/Devices/emergency_flashlight.rsi
+    sprite: _Adventure/Objects/Devices/emergency_flashlight.rsi
     size: Tiny
   - type: PointLight
     enabled: false
     radius: 4
   - type: Clothing
-    sprite: Adventure/Objects/Devices/emergency_flashlight.rsi
+    sprite: _Adventure/Objects/Devices/emergency_flashlight.rsi
     quickEquip: false
     slots:
       - Belt
