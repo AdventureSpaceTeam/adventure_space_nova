@@ -1,0 +1,75 @@
+﻿- type: entity
+  id: OrganSkrellBrain
+  parent: OrganHumanBrain
+  name: мозг скрелла
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganSkrellEyes
+  parent: OrganHumanEyes
+  name: глаза скрелла
+  description: Я тебя вижу
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  id: OrganSkrellHeart
+  parent: OrganHumanHeart
+  name: сердце скрелла
+  description: Мне жаль бессердечного ублюдка, который потерял это.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    state: heart-off
+
+- type: entity
+  id: OrganSkrellLungs
+  parent: OrganHumanLungs
+  name: лёгкие скрелла
+  description: Фильтрует кислород из атмосферы, который затем поступает в кровоток.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    layers:
+      - state: lung-l
+      - state: lung-r
+
+- type: entity
+  id: OrganSkrellStomach
+  parent: OrganHumanStomach
+  name: желудок скрелла
+  description: Отвратительно. Это трудно переварить.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    state: stomach
+
+- type: entity
+  id: OrganSkrellLiver
+  parent: OrganHumanLiver
+  name: печень скрелла
+  description: Побереги меня.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    state: liver
+
+- type: entity
+  id: OrganSkrellKidneys
+  parent: OrganHumanKidneys
+  name: почки скрелла
+  description: Выводит токсины из кровотока.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Skrell/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r

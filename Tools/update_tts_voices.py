@@ -27,7 +27,7 @@ if not resp.ok:
 
 j = resp.json()
 
-with open("Resources/Prototypes/Adventure/tts-voices.yml", "w") as f:
+with open("Resources/Prototypes/_Adventure/tts-voices.yml", "w") as f:
     for voice in j["voices"]:
         f.write(f"""- type: ttsVoice
   name: {voice['name']}

@@ -9,7 +9,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server.GameTicking.Commands
 {
-    [AdminCommand(AdminFlags.Round)]
+    [AdminCommand(AdminFlags.Permissions)] // Adventure
     public sealed class ForceMapCommand : LocalizedCommands
     {
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;

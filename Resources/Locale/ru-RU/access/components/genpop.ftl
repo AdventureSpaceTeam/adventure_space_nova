@@ -1,6 +1,6 @@
 genpop-prisoner-id-expire = Вы отбыли наказание! Теперь вы можете выйти из тюрьмы через турникеты и забрать свои вещи.
 genpop-prisoner-id-popup-not-served = Наказание ещё не отбыто!
-genpop-prisoner-id-crime-default = [Изменено]
+genpop-prisoner-id-crime-default = [Редактировать]
 genpop-prisoner-id-examine-wait =
     Вы отбыли { $minutes } { $minutes ->
         [1] минуту

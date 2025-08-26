@@ -1,0 +1,295 @@
+#Троичный
+- type: radioChannel
+  id: Trio
+  name: Троичный
+  keycode: '+'
+  frequency: 123
+  color: "#4bced0"
+  longRange: true
+
+- type: entity
+  save: false
+  name: Урист макКПБ
+  parent: BaseMobSynth
+  id: MobSynth
+  components:
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    onActivate: false
+    activated: false
+    onUse: false
+  - type: PowerCellDraw
+    drawRate: 0.6
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+        locked: true
+  - type: Synth
+  - type: PassiveDamage
+    allowedStates:
+    - Critical
+    damageCap: 200
+    damage:
+      types:
+        Shock: 0.5
+  - type: ProtectedFromStepTriggers
+
+- type: entity
+  abstract: true
+  save: false
+  name: Урист макКПБ
+  parent:
+  - MobFlammable
+  - BaseMobSpeciesInorganicIPC
+  id: BaseMobSynth
+  components:
+  - type: BodyEmotes
+    soundsId: SynthBodyEmotes
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+      - !type:Electrocute
+        probability: 0.05
+      - !type:Emote
+        emote: Crash
+        showInChat: true
+        probability: 0.1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Вода попадает в ваши схемы, приводя к замыканию" ]
+        probability: 0.1
+    - reagents: [ SpaceLube ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Cold: -2
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Обледенение отпадает от вашего корпуса" ]
+        probability: 0.25
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 2
+  - type: DamagedSiliconAccent
+  - type: AtmosExposed
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.30
+  - type: Temperature
+    heatDamageThreshold: 773.15
+    coldDamageThreshold: 173
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 0.1
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage:
+      types:
+        Heat: 0.75
+  - type: TemperatureSpeed
+    thresholds:
+      233: 0.8
+      228: 0.6
+      225: 0.4
+  - type: StatusEffects
+    allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Stutter
+      - Electrocution
+      - SlurredSpeech
+      - RatvarianLanguage
+      - PressureImmunity
+      - TemporaryBlindness
+      - Pacified
+      - Flashed
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 1000
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: Deathgasp
+    prototype: SynthDeathgasp
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: HumanoidAppearance
+    species: Synth
+  - type: Icon
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: full
+  - type: Body
+    prototype: Synth
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Synth
+    damageModifierSet: Synth
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#8a8a9e"
+  - type: MobState
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: true
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+      - Cold
+  - type: TransferMindOnGib
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:GibBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.9
+      80: 0.7
+  - type: Speech
+    speechVerb: Electricity
+    speechSounds: SyndieBorg
+    allowedEmotes: ['Crash', 'Reboot', 'Load']
+  - type: ZombieImmune
+  - type: Vocal
+    sounds:
+      Male: SynthEmote
+      Female: SynthEmote
+      Unsexed: SynthEmote
+  - type: FireVisuals
+    alternateState: Standing
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: SynthStepCollection
+      params:
+        volume: -1
+  - type: TypingIndicator
+    proto: robot
+  - type: Crawler
+  - type: Repairable
+    doAfterDelay: 5
+    damage:
+      types:
+        Slash: -10
+        Piercing: -10
+    allowSelfRepair: true
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Trio
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Trio
+  - type: ActiveRadio
+    channels:
+      - Trio
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+  - type: GuideHelp
+    guides:
+    - Species
+  - type: Inventory
+    templateId: Synth
+    displacements:
+      pants:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/IPC/displacement.rsi
+            state: pants
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobSynthDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: Synth
+    - type: Inventory
+      templateId: Synth
+      displacements:
+        pants:
+          sizeMaps:
+            32:
+              sprite: _Adventure/Races/IPC/displacement.rsi
+              state: pants
+
+- type: entity
+  parent: BaseAction
+  id: ActionDrainBattery
+  name: Зарядить батарею
+  description: Зарядите свою батарею от источников энергии.
+  components:
+  - type: Action
+    icon: _Adventure/Interface/Actions/off.png
+    iconOn: _Adventure/Interface/Actions/on.png
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:ToggleDrainActionEvent

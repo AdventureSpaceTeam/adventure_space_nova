@@ -1,0 +1,171 @@
+﻿#Тело Резоми
+- type: body
+  name: "Резоми"
+  id: Resomi
+  root: torso
+  slots:
+    head:
+      part: HeadResomi
+      connections:
+      - torso
+      organs:
+        brain: OrganResomiBrain
+        eyes: OrganResomiEyes
+    torso:
+      part: TorsoResomi
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        heart: OrganResomiHeart
+        lungs: OrganResomiLungs
+        stomach: OrganResomiStomach
+        liver: OrganResomiLiver
+        kidneys: OrganResomiKidneys
+    right arm:
+      part: RightArmResomi
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmResomi
+      connections:
+      - left hand
+    right hand:
+      part: RightHandResomi
+    left hand:
+      part: LeftHandResomi
+    right leg:
+      part: RightLegResomi
+    left leg:
+      part: LeftLegResomi
+
+#Части Резоми
+- type: entity
+  id: PartResomi
+  parent: [BaseItem, BasePart]
+  name: "Часть тела резоми"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: ResomiBlood
+        Quantity: 10
+
+- type: entity
+  id: TorsoResomi
+  name: "Туловище резоми"
+  parent: [PartResomi, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: ResomiBlood
+        Quantity: 20
+
+- type: entity
+  id: HeadResomi
+  name: "Голова резоми"
+  parent: [PartResomi, BaseHead]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: ResomiBlood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmResomi
+  name: "Левая рука резоми"
+  parent: [PartResomi, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmResomi
+  name: "Правая рука резоми"
+  parent: [PartResomi, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandResomi
+  name: "Левая рука резоми"
+  parent: [PartResomi, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandResomi
+  name: "Правая рука резоми"
+  parent: [PartResomi, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegResomi
+  name: "Левая нога резоми"
+  parent: [PartResomi, BaseLeftLeg]
+  components:
+  - type: Sprite
+    state: "l_leg"
+  - type: MovementBodyPart
+    walkSpeed : 2.5
+    sprintSpeed : 4.9
+
+- type: entity
+  id: RightLegResomi
+  name: "Правая нога резоми"
+  parent: [PartResomi, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "r_leg"
+  - type: MovementBodyPart
+    walkSpeed : 2.5
+    sprintSpeed : 4.9
+
+- type: entity
+  id: LeftFootResomi
+  name: "Левая нога резоми"
+  parent: [PartResomi, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootResomi
+  name: "Правая нога резоми"
+  parent: [PartResomi, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: "r_foot"
+
+#Кровь резоми
+- type: reagent
+  id: ResomiBlood
+  parent: Blood
+  name: Кровь резоми
+  group: Biological
+  flavor: metallic
+  color: "#a70195"

@@ -86,6 +86,7 @@
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboard
     ipc: IPCModulCommand # Adventure-IPC
+    eyes: ClothingEyesHudCommand
   storage:
     back:
     - Flash

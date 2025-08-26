@@ -1,3 +1,4 @@
+# TODO: заменить на genitive там где возможно
 health-examinable-carbon-none = Видимые повреждения тела отсутствуют.
 health-examinable-carbon-Slash-8 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } неглубокий порез.[/color]
 health-examinable-carbon-Slash-15 = [color=yellow]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } несколько маленьких порезов.[/color]
@@ -48,7 +49,7 @@ health-examinable-carbon-Shock-15 = [color=lightgoldenrodyellow]На { POSS-ADJ(
 health-examinable-carbon-Shock-30 = [color=lightgoldenrodyellow]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто следами обугливания.[/color]
 health-examinable-carbon-Shock-50 = [color=lightgoldenrodyellow]{ CAPITALIZE(POSS-ADJ($target)) } тело серьёзно обуглено.[/color]
 health-examinable-carbon-Shock-75 = [color=lightgoldenrodyellow]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто большими обугленными ранами.[/color]
-health-examinable-carbon-Shock-100 = [color=lightgoldenrodyellow]Всё { POSS-ADJ($target) } тело покрыто сильными электрическими ожогами![/color]
+health-examinable-carbon-Shock-100 = [color=lightgoldenrodyellow]Всё { POSS-ADJ($target) } покрыто сильными электрическими ожогами![/color]
 health-examinable-carbon-Shock-200 = [color=lightgoldenrodyellow]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью зажарено![/color]
 health-examinable-carbon-Cold-8 = [color=lightblue]На кончиках { POSS-ADJ($target) } пальцев лёгкие обморожения.[/color]
 health-examinable-carbon-Cold-15 = [color=lightblue]На кончиках { POSS-ADJ($target) } конечностей обморожения первой степени.[/color]

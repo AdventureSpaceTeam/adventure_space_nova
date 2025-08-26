@@ -1,0 +1,35 @@
+- type: entity
+  name: отбойный молот
+  parent: BaseItem
+  id: MiningJackhammer
+  suffix: LavaLand
+  description: Мощный инструмент, используемый для быстрого бурения горных пород.
+  components:
+  - type: Item
+    size: Large
+    storedRotation: -90
+  - type: Tag
+    tags:
+    - Pickaxe
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/Jackhammer.rsi
+    state: Jackhammer
+  - type: Clothing
+    sprite: _Adventure/Roles/LavaLand/Equipment/Jackhammer.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: MultiHandedItem
+  - type: MeleeWeapon
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/_Adventure/LavaLand/Jackhammer.ogg"
+    attackRate: 5
+    damage:
+      groups:
+        Brute: 8
+      types:
+        Structural: 35

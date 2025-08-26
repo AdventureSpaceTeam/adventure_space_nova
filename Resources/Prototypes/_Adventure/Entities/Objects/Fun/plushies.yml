@@ -1,0 +1,199 @@
+- type: entity
+  parent: [BaseItem, BasePlushie]
+  id: PlushieWiki
+  name: Blabla
+  suffix: AdvPlushie
+  description: Blabla.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/plushieWiki.rsi
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieIAA
+  name: плюшевый АВД
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, напоминающая вам об важности СРП и КЗ.
+  components:
+  - type: Sprite
+    state: plushieIAA
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieERT
+  name: плюшевый ОБР
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, к вам направили самый милый ОБР.
+  components:
+  - type: Sprite
+    state: plushieERT
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieMaid
+  name: плюшевая горничная
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, Р-р-р!.
+  components:
+  - type: Sprite
+    state: plushieMaid
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/cat_meow.ogg
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieBartender
+  name: плюшевый бармен
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, только попробуй заказать воды!. @Токио Форс
+  components:
+  - type: Sprite
+    state: plushieBartender
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+  - type: UseDelay
+    delay: 5.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieHOS
+  name: плюшевый ГСБ
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, именем закона - СТОЙ!
+  components:
+  - type: Sprite
+    state: plushieHOS
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Whistle/whistle_3.ogg
+  - type: UseDelay
+    delay: 5.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieCBURN
+  name: плюшевый РХБЗЗ
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, Гр-р-уа!
+  components:
+  - type: Sprite
+    state: plushieCBURN
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Zombie/zombie-2.ogg
+  - type: UseDelay
+    delay: 5.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieCMO
+  name: плюшевый ГВ
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, в отделе не курить!
+  components:
+  - type: Sprite
+    state: plushieCMO
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieRD
+  name: плюшевый НР
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка!
+  components:
+  - type: Sprite
+    state: plushieRD
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieCentCommRG
+  name: плюшевый ПЦК
+  suffix: AdvPlushie
+  description: Потратил все деньги центкома на акулок и пиццу... мда.
+  components:
+  - type: Sprite
+    state: icon
+    sprite: _Adventure/Objects/Fun/ethan.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/cat_meow.ogg
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieBS
+  name: плюшевый ОСЩ
+  suffix: AdvPlushie
+  description: Колит главам совсем не импланты...
+  components:
+  - type: Sprite
+    state: icon
+    sprite: _Adventure/Objects/Fun/razor.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieBorg
+  name: плюшевый борг
+  suffix: AdvPlushie
+  description: Он тоже не любит называть законы.
+  components:
+  - type: Sprite
+    state: base
+    sprite: _Adventure/Objects/Fun/plushieWiki.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/IPC/SynthLoad.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/IPC/SynthWindows.ogg
+  - type: UseDelay
+    delay: 5.0
+  - type: RandomSprite
+    available:
+    - 0:
+        base: ""
+    - 0:
+        eng: ""
+    - 0:
+        jan: ""
+    - 0:
+        med: ""
+    - 0:
+        min: ""
+    - 0:
+        sec: ""
+    - 0:
+        ser: ""
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieResomi
+  name: плюшевый резоми
+  suffix: AdvPlushie
+  description: Очаровательная мягкая игрушка, низковата...
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/resomi.rsi
+    state: icon

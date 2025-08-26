@@ -1,0 +1,11 @@
+- type: entity
+  id: ADVCrateEngineeringAMEShielding
+  parent: CrateEngineeringSecure
+  name: ящик компонентов ДАМ
+  description: 3 части для создания нового или расширения существующего двигателя антиматерии.
+  suffix: Small, Secure
+  components:
+  - type: StorageFill
+    contents:
+      - id: AmePartFlatpack
+        amount: 3

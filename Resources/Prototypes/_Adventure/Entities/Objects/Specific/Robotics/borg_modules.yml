@@ -1,0 +1,22 @@
+# Охранный-борг
+
+- type: entity
+  id: BorgModuleCombat
+  parent: ModuleSec
+  name: боевой модуль киборга
+  components:
+  - type: ItemBorgModule
+    hands:
+    - item: WeaponLaserSecBorg
+    - item: CombatKnife
+    - item: Truncheon
+
+- type: latheRecipe
+  id: BorgModuleCombat
+  result: BorgModuleCombat
+  completetime: 4
+  materials:
+     Steel: 2000
+     Glass: 500
+     Plastic: 500
+     Plasma: 300

@@ -1,0 +1,59 @@
+- type: entity  # Семена
+  parent: SeedBase
+  name: пакет семян (папоротник мутант)
+  suffix: AdvBotany
+  description: "Пахнет пустошью..."
+  id: MutatedFernSeeds
+  components:
+    - type: Seed
+      seedId: mutatedfern
+    - type: Sprite
+      sprite: _Adventure/Objects/Botany/Produce/mutatedfern.rsi
+
+- type: seed  # Растение
+  id: mutatedfern
+  name: папоротник мутант
+  noun: seeds-noun-seeds
+  displayName: папоротник мутант
+  plantRsi: _Adventure/Objects/Botany/Produce/mutatedfern.rsi
+  packetPrototype: MutatedFernSeeds
+  productPrototypes:
+    - FoodMutatedFern
+  lifespan: 55
+  maturation: 6
+  production: 6
+  growthStages: 3
+  yield: 3
+  potency: 10
+  idealLight: 8
+  chemicals:
+    Hyronalin:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Phosphorus:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+- type: entity  # Продукт
+  name: папоротник мутант
+  parent: FoodGalaxythistle
+  id: FoodMutatedFern
+  description: Война... Война никогда не меняется.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - wasteland
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/mutatedfern.rsi
+  - type: Produce
+    seedId: MutatedFern
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Hyronalin
+        Quantity: 5
+  - type: Tag
+    tags:
+    - Fruit

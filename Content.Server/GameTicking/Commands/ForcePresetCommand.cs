@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server.GameTicking.Commands
 {
-    [AdminCommand(AdminFlags.Round)]
+    [AdminCommand(AdminFlags.Permissions)] // Adventure
     public sealed class ForcePresetCommand : LocalizedEntityCommands
     {
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;

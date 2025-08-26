@@ -1,0 +1,234 @@
+# прически
+- type: marking
+  id: HumanHairCombedShaved
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: combed
+
+- type: marking
+  id: HumanHairCombedBackADV
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: combedback
+
+- type: marking
+  id: HumanHairPunk
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: punk
+
+- type: marking
+  id: HumanHairTopKnot
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: topknot
+
+- type: marking
+  id: HumanHairPunkSmall
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: punk_small
+
+- type: marking
+  id: HumanHairPunkShaggy
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: punk_shaggy
+
+- type: marking
+  id: HumanHairPunkSpike
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: punk_spike
+
+- type: marking
+  id: HumanHairPunkTail
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: punk_tail
+
+- type: marking
+  id: HumanHairPunkGorshok
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: Gorshok
+
+- type: marking
+  id: HumanHairNewRussian
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: new_Russian
+
+- type: marking
+  id: HumanHairPunkBig
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: punk_big
+
+# бороды
+- type: marking
+  id: HumanFacialHairDED
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: ded
+
+- type: marking
+  id: HumanFacialHairGusar
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: gusar
+
+- type: marking
+  id: HumanFacialHairLogan
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: logan
+
+- type: marking
+  id: HumanFacialHairTrocki
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: trocki
+
+- type: marking
+  id: HumanFacialHairArab
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: Arab
+
+- type: marking
+  id: HumanFacialHairBrutal
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: Brutal
+
+- type: marking
+  id: HumanFacialHairDwarfBig
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: Dwarf
+
+- type: marking
+  id: HumanFacialHairBismark
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: bismark
+
+- type: marking
+  id: HumanFacialHairBrutalBig
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  sprites:
+    - sprite: _Adventure/Races/Human_hair.rsi
+      state: big_Brutal
+
+#тело
+- type: marking
+  id: BodyHairM
+  bodyPart: Chest
+  markingCategory: Overlay
+  speciesRestriction: [Human, Dwarf, Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Adventure/Races/Human_hair.rsi
+    state: body_hair_m
+
+- type: marking
+  id: BodyHairF
+  bodyPart: Chest
+  markingCategory: Overlay
+  speciesRestriction: [Human, Dwarf, Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Adventure/Races/Human_hair.rsi
+    state: body_hair_f
+
+- type: marking
+  id: BodyHairLeg
+  bodyPart: LLeg
+  markingCategory: Overlay
+  speciesRestriction: [Human, Dwarf, PigMan, Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Adventure/Races/Human_hair.rsi
+    state: body_hair_leg
+
+- type: marking
+  id: BodyHairHand
+  bodyPart: LArm
+  markingCategory: Overlay
+  speciesRestriction: [Human, Dwarf, PigMan, Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Adventure/Races/Human_hair.rsi
+    state: body_hair_hand

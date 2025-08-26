@@ -1,0 +1,9 @@
+- type: guideEntry
+  id: BorgRepair
+  name: Ремонт боргов
+  text: "/ServerInfo/_Adventure/Guidebook/BorgRepair.xml"
+
+- type: guideEntry
+  id: NuclearGenerator
+  name: Ядерный генератор
+  text: "/ServerInfo/_Adventure/Guidebook/NuclearGenerator.xml"
