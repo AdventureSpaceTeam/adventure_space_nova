@@ -1,14 +1,16 @@
-lathe-category-ammo = Боеприпасы
-lathe-category-clothing = Одежда
+# Generic
 lathe-category-circuitry = Электроника
-lathe-category-machines = Машины
+lathe-category-clothing = Одежда
 lathe-category-lights = Лампы
-lathe-category-mechs = Мехи
+lathe-category-machines = Машины
 lathe-category-parts = Компоненты
-lathe-category-robotics = Робототехника
+lathe-category-tiles = Плитка
 lathe-category-tools = Инструменты
 lathe-category-weapons = Вооружение
+# Biogen
 lathe-category-food = Пища
+lathe-category-chemicals = Химикаты
+lathe-category-materials = Материалы
 # Circuit imprinter
 lathe-category-computers = Компьютеры
 lathe-category-engineering = Инженерия
@@ -19,14 +21,19 @@ lathe-category-security = Безопасность
 lathe-category-service = Сервис
 lathe-category-supply = Снабжение
 # Cutter
-lathe-category-concrete = Concrete
-lathe-category-dark = Dark
-lathe-category-maints = Maints
-lathe-category-steel = Steel
-lathe-category-white = White
-lathe-category-wood = Wood
-lathe-category-chemicals = Химикаты
-lathe-category-materials = Материалы
+lathe-category-concrete = Бетон
+lathe-category-dark = Тёмная
+lathe-category-maints = Техи
+lathe-category-steel = Стальная
+lathe-category-white = Белая
+lathe-category-wood = Деревянная
+lathe-category-marble = Мрамор
+# Science
+lathe-category-mechs = Мехи
+lathe-category-modules = Модули
+lathe-category-robotics = Робототехника
+# Security TechFab
+lathe-category-ammo = Боеприпасы
 lathe-category-boxes = Коробки
 lathe-category-magazines = Магазины
 # Uniform

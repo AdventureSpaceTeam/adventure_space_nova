@@ -1,0 +1,95 @@
+#Уши
+- type: marking
+  id: EarClose
+  name: Сближенные
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: close
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: close_inner
+
+- type: marking
+  id: EarHanging
+  name: Висящие
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: hanging
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: hanging_inner
+
+- type: marking
+  id: EarHangingLeft
+  name: Висящее левое ухо
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: hanging_left
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: hanging_left_inner
+
+- type: marking
+  id: EarWide
+  name: Широкие
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: wide
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: wide_inner
+
+- type: marking
+  id: EarWolf
+  name: Узкие
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
+    state: wolf
+  - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
+    state: vulp_ear_inner
+
+#Хвосты
+- type: marking
+  id: TailDocked
+  name: Купированный
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
+    state: docked
+
+- type: marking
+  id: TailDoG
+  name: Собачий
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
+    state: dog
+  - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
+    state: dog_inner
+
+- type: marking
+  id: TailRing
+  name: Кольцом
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
+    state: ring
+  - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
+    state: ring_inner

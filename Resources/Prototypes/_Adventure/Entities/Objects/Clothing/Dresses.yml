@@ -1,0 +1,137 @@
+# роскошное белое платье
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingLuxDressWhite
+  name: роскошное белое платье
+  suffix: BORK, AdvClothing
+  description: Оно точно вас не полнит.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: LUX-icon
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: LUX-equipped-INNERCLOTHING
+
+# роскошное красное платье
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingLuxDressRed
+  suffix: BORK, AdvClothing
+  name: роскошное красное платье
+  description: Оно точно вас не полнит.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: LUX-icon
+      color: "#ff0404"
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: LUX-equipped-INNERCLOTHING
+        color: "#ff0404"
+
+# элегантное красное платье
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingElegantDressRed
+  suffix: BORK, AdvClothing
+  name: элегантное красное платье
+  description: красивое платье, для приятных вечеров и не менее приятного продолжения.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: ELEGANT-icon
+      color: "#ff0404"
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: ELEGANT-equipped-INNERCLOTHING
+        color: "#ff0404"
+
+# элегантное голубое платье
+- type: entity
+  parent: ClothingUniformBase
+  suffix: BORK, AdvClothing
+  id: ClothingElegantDressBlue
+  name: элегантное голубое платье
+  description: красивое платье, для приятных вечеров и не менее приятного продолжения.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: ELEGANT-icon
+      color: "#08affd"
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: ELEGANT-equipped-INNERCLOTHING
+        color: "#08affd"
+
+# элегантное розовое платье
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingElegantDressPink
+  suffix: BORK, AdvClothing
+  name: элегантное розовое платье
+  description: красивое платье, для приятных вечеров и не менее приятного продолжения.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: ELEGANT-icon
+      color: "#ff71dc"
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: ELEGANT-equipped-INNERCLOTHING
+        color: "#ff71dc"
+
+# элегантное чёрное платье
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingElegantDressBlack
+  suffix: BORK, AdvClothing
+  name: элегантное чёрное платье
+  description: красивое платье, для приятных вечеров и не менее приятного продолжения.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: ELEGANT-icon
+      color: "#343133"
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: ELEGANT-equipped-INNERCLOTHING
+        color: "#343133"
+
+# элегантное зелёное платье
+- type: entity
+  parent: ClothingUniformBase
+  suffix: BORK, AdvClothing
+  id: ClothingElegantDressGreen
+  name: элегантное зелёное платье
+  description: красивое платье, для приятных вечеров и не менее приятного продолжения.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    layers:
+    - state: ELEGANT-icon
+      color: "#15ad0a"
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/dresses.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: ELEGANT-equipped-INNERCLOTHING
+        color: "#15ad0a"

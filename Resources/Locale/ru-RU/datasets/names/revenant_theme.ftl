@@ -1,5 +1,5 @@
 names-revenant-theme-dataset-1 = агонии
-names-revenant-theme-dataset-2 = злости
+names-revenant-theme-dataset-2 = гнева
 names-revenant-theme-dataset-3 = смерти
 names-revenant-theme-dataset-4 = болезни
 names-revenant-theme-dataset-5 = скорби

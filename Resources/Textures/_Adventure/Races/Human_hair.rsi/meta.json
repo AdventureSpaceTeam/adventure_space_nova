@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "combed",
+      "directions": 4
+    },
+    {
+      "name": "combedback",
+      "directions": 4
+    },
+    {
+      "name": "ded",
+      "directions": 4
+    },
+    {
+      "name": "gusar",
+      "directions": 4
+    },
+    {
+      "name": "logan",
+      "directions": 4
+    },
+    {
+      "name": "punk",
+      "directions": 4
+    },
+    {
+      "name": "trocki",
+      "directions": 4
+    },
+    {
+      "name": "topknot",
+      "directions": 4
+    },
+    {
+      "name": "punk_small",
+      "directions": 4
+    },
+    {
+      "name": "punk_shaggy",
+      "directions": 4
+    },
+    {
+      "name": "punk_spike",
+      "directions": 4
+    },
+    {
+      "name": "Gorshok",
+      "directions": 4
+    },
+    {
+      "name": "punk_tail",
+      "directions": 4
+    },
+    {
+      "name": "Arab",
+      "directions": 4
+    },
+    {
+      "name": "Brutal",
+      "directions": 4
+    },
+    {
+      "name": "new_Russian",
+      "directions": 4
+    },
+    {
+      "name": "body_hair_f",
+      "directions": 4
+    },
+    {
+      "name": "body_hair_m",
+      "directions": 4
+    },
+    {
+      "name": "body_hair_p",
+      "directions": 4
+    },
+    {
+      "name": "body_hair_leg",
+      "directions": 4
+    },
+    {
+      "name": "body_hair_hand",
+      "directions": 4
+    },
+    {
+      "name": "Dwarf",
+      "directions": 4
+    },
+    {
+      "name": "bismark",
+      "directions": 4
+    },
+    {
+      "name": "punk_big",
+      "directions": 4
+    },
+    {
+      "name": "big_Brutal",
+      "directions": 4
+    }
+  ]
+}

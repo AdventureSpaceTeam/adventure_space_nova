@@ -1,0 +1,729 @@
+#region Base canisters
+
+- type: entity
+  parent: GasCanister
+  id: BZCanister
+  name: канистра бз
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится БЗ. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: pink
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 1871.71051 # bz
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            BZCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: HalonCanister
+  name: канистра галона
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Галон. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: halon
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 1871.71051 # halon
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            HalonCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: HealiumCanister
+  name: канистра хилиума
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Хилиум. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: healium
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 1871.71051 # healium
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            HealiumCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: HyperNobliumCanister
+  name: канистра гипер-ноблиума
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Гипер-Ноблиум. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: nob
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 1871.71051 # hyper-noblium
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            HyperNobliumCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: HydrogenCanister
+  name: канистра водорода
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Водород. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: h2
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 1871.71051 # h2
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            HydrogenCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: PluoxiumCanister
+  name: канистра плюоксиума
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Плюоксиум. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: darkblue
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 0 # h2
+          - 1871.71051 # pluoxium
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            PluoxiumCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: NitriumCanister
+  name: канистра нитриума
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Нитриум. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: brown
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 0 # h2
+          - 0 # pluoxium
+          - 1871.71051 # nitrium
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            NitriumCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: HeliumCanister
+  name: канистра гелия
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Гелий. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: helium
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 0 # h2
+          - 0 # pluoxium
+          - 0 # nitrium
+          - 1871.71051 # helium
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            HeliumCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: AntiNobliumCanister
+  name: канистра анти-ноблиума
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Анти-Ноблиум. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: antinob
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 0 # h2
+          - 0 # pluoxium
+          - 0 # nitrium
+          - 0 # helium
+          - 1871.71051 # antinob
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            AntiNobliumCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: ProtoNitrateCanister
+  name: канистра прото-нитрата
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Прото-Нитрат. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: proto_nitrate
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 0 # h2
+          - 0 # pluoxium
+          - 0 # nitrium
+          - 0 # helium
+          - 0 # antinob
+          - 1871.71051 # protonitrate
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            ProtoNitrateCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+- type: entity
+  parent: GasCanister
+  id: ZaukerCanister
+  name: канистра заукера
+  description: Канистра, в которой может содержаться газ любого вида. В этой, предположительно, содержится Заукер. Можно прикрепить к порту коннектора с помощью гаечного ключа.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      noRot: true
+      layers:
+        - state: zauker
+    - type: GasCanister
+      gasMixture:
+        volume: 1000
+        moles:
+          - 0 # oxygen
+          - 0 # nitrogen
+          - 0 # CO2
+          - 0 # Plasma
+          - 0 # Tritium
+          - 0 # vapor
+          - 0 # ammonia
+          - 0 # n20
+          - 0 # frezon
+          - 0 # bz
+          - 0 # halon
+          - 0 # healium
+          - 0 # hyper-noblium
+          - 0 # h2
+          - 0 # pluoxium
+          - 0 # nitrium
+          - 0 # helium
+          - 0 # antinob
+          - 0 # protonitrate
+          - 1871.71051 # zauker
+        temperature: 293.15
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            ZaukerCanisterBroken:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:DumpCanisterBehavior
+    - type: Lock
+      locked: true
+
+#region Broken canisters
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: BZCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: pink-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: HalonCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: halon-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: HealiumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: healium-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: HyperNobliumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: nob-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: HydrogenCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: h2-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: PluoxiumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: darkblue-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: NitriumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: brown-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: HeliumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: helium-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: AntiNobliumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: antinob-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: ProtoNitrateCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: proto_nitrate-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: ZaukerCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      sprite: _Adventure/Structures/Storage/canister.rsi
+      state: zauker-1

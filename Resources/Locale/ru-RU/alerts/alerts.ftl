@@ -24,12 +24,12 @@ alerts-walking-name = Шаг
 alerts-walking-desc = Вы идёте шагом, двигаясь в медленном темпе.
 alerts-stunned-name = [color=yellow]Оглушены[/color]
 alerts-stunned-desc = Вы [color=yellow]оглушены[/color]! Что-то мешает вам двигаться или взаимодействовать с объектами.
-alerts-knockdown-name = [color=yellow]Повалены[/color]
-alerts-knockdown-desc = Вы [color=yellow]повалены[/color]! Что-то поскользнуло или толкнуло тебя, передвижение затруднено.
+alerts-knockdown-name = [color=yellow]На полу[/color]
+alerts-knockdown-desc = Вы оказались [color=yellow]на полу[/color]! Вы на чём-то поскользнулись или вас толкнули, помешав вашему движению.
 alerts-handcuffed-name = [color=yellow]В наручниках[/color]
 alerts-handcuffed-desc = На вас [color=yellow]надели наручники[/color] и вы не можете использовать руки. Если кто-нибудь вас потащит, вы не сможете сопротивляться.
-alerts-ensnared-name = [color=yellow]Захваченный[/color]
-alerts-ensnared-desc = Вы [color=yellow]попали в ловушку[/color], и это мешает вам двигаться.
+alerts-ensnared-name = [color=yellow]Опутаны[/color]
+alerts-ensnared-desc = Ваши конечности [color=yellow]чем-то опутаны[/color], и это мешает вам двигаться.
 alerts-buckled-name = [color=yellow]Пристёгнуты[/color]
 alerts-buckled-desc = Вы к чему-то [color=yellow]пристёгнуты[/color]. Щёлкните по иконке чтобы отстегнуться, если на вас [color=yellow]не надеты наручники.[/color]
 alerts-crit-name = [color=red]Критическое состояние[/color]
@@ -59,9 +59,9 @@ alerts-parched-desc = Вы ужасно хотите пить. Жажда вас
 alerts-muted-name = Заглушены
 alerts-muted-desc = Вы потеряли способность говорить.
 alerts-vow-silence-name = Обет молчания
-alerts-vow-silence-desc = Вы дали обет молчания в рамках инициации в Мистико Тагма Мимон. Щёлкните по иконке, чтобы нарушить свой обет.
+alerts-vow-silence-desc = Вы дали обет, запрещающий устное или письменное общение, в рамках инициации в Мистико Тагма Мимон. Щёлкните по иконке, чтобы нарушить свой обет.
 alerts-vow-broken-name = Нарушенный обет
-alerts-vow-broken-desc = Вы нарушили свою клятву, данную Мимам. Теперь вы можете говорить, но вы потеряли свои мимские способности как минимум на 5 минут!!! Щёлкните по иконке, чтобы попытаться дать обет молчания снова.
+alerts-vow-broken-desc = Вы нарушили свою клятву, данную Мимам. Теперь вы можете говорить и писать, но вы потеряли свои мимские способности как минимум на 5 минут!!! Щёлкните по иконке, чтобы попытаться дать обет молчания снова.
 alerts-pulled-name = Вас тянут
 alerts-pulled-desc = Вас тянут за собой. Двигайтесь, чтобы освободиться.
 alerts-pulling-name = Вы тянете
@@ -80,7 +80,7 @@ alerts-revenant-essence-name = Эссенция
 alerts-revenant-essence-desc = Сила душ. Поддерживает вас и используется при использовании способностей. Медленно восстанавливается с течением времени.
 alerts-revenant-corporeal-name = Материальность
 alerts-revenant-corporeal-desc = Вы физически воплотились. Окружающие могут видеть и наносить вам вред.
-alerts-rooted-name = Укоренились
-alerts-rooted-desc = Вы прикреплены к земле. Вы не можете поскользнуться, но впитываешь жидкости под собой.
+alerts-rooted-name = Укоренены
+alerts-rooted-desc = Вы прикреплены к земле. Вы не можете подскользнуться, но вы будете впитывать все жидкости под вами.
 alerts-stealthy-name = Карманничество
 alerts-stealthy-desc = Совершаете ли вы сейчас карманную кражу. Нажмите, чтобы переключить.

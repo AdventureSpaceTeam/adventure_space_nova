@@ -224,6 +224,3 @@ spray-painter-style-canisters-helium = Гелий
 spray-painter-style-canisters-anti-noblium = Анти-Ноблиум
 spray-painter-style-canisters-proto-nitrate = Прото-Нитрат
 spray-painter-style-canisters-zauker = Заукер
-
-ent-SprayPainterAmmo = сжатая краска
-    .desc = Картридж с гиперсжатой краской, обычно используемый в краскопультах.

@@ -132,8 +132,8 @@
   description: View a Solar Control Interface.
   components:
   - type: Action
-    icon: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    icon: _Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -3
   - type: InstantAction
@@ -146,8 +146,8 @@
   description: View a Communications Interface.
   components:
   - type: Action
-    icon: Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
+    icon: _Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -4
   - type: InstantAction
@@ -160,8 +160,8 @@
   description: View a Mass Scanner Interface.
   components:
   - type: Action
-    icon: Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
+    icon: _Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -6
   - type: InstantAction
@@ -174,8 +174,8 @@
   description: View a Cargo Ordering Interface.
   components:
   - type: Action
-    icon: Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
+    icon: _Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -5
   - type: InstantAction
@@ -188,8 +188,8 @@
   description: View a Crew Monitoring Interface.
   components:
   - type: Action
-    icon: Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
+    icon: _Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -8
   - type: InstantAction
@@ -202,8 +202,8 @@
   description: View a Station Records Interface.
   components:
   - type: Action
-    icon: Corvax/Interface/AdminActions/records.png # Corvax-Resprite
-    iconOn: Corvax/Interface/AdminActions/records.png # Corvax-Resprite
+    icon: _Corvax/Interface/AdminActions/records.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/records.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -7
   - type: InstantAction

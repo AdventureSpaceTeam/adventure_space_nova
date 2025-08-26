@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingEyesHudDiagnostic
+  id: ClothingEyesGlassesCE
+  name: инженерно-диагностические очки
+  suffix: Adventure
+  description: Сложные в сборке диагностические очки с защитой зрения от сварки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/visors/engdia.rsi
+  - type: Clothing
+    sprite: _Adventure/visors/engdia.rsi
+  - type: EyeProtection

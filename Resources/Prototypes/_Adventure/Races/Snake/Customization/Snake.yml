@@ -1,0 +1,161 @@
+- type: marking
+  id: SnakeTailsBig
+  bodyPart: Tail
+  markingCategory: Tail
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
+    state: Snake_tail_big
+
+- type: marking
+  id: SnakeTailsTwisty
+  bodyPart: Tail
+  markingCategory: Tail
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
+    state: Snake_tail_twisty
+
+- type: marking
+  id: SnakeCollarCobra
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: base
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: base_1
+
+- type: marking
+  id: SnakeCollarCobraSpike
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: base_spike
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: base_1
+
+- type: marking
+  id: SnakeCollarKing
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: king
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: king_1
+
+- type: marking
+  id: SnakeCollarKingSpike
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: king_spike
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: king_1
+
+- type: marking
+  id: SnakeCollarWide
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: wide
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: wide_1
+
+- type: marking
+  id: SnakeBodyF
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/body.rsi
+    state: body_f
+
+- type: marking
+  id: SnakeBodyM
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/body.rsi
+    state: body_m
+
+- type: marking
+  id: SnakeChin
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/body.rsi
+    state: chin
+
+- type: marking
+  id: SnakeTailsBigBulge
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
+    state: Snake_tail_bulge
+  - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
+    state: bulge
+
+- type: marking
+  id: SnakeCollarImperial
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial_1
+
+- type: marking
+  id: SnakeCollarImperialSpike
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial_spike
+  - sprite: _Adventure/Races/Snake/Customization/collar.rsi
+    state: Imperial_1
+
+- type: marking
+  id: SnakeTailsGiant
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Zerah]
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
+    state: Snake_tail_giant
+  - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
+    state: giant
+
+- type: marking
+  id: SnakeTongue
+  bodyPart: HeadSide
+  markingCategory: Snout
+  speciesRestriction: [Zerah]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: _Adventure/Races/Snake/Customization/snout.rsi
+    state: Tongue

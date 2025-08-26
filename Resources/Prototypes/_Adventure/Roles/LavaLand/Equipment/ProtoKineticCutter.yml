@@ -1,0 +1,86 @@
+﻿- type: entity
+  id: WeaponProtoKineticCutter
+  parent: BaseItem
+  name: протокинетический резак
+  description: Стреляет кинетическими зарядами с низким уроном на короткое расстояние.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/kinetic_cutter.rsi
+    layers:
+    - state: icon
+    - state: icon
+      visible: false
+      map: [ "empty-icon" ]
+  - type: Item
+    sprite: _Adventure/Roles/LavaLand/Equipment/kinetic_cutter.rsi
+    size: Normal
+  - type: Gun
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    angleDecay: 45
+    minAngle: 44
+    maxAngle: 45
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Adventure/LavaLand/cutter_shot.ogg
+  - type: AmmoCounter
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.AmmoVisuals.HasAmmo:
+        empty-icon:
+          True: { visible: False }
+          False: { visible: True }
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.30
+    rechargeSound:
+      path: /Audio/_Adventure/LavaLand/cutter_recharge.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletKineticCutterSpread
+    capacity: 1
+    count: 1
+  - type: Clothing
+    sprite: _Adventure/Roles/LavaLand/Equipment/kinetic_cutter.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: UseDelay
+    delay: 1
+
+- type: entity
+  id: BulletKineticCutter
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+      - NonEnergy
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: chronobolt
+      shader: unshaded
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 10
+        Structural: 25
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: GatheringProjectile
+
+- type: entity
+  id: BulletKineticCutterSpread
+  name: тройной кинетический заряд
+  categories: [ HideSpawnMenu ]
+  parent: BulletKineticCutter
+  components:
+  - type: ProjectileSpread
+    proto: BulletKineticCutter
+    count: 3
+    spread: 10

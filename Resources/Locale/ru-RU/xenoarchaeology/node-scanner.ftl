@@ -1,4 +1,3 @@
-node-scan-popup = ID узла: { $id }
 node-scan-tooltip = Сканировать активные узлы
 node-scan-no-data = Не найдено информации о активных узлах
 node-scan-display-title = Сканер узлов

@@ -1,0 +1,45 @@
+#Created: raidgo Transferred:  depresh
+- type: entity
+  name: блюспейс Кристалл
+  parent: BaseItem
+  id: CentCommCrystal
+  suffix: 20 БК
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi
+    state: telecrystal
+  - type: Item
+    sprite: _Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi
+    size: Tiny
+  - type: Stack
+    count: 20
+    stackType: CentCommCrystal
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 200
+  - type: Currency
+    price:
+      CentCommCrystal: 1
+
+- type: entity
+  parent: CentCommCrystal
+  id: CentCommCrystal1
+  name: блюспейс Кристалл
+  suffix: 1 БК
+  components:
+  - type: Stack
+    count: 1
+
+- type: currency
+  id: CentCommCrystal
+  displayName: Блюспейс Кристаллы
+  cash:
+    1: CentCommCrystal1
+  canWithdraw: true
+
+- type: stack
+  id: CentCommCrystal
+  name: Блюспейс Кристаллы
+  icon: _Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi
+  spawn: CentCommCrystal1

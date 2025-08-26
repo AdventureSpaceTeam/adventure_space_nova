@@ -17,10 +17,10 @@
 - type: soundCollection
   id: shufflerInsert
   files:
-  - /Audio/Adventure/Items/shuffler/shuffler_insert1.ogg
-  - /Audio/Adventure/Items/shuffler/shuffler_insert2.ogg
+  - /Audio/_Adventure/Items/shuffler/shuffler_insert1.ogg
+  - /Audio/_Adventure/Items/shuffler/shuffler_insert2.ogg
 
 - type: soundCollection
   id: shufflerRustle
   files:
-  - /Audio/Adventure/Items/shuffler/shuffler_rustle.ogg
+  - /Audio/_Adventure/Items/shuffler/shuffler_rustle.ogg

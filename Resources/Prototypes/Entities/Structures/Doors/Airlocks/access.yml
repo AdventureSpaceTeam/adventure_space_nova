@@ -327,7 +327,7 @@
   suffix: Captain, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/Captain.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/Captain.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]
@@ -338,7 +338,7 @@
   suffix: ChiefMedicalOfficer, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/cmo.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/cmo.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefMedicalOfficer ]
@@ -349,7 +349,7 @@
   suffix: ChiefEngineer, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/ce.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/ce.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefEngineer ]
@@ -360,7 +360,7 @@
   suffix: HeadOfSecurity, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/hos.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/hos.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfSecurity ]
@@ -371,7 +371,7 @@
   suffix: ResearchDirector, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/rd.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/rd.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsResearchDirector ]
@@ -382,7 +382,7 @@
   suffix: HeadOfPersonnel, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/hop.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/hop.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
@@ -393,7 +393,7 @@
   suffix: Quartermaster, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Standart/qm.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Standart/qm.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsQuartermaster ]
@@ -755,7 +755,7 @@
   suffix: Captain, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/Captain.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/Captain.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]
@@ -766,7 +766,7 @@
   suffix: ChiefMedicalOfficer, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/cmo.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/cmo.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefMedicalOfficer ]
@@ -777,7 +777,7 @@
   suffix: ChiefEngineer, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/ce.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/ce.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsChiefEngineer ]
@@ -788,7 +788,7 @@
   suffix: HeadOfSecurity, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/hos.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/hos.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfSecurity ]
@@ -799,7 +799,7 @@
   suffix: ResearchDirector, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/rd.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/rd.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsResearchDirector ]
@@ -810,7 +810,7 @@
   suffix: HeadOfPersonnel, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/hop.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/hop.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
@@ -821,7 +821,7 @@
   suffix: Quartermaster, Locked
   components:
   - type: Sprite
-    sprite: Adventure/Structures/Doors/Glass/qm.rsi # Adventure
+    sprite: _Adventure/Structures/Doors/Glass/qm.rsi # Adventure
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsQuartermaster ]

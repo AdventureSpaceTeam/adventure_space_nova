@@ -148,9 +148,11 @@
     - id: WeaponDisabler
     - id: ClothingEyesHudCommand
     - id: ClothingOuterCoatHOP # Corvax-Resprite
-    - id: ClothingOuterHardsuitHOP # Adventure
-    - id: PrinterFlatpack # Adventure
-    - id: PlantAnalyzerCartridge # Adventure
+    # Adventure start
+    - id: ClothingOuterHardsuitHOP
+    - id: PrinterFlatpack
+    - id: PlantAnalyzerCartridge
+    # Adventure end
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -172,18 +174,21 @@
     - id: CigarCase
       prob: 0.15
     - id: ClothingBeltChiefEngineerFilled
-    - id: ClothingEyesGlassesCE # Adventure
     - id: ClothingHandsGlovesColorYellow
     - id: ClothingHeadsetAltEngineering
     - id: DoorRemoteEngineering
     - id: CargoRequestEngineeringComputerCircuitboard
     - id: RCD
-    - id: RPD # Adventure
     - id: RCDAmmo
     - id: RubberStampCE
-    - id: NTECCPU1 # Adventure
-    - id: NukeActivator # Adventure
     - id: MetalFoamGrenade
+    # Adventure start
+    - id: ClothingEyesGlassesCE
+    - id: NTECCPU1
+    - id: NukeActivator
+    - id: RPD
+    - id: EnergyCoreCircuitboard
+    # Adventure end
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

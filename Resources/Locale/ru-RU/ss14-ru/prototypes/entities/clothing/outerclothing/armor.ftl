@@ -1,7 +1,7 @@
 ent-ClothingOuterArmorBase = бронежилет
     .desc = Стандартный бронежилет типа I, обеспечивающий достойную защиту от большинства видов повреждений.
-ent-ClothingOuterArmorBasic = { ent-BaseSecurityBartenderContraband }
-    .desc = { ent-BaseSecurityBartenderContraband.desc }
+ent-ClothingOuterArmorBasic = { ent-ClothingOuterArmorBase }
+    .desc = { ent-ClothingOuterArmorBase.desc }
 ent-ClothingOuterArmorBasicSlim = бронежилет
     .desc = Тонкий бронежилет типа I, обеспечивающий достойную защиту от большинства видов повреждений.
     .suffix = тонкий
@@ -45,3 +45,5 @@ ent-ClothingOuterArmorBone = костяной доспех
     .desc = Сидит на вас как вторая кожа.
 ent-ClothingOuterArmorPodWars = броня Броненосец II
     .desc = Переделанный бронескафандр Броненосец II, реликвия войн подов.
+ent-CardArmour = картонная броня
+    .desc = Средневековый нагрудник, сделанный из картоны.

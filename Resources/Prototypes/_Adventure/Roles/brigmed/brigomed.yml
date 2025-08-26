@@ -1,0 +1,87 @@
+# Made by RaidGo
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineMedicalBrig
+  name: БригоМед Плюс
+  suffix: AdvRoles, AdvMed, AdvMapping
+  description: Это медицинский раздатчик препаратов. Только натуральные химикаты!
+  components:
+  - type: VendingMachine
+    pack: BrigoMedPlusInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 0.6
+  - type: DatasetVocalizer
+    dataset: NanoMedAds
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: _Adventure/Roles/brigmed/Brigomed.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Security"]]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+  - type: GuideHelp
+    guides:
+    - Medical Doctor
+
+- type: vendingMachineInventory
+  id: BrigoMedPlusInventory
+  startingInventory:
+    HandheldHealthAnalyzer: 1
+    EmergencyMedipen: 1
+    Brutepack: 2
+    Ointment: 2
+    Bloodpack: 2
+    Tourniquet: 2
+    EpinephrineChemistryBottle: 1
+    Syringe: 2
+    SyringeBicaridine: 1
+    SyringeDermaline: 1
+    HudMedsecBox: 1
+
+- type: entity
+  name: набор для сборки мед-охранного визора
+  parent: BoxCardboard
+  id: HudMedsecBox
+  description: Набор для сборки излюбленного бригмедиками визора.
+  components:
+  - type: Sprite
+    state: box
+  - type: Storage
+    grid:
+    - 0,0,5,3
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesHudMedical
+        amount: 1
+      - id: ClothingEyesHudSecurity
+        amount: 1
+      - id: Brigomedpaper
+        amount: 1
+      - id: RadioHandheld
+        amount: 1
+      - id: CapacitorStockPart
+        amount: 2
+
+- type: entity
+  name: бумага
+  suffix: Бригомед плюс
+  parent: Paper
+  id: Brigomedpaper
+  components:
+  - type: Paper
+    content: Кабель в комплект не входит
