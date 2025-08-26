@@ -1,7 +1,7 @@
 ﻿- type: gameMap
   id: AdventureAngle
   mapName: 'Angle'
-  mapPath: /Maps/Adventure/Adventureangle.yml
+  mapPath: /Maps/_Adventure/Adventureangle.yml
   minPlayers: 0
   stations:
     Angle:
@@ -13,7 +13,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Adventure/NTES_Right.yml
+          emergencyShuttlePath: /Maps/_Adventure/NTES_Right.yml
         - type: StationJobs
           availableJobs:
             Passenger: [ -1, -1 ]

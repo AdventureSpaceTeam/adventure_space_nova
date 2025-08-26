@@ -31,7 +31,7 @@
       state: wolf_tail
     - sprite: Corvax/Mobs/Customization/vulpkanin.rsi
       state: wolf_tail_inner
-      
+
       # Animated
 - type: marking
   id: FoxTailAnimatedAndroid
@@ -200,7 +200,7 @@
           category: FacialHair
         - !type:SkinColoring
   sprites:
-  - sprite: Adventure/Races/Felinid/Customization/felinid_custom.rsi
+  - sprite: _Adventure/Races/Felinid/Customization/felinid_custom.rsi
     state: tail_cat_wag_bell
 
 - type: marking
@@ -221,9 +221,9 @@
           !type:SimpleColoring
             color: "#FFFFFF"
   sprites:
-  - sprite: Adventure/Races/Felinid/Customization/felinid_custom.rsi
+  - sprite: _Adventure/Races/Felinid/Customization/felinid_custom.rsi
     state: ears_cat_outer_bell
-  - sprite: Adventure/Races/Felinid/Customization/felinid_custom.rsi
+  - sprite: _Adventure/Races/Felinid/Customization/felinid_custom.rsi
     state: ears_cat_inner_bell
 
 - type: marking
@@ -241,9 +241,9 @@
           category: FacialHair
         - !type:SkinColoring
   sprites:
-    - sprite: Adventure/Races/Felinid/Customization/felinid_custom.rsi
+    - sprite: _Adventure/Races/Felinid/Customization/felinid_custom.rsi
       state: tail_fox_prime
-    - sprite: Adventure/Races/Felinid/Customization/felinid_custom.rsi
+    - sprite: _Adventure/Races/Felinid/Customization/felinid_custom.rsi
       state: tail_fox_second
 
 - type: marking

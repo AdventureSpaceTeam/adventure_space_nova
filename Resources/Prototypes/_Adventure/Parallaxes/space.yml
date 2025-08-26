@@ -13,7 +13,7 @@
       slowness: 0.94
     - texture:
         !type:ImageParallaxTextureSource
-        path: "/Textures/Adventure/Parallaxes/Angle.png"
+        path: "/Textures/_Adventure/Parallaxes/Angle.png"
       slowness: 0.93
       scale: 1,1
 
@@ -22,7 +22,7 @@
   layers:
     - texture:
         !type:ImageParallaxTextureSource
-        path: "/Textures/Adventure/Parallaxes/Pebble.png"
+        path: "/Textures/_Adventure/Parallaxes/Pebble.png"
       slowness: 0.98
       scale: 0.5,0.5
     - texture:

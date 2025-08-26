@@ -18,7 +18,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: Adventure/_CyberneticGenesis/androids/androidmedical.rsi
+    sprite: _Adventure/Races/androids/androidmedical.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]

@@ -1,7 +1,7 @@
 ﻿- type: gameMap
   id: AdventureShoukou
   mapName: 'Shōkō'
-  mapPath: /Maps/Adventure/Adventureshoukou.yml
+  mapPath: /Maps/_Adventure/Adventureshoukou.yml
   minPlayers: 0
   stations:
     Shoukou:
@@ -13,7 +13,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Adventure/NTES_Kaeri.yml
+          emergencyShuttlePath: /Maps/_Adventure/NTES_Kaeri.yml
         - type: StationJobs
           availableJobs:
             Passenger: [ -1, -1 ]

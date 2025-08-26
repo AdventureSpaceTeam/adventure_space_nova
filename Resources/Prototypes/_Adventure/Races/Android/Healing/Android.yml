@@ -4,10 +4,10 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi
+    sprite: _Adventure/Races/androids/Objects/Specific/Medical/medical.rsi
   - type: Item
     size: Small
-    sprite: Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi
+    sprite: _Adventure/Races/androids/Objects/Specific/Medical/medical.rsi
     heldPrefix: ointment
   # Inherited
   - type: StaticPrice
@@ -40,7 +40,7 @@
     count: 10
   - type: StackPrice
     price: 5
-    
+
 - type: entity
   id: Nanopack1
   parent: Nanopack
@@ -49,7 +49,7 @@
   - type: Stack
     stackType: Brutepack
     count: 1
-    
+
 - type: entity
   name: Пакет тереума
   description: Своейобразный пакет с кровью, но вместо него тереум позволяющий Андроидам работать.
@@ -78,7 +78,7 @@
     count: 10
   - type: StackPrice
     price: 10
-    
+
 - type: entity
   name: Набор физлечения Андроидов
   description: Специальный набор инструментов и жидкости для лечения физического урона Андроидов.

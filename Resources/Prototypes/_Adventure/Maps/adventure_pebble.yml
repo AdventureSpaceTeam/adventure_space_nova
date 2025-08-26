@@ -1,7 +1,7 @@
 ﻿- type: gameMap
   id: AdventurePebble
   mapName: 'Pebble'
-  mapPath: /Maps/Adventure/Adventurepebble.yml
+  mapPath: /Maps/_Adventure/Adventurepebble.yml
   minPlayers: 0
   stations:
     PebbleStation:

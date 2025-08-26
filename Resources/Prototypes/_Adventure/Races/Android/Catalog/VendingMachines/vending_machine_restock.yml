@@ -7,7 +7,7 @@
   components:
   - type: VendingMachineRestock
   - type: Sprite
-    sprite: Adventure/_CyberneticGenesis/androids/vending_machine_restock.rsi
+    sprite: _Adventure/Races/androids/vending_machine_restock.rsi
     layers:
     - state: base
     - state: green_bit

@@ -5,9 +5,9 @@
   description: Источник невероятного, бесконечного интеллекта.
   components:
   - type: Sprite
-    sprite: Adventure/_CyberneticGenesis/androids/Mobs/Species/Android/organs.rsi
+    sprite: _Adventure/Races/androids/Mobs/Species/Android/organs.rsi
     state: android_brain
-    
+
 - type: entity
   id: OrganAndroidHeart
   parent: OrganHumanHeart
@@ -15,7 +15,7 @@
   description: Мне жаль бессердечного ублюдка, который потерял это.
   components:
   - type: Sprite
-    sprite: Adventure/_CyberneticGenesis/androids/Mobs/Species/Android/organs.rsi
+    sprite: _Adventure/Races/androids/Mobs/Species/Android/organs.rsi
     state: android_heart-off
 
 #Тело КПБ

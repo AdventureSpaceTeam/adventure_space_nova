@@ -1,0 +1,9 @@
+- type: entity
+  id: TereumCrate
+  parent: CrateGenericSteel
+  name: ящик с пакетами тереума
+  components:
+  - type: StorageFill
+    contents:
+    - id: Tereumpack
+      amount: 3
