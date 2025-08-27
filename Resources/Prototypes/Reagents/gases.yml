@@ -145,9 +145,10 @@
           types:
             Poison:
               1
+      # We need a metabolism effect on reagent removal
 # Adventure-start
         conditions:
-        - !type:OrganType 
+        - !type:OrganType
           type: PlasMan
           shouldHave: false
       - !type:AdjustAlert

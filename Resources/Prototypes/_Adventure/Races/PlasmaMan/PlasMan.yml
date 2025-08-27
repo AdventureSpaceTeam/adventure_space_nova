@@ -100,7 +100,7 @@
         Cold: 0.1
     heatDamage:
       types:
-        Heat: 1.5 
+        Heat: 1.5
   - type: TemperatureSpeed
     thresholds:
       293: 0.8
@@ -116,7 +116,7 @@
     thermalRegulationTemperatureThreshold: 2
   - type: Perishable
   - type: Butcherable
-    butcheringType: Spike 
+    butcheringType: Spike
     spawned:
       - id: SheetPlasma1
         amount: 5
@@ -130,10 +130,10 @@
     maxSaturation: 15
   - type: FireVisuals
     alternateState: Standing
-  - type: GuideHelp 
+  - type: GuideHelp
     guides:
     - Species
-  - type: SSDIndicator 
+  - type: SSDIndicator
   - type: StunVisuals
   - type: DamageVisuals
     damageOverlayGroups:

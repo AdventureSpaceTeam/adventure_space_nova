@@ -1,17 +1,11 @@
 ﻿- type: typingIndicator
   id: Ghost
-<<<<<<< Updated upstream:Resources/Prototypes/_Adventure/Races/typing_Indicator.yml
   spritePath: _Adventure/Interface/Speech.rsi
-  typingState: ghost
-  idleState: ghost
-=======
-  spritePath: Adventure/Interface/Speech.rsi
   typingState: ghost0
   idleState: ghost1
 
 - type: typingIndicator
   id: Plasman
-  spritePath: Adventure/Interface/Speech.rsi
+  spritePath: _Adventure/Interface/Speech.rsi
   typingState: plasma0
   idleState: plasma1
->>>>>>> Stashed changes:Resources/Prototypes/Adventure/Races/typing_Indicator.yml

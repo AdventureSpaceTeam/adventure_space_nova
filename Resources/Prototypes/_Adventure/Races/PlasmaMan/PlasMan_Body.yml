@@ -18,7 +18,7 @@
   description: Это просто мозг, но из плазмы.
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/Organs.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/Organs.rsi
     state: brain
   - type: SolutionContainerManager
     solutions:
@@ -42,7 +42,7 @@
   description: Большой полупрозрачный мешок, наполненный газообразной плазмой.
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/Organs.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/Organs.rsi
     layers:
       - state: lung-l
       - state: lung-r
@@ -114,7 +114,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
   - type: Extractable
     juiceSolution:
       reagents:
@@ -127,7 +127,7 @@
   parent: [PartPlasMan, BaseTorso]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "torso_m"
   - type: Extractable
     juiceSolution:
@@ -141,7 +141,7 @@
   parent: [PartPlasMan, BaseHead]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "head_m"
   - type: Extractable
     juiceSolution:
@@ -155,7 +155,7 @@
   parent: [PartPlasMan, BaseLeftArm]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "l_arm"
 
 - type: entity
@@ -164,7 +164,7 @@
   parent: [PartPlasMan, BaseRightArm]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "r_arm"
 
 - type: entity
@@ -173,7 +173,7 @@
   parent: [PartPlasMan, BaseLeftHand]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "l_hand"
 
 - type: entity
@@ -182,7 +182,7 @@
   parent: [PartPlasMan, BaseRightHand]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "r_hand"
 
 - type: entity
@@ -191,7 +191,7 @@
   parent: [PartPlasMan, BaseLeftLeg]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "l_leg"
 
 - type: entity
@@ -200,7 +200,7 @@
   parent: [PartPlasMan, BaseRightLeg]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "r_leg"
 
 - type: entity
@@ -209,7 +209,7 @@
   parent: [PartPlasMan, BaseLeftFoot]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "l_foot"
 
 - type: entity
@@ -218,5 +218,5 @@
   parent: [PartPlasMan, BaseRightFoot]
   components:
   - type: Sprite
-    sprite: Adventure/Races/PlasmaMan/Species/parts.rsi
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: "r_foot"
