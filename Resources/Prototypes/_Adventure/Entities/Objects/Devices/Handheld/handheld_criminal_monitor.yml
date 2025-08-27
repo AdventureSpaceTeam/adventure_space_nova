@@ -1,0 +1,36 @@
+- type: entity
+  name: портативный криминальный монитор
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldCriminalMonitor
+  description: Ручной криминальный монитор, отображающий криминальные записи станции.
+  components:
+  - type: Item
+    heldPrefix: scanner
+  - type: Sprite
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  - type: ActivatableUI
+    key: enum.CriminalRecordsConsoleKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.CriminalRecordsConsoleKey.Key:
+        type: CriminalRecordsConsoleBoundUserInterface
+  - type: CriminalRecordsConsole
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: HandheldCriminalMonitorEmpty
+  parent: HandheldCriminalMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

@@ -1,0 +1,34 @@
+- type: entity
+  name: портативный монитор учёта
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldRecordsMonitor
+  description: Ручной монитор учёта, отображающий информацию об экипаже станции.
+  components:
+  - type: Item
+    heldPrefix: scanner
+  - type: Sprite
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  - type: ActivatableUI
+    key: enum.GeneralStationRecordConsoleKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.GeneralStationRecordConsoleKey.Key:
+          type: GeneralStationRecordConsoleBoundUserInterface
+  - type: GeneralStationRecordConsole
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+    - HighRiskItem
+
+- type: entity
+  id: HandheldRecordsMonitorEmpty
+  parent: HandheldRecordsMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

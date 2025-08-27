@@ -1,0 +1,40 @@
+- type: entity
+  name: портативный монитор связи
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldCommunicationsMonitor
+  description: Ручной монитор связи.
+  components:
+  - type: Item
+    heldPrefix: scanner
+  - type: Sprite
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  - type: ActivatableUI
+    key: enum.CommunicationsConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.CommunicationsConsoleUiKey.Key:
+        type: CommunicationsConsoleBoundUserInterface
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-station
+  - type: StaticPrice
+    price: 500
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: ShuttleTimer
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: AccessReader
+    access: [[ "Command" ]]
+
+- type: entity
+  id: HandheldCommunicationsMonitorEmpty
+  parent: HandheldCommunicationsMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

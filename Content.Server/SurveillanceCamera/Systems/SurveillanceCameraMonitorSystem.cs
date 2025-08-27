@@ -2,6 +2,7 @@ using System.Linq;
 using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Power.Components;
+using Content.Server.PowerCell; // Adventure monitors
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.Power;
@@ -17,6 +18,7 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
     [Dependency] private readonly SurveillanceCameraSystem _surveillanceCameras = default!;
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
+    [Dependency] private readonly PowerCellSystem _cell = default!; // Adventure monitors
 
     public override void Initialize()
     {
@@ -482,6 +484,11 @@ public sealed class SurveillanceCameraMonitorSystem : EntitySystem
     // have this component added to any entity, and have them open the BUI (somehow).
     public void AfterOpenUserInterface(EntityUid uid, EntityUid player, SurveillanceCameraMonitorComponent? monitor = null, ActorComponent? actor = null)
     {
+        // Adventure monitors start
+        if (!_cell.TryUseActivatableCharge(uid))
+            return;
+        // Adventure monitors end
+
         if (!Resolve(uid, ref monitor)
             || !Resolve(player, ref actor))
         {
