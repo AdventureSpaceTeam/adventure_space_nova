@@ -4,6 +4,8 @@ alerts-low-oxygen-name = [color=red]Низкий уровень кислород
 alerts-low-oxygen-desc = В воздухе, которым вы дышите, [color=red]недостаточно кислорода[/color]. Используйте [color=green]дыхательную маску и баллон[/color].
 alerts-low-nitrogen-name = [color=red]Низкий уровень азота[/color]
 alerts-low-nitrogen-desc = В воздухе, которым вы дышите, [color=red]недостаточно азота[/color]. Используйте [color=green]дыхательную маску и баллон[/color].
+alerts-low-plasma-name = [color=red]Низкий уровень плазмы[/color]
+alerts-low-plasma-desc = В воздухе, которым вы дышите, [color=red]недостаточно плазмы[/color]. Используйте [color=green]дыхательную маску и баллон[/color].
 alerts-high-toxin-name = [color=red]Высокий уровень токсинов[/color]
 alerts-high-toxin-desc = В воздухе, которым вы дышите, [color=red]слишком много токсинов[/color]. Используйте [color=green]дыхательную маску и баллон[/color] или покиньте отсек.
 alerts-low-pressure-name = [color=red]Низкий уровень давления[/color]

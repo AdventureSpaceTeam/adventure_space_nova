@@ -13,6 +13,7 @@
     inverted: true
     species:
     - Synth
+    - PlasMan
 # Adventure-edit-end
 
 - type: antag

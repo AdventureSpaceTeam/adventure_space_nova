@@ -101,6 +101,9 @@
       children:
       - id: EmergencyOxygenTankFilled
       - id: OxygenTankFilled
+      - id: PlasmaTankAdventureFilled #Adventure
+      - id: EmergencyNitrogenTankFilled #Adventure
+      - id: NitrogenTankFilled #Adventure
     - id: CrowbarRed
     - !type:GroupSelector
       children:

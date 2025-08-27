@@ -8,7 +8,7 @@
   },
   "states": [
     {
-      "name": "ghost",
+      "name": "ghost0",
       "delays": [
         [
             0.3,
@@ -17,6 +17,23 @@
             0.3
         ]
       ]
+    },
+    {
+      "name": "ghost1"
+    },
+    {
+      "name": "plasma0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "plasma1"
     }
   ]
 }
