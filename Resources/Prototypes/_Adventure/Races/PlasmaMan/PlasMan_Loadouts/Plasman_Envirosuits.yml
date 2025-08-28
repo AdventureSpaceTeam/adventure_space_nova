@@ -75,10 +75,19 @@
     sprite: _Adventure/Objects/Plasman_suits/basic/suit.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Plasman_suits/basic/suit.rsi
+    equipDelay: 2
+    unequipDelay: 2
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
 
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
@@ -90,6 +99,8 @@
     sprite: _Adventure/Objects/Plasman_suits/basic/helmet.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Plasman_suits/basic/helmet.rsi
+    equipDelay: 2
+    unequipDelay: 2
   - type: PointLight
     color: "#fff67c"
   - type: PressureProtection
@@ -617,3 +628,292 @@
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
+
+# повар
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitChef
+  name: поварской защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/chef/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/chef/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitChef
+  name: поварской защитный шлем
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/chef/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/chef/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/chef/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# сервис
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitService
+  name: сервисный защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/service/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/service/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitService
+  name: сервисный защитный шлем
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/service/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/service/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/service/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# бармен
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitBartender
+  name: барный защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/bartender/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/bartender/suit.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80 
+        Heat: 0.80
+
+# ботаник
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitHydro
+  name: ботанический защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/hydro/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/hydro/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitHydro
+  name: ботанический защитный шлем
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/hydro/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/hydro/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/hydro/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# священник
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitChaplain
+  name: церковный защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/chaplain/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/chaplain/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitChaplain
+  name: церковный защитный шлем
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/chaplain/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/chaplain/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/chaplain/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# клоун
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitClown
+  name: клоунский защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/clown/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/clown/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitClown
+  name: клоунский защитный шлем
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/clown/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/clown/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/clown/helmet.rsi
+    heldPrefix: off
+    size: Normal
+  - type: PointLight 
+    color: "#ff3399"
+
+# музыкант
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitMusician
+  name: диско-защитный костюм
+  description: Герметичный костюм, предназначенный для настоящего артиста.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/musician/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/musician/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitMusician
+  name: диско-защитный шлем
+  description: Герметичный шлем, предназначенный для настоящего артиста.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/musician/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/musician/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/musician/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# мим
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitMime
+  name: молчаливый защитный костюм
+  description: Герметичный костюм, предназначенный для....
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/mime/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/mime/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitMime
+  name: молчаливый защитный шлем
+  description: Герметичный шлем, предназначенный для....
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/mime/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/mime/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/mime/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# уборщик
+- type: entity
+  parent: ClothingOuterEnvirosuitBase
+  id: ClothingOuterEnvirosuitJanitor
+  name: клининговый защитный костюм
+  description: Герметичный костюм, предназначенный для тчательной уборки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/janitor/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/janitor/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitBase
+  id: ClothingHeadEnvirosuitJanitor
+  name: клининговый защитный шлем
+  description: Герметичный шлем, предназначенный для тчательной уборки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/janitor/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/janitor/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/janitor/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# ЯОй
+- type: entity
+  parent: [ ClothingOuterEnvirosuitBase, BaseSyndicateContraband ]
+  id: ClothingOuterEnvirosuitSyndie
+  name: кроваво-красный защитный костюм
+  description: Герметичный костюм, предназначенный для использования плазмалюдами Синдиката.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/synd/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/synd/suit.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance 
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  parent: [ ClothingHeadEnvirosuitBase, BaseSyndicateContraband ]
+  id: ClothingHeadEnvirosuitSyndie
+  name: кроваво-красный защитный шлем
+  description: Герметичный шлем, предназначенный для использования плазмалюдами Синдиката.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/synd/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/synd/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/synd/helmet.rsi
+    heldPrefix: off
+    size: Normal
+  - type: PointLight
+    color: "#bff97d"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

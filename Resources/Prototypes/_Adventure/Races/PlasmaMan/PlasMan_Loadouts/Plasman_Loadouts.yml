@@ -316,3 +316,255 @@
   loadouts:
   - LoadoutSpeciesPlasManSuitScience
   - LoadoutSpeciesPlasManHeadScience
+
+#повар
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitChef
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitChef 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadChef
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitChef
+
+- type: loadoutGroup
+  id: GroupPlasManSuitChef
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitChef
+  - LoadoutSpeciesPlasManHeadChef
+
+#сервис
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitService
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitService 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadService
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitService
+
+- type: loadoutGroup
+  id: GroupPlasManSuitService
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitService
+  - LoadoutSpeciesPlasManHeadService
+
+#бармен
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitBartender
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitBartender
+
+- type: loadoutGroup
+  id: GroupPlasManSuitBartender
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitBartender
+  - LoadoutSpeciesPlasManHeadService
+
+#ботаник
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitHydro
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitHydro 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadHydro
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitHydro
+
+- type: loadoutGroup
+  id: GroupPlasManSuitHydro
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitHydro
+  - LoadoutSpeciesPlasManHeadHydro
+
+#священник
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitChaplain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitChaplain 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadChaplain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitChaplain
+
+- type: loadoutGroup
+  id: GroupPlasManSuitChaplain
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitChaplain
+  - LoadoutSpeciesPlasManHeadChaplain
+
+#клоун
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitClown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitClown 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadClown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitClown
+
+- type: loadoutGroup
+  id: GroupPlasManSuitClown
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitClown
+  - LoadoutSpeciesPlasManHeadClown
+
+#музыкант
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitMusician
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitMusician 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadMusician
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitMusician
+
+- type: loadoutGroup
+  id: GroupPlasManSuitMusician
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitMusician
+  - LoadoutSpeciesPlasManHeadMusician
+
+#мим
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitMime
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitMime 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadMime
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitMime
+
+- type: loadoutGroup
+  id: GroupPlasManSuitMime
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitMime
+  - LoadoutSpeciesPlasManHeadMime
+
+#уборщик
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitJanitor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitJanitor 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadJanitor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitJanitor
+
+- type: loadoutGroup
+  id: GroupPlasManSuitJanitor
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitJanitor
+  - LoadoutSpeciesPlasManHeadJanitor
+
+#ЯОй
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitSyndie
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitSyndie 
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadSyndie
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitSyndie
+
+- type: loadoutGroup
+  id: GroupPlasManSuitSyndie
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitSyndie
+  - LoadoutSpeciesPlasManHeadSyndie
