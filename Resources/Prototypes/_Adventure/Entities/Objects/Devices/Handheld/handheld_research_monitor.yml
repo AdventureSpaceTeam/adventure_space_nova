@@ -1,0 +1,51 @@
+- type: entity
+  name: портативный исследовательский монитор
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldResearchMonitor
+  description: Ручной исследовательский монитор, отображающий текущие изучения отдела РНД.
+  components:
+  - type: Item
+    heldPrefix: scanner
+  - type: Sprite
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  - type: ResearchClient
+  - type: ResearchConsole
+  - type: ActiveRadio
+    channels:
+    - Science
+  - type: TechnologyDatabase
+  - type: ActivatableUI
+    key: enum.ResearchConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ResearchConsoleUiKey.Key:
+        type: ResearchConsoleBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
+  - type: StaticPrice
+    price: 500
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 3
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: AccessReader
+    access: [["Research"]]
+
+- type: entity
+  id: HandheldResearchMonitorEmpty
+  parent: HandheldResearchMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

@@ -1,4 +1,5 @@
 using Content.Server.Power.EntitySystems;
+using Content.Server.PowerCell; // Adventure monitors
 using Content.Server.Research.Components;
 using Content.Shared.UserInterface;
 using Content.Shared.Access.Components;
@@ -13,6 +14,7 @@ namespace Content.Server.Research.Systems;
 public sealed partial class ResearchSystem
 {
     [Dependency] private readonly EmagSystem _emag = default!;
+    [Dependency] private readonly PowerCellSystem _cell = default!; // Adventure monitors
 
     private void InitializeConsole()
     {
@@ -71,7 +73,10 @@ public sealed partial class ResearchSystem
     {
         if (!Resolve(uid, ref component, ref clientComponent, false))
             return;
-
+        // Adventure monitors start
+        if (!_cell.TryUseActivatableCharge(uid))
+            return;
+        // Adventure monitors end
         ResearchConsoleBoundInterfaceState state;
 
         if (TryGetClientServer(uid, out _, out var serverComponent, clientComponent))
