@@ -38,7 +38,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitBase 
+    outerClothing: ClothingOuterEnvirosuitBase
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadBase
@@ -59,12 +59,12 @@
 
 #Инженерный
 - type: loadout
-  id: LoadoutSpeciesPlasManSuitEnguneering 
+  id: LoadoutSpeciesPlasManSuitEnguneering
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitEnguneering 
+    outerClothing: ClothingOuterEnvirosuitEnguneering
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadEnguneering
@@ -90,7 +90,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitAtmos 
+    outerClothing: ClothingOuterEnvirosuitAtmos
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadAtmos
@@ -116,7 +116,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitCargo 
+    outerClothing: ClothingOuterEnvirosuitCargo
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadCargo
@@ -137,15 +137,15 @@
 
 #утиль
 - type: loadout
-  id: LoadoutSpeciesPlasManSuitSalvage 
+  id: LoadoutSpeciesPlasManSuitSalvage
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitSalvage 
+    outerClothing: ClothingOuterEnvirosuitSalvage
 
 - type: loadout
-  id: LoadoutSpeciesPlasManHeadSalvage 
+  id: LoadoutSpeciesPlasManHeadSalvage
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
@@ -163,15 +163,15 @@
 
 #СБ
 - type: loadout
-  id: LoadoutSpeciesPlasManSuitSecurity 
+  id: LoadoutSpeciesPlasManSuitSecurity
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitSecurity 
+    outerClothing: ClothingOuterEnvirosuitSecurity
 
 - type: loadout
-  id: LoadoutSpeciesPlasManHeadSecurity 
+  id: LoadoutSpeciesPlasManHeadSecurity
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
@@ -194,10 +194,10 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitSecWarden 
+    outerClothing: ClothingOuterEnvirosuitSecWarden
 
 - type: loadout
-  id: LoadoutSpeciesPlasManHeadSecWarden 
+  id: LoadoutSpeciesPlasManHeadSecWarden
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
@@ -220,7 +220,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitMedical 
+    outerClothing: ClothingOuterEnvirosuitMedical
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadMedical
@@ -246,7 +246,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitParamed 
+    outerClothing: ClothingOuterEnvirosuitParamed
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadParamed
@@ -272,7 +272,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitChemist 
+    outerClothing: ClothingOuterEnvirosuitChemist
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadChemist
@@ -298,7 +298,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitScience 
+    outerClothing: ClothingOuterEnvirosuitScience
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadScience
@@ -324,7 +324,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitChef 
+    outerClothing: ClothingOuterEnvirosuitChef
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadChef
@@ -350,7 +350,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitService 
+    outerClothing: ClothingOuterEnvirosuitService
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadService
@@ -394,7 +394,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitHydro 
+    outerClothing: ClothingOuterEnvirosuitHydro
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadHydro
@@ -420,7 +420,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitChaplain 
+    outerClothing: ClothingOuterEnvirosuitChaplain
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadChaplain
@@ -446,7 +446,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitClown 
+    outerClothing: ClothingOuterEnvirosuitClown
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadClown
@@ -472,7 +472,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitMusician 
+    outerClothing: ClothingOuterEnvirosuitMusician
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadMusician
@@ -498,7 +498,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitMime 
+    outerClothing: ClothingOuterEnvirosuitMime
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadMime
@@ -524,7 +524,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitJanitor 
+    outerClothing: ClothingOuterEnvirosuitJanitor
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadJanitor
@@ -550,7 +550,7 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitSyndie 
+    outerClothing: ClothingOuterEnvirosuitSyndie
 
 - type: loadout
   id: LoadoutSpeciesPlasManHeadSyndie

@@ -142,8 +142,8 @@
     - HeadTop
     - HeadSide
 #Adventure-start
-  - type: SpontaneousCombustionProtection 
-    protectionPercent: 25 
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 25
 #Adventure-end
 
 - type: entity
@@ -194,8 +194,8 @@
     - HeadTop
     - HeadSide
 #Adventure-start
-  - type: SpontaneousCombustionProtection 
-    protectionPercent: 25 
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 25
 #Adventure-end
 
 - type: entity

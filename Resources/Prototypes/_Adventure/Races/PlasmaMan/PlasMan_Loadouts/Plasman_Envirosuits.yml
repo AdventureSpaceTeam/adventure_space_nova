@@ -101,6 +101,7 @@
     sprite: _Adventure/Objects/Plasman_suits/basic/helmet.rsi
     equipDelay: 2
     unequipDelay: 2
+    quickEquip: true
   - type: PointLight
     color: "#fff67c"
   - type: PressureProtection
@@ -699,7 +700,7 @@
       coefficients:
         Blunt: 0.80
         Slash: 0.80
-        Piercing: 0.80 
+        Piercing: 0.80
         Heat: 0.80
 
 # ботаник
@@ -782,7 +783,7 @@
     sprite: _Adventure/Objects/Plasman_suits/clown/helmet.rsi
     heldPrefix: off
     size: Normal
-  - type: PointLight 
+  - type: PointLight
     color: "#ff3399"
 
 # музыкант
@@ -844,7 +845,7 @@
   parent: ClothingOuterEnvirosuitBase
   id: ClothingOuterEnvirosuitJanitor
   name: клининговый защитный костюм
-  description: Герметичный костюм, предназначенный для тчательной уборки.
+  description: Герметичный костюм, предназначенный для тщательной уборки.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Plasman_suits/janitor/suit.rsi
@@ -855,7 +856,7 @@
   parent: ClothingHeadEnvirosuitBase
   id: ClothingHeadEnvirosuitJanitor
   name: клининговый защитный шлем
-  description: Герметичный шлем, предназначенный для тчательной уборки.
+  description: Герметичный шлем, предназначенный для тщательной уборки.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Plasman_suits/janitor/helmet.rsi
@@ -879,7 +880,7 @@
     sprite: _Adventure/Objects/Plasman_suits/synd/suit.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: StaminaResistance 
+  - type: StaminaResistance
     damageCoefficient: 0.75
   - type: Armor
     modifiers:

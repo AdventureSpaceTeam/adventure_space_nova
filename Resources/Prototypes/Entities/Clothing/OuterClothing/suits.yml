@@ -107,8 +107,8 @@
     - CorgiWearable
     - WhitelistChameleon
 #Adventure-start
-  - type: SpontaneousCombustionProtection 
-    protectionPercent: 75 
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 75
 #Adventure-end
 
 - type: entity

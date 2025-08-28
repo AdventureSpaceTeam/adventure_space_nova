@@ -320,8 +320,8 @@
       Snout: HEAD
   - type: BreathMask
 #Adventure-start
-  - type: SpontaneousCombustionProtection 
-    protectionPercent: 25 
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 25
 #Adventure-end
 
 #Chitinous Helmet
