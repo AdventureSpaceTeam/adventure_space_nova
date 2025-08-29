@@ -58,6 +58,7 @@
     - id: ClothingHeadCaptainHat
     - id: ClothingOuterCoatCaptain
     # Corvax-Resprite-End
+    - id: HandheldCommunicationsMonitor # Adventure
     - id: HeadSkeleton # A skull to accompany your skeleton crew
       conditions:
       - !type:PlayerCountCondition
@@ -152,6 +153,7 @@
     - id: ClothingOuterHardsuitHOP
     - id: PrinterFlatpack
     - id: PlantAnalyzerCartridge
+    - id: HandheldRecordsMonitor
     # Adventure end
 
 - type: entity
@@ -188,6 +190,7 @@
     - id: NukeActivator
     - id: RPD
     - id: EnergyCoreCircuitboard
+    - id: HandheldAtmosMonitor
     # Adventure end
 
 # Hardsuit table, used for suit storage as well
@@ -303,7 +306,10 @@
     - id: ResearchComputerCircuitboard
     - id: CargoRequestScienceComputerCircuitboard
     - id: RubberStampRd
-    - id: ClothingEyesGlassesRD # Adventure
+    # Adventure start
+    - id: ClothingEyesGlassesRD
+    - id: HandheldResearchMonitor
+    # Adventure end
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -363,6 +369,7 @@
     - id: CargoRequestSecurityComputerCircuitboard
     - id: WeaponDisabler
     - id: WantedListCartridge
+    - id: HandheldCriminalMonitor # Adventure
     - id: ClothingHeadHatCapHoS # Corvax-SecFashion
       prob: 0.5
     - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite

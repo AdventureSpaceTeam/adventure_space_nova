@@ -29,6 +29,8 @@
     - HighRiskItem
   - type: AccessReader
     access: [[ "Command" ]]
+  - type: StealTarget
+    stealGroup: HandheldCommunicationsMonitor
 
 - type: entity
   id: HandheldCommunicationsMonitorEmpty
@@ -39,3 +41,19 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldCommunicationsMonitor
+  name: steal-target-groups-handheld-communications-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Command/handheldcommunicationsmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: CaptainHandheldCommunicationsMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldCommunicationsMonitor
+  - type: Objective
+    difficulty: 1.2

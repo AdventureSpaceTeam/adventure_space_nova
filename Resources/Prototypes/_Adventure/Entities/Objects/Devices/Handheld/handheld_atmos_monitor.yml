@@ -40,6 +40,8 @@
   - type: Tag
     tags:
     - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldAtmosMonitor
 
 - type: entity
   id: HandheldAtmosMonitorEmpty
@@ -50,3 +52,19 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldAtmosMonitor
+  name: steal-target-groups-handheld-atmos-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Atmos/handheldatmosmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: CEHandheldAtmosMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldAtmosMonitor
+  - type: Objective
+    difficulty: 1.2

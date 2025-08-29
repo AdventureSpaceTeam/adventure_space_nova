@@ -23,6 +23,8 @@
   - type: Tag
     tags:
     - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldRecordsMonitor
 
 - type: entity
   id: HandheldRecordsMonitorEmpty
@@ -33,3 +35,19 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldRecordsMonitor
+  name: steal-target-groups-handheld-records-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Service/handheldrecordsmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: HoPHandheldRecordsMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldRecordsMonitor
+  - type: Objective
+    difficulty: 1.2

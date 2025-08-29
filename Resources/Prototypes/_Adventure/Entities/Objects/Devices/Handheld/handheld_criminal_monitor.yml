@@ -25,6 +25,8 @@
     - HighRiskItem
   - type: AccessReader
     access: [["Security"]]
+  - type: StealTarget
+    stealGroup: HandheldCriminalMonitor
 
 - type: entity
   id: HandheldCriminalMonitorEmpty
@@ -35,3 +37,19 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldCriminalMonitor
+  name: steal-target-groups-handheld-criminal-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Security/handheldcriminalmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: HoSHandheldCriminalMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldCriminalMonitor
+  - type: Objective
+    difficulty: 1.2

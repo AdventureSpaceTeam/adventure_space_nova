@@ -75,7 +75,15 @@
   weights:
     ForensicScannerStealObjective: 1                    #sec
     FlippoEngravedLighterStealObjective: 0.5
-    CMOCrewMonitorStealObjectiveAdv: 1 # Adventure
+    # Adventure start
+    CMOCrewMonitorStealObjectiveAdv: 1
+    CEHandheldAtmosMonitorStealObjective: 1
+    WardenHandheldCameraMonitorStealObjective: 1
+    CaptainHandheldCommunicationsMonitorStealObjective: 1
+    HoSHandheldCriminalMonitorStealObjective: 1
+    RDHandheldResearchMonitorStealObjective: 1
+    HoPHandheldRecordsMonitorStealObjective: 1
+    # Adventure end
     ClothingHeadHatWardenStealObjective: 1
     WantedListCartridgeStealObjective: 1
     ClothingOuterHardsuitVoidParamedStealObjective: 1   #med

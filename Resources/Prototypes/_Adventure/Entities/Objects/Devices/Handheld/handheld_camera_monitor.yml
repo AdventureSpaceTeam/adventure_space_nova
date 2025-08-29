@@ -30,6 +30,8 @@
   - type: Tag
     tags:
     - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldCameraMonitor
 
 - type: entity
   id: HandheldCameraMonitorEmpty
@@ -40,3 +42,19 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldCameraMonitor
+  name: steal-target-groups-handheld-camera-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Command/handheldcommunicationsmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: WardenHandheldCameraMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldCameraMonitor
+  - type: Objective
+    difficulty: 1.2

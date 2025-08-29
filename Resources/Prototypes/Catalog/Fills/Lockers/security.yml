@@ -42,6 +42,7 @@
     - id: HoloprojectorSecurity
     - id: BookSpaceLaw
     - id: ClothingBackpackWarden # Corvax-SecFashion
+    - id: HandheldCameraMonitor # Adventure
     - id: ClothingBackpackElectropack
       amount: 2
     - id: RemoteSignaller
