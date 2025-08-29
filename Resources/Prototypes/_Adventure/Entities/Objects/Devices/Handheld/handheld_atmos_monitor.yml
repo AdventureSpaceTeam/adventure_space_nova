@@ -11,15 +11,6 @@
   - type: Sprite
     sprite: _Adventure/Objects/Specific/Atmos/handheldatmosmonitor.rsi
     state: monitor
-  - type: GenericVisualizer
-    visuals:
-      enum.AtmosAlertsComputerVisuals.ComputerLayerScreen:
-        computerLayerScreen:
-          0: { state: alert-0 }
-          1: { state: alert-0 }
-          2: { state: alert-1 }
-          3: { state: alert-2 }
-          4: { state: alert-2 }
   - type: ActivatableUI
     key: enum.AtmosAlertsComputerUiKey.Key
   - type: UserInterface
