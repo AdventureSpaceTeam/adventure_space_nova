@@ -21,6 +21,7 @@
     zapHeal:
       types:
         Asphyxiation: -75
+    doAfterDuration: 2
   - type: PowerCellDraw
     useRate: 300
   - type: ItemSlots
