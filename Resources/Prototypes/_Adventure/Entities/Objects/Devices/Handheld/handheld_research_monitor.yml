@@ -4,12 +4,13 @@
   parent: BaseHandheldComputer
   id: HandheldResearchMonitor
   description: Ручной исследовательский монитор, отображающий текущие изучения отдела РНД.
+  suffix: AdvMonitors
   components:
   - type: Item
-    heldPrefix: scanner
+    heldPrefix: monitor
   - type: Sprite
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
+    sprite: _Adventure/Objects/Specific/Research/handheldresearchmonitor.rsi
+    state: monitor
   - type: ResearchClient
   - type: ResearchConsole
   - type: ActiveRadio
@@ -43,7 +44,7 @@
 - type: entity
   id: HandheldResearchMonitorEmpty
   parent: HandheldResearchMonitor
-  suffix: Empty
+  suffix: Empty, AdvMonitors
   components:
   - type: ItemSlots
     slots:

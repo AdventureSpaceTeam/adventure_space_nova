@@ -4,12 +4,13 @@
   parent: BaseHandheldComputer
   id: HandheldCameraMonitor
   description: Ручной монитор камер, отображающий происходящее на станции.
+  suffix: AdvMonitors
   components:
   - type: Item
-    heldPrefix: scanner
+    heldPrefix: monitor
   - type: Sprite
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
+    sprite: _Adventure/Objects/Specific/Security/handheldcameramonitor.rsi
+    state: monitor
   - type: ActivatableUI
     key: enum.SurveillanceCameraMonitorUiKey.Key
   - type: UserInterface
@@ -33,7 +34,7 @@
 - type: entity
   id: HandheldCameraMonitorEmpty
   parent: HandheldCameraMonitor
-  suffix: Empty
+  suffix: Empty, AdvMonitors
   components:
   - type: ItemSlots
     slots:

@@ -4,12 +4,13 @@
   parent: BaseHandheldComputer
   id: HandheldAtmosMonitor
   description: Ручной атмосферный монитор, отображающий состояние атмосферы на станции.
+  suffix: AdvMonitors
   components:
   - type: Item
-    heldPrefix: scanner
+    heldPrefix: monitor
   - type: Sprite
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
+    sprite: _Adventure/Objects/Specific/Atmos/handheldatmosmonitor.rsi
+    state: monitor
   - type: GenericVisualizer
     visuals:
       enum.AtmosAlertsComputerVisuals.ComputerLayerScreen:
@@ -43,7 +44,7 @@
 - type: entity
   id: HandheldAtmosMonitorEmpty
   parent: HandheldAtmosMonitor
-  suffix: Empty
+  suffix: Empty, AdvMonitors
   components:
   - type: ItemSlots
     slots:

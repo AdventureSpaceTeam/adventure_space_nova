@@ -4,12 +4,13 @@
   parent: BaseHandheldComputer
   id: HandheldCriminalMonitor
   description: Ручной криминальный монитор, отображающий криминальные записи станции.
+  suffix: AdvMonitors
   components:
   - type: Item
-    heldPrefix: scanner
+    heldPrefix: monitor
   - type: Sprite
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
+    sprite: _Adventure/Objects/Specific/Security/handheldcriminalmonitor.rsi
+    state: monitor
   - type: ActivatableUI
     key: enum.CriminalRecordsConsoleKey.Key
   - type: UserInterface
@@ -28,7 +29,7 @@
 - type: entity
   id: HandheldCriminalMonitorEmpty
   parent: HandheldCriminalMonitor
-  suffix: Empty
+  suffix: Empty, AdvMonitors
   components:
   - type: ItemSlots
     slots:

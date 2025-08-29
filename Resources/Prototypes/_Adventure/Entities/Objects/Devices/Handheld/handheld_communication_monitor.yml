@@ -3,13 +3,14 @@
   categories: [ DoNotMap ]
   parent: BaseHandheldComputer
   id: HandheldCommunicationsMonitor
-  description: Ручной монитор связи.
+  description: Ручной монитор связи, отображающий систему оповещений станции.
+  suffix: AdvMonitors
   components:
   - type: Item
-    heldPrefix: scanner
+    heldPrefix: monitor
   - type: Sprite
-    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
-    state: scanner
+    sprite: _Adventure/Objects/Specific/Command/handheldcommunicationsmonitor.rsi
+    state: monitor
   - type: ActivatableUI
     key: enum.CommunicationsConsoleUiKey.Key
   - type: UserInterface
@@ -32,7 +33,7 @@
 - type: entity
   id: HandheldCommunicationsMonitorEmpty
   parent: HandheldCommunicationsMonitor
-  suffix: Empty
+  suffix: Empty, AdvMonitors
   components:
   - type: ItemSlots
     slots:
