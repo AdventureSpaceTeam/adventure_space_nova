@@ -46,20 +46,20 @@
   - type: UseDelay
     delay: 0.5
   - type: Battery
-    maxCharge: 100
-    startingCharge: 100
-    pricePerJoule: 0.15
+    maxCharge: 200
+    startingCharge: 200
+    pricePerJoule: 0.3
   - type: ProjectileBatteryAmmoProvider
     proto: BulletKinetic
-    fireCost: 1
+    fireCost: 2
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: BulletKinetic
-      fireCost: 1
+      fireCost: 2
     - proto: BulletKineticCutterSpread
-      fireCost: 5
-    - proto: BulletKineticCutterSpreadSix
       fireCost: 10
+    - proto: BulletKineticCutterSpreadSix
+      fireCost: 20
   - type: BatterySelfRecharger
     autoRechargeRate: 2
     autoRecharge: true
