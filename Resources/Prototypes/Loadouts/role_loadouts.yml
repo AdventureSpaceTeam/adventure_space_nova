@@ -44,6 +44,7 @@
 - type: roleLoadout
   id: JobPassenger
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupTankHarness
   - PassengerJumpsuit
   - CommonBackpack
@@ -62,6 +63,7 @@
 - type: roleLoadout
   id: JobBartender
   groups:
+  - GroupPlasManSuitBartender #Adventure
   - GroupTankHarness
   - BartenderHead
   - BartenderJumpsuit
@@ -77,6 +79,7 @@
 - type: roleLoadout
   id: JobServiceWorker
   groups:
+  - GroupPlasManSuitService #Adventure
   - GroupTankHarness
   - BartenderJumpsuit
   - CommonBackpack
@@ -90,6 +93,7 @@
 - type: roleLoadout
   id: JobChef
   groups:
+  - GroupPlasManSuitChef #Adventure
   - GroupTankHarness
   - ChefHead
   - ChefMask
@@ -106,6 +110,7 @@
 - type: roleLoadout
   id: JobLibrarian
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupTankHarness
   - LibrarianJumpsuit
   - CommonBackpack
@@ -119,6 +124,7 @@
 - type: roleLoadout
   id: JobLawyer
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupTankHarness
   - LawyerNeck
   - LawyerJumpsuit
@@ -133,6 +139,7 @@
 - type: roleLoadout
   id: JobChaplain
   groups:
+  - GroupPlasManSuitChaplain #Adventure
   - GroupTankHarness
   - ChaplainHead
   - ChaplainMask
@@ -151,6 +158,7 @@
 - type: roleLoadout
   id: JobJanitor
   groups:
+  - GroupPlasManSuitJanitor #Adventure
   - GroupTankHarness
   - JanitorHead
   - JanitorJumpsuit
@@ -168,6 +176,7 @@
 - type: roleLoadout
   id: JobBotanist
   groups:
+  - GroupPlasManSuitHydro #Adventure
   - GroupTankHarness
   - BotanistHead
   - BotanistJumpsuit
@@ -185,6 +194,7 @@
   id: JobClown
   canCustomizeName: true
   groups:
+  - GroupPlasManSuitClown #Adventure
   - GroupTankHarness
   - ClownHead
   - ClownJumpsuit
@@ -201,6 +211,7 @@
   id: JobMime
   canCustomizeName: true
   groups:
+  - GroupPlasManSuitMime #Adventure
   - GroupTankHarness
   - MimeHead
   - MimeMask
@@ -217,6 +228,7 @@
 - type: roleLoadout
   id: JobMusician
   groups:
+  - GroupPlasManSuitMusician #Adventure
   - GroupTankHarness
   - MusicianJumpsuit
   - CommonBackpack
@@ -250,6 +262,7 @@
 - type: roleLoadout
   id: JobCargoTechnician
   groups:
+  - GroupPlasManSuitCargo #Adventure
   - GroupTankHarness
   - CargoTechnicianHead
   - CargoTechnicianJumpsuit
@@ -266,6 +279,7 @@
 - type: roleLoadout
   id: JobSalvageSpecialist
   groups:
+  - GroupPlasManSuitSalvage #Adventure
   - GroupTankHarness
   - SalvageSpecialistNeck # Adventure
   - SalvageSpecialistJumpsuit #Adventure
@@ -299,6 +313,7 @@
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
+  - GroupPlasManSuitEnguneering #Adventure
   - GroupTankHarness
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
@@ -311,6 +326,7 @@
 - type: roleLoadout
   id: JobStationEngineer
   groups:
+  - GroupPlasManSuitEnguneering #Adventure
   - GroupTankHarness
   - StationEngineerHead
   - StationEngineerJumpsuit
@@ -327,6 +343,7 @@
 - type: roleLoadout
   id: JobAtmosphericTechnician
   groups:
+  - GroupPlasManSuitAtmos #Adventure
   - AtmosHead #Adventure
   - GroupTankHarness
   - AtmosphericTechnicianJumpsuit
@@ -361,6 +378,7 @@
 - type: roleLoadout
   id: JobScientist
   groups:
+  - GroupPlasManSuitScience #Adventure
   - GroupTankHarness
   - ScientistHead
   - ScientistNeck
@@ -380,6 +398,7 @@
 - type: roleLoadout
   id: JobResearchAssistant
   groups:
+  - GroupPlasManSuitScience #Adventure
   - GroupTankHarness
   - ResearchAssistantJumpsuit
   - ScientistBackpack
@@ -411,6 +430,7 @@
 - type: roleLoadout
   id: JobWarden
   groups:
+  - GroupPlasManSuitSecWarden #Adventure
   - WardenHead
   - WardenNeck # Adventure
   - WardenJumpsuit
@@ -428,6 +448,7 @@
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
+  - GroupPlasManSuitSecurity #Adventure
   - SecurityHead
   - SecurityNeck # Adventure
   - SecurityJumpsuit
@@ -446,6 +467,7 @@
 - type: roleLoadout
   id: JobDetective
   groups:
+  - GroupPlasManSuitSecurity #Adventure
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
@@ -462,6 +484,7 @@
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
+  - GroupPlasManSuitSecurity #Adventure
   - SecurityCadetJumpsuit
   - SecurityBackpack
   - SurvivalSecurity
@@ -493,6 +516,7 @@
 - type: roleLoadout
   id: JobMedicalDoctor
   groups:
+  - GroupPlasManSuitMedical #Adventure
   - GroupTankHarness
   - MedicalDoctorHead
   - MedicalMask
@@ -512,6 +536,7 @@
 - type: roleLoadout
   id: JobMedicalIntern
   groups:
+  - GroupPlasManSuitMedical #Adventure
   - GroupTankHarness
   - MedicalInternJumpsuit
   - MedicalBackpack
@@ -525,6 +550,7 @@
 - type: roleLoadout
   id: JobChemist
   groups:
+  - GroupPlasManSuitChemist #Adventure
   - GroupTankHarness
   - ChemistHead # Adventure
   - MedicalMask
@@ -542,6 +568,7 @@
 - type: roleLoadout
   id: JobParamedic
   groups:
+  - GroupPlasManSuitParamed #Adventure
   - GroupTankHarness
   - ParamedicHead
   - MedicalMask
@@ -561,6 +588,7 @@
 - type: roleLoadout
   id: JobZookeeper
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupTankHarness
   - CommonBackpack
   - Glasses
@@ -573,6 +601,7 @@
 - type: roleLoadout
   id: JobReporter
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupTankHarness
   - ReporterJumpsuit
   - CommonBackpack
@@ -586,6 +615,7 @@
 - type: roleLoadout
   id: JobPsychologist
   groups:
+  - GroupPlasManSuitMedical #Adventure
   - GroupTankHarness
   - PsychologistJumpsuit
   - MedicalBackpack
@@ -599,6 +629,7 @@
 - type: roleLoadout
   id: JobBoxer
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupTankHarness
   - BoxerJumpsuit
   - BoxerGloves
@@ -631,6 +662,7 @@
 - type: roleLoadout
   id: RoleSurvivalStandard
   groups:
+  - GroupPlasManSuitBase #Adventure
   - Survival
   - GroupSpeciesBreathTool
   - GroupTankHarness
@@ -638,12 +670,14 @@
 - type: roleLoadout
   id: RoleSurvivalClown
   groups:
+  - GroupPlasManSuitClown #Adventure
   - SurvivalClown
   - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalExtended
   groups:
+  - GroupPlasManSuitBase #Adventure
   - SurvivalExtended
   - GroupSpeciesBreathTool
   - GroupTankHarness
@@ -651,6 +685,7 @@
 - type: roleLoadout
   id: RoleSurvivalMedical
   groups:
+  - GroupPlasManSuitMedical #Adventure
   - SurvivalMedical
   - GroupSpeciesBreathToolMedical
   - GroupTankHarness
@@ -658,6 +693,7 @@
 - type: roleLoadout
   id: RoleSurvivalSecurity
   groups:
+  - GroupPlasManSuitSecurity #Adventure
   - SurvivalSecurity
   - GroupSpeciesBreathToolSecurity
   - GroupTankHarness
@@ -665,6 +701,7 @@
 - type: roleLoadout
   id: RoleSurvivalSyndicate
   groups:
+  - GroupPlasManSuitBase #Adventure
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupTankHarness
@@ -672,6 +709,7 @@
 - type: roleLoadout
   id: RoleSurvivalNukie
   groups:
+  - GroupPlasManSuitSyndie #Adventure
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupPocketTankDouble
@@ -679,5 +717,6 @@
 - type: roleLoadout
   id: RoleSurvivalEVA
   groups:
+  - GroupPlasManSuitBase #Adventure
   - GroupEVATank
   - SurvivalExtended

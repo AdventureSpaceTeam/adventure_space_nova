@@ -141,6 +141,10 @@
     - Snout
     - HeadTop
     - HeadSide
+#Adventure-start
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 25
+#Adventure-end
 
 - type: entity
   abstract: true
@@ -189,6 +193,10 @@
     - Snout
     - HeadTop
     - HeadSide
+#Adventure-start
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 25
+#Adventure-end
 
 - type: entity
   abstract: true

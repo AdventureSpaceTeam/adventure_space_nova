@@ -100,6 +100,18 @@
             type: Vox
         clear: true
         time: 5
+#Adventure-start
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: PlasMan
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Heat:
+              10
+#Adventure-end
 
 - type: reagent
   id: Plasma
@@ -134,13 +146,26 @@
             Poison:
               1
       # We need a metabolism effect on reagent removal
+# Adventure-start
+        conditions:
+        - !type:OrganType
+          type: PlasMan
+          shouldHave: false
       - !type:AdjustAlert
         alertType: Toxins
         conditions:
           - !type:ReagentThreshold
             min: 1.5
+          - !type:OrganType
+            type: PlasMan
+            shouldHave: false
         clear: True
         time: 5
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: PlasMan
+# Adventure-end
   reactiveEffects:
     Flammable:
       methods: [ Touch ]

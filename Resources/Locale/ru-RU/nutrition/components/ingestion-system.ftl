@@ -6,15 +6,15 @@
 
 ## When trying to ingest without the required utensil... but you gotta hold it
 
-ingestion-you-need-to-hold-utensil = Вам нужно держать { $utensil } чтобы есть это!
+ingestion-you-need-to-hold-utensil = Вам нужна { $utensil }, чтобы есть это!
 ingestion-try-use-is-empty = { CAPITALIZE($entity) } пуст!
 ingestion-try-use-wrong-utensil = Вы не можете { $verb } { $food } с помощью { $utensil }.
 ingestion-remove-mask = Сперва снимите { $entity }.
 
 ## Failed Ingestion
 
-ingestion-you-cannot-ingest-any-more = Вы больше не можете { $verb }!
-ingestion-other-cannot-ingest-any-more = { CAPITALIZE(SUBJECT($target)) } больше не может { $verb }!
+ingestion-you-cannot-ingest-any-more = Вы не можете больше { $verb }!
+ingestion-other-cannot-ingest-any-more = { CAPITALIZE(SUBJECT($target)) } не может больше { $verb }!
 ingestion-cant-digest = Вы не сможете переварить { $entity }!
 ingestion-cant-digest-other = { CAPITALIZE(SUBJECT($target)) } не сможет переварить { $entity }!
 
@@ -50,6 +50,6 @@ edible-verb-pill = глотать
 
 ## Force feeding
 
-edible-force-feed = { CAPITALIZE($user) } пытается заставить тебя что-то { $verb }!
+edible-force-feed = { CAPITALIZE($user) } пытается заставить вас что-то { $verb }!
 edible-force-feed-success = { CAPITALIZE($user) } заставил вас что-то { $verb }! { $flavors }
 edible-force-feed-success-user = Вы успешно накормили { $target }

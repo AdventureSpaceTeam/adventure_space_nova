@@ -14,7 +14,17 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ShowHealthBars
+# Adventure-start
+    damageContainers:
+    - Biological
+    - Plasman
+# Adventure-end
   - type: ShowHealthIcons
+# Adventure-start
+    damageContainers:
+    - Biological
+    - Plasman
+# Adventure-end
 
 - type: entity
   parent: ClothingEyesBase
@@ -190,6 +200,8 @@
     damageContainers:
     - Biological
     - Inorganic
+    - Plasman # Adventure
+    - Synth # Adventure
   - type: ShowSyndicateIcons
 
 - type: entity
@@ -206,6 +218,8 @@
     damageContainers:
     - Biological
     - Inorganic
+    - Plasman # Adventure
+    - Synth # Adventure
   - type: ShowHungerIcons
   - type: ShowThirstIcons
   - type: ShowSyndicateIcons
@@ -238,6 +252,11 @@
     sprite: Clothing/Eyes/Hud/syndagent.rsi
   - type: ShowSyndicateIcons
   - type: ShowHealthBars
+# Adventure-start
+    damageContainers:
+    - Biological
+    - Plasman
+# Adventure-end
   - type: Tag
     tags:
     - PetWearable

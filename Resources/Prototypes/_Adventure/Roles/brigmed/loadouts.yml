@@ -115,6 +115,7 @@
 - type: roleLoadout
   id: JobBrigmedic
   groups:
+  - GroupPlasManSuitSecurity #Adventure
   - BrigmedicHelmets
   - BrigmedicJumpsuits
   - BrigmedicBackpacks

@@ -56,6 +56,7 @@
     groups:
       Flammable: [ Touch ]
       Extinguish: [ Touch ]
+      Acidic: [ Touch ]
     reactions:
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
@@ -198,6 +199,7 @@
       - Heat
       - Shock
       - Cold
+      - Caustic
   - type: TransferMindOnGib
   - type: Destructible
     thresholds:

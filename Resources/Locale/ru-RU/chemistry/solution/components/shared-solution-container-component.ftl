@@ -2,7 +2,7 @@ shared-solution-container-component-on-examine-main-text = Содержит [col
     [1] вещество.
    *[other] смесь веществ.
     }
-examinable-solution-has-recognizable-chemicals = Вы можете распознать {$recognizedString} в этом растворе.
+examinable-solution-has-recognizable-chemicals = Вам удаётся распознать { $recognizedString } в этом растворе.
 examinable-solution-recognized = [color={$color}]{$chemical}[/color]
 examinable-solution-on-examine-volume = Ёмкость { $fillLevel ->
     [exact] содержит [color=white]{$current}/{$max} ед[/color].
@@ -14,9 +14,9 @@ examinable-solution-on-examine-volume-no-max = Ёмкость { $fillLevel ->
 }
 examinable-solution-on-examine-volume-puddle = Лужа { $fillLevel ->
     [exact] содержит [color=white]{$current} ед[/color].
-    [full] большая и переполнена!
-    [mostlyfull] большая и переполнена!
-    [halffull] средняя и растекается.
+    [full] огромная и разливается через край!
+    [mostlyfull] огромная и разливается через край!
+    [halffull] глубокая и растекающаяся.
     [halfempty] средняя.
    *[mostlyempty] собирается в одну.
     [empty] превращается в несколько маленьких луж.
@@ -25,7 +25,7 @@ examinable-solution-on-examine-volume-puddle = Лужа { $fillLevel ->
     { $fillLevel ->
         [full] [color=white]заполнена[/color]
         [mostlyfull] [color=#DFDFDF]почти заполнена[/color]
-        [halffull] [color=#C8C8C8]заполнена на половину[/color]
+        [halffull] [color=#C8C8C8]наполовину полная[/color]
         [halfempty] [color=#C8C8C8]наполовину пустая[/color]
         [mostlyempty] [color=#A4A4A4]почти пустая[/color]
        *[empty] [color=gray]пустая[/color]

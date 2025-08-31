@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server.PowerCell; // Adventure monitors
 using Content.Server.Station.Systems;
 using Content.Server.StationRecords.Components;
 using Content.Shared.StationRecords;
@@ -11,6 +12,7 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly StationRecordsSystem _stationRecords = default!;
+    [Dependency] private readonly PowerCellSystem _cell = default!; // Adventure monitors
 
     public override void Initialize()
     {
@@ -41,6 +43,10 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
 
     private void UpdateUserInterface<T>(Entity<GeneralStationRecordConsoleComponent> ent, ref T args)
     {
+        // Adventure monitors start
+        if (!_cell.TryUseActivatableCharge(ent))
+            return;
+        // Adventure monitors end
         UpdateUserInterface(ent);
     }
 

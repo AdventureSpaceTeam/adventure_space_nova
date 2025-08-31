@@ -1,0 +1,222 @@
+﻿- type: metabolizerType
+  id: PlasMan
+  name: Плазмалюд
+
+- type: alert
+  id: LowPlasma
+  category: Breathing
+  icons:
+    - sprite: /Textures/Interface/Alerts/breathing.rsi
+      state: not_enough_plasma
+  name: alerts-low-plasma-name
+  description: alerts-low-plasma-desc
+
+- type: entity
+  id: OrganPlasManBrain
+  parent: OrganHumanBrain
+  name: мозг плазмалюда
+  description: Это просто мозг, но из плазмы.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/Organs.rsi
+    state: brain
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 10
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 5
+  - type: Item
+    size: Small
+    heldPrefix: brain
+
+- type: entity
+  id: OrganPlasManLungs
+  parent: OrganHumanLungs
+  name: плазменный мешок
+  description: Большой полупрозрачный мешок, наполненный газообразной плазмой.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/Organs.rsi
+    layers:
+      - state: lung-l
+      - state: lung-r
+  - type: Metabolizer
+    metabolizerTypes: [ PlasMan ]
+  - type: Lung
+    alert: LowPlasma
+  - type: Item
+    size: Small
+    heldPrefix: lungs
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 5
+
+#Тело Плазмамена
+- type: body
+  name: "Плазмалюд"
+  id: PlasMan
+  root: torso
+  slots:
+    head:
+      part: HeadPlasMan
+      connections:
+      - torso
+      organs:
+        brain: OrganPlasManBrain
+    torso:
+      part: TorsoPlasMan
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        lungs: OrganPlasManLungs
+    right arm:
+      part: RightArmPlasMan
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmPlasMan
+      connections:
+      - left hand
+    right hand:
+      part: RightHandPlasMan
+    left hand:
+      part: LeftHandPlasMan
+    right leg:
+      part: RightLegPlasMan
+    left leg:
+      part: LeftLegPlasMan
+
+#Части Плазмамена
+- type: entity
+  id: PartPlasMan
+  parent: [BaseItem, BasePart]
+  name: "часть тела плазмалюда"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Plasma
+        Quantity: 20
+
+- type: entity
+  id: TorsoPlasMan
+  name: "Туловище плазмалюда"
+  parent: [PartPlasMan, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Plasma
+        Quantity: 20
+
+- type: entity
+  id: HeadPlasMan
+  name: "Голова плазмалюда"
+  parent: [PartPlasMan, BaseHead]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Plasma
+        Quantity: 20
+
+- type: entity
+  id: LeftArmPlasMan
+  name: "Левая рука плазмалюда"
+  parent: [PartPlasMan, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmPlasMan
+  name: "Правая рука плазмалюда"
+  parent: [PartPlasMan, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandPlasMan
+  name: "Левая рука плазмалюда"
+  parent: [PartPlasMan, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandPlasMan
+  name: "Правая рука плазмалюда"
+  parent: [PartPlasMan, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegPlasMan
+  name: "Левая нога плазмалюда"
+  parent: [PartPlasMan, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegPlasMan
+  name: "Правая нога плазмалюда"
+  parent: [PartPlasMan, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootPlasMan
+  name: "Левая нога плазмалюда"
+  parent: [PartPlasMan, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootPlasMan
+  name: "Правая нога плазмалюда"
+  parent: [PartPlasMan, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: "r_foot"

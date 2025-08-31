@@ -50,6 +50,16 @@
             ]
         },
         {
+            "name": "not_enough_plasma",
+            "delays":
+            [
+                [
+                    0.5,
+                    0.5
+                ]
+            ]
+        },
+        {
             "name": "too_much_co2",
             "delays":
             [
@@ -81,6 +91,16 @@
         },
         {
             "name": "too_much_tox",
+            "delays":
+            [
+                [
+                    0.5,
+                    0.5
+                ]
+            ]
+        },
+        {
+            "name": "too_much_plasma",
             "delays":
             [
                 [

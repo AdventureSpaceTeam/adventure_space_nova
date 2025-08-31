@@ -93,6 +93,7 @@
   - type: Healing
     damageContainers:
       - Biological
+      - Plasman # Adventure
     damage:
       types:
         Slash: -0.5

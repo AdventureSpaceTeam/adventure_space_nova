@@ -1,5 +1,11 @@
 ﻿- type: typingIndicator
   id: Ghost
   spritePath: _Adventure/Interface/Speech.rsi
-  typingState: ghost
-  idleState: ghost
+  typingState: ghost0
+  idleState: ghost1
+
+- type: typingIndicator
+  id: Plasman
+  spritePath: _Adventure/Interface/Speech.rsi
+  typingState: plasma0
+  idleState: plasma1

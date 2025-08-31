@@ -12,7 +12,8 @@
   weights:
     CaptainIDStealObjective: 1
     CMOHyposprayStealObjective: 1
-    CMOCrewMonitorStealObjective: 1
+    CMODefibrillatorStealObjective: 1 # Adventure compact defibrillator
+#   CMOCrewMonitorStealObjective: 1 # Adventure compact defibrillator
     RDHardsuitStealObjective: 1
     NukeDiskStealObjective: 1
     MagbootsStealObjective: 1
@@ -74,6 +75,15 @@
   weights:
     ForensicScannerStealObjective: 1                    #sec
     FlippoEngravedLighterStealObjective: 0.5
+    # Adventure start
+    CMOCrewMonitorStealObjectiveAdv: 1
+    CEHandheldAtmosMonitorStealObjective: 1
+    WardenHandheldCameraMonitorStealObjective: 1
+    CaptainHandheldCommunicationsMonitorStealObjective: 1
+    HoSHandheldCriminalMonitorStealObjective: 1
+    RDHandheldResearchMonitorStealObjective: 1
+    HoPHandheldRecordsMonitorStealObjective: 1
+    # Adventure end
     ClothingHeadHatWardenStealObjective: 1
     WantedListCartridgeStealObjective: 1
     ClothingOuterHardsuitVoidParamedStealObjective: 1   #med

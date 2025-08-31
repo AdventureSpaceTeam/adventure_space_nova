@@ -11,7 +11,7 @@
       - id: WelderMini
       - id: FireExtinguisherMini
       # Random lighting item orGroup
-      - id: FlashlightLantern
+      - id: FlashlightEmergency #Adventure
         orGroup: LightingItem
       - id: Flare
         orGroup: LightingItem

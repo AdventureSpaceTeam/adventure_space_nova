@@ -11,8 +11,8 @@
 /Content.*/_Adventure/TTS/ @c4llv07e
 /Content.*/_Adventure/Sponsors/ @c4llv07e
 
-/Content.*/Adventure/EnergyCores/ @aristophanivan
-/Resources/*/Adventure/EnergyCores/ @aristophanivan
+/Content.*/_Adventure/EnergyCores/ @aristophanivan
+/Resources/*/_Adventure/EnergyCores/ @aristophanivan
 /Content.Server/_Adventure/AdventureConfigManager.cs @aristophanivan
 
 /Content.Client/_Adventure/Administration/ @AwareFoxy

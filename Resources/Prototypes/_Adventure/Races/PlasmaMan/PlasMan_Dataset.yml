@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesPlasManFirst
+  values:
+    prefix: names-plasmaman-first-dataset-
+    count: 35
+
+- type: localizedDataset
+  id: NamesPlasManLast
+  values:
+    prefix: names-plasmaman-last-dataset-
+    count: 100

@@ -30,5 +30,10 @@
 
 - type: guideEntry
   id: Felinid
-  name: Фелиниды
+  name: Фелинид
   text: "/ServerInfo/_Adventure/Guidebook/Races/Felinid.xml"
+
+- type: guideEntry
+  id: Plasman
+  name: Плазмалюд
+  text: "/ServerInfo/_Adventure/Guidebook/Races/Plasman.xml"

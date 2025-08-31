@@ -6,6 +6,7 @@
   - Heat
   - Shock
   - Cold
+  - Caustic
 
 - type: damageModifierSet
   id: Synth
@@ -14,5 +15,6 @@
     Slash: 0.93
     Piercing: 0.93
     Heat: 0.93
-    Shock: 1.3
+    Caustic: 0.93
+    Shock: 1.5
     Cold: 0.93
