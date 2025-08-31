@@ -77,7 +77,7 @@
   - type: Healing
     damageContainers:
       - Biological
-      - Plasman 
+      - Plasman
     damage:
       types:
         Heat: -5
