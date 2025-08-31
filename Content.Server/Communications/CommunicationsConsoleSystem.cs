@@ -3,6 +3,7 @@ using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Popups;
+using Content.Server.PowerCell; // Adventure monitors
 using Content.Server.RoundEnd;
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Systems;
@@ -35,6 +36,7 @@ namespace Content.Server.Communications
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+        [Dependency] private readonly PowerCellSystem _cell = default!; // Adventure monitors
 
         private const float UIUpdateInterval = 5.0f;
 
@@ -211,7 +213,10 @@ namespace Content.Server.Communications
         {
             if (message.Actor is not { Valid: true } mob)
                 return;
-
+            // Adventure monitors start
+            if (!_cell.TryUseActivatableCharge(uid))
+                return;
+            // Adventure monitors end
             if (!CanUse(mob, uid))
             {
                 _popupSystem.PopupCursor(Loc.GetString("comms-console-permission-denied"), message.Actor, PopupType.Medium);
@@ -228,6 +233,10 @@ namespace Content.Server.Communications
         private void OnAnnounceMessage(EntityUid uid, CommunicationsConsoleComponent comp,
             CommunicationsConsoleAnnounceMessage message)
         {
+            // Adventure monitors start
+            if (!_cell.TryUseActivatableCharge(uid))
+                return;
+            // Adventure monitors end
             var maxLength = _cfg.GetCVar(CCVars.ChatMaxAnnouncementLength);
             var msg = SharedChatSystem.SanitizeAnnouncement(message.Message, maxLength);
             var author = Loc.GetString("comms-console-announcement-unknown-sender");
@@ -295,7 +304,10 @@ namespace Content.Server.Communications
         {
             if (!CanCallOrRecall(comp))
                 return;
-
+            // Adventure monitors start
+            if (!_cell.TryUseActivatableCharge(uid))
+                return;
+            // Adventure monitors end
             var mob = message.Actor;
 
             if (!CanUse(mob, uid))
@@ -320,7 +332,10 @@ namespace Content.Server.Communications
         {
             if (!CanCallOrRecall(comp))
                 return;
-
+            // Adventure monitors start
+            if (!_cell.TryUseActivatableCharge(uid))
+                return;
+            // Adventure monitors end
             if (!CanUse(message.Actor, uid))
             {
                 _popupSystem.PopupEntity(Loc.GetString("comms-console-permission-denied"), uid, message.Actor);

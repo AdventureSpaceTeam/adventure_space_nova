@@ -1,0 +1,59 @@
+- type: entity
+  name: портативный монитор связи
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldCommunicationsMonitor
+  description: Ручной монитор связи, отображающий систему оповещений станции.
+  suffix: AdvMonitors
+  components:
+  - type: Item
+    heldPrefix: monitor
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/Command/handheldcommunicationsmonitor.rsi
+    state: monitor
+  - type: ActivatableUI
+    key: enum.CommunicationsConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.CommunicationsConsoleUiKey.Key:
+        type: CommunicationsConsoleBoundUserInterface
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-station
+  - type: StaticPrice
+    price: 500
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: ShuttleTimer
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: AccessReader
+    access: [[ "Command" ]]
+  - type: StealTarget
+    stealGroup: HandheldCommunicationsMonitor
+
+- type: entity
+  id: HandheldCommunicationsMonitorEmpty
+  parent: HandheldCommunicationsMonitor
+  suffix: Empty, AdvMonitors
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldCommunicationsMonitor
+  name: steal-target-groups-handheld-communications-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Command/handheldcommunicationsmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: CaptainHandheldCommunicationsMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldCommunicationsMonitor
+  - type: Objective
+    difficulty: 1.2

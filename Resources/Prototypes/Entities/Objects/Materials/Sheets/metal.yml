@@ -47,8 +47,9 @@
       - Silicon
     damage:
       types:
-        Blunt: -5  
-        Heat: -5  
+        Blunt: -5
+        Heat: -5
+        Caustic: -5
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -183,8 +184,9 @@
       - Silicon
     damage:
       types:
-        Blunt: -10  
-        Heat: -10  
+        Blunt: -10
+        Heat: -10
+        Caustic: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:

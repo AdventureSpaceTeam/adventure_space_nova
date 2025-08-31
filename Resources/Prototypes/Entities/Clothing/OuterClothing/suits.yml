@@ -106,6 +106,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+#Adventure-start
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 75
+#Adventure-end
 
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing, AllowSuitStorageClothing]

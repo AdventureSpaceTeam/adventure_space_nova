@@ -27,7 +27,7 @@
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
-    damageCoefficient: 0.2
+    damageCoefficient: 0.4
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
@@ -36,15 +36,15 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.5
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.8
         Heat: 0.2
         Radiation: 0.3
         Caustic: 0.8
   - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.8
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMagma
@@ -162,14 +162,14 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMagmaSalvage
   - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.45
-        Slash: 0.45
-        Piercing: 0.45
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.65
         Heat: 0.15
         Radiation: 0.3
         Caustic: 0.8

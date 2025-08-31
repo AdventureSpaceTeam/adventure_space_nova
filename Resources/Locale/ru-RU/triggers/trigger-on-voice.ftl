@@ -1,5 +1,5 @@
-trigger-on-voice-examine = На дисплее виднеется: "{ $keyphrase }"
-trigger-on-voice-uninitialized = На дисплее виднеется: Не инициализированно...
+trigger-on-voice-examine = На дисплее отображается: "{ $keyphrase }"
+trigger-on-voice-uninitialized = На дисплее отображается: Не инициализировано...
 trigger-on-voice-record = Запись
 trigger-on-voice-stop = Стоп
 trigger-on-voice-clear = Стереть запись

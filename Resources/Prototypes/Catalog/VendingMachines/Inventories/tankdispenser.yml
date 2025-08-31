@@ -3,10 +3,12 @@
   startingInventory:
     OxygenTankFilled: 10
     NitrogenTankFilled: 10
+    PlasmaTankAdventureFilled: 10 #Adventure
 
 - type: vendingMachineInventory
   id: TankDispenserEngineeringInventory
   startingInventory:
-    PlasmaTankFilled: 10
-    NitrogenTankFilled: 10
     OxygenTankFilled: 10
+    NitrogenTankFilled: 10
+    PlasmaTankAdventureFilled: 10 #Adventure
+    PlasmaTankFilled: 10

@@ -1,4 +1,5 @@
 using Content.Server.Popups;
+using Content.Server.PowerCell; // Adventure monitors
 using Content.Server.Radio.EntitySystems;
 using Content.Server.Station.Systems;
 using Content.Server.StationRecords;
@@ -30,6 +31,7 @@ public sealed class CriminalRecordsConsoleSystem : SharedCriminalRecordsConsoleS
     [Dependency] private readonly StationRecordsSystem _records = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
+    [Dependency] private readonly PowerCellSystem _cell = default!; // Adventure monitors
 
     public override void Initialize()
     {
@@ -51,6 +53,11 @@ public sealed class CriminalRecordsConsoleSystem : SharedCriminalRecordsConsoleS
     private void UpdateUserInterface<T>(Entity<CriminalRecordsConsoleComponent> ent, ref T args)
     {
         // TODO: this is probably wasteful, maybe better to send a message to modify the exact state?
+        // Adventure monitors start
+        if (!_cell.TryUseActivatableCharge(ent))
+            return;
+        // Adventure monitors end
+
         UpdateUserInterface(ent);
     }
 

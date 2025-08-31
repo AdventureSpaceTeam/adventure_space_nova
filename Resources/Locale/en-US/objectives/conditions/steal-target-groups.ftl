@@ -1,6 +1,7 @@
 # Traitor single items
 steal-target-groups-hypospray = hypospray
 steal-target-groups-handheld-crew-monitor = handheld crew monitor
+steal-target-groups-compact-defibrillator = compact defibrillator
 steal-target-groups-clothing-outer-hardsuit-rd = experimental research hardsuit
 steal-target-groups-hand-teleporter = hand teleporter
 steal-target-groups-clothing-shoes-boots-mag-adv = advanced magboots

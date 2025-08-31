@@ -26,10 +26,10 @@
       - !type:HealthChange
         scaleByQuantity: true
         damage:
-          groups:
-            Burn: -1
-            Brute: -1
-            Airloss: -1
+          types:
+            Heat: -1
+            Blunt: -1
+            Caustic: -1
       - !type:PopupMessage
         type: Local
         visualType: Large

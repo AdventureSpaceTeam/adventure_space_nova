@@ -121,8 +121,8 @@
 - type: entity
   parent: BaseIPCModul
   id: IPCModulLight
-  description: Второстименная модернизация кпб, обеспечивает видимость в темноте.
   name: модульный фонарь КПБ
+  description: Второстепенная модернизация кпб, обеспечивает видимость в темноте.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Specific/IPC_moduls.rsi
@@ -130,7 +130,9 @@
     - state: light
   - type: Clothing
     equippedPrefix: off
-  - type: ToggleableLightVisuals
+  - type: ToggleableVisuals
+    spriteLayer: light
+  - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
     radius: 3
@@ -264,7 +266,7 @@
   parent: [BaseIPCModul, ShowSecurityIcons, BaseSyndicateContraband]
   id: IPCModulSyndieNuker
   suffix: Ядерный оперативник
-  description: Одна из последних разработок Cybersun, для киборгов.
+  description: Одна из последних разработок CyberSun, для киборгов.
   name: модуль КПБ Синдиката
   components:
   - type: Sprite
@@ -277,7 +279,7 @@
 - type: entity
   parent: IPCModulSyndieNuker
   id: IPCModulSyndieShield
-  description: Одна из последних разработок Cybersun, для киборгов, Генерирует энергощит, обеспечивающий защиту от энергооружия.
+  description: Одна из последних разработок CyberSun, для киборгов, Генерирует энергощит, обеспечивающий защиту от энергооружия.
   name: модуль КПБ Синдиката генератор щита
   components:
   - type: Sprite
@@ -305,7 +307,7 @@
 - type: listing
   id: UplinkIPCModulSyndieShield
   name: модуль КПБ Синдиката генератор щита
-  description: Одна из последних разработок Cybersun, для киборгов, генерирует энергощит, обеспечивающий защиту от энергооружия.
+  description: Одна из последних разработок CyberSun, для киборгов, генерирует энергощит, обеспечивающий защиту от энергооружия.
   icon: { sprite: /Textures/_Adventure/Objects/Specific/IPC_moduls.rsi, state: Shield_S }
   productEntity: IPCModulSyndieShield
   cost:

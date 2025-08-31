@@ -201,7 +201,7 @@
   - type: StationEvent
     weight: 6
     duration: null
-    earliestStart: 60 # Adventure
+    earliestStart: 30
     reoccurrenceDelay: 20
     minimumPlayers: 30
   - type: SpaceSpawnRule

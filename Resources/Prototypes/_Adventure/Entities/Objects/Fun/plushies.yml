@@ -164,10 +164,10 @@
     sprite: _Adventure/Objects/Fun/plushieWiki.rsi
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Adventure/Voice/IPC/SynthLoad.ogg
+      collection: RoboLoadCollection
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_Adventure/Voice/IPC/SynthWindows.ogg
+      collection: CrashCollectionSinth
   - type: UseDelay
     delay: 5.0
   - type: RandomSprite

@@ -1,0 +1,144 @@
+- type: species
+  id: PlasMan
+  name: Плазмалюд
+  roundStart: true
+  prototype: MobPlasMan
+  sprites: MobPlasManSprites
+  markingLimits: MobPlasManMarkingLimits
+  dollPrototype: MobPlasManDummy
+  skinColoration: VoxFeathers
+  minAge: 18
+  youngAge: 50
+  oldAge: 100
+  maxAge: 150
+  sexes:
+    - Unsexed
+  maleFirstNames: NamesPlasManFirst
+  femaleFirstNames: NamesPlasManFirst
+  maleLastNames: NamesPlasManLast
+  femaleLastNames: NamesPlasManLast
+
+- type: markingPoints
+  id: MobPlasManMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Head:
+      points: 1
+      required: false
+    HeadTop:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    Chest:
+      points: 3
+      required: false
+    Legs:
+      points: 4
+      required: false
+    Arms:
+      points: 4
+      required: false
+
+- type: speciesBaseSprites
+  id: MobPlasManSprites
+  sprites:
+    Snout: MobHumanoidAnyMarking
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Head: MobPlasManHead
+    Chest: MobPlasManTorso
+    LArm: MobPlasManLArm
+    RArm: MobPlasManRArm
+    LHand: MobPlasManLHand
+    RHand: MobPlasManRHand
+    LLeg: MobPlasManLLeg
+    RLeg: MobPlasManRLeg
+    LFoot: MobPlasManLFoot
+    RFoot: MobPlasManRFoot
+    Eyes: MobHumanoidEyes
+
+- type: humanoidBaseSprite
+  id: MobPlasManHead
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobPlasManHeadMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobPlasManHeadFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobPlasManTorso
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobPlasManTorsoMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobPlasManTorsoFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobPlasManLLeg
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPlasManLArm
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPlasManLHand
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasManRLeg
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPlasManRArm
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPlasManRHand
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasManRFoot
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPlasManLFoot
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_foot

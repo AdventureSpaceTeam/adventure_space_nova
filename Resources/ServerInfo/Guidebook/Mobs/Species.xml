@@ -16,6 +16,7 @@
   <GuideEntityEmbed Entity="MobVulpkanin" Caption="Вульпканин"/>
   <GuideEntityEmbed Entity="MobVox" Caption="Вокс"/>
   <GuideEntityEmbed Entity="MobSynth" Caption="КПБ"/>
+  <GuideEntityEmbed Entity="MobPlasMan" Caption="Плазмалюд"/>
   </Box>
   <Box>
   <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>

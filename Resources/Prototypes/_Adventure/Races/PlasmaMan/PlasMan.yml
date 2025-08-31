@@ -1,0 +1,189 @@
+- type: damageModifierSet
+  id: PlasMan
+  coefficients:
+    Blunt: 1.2
+    Slash: 0.9
+    Piercing: 0.9
+    Cold: 0.2
+    Heat: 1.5
+    Poison: 0.0
+    Radiation: 0.0
+
+- type: Tag
+  id: PlasmanAccess
+
+- type: entity
+  save: false
+  name: Урист МакПлазма
+  parent: BaseMobPlasMan
+  id: MobPlasMan
+
+- type: entity
+  save: false
+  parent:
+  - MobRespirator
+  - MobAtmosStandard
+  - MobFlammable
+  - BaseMobSpecies
+  id: BaseMobPlasMan
+  abstract: true
+  components:
+  - type: Access
+    tags:
+    - PlasmanAccess
+  - type: Speech
+    speechVerb: Skeleton
+  - type: ZombieImmune
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Plasma ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Asphyxiation: -2
+  - type: TypingIndicator
+    proto: Plasman
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 3
+        Heat: 2
+  - type: SpontaneousCombustion
+    fireStacks: 5
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: PlasMan
+  - type: Body
+    prototype: PlasMan
+    requiredLegs: 2
+  - type: HumanoidAppearance
+    species: PlasMan
+  - type: Inventory
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.50
+        Heat: 0.1
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 20
+    damage:
+      types:
+        Heat: -0.07
+      groups:
+        Brute: -0.07
+  - type: Fingerprint
+  - type: Blindable
+  - type: Temperature
+    heatDamageThreshold: 325
+    coldDamageThreshold: 260
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1.5
+  - type: TemperatureSpeed
+    thresholds:
+      293: 0.8
+      280: 0.6
+      260: 0.4
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+      - id: SheetPlasma1
+        amount: 5
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.2
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+    maxSaturation: 15
+  - type: FireVisuals
+    alternateState: Standing
+  - type: GuideHelp
+    guides:
+    - Species
+  - type: SSDIndicator
+  - type: StunVisuals
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#6d065b"
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - Muted
+    - TemporaryBlindness
+    - Pacified
+    - StaminaModifier
+    - Flashed
+    - RadiationProtection
+    - Adrenaline
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 1500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          PlasmaOre1:
+            min: 1
+            max: 5
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobPlasManDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory

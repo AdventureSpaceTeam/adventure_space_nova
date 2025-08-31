@@ -2,6 +2,7 @@ using Content.Server.Atmos.Monitor.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Pinpointer;
 using Content.Server.Power.Components;
+using Content.Server.PowerCell; // Adventure monitors
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Consoles;
@@ -26,6 +27,7 @@ public sealed class AtmosAlertsComputerSystem : SharedAtmosAlertsComputerSystem
     [Dependency] private readonly TransformSystem _transformSystem = default!;
     [Dependency] private readonly NavMapSystem _navMapSystem = default!;
     [Dependency] private readonly DeviceListSystem _deviceListSystem = default!;
+    [Dependency] private readonly PowerCellSystem _cell = default!; // Adventure monitors
 
     private const float UpdateTime = 1.0f;
 
@@ -204,6 +206,11 @@ public sealed class AtmosAlertsComputerSystem : SharedAtmosAlertsComputerSystem
     {
         if (!_userInterfaceSystem.IsUiOpen(uid, AtmosAlertsComputerUiKey.Key))
             return;
+
+        // Adventure monitors start
+        if (!_cell.TryUseActivatableCharge(uid))
+            return;
+        // Adventure monitors end
 
         var gridUid = xform.GridUid!.Value;
 

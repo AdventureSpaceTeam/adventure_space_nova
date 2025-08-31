@@ -615,6 +615,15 @@
         },
         {
             "name": "blueshield_open"
+        },
+        {
+            "name": "plasma"
+        },
+        {
+            "name": "plasma_door"
+        },
+        {
+            "name": "plasma_open"
         }
     ]
 }

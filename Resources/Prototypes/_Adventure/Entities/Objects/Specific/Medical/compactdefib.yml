@@ -1,0 +1,76 @@
+- type: entity
+  id: CompactDefibrillator
+  parent: Defibrillator
+  name: компактный дефибриллятор
+  description: Продвинутый облегченный дефибриллятор, имеет встроенный мини-реактор.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/Medical/compactdefib.rsi
+    layers:
+    - state: icon
+    - state: screen
+      map: [ "enum.ToggleableVisuals.Layer" ]
+      visible: false
+      shader: unshaded
+    - state: ready
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+      shader: unshaded
+  - type: Item
+    size: Normal
+  - type: Defibrillator
+    zapHeal:
+      types:
+        Asphyxiation: -75
+    doAfterDuration: 2
+  - type: PowerCellDraw
+    useRate: 300
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellCompactDefib
+        disableEject: true
+        locked: true
+  - type: StealTarget
+    stealGroup: CompactDefibrillator
+
+- type: entity
+  id: PowerCellCompactDefib
+  parent: BasePowerCell
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: antique
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+    - type: Battery
+      maxCharge: 900
+      startingCharge: 900
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 10
+
+- type: stealTargetGroup
+  id: CompactDefibrillator
+  name: steal-target-groups-compact-defibrillator
+  sprite:
+    sprite: _Adventure/Objects/Specific/Medical/compactdefib.rsi
+    state: icon
+
+- type: entity
+  parent: BaseCMOStealObjective
+  id: CMODefibrillatorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: CompactDefibrillator
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: CMOCrewMonitorStealObjectiveAdv
+  components:
+  - type: StealCondition
+    stealGroup: HandheldCrewMonitor
+  - type: Objective
+    difficulty: 1.2

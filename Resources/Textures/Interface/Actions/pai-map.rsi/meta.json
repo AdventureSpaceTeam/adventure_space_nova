@@ -8,7 +8,14 @@
   },
   "states": [
     {
-      "name": "icon"
+      "name": "icon",
+      "delays": [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
     }
   ]
 }

@@ -203,12 +203,12 @@
   - type: StealCondition
     stealGroup: Hypospray
 
-- type: entity
-  parent: BaseCMOStealObjective
-  id: CMOCrewMonitorStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: HandheldCrewMonitor
+# Adventure compact defibrillator- type: entity
+# Adventure compact defibrillator  parent: BaseCMOStealObjective
+# Adventure compact defibrillator  id: CMOCrewMonitorStealObjective
+# Adventure compact defibrillator  components:
+# Adventure compact defibrillator  - type: StealCondition
+# Adventure compact defibrillator    stealGroup: HandheldCrewMonitor
 
 ## rd
 
