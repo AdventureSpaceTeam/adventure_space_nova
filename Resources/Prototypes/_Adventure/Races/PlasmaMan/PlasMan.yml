@@ -9,6 +9,14 @@
     Poison: 0.0
     Radiation: 0.0
 
+- type: damageContainer
+  id: Plasman
+  supportedGroups:
+  - Brute
+  - Burn
+  supportedTypes:
+  - Asphyxiation
+
 - type: Tag
   id: PlasmanAccess
 
@@ -66,7 +74,7 @@
   - type: SpontaneousCombustion
     fireStacks: 5
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Plasman
     damageModifierSet: PlasMan
   - type: Body
     prototype: PlasMan
