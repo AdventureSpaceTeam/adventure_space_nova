@@ -1,12 +1,3 @@
-#Андроидный
-- type: radioChannel
-  id: Android
-  name: Андроидный
-  keycode: 'а'
-  frequency: 123
-  color: "#00bfff"
-  longRange: true
-
 - type: entity
   save: false
   name: Урист макАндроид
@@ -14,9 +5,9 @@
   id: MobAndroid
   components:
   - type: ItemToggle
-    onActivate: false 
-    activated: false 
-    onUse: false 
+    onActivate: false
+    activated: false
+    onUse: false
 
 - type: entity
   abstract: true
@@ -38,7 +29,7 @@
     reactions:
     - reagents: [ SpaceLube ]
       methods: [ Touch ]
-      effects: 
+      effects:
       - !type:HealthChange
         scaleByQuantity: true
         damage:
@@ -51,7 +42,7 @@
         probability: 0.25
     - reagents: [ TereumAndroid ]
       methods: [ Touch ]
-      effects: 
+      effects:
       - !type:HealthChange
         scaleByQuantity: true
         damage:
@@ -59,7 +50,7 @@
             Brute: -1.5
     - reagents: [ ActiveTereumAndroid ]
       methods: [ Touch ]
-      effects: 
+      effects:
       - !type:HealthChange
         scaleByQuantity: true
         damage:
@@ -80,6 +71,7 @@
     damage:
       types:
         Blunt: 0.60
+        Heat: 0.2
   - type: Temperature
     heatDamageThreshold: 773.15
     coldDamageThreshold: 173
@@ -90,11 +82,11 @@
         Cold: 0.1
     heatDamage:
       types:
-        Heat: 0.1 
+        Heat: 0.1
   - type: Flammable
     fireSpread: true
     canResistFire: true
-    damage: 
+    damage:
       types:
         Heat: 0.75
   - type: TemperatureSpeed
@@ -137,7 +129,7 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 10
+        Blunt: 6
   - type: Bloodstream
     bloodMaxVolume: 250 # на 150 больше
     bloodReagent: TereumAndroid
@@ -160,19 +152,20 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#8a8a9e"
   - type: MobState
- ## - type: MobStateActions
- ##   actions:
- ##     Critical:
- ##     - ActionCritSuccumb
- ##     - ActionCritFakeDeath
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
   - type: MobThresholds
     thresholds:
       0: Alive
-      ##100: Critical
+      100: Critical
       175: Dead
     stateAlertDict:
       Alive: BorgHealth
-      ##Critical: BorgCrit
+      Critical: BorgCrit
       Dead: BorgDead
     showOverlays: true
     allowRevives: true
@@ -223,15 +216,6 @@
         Slash: -8
         Piercing: -8
     allowSelfRepair: true
-  - type: IntrinsicRadioReceiver
-    channels:
-      - Android
-  - type: IntrinsicRadioTransmitter
-    channels:
-      - Android
-  - type: ActiveRadio
-    channels:
-      - Android
   - type: DamageOnInteractProtection
     damageProtection:
       flatReductions:

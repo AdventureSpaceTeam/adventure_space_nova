@@ -11,10 +11,10 @@
 - type: damageModifierSet
   id: Android
   coefficients:
-    Blunt: 0.9
-    Slash: 1
-    Piercing: 1
-    Heat: 1
+    Blunt: 1.1
+    Slash: 0.8
+    Piercing: 1.2
+    Heat: 0.7
     Shock: 2
-    Cold: 1.5
-    Bloodloss: 0.9
+    Cold: 0.7
+    Bloodloss: 1.5
