@@ -144,6 +144,11 @@
       hasMindState: synd_medical_e
       noMindState: synd_medical
     - type: ShowHealthBars
+# Adventure-start
+      damageContainers:
+      - Biological
+      - Plasman
+# Adventure-end
     - type: InteractionPopup
       interactSuccessString: petting-success-syndicate-cyborg
       interactFailureString: petting-failure-syndicate-cyborg

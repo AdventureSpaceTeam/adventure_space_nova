@@ -108,9 +108,11 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - Plasman
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+    - Plasman
   - type: ShowJobIcons
   - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons

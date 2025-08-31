@@ -160,6 +160,22 @@
     tags:
     - Ore
     - OrePlasma
+  - type: Healing # Adventure
+    damageContainers:
+      - Plasman
+    damage:
+      types:
+        Blunt: -2
+        Slash: -2
+        Piercing: -2
+        Heat: -2
+        Shock: -2
+        Cold: -2
+        Caustic: -2
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: entity
   parent: PlasmaOre
