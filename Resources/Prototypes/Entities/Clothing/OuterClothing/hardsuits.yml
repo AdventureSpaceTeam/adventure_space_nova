@@ -1,7 +1,7 @@
 # Adventure Taipan start
 
 - type: entity
-  parent: ClothingOuterHardsuitBasic
+  parent: ClothingOuterHardsuitEVA
   id: ClothingOuterHardsuitSyndieEngineer
   name: скафандр инженера синдиката
   description: Скафандр инженера станции Тайпан. Стильный.
