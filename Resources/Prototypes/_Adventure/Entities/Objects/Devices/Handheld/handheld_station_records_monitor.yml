@@ -1,0 +1,53 @@
+- type: entity
+  name: портативный монитор учёта
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldRecordsMonitor
+  description: Ручной монитор учёта, отображающий информацию об экипаже станции.
+  suffix: AdvMonitors
+  components:
+  - type: Item
+    heldPrefix: monitor
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/Service/handheldrecordsmonitor.rsi
+    state: monitor
+  - type: ActivatableUI
+    key: enum.GeneralStationRecordConsoleKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.GeneralStationRecordConsoleKey.Key:
+          type: GeneralStationRecordConsoleBoundUserInterface
+  - type: GeneralStationRecordConsole
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldRecordsMonitor
+
+- type: entity
+  id: HandheldRecordsMonitorEmpty
+  parent: HandheldRecordsMonitor
+  suffix: Empty, AdvMonitors
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldRecordsMonitor
+  name: steal-target-groups-handheld-records-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Service/handheldrecordsmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: HoPHandheldRecordsMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldRecordsMonitor
+  - type: Objective
+    difficulty: 1.2

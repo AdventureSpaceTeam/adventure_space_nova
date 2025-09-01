@@ -9,7 +9,7 @@ namespace Content.Shared.Flash;
 [ByRefEvent]
 public record struct FlashAttemptEvent(EntityUid Target, EntityUid? User, EntityUid? Used, bool Cancelled = false) : IInventoryRelayEvent
 {
-    SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.HEAD | SlotFlags.EYES | SlotFlags.MASK;
+    SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.HEAD | SlotFlags.EYES | SlotFlags.MASK | SlotFlags.IPC; // Adventure IPC
 }
 
 /// <summary>

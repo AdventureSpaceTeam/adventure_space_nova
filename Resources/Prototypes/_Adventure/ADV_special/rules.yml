@@ -1,0 +1,6 @@
+- type: guideEntry
+  id: AdventureRuleset
+  name: Правила сервера
+  priority: 0
+  ruleEntry: true
+  text: "/ServerInfo/_Adventure/Guidebook/ServerRules/Ruleset.xml"

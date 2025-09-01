@@ -1,0 +1,93 @@
+- type: entity
+  parent: CrateGeneric
+  id: Sarcophag
+  suffix: Пустой LavaLand
+  name: саркофаг
+  description: Старый саркофаг, используемый для захоронения или хранения.
+  components:
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/sarcophag.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: closed
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      sprite: Structures/Storage/Crates/labels.rsi
+      offset: "0.0,-0.09375"
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _Adventure/Roles/LavaLand/crates/base.rsi
+    state: icon
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: open
+    stateDoorClosed: closed
+  - type: EntityStorage
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+
+- type: entity
+  id: SarcophagRandomLoot
+  suffix: Рандомный лут LavaLand
+  parent: Sarcophag
+  components:
+  - type: StorageFill
+    contents:
+      - id: OreDragon1
+        amount: 1
+        prob: 0.2
+      - id: ClothingShoesCult
+        prob: 0.5
+      - id: RitualDagger
+        amount: 2
+        prob: 0.3
+      - id: ClothingHeadHatHoodCulthood
+        amount: 2
+        prob: 0.5
+      - id: ClothingOuterArmorPodWars
+        amount: 1
+        prob: 0.3
+      - id: ClothingOuterRobesCult
+        amount: 1
+        prob: 0.5
+      - id: IngotGold1
+        amount: 3
+        prob: 0.2
+      - id: IngotGold1
+        amount: 2
+        prob: 0.2
+      - id: IngotGold1
+        amount: 1
+        prob: 0.2
+      - id: IngotSilver1
+        amount: 3
+        prob: 0.2
+      - id: IngotSilver1
+        amount: 2
+        prob: 0.2
+      - id: IngotSilver1
+        amount: 1
+        prob: 0.2
+      - id: FoodMeatRotten
+        amount: 1
+        prob: 0.2
+      - id: FoodMeatRotten
+        amount: 2
+        prob: 0.2
+      - id: GoldRing
+        amount: 1
+        prob: 0.2
+      - id: FoodGoldenApple
+        amount: 1
+        prob: 0.2
+      - id: MobLavaLandLegion
+        amount: 1
+        prob: 0.4

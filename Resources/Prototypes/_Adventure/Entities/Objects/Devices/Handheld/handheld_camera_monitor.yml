@@ -1,0 +1,60 @@
+- type: entity
+  name: портативный монитор камер
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldCameraMonitor
+  description: Ручной монитор камер, отображающий происходящее на станции.
+  suffix: AdvMonitors
+  components:
+  - type: Item
+    heldPrefix: monitor
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/Security/handheldcameramonitor.rsi
+    state: monitor
+  - type: ActivatableUI
+    key: enum.SurveillanceCameraMonitorUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SurveillanceCameraMonitorUiKey.Key:
+        type: SurveillanceCameraMonitorBoundUserInterface
+  - type: SurveillanceCameraMonitor
+  - type: DeviceNetworkRequiresPower
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCamera
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldCameraMonitor
+
+- type: entity
+  id: HandheldCameraMonitorEmpty
+  parent: HandheldCameraMonitor
+  suffix: Empty, AdvMonitors
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldCameraMonitor
+  name: steal-target-groups-handheld-camera-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Command/handheldcommunicationsmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: WardenHandheldCameraMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldCameraMonitor
+  - type: Objective
+    difficulty: 1.2

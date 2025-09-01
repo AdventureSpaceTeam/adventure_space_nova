@@ -1,0 +1,76 @@
+- type: entity
+  parent: SeedBase
+  name: пакет семян (заводной апельсин)
+  suffix: AdvBotany
+  id: ClockworkOrangeSeeds
+  components:
+    - type: Seed
+      seedId: clockworkorange
+    - type: Sprite
+      sprite: _Adventure/Objects/Botany/Produce/clockworkorange.rsi
+
+- type: seed
+  id: clockworkorange
+  name: заводной апельсин
+  noun: seeds-noun-seeds
+  displayName: заводной апельсин
+  plantRsi: _Adventure/Objects/Botany/Produce/clockworkorange.rsi
+  packetPrototype: ClockworkOrangeSeeds
+  productPrototypes:
+    - FoodClockworkOrange
+  harvestRepeat: Repeat
+  lifespan: 55
+  maturation: 6
+  production: 6
+  yield: 3
+  potency: 10
+  idealLight: 8
+  chemicals:
+    Milk:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Stimulants:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+    MindbreakerToxin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+
+- type: entity
+  name: заводной апельсин
+  suffix: AdvBotany
+  parent: FoodLemon
+  id: FoodClockworkOrange
+  description: Отдаёт молоком.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - ultraviolence
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/clockworkorange.rsi
+  - type: Produce
+    seedId: clockworkorange
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 13
+        reagents:
+        - ReagentId: Milk
+          Quantity: 5
+        - ReagentId: Stimulants
+          Quantity: 4
+        - ReagentId: MindbreakerToxin
+          Quantity: 4
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Milk
+        Quantity: 5
+      - ReagentId: Stimulants
+        Quantity: 4
+  - type: Tag
+    tags:
+    - Fruit

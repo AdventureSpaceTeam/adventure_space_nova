@@ -145,6 +145,10 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
+#Adventure-start
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 75
+#Adventure-end
 
 - type: entity
   abstract: true
@@ -174,6 +178,10 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
+#Adventure-start
+  - type: SpontaneousCombustionProtection
+    protectionPercent: 75
+#Adventure-end
 
 - type: entity
   parent: ClothingOuterBase

@@ -1,0 +1,61 @@
+- type: entity
+  name: портативный атмосферный монитор
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldAtmosMonitor
+  description: Ручной атмосферный монитор, отображающий состояние атмосферы на станции.
+  suffix: AdvMonitors
+  components:
+  - type: Item
+    heldPrefix: monitor
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/Atmos/handheldatmosmonitor.rsi
+    state: monitor
+  - type: ActivatableUI
+    key: enum.AtmosAlertsComputerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.AtmosAlertsComputerUiKey.Key:
+        type: AtmosAlertsComputerBoundUserInterface
+  - type: AtmosAlertsComputer
+  - type: StaticPrice
+    price: 500
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 5
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldAtmosMonitor
+
+- type: entity
+  id: HandheldAtmosMonitorEmpty
+  parent: HandheldAtmosMonitor
+  suffix: Empty, AdvMonitors
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldAtmosMonitor
+  name: steal-target-groups-handheld-atmos-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Atmos/handheldatmosmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: CEHandheldAtmosMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldAtmosMonitor
+  - type: Objective
+    difficulty: 1.2

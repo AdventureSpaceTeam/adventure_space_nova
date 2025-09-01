@@ -1,0 +1,85 @@
+#рабочий комбинезон утилизатора
+- type: entity
+  parent: ClothingUniformJumpsuitSalvageSpecialist
+  id: ClothingUniformJumpsuitSalvageSpecialistGachi
+  name: рабочий комбинезон утилизатора
+  description: Это не Гачи, это просто футболка испачкалась...
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/cargo/salvage.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/cargo/salvage.rsi
+    femaleMask: UniformTop
+
+- type: loadout
+  id: SalvageSpecialistWorkJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialistGachi
+
+#майка утилизатора
+- type: entity
+  parent: ClothingUniformJumpsuitSalvageSpecialist
+  id: ClothingUniformJumpsuitSalvageSpecialistUndershirt
+  name: майка утилизатора
+  description: Пахнет потом и кровь.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/cargo/salvage2.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/cargo/salvage2.rsi
+    femaleMask: UniformTop
+
+- type: loadout
+  id: SalvageSpecialistUndershirt
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialistUndershirt
+
+- type: loadout
+  id: SalvageSpecialistJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+
+#мантия утиля
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleMining
+  name: мантия шахтёра
+  description: Выглядит так, будто вы просто сорвали знамя карго и надели на себя.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/cargo/mining_mantle.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/cargo/mining_mantle.rsi
+
+- type: loadout
+  id: NeckMining
+  equipment:
+    neck: ClothingNeckMantleMining
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterMiner
+
+- type: loadoutEffectGroup
+  id: MasterMiner
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 72000 #20 hrs
+
+#кровавая мантия утиля
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleMiningBlood
+  name: кровавая мантия шахтёра
+  description: Мантия шахтёра покрытая кровью врагов.
+  suffix: BORK, AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/cargo/bloodMining_mantle.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/cargo/bloodMining_mantle.rsi

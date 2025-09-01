@@ -1,0 +1,87 @@
+#магматитовая стена
+- type: entity
+  parent: WallCobblebrick
+  id: WallBasaltCobblebrickMagma
+  suffix: LavaLand
+  name: магматитовая стена
+  description: Идеально подогнанные друг к другу кирпичик за кирпичиком образовали стену.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/cobblebrick_basalt_magma.rsi
+  - type: Icon
+    sprite: _Adventure/Roles/LavaLand/materials/cobblebrick_basalt_magma.rsi
+  - type: IconSmooth
+    key: cobblebricks
+    base: cobblebrick
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: RCDDeconstructable
+    cost: 30
+    delay: 5000
+    fx: EffectRCDDeconstructPreview
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#f2511e"
+
+#магматитовая дверь
+- type: entity
+  parent: BaseMaterialDoorNavMap
+  id: MaterialDoorMagma
+  suffix: LavaLand
+  description: Дверь, куда она приведет?
+  name: магматитовая дверь
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/necro_door.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: RCDDeconstructable
+    cost: 30
+    delay: 5000
+    fx: EffectRCDDeconstructPreview
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#f2511e"
+  - type: Door
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.6
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.6
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+
+#голопад
+- type: entity
+  parent: HolopadLongRange
+  id: HolopadMiningOutpost
+  name: голопад-маяк
+  description: Напольное устройство для проецирования голографических изображений на аналогичные устройства, которые находятся далеко.
+  suffix: Шахтёрский аванпост LavaLand
+  components:
+  - type: Label
+    currentLabel: holopad-cargo-miningpost
+  - type: MiningOutpost

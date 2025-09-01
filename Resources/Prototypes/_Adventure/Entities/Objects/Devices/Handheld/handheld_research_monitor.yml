@@ -1,0 +1,70 @@
+- type: entity
+  name: портативный исследовательский монитор
+  categories: [ DoNotMap ]
+  parent: BaseHandheldComputer
+  id: HandheldResearchMonitor
+  description: Ручной исследовательский монитор, отображающий текущие изучения отдела РНД.
+  suffix: AdvMonitors
+  components:
+  - type: Item
+    heldPrefix: monitor
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/Research/handheldresearchmonitor.rsi
+    state: monitor
+  - type: ResearchClient
+  - type: ResearchConsole
+  - type: ActiveRadio
+    channels:
+    - Science
+  - type: TechnologyDatabase
+  - type: ActivatableUI
+    key: enum.ResearchConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ResearchConsoleUiKey.Key:
+        type: ResearchConsoleBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
+  - type: StaticPrice
+    price: 500
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 3
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: AccessReader
+    access: [["Research"]]
+  - type: StealTarget
+    stealGroup: HandheldResearchMonitor
+
+- type: entity
+  id: HandheldResearchMonitorEmpty
+  parent: HandheldResearchMonitor
+  suffix: Empty, AdvMonitors
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: stealTargetGroup
+  id: HandheldResearchMonitor
+  name: steal-target-groups-handheld-research-monitor
+  sprite:
+    sprite: _Adventure/Objects/Specific/Research/handheldresearchmonitor.rsi
+    state: icon
+
+- type: entity
+  parent: BaseThiefStealObjective
+  id: RDHandheldResearchMonitorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: HandheldResearchMonitor
+  - type: Objective
+    difficulty: 1.2

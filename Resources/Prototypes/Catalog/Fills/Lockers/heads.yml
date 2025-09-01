@@ -58,6 +58,7 @@
     - id: ClothingHeadCaptainHat
     - id: ClothingOuterCoatCaptain
     # Corvax-Resprite-End
+    - id: HandheldCommunicationsMonitor # Adventure
     - id: HeadSkeleton # A skull to accompany your skeleton crew
       conditions:
       - !type:PlayerCountCondition
@@ -148,9 +149,12 @@
     - id: WeaponDisabler
     - id: ClothingEyesHudCommand
     - id: ClothingOuterCoatHOP # Corvax-Resprite
-    - id: ClothingOuterHardsuitHOP # Adventure
-    - id: PrinterFlatpack # Adventure
-    - id: PlantAnalyzerCartridge # Adventure
+    # Adventure start
+    - id: ClothingOuterHardsuitHOP
+    - id: PrinterFlatpack
+    - id: PlantAnalyzerCartridge
+    - id: HandheldRecordsMonitor
+    # Adventure end
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -172,18 +176,22 @@
     - id: CigarCase
       prob: 0.15
     - id: ClothingBeltChiefEngineerFilled
-    - id: ClothingEyesGlassesCE # Adventure
     - id: ClothingHandsGlovesColorYellow
     - id: ClothingHeadsetAltEngineering
     - id: DoorRemoteEngineering
     - id: CargoRequestEngineeringComputerCircuitboard
     - id: RCD
-    - id: RPD # Adventure
     - id: RCDAmmo
     - id: RubberStampCE
-    - id: NTECCPU1 # Adventure
-    - id: NukeActivator # Adventure
     - id: MetalFoamGrenade
+    # Adventure start
+    - id: ClothingEyesGlassesCE
+    - id: NTECCPU1
+    - id: NukeActivator
+    - id: RPD
+    - id: EnergyCoreCircuitboard
+    - id: HandheldAtmosMonitor
+    # Adventure end
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -230,13 +238,16 @@
     - id: BoxEncryptionKeyMedical
     - id: ClothingBackpackDuffelSurgeryFilled
     - id: ClothingCloakCmo
-    - id: ClothingEyesHudCMO # Adventure
     - id: ClothingHandsGlovesNitrile
     - id: ClothingHeadHatBeretCmo
     - id: ClothingHeadsetAltMedical
     - id: ClothingMaskSterile
     - id: DoorRemoteMedical
     - id: HandheldCrewMonitor
+    # Adventure start
+    - id: ClothingEyesHudCMO
+    - id: CompactDefibrillator
+    # Adventure end
     - id: Hypospray
     - id: MedicalTechFabCircuitboard
     - id: CargoRequestMedicalComputerCircuitboard
@@ -295,7 +306,10 @@
     - id: ResearchComputerCircuitboard
     - id: CargoRequestScienceComputerCircuitboard
     - id: RubberStampRd
-    - id: ClothingEyesGlassesRD # Adventure
+    # Adventure start
+    - id: ClothingEyesGlassesRD
+    - id: HandheldResearchMonitor
+    # Adventure end
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -355,6 +369,7 @@
     - id: CargoRequestSecurityComputerCircuitboard
     - id: WeaponDisabler
     - id: WantedListCartridge
+    - id: HandheldCriminalMonitor # Adventure
     - id: ClothingHeadHatCapHoS # Corvax-SecFashion
       prob: 0.5
     - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite

@@ -1,0 +1,92 @@
+- type: entity
+  parent: SeedBase
+  name: пакет семян (огурец)
+  suffix: AdvBotany
+  id: CucumberSeeds
+  components:
+    - type: Seed
+      seedId: cucumber
+    - type: Sprite
+      sprite: _Adventure/Objects/Botany/Produce/cucumber.rsi
+
+- type: seed
+  id: cucumber
+  name: огурец
+  noun: seeds-noun-seeds
+  displayName: огурец
+  plantRsi: _Adventure/Objects/Botany/Produce/cucumber.rsi
+  packetPrototype: CucumberSeeds
+  productPrototypes:
+    - FoodCucumber
+  harvestRepeat: Repeat
+  lifespan: 25
+  maturation: 8
+  production: 6
+  yield: 2
+  potency: 10
+  waterConsumption: 0.60
+  nutrientConsumption: 0.40
+  idealLight: 8
+  idealHeat: 298
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 7
+      PotencyDivisor: 14
+    Vitamin:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 33
+    Water:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 20
+
+- type: entity
+  name: огурец
+  suffix: AdvBotany
+  parent: [FoodProduceBase]
+  id: FoodCucumber
+  description: Зелёный!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - water
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 7
+        - ReagentId: Vitamin
+          Quantity: 3
+        - ReagentId: Water
+          Quantity: 4
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/cucumber.rsi
+  - type: Produce
+    seedId: cucumber
+  - type: Extractable
+    grindableSolutionName: food
+#    juiceSolution:
+#      reagents:
+#      - ReagentId: JuiceTomato
+#        Quantity: 10
+  - type: Tag
+    tags:
+    - Vegetable
+  - type: FoodSequenceElement
+    entries:
+      Burger: Cucumber
+      Taco: Cucumber
+
+- type: foodSequenceElement
+  id: Cucumber
+  name: огуречно
+  sprites:
+  - sprite: _Adventure/Objects/Botany/Produce/cucumber.rsi
+    state: produce
+  tags:
+  - Fruit
+  - Vegetable

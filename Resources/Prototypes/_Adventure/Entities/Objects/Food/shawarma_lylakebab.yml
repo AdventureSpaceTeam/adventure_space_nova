@@ -1,0 +1,49 @@
+- type: entity
+  name: шаурма люля-кебаб
+  parent: FoodMealBase
+  id: FoodMealLilaKebab
+  description: Большая и аппетитная шаурма, её вкус определённо скрасит ваш будний день, а его содержимое поднимет сил.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - tomato
+      - meaty
+      - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/shawarma.rsi
+    state: shawarma
+  - type: Tag
+    tags:
+    - Meat
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 48
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 19
+        - ReagentId: Protein
+          Quantity: 13
+        - ReagentId: BbqSauce
+          Quantity: 3
+        - ReagentId: Ketchup
+          Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 4
+
+- type: microwaveMealRecipe
+  id: RecipeLilaKebabShaurma
+  name: шаурма ли ла кебаб
+  result: FoodMealLilaKebab
+  time: 30
+  group: Savory
+  reagents:
+    BbqSauce: 5
+    Ketchup: 5
+  solids:
+    FoodDoughFlat: 2
+    FoodTomato: 1
+    FoodMeatBacon: 2
+    FoodMeat: 1
+    FoodOnionSlice: 1
+    FoodCabbage: 1

@@ -169,9 +169,11 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - Plasman #Adventure
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+    - Plasman #Adventure
 
   # Visual
   inventoryTemplateId: borgDutch

@@ -86,6 +86,8 @@
   - EmergencyNitrogen
   - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -512,6 +514,8 @@
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 - type: loadoutGroup
   id: MimeHead
@@ -569,6 +573,8 @@
   - EmergencyOxygenMime
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 - type: loadoutGroup
   id: MusicianJumpsuit
@@ -860,6 +866,8 @@
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 # Science
 - type: loadoutGroup
@@ -1147,6 +1155,8 @@
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 - type: loadoutGroup
   id: SecurityStar
@@ -1359,6 +1369,8 @@
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 # Wildcards
 - type: loadoutGroup
@@ -1401,6 +1413,8 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyPlasma #Adventure
+  - LoadoutSpeciesPlasManTank #Adventure
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

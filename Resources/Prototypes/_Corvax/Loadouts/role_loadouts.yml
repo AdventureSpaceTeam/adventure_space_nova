@@ -1,0 +1,28 @@
+- type: roleLoadout
+  id: JobIAA
+  groups:
+  - Inventory # Corvax-Loadouts
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure
+
+- type: roleLoadout
+  id: JobPilot
+  groups:
+  - GroupPlasManSuitSecurity #Adventure
+  - Inventory # Corvax-Loadouts
+  - SecurityJumpsuit
+  - SecurityBackpack
+  - SecurityOuterClothing
+  - SecurityBelt
+  - SecurityShoes
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - BrassGroup #Adventure
+  - PantsGroup #Adventure

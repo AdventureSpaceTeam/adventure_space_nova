@@ -1,0 +1,68 @@
+# species
+- type: emoteSounds
+  id: MaleVulpkanin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: VulpkaninScreamCollection # Adventure
+    Laugh:
+      collection: MaleLaugh
+    Growl:
+      collection: VulpkaninGrowlCollection # Adventure
+    Howl:
+      collection: VulpkaninHowlCollection # Adventure
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      path: /Audio/_Adventure/Voice/Vulpkanin/VulpDead.ogg # Adventure
+
+- type: emoteSounds
+  id: FemaleVulpkanin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: VulpkaninScreamCollection # Adventure
+    Laugh:
+      collection: FemaleLaugh
+    Growl:
+      collection: VulpkaninGrowlCollection # Adventure
+    Howl:
+      collection: VulpkaninHowlCollection # Adventure
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      path: /Audio/_Adventure/Voice/Vulpkanin/VulpDead.ogg # Adventure

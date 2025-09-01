@@ -1,0 +1,140 @@
+- type: entity #Семена
+  parent: SeedBase
+  name: пакет семян (бананаган)
+  suffix: AdvBotany
+  description: "Пахнет бананом."
+  id: BananaGunSeeds
+  components:
+    - type: Seed
+      seedId: BananaGunPlant
+    - type: Sprite
+      sprite: _Adventure/Objects/Botany/Produce/bananagundop.rsi
+
+- type: seed #Растение
+  id: BananaGunPlant
+  name: бананагановое дерево
+  noun: seeds-noun-seeds
+  displayName: бананагановое дерево
+  plantRsi: _Adventure/Objects/Botany/Produce/bananagundop.rsi
+  packetPrototype: BananaGunSeeds
+  productPrototypes:
+    - BananaGun
+  lifespan: 35
+  maturation: 10
+  production: 15
+  yield: 1
+  potency: 10
+  growthStages: 6
+  idealLight: 6
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Sulfur:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+- type: entity  #Продукт
+  name: странный банан
+  suffix: AdvBotany
+  parent: FoodProduceBase
+  id: BananaGun
+  description: Банан или орудие убийства?
+  components:
+  - type: FlavorProfile
+    flavors:
+      - plastic
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Sulfur
+          Quantity: 5
+  - type: Sprite
+    sprite: _Adventure/Objects/Botany/Produce/bananagundop.rsi
+  - type: Produce
+    seedId: BananaGunPlant
+  - type: Food
+    trash:
+    - BananaGunRev
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity #гильза
+  id: CartridgeBanana
+  name: гильза бананопистолета
+  parent: BaseCartridgeMagnum
+  components:
+  - type: CartridgeAmmo
+    proto: BulletBanana
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dbdbdb"
+
+- type: entity #патрон
+  id: BulletBanana
+  name: патрон бананапистолета
+  parent: BaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 9
+        Piercing: 1
+
+- type: entity #Оружие
+  name: банановый пистолет
+  suffix: AdvBotany
+  parent: [BaseItem, BaseMajorContraband]
+  id: BananaGunRev
+  description: Вкусно и грустно...
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Weapons/Botany/bananagun-rev.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    sprite: _Adventure/Objects/Weapons/Botany/bananagun-rev.rsi
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: _Adventure/Objects/Weapons/Botany/bananagun-rev.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+      params:
+        volume: 0.25
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeAmmo
+    capacity: 3
+    proto: CartridgeBanana
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
