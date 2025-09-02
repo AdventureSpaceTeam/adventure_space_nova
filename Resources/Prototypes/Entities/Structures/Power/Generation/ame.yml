@@ -148,7 +148,7 @@
       map: ["core_glow"]
       shader: unshaded
       visible: false
-      color: "#a8b8ff" # Adventure
+      color: "#04ffff" # Adventure
   - type: Physics
   - type: Fixtures
     fixtures:
