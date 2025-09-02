@@ -159,7 +159,7 @@
 
 - type: entity
   name: pen
-  parent: [BaseMeleeWeaponEnergy, VoiceLock]
+  parent: [BaseMeleeWeaponEnergy, SelectableLock]
   id: EnergyDagger
   suffix: E-Dagger
   description: 'A dark ink pen.'
@@ -397,6 +397,13 @@
     spread: 75
 
 # Borgs
+
+- type: entity
+  parent: EnergySword
+  id: CyborgEnergySword
+  suffix: For Borgs
+  description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Specially designed for syndicate cyborgs.
+
 # Adventure WizDen PR merge start
 - type: entity
   suffix: One-Handed, For Borgs
