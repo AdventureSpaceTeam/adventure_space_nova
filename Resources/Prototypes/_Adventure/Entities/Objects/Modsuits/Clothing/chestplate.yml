@@ -9,8 +9,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/OuterClothing/advanced.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/OuterClothing/advanced.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: PressureProtection
     highPressureMultiplier: 0.00002
     lowPressureMultiplier: 1000

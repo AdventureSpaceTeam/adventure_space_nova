@@ -9,8 +9,8 @@
     sprite: Clothing/Back/Modsuits/advanced.rsi
   - type: Clothing
     sprite: Clothing/Back/Modsuits/advanced.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -449,8 +449,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Back/corporate.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Back/corporate.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: ToggleableClothing
     clothingPrototype: ClothingOuterChestplateModsuitCCSealed
     requiredSlot: back
