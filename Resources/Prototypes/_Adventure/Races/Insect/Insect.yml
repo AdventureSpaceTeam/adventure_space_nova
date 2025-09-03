@@ -1,0 +1,351 @@
+- type: damageModifierSet
+  id: InsectArmor
+  coefficients:
+    Blunt: 0.80
+    Slash: 0.80
+    Piercing: 0.80
+    Cold: 0.90
+    Heat: 1.8
+    Poison: 1.5
+    Radiation: 0.5
+
+- type: entity
+  save: false
+  name: Урист макЛичинус
+  parent: BaseMobInsect
+  id: MobInsect
+
+- type: entity
+  abstract: true
+  save: false
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobInsect
+  name: Урист макЛичинус
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ PestKiller ]
+      methods: [ Touch, Ingestion, Injection ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Poison: 2
+      - !type:Emote
+        emote: Scream
+        showInChat: false
+        probability: 1
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.1
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: Sharp
+  - type: Prying
+    pryPowered: false
+    force: true
+    speedModifier: 1.5
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: BodyEmotes
+    soundsId: GeneralBodyEmotes
+  - type: NoSlip
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: InsectStep
+      params:
+        volume: -8
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 400
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Piercing: 5
+        Slash: 5
+  - type: Puller
+    needsHands: false
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#808A51"
+  - type: Bloodstream
+    bloodReagent: InsectBlood
+  - type: Vocal
+    sounds:
+      Male: UnisexInsect
+      Female: UnisexInsect
+      Unsexed: UnisexInsect
+  - type: Speech
+    speechSounds: InsectSpeach
+    speechVerb: Arachnid
+    allowedEmotes: ['Hissing', 'Click', 'Chitter']
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 250
+    sweatHeatRegulation: 500
+    shiveringHeatRegulation: 500
+    normalBodyTemperature: 291.15
+    thermalRegulationTemperatureThreshold: 2
+  - type: Temperature
+    heatDamageThreshold: 473.15
+    coldDamageThreshold: 273.15
+    currentTemperature: 291.15
+    coldDamage:
+      types:
+        Cold : 1.5
+    specificHeat: 42
+    heatDamage:
+      types:
+        Heat : 1.5
+  - type: TemperatureSpeed
+    thresholds:
+      288.15: 0.8
+      282.15: 0.6
+      274.15: 0.4
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: InsectArmor
+  - type: Body
+    prototype: InsectSerpentide
+  - type: Icon
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: full
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatSpider
+      amount: 5
+  - type: HumanoidAppearance
+    species: InsectSerpentide
+    hideLayersOnEquip:
+    - HeadSide
+  - type: Inventory
+    templateId: InsectSerpentide
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: Uniforms
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: OuterClothing
+      neck:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: neck
+      head:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: head
+    maleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: Uniforms
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: OuterClothing
+      neck:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: neck
+      head:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: head
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobInsectDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: InsectSerpentide
+  - type: Inventory
+    templateId: InsectSerpentide
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: Uniforms
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: OuterClothing
+      neck:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: neck
+      head:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: head
+    maleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: Uniforms
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: OuterClothing
+      neck:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: neck
+      head:
+        sizeMaps:
+          32:
+            sprite: _Adventure/Races/Insect/displacement.rsi
+            state: head
+
+#Инвентарь
+- type: inventoryTemplate
+  id: InsectSerpentide
+  slots:
+    - name: jumpsuit
+      slotTexture: uniform
+      slotFlags: INNERCLOTHING
+      stripTime: 6
+      uiWindowPos: 0,1
+      strippingWindowPos: 0,2
+      displayName: Jumpsuit
+    - name: outerClothing
+      slotTexture: suit
+      slotFlags: OUTERCLOTHING
+      stripTime: 6
+      uiWindowPos: 1,1
+      strippingWindowPos: 1,2
+      displayName: Suit
+    - name: gloves
+      slotTexture: gloves
+      slotFlags: GLOVES
+      uiWindowPos: 2,1
+      strippingWindowPos: 2,2
+      displayName: Gloves
+    - name: neck
+      slotTexture: neck
+      slotFlags: NECK
+      uiWindowPos: 0,2
+      strippingWindowPos: 0,1
+      displayName: Neck
+    - name: ears
+      slotTexture: ears
+      slotFlags: EARS
+      stripTime: 3
+      uiWindowPos: 2,2
+      strippingWindowPos: 2,1
+      displayName: Ears
+    - name: head
+      slotTexture: head
+      slotFlags: HEAD
+      uiWindowPos: 1,2
+      strippingWindowPos: 1,1
+      displayName: Head
+    - name: pocket1
+      slotTexture: pocket
+      fullTextureName: template_small
+      slotFlags: POCKET
+      slotGroup: MainHotbar
+      stripTime: 3
+      uiWindowPos: 0,3
+      strippingWindowPos: 0,4
+      dependsOn: jumpsuit
+      displayName: Pocket 1
+      stripHidden: true
+    - name: pocket2
+      slotTexture: pocket
+      fullTextureName: template_small
+      slotFlags: POCKET
+      slotGroup: MainHotbar
+      stripTime: 3
+      uiWindowPos: 2,3
+      strippingWindowPos: 1,4
+      dependsOn: jumpsuit
+      displayName: Pocket 2
+      stripHidden: true
+    - name: suitstorage
+      slotTexture: suit_storage
+      slotFlags:   SUITSTORAGE
+      slotGroup: MainHotbar
+      stripTime: 3
+      uiWindowPos: 2,0
+      strippingWindowPos: 2,5
+      dependsOn: outerClothing
+      dependsOnComponents:
+      - type: AllowSuitStorage
+      displayName: Suit Storage
+    - name: id
+      slotTexture: id
+      fullTextureName: template_small
+      slotFlags: IDCARD
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 2,1
+      strippingWindowPos: 2,4
+      dependsOn: jumpsuit
+      displayName: ID
+    - name: belt
+      slotTexture: belt
+      fullTextureName: template_small
+      slotFlags: BELT
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 3,1
+      strippingWindowPos: 1,5
+      displayName: Belt
+    - name: back
+      slotTexture: back
+      fullTextureName: template_small
+      slotFlags: BACK
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 3,0
+      strippingWindowPos: 0,5
+      displayName: Back

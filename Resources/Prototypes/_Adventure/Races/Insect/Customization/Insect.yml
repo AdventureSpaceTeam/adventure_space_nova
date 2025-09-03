@@ -1,0 +1,41 @@
+- type: marking
+  id: InsectHeadForward
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: forward
+
+- type: marking
+  id: InsectHeadStraight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: straight
+
+- type: marking
+  id: InsectTailNoBase
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: base_tail
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: body
+
+- type: marking
+  id: InsectChestBody
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: body

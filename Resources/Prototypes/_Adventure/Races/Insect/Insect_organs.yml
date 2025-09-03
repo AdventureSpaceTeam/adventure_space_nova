@@ -1,0 +1,99 @@
+﻿- type: metabolizerType
+  id: InsectSerpentide
+  name: Серпентид
+
+- type: entity
+  id: OrganInsectiBrain
+  parent: OrganHumanBrain
+  name: мозг серпентида
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/organs.rsi
+    state: brain
+
+- type: entity
+  id: OrganInsectEyes
+  parent: OrganHumanEyes
+  name: глаза серпентида
+  description: Я тебя вижу
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  id: OrganInsectHeart
+  parent: BaseAnimalOrgan
+  name: Сердце серпентида
+  description: Тук тук.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/organs.rsi
+    state: heart-off
+  - type: Organ
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ InsectSerpentide ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+
+- type: entity
+  id: OrganInsectLungs
+  parent: OrganHumanLungs
+  name: дыхательные трубки
+  description: Сеть трубок для дыхания насекомых.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/organs.rsi
+    layers:
+      - state: lung-l
+      - state: lung-r
+  - type: Metabolizer
+    metabolizerTypes: [ InsectSerpentide ]
+  - type: Lung
+    alert: LowOxygen
+  - type: Item
+    size: Small
+    heldPrefix: lungs
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: InsectBlood
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: InsectBlood
+          Quantity: 5
+
+- type: entity
+  id: OrganInsectStomach
+  name: желудок серпентида
+  parent: OrganAnimalStomach
+  description: Отвратительно! Кто там сидит?!
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/organs.rsi
+    state: stomach
+  - type: Metabolizer 
+    metabolizerTypes: [InsectSerpentide]
+    groups:
+    - id: Food
+    - id: Drink
+    - id: Alcohol
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - Trash
+      - ClothMade
+      - Paper
+    isSpecialDigestibleExclusive: false

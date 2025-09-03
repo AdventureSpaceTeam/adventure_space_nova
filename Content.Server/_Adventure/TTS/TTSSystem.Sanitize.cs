@@ -149,6 +149,7 @@ public sealed partial class TTSSystem
             {"ттс", "Тэ Тэ Эс"},
             {"рсу", "Эр Сэ У"},
             {"упт", "У Пэ Тэ"},
+            {"гбс", "Гэ Бэ Эс"},
             // Adventure-End
         };
 
