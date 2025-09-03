@@ -165,19 +165,6 @@
     tags:
     - ModsuitHelmet
 
-- type: entity
-  parent: BaseItem
-  id: PaintKitModsuitConstructing
-  name: CE modsuit helmet
-  description: Special hardsuit helmet, made for the CE of the station.
-  components:
-  - type: Sprite
-    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-    state: paintkit
-  - type: Tag
-    tags:
-    - ModsuitPaintKit #Modsuit Cores
-
 - type: entity #cores end
   parent: BaseItem
   id: CoreModsuitConstructing

@@ -15,7 +15,7 @@
           state: small
 
       - tag: CoreModsuit
-        name: Ядро Р.И.Г-а
+        name: Ядро Р.И.Г.-а
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -256,7 +256,7 @@
                 state: ce-plating
               doAfter: 2
             - tag: ModsuitControlAdvanced
-              name: Каркас продвинутого Р.И.Г-а
+              name: Каркас продвинутого Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
                 state: CORE-equip8
@@ -273,13 +273,13 @@
         - to: modsuitrescue
           steps:
             - tag: PlatingCMOModsuit
-              name: покрытие Спасательного Р.И.Г-а
+              name: покрытие Спасательного Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/plating.rsi
                 state: cmo-plating
               doAfter: 2
             - tag: ModsuitControlRescue
-              name: Каркас спасательного Р.И.Г-а
+              name: Каркас спасательного Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
                 state: CORE-equip8
@@ -302,7 +302,7 @@
                 state: magnate-plating
               doAfter: 2
             - tag: ModsuitControlMagnate
-              name: Каркас роскошного Р.И.Г-а
+              name: Каркас роскошного Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
                 state: CORE-equip8
@@ -325,7 +325,7 @@
                 state: security-plating
               doAfter: 2
             - tag: ModsuitControlSafeguard
-              name: Каркас  Р.И.Г-а Гвардейца
+              name: Каркас  Р.И.Г.-а Гвардейца
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
                 state: CORE-equip8
