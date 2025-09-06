@@ -1,0 +1,72 @@
+- type: gameMap
+  id: Adventuresquare
+  mapName: 'Square'
+  mapPath: /Maps/_Adventure/square.yml
+  maxRandomOffset: 0
+  randomRotation: false 
+  minPlayers: 20
+  maxPlayers: 100
+  stations:
+    advSquare:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Square {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'SW'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_square.yml
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            # service
+            HeadOfPersonnel: [ 1, 1 ]
+            Passenger: [ -1, -1 ]
+            ServiceWorker: [ 4, 4 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 3, 3 ]
+            Chef: [ 3, 3 ]
+            Clown: [ 1, 1 ]
+            Janitor: [ 2, 2 ]
+            Mime: [ 1, 1 ]
+            Chaplain: [ 1, 1 ]
+            Librarian: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            Zookeeper: [ 1, 1 ]
+            Reporter: [ 2, 2 ]
+            # command
+            Captain: [ 1, 1 ]
+            # engineering
+            ChiefEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 3, 3 ]
+            StationEngineer: [ 5, 5 ]
+            TechnicalAssistant: [ 2, 2 ]
+            # medical
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Paramedic: [ 1, 1 ]
+            Chemist: [ 2, 2 ]
+            MedicalDoctor: [ 3, 3 ]
+            MedicalIntern: [ 2, 2 ]
+            # science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 3, 3 ]
+            ResearchAssistant: [ 2, 2 ]
+            Borg: [ 4, 4 ]
+            # security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Detective: [ 1, 1 ]
+            SecurityOfficer: [ 5, 5 ]
+            SecurityCadet: [ 3, 3 ]
+            Pilot: [ 1, 1 ]
+            # cargo
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 5, 5 ]
+            CargoTechnician: [ 4, 4 ]
+            # adventure
+            Blueshield: [ 1, 1 ]
+            Brigmedic: [ 1, 1 ]
+            StationAi: [ 1, 1 ]
+            IAA: [ 1, 1 ]

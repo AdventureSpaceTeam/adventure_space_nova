@@ -312,3 +312,4 @@ Resources/MapImages
 
 # Direnv stuff
 .direnv/
+Content.IntegrationTests/Tests
