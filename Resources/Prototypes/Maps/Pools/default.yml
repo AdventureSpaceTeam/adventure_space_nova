@@ -2,6 +2,7 @@
   id: DefaultMapPool
   maps:
   - Amber
+  - Square
   - Bagel
   - Box
   - Elkridge
