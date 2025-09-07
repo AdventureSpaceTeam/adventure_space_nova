@@ -86,6 +86,14 @@
       "directions": 4
     },
     {
+      "name": "engineer_derelict",
+      "directions": 4
+    },
+    {
+      "name": "engineer_derelict_crystal",
+      "directions": 4
+    },
+    {
       "name": "engineer_e",
       "directions": 4
     },
@@ -102,7 +110,33 @@
       "directions": 4
     },
     {
+      "name": "janitor_derelict",
+      "directions": 4
+    },
+    {
       "name": "janitor_moving",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "janitor_moving_derelict",
       "directions": 4,
       "delays": [
         [
@@ -162,7 +196,59 @@
       ]
     },
     {
+      "name": "medical_derelict",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1
+        ],
+        [
+          0.1,
+          0.2,
+          0.1
+        ],
+        [
+          0.1,
+          0.2,
+          0.1
+        ],
+        [
+          0.1,
+          0.2,
+          0.1
+        ]
+      ]
+    },
+    {
       "name": "medical_moving",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1
+        ],
+        [
+          0.1,
+          0.2,
+          0.1
+        ],
+        [
+          0.1,
+          0.2,
+          0.1
+        ],
+        [
+          0.1,
+          0.2,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "medical_moving_derelict",
       "directions": 4,
       "delays": [
         [
@@ -204,7 +290,33 @@
       "directions": 4
     },
     {
+      "name": "miner_derelict",
+      "directions": 4
+    },
+    {
       "name": "miner_moving",
+      "directions": 4,
+      "delays": [
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "miner_moving_derelict",
       "directions": 4,
       "delays": [
         [
@@ -304,6 +416,18 @@
       "directions": 4
     },
 	{
+      "name": "synd_sec_derelict",
+      "directions": 4
+    },
+    {
+      "name": "synd_sec_derelict_e",
+      "directions": 4
+    },
+    {
+      "name": "synd_sec_derelict_l",
+      "directions": 4
+    },
+	{
       "name": "synd_medical",
       "directions": 4
     },
@@ -373,6 +497,10 @@
     },
     {
       "name": "sec",
+      "directions": 4
+    },
+    {
+      "name": "sec_derelict",
       "directions": 4
     },
     {
