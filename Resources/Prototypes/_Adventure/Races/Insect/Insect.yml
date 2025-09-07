@@ -31,7 +31,7 @@
   id: BaseMobInsect
   name: Урист макЛичинус
   components:
-  - type: PassiveDamage 
+  - type: PassiveDamage
     allowedStates:
     - Alive
     damageCap: 100
