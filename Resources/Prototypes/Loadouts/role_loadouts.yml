@@ -2,6 +2,7 @@
 - type: roleLoadout
   id: JobCaptain
   groups:
+  - GroupPlasManSuitCAP #Adventure
   - CaptainHead
   - CaptainNeck
   - CaptainJumpsuit
@@ -16,6 +17,7 @@
 - type: roleLoadout
   id: JobHeadOfPersonnel
   groups:
+  - GroupPlasManSuitHOP #Adventure
   - GroupTankHarness
   - HoPHead
   - HoPNeck
@@ -245,6 +247,7 @@
 - type: roleLoadout
   id: JobQuartermaster
   groups:
+  - GroupPlasManSuitQM #Adventure
   - GroupTankHarness
   - QuartermasterHead
   - QuartermasterNeck
@@ -297,6 +300,7 @@
 - type: roleLoadout
   id: JobChiefEngineer
   groups:
+  - GroupPlasManSuitCE #Adventure
   - GroupTankHarness
   - ChiefEngineerHead
   - ChiefEngineerJumpsuit
@@ -360,6 +364,7 @@
 - type: roleLoadout
   id: JobResearchDirector
   groups:
+  - GroupPlasManSuitRD #Adventure
   - GroupTankHarness
   - ResearchDirectorHead
   - ResearchDirectorNeck
@@ -413,6 +418,7 @@
 - type: roleLoadout
   id: JobHeadOfSecurity
   groups:
+  - GroupPlasManSuitHOS #Adventure
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
@@ -467,7 +473,7 @@
 - type: roleLoadout
   id: JobDetective
   groups:
-  - GroupPlasManSuitSecurity #Adventure
+  - GroupPlasManSuitDetective #Adventure
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
@@ -497,6 +503,7 @@
 - type: roleLoadout
   id: JobChiefMedicalOfficer
   groups:
+  - GroupPlasManSuitCMO #Adventure
   - GroupTankHarness
   - ChiefMedicalOfficerHead
   - MedicalMask

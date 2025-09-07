@@ -14,6 +14,15 @@
   name: Урист макЛичинус
   parent: BaseMobInsect
   id: MobInsect
+  components:
+  - type: NightVision
+    color: "#50511a"
+    luminancethreshold: 0.1
+    noiseamount: 0.8
+  - type: Crawler
+    speedModifier : 0.8
+  - type: PermanentBlindness #ради баланса вселенной
+    blindness: 3
 
 - type: entity
   abstract: true
@@ -22,6 +31,63 @@
   id: BaseMobInsect
   name: Урист макЛичинус
   components:
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 100
+    damage:
+      types:
+        Heat: -0.07
+        Poison: -0.50
+      groups:
+        Brute: -0.07
+  - type: Sprite
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["brass"]
+    - map: ["pants"]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: ["jumpsuit"]
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "outerClothing" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
+    - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-insect
+      visible: false
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
   - type: ExplosionResistance
     damageCoefficient: 0.8
   - type: Reactive
@@ -42,6 +108,7 @@
         damage:
           types:
             Poison: 2
+        probability: 0.5
       - !type:Emote
         emote: Scream
         showInChat: false
@@ -74,16 +141,17 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 400
+        density: 300
         restitution: 0.0
         mask:
         - MobMask
         layer:
         - MobLayer
   - type: MeleeWeapon
+    altDisarm: false
     soundHit:
       collection: AlienClaw
-    angle: 30
+    angle: 0
     animation: WeaponArcClaw
     damage:
       types:

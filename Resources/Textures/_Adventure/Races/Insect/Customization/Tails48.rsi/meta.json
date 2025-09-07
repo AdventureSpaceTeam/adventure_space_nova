@@ -12,6 +12,14 @@
       "directions": 4
     },
     {
+      "name": "tail_double",
+      "directions": 4
+    },
+    {
+      "name": "tail_up",
+      "directions": 4
+    },
+    {
       "name": "body",
       "directions": 4
     }

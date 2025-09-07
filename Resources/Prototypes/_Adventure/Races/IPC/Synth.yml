@@ -124,12 +124,9 @@
       225: 0.4
   - type: StatusEffects
     allowed:
-      - Stun
       - KnockedDown
       - SlowedDown
-      - Stutter
       - Electrocution
-      - SlurredSpeech
       - RatvarianLanguage
       - PressureImmunity
       - TemporaryBlindness

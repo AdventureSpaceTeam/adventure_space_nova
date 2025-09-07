@@ -10,6 +10,14 @@
     {
       "name": "body",
       "directions": 4
+    },
+    {
+      "name": "hand_saw",
+      "directions": 4
+    },
+    {
+      "name": "hand_small",
+      "directions": 4
     }
   ]
 }

@@ -149,13 +149,9 @@
         color: "#6d065b"
   - type: StatusEffects
     allowed:
-    - Stun
     - KnockedDown
     - SlowedDown
-    - Stutter
     - Electrocution
-    - Drunk
-    - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
