@@ -39,3 +39,80 @@
   sprites:
   - sprite: _Adventure/Races/Insect/Customization/body.rsi
     state: body
+
+- type: marking
+  id: InsectHeadNOBase
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: NObase
+
+- type: marking
+  id: InsectTailDouble
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: tail_double
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: body
+
+- type: marking
+  id: InsectTailUp
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: tail_up
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: body
+
+- type: marking
+  id: InsectSnoutBig
+  bodyPart: Snout
+  markingCategory: Snout
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/face.rsi
+    state: mandibles_big
+
+- type: marking
+  id: InsectSnoutGiant
+  bodyPart: Snout
+  markingCategory: Snout
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/face.rsi
+    state: mandibles_giant
+
+- type: marking
+  id: InsectHandSaw
+  bodyPart: Back
+  followSkinColor: true
+  forcedColoring: true
+  markingCategory: Back
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: hand_saw
+
+- type: marking
+  id: InsectHandSmall
+  bodyPart: Back
+  followSkinColor: true
+  forcedColoring: true
+  markingCategory: Back
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: hand_small

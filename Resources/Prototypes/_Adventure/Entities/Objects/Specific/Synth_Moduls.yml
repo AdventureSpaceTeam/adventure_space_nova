@@ -242,6 +242,31 @@
     Plastic: 500
     Gold: 100
 
+# пивной модуль КПБ
+- type: entity
+  parent: BaseIPCModul
+  id: IPCModulBeer
+  description: Сервисный тип модернизации КПБ, отображает реагенты и их состав.
+  name: пивной модуль КПБ
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Specific/IPC_moduls.rsi
+    layers:
+    - state: beer
+  - type: SolutionScanner
+  - type: ShowThirstIcons
+  - type: SpillProofThrower
+
+- type: latheRecipe
+  id: IPCModulBeer
+  parent: IPCModulMed
+  result: IPCModulBeer
+  materials:
+    Steel: 200
+    Glass: 500
+    Plastic: 200
+    Gold: 50
+
 # Изучение
 - type: technology
   id: IPCModulS
@@ -251,7 +276,7 @@
     state: base
   discipline: Industrial
   tier: 1
-  cost: 30000
+  cost: 15000
   recipeUnlocks:
   - IPCModulMed
   - IPCModulEng
@@ -259,6 +284,7 @@
   - IPCModulLight
   - IPCModulNoShock
   - IPCModulMusic
+  - IPCModulBeer
 
 # Модули антагов
 # модуль КПБ Синдиката

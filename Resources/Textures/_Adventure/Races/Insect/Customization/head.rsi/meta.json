@@ -12,6 +12,10 @@
       "directions": 4
     },
     {
+      "name": "NObase",
+      "directions": 4
+    },
+    {
       "name": "forward",
       "directions": 4
     },
