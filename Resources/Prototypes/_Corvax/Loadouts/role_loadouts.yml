@@ -1,6 +1,7 @@
 - type: roleLoadout
   id: JobIAA
   groups:
+  - GroupPlasManSuitIAA #Adventure
   - Inventory # Corvax-Loadouts
   - LawyerNeck
   - LawyerJumpsuit

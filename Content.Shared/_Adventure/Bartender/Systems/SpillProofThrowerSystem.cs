@@ -31,5 +31,5 @@ public sealed class SpillProofThrowerSystem : EntitySystem
 [ByRefEvent]
 public record struct SpillProofThrowEvent(bool NonSpillThrow = false) : IInventoryRelayEvent
 {
-    SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.HEAD | SlotFlags.MASK | SlotFlags.EYES;
+    SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.HEAD | SlotFlags.MASK | SlotFlags.EYES | SlotFlags.IPC;
 }

@@ -11,6 +11,8 @@
   id: BaseMobZerah
   name: Урист макЗмий
   components:
+  - type: Crawler
+    speedModifier : 0.8
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Devourer
@@ -60,9 +62,10 @@
         layer:
         - MobLayer
   - type: MeleeWeapon
+    altDisarm: false
     soundHit:
       collection: AlienClaw
-    angle: 30
+    angle: 0
     animation: WeaponArcClaw
     damage:
       types:
