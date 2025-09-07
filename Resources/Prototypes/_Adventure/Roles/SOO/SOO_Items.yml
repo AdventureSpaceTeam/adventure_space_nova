@@ -1,0 +1,224 @@
+#Комбинезон ОСО
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSOO
+  name: комбинезон ОСО
+  description: Чёрный тактический комбинезон с армированными вставками, готов к любому сценарию.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_Uniform.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_Uniform.rsi
+
+#Фуражка ОСО
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapSOO
+  name: Фуражка ОСО
+  description: Фуражка Офицера Спецопераций. Символ власти — и прицел для врагов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_Cap.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_Cap.rsi
+
+#Гарнитура-наушники ОСО
+- type: entity
+  name: гарнитура-наушники ОСО
+  parent: ClothingHeadsetAltCentCom
+  id: SOOHeadsetAlt
+  description: Тактическая гарнитура. Говори тихо — тебя и так слышат.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_HeadSet.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_HeadSet.rsi
+
+#Очки ОСО
+- type: entity
+  parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons, ShowMedicalIcons]
+  id: ClothingEyesGlassesSOO
+  description: Очки, защищающие глаза от яркого света.
+  name: очки ОСО
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_Glasses.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_Glasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+
+#Перчатки ОСО
+- type: entity
+  parent: ClothingHandsGlovesCaptain
+  id: ClothingHandsGlovesSOO
+  name: перчатки ОСО
+  description: Тактический перчатки элитных солдат.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_Gloves.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_Gloves.rsi
+
+#Противогаз ОСО
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskSOO
+  name: противогаз ЦСС
+  description: Не освежает дыхание.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_mask.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_mask.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+
+#Пальто ОСО
+- type: entity
+  parent: [ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase]
+  id: ClothingBeltMilitaryWebbingCLEA
+  name: Пальто ОСО
+  description: Не сковывает движений!
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_Webbing.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_Webbing.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+
+#Боевой Бронежилет ЦСС
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: ClothingOuterArmorCLEA
+  name: боевой бронежилет ЦСС
+  description: Стандартный армейский бронежилет.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_armor.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: AllowSuitStorage
+
+#Рюкзак ОСО
+- type: entity
+  parent: ClothingBackpackERTSecurity
+  id: ClothingMilitaryBackpackSOO
+  name: рюкзак ОСО
+  description: Тактический ранец. Всё необходимое — под рукой. Даже то, о чём ты не должен знать.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_BackPack.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_BackPack.rsi
+  - type: StorageFill
+    contents:
+    - id: BoxZiptie
+    - id: CrowbarRed
+    - id: DoubleEmergencyOxygenTankFilled
+
+#ID карта ОСО
+- type: entity
+  parent: IDCardStandard
+  id: CLEAIDCard
+  name: ID карта Солдата ЦСС
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/other/CLEA_IDcard.rsi
+    layers:
+    - state: silver
+    - state: idCLEA
+  - type: PresetIdCard
+    job: CLEASoldier
+  - type: Item
+    heldPrefix: silver
+
+#КПК солдата ЦСС
+- type: entity
+  parent: BasePDA
+  id: CLEAPDA
+  name: КПК Солдата ЦСС
+  description: Не такой робастный, как у отряда быстрого реагирования.
+  components:
+  - type: Pda
+    id: CLEAIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-CLEA
+  - type: PdaBorderColor
+    borderColor: "#4e4e56"
+  - type: Icon
+    state: pda-CLEA
+    
+#Скафандр ЦСС
+- type: entity
+  parent: ClothingOuterHardsuitSecurity
+  id: ClothingOuterHardsuitCLEA
+  name: скафандр солдата ЦСС
+  description: Базовый боевой скафандр центральных силовых структур.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Caustic: 0.65
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCLEA
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitSOO
+  name: шлем скафандра ОСО
+  description: Таким шлемом можно колоть орехи.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit_helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit_helmet.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
