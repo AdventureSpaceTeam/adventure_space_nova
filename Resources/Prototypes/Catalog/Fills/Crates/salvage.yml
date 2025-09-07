@@ -33,13 +33,13 @@
     contents:
       # Adventure modsuit start
       - id: ClothingControlModsuitEngineer2Sealed
-        prob: 0.06
+        prob: 0.085
       - id: ClothingControlModsuitMedical2Sealed
-        prob: 0.065
+        prob: 0.075
       - id: ClothingControlModsuitRND2Sealed
-        prob: 0.065
-      - id: ClothingControlModsuitMinerSealed
         prob: 0.095
+      - id: ClothingControlModsuitMinerSealed
+        prob: 0.04
       # Addventure modsuit end
         # Normal (10%)
       - id: OxygenTankFilled

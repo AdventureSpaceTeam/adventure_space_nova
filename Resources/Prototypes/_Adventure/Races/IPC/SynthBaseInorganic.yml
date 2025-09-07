@@ -120,14 +120,10 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
-    - Stun
     - KnockedDown
     - SlowedDown
-    - Stutter
     - SeeingRainbows
     - Electrocution
-    - Drunk
-    - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
