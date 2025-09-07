@@ -4,8 +4,8 @@
   mapPath: /Maps/_Adventure/square.yml
   maxRandomOffset: 0
   randomRotation: false 
-  minPlayers: 20
-  maxPlayers: 100
+  minPlayers: 25
+  maxPlayers: 105
   stations:
     advSquare:
       stationProto: StandardNanotrasenStation
@@ -16,7 +16,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'SW'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/Shuttles/emergency_square.yml
+          emergencyShuttlePath: /Maps/_Adventure/emergency_square.yml
         - type: StationJobs
           overflowJobs:
             - Passenger
