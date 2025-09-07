@@ -1,9 +1,9 @@
 - type: gameMap
-  id: Adventuresquare
+  id: AdventureSquare
   mapName: 'Square'
   mapPath: /Maps/_Adventure/square.yml
   maxRandomOffset: 0
-  randomRotation: false 
+  randomRotation: false
   minPlayers: 25
   maxPlayers: 105
   stations:
