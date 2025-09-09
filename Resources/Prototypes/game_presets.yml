@@ -165,7 +165,7 @@
     - tator
   name: traitor-title
   description: traitor-description
-  showInVote: true
+  showInVote: false # secret
   rules:
   - DummyNonAntagChance
   - Traitor
