@@ -9,8 +9,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/advanced.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/advanced.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -34,8 +34,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/advanced.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/advanced.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -58,8 +58,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/engineer2.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/engineer2.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -82,8 +82,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/rnd.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/rnd.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -107,8 +107,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/atmospheric.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/atmospheric.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -130,8 +130,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/medical.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/medical.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -152,8 +152,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/cmo.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/cmo.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -174,8 +174,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/civillian.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/civillian.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -194,8 +194,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/magnate.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/magnate.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -218,8 +218,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/security.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/security.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -242,8 +242,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/hos.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/hos.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -266,8 +266,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/salvage.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/salvage.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -288,8 +288,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/miner.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/miner.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -312,8 +312,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nukeops.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nukeops.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -336,8 +336,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nukeopscmd.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nukeopscmd.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -360,8 +360,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/corporate.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/corporate.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -379,8 +379,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nukeopsclown.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nukeopsclown.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
 
 - type: entity
   parent: ClothingHeadHelmetModsuitCEBase
@@ -390,8 +390,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/apocryphal.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/apocryphal.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -417,8 +417,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/rnd2.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/rnd2.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -442,8 +442,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/engineer.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/engineer.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -466,8 +466,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/medical2.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/medical2.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -488,8 +488,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/sstcmd.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/sstcmd.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -512,8 +512,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/sstsupport.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/sstsupport.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -536,8 +536,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nakamuraengineer.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/nakamuraengineer.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:
@@ -560,8 +560,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/pmc.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Head/pmc.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Armor
     modifiers:
       coefficients:

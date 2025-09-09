@@ -41,6 +41,8 @@
         conditions:
         - !type:OrganType
           type: Moth
+        - !type:OrganType
+          type: InsectSerpentide
 
 - type: reagent
   id: BuzzochloricBees

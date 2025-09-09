@@ -111,7 +111,7 @@ public sealed partial class GridSpawnGroup : IGridSpawnGroup
     public int MaxCount { get; set; } = 1;
     public ComponentRegistry AddComponents { get; set; } = new();
     public bool Hide { get; set; } = false;
-    public bool NameGrid { get; set; } = true;
+    public bool NameGrid { get; set; } = false; // Adventure
     public bool StationGrid { get; set; } = true;
 }
 

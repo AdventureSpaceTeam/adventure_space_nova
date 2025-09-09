@@ -9,14 +9,15 @@
   <GuideEntityEmbed Entity="MobDwarf" Caption="Дворф"/>
   <GuideEntityEmbed Entity="MobHuman" Caption="Человек"/>
   <GuideEntityEmbed Entity="MobMoth" Caption="Ниан"/>
+  <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
   <GuideEntityEmbed Entity="MobSlimePerson" Caption="Слаймолюд"/>
   <GuideEntityEmbed Entity="MobVulpkanin" Caption="Вульпканин"/>
   <GuideEntityEmbed Entity="MobVox" Caption="Вокс"/>
   <GuideEntityEmbed Entity="MobSynth" Caption="КПБ"/>
   <GuideEntityEmbed Entity="MobPlasMan" Caption="Плазмалюд"/>
+  <GuideEntityEmbed Entity="MobInsect" Caption="Серпентид"/>
   </Box>
   <Box>
   <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>

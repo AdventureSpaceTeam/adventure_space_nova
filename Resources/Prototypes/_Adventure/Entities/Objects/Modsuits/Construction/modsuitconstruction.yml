@@ -9,8 +9,8 @@
     sprite: _Adventure/Objects/Modsuits/Clothing/Back/advanced.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Modsuits/Clothing/Back/advanced.rsi
-    equipSound: /Audio/Imperial/Modsuits/ballin.ogg
-    unequipSound: /Audio/Imperial/Modsuits/ballout.ogg
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Storage
     capacity: 30
 #Modsuit Parts start
@@ -164,19 +164,6 @@
   - type: Tag
     tags:
     - ModsuitHelmet
-
-- type: entity
-  parent: BaseItem
-  id: PaintKitModsuitConstructing
-  name: CE modsuit helmet
-  description: Special hardsuit helmet, made for the CE of the station.
-  components:
-  - type: Sprite
-    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-    state: paintkit
-  - type: Tag
-    tags:
-    - ModsuitPaintKit #Modsuit Cores
 
 - type: entity #cores end
   parent: BaseItem

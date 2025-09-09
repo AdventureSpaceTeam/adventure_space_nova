@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "states": [
+    {
+      "name": "body",
+      "directions": 4
+    },
+    {
+      "name": "hand_saw",
+      "directions": 4
+    },
+    {
+      "name": "hand_small",
+      "directions": 4
+    }
+  ]
+}

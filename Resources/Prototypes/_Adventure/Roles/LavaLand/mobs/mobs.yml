@@ -42,7 +42,6 @@
   - type: StatusEffects
     allowed:
     - SlowedDown
-    - Stutter
     - Electrocution
     - TemporaryBlindness
     - RadiationProtection

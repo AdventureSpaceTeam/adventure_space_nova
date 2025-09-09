@@ -504,6 +504,9 @@
           - !type:OrganType
             type: Vox
             shouldHave: false
+          - !type:OrganType # Adventure
+            type: InsectSerpentide
+            shouldHave: false
         type: Local
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-sick" ]
@@ -520,6 +523,9 @@
           - !type:OrganType
             type: Vox
             shouldHave: false
+          - !type:OrganType # Adventure
+            type: InsectSerpentide
+            shouldHave: false
       - !type:HealthChange
         conditions:
         - !type:OrganType # Adventure
@@ -530,6 +536,9 @@
           shouldHave: false
         - !type:OrganType
           type: Vox
+          shouldHave: false
+        - !type:OrganType # Adventure
+          type: InsectSerpentide
           shouldHave: false
         damage:
           types:
@@ -553,6 +562,12 @@
           type: Vox
         reagent: Protein
         amount: 0.25
+      - !type:AdjustReagent # Adventure
+        conditions:
+        - !type:OrganType # Adventure
+          type: InsectSerpentide
+        reagent: Protein
+        amount: 0.5
 
 - type: reagent
   id: Allicin
@@ -772,4 +787,6 @@
 # Adventure-edit-start
         - !type:OrganType
           type: PigMan
+        - !type:OrganType
+          type: InsectSerpentide
 # Adventure-edit-end
