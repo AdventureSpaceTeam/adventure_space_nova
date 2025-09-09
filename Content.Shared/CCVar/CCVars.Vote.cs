@@ -83,6 +83,18 @@ public sealed partial class CCVars
         VoteTimerAlone = CVarDef.Create("vote.timeralone", 10, CVar.SERVERONLY);
 
     /// <summary>
+    ///     Allows enabling/disabling player-started callshuttle command.
+    /// </summary>
+    public static readonly CVarDef<bool> VoteCallShuttleEnabled =
+        CVarDef.Create("votecallshuttle.enabled", true, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Sets the duration of the callshuttle vote timer.
+    /// </summary>
+    public static readonly CVarDef<int>
+        VoteTimerCallShuttle = CVarDef.Create("vote.timercallshuttle", 30, CVar.SERVERONLY);
+
+    /// <summary>
     ///     Allows enabling/disabling player-started votekick for ultimate authority
     /// </summary>
     public static readonly CVarDef<bool> VotekickEnabled =

@@ -32,13 +32,15 @@ namespace Content.Server.Voting.Managers
         private VotingSystem? _votingSystem;
         private RoleSystem? _roleSystem;
         private GameTicker? _gameTicker;
+        private DateTimeOffset _lastCallShuttleVoteTime = DateTimeOffset.MinValue;
 
         private static readonly Dictionary<StandardVoteType, CVarDef<bool>> VoteTypesToEnableCVars = new()
         {
             {StandardVoteType.Restart, CCVars.VoteRestartEnabled},
             {StandardVoteType.Preset, CCVars.VotePresetEnabled},
             {StandardVoteType.Map, CCVars.VoteMapEnabled},
-            {StandardVoteType.Votekick, CCVars.VotekickEnabled}
+            {StandardVoteType.Votekick, CCVars.VotekickEnabled},
+            {StandardVoteType.CallShuttle, CCVars.VoteCallShuttleEnabled}
         };
 
         public void CreateStandardVote(ICommonSession? initiator, StandardVoteType voteType, string[]? args = null)
@@ -68,6 +70,9 @@ namespace Content.Server.Voting.Managers
                 case StandardVoteType.Votekick:
                     timeoutVote = false; // Allows the timeout to be updated manually in the create method
                     CreateVotekickVote(initiator, args);
+                    break;
+                case StandardVoteType.CallShuttle:
+                    CreateCallShuttleVote(initiator);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(voteType), voteType, null);
@@ -213,6 +218,79 @@ namespace Content.Server.Voting.Managers
             _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Restart vote failed: Current Ghost player percentage:{roundedGhostPercentage.ToString()}% does not meet {ghostPercentageRequirement.ToString()}%");
             _chatManager.DispatchServerAnnouncement(
                 Loc.GetString("ui-vote-restart-fail-not-enough-ghost-players", ("ghostPlayerRequirement", ghostPercentageRequirement)));
+        }
+
+        private void CreateCallShuttleVote(ICommonSession? initiator)
+        {
+            var now = DateTimeOffset.UtcNow;
+            var cooldown = TimeSpan.FromMinutes(10);
+
+            if (now - _lastCallShuttleVoteTime < cooldown)
+            {
+                if (initiator != null)
+                {
+                    var remaining = cooldown - (now - _lastCallShuttleVoteTime);
+                    _chatManager.ChatMessageToOne(
+                        ChatChannel.Server,
+                        Loc.GetString("ui-vote-call-shuttle-cooldown", ("minutes", $"{remaining.Minutes:D2}"), ("seconds", $"{remaining.Seconds:D2}")),
+                        Loc.GetString("chat-manager-server-wrap-message", ("message", Loc.GetString("ui-vote-call-shuttle-cooldown", ("minutes", $"{remaining.Minutes:D2}"), ("seconds", $"{remaining.Seconds:D2}")))),
+                        default,
+                        false,
+                        initiator.Channel);
+                }
+                return;
+            }
+
+            _lastCallShuttleVoteTime = now;
+
+            var alone = _playerManager.PlayerCount == 1 && initiator != null;
+            var options = new VoteOptions
+            {
+                Title = Loc.GetString("ui-vote-call-shuttle-title"),
+                Options =
+                {
+                    (Loc.GetString("ui-vote-call-shuttle-yes"), "yes"),
+                    (Loc.GetString("ui-vote-call-shuttle-no"), "no"),
+                },
+                Duration = alone
+                    ? TimeSpan.FromSeconds(_cfg.GetCVar(CCVars.VoteTimerAlone))
+                    : TimeSpan.FromSeconds(_cfg.GetCVar(CCVars.VoteTimerCallShuttle)),
+                InitiatorTimeout = TimeSpan.FromMinutes(5)
+            };
+
+            if (alone)
+                options.InitiatorTimeout = TimeSpan.FromSeconds(10);
+
+            WirePresetVoteInitiator(options, initiator);
+
+            var vote = CreateVote(options);
+
+            vote.OnFinished += (_, _) =>
+            {
+                var votesYes = vote.VotesPerOption["yes"];
+                var votesNo = vote.VotesPerOption["no"];
+                var total = votesYes + votesNo;
+
+                if (total > 0 && votesYes / (float)total >= 0.75f)
+                {
+                    var roundEnd = _entityManager.EntitySysManager.GetEntitySystem<RoundEndSystem>();
+                    roundEnd.RequestRoundEnd(initiator?.AttachedEntity, false);
+                    _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-call-shuttle-succeeded"));
+                }
+                else
+                {
+                    _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-call-shuttle-failed"));
+                }
+            };
+
+            if (initiator != null)
+                vote.CastVote(initiator, 0);
+
+            foreach (var player in _playerManager.Sessions)
+            {
+                if (player != initiator)
+                    vote.CastVote(player, 2);
+            }
         }
 
         private void CreatePresetVote(ICommonSession? initiator)

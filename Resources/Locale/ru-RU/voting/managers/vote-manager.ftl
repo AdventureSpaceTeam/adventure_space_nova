@@ -28,3 +28,11 @@ ui-vote-votekick-success = Голосование за кик { $target } про
 ui-vote-votekick-failure = Голосование за кик { $target } провалилось. Причина кика: { $reason }
 ui-vote-votekick-not-enough-eligible = Недостаточное количество подходящих голосующих онлайн для начала голосования: { $voters }/{ $requirement }
 ui-vote-votekick-server-cancelled = Голосование за кик { $target } отменено сервером.
+# Votecallshuttle
+ui-vote-type-callshuttle = Вызвать эвакуацию
+ui-vote-call-shuttle-title = Вызвать эвакуацию
+ui-vote-call-shuttle-yes = Да
+ui-vote-call-shuttle-no = Нет
+ui-vote-call-shuttle-succeeded = Голосование о вызове эвакуации успешно.
+ui-vote-call-shuttle-failed = Голосование о вызове эвакуации отклонено требуется 75% согласных.
+ui-vote-call-shuttle-cooldown = Голосование за вызов эвакуации доступно раз в 10 минут. До следующего голосования осталось { $minutes }:{ $seconds }.
