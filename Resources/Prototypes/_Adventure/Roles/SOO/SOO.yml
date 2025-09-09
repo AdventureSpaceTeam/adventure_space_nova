@@ -1,3 +1,33 @@
+#Роль
+- type: job
+  id: SOO
+  name: Офицер Специальных Операций
+  description: Защищайте активы НаноТрейзен.
+  playTimeTracker: JobBlueshield
+# Adventure-edit-end
+  startingGear: BlueshieldGear
+  icon: "JobIconSOO"
+  requireAdminNotify: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+
+  #Иконка
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSOO
+  icon:
+    sprite: _Adventure/Roles/SOO/misc/SOO_icon.rsi
+    state: BlueShieldOfficer
+  jobName: Офицер Специальных Операций
+
 #Комбинезон ОСО
 - type: entity
   parent: ClothingUniformBase
@@ -84,23 +114,21 @@
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: Tag
-    tags:
-    - HidesHair
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
 
-#Пальто ОСО
+#Трэнч ОСО
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: BlueShieldArmoredTrench
+  id: SOOArmoredTrench
   name: укреплённый тренч офицера синий щит
-  description: Тренч из самых лучших синтетических материалов и с прочными вставками из керамических пластин. Не мешает движениям, но защищает на ура.
+  description: На внутренней подкладке — схема станции. Последняя метка — там, где ещё никто не умер… но скоро умрёт.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Trench.rsi
+    sprite: _Adventure/Roles/SOO/SOO_Trench.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Trench.rsi
+    sprite: _Adventure/Roles/SOO/SOO_Trench.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -113,15 +141,15 @@
 
 #Рюкзак ОСО
 - type: entity
-  parent: ClothingBackpackERTSecurity
+  parent: ClothingBackpackDeathSquad
   id: ClothingMilitaryBackpackSOO
   name: рюкзак ОСО
   description: Тактический ранец. Всё необходимое — под рукой. Даже то, о чём ты не должен знать.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_BackPack.rsi
+    sprite: _Adventure/Roles/SOO/SOO_BackPack.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_BackPack.rsi
+    sprite: _Adventure/Roles/SOO/SOO_BackPack.rsi
   - type: StorageFill
     contents:
     - id: BoxZiptie
@@ -131,49 +159,49 @@
 #ID карта ОСО
 - type: entity
   parent: IDCardStandard
-  id: CLEAIDCard
+  id: SOOIDCard
   name: ID карта ОСО
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/other/CLEA_IDcard.rsi
+    sprite: _Adventure/Roles/SOO/misc/SOO_IDcard.rsi
     layers:
-    - state: silver
-    - state: idCLEA
+    - state: idSOO
   - type: PresetIdCard
-    job: CLEASoldier
+    job: SOO
   - type: Item
-    heldPrefix: silver
+    heldPrefix: idSOO
 
-#КПК солдата ЦСС
+#КПК ОСО
 - type: entity
   parent: BasePDA
-  id: CLEAPDA
-  name: КПК Солдата ЦСС
-  description: Не такой робастный, как у отряда быстрого реагирования.
+  id: SOOPDA
+  name: КПК ОСО
+  description: Подключён ко всему. Даже к тому, что не должно существовать.
   components:
   - type: Pda
-    id: CLEAIDCard
+    id: SOOIDCard
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
        !type:String
-       pda-CLEA
+       pda-SOO
   - type: PdaBorderColor
-    borderColor: "#4e4e56"
+    borderColor: "#383838"
+    accentVColor: "#383838"
   - type: Icon
-    state: pda-CLEA
+    state: pda-SOO
     
-#Скафандр ЦСС
+#Скафандр ОСО
 - type: entity
   parent: ClothingOuterHardsuitSecurity
-  id: ClothingOuterHardsuitCLEA
-  name: скафандр солдата ЦСС
-  description: Базовый боевой скафандр центральных силовых структур.
+  id: ClothingOuterHardsuitSOO
+  name: скафандр ОСО
+  description: Последний скафандр, который ты наденешь. Потому что следующий — уже не потребуется.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit.rsi
+    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit.rsi
+    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -182,28 +210,28 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
-        Piercing: 0.65
-        Caustic: 0.65
+        Blunt: 0.30
+        Slash: 0.30
+        Piercing: 0.30
+        Caustic: 0.30
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitCLEA
+    clothingPrototype: ClothingHeadHelmetHardsuitSOO
 
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHardsuitSOO
   name: шлем скафандра ОСО
-  description: Таким шлемом можно колоть орехи.
+  description: Голос в наушнике — не твой. И не командования. Он всегда был здесь.
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit_helmet.rsi
+    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit_helmet.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_hardhuit/CLEA_hardhuit_helmet.rsi
+    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit_helmet.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
