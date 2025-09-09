@@ -38,7 +38,7 @@
 - type: entity
   parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons, ShowMedicalIcons]
   id: ClothingEyesGlassesSOO
-  description: Очки, защищающие глаза от яркого света.
+  description: Они не скрывают лицо. Но скрывают взгляд.
   name: очки ОСО
   components:
   - type: Sprite
@@ -54,7 +54,7 @@
   parent: ClothingHandsGlovesCaptain
   id: ClothingHandsGlovesSOO
   name: перчатки ОСО
-  description: Тактический перчатки элитных солдат.
+  description: Не просто перчатки. Это подпись на каждом трупе.
   components:
   - type: Sprite
     sprite: _Adventure/Roles/SOO/SOO_Gloves.rsi
@@ -65,22 +65,22 @@
 - type: entity
   parent: ClothingMaskGas
   id: ClothingMaskSOO
-  name: противогаз ЦСС
+  name: противогаз ОСО
   description: Не освежает дыхание.
   components:
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_mask.rsi
+    sprite: _Adventure/Roles/SOO/SOO_Mask.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_mask.rsi
+    sprite: _Adventure/Roles/SOO/SOO_Mask.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.95
-        Slash: 0.95
-        Piercing: 0.95
-        Heat: 0.95
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.90
+        Heat: 0.90
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: Tag
@@ -92,39 +92,24 @@
 
 #Пальто ОСО
 - type: entity
-  parent: [ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase]
-  id: ClothingBeltMilitaryWebbingCLEA
-  name: Пальто ОСО
-  description: Не сковывает движений!
+  parent: ClothingOuterArmorBasic
+  id: BlueShieldArmoredTrench
+  name: укреплённый тренч офицера синий щит
+  description: Тренч из самых лучших синтетических материалов и с прочными вставками из керамических пластин. Не мешает движениям, но защищает на ура.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_Webbing.rsi
+    sprite: _Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Trench.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_Webbing.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
-
-#Боевой Бронежилет ЦСС
-- type: entity
-  parent: ClothingOuterBaseMedium
-  id: ClothingOuterArmorCLEA
-  name: боевой бронежилет ЦСС
-  description: Стандартный армейский бронежилет.
-  components:
-  - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_armor.rsi
-  - type: Clothing
-    sprite: _Adventure/Roles/SpecialForces/CLEA/CLEA_armor.rsi
+    sprite: _Adventure/Roles/blueshield/Clothing/OUTERCLOTHING/Trench.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.80
-        Slash: 0.80
-        Piercing: 0.80
-        Heat: 0.80
+        Blunt: 0.60
+        Slash: 0.60
+        Piercing: 0.50
+        Heat: 0.70
   - type: ExplosionResistance
-    damageCoefficient: 0.90
-  - type: AllowSuitStorage
+    damageCoefficient: 0.75
 
 #Рюкзак ОСО
 - type: entity
@@ -147,7 +132,7 @@
 - type: entity
   parent: IDCardStandard
   id: CLEAIDCard
-  name: ID карта Солдата ЦСС
+  name: ID карта ОСО
   components:
   - type: Sprite
     sprite: _Adventure/Roles/SpecialForces/CLEA/other/CLEA_IDcard.rsi
