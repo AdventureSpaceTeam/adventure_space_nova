@@ -113,7 +113,7 @@
   icon:
     sprite: Structures/Storage/tanks.rsi
     state: highfueltank
-  product: BigCrateMaterialHFuelTankBig
+  product: WeldingFuelTankHighCapacity
   cost: 3000
   category: cargoproduct-category-name-materials
   group: market
@@ -123,7 +123,7 @@
   icon:
     sprite: Structures/Storage/tanks.rsi
     state: highwatertank
-  product: BigCrateMaterialHWaterTankBig
+  product: WaterTankHighCapacity
   cost: 3000
   category: cargoproduct-category-name-materials
   group: market
