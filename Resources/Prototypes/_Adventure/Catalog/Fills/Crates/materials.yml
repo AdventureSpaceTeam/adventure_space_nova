@@ -1,8 +1,8 @@
 - type: entity
   id: BigCrateMaterialGlass
   parent: CrateGenericSteel
-  name: большой ящик со стеклом
-  description: 450 пластин стекла, укомплетованные с любовью для больших целей.
+  name: большой ящик стекла
+  description: 450 листов стекла, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -12,8 +12,8 @@
 - type: entity
   id: BigCrateMaterialSteel
   parent: CrateGenericSteel
-  name: большой ящик со сталью
-  description: 450 пластин стали, укомплетованные с любовью для больших целей.
+  name: большой ящик стали
+  description: 450 листов стали, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -23,8 +23,8 @@
 - type: entity
   id: BigCrateMaterialBrass
   parent: CrateGenericSteel
-  name: большой ящик с латунью
-  description: 450 пластин латуни, укомплетованные с любовью для больших целей.
+  name: большой ящик латуни
+  description: 450 листов латуни, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -34,8 +34,8 @@
 - type: entity
   id: BigCrateMaterialPlasteel
   parent: CrateGenericSteel
-  name: большой ящик с пласталью
-  description: 150 пластин пластали, укомплетованные с любовью для больших целей.
+  name: большой ящик пластали
+  description: 150 листов пластали, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -45,8 +45,8 @@
 - type: entity
   id: BigCrateMaterialPlastic
   parent: CrateGenericSteel
-  name: большой ящик с пластиком
-  description: 450 пластин пластика, укомплетованные с любовью для больших целей.
+  name: большой ящик пластика
+  description: 450 листов пластика, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -56,8 +56,8 @@
 - type: entity
   id: BigCrateMaterialPlasma
   parent: CratePlasma
-  name: большой ящик с плазмой
-  description: 150 пластин плазмы, укомплетованные с любовью для больших целей.
+  name: большой ящик плазмы
+  description: 150 листов плазмы, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -67,7 +67,7 @@
 - type: entity
   id: BigCrateMaterialGold
   parent: CrateGenericSteel
-  name: большой ящик с золотом
+  name: большой ящик золота
   description: 150 слитков золота, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
@@ -78,8 +78,8 @@
 - type: entity
   id: BigCrateMaterialSilver
   parent: CrateGenericSteel
-  name: большой ящик с серебром
-  description: 150 слитков с сталью, укомплетованные с любовью для больших целей.
+  name: большой ящик серебра
+  description: 150 слитков серебра, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -90,7 +90,7 @@
   id: BigCrateMaterialCardboard
   parent: CrateGenericSteel
   name: большой ящик картона
-  description: 450 кусочков картона, укомплетованные с любовью для больших целей.
+  description: 450 листов картона, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -112,7 +112,7 @@
   id: BigCrateMaterialBasicResource
   parent: CrateGenericSteel
   name: большой ящик базовых ресурсов
-  description: 150 пластин стали, стекла и пластика, укомплетованные с любовью для больших целей.
+  description: 150 листов стали, стекла и пластика, укомплетованные с любовью для больших целей.
   components:
   - type: StorageFill
     contents:
@@ -125,7 +125,7 @@
 
 - type: entity
   id: BigCrateMaterialHFuelTankBig
-  name: ольшой резервуар со сварочным топливом
+  name: водяной резервуар большой ёмкости
   parent: CrateGenericSteel
   components:
   - type: StorageFill
@@ -135,7 +135,7 @@
 
 - type: entity
   id: BigCrateMaterialHWaterTankBig
-  name: Большой резервуар с водой
+  name: топливный резервуар большой ёмкости
   parent: CrateGenericSteel
   components:
   - type: StorageFill
