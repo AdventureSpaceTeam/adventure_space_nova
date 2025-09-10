@@ -114,7 +114,7 @@
     sprite: Structures/Storage/tanks.rsi
     state: highfueltank
   product: BigCrateMaterialHFuelTankBig
-  cost: 7500
+  cost: 3000
   category: cargoproduct-category-name-materials
   group: market
 
@@ -124,6 +124,6 @@
     sprite: Structures/Storage/tanks.rsi
     state: highwatertank
   product: BigCrateMaterialHWaterTankBig
-  cost: 5000
+  cost: 3000
   category: cargoproduct-category-name-materials
   group: market
