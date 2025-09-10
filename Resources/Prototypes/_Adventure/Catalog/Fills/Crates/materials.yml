@@ -122,23 +122,3 @@
       amount: 5
     - id: SheetPlastic
       amount: 5
-
-- type: entity
-  id: BigCrateMaterialHFuelTankBig
-  name: водяной резервуар большой ёмкости
-  parent: CrateGenericSteel
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeldingFuelTankHighCapacity
-        amount: 1
-
-- type: entity
-  id: BigCrateMaterialHWaterTankBig
-  name: топливный резервуар большой ёмкости
-  parent: CrateGenericSteel
-  components:
-  - type: StorageFill
-    contents:
-      - id: WaterTankHighCapacity
-        amount: 1
