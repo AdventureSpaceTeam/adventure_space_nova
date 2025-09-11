@@ -3,12 +3,12 @@
   "license": "CC-BY-SA-3.0",
   "copyright": "made by borkroman",
   "size": {
-    "x": 32,
-    "y": 32
+    "x": 40,
+    "y": 40
   },
   "states": [
     {
-      "name": "ghost0",
+      "name": "resomi0",
       "delays": [
         [
             0.3,
@@ -19,10 +19,10 @@
       ]
     },
     {
-      "name": "ghost1"
+      "name": "resomi1"
     },
     {
-      "name": "plasma0",
+      "name": "trottin0",
       "delays": [
         [
             0.3,
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "plasma1"
+      "name": "trottin1"
     }
   ]
 }

@@ -1,0 +1,109 @@
+﻿{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "ghost0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "ghost1"
+    },
+    {
+      "name": "plasma0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "plasma1"
+    },
+    {
+      "name": "neco0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "neco1"
+    },
+    {
+      "name": "skrell0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "skrell1"
+    },
+    {
+      "name": "snake0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "snake1"
+    },
+    {
+      "name": "drask0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "drask1"
+    },
+    {
+      "name": "insect0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "insect1"
+    }
+  ]
+}
