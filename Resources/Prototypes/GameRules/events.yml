@@ -31,6 +31,7 @@
     children:
     - id: ClosetSkeleton
     - id: KingRatMigration
+    - id: AlianSpawn # Adventure
     - id: RevenantSpawn
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
