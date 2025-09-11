@@ -142400,7 +142400,7 @@ entities:
     - type: Transform
       pos: -19.5,-3.5
       parent: 7536
-- proto: TegCenter
+- proto: TegCenterBroken
   entities:
   - uid: 19957
     components:
@@ -142408,23 +142408,19 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -16.5,41.5
       parent: 60
-- proto: TegCirculator
+- proto: TegCirculatorBroken
   entities:
   - uid: 19188
     components:
     - type: Transform
       pos: -15.5,41.5
       parent: 60
-    - type: PointLight
-      color: '#FF3300FF'
   - uid: 19189
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -17.5,41.5
       parent: 60
-    - type: PointLight
-      color: '#FF3300FF'
 - proto: TelecomServer
   entities:
   - uid: 17630
