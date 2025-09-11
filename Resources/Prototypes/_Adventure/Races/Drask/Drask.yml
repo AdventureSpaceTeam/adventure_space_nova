@@ -43,6 +43,8 @@
   id: BaseMobDrask
   name: Урист макТентакль
   components:
+  - type: TypingIndicator
+    proto: Drask
   - type: Respirator
     damage:
       types:

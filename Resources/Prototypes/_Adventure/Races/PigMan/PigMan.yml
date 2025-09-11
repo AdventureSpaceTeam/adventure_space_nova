@@ -21,6 +21,8 @@
   id: BaseMobPigMan
   name: Урист макСвин
   components:
+  - type: TypingIndicator
+    proto: Pig
   - type: Temperature
     heatDamageThreshold: 325
     coldDamageThreshold: 243.15

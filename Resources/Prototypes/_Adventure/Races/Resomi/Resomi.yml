@@ -30,6 +30,8 @@
   id: BaseMobResomi
   name: Урист макРезоми
   components:
+  - type: TypingIndicator
+    proto: Resomi
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:

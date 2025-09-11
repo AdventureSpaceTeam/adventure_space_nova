@@ -11,6 +11,8 @@
   id: BaseMobFelinid
   abstract: true
   components:
+  - type: TypingIndicator
+    proto: Neco
   - type: HumanoidAppearance
     species: Felinid
   - type: Hunger
