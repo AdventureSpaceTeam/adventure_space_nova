@@ -1,0 +1,70 @@
+# основа
+- type: soundCollection
+  id: AliensDead
+  files:
+  - /Audio/_Adventure/Voice/alian/alien_dead_1.ogg
+  - /Audio/_Adventure/Voice/alian/alien_dead_2.ogg
+
+- type: soundCollection
+  id: AliensWallDestroy
+  files:
+  - /Audio/_Adventure/Voice/alian/alien_wall_destr1.ogg
+  - /Audio/_Adventure/Voice/alian/alien_wall_destr2.ogg
+
+- type: soundCollection
+  id: AlienScream
+  files:
+  - /Audio/_Adventure/Voice/alian/alien_scream_1.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_2.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_3.ogg
+  - /Audio/_Adventure/Voice/alian/alien_dead_2.ogg
+
+- type: speechSounds
+  id: AlienSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/alian/alien_speach_1.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/alian/alien_speach_2.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/alian/alien_speach_3.ogg
+
+- type: soundCollection
+  id: AliensFootStep
+  files:
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep1.ogg
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep2.ogg
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep3.ogg
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep4.ogg
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep5.ogg
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep6.ogg
+  - /Audio/_Adventure/Voice/alian/Alien_FootStep7.ogg
+
+- type: soundCollection
+  id: AliensAttack
+  files:
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_1.1.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_1.2.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_1.3.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_2.1.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_2.2.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_2.3.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_3.1.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_3.2.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_attack_3.3.ogg
+
+# личинка
+- type: speechSounds
+  id: LarvaSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+
+- type: soundCollection
+  id: LarvaFootStep
+  files:
+  - /Audio/_Adventure/Voice/alian/larva_FootStep1.ogg
+  - /Audio/_Adventure/Voice/alian/larva_FootStep2.ogg
+  - /Audio/_Adventure/Voice/alian/larva_FootStep3.ogg

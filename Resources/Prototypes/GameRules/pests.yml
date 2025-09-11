@@ -14,6 +14,7 @@
     children:
     - id: KingRatMigration
     - id: SnailMigration
+    - id: AlianSpawn # Adventure
 
 # events
 
