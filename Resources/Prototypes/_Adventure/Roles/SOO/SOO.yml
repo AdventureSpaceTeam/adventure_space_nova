@@ -121,7 +121,7 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: SOOArmoredTrench
-  name: укреплённый тренч офицера синий щит
+  name: укреплённый тренч ОСО
   description: На внутренней подкладке — схема станции. Последняя метка — там, где ещё никто не умер… но скоро умрёт.
   components:
   - type: Sprite
@@ -196,7 +196,7 @@
     - NanoTaskCartridge
     - NewsReaderCartridge
     - WantedListCartridge
-    
+
 #Скафандр ОСО
 - type: entity
   parent: ClothingOuterHardsuitSecurity
@@ -230,7 +230,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitSOO
 
 - type: entity
-  parent: ClothingHeadHardsuitBase
+  parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSOO
   name: шлем скафандра ОСО
   description: Голос в наушнике — не твой. И не командования. Он всегда был здесь.
