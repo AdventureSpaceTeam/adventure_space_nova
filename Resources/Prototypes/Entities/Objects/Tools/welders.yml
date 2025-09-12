@@ -26,6 +26,7 @@
     sprite: Objects/Tools/welder.rsi
   - type: ItemToggle
     predictable: false
+    onActivate: false # Adventure
     soundActivate:
       path: /Audio/_Adventure/Weapon/Melee/fuelswords/welderactivate.ogg # Adventure
       params:
