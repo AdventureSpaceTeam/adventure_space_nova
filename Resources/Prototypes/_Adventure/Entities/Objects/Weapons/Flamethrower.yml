@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Heat: 5
+        Heat: 8
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -23,7 +23,7 @@
     radius: 3
     energy: 2
   - type: TimedDespawn
-    lifetime: 0.8
+    lifetime: 1.5
 
 #топливный бак
 - type: Tag
@@ -61,8 +61,8 @@
     slots: BACK
     sprite: _Adventure/Objects/Weapons/Flamethrower/fuel_tank.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.7
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: HeldSpeedModifier
 
 #Огнемёт
@@ -89,8 +89,8 @@
     - FullAuto
     projectileSpeed: 8
     fireRate: 8
-    maxAngle: 90
-    minAngle: 60
+    maxAngle: 45
+    minAngle: 30
     soundGunshot:
       collection: FlameShot
       params:
@@ -104,15 +104,12 @@
     maxAngle: -30
   - type: AmmoCounter
   - type: ClothingSlotAmmoProvider
+  - type: SlotBasedConnectedContainer
     targetSlot: BACK
-    providerWhitelist:
+    containerWhitelist:
       tags:
       - TankFlamethrower
   - type: Appearance
-  - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
-  - type: HeldSpeedModifier
   - type: UseDelay
     delay: 0.5
 
