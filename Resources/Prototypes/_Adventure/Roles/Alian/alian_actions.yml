@@ -1,3 +1,19 @@
+#Яйца
+- type: entity
+  parent: BaseAction
+  id: ActionAlianLayEgg
+  categories: [ HideSpawnMenu ]
+  name: Отложить яйцо
+  description: Постройте свою собственную империю.
+  components:
+  - type: Action
+    icon:
+      sprite: _Adventure/Roles/Alian/alien_egg/alien_egg.rsi
+      state: alienegg
+    useDelay: 60
+  - type: InstantAction
+    event: !type:EggLayInstantActionEvent
+
 #Строительство смолы
 - type: entity
   parent: BaseAction
@@ -202,3 +218,64 @@
     priority: 12
   - type: InstantAction
     event: !type:ToggleActionEvent
+
+# Queen
+- type: entity
+  parent: BaseAction
+  id: AlianReformActionEggLay
+  categories: [ HideSpawnMenu ]
+  name: Отрастить яйцаклад
+  description: Вы потеряеет свою мобильность, но сможете откладывай яйца.
+  components:
+  - type: Action
+    useDelay: 60
+    icon:
+      sprite: _Adventure/Roles/Alian/alien_queen_egg.rsi
+      state: running
+  - type: InstantAction
+    event: !type:ReformEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: AlianReformActionEggLayDown
+  categories: [ HideSpawnMenu ]
+  name: Сбросить яйцаклад
+  description: Вы вернёте себе мобильность.
+  components:
+  - type: Action
+    useDelay: 20
+    icon:
+      sprite: _Adventure/Roles/Alian/alien_queen_egg.rsi
+      state: running
+  - type: InstantAction
+    event: !type:ReformEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: AlianReformActionQueen
+  categories: [ HideSpawnMenu ]
+  name: Эволюционировать
+  description: Пришло время стать сильнее.
+  components:
+  - type: Action
+    useDelay: 180
+    icon:
+      sprite: _Adventure/Roles/Alian/alien.rsi
+      state: dead
+  - type: InstantAction
+    event: !type:ReformEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: AlianReformActionAlianQueen
+  categories: [ HideSpawnMenu ]
+  name: Эволюционировать в королеву
+  description: Пришло время стать сильнее.
+  components:
+  - type: Action
+    useDelay: 180
+    icon:
+      sprite: _Adventure/Roles/Alian/alien_queen.rsi
+      state: dead
+  - type: InstantAction
+    event: !type:ReformEvent {}

@@ -68,3 +68,12 @@
   - /Audio/_Adventure/Voice/alian/larva_FootStep1.ogg
   - /Audio/_Adventure/Voice/alian/larva_FootStep2.ogg
   - /Audio/_Adventure/Voice/alian/larva_FootStep3.ogg
+
+- type: soundCollection
+  id: AlienQueenScream
+  files:
+  - /Audio/_Adventure/Voice/alian/Queen_roar_1.ogg
+  - /Audio/_Adventure/Voice/alian/Queen_roar_2.ogg
+  - /Audio/_Adventure/Voice/alian/Queen_roar_3.ogg
+  - /Audio/_Adventure/Voice/alian/Queen_roar_4.ogg
+  - /Audio/_Adventure/Voice/alian/Queen_roar_5.ogg

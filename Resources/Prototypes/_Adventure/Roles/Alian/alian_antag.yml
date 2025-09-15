@@ -1,6 +1,6 @@
 - type: entity
   id: SpawnPointGhostAlien
-  name: ghost role spawn point
+  name: спавнер ксеноморфа
   suffix: чужой
   parent: MarkerBase
   components:
@@ -29,10 +29,10 @@
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
-    earliestStart: 15
+    earliestStart: 25
     weight: 6
     duration: 50
-    minimumPlayers: 20
+    minimumPlayers: 30
   - type: VentCrittersRule
     specialEntries:
     - id: SpawnPointGhostAlien
