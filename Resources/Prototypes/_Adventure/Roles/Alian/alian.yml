@@ -1,3 +1,11 @@
+- type: radioChannel
+  id: Alian
+  name: Коллективный разум
+  keycode: 'ч'
+  frequency: 426
+  color: "#d9f500"
+  longRange: true
+
 # броня
 - type: damageModifierSet
   id: Alien
@@ -26,6 +34,15 @@
   description: Идеальный организм.
   id: MobAlien
   components:
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Alian
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Alian
+  - type: ActiveRadio
+    channels:
+      - Alian
   - type: Fixtures
     fixtures:
       fix1:
@@ -113,7 +130,9 @@
       types:
         Bloodloss: -1
     bloodReagent: XenoBloodAcid
-    bloodMaxVolume: 100
+    bloodMaxVolume: 0
+  - type: Stamina
+    critThreshold: 200
   - type: Damageable
     damageModifierSet: Alien
     damageContainer: Alien
@@ -158,6 +177,11 @@
   - type: InventorySlots
   - type: Loadout
     prototypes: [AlienGear]
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Crawler
+    speedModifier : 0.8
 
 #Кровь ксено
 - type: reagent
