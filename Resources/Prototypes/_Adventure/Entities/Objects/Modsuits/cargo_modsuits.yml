@@ -1,6 +1,6 @@
 - type: entity
   id: CrateModsuitsBasic
-  parent: CrateEngineeringSecure
+  parent: CrateScienceSecure
   components:
   - type: StorageFill
     contents:
@@ -23,5 +23,5 @@
     state: mod-core
   product: CrateModsuitsBasic
   cost: 3000
-  category: Инженерия
+  category: Наука
   group: market
