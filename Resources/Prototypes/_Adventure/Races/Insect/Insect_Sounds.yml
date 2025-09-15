@@ -1,0 +1,64 @@
+﻿- type: soundCollection
+  id: InsectStep
+  files:
+  - /Audio/_Adventure/Voice/Insect/Insect_step1.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_step2.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_step3.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_step4.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_step5.ogg
+
+- type: soundCollection
+  id: InsectScream
+  files:
+  - /Audio/_Adventure/Voice/Insect/Insect_scream1.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_scream2.ogg
+
+- type: soundCollection
+  id: InsectLaugh
+  files:
+  - /Audio/_Adventure/Voice/Insect/Insect_haha1.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_haha2.ogg
+
+- type: soundCollection
+  id: InsectSnore
+  files:
+  - /Audio/_Adventure/Voice/Insect/Insect_speach1.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_speach2.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_speach3.ogg
+
+- type: speechSounds
+  id: InsectSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/Insect/Insect_speach1.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/Insect/Insect_speach2.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/Insect/Insect_speach3.ogg
+
+- type: emoteSounds
+  id: UnisexInsect
+  params:
+    variation: 0.125
+  sounds:
+    Chitter:
+      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+    Click:
+      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+    Snore:
+      collection: InsectSnore
+    Scream:
+      collection: InsectScream
+    Laugh:
+      collection: InsectLaugh
+    Honk:
+      collection: BikeHorn
+    Whistle:
+      collection: InsectLaugh
+    Hissing:
+      path: /Audio/_Adventure/Voice/Insect/Insect_hiss.ogg
+    Weh:
+      collection: Weh
+    DefaultDeathgasp:
+      path: /Audio/_Adventure/Voice/Insect/Insect_dead.ogg
+      params:
+        volume: 4

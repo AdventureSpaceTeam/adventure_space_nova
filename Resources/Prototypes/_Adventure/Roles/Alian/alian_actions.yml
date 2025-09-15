@@ -1,0 +1,204 @@
+#Строительство смолы
+- type: entity
+  parent: BaseAction
+  id: ActionAlienWeb
+  categories: [ HideSpawnMenu ]
+  name: Распространить смолу
+  description: Смола - ваш друг и союзнить, распространяйте её чтобы замедлить ваших врагов, а ходьба по ней усиливает вашу регенерацию.
+  components:
+  - type: Action
+    icon:
+      sprite: _Adventure/Roles/Alian/alian_web.rsi
+      state: Alian_web0
+    useDelay: 25
+  - type: InstantAction
+    event: !type:SpiderWebActionEvent
+
+#Строительство стены
+- type: entity
+  parent: BaseAction
+  categories: [ HideSpawnMenu ]
+  id: ActionSpawnAlianWall
+  name: Построить стену
+  description: Возведите стену для своей защиты.
+  components:
+  - type: Action
+    useDelay: 20
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Roles/Alian/alian_Wall.rsi
+      state: Alian_wall
+  - type: TargetAction
+    range: 1.5
+  - type: WorldTargetAction
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: AlianWallSpawn
+        amount: 1
+
+- type: entity
+  parent: BaseSubdermalImplant  
+  id: ImplantActionSpawnAlianWall
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionSpawnAlianWall
+
+#Строительство двери
+- type: entity
+  parent: BaseAction
+  id: ActionSpawnAlianDoor
+  categories: [ HideSpawnMenu ]
+  name: Построить проход
+  description: Возведите проход для своей защиты.
+  components:
+  - type: Action
+    useDelay: 30
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Roles/Alian/alian_door.rsi
+      state: closed
+  - type: TargetAction
+    range: 1.5
+  - type: WorldTargetAction
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: AlienDoorSpawn
+        amount: 1
+
+- type: entity
+  parent: BaseSubdermalImplant  
+  id: ImplantSpawnAlianDoor
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionSpawnAlianDoor
+
+
+#преобразование стены
+- type: polymorph
+  id: AlianForcedWall
+  configuration:
+    entity: AlianWall
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    revertOnDeath: true
+    polymorphSound: !type:SoundPathSpecifier
+      path: /Audio/_Adventure/Voice/alian/alien_slime_spawn.ogg
+    exitPolymorphSound: !type:SoundPathSpecifier
+      path: /Audio/_Adventure/Voice/alian/alien_slime_spawn.ogg
+
+- type: entity
+  id: ProjectilePolyboltAlianWall
+  parent: ProjectilePolyboltBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Alian/alian_Wall.rsi
+    layers:
+    - state: slimespit
+  - type: PolymorphOnTrigger
+    polymorph: AlianForcedWall
+  - type: WhitelistTriggerCondition
+    userWhitelist:
+      tags:
+      - Wall
+  - type: TimedDespawn
+    lifetime: 0.5
+
+- type: entity
+  parent: BaseAction
+  id: ActionAlianForcedWall
+  categories: [ HideSpawnMenu ]
+  name: Покрытие стен
+  description: Используйте смолу, чтобы покрывать ею другие стены.
+  components:
+  - type: Magic
+  - type: Action
+    useDelay: 60
+    itemIconStyle: BigAction
+    raiseOnUser: true
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_Adventure/Voice/alian/sliime_shot.ogg
+    icon:
+      sprite: _Adventure/Roles/Alian/alian_Wall.rsi
+      state: slimespit
+  - type: TargetAction
+    range: 1.5
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:ProjectileSpellEvent
+      prototype: ProjectilePolyboltAlianWall
+
+- type: entity
+  parent: BaseSubdermalImplant  
+  id: ImplantActionAlianForcedWall
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionAlianForcedWall
+
+- type: entity
+  parent: BaseAction
+  id: AlianReformAction
+  categories: [ HideSpawnMenu ]
+  name: Эволюционировать
+  description: Пришло время стать сильнее.
+  components:
+  - type: Action
+    useDelay: 180
+    icon:
+      sprite: _Adventure/Roles/Alian/alien.rsi
+      state: dead
+  - type: InstantAction
+    event: !type:ReformEvent {}
+
+#Когти
+- type: entity
+  parent: [ClothingShoesBase, BaseToggleClothing]
+  id: ShoesAlienClaw
+  categories: [ HideSpawnMenu ]
+  name: когти
+  description: Цепкие и острые.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Roles/Alian/alian_Wall.rsi
+      layers:
+      - state: claw
+        map: [ "enum.ToggleableVisuals.Layer" ]
+    - type: ToggleClothing
+      action: ActionToggleMagbootsAlian
+      mustEquip: false
+    - type: Magboots
+    - type: ClothingSpeedModifier
+      walkModifier: 1
+      sprintModifier: 1
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ToggleableVisuals.Layer:
+            True: {state: claw}
+            False: {state: claw}
+    - type: Unremoveable
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: AliensFootStep
+        params:
+          volume: -8
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleMagbootsAlian
+  categories: [ HideSpawnMenu ]
+  name: Вцепиться когтями
+  description: Вцепитесь когтями в пол при отключении гравитации.
+  components:
+  - type: Action
+    icon: { sprite: _Adventure/Roles/Alian/alian_Wall.rsi, state: claw }
+    iconOn: { sprite: _Adventure/Roles/Alian/alian_Wall.rsi, state: claw }
+    itemIconStyle: NoItem
+    priority: 12
+  - type: InstantAction
+    event: !type:ToggleActionEvent

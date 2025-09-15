@@ -1,0 +1,39 @@
+- type: entity
+  id: SpawnPointGhostAlien
+  name: ghost role spawn point
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ксеноморф
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlienLarva
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/larva.rsi
+        state: running
+
+- type: entity
+  id: AlianSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6
+    duration: 50
+    minimumPlayers: 20
+  - type: VentCrittersRule
+    specialEntries:
+    - id: SpawnPointGhostAlien
+      prob: 0.001

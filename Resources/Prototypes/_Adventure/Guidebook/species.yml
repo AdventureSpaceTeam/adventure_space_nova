@@ -37,3 +37,8 @@
   id: Plasman
   name: Плазмалюд
   text: "/ServerInfo/_Adventure/Guidebook/Races/Plasman.xml"
+
+- type: guideEntry
+  id: Insect
+  name: Серпентид
+  text: "/ServerInfo/_Adventure/Guidebook/Races/Insect.xml"

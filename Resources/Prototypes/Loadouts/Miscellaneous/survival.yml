@@ -26,6 +26,7 @@
     - Resomi # Adventure
     - Drask # Adventure
     - Felinid # Adventure
+    - InsectSerpentide # Adventure
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

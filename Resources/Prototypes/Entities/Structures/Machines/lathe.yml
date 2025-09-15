@@ -123,6 +123,7 @@
     - PartsStatic
     - AtmosStatic
     - CablesStatic
+    - PaperworkStatic
     - CargoStatic
     - MaterialsStatic
     - BasicChemistryStatic
@@ -318,11 +319,17 @@
     - RoboticsStatic
     - BorgModulesStatic
     - BorgLimbsStatic
+    - ModSuitStatic # Adventure modsuits
     dynamicPacks:
     - Robotics
     - BorgModules
     - MechParts
     - MechEquipment
+    # Adventure modsuits start
+    - ModSuitAdvanced
+    - ModSuitCombat
+    - ModSuitWorker
+    # Adventure modsuits end
   - type: MaterialStorage
     whitelist:
       tags:

@@ -1,0 +1,129 @@
+- type: cargoProduct
+  id: BigMaterialGlass
+  icon:
+    sprite: Objects/Materials/Sheets/glass.rsi
+    state: glass_3
+  product: BigCrateMaterialGlass
+  cost: 7500
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialSteel
+  icon:
+    sprite: Objects/Materials/Sheets/metal.rsi
+    state: steel_3
+  product: BigCrateMaterialSteel
+  cost: 7500
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialPlastic
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: plastic_3
+  product: BigCrateMaterialPlastic
+  cost: 10000
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialBrass
+  icon:
+    sprite: Objects/Materials/Sheets/metal.rsi
+    state: brass_3
+  product: BigCrateMaterialBrass
+  cost: 15000
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialPlasteel
+  icon:
+    sprite: Objects/Materials/Sheets/metal.rsi
+    state: plasteel_3
+  product: BigCrateMaterialPlasteel
+  cost: 8000
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialGold
+  icon:
+    sprite: Objects/Materials/ingots.rsi
+    state: gold_3
+  product: BigCrateMaterialGold
+  cost: 16125
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialSilver
+  icon:
+    sprite: Objects/Materials/ingots.rsi
+    state: silver_3
+  product: BigCrateMaterialSilver
+  cost: 12900
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialPlasma
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: plasma # Corvax-Resprite
+  product: BigCrateMaterialPlasma
+  cost: 7500
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigCardboardMaterial
+  icon:
+    sprite: Objects/Materials/materials.rsi
+    state: cardboard_3
+  product: BigCrateMaterialCardboard
+  cost: 1650
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigPaperMaterial
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: paper_3
+  product: BigCrateMaterialPaper
+  cost: 925
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialBasic
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: generic_materials
+  product: BigCrateMaterialBasicResource
+  cost: 8300
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialFuelTank
+  icon:
+    sprite: Structures/Storage/tanks.rsi
+    state: highfueltank
+  product: WeldingFuelTankHighCapacity
+  cost: 3000
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: BigMaterialWaterTank
+  icon:
+    sprite: Structures/Storage/tanks.rsi
+    state: highwatertank
+  product: WaterTankHighCapacity
+  cost: 3000
+  category: cargoproduct-category-name-materials
+  group: market

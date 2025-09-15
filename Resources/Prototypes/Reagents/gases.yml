@@ -111,6 +111,10 @@
           types:
             Heat:
               10
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: InsectSerpentide
 #Adventure-end
 
 - type: reagent
@@ -322,6 +326,12 @@
         ratios:
           NitrousOxide: 1.0
           Nitrogen: -1.0
+#Adventure-start
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: InsectSerpentide
+#Adventure-end
 
 - type: reagent
   id: NitrousOxide

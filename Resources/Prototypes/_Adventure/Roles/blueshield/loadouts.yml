@@ -114,6 +114,7 @@
 - type: roleLoadout
   id: JobBlueshield
   groups:
+  - GroupPlasManSuitBS
   - BSHelmets
   - BSJumpsuits
   - BSBackpacks

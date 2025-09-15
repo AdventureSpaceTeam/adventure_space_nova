@@ -63,6 +63,7 @@
       conditions:
       - !type:PlayerCountCondition
         max: 15
+    - id: ControlModsuitMagnate # Adventure modsuits
 
 # No laser table + Laser table
 - type: entityTable
@@ -190,6 +191,7 @@
     - id: NukeActivator
     - id: RPD
     - id: EnergyCoreCircuitboard
+    - id: ControlModsuitAdvanced
     - id: HandheldAtmosMonitor
     # Adventure end
 
@@ -254,6 +256,7 @@
     - id: MedkitFilled
     - id: RubberStampCMO
     - id: MedTekCartridge
+    - id: ControlModsuitRescue # Adventure modsuits
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -375,6 +378,7 @@
     - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
     - id: BookBusido # Corvax-Books
     - id: DrinkHosFlask
+    - id: ControlModsuitSafeguard # Adventure modsuits
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

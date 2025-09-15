@@ -153,7 +153,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (slot < 0 || slot >= GetUserMaxCharacterSlots(userId))
+            if (slot < 0)
             {
                 return;
             }

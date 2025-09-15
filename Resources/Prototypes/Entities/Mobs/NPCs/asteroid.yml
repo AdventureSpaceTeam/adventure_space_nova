@@ -19,7 +19,6 @@
     group: GenericNumber
   - type: StatusEffects
     allowed:
-    - Stutter
     - Electrocution
     - TemporaryBlindness
     - RadiationProtection
@@ -132,9 +131,11 @@
     layers:
     - state: goliath_tentacle_wiggle
   - type: StunOnContact
+    duration: 3 # Adventure
     blacklist:
       tags:
       - Goliath
+      - LavaMob # Adventure
   - type: Fixtures
     fixtures:
       fix:
