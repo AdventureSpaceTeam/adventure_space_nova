@@ -41,6 +41,8 @@
         conditions:
         - !type:OrganType
           type: Moth
+      - !type:SatiateHunger
+        conditions:
         - !type:OrganType
           type: InsectSerpentide
 
