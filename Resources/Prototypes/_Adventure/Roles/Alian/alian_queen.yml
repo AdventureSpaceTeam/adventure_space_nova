@@ -23,7 +23,7 @@
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: королевы ксеноморфов
+    name: королева ксеноморфов
     description: Выживите любой ценой.
     rules: ghost-role-information-antagonist-rules
     mindRoles:
@@ -46,7 +46,7 @@
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: королевы ксеноморфов (личинка)
+    name: королева ксеноморфов (личинка)
     description: Выживите любой ценой.
     rules: ghost-role-information-antagonist-rules
     mindRoles:

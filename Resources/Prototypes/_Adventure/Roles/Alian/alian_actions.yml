@@ -224,8 +224,8 @@
   parent: BaseAction
   id: AlianReformActionEggLay
   categories: [ HideSpawnMenu ]
-  name: Отрастить яйцаклад
-  description: Вы потеряеет свою мобильность, но сможете откладывай яйца.
+  name: Отрастить яйцеклад
+  description: Вы потеряеет свою мобильность, но сможете откладывать яйца.
   components:
   - type: Action
     useDelay: 60
@@ -239,7 +239,7 @@
   parent: BaseAction
   id: AlianReformActionEggLayDown
   categories: [ HideSpawnMenu ]
-  name: Сбросить яйцаклад
+  name: Сбросить яйцеклад
   description: Вы вернёте себе мобильность.
   components:
   - type: Action

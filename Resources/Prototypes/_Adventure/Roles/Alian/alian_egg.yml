@@ -2,7 +2,7 @@
 - type: entity
   id: AlienEgg
   parent: AlienEggDecor
-  description: Там что-то швелится.
+  description: Там что-то шевелится.
   name: Овоморф
   suffix: Чужой
   components:
