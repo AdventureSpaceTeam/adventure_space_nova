@@ -84,9 +84,8 @@
     deleteOnCollide: false
     damage:
       types:
-        Blunt: 1
+        Blunt: 2
         Piercing: 1
-        Heat: 1
         Structural: 65
   - type: StaminaDamageOnCollide
     damage: 20
@@ -98,8 +97,6 @@
     radius: 1.75
     softness: 1
     enabled: true
-  - type: IgniteOnCollide
-    fireStacks: 0.65
   - type: Fixtures
     fixtures:
       projectile:
@@ -125,8 +122,7 @@
     damage:
       types:
         Blunt: 25
-        Piercing: 7
-        Heat: 3
+        Piercing: 10
   - type: StaminaDamageOnCollide
     damage: 10
   - type: TimedDespawn
@@ -143,5 +139,3 @@
     state: bullet
     shader: unshaded
     color: "#9c3167"
-  - type: IgniteOnCollide
-    fireStacks: 0.35
