@@ -22,7 +22,7 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    fireRate: 0.7
+    fireRate: 0.5
     angleDecay: 45
     minAngle: 44
     maxAngle: 45
@@ -52,13 +52,13 @@
     pricePerJoule: 0.3
   - type: ProjectileBatteryAmmoProvider
     proto: Advanced-BulletProtoCutter
-    fireCost: 10
+    fireCost: 30
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: Advanced-AttackerBulletProtoCutter
       fireCost: 10
     - proto: Advanced-BulletProtoCutter
-      fireCost: 10
+      fireCost: 30
   - type: BatterySelfRecharger
     autoRechargeRate: 8
     autoRecharge: true

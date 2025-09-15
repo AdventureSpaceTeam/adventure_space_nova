@@ -16,7 +16,7 @@
     sprite: _Adventure/Roles/LavaLand/Equipment/kinetic_cutter.rsi
     size: Normal
   - type: Gun
-    fireRate: 0.6
+    fireRate: 0.5
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -30,13 +30,13 @@
     pricePerJoule: 0.3
   - type: ProjectileBatteryAmmoProvider
     proto: BulletProtoCutter
-    fireCost: 10
+    fireCost: 35
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: AttackerBulletProtoCutter
-      fireCost: 10
+      fireCost: 15
     - proto: BulletProtoCutter
-      fireCost: 10
+      fireCost: 35
   - type: BatterySelfRecharger
     autoRechargeRate: 6
     autoRecharge: true
