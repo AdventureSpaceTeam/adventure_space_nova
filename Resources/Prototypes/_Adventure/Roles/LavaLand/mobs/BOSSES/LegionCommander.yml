@@ -237,7 +237,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      1500: Dead
+      1000: Dead
   - type: ExplosionResistance
     damageCoefficient: 0.0
   - type: MeleeWeapon
