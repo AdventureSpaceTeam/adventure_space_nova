@@ -92,7 +92,7 @@
 
 #Плащ ОСО
 - type: entity
-  parent: ClothingHandsGlovesCaptain
+  parent: ClothingNeckBase
   id: ClothingMantleSOO
   name: плащ ОСО
   description: Под ним — форма. Под формой — оружие. Под оружием — приказ.
@@ -104,7 +104,7 @@
 
 #Ботинки ОСО
 - type: entity
-  parent: ClothingHandsGlovesCaptain
+  parent: ClothingShoesBootsJack
   id: ClothingShoesBootsSOO
   name: ботинки ОСО
   description: Прошли через плазму, вакуум и трупы. Не снимали.
