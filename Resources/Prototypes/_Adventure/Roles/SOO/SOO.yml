@@ -90,6 +90,30 @@
   - type: Clothing
     sprite: _Adventure/Roles/SOO/SOO_Gloves.rsi
 
+#Плащ ОСО
+- type: entity
+  parent: ClothingHandsGlovesCaptain
+  id: ClothingMantleSOO
+  name: плащ ОСО
+  description: Под ним — форма. Под формой — оружие. Под оружием — приказ.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_Mantle.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_Mantle.rsi
+
+#Ботинки ОСО
+- type: entity
+  parent: ClothingHandsGlovesCaptain
+  id: ClothingShoesBootsSOO
+  name: ботинки ОСО
+  description: Прошли через плазму, вакуум и трупы. Не снимали.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/SOO/SOO_Boots.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/SOO/SOO_Boots.rsi
+
 #Противогаз ОСО
 - type: entity
   parent: ClothingMaskGas
