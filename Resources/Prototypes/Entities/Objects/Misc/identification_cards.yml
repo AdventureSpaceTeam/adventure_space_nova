@@ -833,7 +833,7 @@
   - type: Sprite
     layers:
     - state: wizard
-    - state: idwizard
+#   - state: idwizard Adventure-Respriteer
   - type: Access
     tags:
     - Wizard

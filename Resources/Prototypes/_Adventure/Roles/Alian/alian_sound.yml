@@ -4,6 +4,9 @@
   files:
   - /Audio/_Adventure/Voice/alian/alien_dead_1.ogg
   - /Audio/_Adventure/Voice/alian/alien_dead_2.ogg
+  - /Audio/_Adventure/Voice/alian/alien_dead_3.ogg
+  - /Audio/_Adventure/Voice/alian/alien_dead_4.ogg
+  - /Audio/_Adventure/Voice/alian/alien_dead_5.ogg
 
 - type: soundCollection
   id: AliensWallDestroy
@@ -12,11 +15,23 @@
   - /Audio/_Adventure/Voice/alian/alien_wall_destr2.ogg
 
 - type: soundCollection
+  id: AliensHiss
+  files:
+  - /Audio/_Adventure/Voice/alian/hiss1.ogg
+  - /Audio/_Adventure/Voice/alian/hiss2.ogg
+  - /Audio/_Adventure/Voice/alian/hiss3.ogg
+  - /Audio/_Adventure/Voice/alian/hiss4.ogg
+
+- type: soundCollection
   id: AlienScream
   files:
   - /Audio/_Adventure/Voice/alian/alien_scream_1.ogg
   - /Audio/_Adventure/Voice/alian/alien_scream_2.ogg
   - /Audio/_Adventure/Voice/alian/alien_scream_3.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_4.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_5.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_6.ogg
+  - /Audio/_Adventure/Voice/alian/alien_scream_7.ogg
   - /Audio/_Adventure/Voice/alian/alien_dead_2.ogg
 
 - type: speechSounds
@@ -38,19 +53,6 @@
   - /Audio/_Adventure/Voice/alian/Alien_FootStep5.ogg
   - /Audio/_Adventure/Voice/alian/Alien_FootStep6.ogg
   - /Audio/_Adventure/Voice/alian/Alien_FootStep7.ogg
-
-- type: soundCollection
-  id: AliensAttack
-  files:
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_1.1.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_1.2.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_1.3.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_2.1.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_2.2.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_2.3.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_3.1.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_3.2.ogg
-  - /Audio/_Adventure/Voice/alian/alien_scream_attack_3.3.ogg
 
 # личинка
 - type: speechSounds

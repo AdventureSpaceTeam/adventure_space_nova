@@ -13,6 +13,8 @@
       collection: AlienQueenScream
     Laugh:
       collection: AlienQueenScream
+    Hissing:
+      collection: AliensHiss
     DefaultDeathgasp:
       path: /Audio/_Adventure/Voice/alian/Queen_dead.ogg
 
@@ -36,12 +38,12 @@
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _Adventure/Roles/Alian/alien_queen.rsi
+      - sprite: _Adventure/Roles/Alian/larva.rsi
         state: running
 
 - type: entity
   id: SpawnPointGhostAlienQueenLarva
-  name: спавнер ксеноморфа (личинка)
+  name: спавнер королевы ксеноморфов (личинка)
   suffix: чужой
   parent: MarkerBase
   components:
@@ -54,7 +56,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: MobAlienLarva
+    prototype: MobAlienLarvaQueen
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
@@ -112,7 +114,7 @@
         Slash: 12
         Structural: 50
     soundHit:
-     collection: AliensAttack
+     collection: AlienClaw
     animation: WeaponArcClaw
   - type: Stamina
     critThreshold: 400
@@ -125,8 +127,6 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.2
     baseWalkSpeed : 4.8
-  - type: Crawler
-    speedModifier : 0.5
   - type: Reform
     actionPrototype: AlianReformActionEggLay
     reformTime: 20
@@ -146,6 +146,7 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
   - type: EggLayer
+    eggLayAction: ActionAlianLayEgg
     hungerUsage: 0
     eggLaySound: !type:SoundPathSpecifier
       path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
