@@ -1,5 +1,28 @@
 - type: entity
   id: SpawnPointGhostAlien
+  name: спавнер личинки ксеноморфа
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: личинка ксеноморфа
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlienLarva
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/larva.rsi
+        state: running
+
+- type: entity
+  id: SpawnPointGhostAlienNoLarva
   name: спавнер ксеноморфа
   suffix: чужой
   parent: MarkerBase
@@ -13,7 +36,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: MobAlienLarva
+    prototype: MobAlien
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:

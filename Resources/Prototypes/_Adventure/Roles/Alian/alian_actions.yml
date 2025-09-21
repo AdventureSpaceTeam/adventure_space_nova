@@ -11,6 +11,7 @@
       sprite: _Adventure/Roles/Alian/alien_egg/alien_egg.rsi
       state: alienegg
     useDelay: 60
+    itemIconStyle: BigAction
   - type: InstantAction
     event: !type:EggLayInstantActionEvent
 

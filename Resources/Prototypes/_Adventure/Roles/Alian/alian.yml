@@ -96,7 +96,7 @@
         Slash: 6
         Structural: 20
     soundHit:
-     collection: AliensAttack
+     collection: AlienClaw
     animation: WeaponArcClaw
   - type: SSDIndicator
   - type: Tag
@@ -139,6 +139,7 @@
   - type: Speech
     speechVerb: LargeMob
     speechSounds: AlienSpeach
+    allowedEmotes: ['Hissing']
   - type: Vocal
     sounds:
       Male: Alien
@@ -180,8 +181,6 @@
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
-  - type: Crawler
-    speedModifier : 0.8
 
 #Кровь ксено
 - type: reagent
@@ -203,6 +202,8 @@
       collection: AlienScream
     Laugh:
       collection: AlienScream
+    Hissing:
+      collection: AliensHiss
     DefaultDeathgasp:
       collection: AliensDead
 
