@@ -1,0 +1,58 @@
+- type: entity
+  parent: MobAlienLarva
+  name: лицехват
+  suffix: Чужой ТЕСТ
+  description: Идеальный организм.
+  id: MobAlienFaceHugger
+  components:
+  - type: JumpAbility
+    action: ActionAlienJump
+    canCollide: false
+    jumpDistance: 4
+    jumpSound:
+      path: /Audio/_Adventure/Voice/alian/hugger_jump.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/facehugger.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: running
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: movement
+    noMovementLayers:
+      movement:
+        state: running
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: HuggerSpeach
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+    baseWalkSpeed : 5.5
+  - type: Item
+    sprite: _Adventure/Roles/Alian/facehugger.rsi
+    size: Normal
+  - type: Clothing
+    sprite: _Adventure/Roles/Alian/facehugger.rsi
+    slots: [mask]
+  - type: IngestionBlocker
+  - type: AddAccentClothing
+    accent: MumbleAccent
+  - type: EmoteBlocker
+    blocksCategories:
+    - Vocal
+  - type: Blindfold
+  - type: CanEscapeInventory
+
+- type: speechSounds
+  id: HuggerSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/alian/hugger_speach.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/alian/hugger_speach.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/alian/hugger_speach.ogg
