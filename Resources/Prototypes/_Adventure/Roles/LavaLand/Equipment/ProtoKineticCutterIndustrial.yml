@@ -55,10 +55,10 @@
     fireCost: 30
   - type: BatteryWeaponFireModes
     fireModes:
-    - proto: Advanced-AttackerBulletProtoCutter
-      fireCost: 10
     - proto: Advanced-BulletProtoCutter
       fireCost: 30
+    - proto: Advanced-AttackerBulletProtoCutter
+      fireCost: 10
   - type: BatterySelfRecharger
     autoRechargeRate: 8
     autoRecharge: true
