@@ -5,6 +5,15 @@
   description: Идеальный организм.
   id: MobAlienLarva
   components:
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Alian
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Alian
+  - type: ActiveRadio
+    channels:
+      - Alian
   - type: JumpAbility
     action: ActionAlienJump
     canCollide: false
@@ -72,7 +81,7 @@
       types:
         Bloodloss: -1
     bloodReagent: XenoBloodAcid
-    bloodMaxVolume: 100
+    bloodMaxVolume: 0
   - type: Damageable
     damageModifierSet: Alien
     damageContainer: Alien
@@ -121,7 +130,7 @@
   - type: Reform
     actionPrototype: AlianReformAction
     reformTime: 10
-    popupText: Вы  начинаете сбрасывать свой старый панцирь.
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
     reformPrototype: MobAlien
   - type: EmitSoundOnSpawn
     sound:

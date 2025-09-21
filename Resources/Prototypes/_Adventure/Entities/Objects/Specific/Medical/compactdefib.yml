@@ -15,6 +15,13 @@
     - state: ready
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]
       shader: unshaded
+  - type: Clothing
+    sprite: _Adventure/Objects/Specific/Medical/compactdefib.rsi
+    state: equipped-BELT
+    slots: [belt]
+    equipSound:
+      path: /Audio/Items/belt_equip.ogg
+    quickEquip: false
   - type: Item
     size: Normal
   - type: Defibrillator

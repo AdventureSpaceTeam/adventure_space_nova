@@ -1,0 +1,132 @@
+#яйца ксено
+- type: entity
+  id: AlienEgg
+  parent: AlienEggDecor
+  description: Там что-то шевелится.
+  name: Овоморф
+  suffix: Чужой
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Alian/alien_egg/alien_egg.rsi
+    layers:
+      - state: alienegg
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - AlienEggOpenLarvaSpawn
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+  - type: TimedDespawn
+    lifetime: 301
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpillBehavior
+        solution: food
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobAlienLarva:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: AlienEggOpenDecor
+  parent: AlienEggDecor
+  description: Кажется оно пустое, это не к добру.
+  name: Овоморф
+  suffix: Чужой, пустое
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Alian/alien_egg/alien_egg_open.rsi
+    layers:
+      - state: alienegg_open
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpillBehavior
+        solution: food
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+#открытие яйца
+- type: entity
+  parent: AlienEggOpenDecor
+  categories: [ HideSpawnMenu ]
+  id: AlienEggOpenLarvaSpawn
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Alian/alien_egg/alien_egg_open.rsi
+    layers:
+    - state: alienegg_opening
+  - type: SpawnOnDespawn
+    prototype: AlienEggOpenDecor
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobAlienLarva
+    intervalSeconds: 2
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+  - type: TimedDespawn
+    lifetime: 2.5
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_Adventure/Voice/alian/alienegg_opening.ogg
+      params:
+        volume: -1
+
+- type: entity
+  id: AlienEggDecor
+  parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Alian/alien_egg/alien_egg.rsi
+    layers:
+      - state: alienegg
+  - type: MultiHandedItem
+  - type: StaticPrice
+    price: 4000
+  - type: Item
+    size: Huge
+  - type: Damageable
+    damageModifierSet: Alien
+    damageContainer: Alien
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpillBehavior
+        solution: food
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobAlienSlider:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnHighSpeedImpact
+    minimumSpeed: 0.1
+    damage:
+      types:
+        Blunt: 1

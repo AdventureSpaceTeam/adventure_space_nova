@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Sprited by KEEYNy (Github) and @ugog (discord) for Space Station 14. contacts: https://github.com/KEEYNy  discord: @keeyn, discord: @ugog ",
+  "copyright": "Sprited by KEEYNy (Github) and @ugog (discord) for Space Station 14. contacts: https://github.com/KEEYNy  discord: @keeyn, discord: @ugog . Belt sprite by @aelout(discord)",
   "size": {
     "x": 32,
     "y": 32
@@ -36,6 +36,10 @@
             0.15
         ]
       ]
+    },
+    {
+      "name": "equipped-BELT",
+      "directions": 4
     }
   ]
 }
