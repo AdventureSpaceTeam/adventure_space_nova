@@ -6,6 +6,46 @@
   color: "#d9f500"
   longRange: true
 
+- type: body
+  id: Alian
+  name: "ксеноморф"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - legs
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAlianHeart
+        kidneys: OrganAnimalKidneys
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
+
+- type: entity
+  id: OrganAlianHeart
+  parent: OrganAnimalHeart
+  name: сердце ксеноморфа
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ Alian ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+
+- type: metabolizerType
+  id: Alian
+  name: Ксеноморф
+
 # броня
 - type: damageModifierSet
   id: Alien
@@ -77,7 +117,7 @@
     noiseamount: 0.8
   - type: Sprite
     drawdepth: Mobs
-    sprite: _Adventure/Roles/Alian/alien.rsi
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
@@ -181,6 +221,8 @@
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
+  - type: Body
+    prototype: Alian
 
 #Кровь ксено
 - type: reagent
@@ -240,3 +282,215 @@
   id: AlienGear
   equipment:
     shoes: ShoesAlienClaw
+
+#виды
+
+#Драск
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienDrask
+  components:
+  - type: Sprite
+    scale: 1, 1.1
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_drask.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+        Slash: 8
+        Structural: 26
+    soundHit:
+     collection: AlienClaw
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.5
+    baseWalkSpeed : 5.0
+  - type: SolutionContainerManager
+    solutions:
+      chemicals:
+        reagents:
+        - ReagentId: CryoxadoneDrask
+          Quantity: 20
+  - type: SolutionRegeneration
+    solution: chemicals
+    generated:
+      reagents:
+      - ReagentId: CryoxadoneDrask
+        Quantity: 0.50
+
+#Резоми
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienResomi
+  components:
+  - type: Sprite
+    scale: 0.8, 0.8
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_resomi.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+    baseWalkSpeed : 5.5
+  - type: Damageable
+    damageModifierSet: AlienResomi
+    damageContainer: Alien
+
+- type: damageModifierSet
+  id: AlienResomi
+  coefficients:
+    Caustic: 0.0
+    Blunt: 0.85
+    Slash: 0.85
+    Piercing: 0.80
+    Heat: 1.7
+
+#Скрелл
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienSkrell
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_skrell.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Heat: -1
+            Blunt: -1
+            Caustic: -1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Ваша кожа впитывает воду" ]
+        probability: 0.
+        
+#Насекомое
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienInsect
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_insect.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ PestKiller ]
+      methods: [ Touch, Ingestion, Injection ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Heat: 2
+        probability: 0.5
+      - !type:Emote
+        emote: Scream
+        showInChat: false
+        probability: 1
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.8
+    baseWalkSpeed : 5.2
+    baseWeightlessAcceleration: 1.5
+    baseWeightlessFriction: 1
+    baseWeightlessModifier: 1
+  - type: Damageable
+    damageModifierSet: AlienInsect
+    damageContainer: Alien
+
+- type: damageModifierSet
+  id: AlienInsect
+  coefficients:
+    Caustic: 0.0
+    Blunt: 0.75
+    Slash: 0.75
+    Piercing: 0.70
+    Heat: 2.0
+
+#Арахнид
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienArachnid
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_spider.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: AutoImplant
+    implants:
+    - ImplantActionSpawnAlianWall
+    - ImplantActionSpawnAlianWallArachnid
+    - ImplantSpawnAlianDoor
+    - ImplantSpawnAlianDoorArachnid
+    - ImplantActionAlianForcedWall
+
+#Зерах
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienSnake
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_snake.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: ZerahPoison
+          Quantity: 100
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: ZerahPoison
+        Quantity: 0.5
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: SnakeStep
+      params:
+        volume: -8
