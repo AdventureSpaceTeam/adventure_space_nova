@@ -11,6 +11,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Tail
     undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Hunger
   - type: Puller
@@ -92,7 +93,27 @@
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
 #Adventure-Slots-end
-
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
+    displacements:
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -113,7 +134,7 @@
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Human/displacement.rsi
+            sprite: Mobs/Species/Reptilian/displacement.rsi
             state: jumpsuit-female
 #Adventure-Slots-start
       brass:
@@ -122,5 +143,26 @@
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
 #Adventure-Slots-end
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
+    displacements:
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
 
 #Weh

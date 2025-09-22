@@ -27,5 +27,8 @@
   <GuideEntityEmbed Entity="MobResomi" Caption="Резоми"/>
   <GuideEntityEmbed Entity="MobDrask" Caption="Драск"/>
   </Box>
+  <Box>
+    <GuideEntityEmbed Entity="MobVulpkanin" Caption="Vulpkanin"/>
+  </Box>
 
 </Document>
