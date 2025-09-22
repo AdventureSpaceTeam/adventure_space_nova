@@ -11,7 +11,7 @@
     - Snout
     - HeadTop
     - HeadSide
-    - Tail
+#    - Tail
     undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Hunger
   - type: Puller
