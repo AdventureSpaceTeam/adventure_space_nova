@@ -19,52 +19,6 @@
       path: /Audio/_Adventure/Voice/alian/Queen_dead.ogg
 
 - type: entity
-  id: SpawnPointGhostAlienQueen
-  name: спавнер королевы ксеноморфов
-  suffix: чужой
-  parent: MarkerBase
-  components:
-  - type: GhostRole
-    name: королева ксеноморфов
-    description: Выживите любой ценой.
-    rules: ghost-role-information-antagonist-rules
-    mindRoles:
-    - MindRoleGhostRoleSoloAntagonist
-    raffle:
-      settings: default
-  - type: GhostRoleMobSpawner
-    prototype: MobAlienQueen
-  - type: Sprite
-    sprite: Markers/jobs.rsi
-    layers:
-      - state: green
-      - sprite: _Adventure/Roles/Alian/larva.rsi
-        state: running
-
-- type: entity
-  id: SpawnPointGhostAlienQueenLarva
-  name: спавнер королевы ксеноморфов (личинка)
-  suffix: чужой
-  parent: MarkerBase
-  components:
-  - type: GhostRole
-    name: королева ксеноморфов (личинка)
-    description: Выживите любой ценой.
-    rules: ghost-role-information-antagonist-rules
-    mindRoles:
-    - MindRoleGhostRoleSoloAntagonist
-    raffle:
-      settings: default
-  - type: GhostRoleMobSpawner
-    prototype: MobAlienLarvaQueen
-  - type: Sprite
-    sprite: Markers/jobs.rsi
-    layers:
-      - state: green
-      - sprite: _Adventure/Roles/Alian/larva.rsi
-        state: running
-
-- type: entity
   parent: MobAlien
   name: королева ксеноморфов
   suffix: Чужой
@@ -95,7 +49,7 @@
         variation: 0.05
   - type: Sprite
     drawdepth: Mobs
-    sprite: _Adventure/Roles/Alian/alien_queen.rsi
+    sprite: _Adventure/Roles/Alian/mobs/alien_queen.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
@@ -141,7 +95,7 @@
   components:
   - type: Sprite
     drawdepth: Mobs
-    sprite: _Adventure/Roles/Alian/alien_queen_egg.rsi
+    sprite: _Adventure/Roles/Alian/mobs/alien_queen_egg.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
@@ -179,7 +133,7 @@
   id: MobAlienLarvaQueen
   components:
   - type: Reform
-    actionPrototype: AlianReformActionQueen
+    actionPrototype: AlianReformAction
     reformTime: 10
     popupText: Вы начинаете сбрасывать свой старый панцирь.
     reformPrototype: MobAlienNoQueen

@@ -1,0 +1,236 @@
+#усыплялка
+- type: reagent
+  id: AlianToxin
+  name: Токсин ксеноморфов
+  group: Narcotics
+  desc: Довольно опасный обездвиживающий токсин.
+  physicalDesc: чужеродное
+  color: "#404457"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:ModifyStatusEffect
+        conditions:
+        - !type:OrganType 
+          type: Alian
+          shouldHave: false
+        - !type:ReagentThreshold
+          reagent: AlianToxin
+          min: 5
+        effectProto: StatusEffectForcedSleeping
+        time: 3
+        type: Add
+
+#феромон для реакции
+- type: reagent
+  id: AlianFero
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Позволяет паразиту преобразовывать ДНК жертвы для дальнейшей эволюции.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.01
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0
+
+#стандартный
+- type: reagent
+  id: AlianFeroBase
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroBase
+  reactants:
+    AlianFero:
+      amount: 1
+    Blood:
+      amount: 1
+  products:
+    AlianFeroBase: 10
+
+#Драск
+- type: reagent
+  id: AlianFeroDrask
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaDraskMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroDrask
+  reactants:
+    AlianFero:
+      amount: 1
+    Cryoxadone:
+      amount: 1
+  products:
+    AlianFeroDrask: 10
+
+#Резоми
+- type: reagent
+  id: AlianFeroResomi
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaResomiMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroResomi
+  reactants:
+    AlianFero:
+      amount: 1
+    ResomiBlood:
+      amount: 1
+  products:
+    AlianFeroResomi: 10
+
+#Скрелл
+- type: reagent
+  id: AlianFeroSkrell
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaSkrellMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroSkrell
+  reactants:
+    AlianFero:
+      amount: 1
+    SkrellBlood:
+      amount: 1
+  products:
+    AlianFeroSkrell: 10
+
+#Жук
+- type: reagent
+  id: AlianFeroInsect
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaInsectMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroInsect
+  reactants:
+    AlianFero:
+      amount: 1
+    InsectBlood:
+      amount: 1
+  products:
+    AlianFeroInsect: 10
+
+#Арахнид
+- type: reagent
+  id: AlianFeroArachnid
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaArachnidMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroArachnid
+  reactants:
+    AlianFero:
+      amount: 1
+    CopperBlood:
+      amount: 1
+  products:
+    AlianFeroArachnid: 10
+
+#Зерах
+- type: reagent
+  id: AlianFeroSnake
+  name: Феромон ксеноморфа
+  group: Toxins
+  desc: Преобразовывает паразита в личинку.
+  physicalDesc: сильнопахнущее
+  flavor: acid
+  color: "#404457"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Polymorph
+        prototype: MobAlienLarvaSnakeMorph
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+
+- type: reaction
+  id: AlianFeroSnake
+  reactants:
+    AlianFero:
+      amount: 1
+    ZerahBlood:
+      amount: 1
+  products:
+    AlianFeroSnake: 10
