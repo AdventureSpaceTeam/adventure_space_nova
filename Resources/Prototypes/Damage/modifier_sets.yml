@@ -159,7 +159,7 @@
   id: Card
   coefficients:
     Slash: 2.0
-    Piercing: 0.1 # Holes easily poked through, but do little to structural integrity 
+    Piercing: 0.1 # Holes easily poked through, but do little to structural integrity
     Heat: 3.0
 
 - type: damageModifierSet
@@ -332,9 +332,10 @@
   coefficients:
     Holy: 2
 
-# Vulps get more heat damage because fur
-- type: damageModifierSet
-  id: Vulpkanin
-  coefficients:
-    Heat: 1.15
-    Cold: 0.85
+# Adventure vulps # Vulps get more heat damage because fur
+# Adventure vulps - type: damageModifierSet
+# Adventure vulps   id: Vulpkanin
+# Adventure vulps   coefficients:
+# Adventure vulps     Heat: 1.15
+# Adventure vulps     Cold: 0.85
+# Adventure vulps

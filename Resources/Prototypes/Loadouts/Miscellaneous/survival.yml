@@ -84,7 +84,7 @@
     - Dwarf
     - Human
     - Reptilian
-    - Vulpkanin
+    # - Vulpkanin #Adventure vulps
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth

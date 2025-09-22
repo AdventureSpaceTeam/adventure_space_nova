@@ -404,7 +404,7 @@
     useDelay: 1
     itemIconStyle: BigAction
 
-#  TODO: Add back once we have animated tails again. Were removed due to the sprite rework, causing all of them to not fit anymore.
+#  TODO: Add back once we have animated tails again. Were removed due to the sprite rework, causing all of them to not fit anymore. #Adventure vulps
 # - type: entity
 #   parent: ActionToggleWagging
 #   id: ActionToggleWaggingVulpkanin
