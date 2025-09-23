@@ -16,16 +16,3 @@
       amount: 4
   products:
     Blood: 20
-
-- type: reaction
-  id: CarbonDioxideCraft
-  source: true
-  requiredMixerCategories:
-  - Centrifuge
-  reactants:
-    Carbon:
-      amount: 1
-    Oxygen:
-      amount: 2
-  products:
-    CarbonDioxide: 3
