@@ -62,7 +62,7 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter'] 
+    allowedEmotes: ['Click', 'Chitter']
   - type: Vocal
     sounds:
       Male: UnisexArachnid
@@ -99,6 +99,7 @@
       - map: [ "neck" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
       - map: [ "back" ]
+      - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ] # Do these need to be here? (arachnid hair arachnid hair)
       - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
@@ -131,7 +132,7 @@
   - type: HumanoidAppearance
     species: Arachnid
   - type: Inventory
-    speciesId: arachnid 
+    speciesId: arachnid
 
 
 #>88w88<

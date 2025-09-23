@@ -2,7 +2,6 @@ using Content.Shared._Adventure.TTS; // Adventure tts
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
-using Content.Server.Radio.Components;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Radio;
@@ -129,7 +128,7 @@ public sealed class RadioSystem : EntitySystem
         var formattedName = $"[color={GetIdCardColor(messageSource)}]{GetIdCardName(messageSource)}{name}[/color]"; // Adventure radio
 
         SpeechVerbPrototype speech;
-        if (evt.SpeechVerb != null && _prototype.TryIndex(evt.SpeechVerb, out var evntProto))
+        if (evt.SpeechVerb != null && _prototype.Resolve(evt.SpeechVerb, out var evntProto))
             speech = evntProto;
         else
             speech = _chat.GetSpeechVerb(messageSource, message);
