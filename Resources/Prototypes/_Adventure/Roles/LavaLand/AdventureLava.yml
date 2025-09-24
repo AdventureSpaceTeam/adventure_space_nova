@@ -511,7 +511,7 @@
       percent: 0.01
       tiles:
         - FloorBasaltLavaLand
-      range: 5
+      range: 10
 
 - type: ambientMusic
   id: LavaLand
