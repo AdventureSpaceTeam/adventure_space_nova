@@ -11,6 +11,7 @@
   id: BaseMobSkrell
   name: Урист макСкрелл
   components:
+  - type: SolutionScanner
   - type: TypingIndicator
     proto: Skrell
   - type: Reactive

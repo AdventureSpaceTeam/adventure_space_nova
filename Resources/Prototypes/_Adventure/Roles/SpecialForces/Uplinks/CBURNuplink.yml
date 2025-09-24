@@ -148,14 +148,6 @@
     CentCommCrystal: 17
   categories:
   - CBURNweapons
-
-- type: listing
-  id: WeaponPulseCarbineCBURN
-  productEntity: WeaponPulseCarbine
-  cost:
-    CentCommCrystal: 19
-  categories:
-  - CBURNweapons
 # /Предметы аплинка - Оружие
 
 # Предметы аплинка - Патроны
