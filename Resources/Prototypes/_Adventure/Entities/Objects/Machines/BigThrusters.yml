@@ -2,7 +2,7 @@
   id: ThrusterBig
   name: сверхмощный ракетный двигатель
   description: Ускоритель, позволяющий шаттлу передвигаться.
-  parent: BaseThruster 
+  parent: BaseThruster
   components:
   - type: Fixtures
     fixtures:
@@ -114,8 +114,11 @@
   result: ThrusterBigFlatpack
   completetime: 4
   materials:
-     Steel: 2000
-     Glass: 1000
+     Steel: 4500
+     Glass: 2000
+     Plastic: 1000
+     Silver: 500
+     Plasma: 500
 
 - type: technology
   id: ThrusterBig

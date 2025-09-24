@@ -389,7 +389,7 @@
         visualType: Large
         messages: [ "Ваша кожа впитывает воду" ]
         probability: 0.
-        
+
 #Насекомое
 - type: entity
   parent: MobAlien
