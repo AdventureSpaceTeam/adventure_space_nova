@@ -157,6 +157,16 @@
       maxCount: 1
       table:
         id: LavalendRoomMarker30
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: LavalendRoomMarker31
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: LavalendRoomMarker32
 #Rooms
     - !type:PrototypeDunGen
       proto: LavaFill

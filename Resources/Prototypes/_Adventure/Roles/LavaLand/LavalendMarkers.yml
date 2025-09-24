@@ -777,3 +777,55 @@
     roomWhitelist:
       tags:
       - Lavalend30
+
+#31
+- type: dungeonRoom
+  id: LavalendMarkerRoomsXXL
+  size: 30,30
+  atlas: /Maps/_Adventure/LavaLand/BorkMaps2.yml
+  offset: 0,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - Lavalend31
+
+- type: Tag
+  id: Lavalend31
+
+- type: entity
+  id: LavalendRoomMarker31
+  categories: [ HideSpawnMenu ]
+  parent: BaseRoomMarker
+  name: Рандом комната Лаваленда
+  components:
+  - type: RoomFill
+    minSize: 10,10
+    maxSize: 50,50
+    roomWhitelist:
+      tags:
+      - Lavalend31
+
+#32
+- type: dungeonRoom
+  id: LavalendMarkerRoomsXXLL
+  size: 30,30
+  atlas: /Maps/_Adventure/LavaLand/BorkMaps3.yml
+  offset: 0,0
+  ignoreTile: FloorShuttleOrange
+  tags:
+  - Lavalend32
+
+- type: Tag
+  id: Lavalend32
+
+- type: entity
+  id: LavalendRoomMarker32
+  categories: [ HideSpawnMenu ]
+  parent: BaseRoomMarker
+  name: Рандом комната Лаваленда
+  components:
+  - type: RoomFill
+    minSize: 10,10
+    maxSize: 50,50
+    roomWhitelist:
+      tags:
+      - Lavalend32
