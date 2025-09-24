@@ -7,7 +7,7 @@
     - SlimePerson
     - Vox
     - Zerah # Adventure
-    
+
 
 - type: loadoutEffectGroup
   id: OxygenBreather
@@ -84,6 +84,7 @@
     - Dwarf
     - Human
     - Reptilian
+    # - Vulpkanin #Adventure vulps
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth

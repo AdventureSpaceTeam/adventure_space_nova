@@ -1,0 +1,131 @@
+- type: entity
+  id: SpawnPointGhostAlien
+  name: спавнер личинки ксеноморфа
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: личинка ксеноморфа
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlienLarva
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/mobs/larva.rsi
+        state: running
+
+- type: entity
+  id: SpawnPointGhostAlienNoLarva
+  name: спавнер ксеноморфа
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ксеноморф
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlien
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/mobs/larva.rsi
+        state: running
+
+- type: entity
+  id: SpawnPointGhostAlienQueen
+  name: спавнер королевы ксеноморфов
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: королева ксеноморфов
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlienQueen
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/mobs/larva.rsi
+        state: running
+
+- type: entity
+  id: SpawnPointGhostAlienQueenLarva
+  name: спавнер королевы ксеноморфов (личинка)
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: королева ксеноморфов (личинка)
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlienLarvaQueen
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/mobs/larva.rsi
+        state: running
+
+- type: entity
+  id: SpawnPointGhostFaceHugger
+  name: спавнер паразита ксеноморфа
+  suffix: чужой
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: паразит ксеноморфа
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobAlienFaceHugger
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Adventure/Roles/Alian/mobs/facehugger.rsi
+        state: running
+
+- type: entity
+  id: AlianSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 25
+    weight: 6
+    duration: 50
+    minimumPlayers: 30
+  - type: VentCrittersRule
+    specialEntries:
+    - id: SpawnPointGhostFaceHugger
+      prob: 0.001

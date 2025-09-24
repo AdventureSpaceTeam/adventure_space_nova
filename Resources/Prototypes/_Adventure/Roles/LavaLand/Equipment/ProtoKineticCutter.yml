@@ -2,7 +2,7 @@
   id: WeaponProtoKineticCutter
   parent: BaseItem
   name: протокинетический резак
-  description: Стреляет кинетическими зарядами с низким уроном на короткое расстояние.
+  description: Стреляет сконцентрированным кинетическим зарядом. Буровым копает вглубь, боевым наносит значительный урон одиночным целям.
   suffix: LavaLand
   components:
   - type: Sprite
@@ -18,29 +18,28 @@
   - type: Gun
     fireRate: 0.5
     selectedMode: SemiAuto
-    angleDecay: 45
-    minAngle: 44
-    maxAngle: 45
     availableModes:
     - SemiAuto
     soundGunshot:
       path: /Audio/_Adventure/LavaLand/cutter_shot.ogg
   - type: AmmoCounter
   - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.AmmoVisuals.HasAmmo:
-        empty-icon:
-          True: { visible: False }
-          False: { visible: True }
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 0.30
-    rechargeSound:
-      path: /Audio/_Adventure/LavaLand/cutter_recharge.ogg
-  - type: BasicEntityAmmoProvider
-    proto: BulletKineticCutterSpread
-    capacity: 1
-    count: 1
+  - type: Battery
+    maxCharge: 200
+    startingCharge: 200
+    pricePerJoule: 0.3
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletProtoCutter
+    fireCost: 35
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletProtoCutter
+      fireCost: 35
+    - proto: AttackerBulletProtoCutter
+      fireCost: 15
+  - type: BatterySelfRecharger
+    autoRechargeRate: 6
+    autoRecharge: true
   - type: Clothing
     sprite: _Adventure/Roles/LavaLand/Equipment/kinetic_cutter.rsi
     quickEquip: false
@@ -51,7 +50,8 @@
     delay: 1
 
 - type: entity
-  id: BulletKineticCutter
+  id: BulletProtoCutter
+  name: буровой кинетический заряд
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -60,27 +60,68 @@
       - NonEnergy
   - type: Sprite
     noRot: false
-    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
-    layers:
-    - state: chronobolt
-      shader: unshaded
+    sprite: _Adventure/Roles/LavaLand/Equipment/bullet.rsi
+    state: bullet
+    shader: unshaded
+    color: "#ffda94"
+  - type: GatheringProjectile
+    amount: 12
   - type: Projectile
-    impactEffect: BulletImpactEffectKinetic
+    deleteOnCollide: false
     damage:
       types:
-        Blunt: 10
-        Structural: 25
+        Blunt: 2
+        Piercing: 1
+        Structural: 50
+  - type: StaminaDamageOnCollide
+    damage: 15
   - type: TimedDespawn
-    lifetime: 0.4
-  - type: GatheringProjectile
+    lifetime: 0.35
+  - type: PointLight
+    color: "#ffaf3892"
+    energy: 3
+    radius: 1.75
+    softness: 1
+    enabled: true
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.05,-0.05,0.05,0.05"
+        hard: false
+        mask:
+        - Opaque
+  - type: Ammo
+    muzzleFlash: null
 
 - type: entity
-  id: BulletKineticCutterSpread
-  name: тройной кинетический заряд
+  id: AttackerBulletProtoCutter
+  name: боевой кинетический заряд
+  parent: BulletProtoCutter
   categories: [ HideSpawnMenu ]
-  parent: BulletKineticCutter
   components:
-  - type: ProjectileSpread
-    proto: BulletKineticCutter
-    count: 3
-    spread: 10
+  - type: GatheringProjectile
+    amount: 1
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Blunt: 20
+        Piercing: 8
+  - type: StaminaDamageOnCollide
+    damage: 5
+  - type: TimedDespawn
+    lifetime: 0.5
+  - type: PointLight
+    color: "#88225eb8"
+    energy: 3
+    radius: 1.7
+    softness: 1
+    enabled: true
+  - type: Sprite
+    noRot: false
+    sprite: _Adventure/Roles/LavaLand/Equipment/bullet.rsi
+    state: bullet
+    shader: unshaded
+    color: "#9943bb"

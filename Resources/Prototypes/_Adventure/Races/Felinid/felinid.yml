@@ -11,6 +11,8 @@
   id: BaseMobFelinid
   abstract: true
   components:
+  - type: TypingIndicator
+    proto: Neco
   - type: HumanoidAppearance
     species: Felinid
   - type: Hunger
@@ -75,6 +77,15 @@
     weightlessAcceleration: 0.7
     weightlessFriction: 3
     weightlessModifier: 1
+  - type: JumpAbility
+    action: ActionJumpSpecies
+    canCollide: true
+    jumpDistance: 2
+    jumpSound:
+      path: /Audio/Effects/thudswoosh.ogg
+      params:
+        volume: -1
+        variation: 0.05
 
 
 - type: entity

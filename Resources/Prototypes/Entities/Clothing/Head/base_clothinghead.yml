@@ -141,6 +141,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    - FacialHair
 #Adventure-start
   - type: SpontaneousCombustionProtection
     protectionPercent: 25
@@ -193,6 +194,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    - FacialHair
 #Adventure-start
   - type: SpontaneousCombustionProtection
     protectionPercent: 25

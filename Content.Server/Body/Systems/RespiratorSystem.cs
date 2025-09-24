@@ -51,7 +51,7 @@ public sealed class RespiratorSystem : EntitySystem
         SubscribeLocalEvent<RespiratorComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<RespiratorComponent, ApplyMetabolicMultiplierEvent>(OnApplyMetabolicMultiplier);
         SubscribeLocalEvent<RespiratorComponent, ToggleBreathingAlertEvent>(OnToggleBreathingAlert);
-        SubscribeLocalEvent<RespiratorComponent, ComponentShutdown>(OnRepiratorShutdown);
+        SubscribeLocalEvent<RespiratorComponent, ComponentShutdown>(OnRespiratorShutdown);
 
         // BodyComp stuff
         SubscribeLocalEvent<BodyComponent, InhaledGasEvent>(OnGasInhaled);
@@ -64,12 +64,12 @@ public sealed class RespiratorSystem : EntitySystem
     private void OnMapInit(Entity<RespiratorComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.NextUpdate = _gameTiming.CurTime + ent.Comp.AdjustedUpdateInterval;
-        _alertsSystem.ShowAlert(ent, ent.Comp.BreathingAlert, (short)0, showCooldown: false, autoRemove: false);
+        _alertsSystem.ShowAlert(ent.Owner, ent.Comp.BreathingAlert, (short)0, showCooldown: false, autoRemove: false);
     }
 
-    private void OnRepiratorShutdown(Entity<RespiratorComponent> ent, ref ComponentShutdown args)
+    private void OnRespiratorShutdown(Entity<RespiratorComponent> ent, ref ComponentShutdown args)
     {
-        _alertsSystem.ClearAlert(ent, ent.Comp.BreathingAlert);
+        _alertsSystem.ClearAlert(ent.Owner, ent.Comp.BreathingAlert);
     }
 
     private void OnUnpaused(Entity<RespiratorComponent> ent, ref EntityUnpausedEvent args)
@@ -135,7 +135,7 @@ public sealed class RespiratorSystem : EntitySystem
         if (args.Handled)
             return;
         ent.Comp.Breathing = !ent.Comp.Breathing;
-        _alertsSystem.ShowAlert(ent, ent.Comp.BreathingAlert, (short?)(ent.Comp.Breathing ? 0 : 1));
+        _alertsSystem.ShowAlert(ent.Owner, ent.Comp.BreathingAlert, (short?)(ent.Comp.Breathing ? 0 : 1));
         args.Handled = true;
     }
 
@@ -413,7 +413,7 @@ public sealed class RespiratorSystem : EntitySystem
         var organs = _bodySystem.GetBodyOrganEntityComps<LungComponent>((ent, null));
         foreach (var entity in organs)
         {
-            _alertsSystem.ShowAlert(ent, entity.Comp1.Alert);
+            _alertsSystem.ShowAlert(ent.Owner, entity.Comp1.Alert);
         }
     }
 
@@ -423,7 +423,7 @@ public sealed class RespiratorSystem : EntitySystem
         var organs = _bodySystem.GetBodyOrganEntityComps<LungComponent>((ent, null));
         foreach (var entity in organs)
         {
-            _alertsSystem.ClearAlert(ent, entity.Comp1.Alert);
+            _alertsSystem.ClearAlert(ent.Owner, entity.Comp1.Alert);
         }
     }
 

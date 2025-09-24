@@ -32,7 +32,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 35
+      CentCommCrystal: 45
 
 # Аплинк Офицера
 - type: entity
@@ -69,7 +69,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 45
+      CentCommCrystal: 55
 
 # Предметы аплинка - Оружие
 - type: storeCategory
@@ -148,14 +148,6 @@
     CentCommCrystal: 17
   categories:
   - CBURNweapons
-
-- type: listing
-  id: WeaponPulseCarbineCBURN
-  productEntity: WeaponPulseCarbine
-  cost:
-    CentCommCrystal: 19
-  categories:
-  - CBURNweapons
 # /Предметы аплинка - Оружие
 
 # Предметы аплинка - Патроны
@@ -165,7 +157,7 @@
 
 - type: listing
   id: MagazinePistolCBURN
-  description: Магазин калибра 35 авто. Подходящий для простых пистолетов
+  description: Магазин калибра .35 авто. Подходящий для простых пистолетов
   productEntity: MagazinePistol
   cost:
     CentCommCrystal: 1
@@ -174,7 +166,7 @@
 
 - type: listing
   id: MagazinePistolSubMachineGunTopMountedCBURN
-  description: Надствольный магазин калибра 35 авто. Подходящий для пистолетов-пулемётов.
+  description: Надствольный магазин калибра .35 авто. Подходящий для пистолетов-пулемётов.
   productEntity: MagazinePistolSubMachineGunTopMounted
   cost:
     CentCommCrystal: 2
@@ -183,7 +175,7 @@
 
 - type: listing
   id: MagazineBoxPistolCBURN
-  description: Коробка калибра 35 авто. Подходящий для простых пистолетов.
+  description: Коробка калибра .35 авто. Подходящий для простых пистолетов.
   productEntity: MagazineBoxPistol
   cost:
     CentCommCrystal: 3
@@ -192,7 +184,7 @@
 
 - type: listing
   id: MagazineShotgunCBURN
-  description: Барабн калибра 50. Подходящий дробовиков.
+  description: Барабан калибра .50. Подходящий дробовиков.
   productEntity: MagazineShotgun
   cost:
     CentCommCrystal: 3
@@ -201,7 +193,7 @@
 
 - type: listing
   id: FuelTankFirethrowerCBURN
-  description: Топливный бак для огнемёта. Надеюсь вы не забыли его надеть на спину.
+  description: Топливный бак для огнемёта. Надеюсь вы не забыли надеть его на спину.
   productEntity: FuelTankFirethrower
   cost:
     CentCommCrystal: 3
@@ -210,7 +202,7 @@
 
 - type: listing
   id: MagazineShotgunIncendiaryCBURN
-  description: Зажигательный барабн калибра 50. Подходящий дробовиков.
+  description: Зажигательный барабан калибра .50. Подходящий дробовиков.
   productEntity: MagazineShotgunIncendiary
   cost:
     CentCommCrystal: 5
@@ -219,7 +211,7 @@
 
 - type: listing
   id: MagazineRifleCBURN
-  description: Магазин калибра 20. Винтовочный подходящий для автоматов.
+  description: Магазин калибра .20 винтовочный. Подходящий для автоматов.
   productEntity: MagazineRifle
   cost:
     CentCommCrystal: 2
@@ -235,7 +227,7 @@
 
 - type: listing
   id: MindShieldImplanterCBURN
-  description: Имплант для защиты от промывки мозгов
+  description: Имплант для защиты от промывки мозгов.
   productEntity: MindShieldImplanter
   cost:
     CentCommCrystal: 1
@@ -316,14 +308,6 @@
 - type: listing
   id: ExGrenadeCBURN
   productEntity: ExGrenade
-  cost:
-    CentCommCrystal: 3
-  categories:
-  - CBURNbombs
-
-- type: listing
-  id: C4CBURN
-  productEntity: C4
   cost:
     CentCommCrystal: 3
   categories:
@@ -435,7 +419,7 @@
 
 - type: listing
   id: ClothingShoesBootsMagAdvCBURN
-  description: Кто сказал, что лидер отряда должен носить обычные магнитые ботинки?
+  description: Кто сказал, что лидер отряда должен носить обычные магнитные ботинки?
   productEntity: ClothingShoesBootsMagAdv
   cost:
     CentCommCrystal: 5
@@ -447,7 +431,7 @@
 
 - type: listing
   id: WeaponRifleAkCBURN
-  description: Настоящий автомат настоящего офицера
+  description: Настоящий автомат, настоящего офицера.
   productEntity: WeaponRifleAk
   cost:
     CentCommCrystal: 15
@@ -459,7 +443,7 @@
 
 - type: listing
   id: MagazineLightRifleCBURN
-  description: Магазин калибра 30. Винтовочный подходящий для АКМС
+  description: Магазин калибра .30 винтовочный. Подходящий для АКМС.
   productEntity: MagazineLightRifle
   cost:
     CentCommCrystal: 2
@@ -468,7 +452,7 @@
 
 - type: listing
   id: MagazineBoxLightRifleBigCBURN
-  description: Коробка патронов калибра 30. Винтовочные подходящие для АКМС
+  description: Коробка патронов калибра .30 винтовочный. Подходящих для АКМС.
   productEntity: MagazineBoxLightRifleBig
   cost:
     CentCommCrystal: 6

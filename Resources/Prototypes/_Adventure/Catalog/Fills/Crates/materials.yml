@@ -1,0 +1,124 @@
+- type: entity
+  id: BigCrateMaterialGlass
+  parent: CrateGenericSteel
+  name: большой ящик стекла
+  description: 450 листов стекла, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetGlass
+        amount: 15
+
+- type: entity
+  id: BigCrateMaterialSteel
+  parent: CrateGenericSteel
+  name: большой ящик стали
+  description: 450 листов стали, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetSteel
+        amount: 15
+
+- type: entity
+  id: BigCrateMaterialBrass
+  parent: CrateGenericSteel
+  name: большой ящик латуни
+  description: 450 листов латуни, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetBrass
+        amount: 15
+
+- type: entity
+  id: BigCrateMaterialPlasteel
+  parent: CrateGenericSteel
+  name: большой ящик пластали
+  description: 150 листов пластали, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetPlasteel
+        amount: 5
+
+- type: entity
+  id: BigCrateMaterialPlastic
+  parent: CrateGenericSteel
+  name: большой ящик пластика
+  description: 450 листов пластика, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetPlastic
+        amount: 15
+
+- type: entity
+  id: BigCrateMaterialPlasma
+  parent: CratePlasma
+  name: большой ящик плазмы
+  description: 150 листов плазмы, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetPlasma
+        amount: 5
+
+- type: entity
+  id: BigCrateMaterialGold
+  parent: CrateGenericSteel
+  name: большой ящик золота
+  description: 150 слитков золота, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+    - id: IngotGold
+      amount: 5
+
+- type: entity
+  id: BigCrateMaterialSilver
+  parent: CrateGenericSteel
+  name: большой ящик серебра
+  description: 150 слитков серебра, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+    - id: IngotSilver
+      amount: 5
+
+- type: entity
+  id: BigCrateMaterialCardboard
+  parent: CrateGenericSteel
+  name: большой ящик картона
+  description: 450 листов картона, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MaterialCardboard
+        amount: 15
+
+- type: entity
+  id: BigCrateMaterialPaper
+  parent: CrateGenericSteel
+  name: большой ящик бумаги
+  description: 450 листов бумаги, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetPaper
+        amount: 15
+
+- type: entity
+  id: BigCrateMaterialBasicResource
+  parent: CrateGenericSteel
+  name: большой ящик базовых ресурсов
+  description: 150 листов стали, стекла и пластика, укомплетованные с любовью для больших целей.
+  components:
+  - type: StorageFill
+    contents:
+    - id: SheetSteel
+      amount: 5
+    - id: SheetGlass
+      amount: 5
+    - id: SheetPlastic
+      amount: 5

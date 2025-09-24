@@ -1,7 +1,7 @@
 ﻿- type: entity
   id: HyperExosuitFabricatorMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: плата гипер фабрикатора экзокостюмов
+  name: гиперконвекционный фабрикатор экзокостюмов (машинная плата)
   components:
   - type: Sprite
     state: science

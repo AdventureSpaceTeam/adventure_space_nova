@@ -40,6 +40,15 @@
       types:
         Shock: 0.5
   - type: ProtectedFromStepTriggers
+  - type: JumpAbility
+    action: ActionJumpSpecies
+    canCollide: true
+    jumpDistance: 1
+    jumpSound:
+      collection: SynthStepCollection
+      params:
+        volume: -1
+        variation: 0.05
 
 - type: entity
   abstract: true

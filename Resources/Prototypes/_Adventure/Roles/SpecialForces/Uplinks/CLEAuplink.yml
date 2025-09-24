@@ -32,7 +32,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 30
+      CentCommCrystal: 40
 
 # Аплинк лидера
 - type: entity
@@ -69,7 +69,7 @@
     currencyWhitelist:
       - CentCommCrystal
     balance:
-      CentCommCrystal: 40
+      CentCommCrystal: 50
 
 # Предметы аплинка - Оружие
 - type: storeCategory
@@ -141,7 +141,7 @@
 - type: listing
   id: MagazinePistolCLEA
   productEntity: MagazinePistol
-  description: Магазин калибра 35 авто. Подходящий для простых пистолетов
+  description: Магазин калибра .35 авто. Подходящий для простых пистолетов
   cost:
     CentCommCrystal: 1
   categories:
@@ -150,16 +150,7 @@
 - type: listing
   id: MagazineRifleCLEA
   productEntity: MagazineRifle
-  description: Магазин калибра 20. Винтовочный подходящий для автоматов.
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - CLEAammo
-
-- type: listing
-  id: MagazinePistolSubMachineGunCLEA
-  productEntity: MagazinePistolSubMachineGun
-  description:  Магазин калибра 35. Идеально подходит для крупных пистолетов пулемётов.
+  description: Магазин калибра .20 винтовочный. Подходящий для автоматов.
   cost:
     CentCommCrystal: 2
   categories:
@@ -168,7 +159,7 @@
 - type: listing
   id: MagazineBoxPistolCLEA
   productEntity: MagazineBoxPistol
-  description: Коробка калибра 35 авто. Подходящий для простых пистолетов.
+  description: Коробка калибра .35 авто. Подходящий для простых пистолетов.
   cost:
     CentCommCrystal: 4
   categories:
@@ -177,7 +168,7 @@
 - type: listing
   id: MagazineBoxRifleCLEA
   productEntity: MagazineBoxRifle
-  description: Коробка калибра 20. Винтовочный подходящий для автоматов.
+  description: Коробка калибра .20 винтовочный. Подходящий для автоматов.
   cost:
     CentCommCrystal: 4
   categories:
@@ -186,7 +177,7 @@
 - type: listing
   id: MagazineShotgunCLEA
   productEntity: MagazineShotgun
-  description: Барабн калибра 50. Подходящий дробовиков.
+  description: Барабан калибра 50. Подходящий дробовиков.
   cost:
     CentCommCrystal: 3
   categories:
@@ -278,14 +269,6 @@
   categories:
   - CLEAbombs
 
-- type: listing
-  id: C4CLEA
-  productEntity: C4
-  cost:
-    CentCommCrystal: 3
-  categories:
-  - CLEAbombs
-
 # /Предметы аплинка - Взрывчатка
 
 # Предметы аплинка - Медицина
@@ -329,7 +312,7 @@
   id: HandheldHealthAnalyzerCLEA
   productEntity: HandheldHealthAnalyzer
   cost:
-    CentCommCrystal: 1
+    CentCommCrystal: 2
   categories:
   - CLEAmedicine
 
@@ -391,24 +374,6 @@
    stock: 1
 
 - type: listing
-  id: MagazineLightRifleCLEA
-  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
-  productEntity: MagazineLightRifle
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - CLEAleader
-
-- type: listing
-  id: MagazineBoxLightRifleBigCLEA
-  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
-  productEntity: MagazineBoxLightRifleBig
-  cost:
-    CentCommCrystal: 3
-  categories:
-  - CLEAleader
-
-- type: listing
   id: WeaponSniperHristovCLEA
   productEntity: WeaponSniperHristov
   cost:
@@ -421,7 +386,7 @@
 
 - type: listing
   id: MagazineBoxAntiMaterielCLEA
-  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов"
+  description: Коробка снайперских патронов совместимых со снайперской винтовкой "Христов".
   productEntity: MagazineBoxAntiMateriel
   cost:
     CentCommCrystal: 3

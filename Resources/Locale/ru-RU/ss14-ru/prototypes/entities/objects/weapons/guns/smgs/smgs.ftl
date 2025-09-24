@@ -1,4 +1,4 @@
-ent-BaseWeaponSubMachineGun = BaseSMG
+﻿ent-BaseWeaponSubMachineGun = BaseSMG
     .desc = Дерзай — налетай, целься и стреляй.
 ent-WeaponSubMachineGunAtreides = Атрейдес
     .desc = Пле-ке-ке-ке-ке! Использует патроны калибра .35 авто.
@@ -6,6 +6,8 @@ ent-WeaponSubMachineGunAtreides = Атрейдес
 ent-WeaponSubMachineGunC20r = C-20r
     .desc = Оружие, часто используемое печально известными ядерными оперативниками. Использует патроны калибра .35 авто.
     .suffix = Пистолет-пулемёт
+ent-WeaponSubMachineGunC20rROW = C-20r ROW
+    .desc = Пистолет-пулемёт C-20r с режимом стрельбы очередями для использования киборгами. На ходу создаёт патроны калибра .35 авто из встроенного самозарядного фабрикатора боеприпасов.
 ent-WeaponSubMachineGunDrozd = Дрозд
 ent-WeaponSubMachineGunWt550 = WT550
     .desc = Отличный пистолет-пулемёт, производства NanoTrasen's Small Arms Division. Использует патроны калибра .35 авто.

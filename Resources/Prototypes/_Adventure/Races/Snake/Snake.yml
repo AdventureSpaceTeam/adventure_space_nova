@@ -3,6 +3,8 @@
   name: Урист макЗмий
   parent: BaseMobZerah
   id: MobZerah
+  components:
+  - type: ThermalVision
 
 - type: entity
   abstract: true
@@ -11,6 +13,8 @@
   id: BaseMobZerah
   name: Урист макЗмий
   components:
+  - type: TypingIndicator
+    proto: Snake
   - type: Crawler
     speedModifier : 0.8
   - type: BodyEmotes

@@ -31,6 +31,7 @@
     children:
     - id: ClosetSkeleton
     - id: KingRatMigration
+    - id: AlianSpawn # Adventure
     - id: RevenantSpawn
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
@@ -165,6 +166,10 @@
   - type: BureaucraticErrorRule
     ignoredJobs:
     - StationAi
+    - ResearchAssistant
+    - MedicalIntern
+    - SecurityCadet
+    - TechnicalAssistant
 
 - type: entity
   id: ClericalError
@@ -332,7 +337,7 @@
     duration: 1
     earliestStart: 60
     reoccurrenceDelay: 60
-    minimumPlayers: 25
+    minimumPlayers: 30
   - type: AntagSelection
     agentName: wizard-round-end-name
     definitions:

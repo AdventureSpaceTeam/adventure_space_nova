@@ -1,0 +1,151 @@
+- type: nameIdentifierGroup
+  id: AlianQueen
+  prefix: LV
+  minValue: 1
+  maxValue: 1
+
+- type: emoteSounds
+  id: QueenAlien
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: AlienQueenScream
+    Laugh:
+      collection: AlienQueenScream
+    Hissing:
+      collection: AliensHiss
+    DefaultDeathgasp:
+      path: /Audio/_Adventure/Voice/alian/Queen_dead.ogg
+
+- type: entity
+  parent: MobAlien
+  name: королева ксеноморфов
+  suffix: Чужой
+  description: Идеальный организм.
+  id: MobAlienQueen
+  components:
+  - type: NameIdentifier
+    group: AlianQueen
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 1450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: JumpAbility
+    action: ActionAlienJump
+    canCollide: false
+    jumpDistance: 2
+    jumpSound:
+      path: /Audio/_Adventure/Voice/alian/alien_jump.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alien_queen.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Critical
+      600: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      450: 0.7
+  - type: MeleeWeapon
+    resistanceBypass: true
+    damage:
+      types:
+        Blunt: 12
+        Slash: 12
+        Structural: 50
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcClaw
+  - type: Stamina
+    critThreshold: 400
+  - type: Vocal
+    sounds:
+      Male: QueenAlien
+      Female: QueenAlien
+      Unsexed: QueenAlien
+  - type: Emoting
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.2
+    baseWalkSpeed : 4.8
+  - type: Reform
+    actionPrototype: AlianReformActionEggLay
+    reformTime: 20
+    popupText: Вы  начинаете отращивать яйцеклад.
+    reformPrototype: MobAlienQueenEggLay
+  - type: AlianQueen
+
+- type: entity
+  parent: MobAlienQueen
+  categories: [ HideSpawnMenu ]
+  id: MobAlienQueenEggLay
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alien_queen_egg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: EggLayer
+    eggLayAction: ActionAlianLayEgg
+    hungerUsage: 0
+    eggLaySound: !type:SoundPathSpecifier
+      path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+    eggSpawn:
+    - id: AlienEgg
+  - type: JumpAbility
+    action: ActionAlienJump
+    canCollide: false
+    jumpDistance: 0
+    jumpSound:
+      path: /Audio/_Adventure/Voice/alian/alien_jump.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 0.000001
+    baseWalkSpeed : 0.000001
+  - type: Physics
+    bodyType: Static
+  - type: Reform
+    actionPrototype: AlianReformActionEggLayDown
+    reformTime: 5
+    popupText: Вы  начинаете сбрасывать яйцеклад.
+    reformPrototype: MobAlienQueen
+
+# Эва в квину
+- type: entity
+  parent: MobAlienLarva
+  suffix: Чужой, королева
+  id: MobAlienLarvaQueen
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienNoQueen
+
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienNoQueen
+  components:
+  - type: Reform
+    actionPrototype: AlianReformActionAlianQueen
+    reformTime: 20
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienQueen
