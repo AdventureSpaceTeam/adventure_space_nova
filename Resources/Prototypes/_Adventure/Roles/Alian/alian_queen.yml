@@ -62,6 +62,7 @@
     speedModifierThresholds:
       450: 0.7
   - type: MeleeWeapon
+    resistanceBypass: true
     damage:
       types:
         Blunt: 12

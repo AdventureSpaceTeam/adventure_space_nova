@@ -2,3 +2,22 @@
   id: NightVision
   kind: source
   path: "/Textures/_Adventure/Shaders/nightvision.swsl"
+
+- type: shader
+  id: ThermalVision
+  kind: source
+  path: "/Textures/_Adventure/Shaders/thermalvision.swsl"
+  params:
+    ThermalBoost: 1.5
+    ThermalIntensity: 1
+
+- type: entity
+  id: EffectThermalVision
+  categories: [ HideSpawnMenu ]
+  name: тепловое зрение
+  components:
+  - type: PointLight
+    color: "#FFE4D6"
+    energy: 1.8
+    radius: 20
+    softness: 20

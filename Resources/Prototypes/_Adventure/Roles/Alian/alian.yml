@@ -130,6 +130,7 @@
     speedModifierThresholds:
       200: 0.7
   - type: MeleeWeapon
+    resistanceBypass: true
     damage:
       types:
         Blunt: 6
@@ -299,6 +300,7 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: running
   - type: MeleeWeapon
+    resistanceBypass: true
     damage:
       types:
         Blunt: 8

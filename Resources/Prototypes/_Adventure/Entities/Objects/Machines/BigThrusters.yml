@@ -1,0 +1,130 @@
+- type: entity
+  id: ThrusterBig
+  name: сверхмощный ракетный двигатель
+  description: Ускоритель, позволяющий шаттлу передвигаться.
+  parent: BaseThruster 
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.80,-1.45,0.80,1.49"
+        density: 180
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 10
+    totalIntensity: 1000
+  - type: Sprite
+    sprite: _Adventure/Structures/Machines/big_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 3
+    - type: StaticPrice
+      price: 1500
+    - type: Thruster
+      thruster: 300
+      damage:
+        types:
+          Heat: 80
+    - type: ApcPowerReceiver
+      powerLoad: 2500
+  - type: Construction
+    graph: ThrusterBig
+    node: thrusterBig
+
+# упаковка
+- type: entity
+  parent: BaseFlatpack
+  id: ThrusterBigFlatpack
+  name: упаковка сверхмощного ракетного двигателя
+  description: Универсально-сборная упаковка, используемая для сборки сверхмощного ракетного двигателя.
+  components:
+  - type: Flatpack
+    entity: ThrusterBig
+  - type: Sprite
+    layers:
+    - state: radiation-collector
+  - type: StaticPrice
+    price: 100
+
+# крафт
+- type: constructionGraph
+  id: ThrusterBig
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: thrusterBig
+          steps:
+            - tag: ThrusterBigFlatpack
+              name: детали для сборки сверхмощного ракетного двигателя
+              icon:
+                sprite: Objects/Devices/flatpack.rsi
+                state: radiation-collector
+              doAfter: 1
+
+    - node: thrusterBig
+      entity: ThrusterBig
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: ThrusterBigFlatpack
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 20
+
+- type: latheRecipe
+  id: ThrusterBigFlatpack
+  result: ThrusterBigFlatpack
+  completetime: 4
+  materials:
+     Steel: 2000
+     Glass: 1000
+
+- type: technology
+  id: ThrusterBig
+  name: Корабельные ускорители
+  icon:
+    sprite: Structures/Shuttles/thruster.rsi
+    state: base
+  discipline: Industrial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ThrusterBigFlatpack

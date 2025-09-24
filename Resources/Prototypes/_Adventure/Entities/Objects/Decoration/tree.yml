@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseTree
+  id: TreePalm
+  name: пальма
+  description: Как на курорте.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/Tree/Palm.rsi
+    state: palm1
+    offset: 0,0.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: RandomSprite
+    available:
+    - 0:
+        palm1: ""
+    - 0:
+        palm2: ""
+    - 0:
+        palm3: ""
+    - 0:
+        palm4: ""

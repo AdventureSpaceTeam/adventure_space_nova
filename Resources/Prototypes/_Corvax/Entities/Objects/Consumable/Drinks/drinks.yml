@@ -131,6 +131,9 @@
               Quantity: 30
     - type: Sprite
       sprite: _Corvax/Objects/Consumable/Drinks/kvass.rsi
+    - type: Icon
+      sprite: _Corvax/Objects/Consumable/Drinks/kvass.rsi
+      state: icon
 
 - type: entity
   parent: DrinkGlass
