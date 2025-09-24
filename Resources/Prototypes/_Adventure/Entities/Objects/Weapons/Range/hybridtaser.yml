@@ -1,0 +1,58 @@
+- type: entity
+  name: гибридный тазер
+  parent: BaseWeaponBatterySmall
+  id: WeaponHybridTaser
+  description: Гибридный электрошокер, способный переключаться между электродами с малой дистанцией и дальнобойным истощающим лазером.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Weapons/hybridtaser.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    storedOffset: -1,-5
+  - type: Appearance
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: StaticPrice
+    price: 100
+  - type: Gun
+    fireRate: 2
+    projectileSpeed: 50
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 50
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletDisabler
+      fireCost: 50
+    - proto: BulletTaserHybrid
+      fireCost: 200
+  - type: Tag
+    tags:
+    - Taser
+    - Sidearm
+  - type: PacifismAllowedGun
+
+- type: entity
+  parent: BulletTaser
+  id: BulletTaserHybrid
+  categories: [ HideSpawnMenu ]
+  name: заряд тазера
+  description: If you can see this, you've probably been stun-meta'd
+  components:
+  - type: TimedDespawn
+    lifetime: 0.1
+  - type: StunOnCollide
+    stunAmount: 0
+    knockdownAmount: 3
+    slowdownAmount: 3
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
