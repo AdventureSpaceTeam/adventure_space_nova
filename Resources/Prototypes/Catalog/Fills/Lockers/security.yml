@@ -28,7 +28,6 @@
     children:
     - id: FlashlightSeclite
     - id: WeaponDisabler
-    - id: ClothingHeadHatCapWardenAlt # Corvax-SecFashion
     - id: ClothingBeltSecurityFilled
     - id: Flash
     - id: ClothingEyesGlassesSecurity
@@ -36,13 +35,17 @@
     - id: ClothingShoesBootsJack
     - id: ClothingOuterCoatWarden
     - id: ClothingOuterWinterWarden
-    - id: ClothingOuterCoatWardenAlt # Corvax-SecFashion
     - id: RubberStampWarden
     - id: DoorRemoteArmory
     - id: HoloprojectorSecurity
     - id: BookSpaceLaw
+    # Adventure start
+    - id: HandheldCameraMonitor
     - id: ClothingBackpackWarden # Corvax-SecFashion
-    - id: HandheldCameraMonitor # Adventure
+    - id: ClothingOuterCoatWardenAlt # Corvax-SecFashion
+    - id: ClothingHeadHatCapWardenAlt # Corvax-SecFashion
+    - id: WeaponHybridTaser
+    # Adventure end
     - id: ClothingBackpackElectropack
       amount: 2
     - id: RemoteSignaller
