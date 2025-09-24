@@ -91125,7 +91125,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -4.5,46.5
       parent: 2
-- proto: TegCenterBroken
+- proto: TegCenter
   entities:
   - uid: 12593
     components:
@@ -91133,7 +91133,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.5,-11.5
       parent: 2
-- proto: TegCirculatorBroken
+- proto: TegCirculator
   entities:
   - uid: 1552
     components:

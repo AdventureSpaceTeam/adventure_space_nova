@@ -148595,7 +148595,7 @@ entities:
     - type: Transform
       pos: -39.5,0.5
       parent: 2
-- proto: TegCenterBroken
+- proto: TegCenter
   entities:
   - uid: 674
     components:
@@ -148603,7 +148603,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -147.5,-7.5
       parent: 2
-- proto: TegCirculatorBroken
+- proto: TegCirculator
   entities:
   - uid: 5921
     components:

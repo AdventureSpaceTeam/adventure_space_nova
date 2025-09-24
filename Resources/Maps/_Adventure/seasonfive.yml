@@ -33561,7 +33561,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -22.5,-4.5
       parent: 8364
-- proto: TegCenterBroken
+- proto: TegCenter
   entities:
   - uid: 3771
     components:
@@ -33571,7 +33571,7 @@ entities:
       parent: 8364
     - type: AtmosDevice
       joinedGrid: 8364
-- proto: TegCirculatorBroken
+- proto: TegCirculator
   entities:
   - uid: 3772
     components:
