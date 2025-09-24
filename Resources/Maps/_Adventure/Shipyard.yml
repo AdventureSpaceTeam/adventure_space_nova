@@ -82352,14 +82352,14 @@ entities:
     - type: Transform
       pos: 37.5,13.5
       parent: 2
-- proto: TegCenterBroken
+- proto: TegCenter
   entities:
   - uid: 4145
     components:
     - type: Transform
       pos: 0.5,-28.5
       parent: 2
-- proto: TegCirculatorBroken
+- proto: TegCirculator
   entities:
   - uid: 6945
     components:
