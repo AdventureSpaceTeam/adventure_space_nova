@@ -27,7 +27,7 @@
   table: !type:AllSelector
     children:
     - id: FlashlightSeclite
-    - id: WeaponDisabler
+    #- id: WeaponDisabler Adventure
     - id: ClothingBeltSecurityFilled
     - id: Flash
     - id: ClothingEyesGlassesSecurity
