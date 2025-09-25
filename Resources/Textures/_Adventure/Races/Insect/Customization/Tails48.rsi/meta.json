@@ -22,6 +22,38 @@
     {
       "name": "body",
       "directions": 4
+    },
+    {
+      "name": "scorpion",
+      "directions": 4
+    },
+    {
+      "name": "scorpion_body",
+      "directions": 4
+    },
+    {
+      "name": "spider",
+      "directions": 4
+    },
+    {
+      "name": "spider_body",
+      "directions": 4
+    },
+    {
+      "name": "scorpider",
+      "directions": 4
+    },
+    {
+      "name": "scorpider_body",
+      "directions": 4
+    },
+    {
+      "name": "fat",
+      "directions": 4
+    },
+    {
+      "name": "gusenica",
+      "directions": 4
     }
   ]
 }
