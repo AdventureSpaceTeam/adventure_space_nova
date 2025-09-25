@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "RumiTiger",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "palm1"
+    },
+    {
+      "name": "palm2"
+    },
+    {
+      "name": "palm3"
+    },
+    {
+      "name": "palm4"
+    }
+  ]
+}

@@ -16,6 +16,11 @@
   - SolarSailAssemblyFlatpack
 
 - type: latheRecipePack
+  id: AdventureThrusterBig
+  recipes:
+  - ThrusterBigFlatpack
+
+- type: latheRecipePack
   id: AdventureEnergyCores
   recipes:
   - EnergyCoreRnD

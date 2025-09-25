@@ -157,6 +157,16 @@
       maxCount: 1
       table:
         id: LavalendRoomMarker30
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: LavalendRoomMarker31
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: LavalendRoomMarker32
 #Rooms
     - !type:PrototypeDunGen
       proto: LavaFill
@@ -490,3 +500,26 @@
         acts: ["Destruction"]
       - !type:TriggerBehavior
         keyOut: timer
+
+# audio
+
+- type: rules
+  id: NearLavaLand
+  rules:
+    - !type:NearbyTilesPercentRule
+      ignoreAnchored: false
+      percent: 0.01
+      tiles:
+        - FloorBasaltLavaLand
+      range: 10
+
+- type: ambientMusic
+  id: LavaLand
+  sound:
+    params:
+      volume: -12
+    collection: AmbienceMining
+  rules: NearLavaLand
+  fadeIn: true
+  interruptable: true
+  priority: 10
