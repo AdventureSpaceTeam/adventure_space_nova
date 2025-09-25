@@ -1,0 +1,60 @@
+- type: entity
+  id: MobLavaLandGoliathGrub
+  parent: BaseMobLavaLand
+  suffix: LavaLand
+  name: Личинка голиафа
+  description: Не очень массивное существо, которое уже умеет использовать свои щупальца для охоты. Не рекомендуется угрожать ей (Утилизатор, который её сюда привёз очень расстроится).
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/mobs/goliath_grub.rsi
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Dead
+  - type: MeleeWeapon
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.75
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 5
+  - type: NPCRetaliation
+    attackMemoryLength: 10
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: HTN
+    rootTask:
+      task: GoliathCompound
+  - type: NPCUseActionOnTarget
+    actionId: ActionGoliathTentacle
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatGoliath
+      amount: 1
+    - id: Coal1
+      amount: 1
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - FootstepSound
+    - LavaMob
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#f2511e"
+  - type: InteractionPopup
+    successChance: 0.9
+    interactSuccessString: petting-success-monkey
+    interactFailureString: petting-failure-monkey
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/lizard_happy.ogg
+    interactFailureSound:
+      path: /Audio/Items/wirecutter.ogg
