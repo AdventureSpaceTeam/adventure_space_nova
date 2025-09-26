@@ -1,7 +1,7 @@
 - type: roleLoadout
   id: JobSeniorMedicAdv
   groups:
-  - GroupPlasManSuitMedical
+  - GroupPlasManSuitSeniorMedic
   - GroupTankHarness
   - SeniorMedicHead
   - MedicalMask
@@ -20,7 +20,7 @@
 - type: roleLoadout
   id: JobSeniorEngineerAdv
   groups:
-  - GroupPlasManSuitEngineering
+  - GroupPlasManSuitSeniorEngineer
   - GroupTankHarness
   - SeniorEngineerHead
   - SeniorEngineerJumpsuit
@@ -36,7 +36,7 @@
 - type: roleLoadout
   id: JobSeniorResearcherAdv
   groups:
-  - GroupPlasManSuitScience
+  - GroupPlasManSuitSeniorResearcher
   - GroupTankHarness
   - SeniorResearcherHead
   - SeniorResearcherNeck
@@ -55,7 +55,7 @@
 - type: roleLoadout
   id: JobSeniorOfficerAdv
   groups:
-  - GroupPlasManSuitSecurity
+  - GroupPlasManSuitSeniorOfficer
   - SeniorOfficerHead
   - SeniorOfficerNeck
   - SeniorOfficerJumpsuit

@@ -59,20 +59,20 @@
 
 #Инженерный
 - type: loadout
-  id: LoadoutSpeciesPlasManSuitEnguneering
+  id: LoadoutSpeciesPlasManSuitEngineering
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    outerClothing: ClothingOuterEnvirosuitEnguneering
+    outerClothing: ClothingOuterEnvirosuitEngineering
 
 - type: loadout
-  id: LoadoutSpeciesPlasManHeadEnguneering
+  id: LoadoutSpeciesPlasManHeadEngineering
   effects:
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesPlasMan
   equipment:
-    head: ClothingHeadEnvirosuitEnguneering
+    head: ClothingHeadEnvirosuitEngineering
 
 - type: loadoutGroup
   id: GroupPlasManSuitEngineering
@@ -80,8 +80,34 @@
   minLimit: 2
   hidden: true
   loadouts:
-  - LoadoutSpeciesPlasManSuitEnguneering
-  - LoadoutSpeciesPlasManHeadEnguneering
+  - LoadoutSpeciesPlasManSuitEngineering
+  - LoadoutSpeciesPlasManHeadEngineering
+
+#Ведущий инженер
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitSeniorEngineer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitSeniorEngineer
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadSeniorEngineer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitSeniorEngineer
+
+- type: loadoutGroup
+  id: GroupPlasManSuitSeniorEngineer
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitSeniorEngineer
+  - LoadoutSpeciesPlasManHeadSeniorEngineer
 
 #Атмосферный
 - type: loadout
@@ -187,6 +213,33 @@
   - LoadoutSpeciesPlasManSuitSecurity
   - LoadoutSpeciesPlasManHeadSecurity
 
+#Инструктор СБ
+
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitSeniorOfficer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitSeniorOfficer
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadSeniorOfficer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitSeniorOfficer
+
+- type: loadoutGroup
+  id: GroupPlasManSuitSeniorOfficer
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitSeniorOfficer
+  - LoadoutSpeciesPlasManHeadSeniorOfficer
+
 #Варден
 - type: loadout
   id: LoadoutSpeciesPlasManSuitSecWarden
@@ -238,6 +291,32 @@
   loadouts:
   - LoadoutSpeciesPlasManSuitMedical
   - LoadoutSpeciesPlasManHeadMedical
+
+#врач
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitSeniorMedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitSeniorMedic
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadSeniorMedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitSeniorMedic
+
+- type: loadoutGroup
+  id: GroupPlasManSuitSeniorMedic
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitSeniorMedic
+  - LoadoutSpeciesPlasManHeadSeniorMedic
 
 #парамед
 - type: loadout
@@ -316,6 +395,32 @@
   loadouts:
   - LoadoutSpeciesPlasManSuitScience
   - LoadoutSpeciesPlasManHeadScience
+
+#СНС
+- type: loadout
+  id: LoadoutSpeciesPlasManSuitSeniorResearcher
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    outerClothing: ClothingOuterEnvirosuitSeniorResearcher
+
+- type: loadout
+  id: LoadoutSpeciesPlasManHeadSeniorResearcher
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesPlasMan
+  equipment:
+    head: ClothingHeadEnvirosuitSeniorResearcher
+
+- type: loadoutGroup
+  id: GroupPlasManSuitSeniorResearcher
+  name: loadout-group-breath-tool
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesPlasManSuitSeniorResearcher
+  - LoadoutSpeciesPlasManHeadSeniorResearcher
 
 #повар
 - type: loadout
