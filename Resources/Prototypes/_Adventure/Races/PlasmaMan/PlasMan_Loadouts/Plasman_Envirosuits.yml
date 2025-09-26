@@ -122,7 +122,7 @@
 # Инженерный костюм
 - type: entity
   parent: [ClothingOuterEnvirosuitBase, BaseEngineeringContraband]
-  id: ClothingOuterEnvirosuitEnguneering
+  id: ClothingOuterEnvirosuitEngineering
   name: инженерный защитный костюм
   description: Герметичный костюм, предназначенный для использования плазмалюдами во время инженерных работ.
   components:
@@ -150,7 +150,7 @@
 
 - type: entity
   parent: [ClothingHeadEnvirosuitBase, BaseEngineeringContraband]
-  id: ClothingHeadEnvirosuitEnguneering
+  id: ClothingHeadEnvirosuitEngineering
   name: инженерный защитный шлем
   description: Герметичный шлем, предназначенный для использования плазмалюдами.
   components:
@@ -165,6 +165,33 @@
     lowPressureMultiplier: 1000
   - type: Item
     sprite: _Adventure/Objects/Plasman_suits/eng/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
+# Ведущий Инженер
+- type: entity
+  parent: ClothingOuterEnvirosuitEngineering
+  id: ClothingOuterEnvirosuitSeniorEngineer
+  name: защитный костюм ведущего инженера
+  description: Герметичный костюм, предназначенный для использования плазмалюдами во время инженерных работ.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-eng/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-eng/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitEngineering
+  id: ClothingHeadEnvirosuitSeniorEngineer
+  name: защитный шлем ведущего инженера
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-eng/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-eng/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/sen-eng/helmet.rsi
     heldPrefix: off
     size: Normal
 
@@ -356,6 +383,34 @@
         Piercing: 0.9
         Heat: 0.9
 
+# Инструктор СБ
+
+- type: entity
+  parent: ClothingOuterEnvirosuitSecurity
+  id: ClothingOuterEnvirosuitSeniorOfficer
+  name: защитный костюм инструктора сб
+  description: Герметичный костюм, предназначенный для использования плазмалюдами-инструкторами службы безопасности.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-sec/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-sec/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitSecurity
+  id: ClothingHeadEnvirosuitSeniorOfficer
+  name: защитный шлем инструктора сб
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-sec/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-sec/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/sen-sec/helmet.rsi
+    heldPrefix: off
+    size: Normal
+
 # Варден
 - type: entity
   parent: [ClothingOuterEnvirosuitBase, BaseSecurityContraband]
@@ -454,6 +509,33 @@
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
+
+# врач
+- type: entity
+  parent: ClothingOuterEnvirosuitMedical
+  id: ClothingOuterEnvirosuitSeniorMedic
+  name: защитный костюм ведущего врача
+  description: Герметичный костюм, предназначенный для использования плазмалюдами-ведущими врачами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-med/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-med/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitMedical
+  id: ClothingHeadEnvirosuitSeniorMedic
+  name: защитный шлем ведущего врача
+  description: Герметичный шлем, предназначенный для использования плазмалюдами-ведущими врачами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-med/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-med/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/sen-med/helmet.rsi
+    heldPrefix: off
+    size: Normal
 
 # парамед
 - type: entity
@@ -629,6 +711,33 @@
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
+
+# СНС
+- type: entity
+  parent: ClothingOuterEnvirosuitScience
+  id: ClothingOuterEnvirosuitSeniorResearcher
+  name: защитный костюм старшего научного сотрудника
+  description: Герметичный костюм, предназначенный для использования плазмалюдами-старшими научными сотрудниками.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-sci/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-sci/suit.rsi
+
+- type: entity
+  parent: ClothingHeadEnvirosuitScience
+  id: ClothingHeadEnvirosuitSeniorResearcher
+  name: защитный шлем старшего научного сотрудника
+  description: Герметичный шлем, предназначенный для использования плазмалюдами-старшими научными сотрудниками.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Plasman_suits/sen-sci/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Plasman_suits/sen-sci/helmet.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Plasman_suits/sen-sci/helmet.rsi
+    heldPrefix: off
+    size: Normal
 
 # повар
 - type: entity

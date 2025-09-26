@@ -1,0 +1,206 @@
+#region Medic
+- type: loadoutGroup
+  id: SeniorMedicHead
+  name: loadout-group-senior-medic-head
+  minLimit: 0
+  loadouts:
+  - SeniorPhysicianBeret
+  - MedicalHeadMirror
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+  - NurseHat
+  - MedicalHatWhite
+  - MedicalHatBlue
+  - MedicalHatWhiteReflect
+  - MedicalHatBlueReflect
+  - MedicalHatSurNitrile
+
+- type: loadoutGroup
+  id: SeniorMedicJumpsuit
+  name: loadout-group-senior-medic-jumpsuit
+  loadouts:
+  - SeniorPhysicianJumpsuit
+  - SeniorPhysicianJumpskirt
+  - MedicalBlueScrubs
+  - MedicalGreenScrubs
+  - MedicalPurpleScrubs
+  - MedicalNurseJumpskirt
+
+- type: loadoutGroup
+  id: SeniorMedicOuterClothing
+  name: loadout-group-senior-medic-outerclothing
+  minLimit: 0
+  loadouts:
+  - MedicalDoctorWintercoat
+  - SeniorPhysicianLabCoat
+  - CoatLabNitrile
+
+#region Engineer
+- type: loadoutGroup
+  id: SeniorEngineerHead
+  name: loadout-group-senior-engineer-head
+  minLimit: 0
+  loadouts:
+  - SeniorEngineerBeret
+  - StationEngineerHardhatYellow
+  - StationEngineerHardhatOrange
+  - StationEngineerHardhatRed
+  - Engineeringsoft
+
+- type: loadoutGroup
+  id: SeniorEngineerJumpsuit
+  name: loadout-group-senior-engineer-jumpsuit
+  loadouts:
+  - SeniorEngineerJumpsuit
+  - SeniorEngineerJumpskirt
+  - StationEngineerHazardsuit
+  - EngineeringWorkUniform
+  - EngineeringWorkUniform2
+
+- type: loadoutGroup
+  id: SeniorEngineerBackpack
+  name: loadout-group-senior-engineer-backpack
+  loadouts:
+  - StationEngineerBackpack
+  - StationEngineerSatchel
+  - StationEngineerDuffel
+
+- type: loadoutGroup
+  id: SeniorEngineerOuterClothing
+  name: loadout-group-senior-engineer-outerclothing
+  minLimit: 0
+  loadouts:
+  - StationEngineerOuterVest
+  - StationEngineerWintercoat
+  - EngineeringJacket
+
+- type: loadoutGroup
+  id: SeniorEngineerShoes
+  name: loadout-group-senior-engineer-shoes
+  loadouts:
+  - WorkBoots
+  - EngineeringWinterBoots
+
+#region Researcher
+- type: loadoutGroup
+  id: SeniorResearcherHead
+  name: loadout-group-senior-researcher-head
+  minLimit: 0
+  loadouts:
+  - RoboticistCap
+  - SkullBandana
+  - ScientificBeret
+
+- type: loadoutGroup
+  id: SeniorResearcherNeck
+  name: loadout-group-senior-researcher-neck
+  minLimit: 0
+  loadouts:
+  - ScientistTie
+
+- type: loadoutGroup
+  id: SeniorResearcherJumpsuit
+  name: loadout-group-senior-researcher-jumpsuit
+  loadouts:
+  - SeniorResearcherJumpsuit
+  - SeniorResearcherJumpskirt
+  - RoboticistJumpsuit
+  - RoboticistJumpskirt
+
+- type: loadoutGroup
+  id: SeniorResearcherBackpack
+  name: loadout-group-senior-researcher-backpack
+  loadouts:
+  - ScientistBackpack
+  - ScientistSatchel
+  - ScientistDuffel
+
+- type: loadoutGroup
+  id: SeniorResearcherOuterClothing
+  name: loadout-group-senior-researcher-outerclothing
+  minLimit: 0
+  loadouts:
+  - RegularLabCoat
+  - SeniorResearcherLabCoat
+  - ScienceWintercoat
+  - RoboticistLabCoat
+  - RoboticistWintercoat
+
+- type: loadoutGroup
+  id: SeniorResearcherShoes
+  name: loadout-group-senior-researcher-shoes
+  loadouts:
+  - WhiteShoes
+  - BlackShoes
+  - ScienceWinterBoots
+
+- type: loadoutGroup
+  id: SeniorResearcherGloves
+  name: loadout-group-senior-researcher-gloves
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - PurpleGloves
+  - RobohandsGloves
+
+#region Officer
+- type: loadoutGroup
+  id: SeniorOfficerHead
+  name: loadout-group-senior-officer-head
+  minLimit: 0
+  loadouts:
+  - SecurityHelmet
+  - SecurityBeret
+  - SecurityHat
+  - TrooperHat
+  - SecurityHatBlack
+  - SecurityBeretBlack
+
+- type: loadoutGroup
+  id: SeniorOfficerNeck
+  name: loadout-group-senior-officer-neck
+  minLimit: 0
+  loadouts:
+  - NeckSecurityOfficer
+
+- type: loadoutGroup
+  id: SeniorOfficerJumpsuit
+  name: loadout-group-senior-officer-jumpsuit
+  loadouts:
+  - SeniorOfficerJumpsuit
+  - SeniorOfficerJumpskirt
+  - SecurityJumpsuitGrey
+  - SecurityJumpskirtGrey
+  - TrooperUniform
+  - SecurityJumpsuitBlack
+
+- type: loadoutGroup
+  id: SeniorOfficerBackpack
+  name: loadout-group-senior-officer-backpack
+  loadouts:
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
+
+- type: loadoutGroup
+  id: SeniorOfficerBelt
+  name: loadout-group-senior-officer-belt
+  loadouts:
+  - SecurityBelt
+  - SecurityWebbing
+
+- type: loadoutGroup
+  id: SeniorOfficerOuterClothing
+  name: loadout-group-senior-officer-outerclothing
+  loadouts:
+  - ArmorVest
+  - ArmorVestSlim
+  - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: SeniorOfficerShoes
+  name: loadout-group-senior-officer-shoes
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots

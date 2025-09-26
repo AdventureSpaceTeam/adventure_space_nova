@@ -68,15 +68,15 @@
   - ResearchDirector
   - Quartermaster
   - Blueshield #Adventure
-  - CentralCommandOfficial
-  - CBURN
-  - ERTLeader
-  - ERTChaplain
-  - ERTJanitor
-  - ERTMedical
-  - ERTSecurity
-  - ERTEngineer
-  - DeathSquad
+  # Adv jobban- CentralCommandOfficial
+  # Adv jobban- CBURN
+  # Adv jobban- ERTLeader
+  # Adv jobban- ERTChaplain
+  # Adv jobban- ERTJanitor
+  # Adv jobban- ERTMedical
+  # Adv jobban- ERTSecurity
+  # Adv jobban- ERTEngineer
+  # Adv jobban- DeathSquad
   primary: false
   weight: 100
 
@@ -88,6 +88,7 @@
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
+  - SeniorEngineerAdv # Adventure
   - StationEngineer
   - TechnicalAssistant
 
@@ -99,6 +100,7 @@
   roles:
   - Chemist
   - ChiefMedicalOfficer
+  - SeniorMedicAdv # Adventure
   - MedicalDoctor
   - MedicalIntern
   - Psychologist
@@ -112,6 +114,7 @@
   weight: 20
   roles:
   - HeadOfSecurity
+  - SeniorOfficerAdv # Adventure
   - SecurityCadet
   - SecurityOfficer
   - Pilot # Corvax-Pilot
@@ -126,6 +129,7 @@
   color: "#f79df7" # Adventure
   roles:
   - ResearchDirector
+  - SeniorResearcherAdv # Adventure
   - Scientist
   - ResearchAssistant
 
@@ -134,6 +138,6 @@
   name: department-Silicon
   description: department-Silicon-description
   color: "#D381C9"
-  roles:  
+  roles:
   - Borg
   - StationAi

@@ -30,25 +30,29 @@
             CargoTechnician: [ 3, 3 ]
             # engineering
             ChiefEngineer: [ 1, 1 ]
+            SeniorEngineerAdv: [ 1, 1 ]
             StationEngineer: [ 2, 2 ]
             AtmosphericTechnician: [ 1, 1 ]
-            TechnicalAssistant: [ 2, 2 ]
+            TechnicalAssistant: [ 1, 1 ]
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
+            SeniorMedicAdv : [ 1, 1 ]
             MedicalDoctor: [ 2, 2 ]
-            MedicalIntern: [ 2, 2 ]
+            MedicalIntern: [ 1, 1 ]
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
             Chemist: [ 1, 1 ]
             # science
             ResearchDirector: [ 1, 1 ]
+            SeniorResearcherAdv: [ 1, 1 ]
             Scientist: [ 2, 2 ]
-            ResearchAssistant: [ 2, 2 ]
+            ResearchAssistant: [ 1, 1 ]
             # security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
+            SeniorOfficerAdv: [ 1, 1 ]
             SecurityOfficer: [ 2, 2 ]
-            SecurityCadet: [ 2, 2 ]
+            SecurityCadet: [ 1, 1 ]
             Detective: [ 1, 1 ]
             # service
             HeadOfPersonnel: [ 1, 1 ]
