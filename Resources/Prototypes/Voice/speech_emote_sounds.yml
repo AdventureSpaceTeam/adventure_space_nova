@@ -301,9 +301,9 @@
     Laugh:
       path: /Audio/Voice/Arachnid/arachnid_laugh.ogg
     Chitter:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      collection: InsectChitter # Adventure
     Click:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+      collection: InsectClick # Adventure
     Weh:
       collection: Weh
     Hew:
