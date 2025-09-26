@@ -25,17 +25,13 @@
 - type: startingGear
   id: SeniorMedicAdvGear
   equipment:
-    head: ClothingHeadHatBeretSeniorPhysician
-    jumpsuit: ClothingUniformJumpsuitSeniorPhysician
-    back: ClothingBackpackMedicalFilled
-    shoes: ClothingShoesColorBlack
-    outerClothing: ClothingOuterCoatLabSeniorPhysician
-    id: SeniorPhysicianPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
-  innerClothingSkirt: ClothingUniformJumpskirtSeniorPhysician
-  satchel: ClothingBackpackSatchelMedicalFilled
-  duffelbag: ClothingBackpackDuffelMedicalFilled
+    ipc: IPCModulMed # Adventure-IPC
+    id: SeniorPhysicianPDA # Adventure
+  #storage:
+    #back:
+    #- Stuff
 
 - type: playTimeTracker
   id: JobSeniorMedicAdv

@@ -24,7 +24,7 @@
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
     ipc: IPCModulEng # Adventure-IPC
-    id: StationEngineerPDA # Adventure
+    id: EngineerPDA # Adventure
   #storage:
     #back:
     #- Stuff

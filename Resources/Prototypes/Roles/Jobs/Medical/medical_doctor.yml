@@ -26,7 +26,7 @@
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     ipc: IPCModulMed # Adventure-IPC
-    id: MedicalDoctorPDA # Adventure
+    id: MedicalPDA # Adventure
   #storage:
     #back:
     #- Stuff
