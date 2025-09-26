@@ -75,7 +75,7 @@
     head: ClothingHeadEnvirosuitEnguneering
 
 - type: loadoutGroup
-  id: GroupPlasManSuitEnguneering
+  id: GroupPlasManSuitEngineering
   name: loadout-group-breath-tool
   minLimit: 2
   hidden: true

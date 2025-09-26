@@ -18,6 +18,7 @@
   id: ScientistGear
   equipment:
     ears: ClothingHeadsetScience
+    id: ScientistPDA # Adventure
   #storage:
     #back:
     #- Stuff

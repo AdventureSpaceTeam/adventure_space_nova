@@ -1,0 +1,53 @@
+- type: job
+  id: SeniorMedicAdv
+  name: job-name-senior-medic
+  description: job-description-senior-medic
+  playTimeTracker: JobSeniorMedicAdv
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 21600 #6 hrs
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 216000 # 60 hrs
+  weight: 9
+  startingGear: SeniorMedicAdvGear
+  icon: "JobIconSeniorPhysician"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  - Chemistry
+
+- type: startingGear
+  id: SeniorMedicAdvGear
+  equipment:
+    head: ClothingHeadHatBeretSeniorPhysician
+    jumpsuit: ClothingUniformJumpsuitSeniorPhysician
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesColorBlack
+    outerClothing: ClothingOuterCoatLabSeniorPhysician
+    id: SeniorPhysicianPDA
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+  innerClothingSkirt: ClothingUniformJumpskirtSeniorPhysician
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled
+
+- type: playTimeTracker
+  id: JobSeniorMedicAdv
+
+- type: entity
+  id: SpawnPointSeniorMedicAdv
+  parent: SpawnPointJobBase
+  name: seniormedicadv
+  components:
+  - type: SpawnPoint
+    job_id: SeniorMedicAdv
+  - type: Sprite
+    layers:
+      - state: green
+      - state: seniorphysician

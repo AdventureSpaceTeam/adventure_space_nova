@@ -1,0 +1,40 @@
+- type: job
+  id: SeniorResearcherAdv
+  name: job-name-senior-researcher-adv
+  description: job-description-senior-researcher-adv
+  playTimeTracker: JobSeniorResearcherAdv
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 216000 #60 hrs
+  weight: 9
+  startingGear: SeniorResearcherGearAdv
+  icon: "JobIconSeniorResearcher"
+  supervisors: job-supervisors-rd
+  access:
+  - Research
+  - Maintenance
+
+- type: startingGear
+  id: SeniorResearcherGearAdv
+  equipment:
+    id: SeniorResearcherPDA
+    ears: ClothingHeadsetScience
+  #storage:
+    #back:
+    #- Stuff
+
+- type: playTimeTracker
+  id: JobSeniorResearcherAdv
+
+- type: entity
+  id: SpawnPointSeniorResearcherAdv
+  parent: SpawnPointJobBase
+  name: seniorresearcher
+  components:
+  - type: SpawnPoint
+    job_id: SeniorResearcherAdv
+  - type: Sprite
+    layers:
+      - state: green
+      - state: seniorresearcher
