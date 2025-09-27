@@ -819,7 +819,7 @@
     - state: default
     - state: idGenericMed # Adventure-Respriteer
   - type: PresetIdCard # Adventure
-    job: SeniorMedic # Adventure
+    job: SeniorMedicAdv # Adventure
 
 - type: entity
   parent: SecurityIDCard
