@@ -271,7 +271,7 @@
 
 - type: entity
   name: пакет с физраствором #Adventure
-  description: Содержит физраствор, что является универсальной подбавкой для крови каждой расы, работающей на территории Нанотразен. #Adventure
+  description: Содержит физраствор, что является универсальной подбавкой для крови каждой расы, работающей на территории Nanotrasen. #Adventure
   parent: BaseHealingItem
   id: Bloodpack
   suffix: Full

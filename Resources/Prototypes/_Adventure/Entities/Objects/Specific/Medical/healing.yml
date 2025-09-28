@@ -157,8 +157,8 @@
       - Resomi
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 8% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -194,8 +194,8 @@
       - Vox
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -231,8 +231,8 @@
       - Snake
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 25% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -268,8 +268,8 @@
       - Vox
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -305,8 +305,8 @@
       - Drask
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -342,8 +342,8 @@
       - Slime
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 25% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -379,8 +379,8 @@
       - Diona
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -416,8 +416,8 @@
       - Skrell
     damage:
       types:
-        Bloodloss: -0.15 #lowers bloodloss damage
-    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
