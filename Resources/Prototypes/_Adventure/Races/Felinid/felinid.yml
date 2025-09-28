@@ -39,6 +39,8 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
+  - type: Damageable
+    damageContainer: Felinid
   - type: Fixtures
     fixtures: # TODO: This needs a second fixture just for mob collisions.
       fix1:

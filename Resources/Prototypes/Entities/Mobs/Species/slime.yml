@@ -49,7 +49,7 @@
       Female: FemaleSlime
       Unsexed: MaleSlime
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Slime
     damageModifierSet: Slime
   - type: PassiveDamage # Around 8 damage a minute healed
     allowedStates:

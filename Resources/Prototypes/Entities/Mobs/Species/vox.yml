@@ -28,7 +28,7 @@
     - id: FoodMeatVox # Adventure
       amount: 5
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Vox
     damageModifierSet: Vox
   - type: PassiveDamage
     # Augment normal health regen to be able to tank some Poison damage

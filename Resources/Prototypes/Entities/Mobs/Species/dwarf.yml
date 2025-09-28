@@ -22,6 +22,8 @@
   - type: Body
     prototype: Dwarf
     requiredLegs: 2
+  - type: Damageable
+    damageContainer: Dwarf
   - type: Butcherable
     butcheringType: Spike
     spawned:

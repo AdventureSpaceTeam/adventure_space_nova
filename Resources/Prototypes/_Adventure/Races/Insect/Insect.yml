@@ -202,7 +202,7 @@
       282.15: 0.6
       274.15: 0.4
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Insect
     damageModifierSet: InsectArmor
   - type: Body
     prototype: InsectSerpentide

@@ -1,0 +1,143 @@
+- type: damageContainer
+  id: Arachnid
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Diona
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Dwarf
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Human
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Moth
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Reptilian
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Slime
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Vulpkanin
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Vox
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Insect
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Pigman
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Skrell
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Felinid
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Snake
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Resomi
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
+
+- type: damageContainer
+  id: Drask
+  supportedGroups:
+    - Brute
+    - Burn
+    - Toxin
+    - Airloss
+    - Genetic
