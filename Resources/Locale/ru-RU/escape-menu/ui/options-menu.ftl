@@ -1,4 +1,4 @@
-## General stuff
+﻿## General stuff
 
 ui-options-title = Игровые настройки
 ui-options-tab-accessibility = Доступность
@@ -51,7 +51,7 @@ ui-options-interface-label = Интерфейс
 
 ui-options-auto-fill-highlights = Автоматически заполнять подсвеченные слова информацией о персонаже
 ui-options-highlights-color = Цвет подсветки:
-ui-options-highlights-color-example = Это подсвеченный текст!
+ui-options-highlights-color-example = Это подсвеченный текст.
 ui-options-show-held-item = Показать удерживаемый элемент рядом с курсором
 ui-options-show-combat-mode-indicators = Показать индикатор боевого режима рядом с курсором
 ui-options-opaque-storage-window = Непрозрачность окна хранилища

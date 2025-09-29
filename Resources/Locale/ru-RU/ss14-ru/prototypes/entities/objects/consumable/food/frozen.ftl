@@ -1,4 +1,4 @@
-ent-FoodFrozenBase = { ent-FoodInjectableBase }
+﻿ent-FoodFrozenBase = { ent-FoodInjectableBase }
     .desc = { ent-FoodInjectableBase.desc }
 ent-FoodFrozenSandwich = мороженое-сэндвич
     .desc = Мороженое в собственной упаковке.
