@@ -22,8 +22,7 @@ public static class JobRequirements
         [NotNullWhen(false)] out FormattedMessage? reason,
         IEntityManager entManager,
         IPrototypeManager protoManager,
-        HumanoidCharacterProfile? profile,
-        ICommonSession session) // Adventure
+        HumanoidCharacterProfile? profile)
     {
         var sys = entManager.System<SharedRoleSystem>();
         var requirements = sys.GetRoleRequirements(job);
@@ -43,7 +42,8 @@ public static class JobRequirements
         [NotNullWhen(false)] out FormattedMessage? reason,
         IEntityManager entManager,
         IPrototypeManager protoManager,
-        HumanoidCharacterProfile? profile)
+        HumanoidCharacterProfile? profile,
+        ICommonSession session) // Adventure
     {
         reason = null;
         if (requirements == null)
