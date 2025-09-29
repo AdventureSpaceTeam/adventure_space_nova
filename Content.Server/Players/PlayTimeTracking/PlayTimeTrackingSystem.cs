@@ -243,9 +243,14 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         if (!_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;
 
-        var sponsor = _sponsors.GetSponsor(player.UserId);
-        if (sponsor != null && sponsor.Level >= job.SponsorOpenMinLevel)
+        // Adventure begin
+        if (!_prototypes.TryIndex(job, out var job_proto))
             return true;
+
+        var sponsor = _sponsors.GetSponsor(player.UserId);
+        if (sponsor != null && sponsor.Level >= job_proto.SponsorOpenMinLevel)
+            return true;
+        // Adventure end
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))
         {

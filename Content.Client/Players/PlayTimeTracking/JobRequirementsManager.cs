@@ -157,7 +157,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         if (_sponsors.GetMySponsor()?.Level >= job.SponsorOpenMinLevel)
             return true;
 
-        return CheckRoleRequirements(job, profile, out reason);
+        return true;
     }
 
     /// <summary>

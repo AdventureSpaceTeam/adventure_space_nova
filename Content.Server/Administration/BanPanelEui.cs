@@ -120,6 +120,9 @@ public sealed class BanPanelEui : BaseEui
         if (ban.BannedJobs?.Length > 0 || ban.BannedAntags?.Length > 0)
         {
             var now = DateTimeOffset.UtcNow;
+            List<string>? roleBans = null;
+            if (ban.BannedJobs is not null)
+                roleBans = new(ban.BannedJobs.Length);
             foreach (var role in ban.BannedJobs ?? [])
             {
                 _banManager.CreateRoleBan(
@@ -134,6 +137,8 @@ public sealed class BanPanelEui : BaseEui
                     ban.Reason,
                     now
                 );
+                if (roleBans is not null)
+                    roleBans.Add(role);
             }
 
             foreach (var role in ban.BannedAntags ?? [])
@@ -152,7 +157,7 @@ public sealed class BanPanelEui : BaseEui
                 );
             }
 
-            _DiscordWebhookBanSender.SendRoleBansMessage(target, targetUid, Player.Name, Player.UserId, minutes, reason, roles); // AdvSpace Discord Webhook
+            _DiscordWebhookBanSender.SendRoleBansMessage(ban.Target, targetUid, Player.Name, Player.UserId, ban.BanDurationMinutes, ban.Reason, roleBans); // AdvSpace Discord Webhook
 
             Close();
 
@@ -183,7 +188,7 @@ public sealed class BanPanelEui : BaseEui
             ban.Reason
         );
 
-        _DiscordWebhookBanSender.SendBanMessage(target, targetUid, Player.Name, Player.UserId, minutes, reason); // AdvSpace Discord Webhook
+        _DiscordWebhookBanSender.SendBanMessage(ban.Target, targetUid, Player.Name, Player.UserId, ban.BanDurationMinutes, ban.Reason); // AdvSpace Discord Webhook
 
         Close();
     }

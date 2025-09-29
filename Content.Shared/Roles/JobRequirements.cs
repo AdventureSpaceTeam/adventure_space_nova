@@ -22,11 +22,12 @@ public static class JobRequirements
         [NotNullWhen(false)] out FormattedMessage? reason,
         IEntityManager entManager,
         IPrototypeManager protoManager,
-        HumanoidCharacterProfile? profile)
+        HumanoidCharacterProfile? profile,
+        ICommonSession session) // Adventure
     {
         var sys = entManager.System<SharedRoleSystem>();
         var requirements = sys.GetRoleRequirements(job);
-        return TryRequirementsMet(requirements, playTimes, out reason, entManager, protoManager, profile);
+        return TryRequirementsMet(requirements, playTimes, out reason, entManager, protoManager, profile, session); // Adventure
     }
 
     /// <summary>
