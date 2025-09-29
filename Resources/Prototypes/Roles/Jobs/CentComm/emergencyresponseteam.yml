@@ -84,7 +84,7 @@
     pocket2: MagazineRifle
     ipc: IPCModulSec # Adventure-IPC
   inhand:
-  - WeaponRifleLecter
+  - WeaponRifleLecterXL8
   storage:
     back:
     - WeaponDisabler
