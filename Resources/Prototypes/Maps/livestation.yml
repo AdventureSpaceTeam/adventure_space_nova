@@ -1,0 +1,20 @@
+- type: gameMap
+  id: LiveShuttle
+  mapName: 'liveshuttle'
+  mapPath: /Maps/liveshuttle2station2.yml
+  minPlayers: 0
+  maxPlayers: 5
+  stations:
+    Amber:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: '{0} LiveShuttle Station {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14-SB'
+      - type: StationEmergencyShuttle
+        emergencyShuttlePath: /Maps/Shuttles/emergency_amber.yml
+      - type: StationJobs
+        availableJobs: # 60 jobs total w/o latejoins & interns, 77 jobs total w/ latejoins & interns
+          Passenger: [ -1, -1 ] #infinite, not counted
