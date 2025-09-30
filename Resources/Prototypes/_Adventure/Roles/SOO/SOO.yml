@@ -196,7 +196,7 @@
 
 #КПК ОСО
 - type: entity
-  parent: BasePDA
+  parent: DeathsquadPDA
   id: SOOPDA
   name: КПК ОСО
   description: Подключён ко всему. Даже к тому, что не должно существовать.
@@ -210,16 +210,9 @@
        pda-SOO
   - type: PdaBorderColor
     borderColor: "#383838"
-    accentVColor: "#383838"
+    accentVColor: "#ffd700"
   - type: Icon
     state: pda-SOO
-  - type: CartridgeLoader
-    preinstalled:
-    - CrewManifestCartridge
-    - NotekeeperCartridge
-    - NanoTaskCartridge
-    - NewsReaderCartridge
-    - WantedListCartridge
 
 #Скафандр ОСО
 - type: entity
@@ -277,8 +270,12 @@
     gloves: ClothingHandsGlovesSOO
     ears: SOOHeadsetAlt
     back: ClothingMilitaryBackpackSOO
-    outerclothing: SOOArmoredTrench
+    outerClothing: SOOArmoredTrench
     mask: ClothingMaskSOO
+    shoes: ClothingShoesBootsSOO
+    head: ClothingHeadCapSOO
+    jumpsuit: ClothingUniformJumpsuitSOO
+    neck: ClothingMantleSOO
   storage:
     back:
     - Flash
