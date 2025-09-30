@@ -218,7 +218,7 @@
     tags:
     - Bloodpack
   - type: Sprite
-    state: bloodpack
+    state: bloodpack-blue # Adventure
   - type: Healing
     damageContainers:
       - Biological
