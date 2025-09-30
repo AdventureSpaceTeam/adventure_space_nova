@@ -40,6 +40,7 @@
     - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.Back" ] # Adventure
     - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
@@ -211,6 +212,17 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+#Adventure-edit
+  - type: JumpAbility
+    action: ActionJumpSpecies
+    canCollide: true
+    jumpDistance: 1
+    jumpSound:
+      path: /Audio/Effects/thudswoosh.ogg
+      params:
+        volume: -1
+        variation: 0.05
+#Adventure-edit
 
 - type: entity
   save: false
@@ -336,6 +348,7 @@
     - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.Back" ] # Adventure
     - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]

@@ -22,6 +22,18 @@
     {
       "name": "straight",
       "directions": 4
+    },
+    {
+      "name": "big",
+      "directions": 4
+    },
+    {
+      "name": "big_head",
+      "directions": 4
+    },
+    {
+      "name": "forehead",
+      "directions": 4
     }
   ]
 }

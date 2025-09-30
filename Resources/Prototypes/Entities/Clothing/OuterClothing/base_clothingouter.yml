@@ -148,6 +148,9 @@
 #Adventure-start
   - type: SpontaneousCombustionProtection
     protectionPercent: 75
+#  - type: HideLayerClothing
+#    slots:
+#    - Tail
 #Adventure-end
 
 - type: entity
@@ -181,6 +184,9 @@
 #Adventure-start
   - type: SpontaneousCombustionProtection
     protectionPercent: 75
+#  - type: HideLayerClothing
+#    slots:
+#    - Tail
 #Adventure-end
 
 - type: entity

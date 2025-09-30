@@ -1,4 +1,4 @@
-mech-verb-enter = Войти
+﻿mech-verb-enter = Войти
 mech-verb-exit = Извлечь пилота
 mech-equipment-begin-install = { CAPITALIZE($item) } устанавливается...
 mech-equipment-finish-install = Установка { $item } завершена
@@ -12,3 +12,4 @@ mech-energy-missing = Энергия: ОТСУТСТВУЕТ
 mech-slot-display = Доступно слотов: { $amount }
 mech-no-enter = Вы не можете пилотировать это.
 mech-eject-pilot-alert = { $user } вытаскивает пилота из { $item }!
+mech-construction-guide-string = Все механические детали должны быть прикреплены к каркасу.

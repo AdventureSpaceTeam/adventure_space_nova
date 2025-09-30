@@ -82904,7 +82904,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -40.5,-17.5
       parent: 2
-- proto: TegCenterBroken
+- proto: TegCenter
   entities:
   - uid: 11321
     components:
@@ -82914,7 +82914,7 @@ entities:
       parent: 2
     - type: ApcPowerReceiver
       powerDisabled: True
-- proto: TegCirculatorBroken
+- proto: TegCirculator
   entities:
   - uid: 11322
     components:

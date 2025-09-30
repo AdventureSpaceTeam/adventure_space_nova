@@ -1,0 +1,77 @@
+- type: entity
+  parent: MobAlienLarvaBase
+  name: паразит ксеноморфа
+  suffix: Чужой
+  description: Идеальный организм.
+  id: MobAlienFaceHugger
+  components:
+  - type: JumpAbility
+    action: ActionAlienJump
+    canCollide: false
+    jumpDistance: 4
+    jumpSound:
+      path: /Audio/_Adventure/Voice/alian/hugger_jump.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/facehugger.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
+      state: running
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: movement
+    noMovementLayers:
+      movement:
+        state: running
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: HuggerSpeach
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+    baseWalkSpeed : 5.5
+  - type: Item
+    sprite: _Adventure/Roles/Alian/mobs/facehugger.rsi
+    size: Normal
+  - type: Clothing
+    sprite: _Adventure/Roles/Alian/mobs/facehugger.rsi
+    slots: [mask]
+  - type: AddAccentClothing
+    accent: MumbleAccent
+  - type: EmoteBlocker
+    blocksCategories:
+    - Vocal
+  - type: Blindfold
+  - type: CanEscapeInventory
+  - type: SolutionScanner
+  - type: SolutionContainerManager
+    solutions:
+      chemicals: 
+        reagents:
+        - ReagentId: AlianFero
+          Quantity: 100
+      melee:
+        reagents:
+        - ReagentId: AlianToxin
+          Quantity: 100
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: AlianToxin
+        Quantity: 0.5
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 5
+
+- type: speechSounds
+  id: HuggerSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/alian/hugger_speach.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/alian/hugger_speach.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/alian/hugger_speach.ogg

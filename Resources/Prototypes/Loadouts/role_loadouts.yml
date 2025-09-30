@@ -272,6 +272,7 @@
   - CargoTechnicianBackpack
   - CargoTechnicianOuterClothing
   - CargoTechnicianShoes
+  - CargoTechnicianID
   - Glasses
   - Survival
   - Trinkets
@@ -317,7 +318,7 @@
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
-  - GroupPlasManSuitEnguneering #Adventure
+  - GroupPlasManSuitEngineering #Adventure
   - GroupTankHarness
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
@@ -330,14 +331,14 @@
 - type: roleLoadout
   id: JobStationEngineer
   groups:
-  - GroupPlasManSuitEnguneering #Adventure
+  - GroupPlasManSuitEngineering #Adventure
   - GroupTankHarness
   - StationEngineerHead
   - StationEngineerJumpsuit
   - StationEngineerBackpack
   - StationEngineerOuterClothing
   - StationEngineerShoes
-  - StationEngineerID
+  # Adventure- StationEngineerID
   - SurvivalExtended
   - Trinkets
   - GroupSpeciesBreathTool
@@ -392,7 +393,7 @@
   - ScientistOuterClothing
   - ScientistGloves
   - ScientistShoes
-  - ScientistPDA
+  # Adventure- ScientistPDA
   - Glasses
   - Survival
   - Trinkets
@@ -461,7 +462,7 @@
   - SecurityBackpack
   - SecurityOuterClothing
   - SecurityShoes
-  - SecurityPDA
+  # Adventure- SecurityPDA
   - SecurityBelt
   - SurvivalSecurity
   - Trinkets
@@ -532,7 +533,7 @@
   - MedicalBackpack
   - MedicalDoctorOuterClothing
   - MedicalShoes
-  - MedicalDoctorPDA
+  # Adventure- MedicalDoctorPDA
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets

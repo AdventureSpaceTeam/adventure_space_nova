@@ -1,0 +1,39 @@
+﻿{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 40,
+    "y": 40
+  },
+  "states": [
+    {
+      "name": "resomi0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "resomi1"
+    },
+    {
+      "name": "trottin0",
+      "delays": [
+        [
+            0.3,
+            0.3,
+            0.3,
+            0.3
+        ]
+      ]
+    },
+    {
+      "name": "trottin1"
+    }
+  ]
+}

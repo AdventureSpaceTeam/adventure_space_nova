@@ -1,0 +1,320 @@
+- type: entity
+  parent: MobXeno
+  name: личинка ксеноморфа
+  suffix: Чужой
+  description: Идеальный организм.
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaBase
+  components:
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Alian
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Alian
+  - type: ActiveRadio
+    channels:
+      - Alian
+  - type: JumpAbility
+    action: ActionAlienJump
+    canCollide: false
+    jumpDistance: 2
+    jumpSound:
+      collection: LarvaFootStep
+      params:
+        volume: -1
+        variation: 0.05
+  - type: NightVision
+    color: "#404457"
+    luminancethreshold: 0.1
+    noiseamount: 0.8
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/larva.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      25: Critical
+      50: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      20: 0.7
+  - type: MeleeWeapon
+    animation: WeaponArcBite
+    damage:
+      types:
+        Blunt: 1
+        Slash: 1
+    soundHit:
+     path: /Audio/Effects/bite.ogg
+  - type: SSDIndicator
+  - type: Tag
+    tags:
+    - FootstepSound
+    - AlienXeno
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Access
+    tags:
+    - AlienAccess
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Bloodloss: 0
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -1
+    bloodReagent: XenoBloodAcid
+    bloodMaxVolume: 0
+  - type: Damageable
+    damageModifierSet: Alien
+    damageContainer: Alien
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: LarvaSpeach
+  - type: Vocal
+    sounds:
+      Male: AlienLarva
+      Female: AlienLarva
+      Unsexed: AlienLarva
+  - type: Puller
+    needsHands: false
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 1000
+    damage:
+      groups:
+        Brute: -1.50
+        Burn: -1.50
+        Airloss: -1.50
+        Toxin: -1.50
+        Genetic: -1.50
+  - type: Emoting
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4
+    baseWalkSpeed : 4.5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: LarvaFootStep
+      params:
+        volume: -8
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 30
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: StatusEffects
+    allowed:
+    - Stun
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+      params:
+        volume: -1
+  - type: Body
+    prototype: Alian
+
+- type: emoteSounds
+  id: AlienLarva
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+    Laugh:
+      path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+    DefaultDeathgasp:
+      path: /Audio/_Adventure/Voice/alian/larva_dead.ogg
+
+#стандартный
+- type: entity
+  parent: MobAlienLarvaBase
+  suffix: Чужой Стандартный
+  id: MobAlienLarva
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlien
+
+- type: polymorph
+  id: MobAlienLarvaMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarva
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true
+
+#Драск
+- type: entity
+  parent: MobAlienLarvaBase
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaDrask
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienDrask
+
+- type: polymorph
+  id: MobAlienLarvaDraskMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarvaDrask
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true
+
+#Резоми
+- type: entity
+  parent: MobAlienLarvaBase
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaResomi
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienResomi
+
+- type: polymorph
+  id: MobAlienLarvaResomiMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarvaResomi
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true
+
+#Скрелл
+- type: entity
+  parent: MobAlienLarvaBase
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaSkrell
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienSkrell
+
+- type: polymorph
+  id: MobAlienLarvaSkrellMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarvaSkrell
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true
+
+#Насекомое
+- type: entity
+  parent: MobAlienLarvaBase
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaInsect
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienInsect
+
+- type: polymorph
+  id: MobAlienLarvaInsectMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarvaInsect
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true
+
+#Арахнид
+- type: entity
+  parent: MobAlienLarvaBase
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaArachnid
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienArachnid
+
+- type: polymorph
+  id: MobAlienLarvaArachnidMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarvaArachnid
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true
+
+#Зерах
+- type: entity
+  parent: MobAlienLarvaBase
+  categories: [ HideSpawnMenu ]
+  id: MobAlienLarvaSnake
+  components:
+  - type: Reform
+    actionPrototype: AlianReformAction
+    reformTime: 10
+    popupText: Вы начинаете сбрасывать свой старый панцирь.
+    reformPrototype: MobAlienSnake
+
+- type: polymorph
+  id: MobAlienLarvaSnakeMorph
+  configuration:
+    forced: true
+    entity: MobAlienLarvaSnake
+    inventory: Drop
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false
+    revertOnDelete: false
+    ignoreAllowRepeatedMorphs: true

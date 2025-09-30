@@ -213,6 +213,7 @@
     - AdventureSolarSail # Adventure
     - ChemistryPlus #CyberneticGenesis
     - AdventureEnergyCores # Adventure
+    - AdventureThrusterBig # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo

@@ -1,1 +1,26 @@
-{"version": 1, "size": {"x": 32, "y": 32}, "license": "CC-BY-SA-3.0", "copyright": "https://github.com/TauCetiStation/TauCetiClassic/commit/c449d65dff642f44f3e0d8a312f70aec43ab2eae", "states": [{"name": "icon"}]}
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "icon_empty"
+    },
+    {
+      "name": "fill-1"
+    },
+    {
+      "name": "fill-2"
+    },
+    {
+      "name": "fill-3"
+    }
+  ]
+}

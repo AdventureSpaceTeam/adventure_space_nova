@@ -1,0 +1,51 @@
+- type: job
+  id: SeniorEngineerAdv
+  name: job-name-senior-engineer-adv
+  description: job-description-senior-engineer-adv
+  playTimeTracker: JobSeniorEngineerAdv
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 21600 #6 hrs
+    - !type:RoleTimeRequirement
+      role: JobStationEngineer
+      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 216000 # 60 hrs
+  weight: 9
+  startingGear: SeniorEngineerGearAdv
+  icon: "JobIconSeniorEngineer"
+  supervisors: job-supervisors-ce
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  - Atmospherics
+
+- type: startingGear
+  id: SeniorEngineerGearAdv
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+    belt: ClothingBeltUtilityEngineering
+    ears: ClothingHeadsetEngineering
+    ipc: IPCModulEng
+    id: SeniorEngineerPDA
+  #storage:
+    #back:
+    #- Stuff
+
+- type: playTimeTracker
+  id: JobSeniorEngineerAdv
+
+- type: entity
+  id: SpawnPointSeniorEngineerAdv
+  parent: SpawnPointJobBase
+  name: seniorengineer
+  components:
+  - type: SpawnPoint
+    job_id: SeniorEngineerAdv
+  - type: Sprite
+    layers:
+      - state: green
+      - state: seniorengineer

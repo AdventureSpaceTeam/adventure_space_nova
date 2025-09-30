@@ -794,6 +794,8 @@
     layers:
     - state: default
     - state: idGenericEng # Adventure-Respriteer
+  - type: PresetIdCard # Adventure
+    job: SeniorEngineerAdv # Adventure
 
 - type: entity
   parent: ResearchIDCard
@@ -804,6 +806,8 @@
     layers:
     - state: default
     - state: idGenericScience # Adventure-Respriteer
+  - type: PresetIdCard # Adventure
+    job: SeniorResearcherAdv # Adventure
 
 - type: entity
   parent: MedicalIDCard
@@ -814,6 +818,8 @@
     layers:
     - state: default
     - state: idGenericMed # Adventure-Respriteer
+  - type: PresetIdCard # Adventure
+    job: SeniorMedicAdv # Adventure
 
 - type: entity
   parent: SecurityIDCard
@@ -824,6 +830,8 @@
     layers:
     - state: default
     - state: idGenericSecurity # Adventure-Respriteer
+  - type: PresetIdCard # Adventure
+    job: SeniorOfficerAdv # Adventure
 
 - type: entity
   parent: IDCardStandard
@@ -833,7 +841,7 @@
   - type: Sprite
     layers:
     - state: wizard
-    - state: idwizard
+#   - state: idwizard Adventure-Respriteer
   - type: Access
     tags:
     - Wizard

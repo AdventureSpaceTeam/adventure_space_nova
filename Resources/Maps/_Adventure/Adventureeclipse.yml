@@ -50044,7 +50044,7 @@ entities:
     - type: Transform
       pos: -16.5,30.5
       parent: 1
-- proto: TegCenterBroken
+- proto: TegCenter
   entities:
   - uid: 6966
     components:
@@ -50054,7 +50054,7 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerDisabled: True
-- proto: TegCirculatorBroken
+- proto: TegCirculator
   entities:
   - uid: 6967
     components:

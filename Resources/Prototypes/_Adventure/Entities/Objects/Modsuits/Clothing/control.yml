@@ -32,15 +32,6 @@
     softness: 20
     autoRot: true
   - type: UnpoweredFlashlight
-  - type: PowerCellSlot
-    cellSlotId: cell_slot
-  - type: ContainerContainer
-    containers:
-      cell_slot: !type:ContainerSlot
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
   - type: LightBehaviour
     behaviours:
       - !type:FadeBehaviour

@@ -138,7 +138,6 @@ public sealed partial class TTSSystem
             {"с4", "Си 4"}, // cyrillic
             {"c4", "Си 4"}, // latinic
             {"бсс", "Бэ Эс Эс"},
-            // Adventure-Stars
             {"бм", "Бэ Эм"},
             {"бма", "Бэ Эма"},
             {"бму", "Бэ Эму"},
@@ -150,7 +149,14 @@ public sealed partial class TTSSystem
             {"рсу", "Эр Сэ У"},
             {"упт", "У Пэ Тэ"},
             {"гбс", "Гэ Бэ Эс"},
-            // Adventure-End
+            {"снс", "Эс Эн Эс"},
+            {"снсу", "Эс Эн Эсу"},
+            {"снса", "Эс Эн Эса"},
+            {"снсом", "Эс Эн Эсом"},
+            {"вв", "Вэ Вэ"},
+            {"ви", "Вэ И"},
+            {"ии", "И И"},
+            {"осщ", "О Сэ Ща"},
         };
 
     private static readonly IReadOnlyDictionary<string, string> ReverseTranslit =

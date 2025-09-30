@@ -1,0 +1,498 @@
+- type: radioChannel
+  id: Alian
+  name: Коллективный разум
+  keycode: 'ч'
+  frequency: 426
+  color: "#d9f500"
+  longRange: true
+
+- type: body
+  id: Alian
+  name: "ксеноморф"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - legs
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAlianHeart
+        kidneys: OrganAnimalKidneys
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
+
+- type: entity
+  id: OrganAlianHeart
+  parent: OrganAnimalHeart
+  name: сердце ксеноморфа
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ Alian ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+
+- type: metabolizerType
+  id: Alian
+  name: Ксеноморф
+
+# броня
+- type: damageModifierSet
+  id: Alien
+  coefficients:
+    Caustic: 0.0
+    Blunt: 0.75
+    Slash: 0.75
+    Piercing: 0.70
+    Heat: 1.5
+
+- type: damageContainer
+  id: Alien
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+
+- type: Tag
+  id: AlienXeno
+
+- type: entity
+  parent: MobXeno
+  name: ксеноморф
+  suffix: Чужой
+  description: Идеальный организм.
+  id: MobAlien
+  components:
+  - type: IntrinsicRadioReceiver
+    channels:
+      - Alian
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Alian
+  - type: ActiveRadio
+    channels:
+      - Alian
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 450
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Spider
+    webAction: ActionAlienWeb
+    webPrototype: AlianWeb
+  - type: AutoImplant
+    implants:
+    - ImplantActionSpawnAlianWall
+    - ImplantSpawnAlianDoor
+    - ImplantActionAlianForcedWall
+  - type: JumpAbility
+    action: ActionAlienJump
+    canCollide: false
+    jumpDistance: 4
+    jumpSound:
+      path: /Audio/_Adventure/Voice/alian/alien_jump.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: NightVision
+    color: "#404457"
+    luminancethreshold: 0.1
+    noiseamount: 0.8
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Critical
+      300: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      200: 0.7
+  - type: MeleeWeapon
+    resistanceBypass: true
+    damage:
+      types:
+        Blunt: 6
+        Slash: 6
+        Structural: 20
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcClaw
+  - type: SSDIndicator
+  - type: Tag
+    tags:
+    - FootstepSound
+    - AlienXeno
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Access
+    tags:
+    - AlienAccess
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Bloodloss: 0
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -1
+    bloodReagent: XenoBloodAcid
+    bloodMaxVolume: 0
+  - type: Stamina
+    critThreshold: 200
+  - type: Damageable
+    damageModifierSet: Alien
+    damageContainer: Alien
+  - type: Speech
+    speechVerb: LargeMob
+    speechSounds: AlienSpeach
+    allowedEmotes: ['Hissing']
+  - type: Vocal
+    sounds:
+      Male: Alien
+      Female: Alien
+      Unsexed: Alien
+  - type: Puller
+    needsHands: false
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 1000
+    damage:
+      groups:
+        Brute: -1.50
+        Burn: -1.50
+        Airloss: -1.50
+        Toxin: -1.50
+        Genetic: -1.50
+  - type: Emoting
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.8
+    baseWalkSpeed : 5.2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: AliensFootStep
+      params:
+        volume: -8
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_Adventure/Voice/alian/larva_speach.ogg
+      params:
+        volume: -1
+  - type: Inventory
+    templateId: Alien
+  - type: InventorySlots
+  - type: Loadout
+    prototypes: [AlienGear]
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Body
+    prototype: Alian
+
+#Кровь ксено
+- type: reagent
+  id: XenoBloodAcid
+  parent: SulfuricAcid
+  name: Кислота Ксеноморфов
+  group: Toxins
+  desc: Абсолюно едкое
+  physicalDesc: Жёлтое вещество, способное растворить что угодно.
+  flavor: acid
+  color: "#d9f500"
+
+- type: emoteSounds
+  id: Alien
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: AlienScream
+    Laugh:
+      collection: AlienScream
+    Hissing:
+      collection: AliensHiss
+    DefaultDeathgasp:
+      collection: AliensDead
+
+- type: entity
+  parent: BaseAction
+  id: ActionAlienJump
+  name: Прыгнуть
+  description: Используйте свои ловкие ноги, чтобы перепрыгнуть небольшое расстояние.
+  components:
+  - type: Action
+    useDelay: 10
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:GravityJumpEvent {}
+
+- type: accessLevel
+  id: AlienAccess
+  name: Возможность использовать постройки ксеноморфов.
+
+- type: inventoryTemplate
+  id: Alien
+  slots:
+    - name: shoes
+      slotTexture: shoes
+      slotFlags: FEET
+      stripTime: 3
+      uiWindowPos: 1,3
+      strippingWindowPos: 1,3
+      displayName: Shoes
+
+- type: startingGear
+  id: AlienGear
+  equipment:
+    shoes: ShoesAlienClaw
+
+#виды
+
+#Драск
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienDrask
+  components:
+  - type: Sprite
+    scale: 1, 1.1
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_drask.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MeleeWeapon
+    resistanceBypass: true
+    damage:
+      types:
+        Blunt: 8
+        Slash: 8
+        Structural: 26
+    soundHit:
+     collection: AlienClaw
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.5
+    baseWalkSpeed : 5.0
+  - type: SolutionContainerManager
+    solutions:
+      chemicals:
+        reagents:
+        - ReagentId: CryoxadoneDrask
+          Quantity: 20
+  - type: SolutionRegeneration
+    solution: chemicals
+    generated:
+      reagents:
+      - ReagentId: CryoxadoneDrask
+        Quantity: 0.50
+
+#Резоми
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienResomi
+  components:
+  - type: Sprite
+    scale: 0.8, 0.8
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_resomi.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+    baseWalkSpeed : 5.5
+  - type: Damageable
+    damageModifierSet: AlienResomi
+    damageContainer: Alien
+
+- type: damageModifierSet
+  id: AlienResomi
+  coefficients:
+    Caustic: 0.0
+    Blunt: 0.85
+    Slash: 0.85
+    Piercing: 0.80
+    Heat: 1.7
+
+#Скрелл
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienSkrell
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_skrell.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Heat: -1
+            Blunt: -1
+            Caustic: -1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Ваша кожа впитывает воду" ]
+        probability: 0.
+
+#Насекомое
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienInsect
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_insect.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ PestKiller ]
+      methods: [ Touch, Ingestion, Injection ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Heat: 2
+        probability: 0.5
+      - !type:Emote
+        emote: Scream
+        showInChat: false
+        probability: 1
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4.8
+    baseWalkSpeed : 5.2
+    baseWeightlessAcceleration: 1.5
+    baseWeightlessFriction: 1
+    baseWeightlessModifier: 1
+  - type: Damageable
+    damageModifierSet: AlienInsect
+    damageContainer: Alien
+
+- type: damageModifierSet
+  id: AlienInsect
+  coefficients:
+    Caustic: 0.0
+    Blunt: 0.75
+    Slash: 0.75
+    Piercing: 0.70
+    Heat: 2.0
+
+#Арахнид
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienArachnid
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_spider.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: AutoImplant
+    implants:
+    - ImplantActionSpawnAlianWall
+    - ImplantActionSpawnAlianWallArachnid
+    - ImplantSpawnAlianDoor
+    - ImplantSpawnAlianDoorArachnid
+    - ImplantActionAlianForcedWall
+
+#Зерах
+- type: entity
+  parent: MobAlien
+  categories: [ HideSpawnMenu ]
+  id: MobAlienSnake
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Adventure/Roles/Alian/mobs/alians/alien_snake.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: ZerahPoison
+          Quantity: 100
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: ZerahPoison
+        Quantity: 0.5
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: SnakeStep
+      params:
+        volume: -8

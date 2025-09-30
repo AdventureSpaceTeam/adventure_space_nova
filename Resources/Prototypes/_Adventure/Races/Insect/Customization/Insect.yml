@@ -116,3 +116,114 @@
   sprites:
   - sprite: _Adventure/Races/Insect/Customization/body.rsi
     state: hand_small
+
+- type: marking
+  id: InsectTailFat
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: fat
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: body
+
+- type: marking
+  id: InsectTailGusenica
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: gusenica
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: body
+
+- type: marking
+  id: InsectTailScorpion
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: scorpion
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: scorpion_body
+
+- type: marking
+  id: InsectTailSpider
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: spider
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: spider_body
+
+- type: marking
+  id: InsectTailScorpider
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: scorpider
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: scorpider_body
+
+
+- type: marking
+  id: InsectBodyBristle
+  bodyPart: RHand
+  markingCategory: Overlay
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: bristle
+
+- type: marking
+  id: InsectBodySpike
+  bodyPart: RHand
+  markingCategory: Overlay
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: spike
+
+- type: marking
+  id: InsectHeadBig
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: big
+
+- type: marking
+  id: InsectHeadBigHead
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: big_head
+
+- type: marking
+  id: InsectHeadForehead
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: forehead

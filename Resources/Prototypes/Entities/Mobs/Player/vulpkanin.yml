@@ -1,0 +1,5 @@
+# - type: entity #Adventure vulps
+#   save: false
+#   name: Urist McBark
+#   parent: BaseMobVulpkanin
+#   id: MobVulpkanin

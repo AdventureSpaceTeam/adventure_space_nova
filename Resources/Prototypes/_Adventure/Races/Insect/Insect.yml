@@ -16,13 +16,13 @@
   id: MobInsect
   components:
   - type: NightVision
-    color: "#50511a"
-    luminancethreshold: 0.1
-    noiseamount: 0.8
+    color: "#594c1d"
+    luminancethreshold: 0.2
+    noiseamount: 0.5
   - type: Crawler
     speedModifier : 0.8
   - type: PermanentBlindness #ради баланса вселенной
-    blindness: 3
+    blindness: 2
 
 - type: entity
   abstract: true
@@ -31,6 +31,8 @@
   id: BaseMobInsect
   name: Урист макЛичинус
   components:
+  - type: TypingIndicator
+    proto: Insect
   - type: PassiveDamage
     allowedStates:
     - Alive

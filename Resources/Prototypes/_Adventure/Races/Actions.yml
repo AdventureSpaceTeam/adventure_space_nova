@@ -1,0 +1,13 @@
+﻿- type: entity
+  parent: BaseAction
+  id: ActionJumpSpecies
+  name: Прыгнуть
+  description: Используйте свои ноги, чтобы перепрыгнуть небольшое расстояние.
+  components:
+  - type: Action
+    useDelay: 60
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:GravityJumpEvent {}
