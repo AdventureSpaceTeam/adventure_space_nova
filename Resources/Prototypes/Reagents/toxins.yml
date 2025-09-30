@@ -92,11 +92,38 @@
           damage:
             types:
               Poison: 2
+          conditions:
+          - !type:OrganType # Adventure
+            type: InsectSerpentide
+            shouldHave: false
         - !type:ChemVomit
           conditions:
+          - !type:OrganType # Adventure
+            type: InsectSerpentide
+            shouldHave: false
           - !type:ReagentThreshold
             min: 2
           probability: 0.2
+# Adventure-edit-start
+    Food: 
+      effects: 
+      - !type:AdjustReagent
+        conditions:
+        - !type:OrganType
+          type: InsectSerpentide
+          shouldHave: true
+        reagent: Protein
+        amount: 0.5
+    Drink:
+      effects:
+      - !type:AdjustReagent 
+        conditions:
+        - !type:OrganType
+          type: InsectSerpentide
+          shouldHave: true
+        reagent: Protein
+        amount: 0.5
+# Adventure-edit-end
 
 - type: reagent
   id: Mold

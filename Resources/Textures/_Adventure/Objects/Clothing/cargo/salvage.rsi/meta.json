@@ -17,6 +17,14 @@
     {
       "name": "equipped-INNERCLOTHING-reptilian",
       "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "folded-equipped-INNERCLOTHING-reptilian",
+      "directions": 4
     }
   ]
 }
