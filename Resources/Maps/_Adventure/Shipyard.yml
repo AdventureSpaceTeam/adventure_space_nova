@@ -4,8 +4,8 @@ meta:
   engineVersion: 266.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/24/2025 05:51:24
-  entityCount: 14206
+  time: 09/30/2025 05:18:15
+  entityCount: 14210
 maps:
 - 1
 grids:
@@ -80273,6 +80273,34 @@ entities:
     - type: Transform
       pos: -3.5,50.5
       parent: 2
+- proto: SpawnPointSeniorEngineerAdv
+  entities:
+  - uid: 14207
+    components:
+    - type: Transform
+      pos: 4.5,-18.5
+      parent: 2
+- proto: SpawnPointSeniorMedicAdv
+  entities:
+  - uid: 14209
+    components:
+    - type: Transform
+      pos: -5.5,42.5
+      parent: 2
+- proto: SpawnPointSeniorOfficerAdv
+  entities:
+  - uid: 14210
+    components:
+    - type: Transform
+      pos: -10.5,54.5
+      parent: 2
+- proto: SpawnPointSeniorResearcherAdv
+  entities:
+  - uid: 14208
+    components:
+    - type: Transform
+      pos: 13.5,40.5
+      parent: 2
 - proto: SpawnPointServiceWorker
   entities:
   - uid: 13571
@@ -83448,12 +83476,16 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,-27.5
       parent: 2
+    - type: PointLight
+      color: '#FF3300FF'
   - uid: 6946
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,-29.5
       parent: 2
+    - type: PointLight
+      color: '#FF3300FF'
 - proto: TelecomServerFilledCargo
   entities:
   - uid: 10189
