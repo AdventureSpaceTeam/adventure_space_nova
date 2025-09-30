@@ -1,0 +1,18 @@
+- type: reaction
+  id: BloodCraft
+  source: true
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    Water:
+      amount: 11
+    Iron:
+      amount: 0.5
+    Sugar:
+      amount: 2
+    CarbonDioxide:
+      amount: 3
+    Protein:
+      amount: 4
+  products:
+    Blood: 20

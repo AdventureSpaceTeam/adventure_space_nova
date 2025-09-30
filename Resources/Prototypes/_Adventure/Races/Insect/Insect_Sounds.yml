@@ -12,12 +12,15 @@
   files:
   - /Audio/_Adventure/Voice/Insect/Insect_scream1.ogg
   - /Audio/_Adventure/Voice/Insect/Insect_scream2.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_scream3.ogg
 
 - type: soundCollection
   id: InsectLaugh
   files:
   - /Audio/_Adventure/Voice/Insect/Insect_haha1.ogg
   - /Audio/_Adventure/Voice/Insect/Insect_haha2.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_haha3.ogg
+  - /Audio/_Adventure/Voice/Insect/Insect_haha4.ogg
 
 - type: soundCollection
   id: InsectSnore
@@ -25,6 +28,21 @@
   - /Audio/_Adventure/Voice/Insect/Insect_speach1.ogg
   - /Audio/_Adventure/Voice/Insect/Insect_speach2.ogg
   - /Audio/_Adventure/Voice/Insect/Insect_speach3.ogg
+
+- type: soundCollection
+  id: InsectChitter
+  files:
+  - /Audio/Voice/Arachnid/arachnid_chitter.ogg
+  - /Audio/_Adventure/Voice/Insect/chitter1.ogg
+  - /Audio/_Adventure/Voice/Insect/chitter2.ogg
+  - /Audio/_Adventure/Voice/Insect/chitter3.ogg
+
+- type: soundCollection
+  id: InsectClick
+  files:
+  - /Audio/Voice/Arachnid/arachnid_click.ogg
+  - /Audio/_Adventure/Voice/Insect/click1.ogg
+  - /Audio/_Adventure/Voice/Insect/click2.ogg
 
 - type: speechSounds
   id: InsectSpeach
@@ -41,9 +59,9 @@
     variation: 0.125
   sounds:
     Chitter:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
+      collection: InsectChitter
     Click:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
+      collection: InsectClick
     Snore:
       collection: InsectSnore
     Scream:

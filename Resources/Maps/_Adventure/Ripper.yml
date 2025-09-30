@@ -4,8 +4,8 @@ meta:
   engineVersion: 266.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/24/2025 05:58:31
-  entityCount: 6119
+  time: 09/30/2025 05:15:08
+  entityCount: 6123
 maps:
 - 1
 grids:
@@ -37963,6 +37963,34 @@ entities:
     components:
     - type: Transform
       pos: 21.5,3.5
+      parent: 2
+- proto: SpawnPointSeniorEngineerAdv
+  entities:
+  - uid: 5442
+    components:
+    - type: Transform
+      pos: -25.5,-0.5
+      parent: 2
+- proto: SpawnPointSeniorMedicAdv
+  entities:
+  - uid: 5432
+    components:
+    - type: Transform
+      pos: 1.5,5.5
+      parent: 2
+- proto: SpawnPointSeniorOfficerAdv
+  entities:
+  - uid: 5422
+    components:
+    - type: Transform
+      pos: 26.5,2.5
+      parent: 2
+- proto: SpawnPointSeniorResearcherAdv
+  entities:
+  - uid: 5423
+    components:
+    - type: Transform
+      pos: 2.5,-4.5
       parent: 2
 - proto: SpawnPointServiceWorker
   entities:

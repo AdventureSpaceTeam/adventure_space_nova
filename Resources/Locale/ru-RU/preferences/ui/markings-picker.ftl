@@ -1,4 +1,4 @@
-markings-used = Используемые черты
+﻿markings-used = Используемые черты
 markings-unused = Неиспользуемые черты
 markings-add = Добавить черту
 markings-remove = Убрать черту
@@ -21,6 +21,7 @@ markings-category-Head = Голова
 markings-category-HeadTop = Голова (верх)
 markings-category-HeadSide = Голова (бок)
 markings-category-Snout = Морда
+markings-category-SnoutCover = Морда (Внешний)
 markings-category-UndergarmentTop = Нижнее бельё (Верх)
 markings-category-UndergarmentBottom = Нижнее бельё (Низ)
 markings-category-Chest = Грудь

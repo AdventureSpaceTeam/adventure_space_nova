@@ -40,14 +40,32 @@ marking-InsectHandSaw = Серпентид, клешни (Пилы)
 marking-InsectHandSmall-hand_small = Серпентид, клешни (Маленькие)
 marking-InsectHandSmall = Серпентид, клешни (Маленькие)
 
-
+marking-InsectTailFat-fat = Серпентид, хвост (Толстый)
+marking-InsectTailFat = Серпентид, хвост (Толстый)
  
+marking-InsectTailGusenica-gusenica = Серпентид, хвост (Гусеница)
+marking-InsectTailGusenica = Серпентид, хвост (Гусеница)
 
+marking-InsectTailScorpion-scorpion = Серпентид, хвост (Скорпион)
+marking-InsectTailScorpion = Серпентид, хвост (Скорпион)
 
+marking-InsectTailSpider-spider = Серпентид, хвост (Паук)
+marking-InsectTailSpider = Серпентид, хвост (Паук)
 
+marking-InsectTailScorpider-scorpider = Серпентид, хвост (Скорпион с лапами)
+marking-InsectTailScorpider = Серпентид, хвост (Скорпион с лапами)
 
+marking-InsectHeadBig-big = Серпентид, усики (Супердлинные)
+marking-InsectHeadBig = Серпентид, усики (Супердлинные)
 
+marking-InsectBodyBristle-bristle = Серпентид, тело (Щетина)
+marking-InsectBodyBristle = Серпентид, тело (Щетина)
 
+marking-InsectBodySpike-spike = Серпентид, тело (Хребет)
+marking-InsectBodySpike = Серпентид, тело (Хребет)
 
+marking-InsectHeadBigHead-big_head = Серпентид, голова (Большая голова)
+marking-InsectHeadBigHead = Серпентид, голова (Большая голова)
 
-
+marking-InsectHeadForehead-forehead = Серпентид, голова (Большой лоб)
+marking-InsectHeadForehead = Серпентид, голова (Большой лоб)

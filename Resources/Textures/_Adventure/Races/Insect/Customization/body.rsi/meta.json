@@ -18,6 +18,14 @@
     {
       "name": "hand_small",
       "directions": 4
+    },
+    {
+      "name": "bristle",
+      "directions": 4
+    },
+    {
+      "name": "spike",
+      "directions": 4
     }
   ]
 }

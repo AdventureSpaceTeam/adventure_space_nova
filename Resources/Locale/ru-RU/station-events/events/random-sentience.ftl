@@ -1,4 +1,4 @@
-## Phrases used for where central command got this information.
+﻿## Phrases used for where central command got this information.
 
 random-sentience-event-data-1 = сканирование сенсорами дальнего действия
 random-sentience-event-data-2 = наши сложные статистические модели вероятности
@@ -34,8 +34,6 @@ station-event-random-sentience-role-description = Вы разумный { $name 
 # Flavors
 station-event-random-sentience-flavor-mechanical = механизмы
 station-event-random-sentience-flavor-organic = органики
-station-event-random-sentience-flavor-corgi = корги
 station-event-random-sentience-flavor-primate = приматы
 station-event-random-sentience-flavor-kobold = кобольды
-station-event-random-sentience-flavor-slime = слаймы
 station-event-random-sentience-flavor-inanimate = неодушевлённые предметы

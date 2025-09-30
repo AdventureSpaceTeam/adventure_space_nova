@@ -1,4 +1,4 @@
-guide-entry-ss14 = Станции и смены
+﻿guide-entry-ss14 = Станции и смены
 guide-entry-engineering = Инженерное дело
 guide-entry-construction = Строительство
 guide-entry-expandingrepairingstation = Расширение и починка станции
@@ -37,6 +37,7 @@ guide-entry-gasminingandstorage = Добыча и хранение газов
 guide-entry-atmosphericupsets = Атмосферные катастрофы
 guide-entry-fires = Пожары
 guide-entry-spacing = Разгерметизации
+guide-entry-deltapressure = Разница давления
 guide-entry-atmostools = Атмосферные инструменты
 guide-entry-gasses = Газы
 guide-entry-botany = Ботаника

@@ -788,7 +788,7 @@
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
   - Engineeringsoft # Adventure
-  - SeniorEngineerBeret
+  # Adventure- SeniorEngineerBeret
 
 - type: loadoutGroup
   id: StationEngineerJumpsuit
@@ -799,8 +799,8 @@
   - StationEngineerHazardsuit
   - EngineeringWorkUniform # Adventure
   - EngineeringWorkUniform2 # Adventure
-  - SeniorEngineerJumpsuit
-  - SeniorEngineerJumpskirt
+  # Adventure- SeniorEngineerJumpsuit
+  # Adventure- SeniorEngineerJumpskirt
 
 - type: loadoutGroup
   id: StationEngineerBackpack
@@ -938,8 +938,8 @@
   - ScientistJumpskirt
   - RoboticistJumpsuit
   - RoboticistJumpskirt
-  - SeniorResearcherJumpsuit
-  - SeniorResearcherJumpskirt
+  # Adventure- SeniorResearcherJumpsuit
+  # Adventure- SeniorResearcherJumpskirt
 
 - type: loadoutGroup
   id: ScientistBackpack
@@ -959,7 +959,7 @@
   - ScienceWintercoat
   - RoboticistLabCoat
   - RoboticistWintercoat
-  - SeniorResearcherLabCoat
+  # Adventure- SeniorResearcherLabCoat
 
 - type: loadoutGroup
   id: ScientistShoes
@@ -1072,8 +1072,8 @@
   - SecurityJumpskirt
   - SecurityJumpsuitGrey
   - SecurityJumpskirtGrey
-  - SeniorOfficerJumpsuit
-  - SeniorOfficerJumpskirt
+  # Adventure- SeniorOfficerJumpsuit
+  # Adventure- SeniorOfficerJumpskirt
   - TrooperUniform
   - SecurityJumpsuitBlack # Adventure
 
@@ -1221,7 +1221,7 @@
   minLimit: 0
   loadouts:
   - MedicalBeret
-  - SeniorPhysicianBeret
+  # Adventure- SeniorPhysicianBeret
   - MedicalHeadMirror
   - BlueSurgeryCap
   - GreenSurgeryCap
@@ -1239,8 +1239,8 @@
   loadouts:
   - MedicalDoctorJumpsuit
   - MedicalDoctorJumpskirt
-  - SeniorPhysicianJumpsuit
-  - SeniorPhysicianJumpskirt
+  # Adventure- SeniorPhysicianJumpsuit
+  # Adventure- SeniorPhysicianJumpskirt
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
@@ -1253,7 +1253,7 @@
   loadouts:
   - RegularLabCoat
   - MedicalDoctorWintercoat
-  - SeniorPhysicianLabCoat
+  # Adventure- SeniorPhysicianLabCoat
   - CoatLabNitrile # Adventure
 
 - type: loadoutGroup
