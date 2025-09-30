@@ -1,0 +1,13 @@
+- type: entity
+  name: спавнер детёныша голиафа
+  id: SpawnMobLavaLandGoliathGrub
+  suffix: LavaLand
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobLavaLandGoliathGrub
