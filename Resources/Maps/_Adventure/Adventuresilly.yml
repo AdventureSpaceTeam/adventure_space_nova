@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 266.0.0
+  engineVersion: 267.1.0
   forkId: ""
   forkVersion: ""
-  time: 09/30/2025 18:36:32
-  entityCount: 9152
+  time: 10/01/2025 15:40:09
+  entityCount: 9154
 maps:
 - 1
 grids:
@@ -24398,6 +24398,20 @@ entities:
     - type: Transform
       pos: 0.5,13.5
       parent: 7133
+- proto: ComputerShuttleCargo
+  entities:
+  - uid: 8617
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,11.5
+      parent: 2
+  - uid: 8761
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 35.5,11.5
+      parent: 2
 - proto: ComputerShuttleSalvage
   entities:
   - uid: 4307
@@ -25038,7 +25052,7 @@ entities:
       pos: 9.5,45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -21019.059
+      secondsUntilStateChange: -21073.027
       state: Closing
 - proto: CurtainsPurpleOpen
   entities:

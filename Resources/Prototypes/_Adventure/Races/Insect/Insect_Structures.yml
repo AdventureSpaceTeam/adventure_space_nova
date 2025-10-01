@@ -97,8 +97,8 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           MaterialWax1:
-            min: 4
-            max: 4
+            min: 2
+            max: 2
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
@@ -147,8 +147,8 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           MaterialWax1:
-            min: 10
-            max: 10
+            min: 4
+            max: 4
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
@@ -251,7 +251,7 @@
         southRotation: true
       steps:
       - material: InsectWax
-        amount: 10
+        amount: 4
         doAfter: 5
 
     - to: tile
@@ -260,7 +260,7 @@
         southRotation: true
       steps:
       - material: InsectWax
-        amount: 4
+        amount: 2
         doAfter: 3
 
     - to: door
@@ -279,7 +279,7 @@
       completed:
       - !type:SpawnPrototype
         prototype: MaterialWax1
-        amount: 10
+        amount: 4
       steps:
       - tool: Cutting
         doAfter: 20
@@ -303,7 +303,7 @@
       completed:
       - !type:SpawnPrototype
         prototype: MaterialWax1
-        amount: 4
+        amount: 2
       steps:
       - tool: Cutting
         doAfter: 10
