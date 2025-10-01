@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 261.2.0
+  engineVersion: 267.1.0
   forkId: ""
   forkVersion: ""
-  time: 07/14/2025 08:25:03
-  entityCount: 2746
+  time: 10/01/2025 15:41:27
+  entityCount: 2747
 maps:
 - 1653
 grids:
@@ -954,11 +954,15 @@ entities:
       rot: 3.141592653589793 rad
       pos: 7.5,48.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
   - uid: 2430
     components:
     - type: Transform
       pos: 29.5,28.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: APCConstructed
   entities:
   - uid: 97
@@ -967,6 +971,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 15.5,5.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: AtmosDeviceFanTiny
   entities:
   - uid: 1343
@@ -4173,6 +4179,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 17.5,52.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: DoubleEmergencyOxygenTank
   entities:
   - uid: 872
@@ -4283,7 +4291,7 @@ entities:
       pos: 40.5,20.5
       parent: 1653
     - type: Door
-      secondsUntilStateChange: -16081.996
+      secondsUntilStateChange: -16116.595
       state: Opening
 - proto: FenceWoodHighStraight
   entities:
@@ -9944,6 +9952,8 @@ entities:
     - type: Transform
       pos: 6.5,46.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: SignEngineering
   entities:
   - uid: 1364
@@ -9951,6 +9961,8 @@ entities:
     - type: Transform
       pos: 9.5,48.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: SignMedical
   entities:
   - uid: 1347
@@ -9958,6 +9970,8 @@ entities:
     - type: Transform
       pos: 16.5,48.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: SignSalvage
   entities:
   - uid: 1368
@@ -9965,6 +9979,8 @@ entities:
     - type: Transform
       pos: 16.5,46.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: SpawnMobLavaLandBloodMinerRandom
   entities:
   - uid: 2737
@@ -9983,6 +9999,13 @@ entities:
     components:
     - type: Transform
       pos: 40.5,5.5
+      parent: 1653
+- proto: SpawnMobLavaLandGoliathGrub
+  entities:
+  - uid: 2747
+    components:
+    - type: Transform
+      pos: 14.5,44.5
       parent: 1653
 - proto: SpawnMobLavaLandLegion
   entities:
@@ -10065,6 +10088,8 @@ entities:
     - type: Transform
       pos: 27.5,33.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: Table
   entities:
   - uid: 134
@@ -15676,6 +15701,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,51.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: WarningO2
   entities:
   - uid: 1735
@@ -15684,6 +15711,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,52.5
       parent: 1653
+    - type: Fixtures
+      fixtures: {}
 - proto: WeaponCrusherAxeBig
   entities:
   - uid: 2745
