@@ -1,6 +1,6 @@
 #комбезы
 - type: entity
-  parent: ClothingUniformJumpsuitHoP
+  parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitJacketHoP
   name: пиджак главы персонала
   description: Строгий костюм для скучной работы.

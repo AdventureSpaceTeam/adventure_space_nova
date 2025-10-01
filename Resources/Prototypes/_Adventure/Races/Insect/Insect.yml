@@ -23,6 +23,17 @@
     speedModifier : 0.8
   - type: PermanentBlindness #ради баланса вселенной
     blindness: 2
+  - type: Sericulture
+    action: ActionSericultureInsectWax
+    productionLength: 2
+    entityProduced: MaterialWax1
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - InsectCraft
+    - AnomalyHost
 
 - type: entity
   abstract: true
@@ -31,6 +42,9 @@
   id: BaseMobInsect
   name: Урист макЛичинус
   components:
+  - type: Hunger
+    baseDecayRate: 0.033
+  - type: Thirst
   - type: TypingIndicator
     proto: Insect
   - type: PassiveDamage
