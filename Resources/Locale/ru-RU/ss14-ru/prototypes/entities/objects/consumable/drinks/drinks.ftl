@@ -1,5 +1,3 @@
-ent-DrinkBase = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
 ent-DrinkGlassBase = { ent-DrinkBase }
     .desc = { ent-DrinkBase.desc }
 ent-DrinkGlass = стакан-метаморф

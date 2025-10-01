@@ -137,7 +137,7 @@ namespace Content.Shared.Localizations
                 <= 0 => string.Empty,
                 1 => list[0],
                 2 => $"{list[0]} или {list[1]}", // Adventure locale
-                _ => $"{string.Join(" или ", list)}" // Adventure locale
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, или {list[^1]}" // Adventure locale
             };
         }
 

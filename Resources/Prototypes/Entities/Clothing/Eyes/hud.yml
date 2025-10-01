@@ -41,6 +41,7 @@
     - Inorganic
     - Silicon
     - Synth # Adventure
+  - type: ShowAccessReaderSettings
 
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]
