@@ -1,0 +1,146 @@
+- type: reagent
+  id: SilverSulfadiazine
+  name: сульфадиазин серебра
+  group: Medicine
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает кожу от ожогов, но вызывает интоксикацию.
+  physicalDesc: шипучее
+  flavor: medicine
+  color: "#e9da11"
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Heat: -1
+            Poison: 0.5
+  metabolisms:
+    Poison:
+      metabolismRate : 3.00
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: -1
+
+- type: reagent
+  id: StypticPowder
+  name: кровоостанавливающая пудра
+  group: Medicine
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает повреждения тканей, но вызывает интоксикацию.
+  physicalDesc: едкое
+  flavor: medicine
+  color: "#ec9fc9"
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Poison: 0.5
+          groups:
+            Brute: -3
+  metabolisms:
+    Poison:
+      metabolismRate : 3.00
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -2
+
+- type: reagent
+  id: Synthflesh
+  name: синтплоть
+  group: Medicine
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает механические повреждения и ожоги, но вызывает интоксикацию.
+  physicalDesc: сильно пахнущее
+  flavor: medicine
+  color: "#ecd3d9"
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Poison: 0.5
+          groups:
+            Brute: -1
+  metabolisms:
+    Poison:
+      metabolismRate : 0.4
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+            Heat: -0.25
+          groups:
+            Brute: -0.5
+
+- type: reagent
+  id: Perfluorodecalin
+  name: перфтордекалин
+  group: Medicine
+  desc: Вещество, излечивающее от гипоксии. Используется как реагент для некоторых лекарств.
+  physicalDesc: масляное
+  flavor: medicine
+  color: "#b876b4"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: -2.5
+      - !type:HealthChange
+        probability: 0.33
+        damage:
+          groups:
+            Brute: -0.15
+            Burn: -0.1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 4
+        damage:
+          types:
+            Asphyxiation: 2.5
+            Poison: 1
+
+- type: reagent
+  id: SyntheticBlood
+  name: синтетическая кровь
+  group: Medicine
+  desc: Так же известен как "Oxygenis". Синтетическая кровь для кислорододышащих, которая заменяет любую другую кровь.
+  physicalDesc: вязкое
+  flavor: medicine
+  color: "#850202"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+          - !type:OrganType
+            type: Vox
+            shouldHave: true
+        damage:
+          types:
+            Asphyxiation: 1.5
+            Poison: 0.75
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -0.15
+      - !type:ModifyBloodLevel
+          amount: 10
