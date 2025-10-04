@@ -4,7 +4,7 @@
   id: WeaponProtoKineticCutterIndustrial
   name: промышленный протокинетический резак
   suffix: LavaLand
-  description: Стреляет сконцентрированным кинетическим зарядом. Буровым копает вглубь, боевым наносит значительный урон одиночным целям.
+  description: Стреляет сконцентрированным кинетическим зарядом. Вместо разных снарядов стреляет одним комплексным, который обладает свойствами как бурового, так и боевого.
   components:
   - type: Sprite
     sprite: _Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter.rsi
@@ -52,7 +52,7 @@
     pricePerJoule: 0.3
   - type: ProjectileBatteryAmmoProvider
     proto: Advanced-BulletProtoCutter
-    fireCost: 30
+    fireCost: 20
   - type: BatterySelfRecharger
     autoRechargeRate: 8
     autoRecharge: true
