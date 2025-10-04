@@ -4,7 +4,7 @@
   id: WeaponProtoKineticCutterIndustrial
   name: промышленный протокинетический резак
   suffix: LavaLand
-  description: Стреляет сконцентрированным кинетическим зарядом. Буровым копает вглубь, боевым наносит значительный урон одиночным целям.
+  description: Стреляет сконцентрированным кинетическим зарядом. Вместо разных снарядов стреляет одним комплексным, который обладает свойствами как бурового, так и боевого.
   components:
   - type: Sprite
     sprite: _Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter.rsi
@@ -52,20 +52,14 @@
     pricePerJoule: 0.3
   - type: ProjectileBatteryAmmoProvider
     proto: Advanced-BulletProtoCutter
-    fireCost: 30
-  - type: BatteryWeaponFireModes
-    fireModes:
-    - proto: Advanced-BulletProtoCutter
-      fireCost: 30
-    - proto: Advanced-AttackerBulletProtoCutter
-      fireCost: 10
+    fireCost: 20
   - type: BatterySelfRecharger
     autoRechargeRate: 8
     autoRecharge: true
 
 - type: entity
   id: Advanced-BulletProtoCutter
-  name: буровой кинетический заряд
+  name: кинетический заряд
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -77,24 +71,24 @@
     sprite: _Adventure/Roles/LavaLand/Equipment/bullet.rsi
     state: bullet
     shader: unshaded
-    color: "#e49e7d"
+    color: "#9c3167"
   - type: GatheringProjectile
     amount: 30
   - type: Projectile
     deleteOnCollide: false
     damage:
       types:
-        Blunt: 2
-        Piercing: 1
+        Blunt: 25
+        Piercing: 10
         Structural: 65
   - type: StaminaDamageOnCollide
-    damage: 20
+    damage: 10
   - type: TimedDespawn
-    lifetime: 0.450
+    lifetime: 0.5
   - type: PointLight
-    color: "#ffb938ab"
+    color: "#d31e45b8"
     energy: 4
-    radius: 1.75
+    radius: 1.7
     softness: 1
     enabled: true
   - type: Fixtures
@@ -108,34 +102,3 @@
         - Opaque
   - type: Ammo
     muzzleFlash: null
-
-- type: entity
-  id: Advanced-AttackerBulletProtoCutter
-  name: боевой кинетический заряд
-  parent: Advanced-BulletProtoCutter
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: GatheringProjectile
-    amount: 1
-  - type: Projectile
-    deleteOnCollide: false
-    damage:
-      types:
-        Blunt: 25
-        Piercing: 10
-  - type: StaminaDamageOnCollide
-    damage: 10
-  - type: TimedDespawn
-    lifetime: 0.5
-  - type: PointLight
-    color: "#d31e45b8"
-    energy: 4
-    radius: 1.7
-    softness: 1
-    enabled: true
-  - type: Sprite
-    noRot: false
-    sprite: _Adventure/Roles/LavaLand/Equipment/bullet.rsi
-    state: bullet
-    shader: unshaded
-    color: "#9c3167"
