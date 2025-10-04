@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Discord @alni_",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "muffin-cat"
+    },
+        {
+      "name": "muffin-cream"
+    },
+        {
+      "name": "muffin-heart"
+    },
+        {
+      "name": "muffin-rainbow"
+    },
+        {
+      "name": "muffin-witch"
+    }
+  ]
+}
