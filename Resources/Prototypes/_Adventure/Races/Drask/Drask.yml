@@ -116,7 +116,7 @@
       295: 0.9
       294: 1.0
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Drask
     damageModifierSet: DraskCryo
   - type: Body
     prototype: Drask

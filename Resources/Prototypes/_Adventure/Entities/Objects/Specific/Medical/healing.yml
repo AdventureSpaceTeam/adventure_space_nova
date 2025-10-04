@@ -1,0 +1,435 @@
+- type: stack
+  id: InsectBloodPack
+  name: insectpack
+  spawn: Insectpack
+  maxCount: 10
+
+- type: stack
+  id: BloodPackRed
+  name: redbloodpack
+  spawn: Redbloodpack
+  maxCount: 10
+
+- type: stack
+  id: BloodPackResomi
+  name: bloodpackresomi
+  spawn: bloodpackresomi
+  maxCount: 10
+
+- type: stack
+  id: BloodPackVox
+  name: bloodpackvox
+  spawn: bloodpackvox
+  maxCount: 10
+
+- type: stack
+  id: BloodPackArachnid
+  name: bloodpackarachnid
+  spawn: bloodpackarachnid
+  maxCount: 10
+
+- type: stack
+  id: BloodPackSnake
+  name: bloodpacksnake
+  spawn: bloodpacksnake
+  maxCount: 10
+
+- type: stack
+  id: CryoPack
+  name: cryopack
+  spawn: cryopack
+  maxCount: 10
+
+- type: stack
+  id: SlimePack
+  name: slimepack
+  spawn: slimepack
+  maxCount: 10
+
+- type: stack
+  id: JuicePack
+  name: juicepack
+  spawn: juicepack
+  maxCount: 10
+
+- type: stack
+  id: SkrellPack
+  name: skrellpack
+  spawn: skrellpack
+  maxCount: 10
+
+- type: entity
+  name: пакет с кровью насекомых
+  description: Содержит кровь насекомых, помогает молям и прочим насекомым при недостатке крови.
+  parent: BaseHealingItem
+  id: Insectpack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Moth
+      - Insect
+    damage:
+      types:
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: InsectBloodPack
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с кровью
+  description: Содержит кровь, самая стандартная кровь людей и не только.
+  parent: BaseHealingItem
+  id: Redbloodpack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Dwarf
+      - Biological
+      - Reptilian
+      - Vulpkanin
+      - Pigman
+      - Felinid
+    damage:
+      types:
+        Bloodloss: -0.5 #lowers bloodloss damage
+    modifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: BloodPackRed
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с кровью резоми #Adventure
+  description: Содержит розовую кровь, помогает резоми при недостатке крови. #Adventure
+  parent: BaseHealingItem
+  id: bloodpackresomi
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Resomi
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: BloodPackResomi
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с кровью вокса #Adventure
+  description: Содержит синюю кровь, помогает воксам при недостатке крови. #Adventure
+  parent: BaseHealingItem
+  id: bloodpackvox
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Vox
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: BloodPackVox
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с кровью зераха #Adventure
+  description: Содержит жёлтую кровь, помогает зерахам при недостатке крови. #Adventure
+  parent: BaseHealingItem
+  id: bloodpacksnake
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Snake
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: BloodPackSnake
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с кровью арахнида #Adventure
+  description: Содержит голубую кровь, помогает арахнидам при недостатке крови. #Adventure
+  parent: BaseHealingItem
+  id: bloodpackvox
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Vox
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: BloodPackArachnid
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с криоксадоном #Adventure
+  description: Содержит криоксадон, помогает драскам при недостатке криоксадона. #Adventure
+  parent: BaseHealingItem
+  id: cryopack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Drask
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: CryoPack
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с слизью #Adventure
+  description: Содержит слизь, помогает слаймолюдам при недостатке слизи. #Adventure
+  parent: BaseHealingItem
+  id: slimepack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Slime
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: SlimePack
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с древесным соком #Adventure
+  description: Содержит древесный сок, помогает дионам при недостатке древесного сока. #Adventure
+  parent: BaseHealingItem
+  id: juicepack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Diona
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: JuicePack
+    count: 10
+  - type: StackPrice
+    price: 10
+
+- type: entity
+  name: пакет с кровью скрелла #Adventure
+  description: Содержит фиолетового оттенка кровь, помогает скреллам при недостатке крови. #Adventure
+  parent: BaseHealingItem
+  id: bloodpackskrell
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    state: bloodpack
+  - type: Healing
+    damageContainers:
+      - Skrell
+    damage:
+      types:
+        Bloodloss: -0.15 #lowers bloodloss damage
+    modifyBloodLevel: 6 #restores about 2% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: SkrellPack
+    count: 10
+  - type: StackPrice
+    price: 10

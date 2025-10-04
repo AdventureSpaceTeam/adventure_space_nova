@@ -43,7 +43,7 @@
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Reptilian
     damageModifierSet: Scale
   - type: MeleeWeapon
     soundHit:

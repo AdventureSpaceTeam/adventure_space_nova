@@ -51,6 +51,8 @@
     damage:
       types:
         Piercing: 5
+  - type: Damageable
+    damageContainer: Arachnid
   # Visual & Audio
   - type: DamageVisuals
     damageOverlayGroups:

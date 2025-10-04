@@ -118,7 +118,7 @@
       290.15: 0.6
       288.15: 0.4
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Snake
     damageModifierSet: Scale
   - type: Body
     prototype: ZerahSnake

@@ -52,7 +52,7 @@
         layer:
           - MobLayer
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: PigMan
     damageModifierSet: PigArmIMBA
   - type: Speech
     speechSounds: PigManSpeach

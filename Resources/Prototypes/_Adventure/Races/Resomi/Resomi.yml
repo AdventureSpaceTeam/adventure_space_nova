@@ -102,7 +102,7 @@
       220: 0.8
       215: 0.7
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: Resomi
     damageModifierSet: Resomi
   - type: Body
     prototype: Resomi
