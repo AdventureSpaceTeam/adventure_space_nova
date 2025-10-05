@@ -37,6 +37,8 @@
       amount: 1
     StypticPowder:
       amount: 1
+    SilverSulfadiazine:
+      amount: 1
   products:
     Synthflesh: 1
 

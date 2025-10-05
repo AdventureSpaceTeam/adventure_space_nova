@@ -11,15 +11,29 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Alive # Работает, только пока не в крите и не мёртвый
         scaleByQuantity: true
-        ignoreResistances: false
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
-            Heat: -1
-            Poison: 0.5
+            Heat: -1 # Убирает 1 ожог за унцию
+            Poison: 0.3 # Добавляет 0.3 яда за унцию
+            Cellular: 0.2 # Добавляет 0.2 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical # Работает, если в крите
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Heat: -1 # Убирает 1 ожог за унцию
+            Asphyxiation: 1 # Добавляет 1 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
   metabolisms:
     Poison:
-      metabolismRate : 3.00
+      metabolismRate : 3.00 # В секунду уходит 3 унции реагента
       effects:
       - !type:HealthChange
         damage:
@@ -39,21 +53,37 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Alive # Работает, только пока не в крите и не мёртвый
         scaleByQuantity: true
-        ignoreResistances: false
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
-            Poison: 0.5
-          groups:
-            Brute: -3
+            Piercing: -1 # Убирает 1 укол за унцию
+            Slash: -1 # Убирает 1 порез за унцию
+            Poison: 0.3 # Добавляет 0.3 яда за унцию
+            Cellular: 0.2 # Добавляет 0.2 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical # Работает, если в крите
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Piercing: -1 # Убирает 1 укол за унцию
+            Slash: -1 # Убирает 1 порез за унцию
+            Asphyxiation: 1 # Добавляет 1 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
   metabolisms:
     Poison:
       metabolismRate : 3.00
       effects:
       - !type:HealthChange
         damage:
-          groups:
-            Brute: -2
+          types:
+            Piercing: -1 # Убирает 1 укол за унцию
+            Slash: -1 # Убирает 1 порез за унцию
 
 - type: reagent
   id: Synthflesh
@@ -68,13 +98,30 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Alive # Работает, только пока не в крите и не мёртвый
         scaleByQuantity: true
-        ignoreResistances: false
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
-            Poison: 0.5
-          groups:
-            Brute: -1
+            Piercing: -0.9 # Убирает 0.9 укол за унцию
+            Slash: -0.9 # Убирает 0.9 порез за унцию
+            Heat: -0.9 # Убирает 0.9 ожог за унцию
+            Poison: 0.25 # Добавляет 0.25 яда за унцию
+            Cellular: 0.1 # Добавляет 0.1 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical # Работает, если в крите
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Piercing: -0.9 # Убирает 0.9 укол за унцию
+            Slash: -0.9 # Убирает 0.9 порез за унцию
+            Heat: -0.9 # Убирает 0.9 ожог за унцию
+            Asphyxiation: 0.75 # Добавляет 0.75 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
   metabolisms:
     Poison:
       metabolismRate : 0.4
@@ -83,9 +130,6 @@
         damage:
           types:
             Poison: 1
-            Heat: -0.25
-          groups:
-            Brute: -0.5
 
 - type: reagent
   id: Perfluorodecalin
@@ -104,14 +148,14 @@
           types:
             Asphyxiation: -2.5
       - !type:HealthChange
-        probability: 0.33
+        probability: 0.33 # Шанс 33%
         damage:
           groups:
             Brute: -0.15
             Burn: -0.1
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentThreshold #передоз
           min: 4
         damage:
           types:
@@ -129,7 +173,7 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:HealthChange
+      - !type:HealthChange #Работает только на воксов
         conditions:
           - !type:OrganType
             type: Vox
@@ -138,9 +182,9 @@
           types:
             Asphyxiation: 1.5
             Poison: 0.75
-      - !type:HealthChange
+      - !type:HealthChange #Для всех
         damage:
           types:
             Bloodloss: -0.15
-      - !type:ModifyBloodLevel
+      - !type:ModifyBloodLevel #Для всех
           amount: 10
