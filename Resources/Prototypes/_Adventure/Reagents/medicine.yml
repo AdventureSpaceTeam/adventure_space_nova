@@ -7,7 +7,7 @@
   flavor: medicine
   color: "#e9da11"
   reactiveEffects:
-    Acidic:
+    Acidic_Organic:
       methods: [ Touch ]
       effects:
       - !type:HealthChange
@@ -49,7 +49,7 @@
   flavor: medicine
   color: "#ec9fc9"
   reactiveEffects:
-    Acidic:
+    Acidic_Organic:
       methods: [ Touch ]
       effects:
       - !type:HealthChange
@@ -94,7 +94,7 @@
   flavor: medicine
   color: "#ecd3d9"
   reactiveEffects:
-    Acidic:
+    Acidic_Organic:
       methods: [ Touch ]
       effects:
       - !type:HealthChange
