@@ -1,11 +1,5 @@
-- type: Tag
-  id: WeaponNemesis
-
-- type: Tag
-  id: BulletNemesis
-
 - type: entity
-  name: Немезида
+  name: стан-винтовка Немезида
   parent: [BaseItem, BaseSecurityContraband]
   description: Тяжелая габаритная снайперская винтовка, которая стреляет нелетальными оглушающими зарядами. Используй ее чтобы навести порядок в хаосе, не наоборот.
   id: WeaponNemesis
@@ -27,7 +21,7 @@
   - type: Item
     size: Huge
     shape:
-    - 0,0,5,1
+    - 0,0,2,1
   - type: AmmoCounter
   - type: Wieldable
   - type: GunRequiresWield
@@ -57,9 +51,6 @@
   - type: EyeCursorOffset
     maxOffset: 3
     pvsIncrease: 0.3
-  - type: Tag
-    tags:
-    - Taser
   - type: StaticPrice
     price: 2500
   - type: PacifismAllowedGun
