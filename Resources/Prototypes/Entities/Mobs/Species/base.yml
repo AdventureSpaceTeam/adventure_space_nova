@@ -119,7 +119,7 @@
       Flammable: [ Touch ]
       Extinguish: [ Touch ]
       Acidic: [Touch, Ingestion]
-      Acidic_Organic: [ Touch ] #Adventure
+      Acidic_Organic: [Touch]
     reactions:
     - reagents: [Water, SpaceCleaner]
       methods: [Touch]
