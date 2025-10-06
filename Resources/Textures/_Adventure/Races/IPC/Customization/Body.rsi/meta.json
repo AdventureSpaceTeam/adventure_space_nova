@@ -90,6 +90,14 @@
     {
       "name": "skeleton",
       "directions": 4
+    },
+    {
+      "name": "rps",
+      "directions": 4
+    },
+    {
+      "name": "skeleton2",
+      "directions": 4
     }
   ]
 }
