@@ -31,7 +31,7 @@
 - type: entity
   parent: BaseRock
   name: заснеженный валун
-  description: Тяжёлый и холодны как действительно тяжёлая и холодная вещь.
+  description: Тяжёлый и холодный как действительно тяжёлая и холодная вещь.
   id: FloraSnowRockSolid
   components:
   - type: Sprite
