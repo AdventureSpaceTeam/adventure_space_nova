@@ -579,3 +579,103 @@
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: new
+
+
+
+
+
+- type: marking
+  id: SynthHeadCamepa
+  bodyPart: Head
+  markingCategory: Head
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Head.rsi
+    state: camera
+
+- type: marking
+  id: SynthHeadBox
+  bodyPart: Head
+  markingCategory: Head
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Head.rsi
+    state: box
+
+- type: marking
+  id: SynthAntennaLamp
+  name: КПБ, Голова (Антенна Чаппи)
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Head.rsi
+    state: lamp
+  - sprite: _Adventure/Races/IPC/Customization/Head.rsi
+    state: lamp_light
+
+- type: marking
+  id: SynthChestRPS
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Body.rsi
+    state: rps
+
+- type: marking
+  id: SynthChestSkeleton2
+  bodyPart: Chest
+  markingCategory: Chest
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Body.rsi
+    state: skeleton2
+
+- type: marking
+  id: SynthSniper
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Face.rsi
+    state: sniper
+  - sprite: _Adventure/Races/IPC/Customization/Face.rsi
+    state: one_aye
+
+- type: marking
+  id: SynthDron
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Face.rsi
+    state: dron
+  - sprite: _Adventure/Races/IPC/Customization/Face.rsi
+    state: one_aye
+
+- type: marking
+  id: SynthMolni
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Face.rsi
+    state: molni
+
+- type: marking
+  id: SynthPulse
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [Synth]
+  sprites:
+  - sprite: _Adventure/Races/IPC/Customization/Face.rsi
+    state: pulse
