@@ -345,3 +345,36 @@
     state: tape30
   - type: MusicTape
     sound: "/Audio/_Adventure/TapePlayer/Tracks/rock.ogg"
+
+- type: entity
+  parent: BaseMusicTape
+  id: MusicTape31
+  name: Кассета (Bolgarich - Corp Rats)
+  description:
+  components:
+  - type: Sprite
+    state: tape31
+  - type: MusicTape
+    sound: "/Audio/_Adventure/TapePlayer/Tracks/corp_rats.ogg"
+
+- type: entity
+  parent: BaseMusicTape
+  id: MusicTape32
+  name: Кассета (Bolgarich - Battle for Taypan)
+  description:
+  components:
+  - type: Sprite
+    state: tape32
+  - type: MusicTape
+    sound: "/Audio/_Adventure/TapePlayer/Tracks/taypan.ogg"
+
+- type: entity
+  parent: BaseMusicTape
+  id: MusicTape33
+  name: Кассета (Dapper Husky - Level !)
+  description:
+  components:
+  - type: Sprite
+    state: tape33
+  - type: MusicTape
+    sound: "/Audio/_Adventure/TapePlayer/Tracks/level_run.ogg"
