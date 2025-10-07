@@ -7,6 +7,14 @@
   components:
   - type: Sprite
     sprite: _Adventure/Roles/LavaLand/mobs/goliath_grub.rsi
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Clothing
+    quickEquip: false
+    sprite: _Adventure/Roles/LavaLand/mobs/goliath_grub.rsi
+    slots:
+    - HEAD
   - type: MovementSpeedModifier
     baseWalkSpeed : 4
     baseSprintSpeed : 4
