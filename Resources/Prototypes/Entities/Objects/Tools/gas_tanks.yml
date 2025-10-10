@@ -75,7 +75,6 @@
   - type: Tag
     tags:
     - GasTank
-    - OxygenTank #Adventure
 
 - type: entity
   parent: GasTankRoundBase
@@ -92,7 +91,6 @@
   - type: Tag
     tags:
     - GasTank
-    - NitrogenTank #Adventure
 
 - type: entity
   parent: GasTankRoundBase
@@ -225,7 +223,6 @@
   - type: Tag
     tags:
     - GasTank
-    - AirTank #Adventure
 
 - type: entity
   parent: GasTankRoundBase

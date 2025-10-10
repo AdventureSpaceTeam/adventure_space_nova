@@ -141,3 +141,25 @@
         - 0 # CO2
         - 4.102758100 # plasma
       temperature: 293.15
+
+- type: entity
+  id: RandomDoubleTankSpawner
+  name: random DoubleTank spawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Specific/Xenoarchaeology/xeno_artifacts.rsi
+          state: ano01
+    - type: RandomSpawner
+      prototypes:
+        - OxygenTankDouble
+        - OxygenTankDoubleFilled
+        - NitrogenTankDouble
+        - NitrogenTankDoubleFilled
+        - AirTankDouble
+        - AirTankDoubleFilled
+        - PlasmaTankDoubleAdventure
+        - PlasmaTankAdventureDoubleFilled
+      chance: 1
