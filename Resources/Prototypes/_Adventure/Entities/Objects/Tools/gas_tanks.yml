@@ -27,11 +27,14 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 370
+  - type: Construction
+    graph: OxygenTankDouble
+    node: oxygentank
 
 - type: entity
   id: OxygenTankDoubleFilled
   parent: OxygenTankDouble
-  suffix: Filled
+  suffix: Заполненный
   components:
   - type: GasTank
     outputPressure: 21.3
@@ -45,7 +48,7 @@
   parent: OxygenTankDouble
   id: NitrogenTankDouble
   name: двойной баллон азота
-  description: Стандартные цинидрические баллоны для плазмы. Вмещают в общем 10 Л газа.
+  description: Стандартные цинидрические баллоны для азота. Вмещают в общем 10 Л газа.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Tanks/red.rsi
@@ -54,12 +57,14 @@
     size: Large
   - type: Clothing
     sprite: _Adventure/Objects/Tanks/red.rsi
+  - type: Construction
+    graph: NitrogenTankDouble
+    node: nitrogentank
 
 - type: entity
   id: NitrogenTankDoubleFilled
   parent: NitrogenTankDouble
-  suffix: Filled
-  name: nitrogen tank
+  suffix: Заполненный
   components:
   - type: GasTank
     air:
@@ -81,11 +86,14 @@
     size: Large
   - type: Clothing
     sprite: _Adventure/Objects/Tanks/generic.rsi
+  - type: Construction
+    graph: AirTankDouble
+    node: tank
 
 - type: entity
   id: AirTankDoubleFilled
   parent: AirTankDouble
-  suffix: Filled
+  suffix: Заполненный
   components:
   - type: GasTank
     outputPressure: 101.3
@@ -114,6 +122,9 @@
     slots:
     - Back
     - suitStorage
+  - type: Construction
+    graph: PlasmaTankDoubleAdventure
+    node: plasmatank
 
 - type: entity
   id: PlasmaTankAdventureDoubleFilled

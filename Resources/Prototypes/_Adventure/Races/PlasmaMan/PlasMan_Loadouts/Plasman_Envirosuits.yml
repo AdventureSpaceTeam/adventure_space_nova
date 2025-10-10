@@ -47,6 +47,12 @@
     sprite: Objects/Tanks/plasmaman.rsi
   - type: Clothing
     sprite: Objects/Tanks/plasmaman.rsi
+  #ConnectionEditStart
+  - type: Tag
+    tags:
+    - GasTank
+    - PlasmaTank
+  #ConnectionEditEnd
 
 - type: entity
   id: PlasmaTankAdventureFilled
