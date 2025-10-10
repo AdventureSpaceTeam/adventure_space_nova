@@ -149,13 +149,13 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         if (!CheckWhitelist(job, out reason))
             return false;
 
+        if (_sponsors.GetMySponsor()?.Level >= job.SponsorOpenMinLevel)
+            return true;
+
         // Check other role requirements
         var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job);
         if (!CheckRoleRequirements(reqs, profile, out reason))
             return false;
-
-        if (_sponsors.GetMySponsor()?.Level >= job.SponsorOpenMinLevel)
-            return true;
 
         return true;
     }
