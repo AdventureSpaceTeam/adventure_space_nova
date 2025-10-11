@@ -105,6 +105,8 @@
         - proto: WeaponTeslaGun
           prob: 0.1
           cost: 2
+        - proto: RandomDoubleTankSpawner #Adventure
+          cost: 2
 
 # Mob loot table
 
