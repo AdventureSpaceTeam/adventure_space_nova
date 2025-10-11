@@ -1,0 +1,190 @@
+- type: reagent
+  id: SilverSulfadiazine
+  name: сульфадиазин серебра
+  group: Medicine
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает кожу от ожогов, но вызывает интоксикацию.
+  physicalDesc: шипучее
+  flavor: medicine
+  color: "#e9da11"
+  reactiveEffects:
+    Acidic_Organic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Alive # Работает, только пока не в крите и не мёртвый
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Heat: -1 # Убирает 1 ожог за унцию
+            Poison: 0.3 # Добавляет 0.3 яда за унцию
+            Cellular: 0.2 # Добавляет 0.2 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical # Работает, если в крите
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Heat: -1 # Убирает 1 ожог за унцию
+            Asphyxiation: 1 # Добавляет 1 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
+  metabolisms:
+    Poison:
+      metabolismRate : 3.00 # В секунду уходит 3 унции реагента
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: -1
+
+- type: reagent
+  id: StypticPowder
+  name: кровоостанавливающая пудра
+  group: Medicine
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает повреждения тканей, но вызывает интоксикацию.
+  physicalDesc: едкое
+  flavor: medicine
+  color: "#ec9fc9"
+  reactiveEffects:
+    Acidic_Organic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Alive # Работает, только пока не в крите и не мёртвый
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Piercing: -1 # Убирает 1 укол за унцию
+            Slash: -1 # Убирает 1 порез за унцию
+            Poison: 0.3 # Добавляет 0.3 яда за унцию
+            Cellular: 0.2 # Добавляет 0.2 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical # Работает, если в крите
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Piercing: -1 # Убирает 1 укол за унцию
+            Slash: -1 # Убирает 1 порез за унцию
+            Asphyxiation: 1 # Добавляет 1 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
+  metabolisms:
+    Poison:
+      metabolismRate : 3.00
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Piercing: -1 # Убирает 1 укол за унцию
+            Slash: -1 # Убирает 1 порез за унцию
+
+- type: reagent
+  id: Synthflesh
+  name: синтплоть
+  group: Medicine
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает механические повреждения и ожоги, но вызывает интоксикацию.
+  physicalDesc: сильно пахнущее
+  flavor: medicine
+  color: "#ecd3d9"
+  reactiveEffects:
+    Acidic_Organic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Alive # Работает, только пока не в крите и не мёртвый
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Piercing: -0.9 # Убирает 0.9 укол за унцию
+            Slash: -0.9 # Убирает 0.9 порез за унцию
+            Heat: -0.9 # Убирает 0.9 ожог за унцию
+            Poison: 0.25 # Добавляет 0.25 яда за унцию
+            Cellular: 0.1 # Добавляет 0.1 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical # Работает, если в крите
+        scaleByQuantity: true
+        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
+        damage:
+          types:
+            Piercing: -0.9 # Убирает 0.9 укол за унцию
+            Slash: -0.9 # Убирает 0.9 порез за унцию
+            Heat: -0.9 # Убирает 0.9 ожог за унцию
+            Asphyxiation: 0.75 # Добавляет 0.75 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
+  metabolisms:
+    Poison:
+      metabolismRate : 0.4
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+
+- type: reagent
+  id: Perfluorodecalin
+  name: перфтордекалин
+  group: Medicine
+  desc: Вещество, излечивающее от гипоксии. Используется как реагент для некоторых лекарств.
+  physicalDesc: масляное
+  flavor: medicine
+  color: "#b876b4"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: -2.5
+      - !type:HealthChange
+        probability: 0.33 # Шанс 33%
+        damage:
+          groups:
+            Brute: -0.15
+            Burn: -0.1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold #передоз
+          min: 4
+        damage:
+          types:
+            Asphyxiation: 2.5
+            Poison: 1
+
+- type: reagent
+  id: SyntheticBlood
+  name: синтетическая кровь
+  group: Medicine
+  desc: Так же известен как "Oxygenis". Синтетическая кровь для кислорододышащих, которая заменяет любую другую кровь.
+  physicalDesc: вязкое
+  flavor: medicine
+  color: "#850202"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange #Работает только на воксов
+        conditions:
+          - !type:OrganType
+            type: Vox
+            shouldHave: true
+        damage:
+          types:
+            Asphyxiation: 1.5
+            Poison: 0.75
+      - !type:HealthChange #Для всех
+        damage:
+          types:
+            Bloodloss: -0.15
+      - !type:ModifyBloodLevel #Для всех
+          amount: 10

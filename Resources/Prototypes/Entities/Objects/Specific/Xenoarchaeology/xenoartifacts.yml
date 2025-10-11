@@ -49,6 +49,7 @@
       Flammable: [Touch]
       Extinguish: [Touch]
       Acidic: [Touch]
+      Acidic_Organic: [Touch]
 
 - type: entity
   parent: BaseAction

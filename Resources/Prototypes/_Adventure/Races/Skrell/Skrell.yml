@@ -18,6 +18,7 @@
     groups:
       Flammable: [ Touch ]
       Extinguish: [ Touch ]
+      Acidic_Organic: [ Touch ]
     reactions:
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
