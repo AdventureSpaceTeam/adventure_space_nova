@@ -59,6 +59,10 @@
       amount: 1
     - id: MusicTape30
       amount: 1
+    - id: MusicTape31
+      amount: 1
+    - id: MusicTape32
+      amount: 1
 
 - type: entity
   id: CrateMusicCyber
@@ -86,6 +90,8 @@
     - id: MusicTape14
       amount: 1
     - id: MusicTape23
+      amount: 1
+    - id: MusicTape33
       amount: 1
 
 - type: entity
