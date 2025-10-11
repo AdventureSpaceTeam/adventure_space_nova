@@ -74,3 +74,12 @@
   toolName: tool-quality-brushing-tool-name
   spawn: WireBrush
   icon: { sprite: Objects/Specific/Janitorial/wirebrush.rsi, state: icon }
+
+# Adventure start
+- type: tool
+  id: HardPrying
+  name: tool-quality-hardprying-name
+  toolName: tool-quality-hardprying-tool-name
+  spawn: FireAxe
+  icon: { sprite: Objects/Weapons/Melee/fireaxe.rsi, state: icon }
+# Adventure end
