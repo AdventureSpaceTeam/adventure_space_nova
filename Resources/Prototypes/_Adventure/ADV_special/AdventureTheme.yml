@@ -22,3 +22,53 @@
     _itemstatus_content_margin_right: "#06060404"
     _itemstatus_content_margin_left: "#04060604"
     _itemstatus_patch_margin: "#07060404"
+
+# detective
+- type: hudTheme
+  id: SS14DetectiveTheme
+  name: Детектив
+  path: detective
+  order: 8
+
+- type: uiTheme
+  id: SS14DetectiveTheme
+  path: /Textures/_Adventure/Interface/detective/
+  colors:
+    whiteText: "#FFF5EE"
+    slotSelectedGold: "#FFF5EE"
+    slotColor: "#FFF5EE"
+    slotOutline: "#FFF5EE"
+    slotText: "#FFF5EE"
+    nanoGold: "#FFF5EE"
+    goodGreenFore: "#FFF5EE"
+    concerningOrangeFore: "#FFF5EE"
+    dangerousRedFore: "#FFF5EE"
+    disabledFore: "#FFF5EE"
+    _itemstatus_content_margin_right: "#06060404"
+    _itemstatus_content_margin_left: "#04060604"
+    _itemstatus_patch_margin: "#07060404"
+
+# purple
+- type: hudTheme
+  id: SS14PurpleTheme
+  name: Ультрафиолет
+  path: purple
+  order: 9
+
+- type: uiTheme
+  id: SS14PurpleTheme
+  path: /Textures/_Adventure/Interface/purple/
+  colors:
+    whiteText: "#FFF5EE"
+    slotSelectedGold: "#FFF5EE"
+    slotColor: "#FFF5EE"
+    slotOutline: "#FFF5EE"
+    slotText: "#FFF5EE"
+    nanoGold: "#FFF5EE"
+    goodGreenFore: "#FFF5EE"
+    concerningOrangeFore: "#FFF5EE"
+    dangerousRedFore: "#FFF5EE"
+    disabledFore: "#FFF5EE"
+    _itemstatus_content_margin_right: "#06060404"
+    _itemstatus_content_margin_left: "#04060604"
+    _itemstatus_patch_margin: "#07060404"
