@@ -122,6 +122,7 @@
     prototype: Drask
     requiredLegs: 2
   - type: Hunger
+  - type: Thirst
   - type: Icon
     sprite: _Adventure/Races/Drask/Species/parts.rsi
     state: full

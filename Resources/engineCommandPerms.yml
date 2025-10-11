@@ -16,7 +16,6 @@
   - inrangeunoccluded
   - lsgrid
   - lsmap
-  - listplayers
   - loc
   - mem
   - netaudit
@@ -72,7 +71,6 @@
   - merge_grids
   - timemanager
 
-
 - Flags: MAPPING
   Commands:
   - addmap
@@ -92,9 +90,12 @@
 
 - Flags: ADMIN
   Commands:
-  - listplayers
   - tp
   - tpto
+
+- Flags: PII
+  Commands:
+  - listplayers
 
 - Flags: FUN
   Commands:

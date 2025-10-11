@@ -167,6 +167,34 @@
     state: tattoo_eye_moth_l
 
 - type: marking
+  id: TattooEyeVulpkaninRight
+  bodyPart: Eyes
+  markingCategory: [Head]
+  speciesRestriction: [Vulpkanin]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_vulpkanin_r
+
+- type: marking
+  id: TattooEyeVulpkaninLeft
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [Vulpkanin]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_vulpkanin_l
+
+- type: marking
   id: TattooEyeshadowUpper
   # there are a lot of deliberate limitations with this marking that should be pointed out. some of them may seem overly restrictive on the surface, but most of them are fully intentional.
   # this marking is meant to be supplementary so they are transparent. if you give this 255 alpha it will probably be really distracting looking and make the face very difficult to read

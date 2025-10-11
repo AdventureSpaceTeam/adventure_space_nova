@@ -1,0 +1,35 @@
+- type: decal
+  id: Ice1
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice1
+
+- type: decal
+  id: Ice2
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice2
+
+- type: decal
+  id: Ice3
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice3
+
+- type: decal
+  id: Ice4
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice4
