@@ -41,7 +41,7 @@
   - type: Tool
     qualities:
       - Prying
-      - HardPrying
+      - HardPrying # Adventure
   - type: ToolTileCompatible
   - type: Prying
   - type: UseDelay
