@@ -759,3 +759,60 @@
     whitelist:
       tags:
       - Ring
+
+#Adv start
+- type: cargoBounty
+  id: BountyCupCakes
+  reward: 3500
+  description: bounty-description-cupcakes
+  entries:
+  - name: bounty-item-cupcakes
+    amount: 3
+    whitelist:
+      tags:
+      - Cupcake
+
+- type: cargoBounty
+  id: BountyMedibot
+  reward: 7000
+  description: bounty-description-medibot
+  entries:
+  - name: bounty-item-medibot
+    amount: 2
+    whitelist:
+      components:
+      - Medibot
+
+- type: cargoBounty
+  id: BountyBouquet
+  reward: 2500
+  description: bounty-description-bouquet
+  entries:
+  - name: bounty-item-bouquet
+    amount: 3
+    whitelist:
+      tags:
+      - Bouquet
+
+- type: cargoBounty
+  id: BountyCleanBot
+  reward: 4500
+  description: bounty-description-cleanbot
+  entries:
+  - name: bounty-item-cleanbot
+    amount: 1
+    whitelist:
+      tags:
+      - CleanBot
+
+- type: cargoBounty
+  id: BountyControlModsuit
+  reward: 15000
+  description: bounty-description-control-modsuit
+  entries:
+  - name: bounty-item-control-modsuit
+    amount: 1
+    whitelist:
+      tags:
+      - ControlModsuit
+#Adv end

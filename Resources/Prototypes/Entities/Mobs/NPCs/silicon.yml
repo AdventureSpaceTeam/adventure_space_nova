@@ -314,6 +314,9 @@
     interactFailureString: petting-failure-cleanbot
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: Tag #ADV
+    tags:
+    - CleanBot
 
 - type: entity
   parent:

@@ -7,6 +7,9 @@
 
 # Botany - Flowers
 - type: Tag
+  id: Bouquet
+
+- type: Tag
   id: RoseRed
 
 - type: Tag
@@ -27,3 +30,15 @@
 
 - type: Tag
   id: LinenBoll
+
+# Food
+- type: Tag
+  id: Cupcake
+
+# Hardsuits
+- type: Tag
+  id: ControlModsuit
+
+# Silicon
+- type: Tag
+  id: CleanBot

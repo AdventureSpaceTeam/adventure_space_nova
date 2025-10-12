@@ -12,6 +12,9 @@
     damage:
       types:
         Blunt: 1
+  - type: Tag
+    tags:
+    - Bouquet
 
 # EngBouquet
 - type: entity

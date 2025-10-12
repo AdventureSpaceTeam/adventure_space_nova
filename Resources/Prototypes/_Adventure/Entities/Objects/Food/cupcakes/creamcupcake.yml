@@ -22,7 +22,9 @@
           Quantity: 2
         - ReagentId: Sugar
           Quantity: 2
-
+  - type: Tag
+    tags:
+    - Cupcake
 
 - type: microwaveMealRecipe
   id: RecipeCupcakeCream

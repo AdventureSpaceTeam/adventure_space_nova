@@ -64,3 +64,6 @@
           Quantity: 3
         - ReagentId: Fiber
           Quantity: 2
+  - type: Tag
+    tags:
+    - Flower
