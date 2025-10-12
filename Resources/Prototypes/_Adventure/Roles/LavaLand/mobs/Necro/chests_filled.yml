@@ -221,3 +221,6 @@
       - id: ClothingOuterHardsuitLuxury
         amount: 1
         prob: 0.01
+      - id: EmptyCoreModsuitConstructing
+        amount: 1
+        prob: 0.02

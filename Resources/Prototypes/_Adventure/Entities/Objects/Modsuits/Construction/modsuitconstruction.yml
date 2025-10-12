@@ -49,18 +49,56 @@
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-    state: CORE-equip0
+    state: CORE
     noRot: true
   - type: Tag
     tags:
     - ModsuitControlStart
+  - type: Appearance
+  - type: Item
+    size: Huge
+
+- type: entity
+  parent: BaseItem
+  id: ControlModsuitConstructingCore
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: CORE-equip0
+    noRot: true
+  - type: Tag
+    tags:
+    - ModsuitControlCore
   - type: Appearance
   - type: MechAssemblyVisuals
     statePrefix: CORE-equip
   - type: Construction
     graph: ModsuitConstructed
     node: start
-    defaultTarget: modsuitconstructed
+  - type: Item
+    size: Huge
+
+- type: entity
+  parent: BaseItem
+  id: ControlModsuitConstructingLegionCore
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: LEGION-CORE-equip0
+    noRot: true
+  - type: Tag
+    tags:
+    - ModsuitControlLegionCore
+  - type: Appearance
+  - type: MechAssemblyVisuals
+    statePrefix: LEGION-CORE-equip
+  - type: Construction
+    graph: LegionModsuitConstructed
+    node: start
   - type: Item
     size: Huge
 
@@ -132,10 +170,25 @@
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-    state: CORE-equip8
+    state: CORE-equip7
   - type: Tag
     tags:
     - ModsuitControlEnd
+  - type: Item
+    size: Huge
+
+- type: entity
+  parent: BaseItem
+  id: ControlLegionModsuitConstructingEnd
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: LEGION-CORE-equip7
+  - type: Tag
+    tags:
+    - LegionModsuitControlEnd
   - type: Item
     size: Huge
 
@@ -165,6 +218,39 @@
     tags:
     - ModsuitHelmet
 
+- type: entity
+  parent: BaseItem
+  id: EmptyCoreModsuit
+  name: EmptyCoreModsuit
+  description: Special hardsuit helmet, made for the CE of the station.
+  components: 
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: mod-core-empty
+  - type: Item
+    size: Small
+  - type: Tag
+    tags: 
+    - EmptyCore
+
+- type: entity
+  parent: BaseItem
+  id: LegionCoreConstructing
+  name: LegionCoreConstructing
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: mod-core-legion
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: icon
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - LegionCore
+
 - type: entity #cores end
   parent: BaseItem
   id: CoreModsuitConstructing
@@ -174,6 +260,8 @@
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
     state: mod-core
+  - type: Item
+    size: Small
   - type: Tag
     tags:
     - CoreModsuit #plating start
@@ -255,6 +343,19 @@
   - type: Tag
     tags:
     - PlatingMagnateModsuit
+
+- type: entity
+  parent: BaseItem
+  id: PlatingMagmatiteModsuitConstructing
+  name: magmatite-plating
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/plating.rsi
+    state: magmatite-plating
+  - type: Tag
+    tags:
+    - PlatingMagmatiteModsuit
 
 - type: entity
   parent: BaseItem

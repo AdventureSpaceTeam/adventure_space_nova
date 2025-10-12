@@ -14,20 +14,12 @@
           sprite: Objects/Power/power_cells.rsi
           state: small
 
-      - tag: CoreModsuit
-        name: Ядро Р.И.Г.-а
-        doAfter: 1
-        completed:
-        - !type:VisualizerDataInt
-          key: "enum.MechAssemblyVisuals.State"
-          data: 1
-
       - tool: Screwing
         doAfter: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 1
 
       - tag: ModsuitHelmet
         name: шлем РИГ-а
@@ -35,7 +27,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 2
 
       - tag: ModsuitChestplate
         name: нагрудник РИГ-а
@@ -43,7 +35,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 4
+          data: 3
 
       - tag: ModsuitGauntlets
         name: рукавицы РИГ-а
@@ -51,7 +43,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 5
+          data: 4
 
       - tag: ModsuitBoots
         name: ботинки РИГ-а
@@ -59,26 +51,166 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 6
+          data: 5
 
       - tool: Anchoring
         doAfter: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 7
+          data: 6
 
       - tool: Screwing
         doAfter: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 8
+          data: 7
 
   - node: modsuitconstructed
     actions:
     - !type:BuildMech
       mechPrototype: ControlModsuitConstructingEnd
+
+- type: constructionGraph 
+  id: LegionModsuitConstructed
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: legionmodsuitconstructed
+      steps:
+      - component: PowerCell
+        name: батарейку
+        doAfter: 1
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+
+      - tool: Screwing
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 1
+
+      - tag: ModsuitHelmet
+        name: шлем РИГ-а
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
+
+      - tag: ModsuitChestplate
+        name: нагрудник РИГ-а
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tag: ModsuitGauntlets
+        name: рукавицы РИГ-а
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tag: ModsuitBoots
+        name: ботинки РИГ-а
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 5
+
+      - tool: Anchoring
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tool: Screwing
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 7
+
+  - node: legionmodsuitconstructed
+    actions:
+    - !type:BuildMech
+      mechPrototype: ControlLegionModsuitConstructingEnd
+
+- type: constructionGraph 
+  id: ControlModsuitConstructingCore
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: modsuitconstructingcore
+      steps:
+      - tag: CoreModsuit
+        name: Ядро Р.И.Г.-а
+        icon:
+          sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+          state: mod-core
+        doAfter: 1
+      - tag: ModsuitControlStart
+        name: недостроенный каркас Р.И.Г.-а
+        icon:
+          sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+          state: CORE
+  - node: modsuitconstructingcore
+    entity: ControlModsuitConstructingCore
+
+- type: constructionGraph 
+  id: ControlModsuitConstructingLegionCore
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: modsuitconstructinglegioncore
+      steps:
+      - tag: LegionCore
+        name: Ядро Р.И.Г.-а
+        icon:
+          sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+          state: mod-core-legion
+        doAfter: 1
+      - tag: ModsuitControlStart
+        name: недостроенный каркас Р.И.Г.-а
+        icon:
+          sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+          state: CORE
+  - node: modsuitconstructinglegioncore
+    entity: ControlModsuitConstructingLegionCore
+
+- type: constructionGraph
+  id: LegionCoreConstructing
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: icon
+      steps:
+      - tag: LegionHeart
+        name: сердце легиона
+        icon:
+          sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
+          state: core1
+        doAfter: 3
+      - tag: EmptyCore
+        name: пустое ядро Р.И.Г.-а
+        icon:
+          sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+          state: mod-core-empty
+  - node: icon
+    entity: LegionCoreConstructing
 
 - type: constructionGraph
   id: ModsuitEngineer
@@ -98,7 +230,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitengineer
       entity: ClothingControlModsuitEngineerSealed
@@ -121,7 +253,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitmedical
       entity: ClothingControlModsuitMedicalSealed
@@ -144,7 +276,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitrnd
       entity: ClothingControlModsuitRNDSealed
@@ -167,7 +299,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitsalvage
       entity: ClothingControlModsuitSalvageSealed
@@ -190,7 +322,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitcivillian
       entity: ClothingControlModsuitCivillianSealed
@@ -213,7 +345,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitsecurity
       entity: ClothingControlModsuitSecuritySealed
@@ -236,7 +368,7 @@
               name: собранный каркас РИГ-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitatmospheric
       entity: ClothingControlModsuitAtmosphericsSealed
@@ -259,7 +391,7 @@
               name: Каркас продвинутого Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitadvanced
       entity: ClothingControlModsuitCESealed
@@ -282,7 +414,7 @@
               name: Каркас спасательного Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitrescue
       entity: ClothingControlModsuitCMOSealed
@@ -305,7 +437,7 @@
               name: Каркас роскошного Р.И.Г.-а
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuitmagnate
       entity: ClothingControlModsuitMagnateSealed
@@ -328,7 +460,30 @@
               name: Каркас  Р.И.Г.-а Гвардейца
               icon:
                 sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-                state: CORE-equip8
+                state: CORE-equip7
               doAfter: 2
     - node: modsuithos
       entity: ClothingControlModsuitHOSSealed
+
+- type: constructionGraph
+  id: ModsuitMagmatite
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: modsuitmagmatite
+          steps:
+            - tag: PlatingMagmatiteModsuit
+              name: покрытие магматитового РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: magmatite-plating
+              doAfter: 2
+            - tag: LegionModsuitControlEnd
+              name: собранный каркас магматитового РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+                state: LEGION-CORE-equip7
+              doAfter: 2
+    - node: modsuitmagmatite
+      entity: ClothingControlModsuitMagmatiteSealed

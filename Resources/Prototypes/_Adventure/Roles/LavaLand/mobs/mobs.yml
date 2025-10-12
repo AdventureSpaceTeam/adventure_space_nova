@@ -388,7 +388,7 @@
   categories: [ HideSpawnMenu ]
   suffix: LavaLand
   name: сердце легиона
-  description: Каменное цердце, обладающее целебными свойствами.
+  description: Каменное сердце, обладающее целебными свойствами.
   components:
   - type: SolutionContainerManager
     solutions:
