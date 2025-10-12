@@ -13,9 +13,8 @@
     unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Storage
     capacity: 30
-#Modsuit Parts start
 
-- type: entity
+- type: entity #Modsuit Parts start
   parent: BaseItem
   id: BootsModsuitConstructing
   name: CE modsuit helmet

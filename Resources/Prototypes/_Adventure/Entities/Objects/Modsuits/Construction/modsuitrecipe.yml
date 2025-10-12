@@ -155,3 +155,4 @@
   category: construction-category-mech
   icon: { sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi, state: LEGION-CORE-equip0}
   objectType: Item
+  
