@@ -222,14 +222,14 @@
   id: EmptyCoreModsuit
   name: EmptyCoreModsuit
   description: Special hardsuit helmet, made for the CE of the station.
-  components: 
+  components:
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
     state: mod-core-empty
   - type: Item
     size: Small
   - type: Tag
-    tags: 
+    tags:
     - EmptyCore
 
 - type: entity

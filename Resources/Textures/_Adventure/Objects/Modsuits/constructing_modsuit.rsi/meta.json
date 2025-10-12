@@ -128,7 +128,7 @@
       "name": "mod-core-empty"
     },
     {
-      "name": "mod-core-legion", 
+      "name": "mod-core-legion",
       "delays": [
         [
           0.07,

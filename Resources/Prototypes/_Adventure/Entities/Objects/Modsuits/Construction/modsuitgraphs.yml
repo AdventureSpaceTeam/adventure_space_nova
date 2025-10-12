@@ -72,7 +72,7 @@
     - !type:BuildMech
       mechPrototype: ControlModsuitConstructingEnd
 
-- type: constructionGraph 
+- type: constructionGraph
   id: LegionModsuitConstructed
   start: start
   graph:
@@ -146,7 +146,7 @@
     - !type:BuildMech
       mechPrototype: ControlLegionModsuitConstructingEnd
 
-- type: constructionGraph 
+- type: constructionGraph
   id: ControlModsuitConstructingCore
   start: start
   graph:
@@ -168,7 +168,7 @@
   - node: modsuitconstructingcore
     entity: ControlModsuitConstructingCore
 
-- type: constructionGraph 
+- type: constructionGraph
   id: ControlModsuitConstructingLegionCore
   start: start
   graph:
