@@ -33,7 +33,7 @@
   reactants:
     Blood:
       amount: 1
-    Carbon::
+    Carbon:
       amount: 1
     StypticPowder:
       amount: 1
