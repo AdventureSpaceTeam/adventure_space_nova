@@ -197,3 +197,29 @@
   - type: Sprite
     sprite: _Adventure/Objects/Fun/resomi.rsi
     state: icon
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieAelout
+  name: игрушка лучшего слайма
+  suffix: AdvPlushie
+  description: Бееее
+  components:
+  - type: Sprite
+    state: plushieAelout
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Voice/Slime/slime_squish.ogg
