@@ -19,7 +19,6 @@
       - PigMan
       - Vox
 # Adventure-edit-end
-  weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos

@@ -13,6 +13,7 @@
       - id: SalvageMagnetMachineCircuitboard
       - id: SalvageJobBoardComputerCircuitboard
       - id: MailTeleporterMachineCircuitboard
+      - id: SalvageShuttleConsoleCircuitboard # Adventure salvage shuttle return
 
 - type: entity
   name: stamp box [QM]

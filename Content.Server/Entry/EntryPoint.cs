@@ -168,7 +168,7 @@ namespace Content.Server.Entry
                 return;
             }
 
-            _mentorManager.Initialize(); // Adventure Mentor
+            _mentorManager.PostInit(); // Adventure Mentor
             _recipe.Initialize();
             _admin.Initialize();
             _afk.Initialize();
