@@ -5,30 +5,30 @@
   playTimeTracker: JobHeadOfPersonnel
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 54000 #15 hrs # Adventure
+      time: 15h # Adventure
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:DepartmentTimeRequirement
       department: Civilian
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 18000 #5 hours # Adventure
+      time: 5h # Adventure
     - !type:AgeRequirement
-      requiredAge: 30 # Adventure
+      requiredAge: 21 # Adventure
 # Adventure-edit-start
     - !type:SpeciesRequirement
       inverted: true

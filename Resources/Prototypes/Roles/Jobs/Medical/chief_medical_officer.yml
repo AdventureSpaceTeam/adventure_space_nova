@@ -8,15 +8,15 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobChemist
-      time: 14400 #4 hrs # Adventure
-#    - !type:RoleTimeRequirement
-#      role: JobMedicalDoctor
-#      time: 21600 #6 hrs
+      time: 4h # Adventure
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 54000 #15 hrs # Adventure
+      time: 15h # Adventure
     - !type:AgeRequirement
-      requiredAge: 30 # Adventure
+      requiredAge: 21 # Adventure
 # Adventure-edit-start
     - !type:SpeciesRequirement
       inverted: true

@@ -6,10 +6,10 @@
   objective: roles-antag-nuclear-operative-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 36000 # 10 hrs # Adventure
+    time: 10h # Adventure
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 18000 #5 hrs # Adventure
+    time: 5h # Adventure
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -20,13 +20,13 @@
   objective: roles-antag-nuclear-operative-agent-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 54000 #15 hrs # Adventure
+    time: 15h # Adventure
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 36000 #10 hrs # Adventure
+    time: 10h # Adventure
   - !type:RoleTimeRequirement
     role: JobChemist
-    time: 36000 # 3hrs
+    time: 10h
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -37,10 +37,10 @@
   objective: roles-antag-nuclear-operative-commander-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 72000 #20 hrs # Adventure
+    time: 20h # Adventure
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 54000 #15 hrs # Adventure
+    time: 15h # Adventure
   # should be changed to nukie playtime when thats tracked (wyci)
   guides: [ NuclearOperatives ]
 
