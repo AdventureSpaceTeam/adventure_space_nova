@@ -201,7 +201,7 @@
 - type: entity
   parent: PlushieWiki
   id: PlushieAelout
-  name: неплохая плюшевая игрушка слаймолюда
+  name: плюшевая игрушка слаймолюда
   suffix: AdvPlushie
   description: От неё сильно пахнет спиртом.
   components:
