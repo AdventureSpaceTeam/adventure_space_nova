@@ -45,7 +45,6 @@
     - id: ClothingOuterCoatWardenAlt # Corvax-SecFashion
     - id: ClothingHeadHatCapWardenAlt # Corvax-SecFashion
     - id: WeaponHybridTaser
-    - id: WeaponNemesis
     # Adventure end
     - id: ClothingBackpackElectropack
       amount: 2
