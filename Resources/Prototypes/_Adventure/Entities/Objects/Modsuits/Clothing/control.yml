@@ -48,6 +48,9 @@
         minValue: 0.1
         maxValue: 2.0
         isLooped: true
+  - type: Tag
+    tags:
+    - ControlModsuit
 
 - type: entity
   parent: ClothingControlModsuitBase

@@ -21,7 +21,9 @@
           Quantity: 8
         - ReagentId: Vitamin
           Quantity: 2
-
+  - type: Tag
+    tags:
+    - Cupcake
 
 - type: microwaveMealRecipe
   id: RecipeCupcakeWitch

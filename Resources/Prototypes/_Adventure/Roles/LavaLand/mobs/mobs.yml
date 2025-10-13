@@ -434,6 +434,9 @@
     size: Normal
   - type: StaticPrice
     price: 500
+  - type: Tag
+    tags:
+    - LegionHeart
 
 #Рудожор
 - type: entity
