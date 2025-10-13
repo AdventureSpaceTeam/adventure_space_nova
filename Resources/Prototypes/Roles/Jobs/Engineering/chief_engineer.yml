@@ -6,17 +6,15 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
-      time: 10800 #3 hrs # Adventure
-#    - !type:RoleTimeRequirement
-#      role: JobStationEngineer
-#      time: 21600 #6 hrs
+      time: 3h # Adventure
+    - !type:RoleTimeRequirement
+      role: JobStationEngineer
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 54000 #15 hrs # Adventure
-#    - !type:OverallPlaytimeRequirement
-#      time: 144000 #40 hrs
+      time: 15h # Adventure
     - !type:AgeRequirement
-      requiredAge: 30 # Adventure
+      requiredAge: 21 # Adventure
 # Adventure-edit-start
     - !type:SpeciesRequirement
       inverted: true

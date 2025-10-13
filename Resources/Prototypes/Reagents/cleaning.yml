@@ -164,7 +164,6 @@
         effectProto: StatusEffectSeeingRainbow
         time: 5
         type: Add
-        refresh: false
     Drink:
       effects:
       - !type:GenericStatusEffect

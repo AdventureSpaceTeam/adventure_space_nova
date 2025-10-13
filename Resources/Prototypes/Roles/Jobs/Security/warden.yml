@@ -7,10 +7,10 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 18000 #5 hrs
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 36000 #10 hrs
+      time: 10h
 # Adventure-edit-start
     - !type:SpeciesRequirement
       inverted: true
@@ -19,6 +19,7 @@
       - PigMan
       - Vox
 # Adventure-edit-end
+  weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
