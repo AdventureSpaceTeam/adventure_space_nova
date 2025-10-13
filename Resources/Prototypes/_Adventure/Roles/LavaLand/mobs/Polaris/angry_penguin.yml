@@ -96,3 +96,16 @@
 # чтоб агрессивные мобы не поубивали мелких пока утили дрочат
 - type: npcFaction
   id: PassivePolaris
+
+- type: entity
+  name: спавнер полярного пингвина
+  id: SpawnMobPenguinPolaris
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobPenguinPolaris
