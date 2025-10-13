@@ -616,6 +616,17 @@
   categories:
   - SponsorThing
 
+- type: listing
+  id: UplinkSponsorCloth59
+  productEntity: PlushieAelout
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 - type: storePreset
   id: StorePresetSponsor
   storeName: Sponsor
