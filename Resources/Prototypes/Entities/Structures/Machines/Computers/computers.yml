@@ -1126,7 +1126,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: CargoBountyConsole
-    printDelay: 1 #Adv
+    printDelay: 3 #Adv
   - type: ActivatableUI
     key: enum.CargoConsoleUiKey.Bounty
   - type: UserInterface
