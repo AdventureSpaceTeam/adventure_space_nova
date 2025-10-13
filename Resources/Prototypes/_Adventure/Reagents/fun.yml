@@ -1,0 +1,35 @@
+- type: polymorph
+  id: ArtifactResomi
+  configuration:
+    entity: MobResomi
+    forced: true
+    transferName: true
+    inventory: Transfer
+    revertOnDeath: true
+    revertOnCrit: false
+    transferHumanoidAppearance: true
+    duration: 18000
+
+- type: reagent
+  id: JuiceThatMakesYouResomi
+  name: сок который делает тебя резоми
+  group: Toxins
+  desc: reagent-desc-weh
+  physicalDesc: густое
+  flavor: weh
+  color: "#8b1982"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.05
+      effects:
+      - !type:Polymorph
+        prototype: ArtifactResomi # Does the same thing as the original YML I made for this reagent.
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:AdjustReagent
+        reagent: JuiceThatMakesYouResomi
+        amount: -50
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
