@@ -110,6 +110,43 @@ reagent-effect-guidebook-status-effect =
                *[other] удаляют
             } { NATURALFIXED($time, 3) } от { LOC($key) }
     }
+
+reagent-effect-guidebook-status-effect-delay =
+    { $type ->
+        [add]   { $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                } {LOC($key)} минимум на {NATURALFIXED($time, 3)} {MANY("second", $time)} эффект накапливается
+        *[set]  { $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                } {LOC($key)} минимум на {NATURALFIXED($time, 3)} {MANY("second", $time)} эффект не накапливается
+        [remove]{ $chance ->
+                    [1] Удаляет
+                    *[other] удаляют
+                } {NATURALFIXED($time, 3)} {MANY("second", $time)} от {LOC($key)}
+    } после {NATURALFIXED($delay, 3)} секунд задержки
+
+reagent-effect-guidebook-knockdown =
+    { $type ->
+        [update]{ $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                    } {LOC($key)} минимум на {NATURALFIXED($time, 3)} {MANY("second", $time)} эффект не накапливается
+        [add]   { $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                } оглушение минимум на {NATURALFIXED($time, 3)} {MANY("second", $time)} эффект накапливается
+        *[set]  { $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                } оглушение минимум на {NATURALFIXED($time, 3)} {MANY("second", $time)} эффект не накапливается
+        [remove]{ $chance ->
+                    [1] Удаляет
+                    *[other] удаляют
+                } {NATURALFIXED($time, 3)} {MANY("second", $time)} оглушения
+    }
+
 reagent-effect-guidebook-set-solution-temperature-effect =
     { $chance ->
         [1] Устанавливает

@@ -28,12 +28,11 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 2
         sprintSpeedModifier: 2
-      - !type:GenericStatusEffect
-        key: Stun
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
         time: 3
         type: Remove
-      - !type:GenericStatusEffect
-        key: KnockedDown
+      - !type:ModifyKnockdown
         time: 3
         type: Remove
 
@@ -61,12 +60,11 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 1.5
         sprintSpeedModifier: 1.5
-      - !type:GenericStatusEffect
-        key: Stun
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
         time: 3
         type: Remove
-      - !type:GenericStatusEffect
-        key: KnockedDown
+      - !type:ModifyKnockdown
         time: 3
         type: Remove
 
@@ -94,11 +92,10 @@
       - !type:MovespeedModifier
         walkSpeedModifier: 1.2
         sprintSpeedModifier: 1.2
-      - !type:GenericStatusEffect
-        key: Stun
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
         time: 3
         type: Remove
-      - !type:GenericStatusEffect
-        key: KnockedDown
+      - !type:ModifyKnockdown
         time: 3
         type: Remove

@@ -28,17 +28,16 @@
           type: Slime
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
-      - !type:GenericStatusEffect
+      - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
           reagent: BZ
           min: 1.8
         - !type:OrganType
           type: Slime
-        key: ForcedSleep
-        component: ForcedSleeping
+        effectProto: StatusEffectForcedSleeping
         time: 3
-        type: Add
+        type: Update
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -48,80 +47,43 @@
         damage:
           types:
             Poison: 0.25
-      - !type:GenericStatusEffect
+      - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
           reagent: BZ
           min: 1
-        key: SeeingRainbows
-        component: SeeingRainbows
+        effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 500
-        refresh: false
       - !type:Drunk
         boozePower: 500
         conditions:
         - !type:ReagentThreshold
           reagent: BZ
           min: 1
-    Poison:
+    Narcotic:
       effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 2
       - !type:PopupMessage
-        conditions:
-        - !type:ReagentThreshold
-          reagent: BZ
-          min: 0.5
-        - !type:OrganType
-          type: Slime
         type: Local
         visualType: Medium
-        messages: [ "effect-sleepy" ]
+        messages: [ "frezon-euphoric" ]
         probability: 0.1
-      - !type:MovespeedModifier
         conditions:
         - !type:ReagentThreshold
           reagent: BZ
           min: 1
-        - !type:OrganType
-          type: Slime
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: BZ
-          min: 1.8
-        - !type:OrganType
-          type: Slime
-        key: ForcedSleep
-        component: ForcedSleeping
-        time: 3
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
         type: Add
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          reagent: BZ
-          min: 0.5
-        ignoreResistances: true
-        damage:
-          types:
-            Poison: 0.25
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: BZ
-          min: 1
-        key: SeeingRainbows
-        component: SeeingRainbows
-        type: Add
-        time: 500
-        refresh: false
+        time: 15
       - !type:Drunk
-        boozePower: 500
-        conditions:
-        - !type:ReagentThreshold
-          reagent: BZ
-          min: 1
+        boozePower: 15
 
 - type: reagent # Копия диоксида углерода, ибо я ленивый
   id: Halon
@@ -167,6 +129,8 @@
         conditions:
         - !type:OrganType
           type: Plant
+          shouldHave: false
+        factor: -4
       - !type:HealthChange
         conditions:
         - !type:OrganType
@@ -183,8 +147,6 @@
           types:
             Poison:
               0.8
-      - !type:Oxygenate
-        conditions:
 
 - type: reagent
   id: Healium
@@ -208,22 +170,18 @@
             Brute: -1
             Burn: -1
             Toxin: -2.5
-      - !type:GenericStatusEffect
+      - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
           reagent: Healium
           min: 2
-        key: ForcedSleep
-        component: ForcedSleeping
+        effectProto: StatusEffectForcedSleeping
         time: 3
         type: Add
     Poison:
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
-          reagent: Healium
-          min: 1
         scaleByQuantity: true
         ignoreResistances: true
         damage:
@@ -231,15 +189,6 @@
             Brute: -1
             Burn: -1
             Toxin: -2.5
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: Healium
-          min: 2
-        key: ForcedSleep
-        component: ForcedSleeping
-        time: 3
-        type: Add
 
 - type: reagent
   id: HyperNoblium
@@ -374,18 +323,17 @@
   metabolisms:
     Gas:
       effects:
-      - !type:GenericStatusEffect
+      - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
             min: 6
-        key: Stun
+        effectProto: StatusEffectStunned
         time: 1
         type: Remove
-      - !type:GenericStatusEffect
+      - !type:ModifyKnockdown
         conditions:
         - !type:ReagentThreshold
             min: 6
-        key: KnockedDown
         time: 4
         type: Remove
       - !type:MovespeedModifier
@@ -408,18 +356,17 @@
             Poison: 0.05
     Poison:
       effects:
-      - !type:GenericStatusEffect
+      - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
             min: 6
-        key: Stun
+        effectProto: StatusEffectStunned
         time: 1
         type: Remove
-      - !type:GenericStatusEffect
+      - !type:ModifyKnockdown
         conditions:
         - !type:ReagentThreshold
             min: 6
-        key: KnockedDown
         time: 4
         type: Remove
       - !type:MovespeedModifier

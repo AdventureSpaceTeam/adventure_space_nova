@@ -6,18 +6,18 @@
   playTimeTracker: JobBlueshield
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 18000 # 5 hrs
+      time: 5h
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 7200 # 2 hrs
+      time: 2h
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 14400 # 4 hrs
+      time: 4h
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 7200 # 2 hours
+      time: 2h
     - !type:AgeRequirement
-      requiredAge: 30 # Adventure
+      requiredAge: 21 # Adventure
 # Adventure-edit-start
     - !type:SpeciesRequirement
       inverted: true
