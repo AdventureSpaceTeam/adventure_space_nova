@@ -354,13 +354,16 @@
     - id: BoxHoSCircuitboards
     - id: WeaponDisabler
     - id: WantedListCartridge
-    - id: HandheldCriminalMonitor # Adventure
+    # Adventure start
+    - id: HandheldCriminalMonitor
     - id: ClothingHeadHatCapHoS # Corvax-SecFashion
       prob: 0.5
     - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
     - id: BookBusido # Corvax-Books
+    - id: ControlModsuitSafeguard
+    - id: WeaponNemesis
+    # Adventure end
     - id: DrinkHosFlask
-    - id: ControlModsuitSafeguard # Adventure modsuits
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
