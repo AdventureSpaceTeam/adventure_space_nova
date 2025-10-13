@@ -5,16 +5,14 @@
     "y": 32
   },
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by borkroman",
+  "copyright": "made by Xaunto",
   "states": [
     {
-      "name": "stone1"
+      "name": "dead"
     },
     {
-      "name": "stone2"
-    },
-    {
-      "name": "stone3"
+      "name": "alive",
+      "directions": 4
     }
   ]
 }

@@ -33,3 +33,57 @@
   sprite:
     sprite: _Adventure/Decals/ice.rsi
     state: ice4
+
+- type: decal
+  id: IceFlo1
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice_flo1
+
+- type: decal
+  id: IceFlo2
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice_flo2
+
+- type: decal
+  id: IceFlo3
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice_flo3
+
+- type: decal
+  id: IceRock1
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice_rock1
+
+- type: decal
+  id: IceRock2
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice_rock2
+
+- type: decal
+  id: IceRock3
+  tags: ["flora"]
+  snapCardinals: true
+  defaultSnap: false
+  sprite:
+    sprite: _Adventure/Decals/ice.rsi
+    state: ice_rock3

@@ -1,0 +1,76 @@
+- type: entity
+  name: Олег
+  parent: MobPenguinPolaris
+  id: MobPenguinOleg
+  description: Пингвин-коммунист, он точно не с Мадагаскара.
+  components:
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: Gun
+    burstFireRate: 5
+    fireRate: 5
+    useKey: true
+    selectedMode: Burst
+    availableModes:
+      - Burst
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+    minAngle: 32
+    maxAngle: 60
+    shotsPerBurst: 3
+    burstCooldown: 0.40
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 1000
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: _Adventure/Roles/LavaLand/mobs/Polaris/Oleg.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatPenguin
+      amount: 3
+    - id: WeaponRifleAk
+      amount: 1
+    - id: C4
+      amount: 2
+    - id: Crowbar
+      amount: 1
+    - id: MedkitCombatFilled
+      amount: 1
+    - id: ResearchAndDevelopmentServerMachineCircuitboard
+      amount: 1
+  - type: NpcFactionMember
+    factions:
+      - SimpleHostile
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Critical
+      350: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      270: 0.7
+
+- type: entity
+  name: спавнер Олега
+  id: SpawnMobPenguinOleg
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobPenguinOleg

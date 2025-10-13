@@ -1,0 +1,63 @@
+#шкура медведя
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBearHide
+  name: медвежья шкура
+  description: Шкура с головы белого медведя.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/Polaris/bear_hide/head.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/LavaLand/Equipment/Polaris/bear_hide/head.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBearHide
+  name: медвежья шкура
+  description: Шкура убитого белого медведя.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/Polaris/bear_hide/neck.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadBearHide
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+
+#шкура волка
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadWolfHide
+  name: волчья шкура
+  description: Шкура с головы северного волка.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/Polaris/wolf_hide/head.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/LavaLand/Equipment/Polaris/wolf_hide/head.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWolfHide
+  name: волчья шкура
+  description: Шкура убитого северного волка.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/Polaris/wolf_hide/neck.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadWolfHide
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
