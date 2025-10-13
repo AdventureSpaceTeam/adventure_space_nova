@@ -201,9 +201,9 @@
 - type: entity
   parent: PlushieWiki
   id: PlushieAelout
-  name: игрушка лучшего слайма
+  name: неплохая плюшевая игрушка слаймолюда
   suffix: AdvPlushie
-  description: Бееее
+  description: От неё сильно пахнет спиртом.
   components:
   - type: Sprite
     state: plushieAelout
