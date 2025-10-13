@@ -1,14 +1,17 @@
-using System.IO;
 using Content.Shared.Chat;
 using Content.Shared._Adventure.ACVar;
 using Content.Shared._Adventure.TTS;
 using Robust.Client.Audio;
-using Robust.Shared.Audio;
+using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
 using Robust.Shared.Utility;
+using System.IO;
 
 namespace Content.Client._Adventure.TTS;
+
+internal record struct TTSQueueElem(AudioStream Audio, bool IsWhisper);
 
 /// <summary>
 /// Plays TTS audio in world
@@ -21,6 +24,7 @@ public sealed class TTSSystem : EntitySystem
     [Dependency] private readonly IAudioManager _audioLoader = default!;
 
     private ISawmill _sawmill = default!;
+    private bool _enabled = true;
 
     /// <summary>
     /// Reducing the volume of the TTS when whispering. Will be converted to logarithm.
@@ -32,7 +36,15 @@ public sealed class TTSSystem : EntitySystem
     /// </summary>
     private const float MinimalVolume = -10f;
 
+    /// <summary>
+    /// Maximum queued tts talks per entity.
+    /// </summary>
+    private const int MaxQueuedSounds = 20;
+
     private float _volume = 0.0f;
+
+    private Dictionary<NetEntity, Queue<TTSQueueElem>> _queue = new();
+    private Dictionary<EntityUid, AudioComponent?> _playing = new();
 
     public override void Initialize()
     {
@@ -49,6 +61,68 @@ public sealed class TTSSystem : EntitySystem
         _cfg.UnsubValueChanged(ACVars.TTSClientEnabled, OnTtsClientOptionChanged);
     }
 
+    public override void FrameUpdate(float frameTime)
+    {
+        if (!_enabled) return;
+        foreach (var (uid, comp) in _playing)
+        {
+            _sawmill.Debug($"Iterating _playing: {uid} -> {comp}");
+            if (comp is not null && !comp.Playing)
+            {
+                _sawmill.Error($"Removing audio component for entity {uid}");
+                _playing[uid] = null;
+            }
+        }
+
+        foreach (var (speaker, queue) in _queue)
+        {
+            _sawmill.Debug($"Iterating _queue: {speaker}");
+            if (queue.Count <= 0) continue;
+            _sawmill.Debug($"Queue not empty, continuing");
+            EntityUid local_speaker = EntityUid.Invalid;
+            EntityUid? source = null;
+            if (speaker.Valid)
+            {
+                if (!TryGetEntity(speaker, out var uid) || uid is null)
+                {
+                    _sawmill.Error($"Couldn't get entity {speaker}, clearing queue");
+                    queue.Clear();
+                    continue;
+                }
+                local_speaker = uid.Value;
+                source = uid.Value;
+            }
+            if (!(_playing.ContainsKey(local_speaker) && _playing[local_speaker] is null)) continue;
+            if (!queue.TryDequeue(out var elem)) continue;
+            _sawmill.Error($"Dequeued tts speak for {speaker}");
+
+            _playing[local_speaker] = PlayTTSFromUid(source, elem.Audio, elem.IsWhisper);
+        }
+    }
+
+    public AudioComponent? PlayTTSFromUid(EntityUid? uid, AudioStream audioStream, bool isWhisper)
+    {
+        var audioParams = AudioParams.Default
+            .WithVolume(AdjustVolume(isWhisper))
+            .WithMaxDistance(AdjustDistance(isWhisper));
+        (EntityUid Entity, AudioComponent Component)? stream;
+
+        _sawmill.Error($"Playing TTS audio {audioStream.Length} bytes from {uid} entity");
+
+        if (uid is not null)
+        {
+            stream =  _audio.PlayEntity(audioStream, uid.Value, null, audioParams);
+        }
+        else
+        {
+            stream = _audio.PlayGlobal(audioStream, null, audioParams);
+        }
+
+        _sawmill.Error($"Resulting stream: {stream}");
+
+        return stream?.Component;
+    }
+
     public void RequestPreviewTTS(string voiceId)
     {
         RaiseNetworkEvent(new RequestPreviewTTSEvent(voiceId));
@@ -56,6 +130,7 @@ public sealed class TTSSystem : EntitySystem
 
     private void OnTtsClientOptionChanged(bool option)
     {
+        _enabled = option;
         RaiseNetworkEvent(new ClientOptionTTSEvent(option));
     }
 
@@ -66,24 +141,35 @@ public sealed class TTSSystem : EntitySystem
 
     private void OnPlayTTS(PlayTTSEvent ev)
     {
+        var source = ev.SourceUid ?? NetEntity.Invalid;
+        if (!_queue.ContainsKey(source))
+            _queue[source] = new();
+
+        if (_queue[source].Count >= MaxQueuedSounds)
+            return;
+
         var audioStream = _audioLoader.LoadAudioWav(new MemoryStream(ev.Data));
 
-        var audioParams = AudioParams.Default
-            .WithVolume(AdjustVolume(ev.IsWhisper))
-            .WithMaxDistance(AdjustDistance(ev.IsWhisper));
-
-        _sawmill.Verbose($"Playing TTS audio {ev.Data.Length} bytes from {ev.SourceUid} entity");
-
-        if (ev.SourceUid != null)
+        _sawmill.Error($"Enqueuing audio for entity |{source}|");
+        _queue[source].Enqueue(new TTSQueueElem
         {
-            if (!TryGetEntity(ev.SourceUid.Value, out _))
-                return;
-            var sourceUid = GetEntity(ev.SourceUid.Value);
-            _audio.PlayEntity(audioStream, sourceUid, null, audioParams);
+            Audio = audioStream,
+            IsWhisper = ev.IsWhisper,
+        });
+
+        if (!(ev.SourceUid?.Valid ?? false))
+        {
+            _sawmill.Error($"Adding empty value for entity |{EntityUid.Invalid}|");
+            _playing.TryAdd(EntityUid.Invalid, null);
+        }
+        else if (TryGetEntity(ev.SourceUid, out var ent) && ent is not null)
+        {
+            _sawmill.Error($"Adding empty value for entity |{ent}|");
+            _playing.TryAdd(ent.Value, null);
         }
         else
         {
-            _audio.PlayGlobal(audioStream, null, audioParams);
+            _sawmill.Error($"SourceUid can't be retrieved");
         }
     }
 
