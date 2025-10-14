@@ -22,8 +22,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingCloakVavevSponsor
-  name: плащ имени каца великого
-  description: Носи с честью!
+  name: чёрная накидка легендарного спонсора
+  description: Чёрный плащ с жёлтыми узорами.
   suffix: Sponsor
   components:
     - type: Sprite
