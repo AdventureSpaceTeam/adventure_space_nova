@@ -141,6 +141,7 @@ public sealed class TTSSystem : EntitySystem
 
     private void OnPlayTTS(PlayTTSEvent ev)
     {
+        if (!_enabled) return;
         var source = ev.SourceUid ?? NetEntity.Invalid;
         if (!_queue.ContainsKey(source))
             _queue[source] = new();

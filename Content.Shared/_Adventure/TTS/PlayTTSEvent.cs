@@ -7,7 +7,15 @@ namespace Content.Shared._Adventure.TTS;
 public sealed class PlayTTSEvent : EntityEventArgs
 {
     public byte[] Data { get; }
+    /// <summary>
+    /// Source of the sound.
+    /// </summary>
     public NetEntity? SourceUid { get; }
+    /// <summary>
+    /// Author of the sound.
+    /// Used for audio queue.
+    /// </summary>
+    public NetEntity? Author { get; }
     public bool IsWhisper { get; }
 
     public PlayTTSEvent(byte[] data, NetEntity? sourceUid = null, bool isWhisper = false)
