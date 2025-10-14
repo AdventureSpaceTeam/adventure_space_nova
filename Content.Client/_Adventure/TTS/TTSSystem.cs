@@ -70,10 +70,8 @@ public sealed class TTSSystem : EntitySystem
         _toDelete.Clear();
         foreach (var (uid, comp) in _playing)
         {
-            _sawmill.Debug($"Iterating _playing: {uid} -> {comp}");
             if (comp is null || !comp.Playing)
             {
-                _sawmill.Error($"Removing audio component for entity {uid}");
                 _toDelete.Add(uid);
             }
         }
@@ -85,20 +83,15 @@ public sealed class TTSSystem : EntitySystem
         _toDelete.Clear();
         foreach (var (author, queue) in _queue)
         {
-            _sawmill.Debug($"Iterating _queue: {author}");
             if (queue.Count <= 0) { // If author doesn't want to tell anything, ignore it.
                 _toDelete.Add(author);
                 continue;
             }
-            _sawmill.Debug($"Queue not empty, continuing");
             if (_playing.ContainsKey(author)) continue; // If author is still talking right now.
             if (!queue.TryDequeue(out var elem)) continue; // Just in case if queue cleared.
-            _sawmill.Error($"Dequeued tts speak for author {author}");
             if (!TryGetEntity(elem.Source, out var local_source)) { // If entity is outside PVS.
-                _sawmill.Error($"Can't get entuid for source {elem.Source}");
                 continue;
             }
-            _sawmill.Error($"Playing tts from author {author} with source from {local_source}");
             _playing[author] = PlayTTSFromUid(local_source, elem.Audio, elem.IsWhisper);
         }
         foreach (var author in _toDelete)
@@ -114,7 +107,7 @@ public sealed class TTSSystem : EntitySystem
             .WithMaxDistance(AdjustDistance(isWhisper));
         (EntityUid Entity, AudioComponent Component)? stream;
 
-        _sawmill.Error($"Playing TTS audio {audioStream.Length} bytes from {uid} entity");
+        _sawmill.Verbose($"Playing TTS audio {audioStream.Length} bytes from {uid} entity");
 
         if (uid is not null)
         {
@@ -124,8 +117,6 @@ public sealed class TTSSystem : EntitySystem
         {
             stream = _audio.PlayGlobal(audioStream, null, audioParams);
         }
-
-        _sawmill.Error($"Resulting stream: {stream}");
 
         return stream?.Component;
     }
@@ -161,12 +152,10 @@ public sealed class TTSSystem : EntitySystem
 
         if (!author.Valid)
         {
-            _sawmill.Error($"Playing audio without author ignoring queue");
             PlayTTSFromUid(null, audioStream, ev.IsWhisper);
         }
         else
         {
-            _sawmill.Error($"Enqueuing audio for author |{author}|");
             _queue[author].Enqueue(new TTSQueueElem
             {
                 Audio = audioStream,
