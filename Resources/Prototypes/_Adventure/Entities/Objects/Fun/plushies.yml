@@ -192,11 +192,28 @@
   id: PlushieResomi
   name: плюшевый резоми
   suffix: AdvPlushie
-  description: Очаровательная мягкая игрушка, низковата...
+  description: Мягкая игрушка резоми. Эти глазки гипнотизируют вас
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Fun/resomi.rsi
     state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Fun/resomi.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/Resomi/ResomiSpeech1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/Resomi/ResomiScream1.ogg
+      params:
+        volume: -1
+  - type: UseDelay
+    delay: 1
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Resomi/ResomiSpeech2.ogg
 
 - type: entity
   parent: PlushieWiki
