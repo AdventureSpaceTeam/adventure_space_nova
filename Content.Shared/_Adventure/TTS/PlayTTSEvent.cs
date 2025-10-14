@@ -18,10 +18,11 @@ public sealed class PlayTTSEvent : EntityEventArgs
     public NetEntity? Author { get; }
     public bool IsWhisper { get; }
 
-    public PlayTTSEvent(byte[] data, NetEntity? sourceUid = null, bool isWhisper = false)
+    public PlayTTSEvent(byte[] data, NetEntity? sourceUid = null, bool isWhisper = false, NetEntity? author = null)
     {
         Data = data;
         SourceUid = sourceUid;
         IsWhisper = isWhisper;
+        Author = author ?? sourceUid;
     }
 }

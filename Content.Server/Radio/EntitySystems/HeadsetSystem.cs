@@ -116,7 +116,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
             _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
             if (args.Voice is string voice)
             {
-                var ev = new TTSRadioPlayEvent(args.Message, voice);
+                var ev = new TTSRadioPlayEvent(args.Message, voice, GetNetEntity(uid), GetNetEntity(args.MessageSource));
                 RaiseLocalEvent(Transform(uid).ParentUid, ev);
             }
         }
