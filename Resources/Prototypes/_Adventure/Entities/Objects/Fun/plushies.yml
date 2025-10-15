@@ -240,3 +240,29 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Voice/Slime/slime_squish.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieClown
+  name: плюшевый клоун
+  suffix: AdvPlushie
+  description: Плюшевая игрушка клоуна. Вас тоже бесит этот хонк?
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/clown.rsi
+    state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Fun/clown.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/bikehorn.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/bikehorn.ogg
+  - type: UseDelay
+    delay: 1
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Items/bikehorn.ogg

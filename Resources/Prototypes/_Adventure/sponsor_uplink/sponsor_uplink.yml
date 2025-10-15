@@ -638,6 +638,17 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth61
+  productEntity: PlushieClown
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 - type: storePreset
   id: StorePresetSponsor
   storeName: Sponsor
