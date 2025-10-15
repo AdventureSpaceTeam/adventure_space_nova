@@ -640,7 +640,7 @@
 
 - type: listing
   id: UplinkSponsorCloth61
-  productEntity: PlushieClown
+  productEntity: PlushieFool
   cost:
     DonateCrystal: 3
   categories:

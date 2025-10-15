@@ -243,10 +243,10 @@
 
 - type: entity
   parent: PlushieWiki
-  id: PlushieClown
-  name: плюшевый клоун
+  id: PlushieFool
+  name: плюшевый шут
   suffix: AdvPlushie
-  description: Плюшевая игрушка клоуна. Вас тоже бесит этот хонк?
+  description: Плюшевая игрушка шута. Вас тоже бесит этот хонк?
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Fun/clown.rsi
