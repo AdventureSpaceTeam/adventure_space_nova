@@ -627,6 +627,17 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth60
+  productEntity: PlushieResomi
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 - type: storePreset
   id: StorePresetSponsor
   storeName: Sponsor
