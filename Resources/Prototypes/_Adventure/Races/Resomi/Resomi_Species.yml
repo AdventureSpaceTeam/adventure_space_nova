@@ -7,7 +7,7 @@
   markingLimits: MobResomiMarkingLimits
   dollPrototype: MobResomiDummy
   skinColoration: Hues
-  defaultSkinTone: "#96db8b"
+  defaultSkinTone: "#36c9c0"
   minAge: 15
   youngAge: 30
   oldAge: 40

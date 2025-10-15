@@ -16,7 +16,7 @@
   markingLimits: MobSkrellMarkingLimits
   dollPrototype: MobSkrellDummy
   skinColoration: Hues
-  defaultSkinTone: "#96db8b"
+  defaultSkinTone: "#4dd7ab"
   minAge: 30
   youngAge: 120
   oldAge: 240

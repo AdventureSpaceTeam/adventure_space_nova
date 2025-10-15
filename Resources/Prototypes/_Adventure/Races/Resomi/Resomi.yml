@@ -45,9 +45,7 @@
     damage:
       types:
         Slash: 5
-  - type: Sprite
-    noRot: true
-    drawdepth: Mobs
+  - type: ScaleVisuals
     scale: 0.8, 0.8
   - type: Item
     size: Ginormous
