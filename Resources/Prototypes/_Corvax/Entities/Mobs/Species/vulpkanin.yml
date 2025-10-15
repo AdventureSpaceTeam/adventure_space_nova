@@ -75,6 +75,17 @@
       types:
         Asphyxiation: -2.0
   - type: Wagging
+#Adventure-edit
+  - type: JumpAbility
+    action: ActionJumpSpecies
+    canCollide: true
+    jumpDistance: 1.5
+    jumpSound:
+      path: /Audio/Effects/thudswoosh.ogg
+      params:
+        volume: -1
+        variation: 0.05
+#Adventure-edit
 
 - type: entity
   save: false

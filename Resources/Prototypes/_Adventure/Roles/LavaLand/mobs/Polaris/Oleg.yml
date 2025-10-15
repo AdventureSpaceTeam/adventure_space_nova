@@ -1,24 +1,38 @@
 - type: entity
   name: Олег
-  parent: MobPenguinPolaris
+  parent: [ MobPenguinPolaris, FlyingMobBase ]
   id: MobPenguinOleg
   description: Пингвин-коммунист, он точно не с Мадагаскара.
   components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 200
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 3
   - type: HTN
     rootTask:
       task: SimpleRangedHostileCompound
   - type: Gun
     burstFireRate: 5
-    fireRate: 5
+    fireRate: 3
     useKey: true
     selectedMode: Burst
     availableModes:
       - Burst
     soundGunshot: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-    minAngle: 32
-    maxAngle: 60
+    minAngle: 50
+    maxAngle: 80
     shotsPerBurst: 3
-    burstCooldown: 0.40
+    burstCooldown: 0.80
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifle
     capacity: 1000

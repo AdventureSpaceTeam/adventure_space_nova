@@ -138,10 +138,9 @@
   - type: Inventory
     speciesId: drask
     templateId: Drask
-  - type: Sprite
-    noRot: true
-    drawdepth: Mobs
+  - type: ScaleVisuals
     scale: 1, 1.1 # рост 2 метра.
+  - type: Sprite
     layers:
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
     - map: [ "enum.HumanoidVisualLayers.Head" ]
@@ -198,8 +197,11 @@
     species: Drask
   - type: Inventory
     templateId: Drask
-  - type: Sprite
+  - type: ScaleVisuals
     scale: 1, 1.1
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
     layers:
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
     - map: [ "enum.HumanoidVisualLayers.Head" ]

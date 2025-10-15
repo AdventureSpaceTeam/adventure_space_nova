@@ -29,7 +29,7 @@
   markingLimits: MobZerahMarkingLimits
   dollPrototype: MobZerahDummy
   skinColoration: Hues
-  defaultSkinTone: "#96db8b"
+  defaultSkinTone: "#bfa010"
   minAge: 12
   youngAge: 15
   oldAge: 25
