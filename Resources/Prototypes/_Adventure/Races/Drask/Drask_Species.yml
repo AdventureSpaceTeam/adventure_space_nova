@@ -172,3 +172,99 @@
   baseSprite:
     sprite: _Adventure/Races/Drask/Species/parts.rsi
     state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobDraskLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobDraskLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobDraskLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobDraskRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobDraskRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobDraskRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobDraskRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobDraskLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobDraskLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobDraskLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobDraskLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobDraskRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobDraskRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobDraskRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobDraskRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobDraskLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Drask/Species/parts.rsi
+    state: l_foot

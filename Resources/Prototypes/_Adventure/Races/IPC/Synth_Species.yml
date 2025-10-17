@@ -142,3 +142,99 @@
   baseSprite:
     sprite: _Adventure/Races/IPC/Species/parts.rsi
     state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSynthLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSynthLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSynthLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSynthRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSynthRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSynthRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSynthRFoodMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobSynthLFoodMale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSynthLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSynthLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSynthLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSynthRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSynthRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSynthRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSynthRFoodFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobSynthLFoodFemale
+  baseSprite:
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+    state: l_foot

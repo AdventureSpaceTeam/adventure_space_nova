@@ -165,3 +165,51 @@
   baseSprite:
     sprite: _Adventure/Races/Insect/Species/parts.rsi
     state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobInsectLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobInsectLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobInsectRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobInsectRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobInsectLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobInsectLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobInsectRArmFelame
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobInsectRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: r_hand
