@@ -144,6 +144,15 @@
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: little_trike
 
+- type: marking
+  id: LizardHornsKrone
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
+    state: krone
+
 #Tails
 - type: marking
   id: LizardTailCurved
@@ -242,9 +251,11 @@
   speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
-    state: spike
+    state: base
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: down
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: spike
 
 - type: marking
   id: LizardTailUltraBigRidge
@@ -258,6 +269,49 @@
     state: down
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: ridge
+
+- type: marking
+  id: LizardTailUltraBigTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: base
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: tiger
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: down
+
+- type: marking
+  id: LizardTailUltraBigSpikeTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: base
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: tiger
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: down
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: spike
+
+- type: marking
+  id: LizardTailUltraBigRidgeTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: base
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: tiger
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: down
+  - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
+    state: ridge    
 
 #Body
 - type: marking
@@ -367,6 +421,15 @@
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge_full
+
+- type: marking
+  id: LizardFrillsRidgeFullFull
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
+    state: frills_ridge_fullfull
 
 - type: marking
   id: LizardFrillsRidgeSmall
