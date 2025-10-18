@@ -646,3 +646,29 @@
     autoRot: true
   - type: StaticPrice
     price: 25000
+
+- type: entity
+  parent: ClothingControlModsuitBase
+  id: ClothingControlModsuitMagmatiteSealed
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/Clothing/Back/magmatite.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Modsuits/Clothing/Back/magmatite.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterChestplateModsuitMagmatiteSealed
+  - type: Storage
+    grid:
+    - 0,0,8,4
+  - type: PointLight
+    color: "#f2511e"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    radius: 12
+    softness: 20
+    autoRot: true
+  - type: Construction
+    graph: ModsuitMagmatite
+    node: modsuitmagmatite
+  - type: StaticPrice
+    price: 10000

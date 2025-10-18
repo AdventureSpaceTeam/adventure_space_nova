@@ -270,14 +270,15 @@
 
 - type: stack
   id: ProcessedMagmatite
-  name: осколок магматита
+  name: обработанный магматит
   icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/gems.rsi, state: processed_magmatite }
   spawn: ProcessedMagmatite1
   maxCount: 30
 
 - type: material
   id: ProcessedMagmatite
-  name: магматит
+  stackEntity: ProcessedMagmatite1
+  name: обработанный магматит
   unit: materials-unit-piece
   icon: { sprite: _Adventure/Roles/LavaLand/materials/gems.rsi, state: processed_magmatite }
   color: "#e64e04"
