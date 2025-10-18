@@ -65,6 +65,38 @@
     {
       "name": "torso_m",
       "directions": 4
+    },
+    {
+      "name": "l_armF",
+      "directions": 4
+    },
+    {
+      "name": "l_footF",
+      "directions": 4
+    },
+    {
+      "name": "l_handF",
+      "directions": 4
+    },
+    {
+      "name": "l_legF",
+      "directions": 4
+    },
+    {
+      "name": "r_armF",
+      "directions": 4
+    },
+    {
+      "name": "r_footF",
+      "directions": 4
+    },
+    {
+      "name": "r_handF",
+      "directions": 4
+    },
+    {
+      "name": "r_legF",
+      "directions": 4
     }
   ]
 }

@@ -172,3 +172,99 @@
   baseSprite:
     sprite: _Adventure/Races/PigMan/Species/parts.rsi
     state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_foot

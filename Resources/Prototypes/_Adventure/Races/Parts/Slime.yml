@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobSlimeLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSlimeLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSlimeLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSlimeLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSlimeRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSlimeRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSlimeRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSlimeRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Slime/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobSlimeLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSlimeLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSlimeLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSlimeLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSlimeRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSlimeRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSlimeRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSlimeRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/slime.rsi
+    state: r_foot

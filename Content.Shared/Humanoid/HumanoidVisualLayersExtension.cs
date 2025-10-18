@@ -11,6 +11,16 @@ namespace Content.Shared.Humanoid
             {
                 HumanoidVisualLayers.Chest => true,
                 HumanoidVisualLayers.Head => true,
+        // Adventure-Edit-Start
+                HumanoidVisualLayers.LArm => true,
+                HumanoidVisualLayers.LHand => true,
+                HumanoidVisualLayers.LLeg => true,
+                HumanoidVisualLayers.LFoot => true,
+                HumanoidVisualLayers.RArm => true,
+                HumanoidVisualLayers.RHand => true,
+                HumanoidVisualLayers.RLeg => true,
+                HumanoidVisualLayers.RFoot => true,
+        // Adventure-Edit-End
                 _ => false
             };
         }
