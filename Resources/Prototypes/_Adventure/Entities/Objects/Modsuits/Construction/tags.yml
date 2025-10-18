@@ -2,7 +2,22 @@
   id: EmptyCore
 
 - type: Tag
-  id: LegionCore
+  id: LegionCoreModsuit
+
+- type: Tag
+  id: LegionModsuitControlStart
+
+- type: Tag
+  id: MagmatiteModsuitBoots
+
+- type: Tag
+  id: MagmatiteModsuitChestplate
+
+- type: Tag
+  id: MagmatiteModsuitGauntlets
+
+- type: Tag
+  id: MagmatiteModsuitHelmet
 
 - type: Tag
   id: ModsuitHelmet
@@ -15,12 +30,6 @@
 
 - type: Tag
   id: ModsuitControlStart
-
-- type: Tag
-  id: ModsuitControlCore
-
-- type: Tag
-  id: ModsuitControlLegionCore
 
 - type: Tag
   id: ModsuitControlAdvanced
@@ -38,7 +47,7 @@
   id: ModsuitControlEnd
 
 - type: Tag
-  id: LegionModsuitControlEnd
+  id: MagmatiteModsuitControlEnd
 
 - type: Tag
   id: ModsuitGauntlets

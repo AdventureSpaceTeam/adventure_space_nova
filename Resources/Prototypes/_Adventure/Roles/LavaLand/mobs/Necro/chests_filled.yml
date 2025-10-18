@@ -221,6 +221,21 @@
       - id: ClothingOuterHardsuitLuxury
         amount: 1
         prob: 0.01
-      - id: EmptyCoreModsuitConstructing
+      - id: EmptyCoreModsuit
         amount: 1
         prob: 0.02
+      - id: ControlMagmatiteModsuitConstructingStart
+        amount: 1
+        prob: 0.2
+      - id: MagmatiteBootsModsuitConstructing
+        amount: 1
+        prob: 0.2
+      - id: MagmatiteChestplateModsuitConstructing
+        amount: 1
+        prob: 0.2
+      - id: MagmatiteGauntletsModsuitConstructing
+        amount: 1
+        prob: 0.2
+      - id: MagmatiteHelmetModsuitConstructing
+        amount: 1
+        prob: 0.2

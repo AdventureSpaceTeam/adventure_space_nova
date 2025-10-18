@@ -137,21 +137,3 @@
   targetNode: icon
   category: construction-category-materials
   objectType: Item
-
-- type: construction
-  id: ControlModsuitConstructingCore
-  graph: ControlModsuitConstructingCore
-  startNode: start
-  targetNode: modsuitconstructingcore
-  category: construction-category-mech
-  icon: { sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi, state: CORE-equip0}
-  objectType: Item
-
-- type: construction
-  id: ControlModsuitConstructingLegionCore
-  graph: ControlModsuitConstructingLegionCore
-  startNode: start
-  targetNode: modsuitconstructinglegioncore
-  category: construction-category-mech
-  icon: { sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi, state: LEGION-CORE-equip0}
-  objectType: Item

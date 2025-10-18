@@ -8,24 +8,7 @@
   },
   "states": [
     {
-      "name": "boots"
-    },
-    {
-      "name": "chestplate"
-    },
-    {
-      "name": "CORE"
-    },
-    {
-      "name": "CORE-equip0",
-      "delays": [
-        [
-          0.07,
-          0.07,
-          0.07,
-          0.07
-        ]
-      ]
+      "name": "CORE-equip0"
     },
     {
       "name": "CORE-equip1",
@@ -39,7 +22,15 @@
       ]
     },
     {
-      "name": "CORE-equip2"
+      "name": "CORE-equip2",
+      "delays": [
+        [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      ]
     },
     {
       "name": "CORE-equip3"
@@ -57,15 +48,10 @@
       "name": "CORE-equip7"
     },
     {
-      "name": "LEGION-CORE-equip0",
-      "delays": [
-        [
-          0.07,
-          0.07,
-          0.07,
-          0.07
-        ]
-      ]
+      "name": "CORE-equip8"
+    },
+    {
+      "name": "LEGION-CORE-equip0"
     },
     {
       "name": "LEGION-CORE-equip1",
@@ -79,7 +65,15 @@
       ]
     },
     {
-      "name": "LEGION-CORE-equip2"
+      "name": "LEGION-CORE-equip2",
+      "delays": [
+        [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      ]
     },
     {
       "name": "LEGION-CORE-equip3"
@@ -97,10 +91,31 @@
       "name": "LEGION-CORE-equip7"
     },
     {
+      "name": "LEGION-CORE-equip8"
+    },
+    {
+      "name": "boots"
+    },
+    {
+      "name": "chestplate"
+    },
+    {
       "name": "gauntlets"
     },
     {
       "name": "helmet"
+    },
+    {
+      "name": "magmatite-boots"
+    },
+    {
+      "name": "magmatite-chestplate"
+    },
+    {
+      "name": "magmatite-gauntlets"
+    },
+    {
+      "name": "magmatite-helmet"
     },
     {
       "name": "mod-core",
