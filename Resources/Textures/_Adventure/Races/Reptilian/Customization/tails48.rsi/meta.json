@@ -22,6 +22,10 @@
     {
       "name": "ridge",
       "directions": 4
+    },
+    {
+      "name": "tiger",
+      "directions": 4
     }
   ]
 }

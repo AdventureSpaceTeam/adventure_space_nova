@@ -70,6 +70,10 @@
     {
       "name": "little_trike",
       "directions": 4
+    },
+    {
+      "name": "krone",
+      "directions": 4
     }
   ]
 }
