@@ -109,7 +109,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 1
+          data: 2
 
       - tag: MagmatiteModsuitHelmet
         name: магматитовый шлем РИГ-а
@@ -117,7 +117,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 2
+          data: 3
 
       - tag: MagmatiteModsuitChestplate
         name: магматитовый нагрудник РИГ-а
@@ -125,7 +125,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 3
+          data: 4
 
       - tag: MagmatiteModsuitGauntlets
         name: магматитовые рукавицы РИГ-а
@@ -133,7 +133,7 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 4
+          data: 5
 
       - tag: MagmatiteModsuitBoots
         name: магматитовые ботинки РИГ-а
@@ -141,21 +141,21 @@
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 5
+          data: 6
 
       - tool: Anchoring
         doAfter: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 6
+          data: 7
 
       - tool: Screwing
         doAfter: 2
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
-          data: 7
+          data: 8
 
   - node: magmatitemodsuitconstructed
     actions:
