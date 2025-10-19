@@ -49,10 +49,12 @@
     grid:
     - 0,0,7,3
     maxItemSize: Small
-    whitelist:
-      tags:
-      - Arrow
-      - Plunger
+# Adventure start
+#    whitelist:
+#      tags:
+#      - Arrow
+#      - Plunger
+# Adventure end
   - type: Appearance
   - type: StorageContainerVisuals
     maxFillLevels: 3
@@ -183,7 +185,7 @@
         - BalloonPopper
 
 - type: entity
-  parent: [ ClothingBeltStorageBase, BaseSecurityCargoContraband ]
+  parent: [ClothingBeltStorageBase, BaseSecurityCargoContraband]
   id: ClothingBeltMercWebbing
   name: mercenary webbing
   description: Ideal for storing everything from ammo to weapons and combat essentials.
@@ -216,35 +218,6 @@
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.1
-  # adventure begin
-  - type: Storage
-    grid:
-    - 0,0,7,1
-    whitelist:
-      tags:
-        - CigPack
-        - Taser
-        - SecBeltEquip
-        - Radio
-        - Sidearm
-        - MagazinePistol
-        - MagazineMagnum
-        - CombatKnife
-        - Truncheon
-      components:
-        - Stunbaton
-        - FlashOnTrigger
-        - SmokeOnTrigger
-        - Flash
-        - Ammo
-        - Handcuff
-        - BallisticAmmoProvider
-        - CartridgeAmmo
-        - DoorRemote
-        - Whistle
-        - HolosignProjector
-        - BalloonPopper
-  # adventure end
   - type: StaticPrice
     price: 500
 
