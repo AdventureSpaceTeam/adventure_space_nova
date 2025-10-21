@@ -44,7 +44,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -55,6 +55,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -81,7 +85,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -92,6 +96,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -118,7 +126,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -129,6 +137,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -155,7 +167,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -166,6 +178,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -192,7 +208,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -203,6 +219,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -229,7 +249,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -240,6 +260,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -266,7 +290,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -277,6 +301,10 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded
 
 - type: entity
@@ -303,7 +331,7 @@
       - state: equipped-EYES-moth
       - state: equipped-EYES-unshaded-moth
         shader: unshaded
-      eyes-Zerah:
+      eyes-zerah:
       - state: equipped-EYES-zerah
       - state: equipped-EYES-unshaded-zerah
         shader: unshaded
@@ -314,4 +342,8 @@
       eyes-drask:
       - state: equipped-EYES-drask
       - state: equipped-EYES-unshaded-drask
+        shader: unshaded
+      eyes-plasmaman:
+      - state: equipped-EYES-plasmaman
+      - state: equipped-EYES-unshaded-plasmaman
         shader: unshaded

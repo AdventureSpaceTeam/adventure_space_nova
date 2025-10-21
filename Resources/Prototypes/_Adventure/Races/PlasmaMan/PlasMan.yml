@@ -84,6 +84,7 @@
   - type: HumanoidAppearance
     species: PlasMan
   - type: Inventory
+    speciesId: plasmaman
   - type: Barotrauma
     damage:
       types:

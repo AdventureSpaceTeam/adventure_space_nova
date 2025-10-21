@@ -1,0 +1,487 @@
+- type: entity
+  id: CrazyClownBackpackGroup
+  parent: ClothingBackpack
+  name: Рюкзак с вещами безумного клоуна
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskCrazyClown
+      amount: 1
+    - id: ClothingJumpsuitCrazyClown
+      amount: 1
+    - id: ClothingShoesCrazyClown
+      amount: 1
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskCrazyClown
+  name: маска безумного клоуна
+  description: Артист или маньяк, выбор за тобой.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/madclownmask.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/madclownmask.rsi
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - ClownMask
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitCrazyClown
+  name: комбинезон безумного клоуна
+  description: Наполнен безумием.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/madclownjumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/madclownjumpsuit.rsi
+
+- type: entity
+  parent: ClothingShoesClownBase
+  id: ClothingShoesCrazyClown
+  name: туфли безумного клоуна
+  description: "Услышь, это грозное приближение пищялки"
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/madclownshoes.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/madclownshoes.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepClown
+      params:
+        variation: 0.17
+  - type: Tag
+    tags:
+    - ClownShoes
+    - WhitelistChameleon
+
+#
+- type: entity
+  id: RoyalJesterBackpackGroup
+  parent: ClothingBackpack
+  name: Рюкзак с вещами королевского шута
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskRoyalJester
+      amount: 1
+    - id: ClothingJumpsuitRoyalJester
+      amount: 1
+    - id: ClothingShoesRoyalJester
+      amount: 1
+    - id: ClothingHeadHatRoyalJester
+      amount: 1
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskRoyalJester
+  name: маска королевского шута
+  description: Маска, без которой не один шут не получит своей силы.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/royaljestermask.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/royaljestermask.rsi
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - ClownMask
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Snout
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitRoyalJester
+  name: комбинезон королевского шута
+  description: Комбинезон подчёркивающий вашу натуру.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/royaljesterjumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/royaljesterjumpsuit.rsi
+
+- type: entity
+  parent: ClothingShoesClownBase
+  id: ClothingShoesRoyalJester
+  name: туфли королевского шута
+  description: "Королевский гул"
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/royaljestertapki.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/royaljestertapki.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepClown
+      params:
+        variation: 0.17
+  - type: Tag
+    tags:
+    - ClownShoes
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatRoyalJester
+  name: шляпа королевского шута
+  description: Моё почтение.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/royaljesterhat.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/royaljesterhat.rsi
+
+#
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleBlack
+  name: чёрная мантия
+  description: Комфорт и уют.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/mantle.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/mantle.rsi
+    state: equipped-OUTERCLOTHING
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodBlack
+  name: чёрный капюшон
+  description: Отлично подходит чтобы закрыться от внешнего мира.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/hood.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/hood.rsi
+  - type: IngestionBlocker
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      Snout: HEAD
+      HeadTop: HEAD
+      HeadSide: HEAD
+#
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodBalaklavaBlack
+  name: чёрная балаклава
+  description: Всем стоять! Работает спецназ.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/balaklava.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/balaklava.rsi
+  - type: IngestionBlocker
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+      Snout: HEAD
+      HeadTop: HEAD
+      HeadSide: HEAD
+
+#
+
+- type: entity
+  parent: [ClothingOuterEnvirosuitBase, BaseMedicalContraband]
+  id: ClothingOuterEnvirosuitSeniorMedical
+  name: медицинский защитный костюм ведущего врача
+  description: Герметичный костюм, предназначенный для использования ведущими врачами-плазмалюдов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/physician/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/physician/suit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.6
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  parent: [ClothingHeadEnvirosuitBase, BaseMedicalContraband]
+  id: ClothingHeadEnvirosuitSeniorMedical
+  name: медицинский защитный шлем ведущего врача
+  description: Герметичный шлем, предназначенный для использования ведущими врачами-плазмалюдов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/physician/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/physician/helmet.rsi
+  - type: Item
+    sprite: _Adventure/sponsor_uplink/jobs/physician/helmet.rsi
+    heldPrefix: off
+    size: Normal
+  - type: PointLight
+    color: "#adf1ff"
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+#
+- type: entity
+  id: WhiteCaptainCrate
+  parent: CrateGenericSteel
+  name: ящик с белой одеждой капитана
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingHandsGlovesCaptainWhite
+      amount: 1
+    - id: ClothingBackpackCaptainWhite
+      amount: 1
+    - id: ClothingBackpackDuffelCaptainWhite
+      amount: 1
+    - id: ClothingBackpackSatchelCaptainWhite
+      amount: 1
+    - id: ClothingHeadHatCapcapWhite
+      amount: 1
+    - id: ClothingUniformJumpsuitCaptainWhite
+      amount: 1
+    - id: ClothingUniformJumpskirtCapFormalDressWhite
+      amount: 1
+    - id: ClothingOuterCoatCaptainWhite
+      amount: 1
+
+- type: entity
+  parent: [ClothingHandsBase, BaseCommandContraband]
+  id: ClothingHandsGlovesCaptainWhite
+  name: белые перчатки капитана
+  description: Элегантные перчатки с золотистыми украшениями, теперь в белом!.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Gloves.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Gloves.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-regal-blue
+  - type: FingerprintMask
+
+- type: entity
+  parent: [ClothingBackpack, BaseCommandContraband]
+  id: ClothingBackpackCaptainWhite
+  name: белый капитанский рюкзак
+  description: Специальный рюкзак для капитанов, белый цвет входит в комплект.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Backpack.rsi
+
+- type: entity
+  parent: [ClothingBackpackDuffel, BaseCommandContraband]
+  id: ClothingBackpackDuffelCaptainWhite
+  name: белый капитанский вещмешок
+  description: Обеспечивает вместительностью, и радует глаз белым раскрасом.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Duffels.rsi
+
+- type: entity
+  parent: [ClothingBackpackSatchel, BaseCommandContraband]
+  id: ClothingBackpackSatchelCaptainWhite
+  name: белая капитанская сумка
+  description: Эксклюзивный белый вариант, для важной персоны.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Satchel.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapcapWhite
+  name: белая капитанская фуражка
+  description: белая фуражка, подчёркивает статус владельца в качестве капитана.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCap.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCap.rsi
+  - type: Item
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-inanimate
+    weight: 0.0002 # 5,000 times less likely than 1 regular animal
+  - type: BlockMovement
+
+- type: entity
+  parent: [ClothingOuterArmorBaseCarapace, BaseCommandContraband]
+  id: ClothingOuterArmorCaptainCarapaceWhite
+  name: белый капитанский бронежилет
+  description: Белый капитанский бронежилет, обеспечивает защиту, оставаясь довольно мобильным вариантом, благодаря гибким ремешкам.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Carapace.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Carapace.rsi
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtCapFormalDressWhite
+  name: белая капитанская юбка-комбинезон
+  description: белая юбка-комбинезон, для важной леди.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Capformal_Jumpskirt.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Capformal_Jumpskirt.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCommandContraband]
+  id: ClothingUniformJumpsuitCaptainWhite
+  name: белый капитанский комбинезон
+  description: Белый комбинезон, такие комбинезоны носят уважающие себя капитаны станций.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Capformal_Jumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Capformal_Jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCommandContraband]
+  id: ClothingOuterCoatCaptainWhite
+  name: белая капитанская кофта
+  description: Белая кофта, предоставляющий отличный капитанский вид для делегантной встречи.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCoat.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCoat.rsi
+#
+- type: entity
+  parent: Clothing
+  id: ClothPantsExpensive
+  description: Дорогие трусики, кто хочет кое-что скрыть, но хочет внимания к трусам.
+  name: элегантные трусы
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/trusi.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/trusi.rsi
+    state: equipped
+    slots: [pants]
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 15
+  - type: Tag
+    tags:
+    - ClothMade
+  - type: StealTarget
+    stealGroup: Pants
+
+- type: entity
+  parent: ClothPantsExpensive
+  id: ClothingBrassExpensive
+  description: Элегантный бюстгалтер, поможет выделится среди толпы, зачем-то.
+  name: элегантный бюстгалтер
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/lifaki.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/lifaki.rsi
+    state: equipped
+    slots: [brass]
+  - type: StealTarget
+    stealGroup: Brass
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckScientists
+  name: плащ научного отдела
+  description: Этот плащ показывает принадлежность к научному отделу. Он наполовину обрезан, показывая что экипаж всё ещё не командование, а его подчинённые.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/jobs/sci.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckSecurity
+  name: плащ отдела безопасности
+  description: Этот плащ показывает принадлежность к отделу безопасности. Показывает заключённым, кто здесь главный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/securityneck.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCargo
+  name: плащ отдела снабжения
+  description: Этот плащ показывает принадлежность к отделу снабжения. Половина плаща была продана.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/engmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckEngineer
+  name: мантия отдела инженерии
+  description: Это мантия показывает принадлежность к инженерному отделу. Этому человеку можно доверить вашу микроволновку.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/engmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMed
+  name: мантия медицинского отдела
+  description: Это мантия показывает принадлежность к медицинскому отделу. Не удивляйтесь игле припрятанном в кармане.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/medmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMedCape
+  name: плащ медицинского отдела
+  description: Этот плащ показывает принадлежность к медицинскому отделу. Величие и здоровье.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/medcape.rsi

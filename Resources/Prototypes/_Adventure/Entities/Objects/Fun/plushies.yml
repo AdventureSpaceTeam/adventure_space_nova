@@ -266,3 +266,107 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Items/bikehorn.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieDrask
+  name: плюшевый драск
+  suffix: AdvPlushie
+  description: Плюшевая игрушка драска, трёхглазик.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/drask-plush.rsi
+    state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Fun/drask-plush.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: _Adventure/Voice/Drask/octoScream1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: _Adventure/Voice/Drask/octoScream1.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushiePigMan
+  name: плюшевый свинолюд
+  suffix: AdvPlushie
+  description: Плюшевая игрушка свинолюда, увесистый и обьёмный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/pig-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: _Adventure/Voice/PigMan/PigScream1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: _Adventure/Voice/PigMan/PigScream1.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushiePlasmaMan
+  name: плюшевый плазмалюд
+  suffix: AdvPlushie
+  description: Плюшевая игрушка плазмолюда, пахнет плазмой.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/plasma-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Skeleton/skeleton_scream.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Skeleton/skeleton_scream.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieIPC
+  name: плюшевый КПБ
+  suffix: AdvPlushie
+  description: Плюшевая игрушка КПБ, состоит на 1% из железа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/robot-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: _Adventure/Voice/IPC/Droid_Scream_3.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: _Adventure/Voice/IPC/Droid_Scream_3.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieSkrell
+  name: плюшевый скрелл
+  suffix: AdvPlushie
+  description: Плюшевая игрушка скрелла, слегка мокрый.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/skrell-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: _Adventure/Voice/Skrell/skrell_scream2.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: _Adventure/Voice/Skrell/skrell_scream2.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieZerah
+  name: плюшевый зерах
+  suffix: AdvPlushie
+  description: Плюшевая игрушка зераха, по меркам игрушек, очень даже слизкая.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/snake-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: _Adventure/Voice/Snake/ZerahScream3.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: _Adventure/Voice/Snake/ZerahScream3.ogg
