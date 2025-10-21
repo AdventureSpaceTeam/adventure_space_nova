@@ -18,6 +18,12 @@
         },
         {
             "name": "armblade"
+        },
+        {
+            "name": "armclaw"
+        },
+        {
+            "name": "armhammer"
         }
     ]
 }
