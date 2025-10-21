@@ -405,7 +405,6 @@
     CentCommCrystal: 3
   categories:
   - ERTammo
-  - CBURNammo
 
 - type: listing
   id: MagazineShotgunERT
