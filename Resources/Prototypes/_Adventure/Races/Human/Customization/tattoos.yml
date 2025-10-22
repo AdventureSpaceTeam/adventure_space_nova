@@ -1,0 +1,69 @@
+- type: marking
+  id: TattooFaceLeft
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _Adventure/Races/tattoos.rsi
+    state: face_left
+
+- type: marking
+  id: TattooFaceRight
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true
+  sprites:
+  - sprite: _Adventure/Races/tattoos.rsi
+    state: face_right
+
+- type: marking
+  id: TattooHeartLeftLeg
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _Adventure/Races/tattoos.rsi
+    state: heart
+
+- type: marking
+  id: TattooChestCross
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _Adventure/Races/tattoos.rsi
+    state: cross
+
+- type: marking
+  id: TattooChestFly
+  bodyPart: LArm
+  markingCategory: Chest
+  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _Adventure/Races/tattoos.rsi
+    state: fly
