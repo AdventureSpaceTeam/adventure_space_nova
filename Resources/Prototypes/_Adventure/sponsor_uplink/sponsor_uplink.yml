@@ -35,7 +35,7 @@
   displayName: адвенчурценты
   cash:
     1: DonateCrystal1
-  canWithdraw: true
+  canWithdraw: false
 
 - type: stack
   id: DonateCrystal
@@ -856,6 +856,28 @@
   - !type:ListingLimitedStockCondition
    stock: 1
 
+- type: listing
+  id: UplinkSponsorCloth80
+  productEntity: PlushieSonya
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth81
+  productEntity: AltBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 # Jobs
 
 # Clown
@@ -921,6 +943,8 @@
     - Chemist
     - SeniorMedicAdv
     - MedicalDoctor
+    - Paramedic
+    - Psychologist
 
 - type: listing
   id: UplinkSponsorClothMedicalJob2
@@ -935,6 +959,38 @@
   - !type:BuyerJobCondition
     whitelist:
     - Chemist
+    - SeniorMedicAdv
+    - MedicalDoctor
+    - Paramedic
+    - Psychologist
+
+- type: listing
+  id: UplinkSponsorClothMedicalJob3
+  productEntity: ClothingUniformJumpskirtMedicalNurseElegant
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - SeniorMedicAdv
+    - MedicalDoctor
+
+- type: listing
+  id: UplinkSponsorClothMedicalJob4
+  productEntity: BaseClothingShoesHeeledElegant
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
     - SeniorMedicAdv
     - MedicalDoctor
 # End Medical
@@ -953,9 +1009,11 @@
   - !type:BuyerJobCondition
     whitelist:
     - SecurityOfficer
+    - SeniorOfficerAdv
     - HeadOfSecurity
     - Warden
     - Detective
+    - Brigmedic
 
 - type: listing
   id: UplinkSponsorClothSecurityJob2
@@ -970,8 +1028,10 @@
   - !type:BuyerJobCondition
     whitelist:
     - SecurityOfficer
+    - SeniorOfficerAdv
     - Warden
     - Detective
+    - Brigmedic
 # End Security
 
 # Cargo
@@ -1005,6 +1065,7 @@
   - !type:BuyerJobCondition
     whitelist:
     - StationEngineer
+    - SeniorEngineerAdv
     - AtmosphericTechnician
 # End Engineer
 

@@ -370,3 +370,20 @@
   - type: EmitSoundOnLand
     sound:
       path: _Adventure/Voice/Snake/ZerahScream3.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieSonya
+  name: плюшевый детектив
+  suffix: AdvPlushie
+  description: Плюшевая игрушка детектива, она раскроет это дело.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/sonya-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/cat_meow.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Animals/cat_meow.ogg

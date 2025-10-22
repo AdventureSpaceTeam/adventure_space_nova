@@ -202,49 +202,6 @@
 #
 
 - type: entity
-  parent: [ClothingOuterEnvirosuitBase, BaseMedicalContraband]
-  id: ClothingOuterEnvirosuitSeniorMedical
-  name: медицинский защитный костюм ведущего врача
-  description: Герметичный костюм, предназначенный для использования ведущими врачами-плазмалюдов.
-  components:
-  - type: Sprite
-    sprite: _Adventure/sponsor_uplink/jobs/physician/suit.rsi
-  - type: Clothing
-    sprite: _Adventure/sponsor_uplink/jobs/physician/suit.rsi
-  - type: PressureProtection
-    highPressureMultiplier: 0.3
-    lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
-        Caustic: 0.6
-  - type: ZombificationResistance
-    zombificationResistanceCoefficient: 0.6
-  - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
-
-- type: entity
-  parent: [ClothingHeadEnvirosuitBase, BaseMedicalContraband]
-  id: ClothingHeadEnvirosuitSeniorMedical
-  name: медицинский защитный шлем ведущего врача
-  description: Герметичный шлем, предназначенный для использования ведущими врачами-плазмалюдов.
-  components:
-  - type: Sprite
-    sprite: _Adventure/sponsor_uplink/jobs/physician/helmet.rsi
-  - type: Clothing
-    sprite: _Adventure/sponsor_uplink/jobs/physician/helmet.rsi
-  - type: Item
-    sprite: _Adventure/sponsor_uplink/jobs/physician/helmet.rsi
-    heldPrefix: off
-    size: Normal
-  - type: PointLight
-    color: "#adf1ff"
-  - type: PressureProtection
-    highPressureMultiplier: 0.6
-    lowPressureMultiplier: 1000
-#
-- type: entity
   id: WhiteCaptainCrate
   parent: CrateGenericSteel
   name: ящик с белой одеждой капитана
@@ -431,7 +388,7 @@
     slots: [brass]
   - type: StealTarget
     stealGroup: Brass
-
+#
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckScientists
@@ -485,3 +442,100 @@
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/medcape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckServiceCape
+  name: плащ сервисного отдела
+  description: Этот плащ показывает принадлежность к сервисному отделу. И напоит, и покормит, и спать уложит.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/srvmantle.rsi
+#
+- type: entity
+  parent: [ClothingUniformJumpskirtMedicalDoctor, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpskirtMedicalNurseElegant
+  name: костюм медсестрички
+  description: Поднимет вам настроение и не только.
+  suffix: AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/Sex_nurseUniform.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/Sex_nurseUniform.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: BaseClothingShoesHeeledElegant
+  suffix: AdvClothing
+  description: Неудобно, но крайне элегантно.
+  name: каблуки медсестрички
+  components:
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHighHeels
+      params:
+        variation: 0.09
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 2
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/med_high_heeled_shoes.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/med_high_heeled_shoes.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped
+      shoes-reptilian:
+      - state: equipped-rep
+#
+- type: entity
+  id: AltBackpackGroup
+  parent: ClothingBackpack
+  name: Рюкзак с вещами альтушки
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingJumpsuitAlt
+      amount: 1
+    - id: ClothingHandsGlovesAlt
+      amount: 1
+    - id: ClothingNeckAlt
+      amount: 1
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitAlt
+  name: комбинезон альтушки
+  description: Наполняют не решимостью, а любовью.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/alt/jumpskirt.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/alt/jumpskirt.rsi
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesAlt
+  name: перчатки альтушки
+  description: Хорошая работа руками, никому не мешала.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/alt/gloves.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/alt/gloves.rsi
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckAlt
+  name: ошейник альтушки
+  description: Элегантный ошейник, можете называть владельца непослушным.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/alt/osheynik.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/alt/osheynik.rsi
