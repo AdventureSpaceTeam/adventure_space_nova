@@ -281,10 +281,10 @@
     sprite: _Adventure/Objects/Fun/drask-plush.rsi
   - type: EmitSoundOnUse
     sound:
-      path: _Adventure/Voice/Drask/octoScream1.ogg
+      path: /Audio/_Adventure/Voice/Drask/octoScream1.ogg
   - type: EmitSoundOnLand
     sound:
-      path: _Adventure/Voice/Drask/octoScream1.ogg
+      path: /Audio/_Adventure/Voice/Drask/octoScream1.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -298,10 +298,10 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: _Adventure/Voice/PigMan/PigScream1.ogg
+      path: /Audio/_Adventure/Voice/PigMan/PigScream1.ogg
   - type: EmitSoundOnLand
     sound:
-      path: _Adventure/Voice/PigMan/PigScream1.ogg
+      path: /Audio/_Adventure/Voice/PigMan/PigScream1.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -332,10 +332,10 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: _Adventure/Voice/IPC/Droid_Scream_3.ogg
+      path: /Audio/_Adventure/Voice/IPC/Droid_Scream_3.ogg
   - type: EmitSoundOnLand
     sound:
-      path: _Adventure/Voice/IPC/Droid_Scream_3.ogg
+      path: /Audio/_Adventure/Voice/IPC/Droid_Scream_3.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -349,10 +349,10 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: _Adventure/Voice/Skrell/skrell_scream2.ogg
+      path: /Audio/_Adventure/Voice/Skrell/skrell_scream2.ogg
   - type: EmitSoundOnLand
     sound:
-      path: _Adventure/Voice/Skrell/skrell_scream2.ogg
+      path: /Audio/_Adventure/Voice/Skrell/skrell_scream2.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -366,10 +366,10 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: _Adventure/Voice/Snake/ZerahScream3.ogg
+      path: /Audio/_Adventure/Voice/Snake/ZerahScream3.ogg
   - type: EmitSoundOnLand
     sound:
-      path: _Adventure/Voice/Snake/ZerahScream3.ogg
+      path: /Audio/_Adventure/Voice/Snake/ZerahScream3.ogg
 
 - type: entity
   parent: PlushieWiki
