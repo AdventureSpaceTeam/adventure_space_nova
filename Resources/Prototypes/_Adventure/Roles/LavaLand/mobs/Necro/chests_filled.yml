@@ -223,7 +223,7 @@
         prob: 0.01
       - id: EmptyCoreModsuit
         amount: 1
-        prob: 0.02
+        prob: 0.1
       - id: ControlMagmatiteModsuitConstructingStart
         amount: 1
         prob: 0.2

@@ -1,5 +1,5 @@
 ent-ClothingControlModsuitCESealed = продвинутый Р.И.Г.
-    .desc = Продвинутая версия инженерного Р.И.Г.-а, обладающая высочайшей защитой от огня,кислоты и радиации.
+    .desc = Продвинутая версия инженерного Р.И.Г.-а, обладающая высочайшей защитой от огня, кислоты и радиации.
 ent-ClothingControlModsuitEngineerSealed = инженерный Р.И.Г.
     .desc = Классика "Nakamura Engineering". Относительно легковесный Р.И.Г. для ваших инженерных дел.
 ent-ClothingControlModsuitAtmosphericsSealed = Р.И.Г. Атмосферного Техника

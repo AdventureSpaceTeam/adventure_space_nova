@@ -167,22 +167,24 @@
   start: start
   graph:
   - node: start
+    entity: EmptyCoreModsuit
     edges:
-    - to: icon
-      steps:
-      - tag: LiveLegionHeart
-        name: сердце легиона
-        icon:
-          sprite: _Adventure/Roles/LavaLand/materials/gems.rsi
-          state: core1
-        doAfter: 3
-      - tag: EmptyCore
-        name: пустое ядро Р.И.Г.-а
-        icon:
-          sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
-          state: mod-core-empty
-  - node: icon
-    entity: LegionCoreConstructing
+      - to: legionheartinserted
+        steps:
+          - tag: LiveLegionHeart
+            name: сердце легиона
+            doAfter: 2
+
+  - node: legionheartinserted
+    entity: LegionCoreUnsecuredHeart
+    edges:
+      - to: corecomplete
+        steps:
+          - tool: Screwing
+            doAfter: 1
+
+  - node: corecomplete
+    entity: LegionCore
 
 - type: constructionGraph
   id: ModsuitEngineer

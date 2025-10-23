@@ -211,29 +211,53 @@
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
     state: mod-core-empty
-  - type: Item
-    size: Small
   - type: Tag
     tags:
     - EmptyCore
+  - type: Appearance
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: start
+  - type: Item
+    size: Small
 
 - type: entity
   parent: BaseItem
-  id: LegionCoreConstructing
-  name: LegionCoreConstructing
+  id: LegionCoreUnsecuredHeart
+  name: LegionCoreUnsecuredHeart
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: mod-core-legionUnsecured
+  - type: Tag
+    tags:
+    - LegionCoreUnsecured
+  - type: Appearance
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: legionheartinserted
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseItem
+  id: LegionCore
+  name: LegionCore
   description: Special hardsuit helmet, made for the CE of the station.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
     state: mod-core-legion
-  - type: Construction
-    graph: LegionCoreConstructing
-    node: icon
   - type: Item
     size: Small
   - type: Tag
     tags:
     - LegionCoreModsuit
+  - type: Appearance
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: corecomplete
 
 - type: entity #cores end
   parent: BaseItem

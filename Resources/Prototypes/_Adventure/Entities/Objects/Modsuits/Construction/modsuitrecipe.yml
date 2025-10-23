@@ -129,11 +129,3 @@
   description: Р.И.Г., созданный специально под нужды профессии.
   icon: { sprite: _Adventure/Objects/Modsuits/Clothing/Back/magmatite.rsi, state: icon}
   objectType: Item
-
-- type: construction
-  id: LegionCoreConstructing
-  graph: LegionCoreConstructing
-  startNode: start
-  targetNode: icon
-  category: construction-category-materials
-  objectType: Item

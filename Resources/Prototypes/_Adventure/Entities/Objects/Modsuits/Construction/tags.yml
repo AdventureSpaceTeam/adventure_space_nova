@@ -5,6 +5,9 @@
   id: LegionCoreModsuit
 
 - type: Tag
+  id: LegionCoreUnsecured
+
+- type: Tag
   id: LegionModsuitControlStart
 
 - type: Tag
