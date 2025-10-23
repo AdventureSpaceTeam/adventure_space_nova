@@ -289,9 +289,9 @@
 - type: entity
   parent: PlushieWiki
   id: PlushiePigMan
-  name: плюшевый свинолюд
+  name: плюшевый троттин
   suffix: AdvPlushie
-  description: Плюшевая игрушка свинолюда, увесистый и объёмный.
+  description: Плюшевая игрушка троттина, увесистый и объёмный.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Fun/pig-plush.rsi
