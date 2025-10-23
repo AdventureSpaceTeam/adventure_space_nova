@@ -873,7 +873,7 @@
   cost:
     DonateCrystal: 15
   categories:
-  - SponsorThings
+  - SponsorThing
   conditions:
   - !type:ListingLimitedStockCondition
    stock: 2
@@ -1084,6 +1084,26 @@
     whitelist:
     - Captain
 # End Captain
+
+# Service
+- type: listing
+  id: UplinkSponsorClothCaptainJob1
+  productEntity: ClothingNeckServiceCape
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Bartender
+    - Botanist
+    - Musician
+    - Chef
+    - ServiceWorker
+# End Service
 
 - type: storePreset
   id: StorePresetSponsor

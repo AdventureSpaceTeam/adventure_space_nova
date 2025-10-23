@@ -417,7 +417,7 @@
   description: Этот плащ показывает принадлежность к отделу снабжения. Половина плаща была продана.
   components:
   - type: Sprite
-    sprite: _Adventure/sponsor_uplink/engmantle.rsi
+    sprite: _Adventure/sponsor_uplink/cargomantle.rsi
 
 - type: entity
   parent: ClothingNeckBase
