@@ -1,0 +1,127 @@
+#когти
+- type: entity
+  name: рука когти
+  parent: BaseItem
+  id: ArmClaw
+  description: Огромные когти, сделанные из костей и плоти, которыми можно разбирать и пронзать людей насквозь, как горячий нож масло.
+  components:
+  - type: Sharp
+  - type: Execution
+    doAfterDuration: 4.0
+  - type: Sprite
+    sprite: _Adventure/Roles/GenoCrad/Weapon/armclaw.rsi
+    state: icon
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types: 
+        Slash: 10
+        Piercing: 10
+        Structural: 20
+  - type: Item
+    size: Normal
+    sprite: _Adventure/Roles/GenoCrad/Weapon/armclaw.rsi
+  - type: ToolTileCompatible
+    delay: 0.5
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 1.2
+    useSound: /Audio/Items/jaws_pry.ogg
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: _Adventure/Roles/GenoCrad/Weapon/armclaw.rsi
+          state: icon
+        useSound:
+          path: /Audio/Items/screwdriver2.ogg
+        changeSound:
+          collection: gib
+      - behavior: Prying
+        sprite:
+          sprite: _Adventure/Roles/GenoCrad/Weapon/armclaw.rsi
+          state: icon
+        useSound:
+          path: /Audio/Items/jaws_pry.ogg
+        changeSound:
+          collection: gib
+      - behavior: Cutting
+        sprite:
+          sprite: _Adventure/Roles/GenoCrad/Weapon/armclaw.rsi
+          state: icon
+        useSound:
+          path: /Audio/Items/wirecutter.ogg
+        changeSound:
+          collection: gib
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemArmClaw
+  name: Рука когти
+  description: Сбросьте свою плоть и превратите руку в когти.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: Interface/Actions/changeling.rsi
+      state: armclaw
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: ArmClaw
+    summonSounds:
+      collection: gib 
+    retractSounds:
+      collection: gib 
+
+#молоты
+- type: entity
+  name: рука молот
+  parent: BaseItem
+  id: ArmHammer
+  description: Огромные руки, сделанные из костей и плоти, которыми можно давить головы как орехи.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/GenoCrad/Weapon/armhammer.rsi
+    state: icon
+  - type: MeleeWeapon
+    soundHit:
+       path: /Audio/Weapons/smash.ogg
+    wideAnimationRotation: 90
+    attackRate: 0.6
+    damage:
+      types: 
+        Blunt: 30
+        Structural: 60
+  - type: Item
+    size: Normal
+    sprite: _Adventure/Roles/GenoCrad/Weapon/armhammer.rsi
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemArmHammer
+  name: Рука молот
+  description: Сбросьте свою плоть и превратите руку в молот.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: Interface/Actions/changeling.rsi
+      state: armhammer
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: ArmHammer
+    summonSounds:
+      collection: gib 
+    retractSounds:
+      collection: gib
