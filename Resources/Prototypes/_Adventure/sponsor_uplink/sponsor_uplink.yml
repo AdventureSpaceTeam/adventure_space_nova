@@ -1087,7 +1087,7 @@
 
 # Service
 - type: listing
-  id: UplinkSponsorClothCaptainJob1
+  id: UplinkSponsorClothServiceJob1
   productEntity: ClothingNeckServiceCape
   cost:
     DonateCrystal: 5
