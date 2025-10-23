@@ -62,6 +62,14 @@
             "directions": 4
         },
         {
+            "name": "equipped-EYES-plasmaman",
+            "directions": 4
+        },
+        {
+            "name": "equipped-EYES-unshaded-plasmaman",
+            "directions": 4
+        },
+        {
             "name": "inhand-left",
             "directions": 4
         },

@@ -35,7 +35,7 @@
   displayName: адвенчурценты
   cash:
     1: DonateCrystal1
-  canWithdraw: true
+  canWithdraw: false
 
 - type: stack
   id: DonateCrystal
@@ -58,6 +58,15 @@
 - type: storeCategory
   id: SponsorToys
   name: Игрушки
+
+- type: storeCategory
+  id: SponsorJob
+  name: Должность
+
+#conditions:
+#  - !type:BuyerJobCondition
+#    whitelist:
+ #   - MedicalDoctor
 
 #- type: listing
 #  id: UplinkSponsorCloth2
@@ -649,6 +658,453 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth62
+  productEntity: ClothingNeckMantleBlack
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth63
+  productEntity: ClothingHeadHatHoodBlack
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth64
+  productEntity: ClothPantsExpensive
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth65
+  productEntity: ClothingBrassExpensive
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth66
+  productEntity: PlushieDrask
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth67
+  productEntity: PlushiePigMan
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth68
+  productEntity: PlushiePlasmaMan
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth69
+  productEntity: PlushieIPC
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth70
+  productEntity: PlushieSkrell
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth71
+  productEntity: PlushieZerah
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth72
+  productEntity: CyanLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth73
+  productEntity: RedLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth74
+  productEntity: LimeLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth75
+  productEntity: YellowLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth76
+  productEntity: PurpleLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth77
+  productEntity: WhiteLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth78
+  productEntity: OrangeLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth79
+  productEntity: BlackLinsesImplanter
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThin
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth80
+  productEntity: PlushieSonya
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorToys
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth81
+  productEntity: AltBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+# Jobs
+
+# Clown
+- type: listing
+  id: UplinkSponsorClothClownJob1
+  productEntity: CrazyClownBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Clown
+
+- type: listing
+  id: UplinkSponsorClothClownJob2
+  productEntity: RoyalJesterBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Clown
+# End Clown
+
+# Science
+- type: listing
+  id: UplinkSponsorClothScienceJob1
+  productEntity: ClothingNeckScientists
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Scientist
+    - SeniorResearcherAdv
+# End Science
+
+# Medical
+- type: listing
+  id: UplinkSponsorClothMedicalJob1
+  productEntity: ClothingNeckMed
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Chemist
+    - SeniorMedicAdv
+    - MedicalDoctor
+    - Paramedic
+    - Psychologist
+
+- type: listing
+  id: UplinkSponsorClothMedicalJob2
+  productEntity: ClothingNeckMedCape
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Chemist
+    - SeniorMedicAdv
+    - MedicalDoctor
+    - Paramedic
+    - Psychologist
+
+- type: listing
+  id: UplinkSponsorClothMedicalJob3
+  productEntity: ClothingUniformJumpskirtMedicalNurseElegant
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - SeniorMedicAdv
+    - MedicalDoctor
+
+- type: listing
+  id: UplinkSponsorClothMedicalJob4
+  productEntity: BaseClothingShoesHeeledElegant
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - SeniorMedicAdv
+    - MedicalDoctor
+# End Medical
+
+# Security
+- type: listing
+  id: UplinkSponsorClothSecurityJob1
+  productEntity: ClothingHeadHatHoodBalaklavaBlack
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - SecurityOfficer
+    - SeniorOfficerAdv
+    - HeadOfSecurity
+    - Warden
+    - Detective
+    - Brigmedic
+
+- type: listing
+  id: UplinkSponsorClothSecurityJob2
+  productEntity: ClothingNeckSecurity
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - SecurityOfficer
+    - SeniorOfficerAdv
+    - Warden
+    - Detective
+    - Brigmedic
+# End Security
+
+# Cargo
+- type: listing
+  id: UplinkSponsorClothCargoJob1
+  productEntity: ClothingNeckCargo
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - CargoTechnician
+    - SalvageSpecialist
+# End Cargo
+
+# Engineer
+- type: listing
+  id: UplinkSponsorClothEngineerJob1
+  productEntity: ClothingNeckEngineer
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - StationEngineer
+    - SeniorEngineerAdv
+    - AtmosphericTechnician
+# End Engineer
+
+# Captain
+- type: listing
+  id: UplinkSponsorClothCaptainJob1
+  productEntity: WhiteCaptainCrate
+  cost:
+    DonateCrystal: 30
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Captain
+# End Captain
+
+# Service
+- type: listing
+  id: UplinkSponsorClothServiceJob1
+  productEntity: ClothingNeckServiceCape
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Bartender
+    - Botanist
+    - Musician
+    - Chef
+    - ServiceWorker
+# End Service
+
 - type: storePreset
   id: StorePresetSponsor
   storeName: Sponsor
@@ -662,7 +1118,7 @@
   id: DonateUplink
   name: адвенчурлинк
   suffix: Adventure
-  description: Блюпспейс - магазин. Центком выдаёт их тем кто работает себе в убыток на обьектах НТ.
+  description: Блюспейс - магазин. Центком выдаёт их тем кто работает себе в убыток на обьектах НТ.
   components:
   - type: Item
     size: Small
@@ -684,6 +1140,7 @@
       - SponsorThing
       - SponsorThin
       - SponsorToys
+      - SponsorJob
     currencyWhitelist:
       - DonateCrystal
     balance:
@@ -700,3 +1157,4 @@
 #Whims / last upd 02/12/24
 #Raidgo / last upd 21/12/24
 #Siginanto / last upd 17/02/25
+#Connection / last upd 21/10/25
