@@ -145,9 +145,9 @@
 #
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: ClothingNeckMantleBlack
-  name: чёрная мантия
+  name: загадочная мантия
   description: Комфорт и уют.
   components:
   - type: Sprite
@@ -180,7 +180,7 @@
       HeadSide: HEAD
 #
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ClothingHeadBase, ClothingMaskBase]
   id: ClothingHeadHatHoodBalaklavaBlack
   name: чёрная балаклава
   description: Всем стоять! Работает спецназ.
@@ -189,6 +189,9 @@
     sprite: _Adventure/sponsor_uplink/balaklava.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/balaklava.rsi
+    slots:
+    - HEAD
+    - MASK
   - type: IngestionBlocker
   - type: GroupExamine
   - type: Tag
@@ -294,21 +297,6 @@
   - type: BlockMovement
 
 - type: entity
-  parent: [ClothingOuterArmorBaseCarapace, BaseCommandContraband]
-  id: ClothingOuterArmorCaptainCarapaceWhite
-  name: белый капитанский бронежилет
-  description: Белый капитанский бронежилет, обеспечивает защиту, оставаясь довольно мобильным вариантом, благодаря гибким ремешкам.
-  components:
-  - type: Sprite
-    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Carapace.rsi
-  - type: Clothing
-    sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Carapace.rsi
-  - type: Tag
-    tags:
-    - CorgiWearable
-    - WhitelistChameleon
-
-- type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtCapFormalDressWhite
   name: белая капитанская юбка-комбинезон
@@ -331,7 +319,7 @@
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Capformal_Jumpsuit.rsi
 
 - type: entity
-  parent: [ClothingUniformBase, BaseCommandContraband]
+  parent: [ClothingOuterStorageBase, BaseCommandContraband]
   id: ClothingOuterCoatCaptainWhite
   name: белая капитанская кофта
   description: Белая кофта, предоставляющий отличный капитанский вид для делегантной встречи.
@@ -341,56 +329,56 @@
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCoat.rsi
 #
-- type: entity
-  parent: Clothing
-  id: ClothPantsExpensive
-  description: Дорогие трусики, кто хочет кое-что скрыть, но хочет внимания к трусам.
-  name: элегантные трусы
-  components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: _Adventure/sponsor_uplink/trusi.rsi
-    state: icon
-  - type: Clothing
-    sprite: _Adventure/sponsor_uplink/trusi.rsi
-    state: equipped
-    slots: [pants]
-  - type: Butcherable
-    butcheringType: Knife
-    spawned:
-    - id: MaterialCloth1
-      amount: 1
-  - type: Food
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 15
-  - type: Tag
-    tags:
-    - ClothMade
-  - type: StealTarget
-    stealGroup: Pants
+#- type: entity
+#  parent: BaseClothingPants
+#  id: ClothPantsExpensive
+#  description: Дорогие трусики, кто хочет кое-что скрыть, но хочет внимания к трусам.
+#  name: элегантные трусы
+#  components:
+#  - type: Item
+#    size: Small
+#  - type: Sprite
+#    sprite: _Adventure/sponsor_uplink/trusi.rsi
+#    state: icon
+#  - type: Clothing
+#    sprite: _Adventure/sponsor_uplink/trusi.rsi
+#    state: equipped
+#    slots: [pants]
+#  - type: Butcherable
+#    butcheringType: Knife
+#    spawned:
+#    - id: MaterialCloth1
+#      amount: 1
+#  - type: Food
+#    requiresSpecialDigestion: true
+#  - type: SolutionContainerManager
+#    solutions:
+#      food:
+#        maxVol: 15
+#        reagents:
+#        - ReagentId: Fiber
+#          Quantity: 15
+#  - type: Tag
+#    tags:
+#    - ClothMade
+#  - type: StealTarget
+#    stealGroup: Pants
 
-- type: entity
-  parent: ClothPantsExpensive
-  id: ClothingBrassExpensive
-  description: Элегантный бюстгалтер, поможет выделится среди толпы, зачем-то.
-  name: элегантный бюстгалтер
-  components:
-  - type: Sprite
-    sprite: _Adventure/sponsor_uplink/lifaki.rsi
-    state: icon
-  - type: Clothing
-    sprite: _Adventure/sponsor_uplink/lifaki.rsi
-    state: equipped
-    slots: [brass]
-  - type: StealTarget
-    stealGroup: Brass
+#- type: entity
+#  parent: BaseClothingBrass
+#  id: ClothingBrassExpensive
+#  description: Элегантный бюстгалтер, поможет выделится среди толпы, зачем-то.
+#  name: элегантный бюстгалтер
+#  components:
+#  - type: Sprite
+#    sprite: _Adventure/sponsor_uplink/lifaki.rsi
+#    state: icon
+#  - type: Clothing
+#    sprite: _Adventure/sponsor_uplink/lifaki.rsi
+#    state: equipped
+#    slots: [brass]
+#  - type: StealTarget
+#    stealGroup: Brass
 #
 - type: entity
   parent: ClothingNeckBase

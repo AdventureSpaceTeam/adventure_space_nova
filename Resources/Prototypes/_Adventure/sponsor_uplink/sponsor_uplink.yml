@@ -680,27 +680,27 @@
   - !type:ListingLimitedStockCondition
    stock: 1
 
-- type: listing
-  id: UplinkSponsorCloth64
-  productEntity: ClothPantsExpensive
-  cost:
-    DonateCrystal: 5
-  categories:
-  - SponsorThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-   stock: 1
+#- type: listing
+#  id: UplinkSponsorCloth64
+#  productEntity: ClothPantsExpensive
+#  cost:
+#    DonateCrystal: 5
+#  categories:
+#  - SponsorThings
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#   stock: 1
 
-- type: listing
-  id: UplinkSponsorCloth65
-  productEntity: ClothingBrassExpensive
-  cost:
-    DonateCrystal: 5
-  categories:
-  - SponsorThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-   stock: 1
+#- type: listing
+#  id: UplinkSponsorCloth65
+#  productEntity: ClothingBrassExpensive
+#  cost:
+#    DonateCrystal: 5
+#  categories:
+#  - SponsorThings
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#   stock: 1
 
 - type: listing
   id: UplinkSponsorCloth66
