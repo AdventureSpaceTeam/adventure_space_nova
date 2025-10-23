@@ -183,6 +183,15 @@
   - CBURNammo
 
 - type: listing
+  id: MagazineBoxRifleCBURN
+  productEntity: MagazineBoxRifle
+  description: Коробка калибра .20 винтовочный. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - CBURNammo
+
+- type: listing
   id: MagazineShotgunCBURN
   description: Барабан калибра .50. Подходящий дробовиков.
   productEntity: MagazineShotgun
