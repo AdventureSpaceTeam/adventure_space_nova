@@ -1,7 +1,8 @@
 - type: entity
   id: CrazyClownBackpackGroup
   parent: ClothingBackpack
-  name: Рюкзак с вещами безумного клоуна
+  name: рюкзак с вещами безумного клоуна
+  description: Рюкзак заполненый одеждой безумца.
   components:
   - type: StorageFill
     contents:
@@ -46,7 +47,7 @@
   parent: ClothingShoesClownBase
   id: ClothingShoesCrazyClown
   name: туфли безумного клоуна
-  description: "Услышь, это грозное приближение пищялки"
+  description: "Услышь, это грозное приближение пищялки."
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/jobs/madclownshoes.rsi
@@ -66,7 +67,8 @@
 - type: entity
   id: RoyalJesterBackpackGroup
   parent: ClothingBackpack
-  name: Рюкзак с вещами королевского шута
+  name: рюкзак с вещами королевского шута
+  description: Рюкзак заполненый одеждой шута.
   components:
   - type: StorageFill
     contents:
@@ -113,7 +115,7 @@
   parent: ClothingShoesClownBase
   id: ClothingShoesRoyalJester
   name: туфли королевского шута
-  description: "Королевский гул"
+  description: "Королевский гул."
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/jobs/royaljestertapki.rsi
@@ -205,6 +207,7 @@
   id: WhiteCaptainCrate
   parent: CrateGenericSteel
   name: ящик с белой одеждой капитана
+  description: Ящик наполненый доверха одеждой и сумками.
   components:
   - type: StorageFill
     contents:
@@ -229,7 +232,7 @@
   parent: [ClothingHandsBase, BaseCommandContraband]
   id: ClothingHandsGlovesCaptainWhite
   name: белые перчатки капитана
-  description: Элегантные перчатки с золотистыми украшениями, теперь в белом!.
+  description: Элегантные перчатки с золотистыми украшениями, теперь в белом!
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Captain_Gloves.rsi
@@ -272,7 +275,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatCapcapWhite
   name: белая капитанская фуражка
-  description: белая фуражка, подчёркивает статус владельца в качестве капитана.
+  description: Белая фуражка, подчёркивает статус владельца в качестве капитана.
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCap.rsi
@@ -309,7 +312,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtCapFormalDressWhite
   name: белая капитанская юбка-комбинезон
-  description: белая юбка-комбинезон, для важной леди.
+  description: Белая юбка-комбинезон, для важной леди.
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_Capformal_Jumpskirt.rsi
@@ -455,7 +458,7 @@
 - type: entity
   parent: [ClothingUniformJumpskirtMedicalDoctor, ClothingUniformFoldableBase]
   id: ClothingUniformJumpskirtMedicalNurseElegant
-  name: костюм медсестрички
+  name: элегантный костюм медсестры
   description: Поднимет вам настроение и не только.
   suffix: AdvClothing
   components:
@@ -469,7 +472,7 @@
   id: BaseClothingShoesHeeledElegant
   suffix: AdvClothing
   description: Неудобно, но крайне элегантно.
-  name: каблуки медсестрички
+  name: элегантные каблуки медсестры
   components:
   - type: FootstepModifier
     footstepSoundCollection:
@@ -495,7 +498,8 @@
 - type: entity
   id: AltBackpackGroup
   parent: ClothingBackpack
-  name: Рюкзак с вещами альтушки
+  name: рюкзак с вещами альтушки
+  description: Рюкзак заполненый одеждой.
   components:
   - type: StorageFill
     contents:

@@ -291,7 +291,7 @@
   id: PlushiePigMan
   name: плюшевый свинолюд
   suffix: AdvPlushie
-  description: Плюшевая игрушка свинолюда, увесистый и обьёмный.
+  description: Плюшевая игрушка свинолюда, увесистый и объёмный.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Fun/pig-plush.rsi
@@ -342,7 +342,7 @@
   id: PlushieSkrell
   name: плюшевый скрелл
   suffix: AdvPlushie
-  description: Плюшевая игрушка скрелла, слегка мокрый.
+  description: Плюшевая игрушка скрелла, слегка влажная.
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Fun/skrell-plush.rsi
