@@ -8,10 +8,10 @@
   },
   "states": [
     {
-      "name": "icon"
+      "name": "icon-box"
     },
     {
-      "name": "equipped",
+      "name": "equipped-box",
       "directions": 4
     }
   ]

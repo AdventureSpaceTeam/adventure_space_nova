@@ -328,58 +328,33 @@
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCoat.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/jobs/whitecaptain/White_CapCoat.rsi
-#
-#- type: entity
-#  parent: BaseClothingPants
-#  id: ClothPantsExpensive
-#  description: Дорогие трусики, кто хочет кое-что скрыть, но хочет внимания к трусам.
-#  name: элегантные трусы
-#  components:
-#  - type: Item
-#    size: Small
-#  - type: Sprite
-#    sprite: _Adventure/sponsor_uplink/trusi.rsi
-#    state: icon
-#  - type: Clothing
-#    sprite: _Adventure/sponsor_uplink/trusi.rsi
-#    state: equipped
-#    slots: [pants]
-#  - type: Butcherable
-#    butcheringType: Knife
-#    spawned:
-#    - id: MaterialCloth1
-#      amount: 1
-#  - type: Food
-#    requiresSpecialDigestion: true
-#  - type: SolutionContainerManager
-#    solutions:
-#      food:
-#        maxVol: 15
-#        reagents:
-#        - ReagentId: Fiber
-#          Quantity: 15
-#  - type: Tag
-#    tags:
-#    - ClothMade
-#  - type: StealTarget
-#    stealGroup: Pants
 
-#- type: entity
-#  parent: BaseClothingBrass
-#  id: ClothingBrassExpensive
-#  description: Элегантный бюстгалтер, поможет выделится среди толпы, зачем-то.
-#  name: элегантный бюстгалтер
-#  components:
-#  - type: Sprite
-#    sprite: _Adventure/sponsor_uplink/lifaki.rsi
-#    state: icon
-#  - type: Clothing
-#    sprite: _Adventure/sponsor_uplink/lifaki.rsi
-#    state: equipped
-#    slots: [brass]
-#  - type: StealTarget
-#    stealGroup: Brass
-#
+- type: entity
+  parent: BaseClothingPants
+  id: ClothPantsExpensive
+  description: Дорогие трусики, кто хочет кое-что скрыть, но хочет внимания к трусам.
+  name: элегантные трусы
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/trusi.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/trusi.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+    slots: [pants]
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBrassExpensive
+  description: Элегантный бюстгалтер, поможет выделится среди толпы, зачем-то.
+  name: элегантный бюстгалтер
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/lifaki.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/lifaki.rsi
+
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckScientists
