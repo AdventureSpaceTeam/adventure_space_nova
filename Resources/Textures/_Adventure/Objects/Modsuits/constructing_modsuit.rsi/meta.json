@@ -1,18 +1,12 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/7b38dd4ff76749da37c950eff3239078f6bd9cf2",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/7b38dd4ff76749da37c950eff3239078f6bd9cf2, magmatite modsuit by Discord @Xaunto",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
-    {
-      "name": "boots"
-    },
-    {
-      "name": "chestplate"
-    },
     {
       "name": "CORE-equip0"
     },
@@ -57,10 +51,71 @@
       "name": "CORE-equip8"
     },
     {
+      "name": "LEGION-CORE-equip0"
+    },
+    {
+      "name": "LEGION-CORE-equip1",
+      "delays": [
+        [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      ]
+    },
+    {
+      "name": "LEGION-CORE-equip2",
+      "delays": [
+        [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      ]
+    },
+    {
+      "name": "LEGION-CORE-equip3"
+    },
+    {
+      "name": "LEGION-CORE-equip4"
+    },
+    {
+      "name": "LEGION-CORE-equip5"
+    },
+    {
+      "name": "LEGION-CORE-equip6"
+    },
+    {
+      "name": "LEGION-CORE-equip7"
+    },
+    {
+      "name": "LEGION-CORE-equip8"
+    },
+    {
+      "name": "boots"
+    },
+    {
+      "name": "chestplate"
+    },
+    {
       "name": "gauntlets"
     },
     {
       "name": "helmet"
+    },
+    {
+      "name": "magmatite-boots"
+    },
+    {
+      "name": "magmatite-chestplate"
+    },
+    {
+      "name": "magmatite-gauntlets"
+    },
+    {
+      "name": "magmatite-helmet"
     },
     {
       "name": "mod-core",
@@ -81,6 +136,31 @@
           0.18625,
           0.18625,
           0.18625
+        ]
+      ]
+    },
+    {
+      "name": "mod-core-empty"
+    },
+    {
+      "name": "mod-core-legionUnsecured",
+      "delays": [
+        [
+          0.07,
+          0.07,
+          0.07,
+          0.07
+        ]
+      ]
+    },
+    {
+      "name": "mod-core-legion",
+      "delays": [
+        [
+          0.07,
+          0.07,
+          0.07,
+          0.07
         ]
       ]
     },
