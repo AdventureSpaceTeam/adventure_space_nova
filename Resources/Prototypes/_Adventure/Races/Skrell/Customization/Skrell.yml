@@ -65,4 +65,24 @@
   - sprite: _Adventure/Races/Skrell/Customization/Tails.rsi
     state: Tails_Tvileck
 
+- type: marking
+  id: SkrellTailsDredsBig
+  bodyPart: Tail
+  markingCategory: Tail
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Skrell]
+  sprites:
+  - sprite: _Adventure/Races/Skrell/Customization/Tails.rsi
+    state: Tails_Dreds_big
 
+- type: marking
+  id: SkrellTailsAlian
+  bodyPart: Tail
+  markingCategory: Tail
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Skrell]
+  sprites:
+  - sprite: _Adventure/Races/Skrell/Customization/Tails.rsi
+    state: Alian

@@ -181,3 +181,35 @@
     - шипит
     - шипит.
     - шипит!
+
+
+
+# квакать
+- type: soundCollection
+  id: KvaCollection
+  files:
+  - /Audio/_Adventure/Voice/Skrell/skrell_kva1.ogg
+  - /Audio/_Adventure/Voice/Skrell/skrell_kva2.ogg
+  - /Audio/_Adventure/Voice/Skrell/skrell_kva3.ogg
+  - /Audio/_Adventure/Voice/Skrell/skrell_kva4.ogg
+  - /Audio/_Adventure/Voice/Skrell/skrell_kva5.ogg
+
+- type: emote
+  id: Kva
+  name: Квакнуть
+  icon: _Adventure/Interface/Emotes/kva.png
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["квакает"]
+  chatTriggers:
+    - квакает
+    - квакает!
+    - квакнул
+    - квакнула
+    - урчит
