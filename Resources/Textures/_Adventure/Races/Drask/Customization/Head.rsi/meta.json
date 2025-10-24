@@ -10,6 +10,14 @@
     {
       "name": "head_big",
       "directions": 4
+    },
+    {
+      "name": "squid_tent",
+      "directions": 4
+    },
+    {
+      "name": "squid",
+      "directions": 4
     }
   ]
 }

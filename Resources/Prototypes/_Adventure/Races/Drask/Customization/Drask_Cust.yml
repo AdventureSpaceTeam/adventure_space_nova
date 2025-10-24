@@ -63,3 +63,25 @@
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Body.rsi
     state: tentacles_many
+
+- type: marking
+  id: DraskHeadSquid
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Drask]
+  sprites:
+  - sprite: _Adventure/Races/Drask/Customization/Head.rsi
+    state: squid
+
+- type: marking
+  id: DraskHeadSquidTent
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [Drask]
+  sprites:
+  - sprite: _Adventure/Races/Drask/Customization/Head.rsi
+    state: squid_tent

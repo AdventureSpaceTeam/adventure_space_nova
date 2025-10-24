@@ -12,9 +12,10 @@ marking-SkrellTailsLong-Tails_Long = Скрелл, хвосты (Длинные)
 marking-SkrellTailsLong = Скрелл, хвосты (Длинные) 
 marking-SkrellTailsTvileck-Teils_Tvileck = Скрелл, хвосты (Два хвоста)
 marking-SkrellTailsTvileck = Скрелл, хвосты (Два хвоста) 
-
-
- 
+marking-SkrellTailsDredsBig-Tails_Dreds_big = Скрелл, хвосты (Длинные дреды)
+marking-SkrellTailsDredsBig = Скрелл, хвосты (Длинные дреды)
+marking-SkrellTailsAlian-Alian = Скрелл, хвосты (Ксено)
+marking-SkrellTailsAlian = Скрелл, хвосты (Ксено)
 
 
 

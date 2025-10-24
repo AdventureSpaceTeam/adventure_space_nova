@@ -37,6 +37,8 @@
   params:
     variation: 0.125
   sounds:
+    Kva:
+      collection: KvaCollection
     Yawn:
       collection: MaleYawn
     Sneeze:
@@ -71,6 +73,10 @@
   params:
     variation: 0.125
   sounds:
+    Kva:
+      collection: KvaCollection
+    Yawn:
+      collection: FemaleYawn
     Sneeze:
       collection: FemaleSneezes
     Cough:

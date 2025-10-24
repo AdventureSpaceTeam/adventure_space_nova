@@ -281,10 +281,15 @@
     sprite: _Adventure/Objects/Fun/drask-plush.rsi
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Adventure/Voice/Drask/octoScream1.ogg
+      path: /Audio/_Adventure/Voice/Drask/octoCry1.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Adventure/Voice/Drask/octoScream1.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Drask/octoHaha1.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -298,10 +303,15 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Adventure/Voice/PigMan/PigScream1.ogg
+      path: /Audio/_Adventure/Voice/PigMan/PigTalk1.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Adventure/Voice/PigMan/PigScream1.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/PigMan/PigTalk2.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -319,6 +329,11 @@
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Voice/Skeleton/skeleton_scream.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Voice/Skeleton/skeleton_scream.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -332,10 +347,15 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Adventure/Voice/IPC/Droid_Scream_3.ogg
+      path: /Audio/_Adventure/Voice/IPC/RobotHaha4.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Adventure/Voice/IPC/Droid_Scream_3.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/IPC/SynthDead1.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -349,10 +369,15 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Adventure/Voice/Skrell/skrell_scream2.ogg
+      path: /Audio/_Adventure/Voice/Skrell/skrell_kva1.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Adventure/Voice/Skrell/skrell_scream2.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Skrell/skrell_haha3.ogg
 
 - type: entity
   parent: PlushieWiki
@@ -366,10 +391,15 @@
     state: icon
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Adventure/Voice/Snake/ZerahScream3.ogg
+      path: /Audio/_Adventure/Voice/Snake/ZerahHaha1.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Adventure/Voice/Snake/ZerahScream3.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Snake/ZerahSpeach3.ogg
 
 - type: entity
   parent: PlushieWiki

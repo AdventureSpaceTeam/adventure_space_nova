@@ -30,6 +30,14 @@
     {
       "name": "Tails_Tvileck",
       "directions": 4
+    },
+    {
+      "name": "Tails_Dreds_big",
+      "directions": 4
+    },
+    {
+      "name": "Alian",
+      "directions": 4
     }
   ]
 }
