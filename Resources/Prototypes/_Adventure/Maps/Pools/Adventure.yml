@@ -17,6 +17,7 @@
   - AdventurePacked     #min 0  max 25
   - AdventurePebble     #min 0  max N/A
 # - AdventurePlasma     #min 15 max 80 #Сломался
+  - AdventurePolaris    #min 0  max 35
 # - AdventureRelict     #min 0  max 25
   - AdventureRipper     #min 0  max 25
   - AdventureShipyard   #min 0  max 25

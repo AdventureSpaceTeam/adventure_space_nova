@@ -18,6 +18,7 @@
     groups:
       Flammable: [ Touch ]
       Extinguish: [ Touch ]
+      Acidic_Organic: [ Touch ]
     reactions:
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
@@ -53,6 +54,7 @@
   - type: Speech
     speechSounds: SkrellSpeach
     speechVerb: Slime
+    allowedEmotes: ['Kva']
   - type: ThermalRegulator
     metabolismHeat: 800
     radiatedHeat: 100

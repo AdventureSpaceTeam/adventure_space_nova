@@ -1,0 +1,230 @@
+#пальма
+- type: entity
+  parent: BaseTree
+  id: TreePalm
+  name: пальма
+  description: Как на курорте.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/Decor/Palm.rsi
+    state: palm1
+    offset: 0,0.5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.3,0.1,0.3"
+        density: 4000
+        layer:
+        - WallLayer
+  - type: RandomSprite
+    available:
+    - 0:
+        palm1: ""
+    - 0:
+        palm2: ""
+    - 0:
+        palm3: ""
+    - 0:
+        palm4: ""
+
+#заснеженный валун
+- type: entity
+  parent: BaseRock
+  suffix: Polaris
+  name: заснеженный валун
+  description: Тяжёлый и холодный как действительно тяжёлая и холодная вещь.
+  id: FloraSnowRockSolid
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/Decor/SnowStone.rsi
+    layers:
+    - state: stone1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        stone1: ""
+        stone2: ""
+        stone3: ""
+
+#ледяная глыба
+- type: entity
+  parent: BaseRock
+  suffix: Polaris
+  name: ледяная глыба
+  description: Глыба льда с неизвестным силуэтом внутри.
+  id: FloraIceRock
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/Decor/SnowStone.rsi
+    layers:
+    - state: glacierman1
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        glacierman1: ""
+        glacierman2: ""
+        glacierman3: ""
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+          - !type:PlaySoundBehavior
+            sound:
+              collection: GlassBreak
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              RandomCorpseIceRock:
+                min: 1
+                max: 1
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  id: RandomCorpseIceRock
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - MobRandomServiceCorpse
+      - MobRandomEngineerCorpse
+      - MobRandomCargoCorpse
+      - MobRandomMedicCorpse
+      - MobRandomScienceCorpse
+      - MobRandomSecurityCorpse
+
+
+#снег
+- type: entity
+  id: SnowPolar
+  name: снег
+  suffix: Polaris
+  description: мягко и холодно.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Clickable
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Structures/Decor/SnowStone.rsi
+      layers:
+        - state: snow
+      drawdepth: LowFloors
+    - type: SyncSprite
+    - type: RequiresTile
+    - type: Transform
+      anchored: true
+    - type: Tag
+      tags:
+        - HideContextMenu
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: FootstepSnow
+
+- type: entity
+  id: SnowPolarChasm
+  suffix: Спавнер ямы Polaris
+  parent: SnowPolar
+  components:
+    - type: TriggerOnCollide
+      fixtureID: floortrap
+      maxTriggers: 1
+    - type: SpawnOnTrigger
+      proto: SpawnSnowChalm
+    - type: DeleteOnTrigger
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        floortrap:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.4,-0.4,0.4,0.4"
+          hard: false
+          mask:
+            - ItemMask
+          layer:
+            - SlipLayer
+
+- type: entity
+  id: SnowPolarDug
+  parent: SnowPolar
+  suffix: Polaris
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: _Adventure/Structures/Decor/SnowStone.rsi
+      layers:
+        - state: snow_dug
+
+- type: entity
+  id: SnowGrassPolar
+  name: подснежники
+  suffix: Polaris
+  description: мягко и холодно.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: Decals/Flora/flora_grasssnow.rsi
+      state: grasssnowa1
+    - type: RandomSprite
+      available:
+      - 0:
+          grasssnowa1: ""
+      - 0:
+          grasssnowa2: ""
+      - 0:
+          grasssnowa3: ""
+      - 0:
+          grasssnowb1: ""
+      - 0:
+          grasssnowb2: ""
+      - 0:
+          grasssnowb3: ""
+      - 0:
+          grasssnowc1: ""
+      - 0:
+          grasssnowc2: ""
+      - 0:
+          grasssnowc3: ""
+
+#лёд
+- type: entity
+  id: IcePolar
+  name: лёд
+  suffix: Polaris
+  description: мягко и холодно.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Clickable
+    - type: Sprite
+      sprite: _Adventure/Structures/Decor/SnowStone.rsi
+      layers:
+        - state: ice
+      drawdepth: LowFloors
+    - type: SyncSprite
+    - type: RequiresTile
+    - type: Transform
+      anchored: true
+    - type: Tag
+      tags:
+        - HideContextMenu
+    - type: FrictionContacts
+    - type: TileFrictionModifier
+      modifier: 0.05
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.4,-0.4,0.4,0.4"
+          layer:
+          - MidImpassable

@@ -1,0 +1,66 @@
+- type: reaction
+  id: SilverSulfadiazine
+  reactants:
+    Silver:
+      amount: 1
+    Ammonia:
+      amount: 1
+    Oxygen:
+      amount: 1
+    Sulfur:
+      amount: 1
+    Chlorine:
+      amount: 1
+  products:
+    SilverSulfadiazine: 5
+
+- type: reaction
+  id: StypticPowder
+  reactants:
+    Aluminium:
+      amount: 1
+    Hydrogen:
+      amount: 1
+    Oxygen:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+  products:
+    StypticPowder: 4
+
+- type: reaction
+  id: Synthflesh
+  reactants:
+    Blood:
+      amount: 1
+    Carbon:
+      amount: 1
+    StypticPowder:
+      amount: 1
+    SilverSulfadiazine:
+      amount: 1
+  products:
+    Synthflesh: 1
+
+- type: reaction
+  id: Perfluorodecalin
+  minTemp: 374
+  reactants:
+    Hydrogen:
+      amount: 1
+    Fluorine:
+      amount: 1
+    Oil:
+      amount: 1
+  products:
+    Perfluorodecalin: 3
+
+- type: reaction
+  id: SyntheticBlood
+  reactants:
+    Perfluorodecalin:
+      amount: 1
+    AmmoniaBlood:
+      amount: 1
+  products:
+    SyntheticBlood: 2

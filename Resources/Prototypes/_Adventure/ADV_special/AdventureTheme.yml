@@ -51,7 +51,7 @@
 # purple
 - type: hudTheme
   id: SS14PurpleTheme
-  name: Ультрафиолет
+  name: Вечер
   path: purple
   order: 9
 

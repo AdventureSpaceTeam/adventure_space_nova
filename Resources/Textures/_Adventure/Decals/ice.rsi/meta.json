@@ -18,6 +18,24 @@
     },
     {
       "name": "ice4"
+    },
+    {
+      "name": "ice_flo1"
+    },
+    {
+      "name": "ice_flo2"
+    },
+    {
+      "name": "ice_flo3"
+    },
+    {
+      "name": "ice_rock1"
+    },
+    {
+      "name": "ice_rock2"
+    },
+    {
+      "name": "ice_rock3"
     }
   ]
 }

@@ -1,0 +1,122 @@
+- type: entity
+  name: белый медведь
+  parent: [ SimpleMobBase, MobCombat ]
+  id: MobWhiteBear
+  description: Это вам не Умка.
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 5
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: _Adventure/Roles/LavaLand/mobs/Polaris/mihail.rsi
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.48
+        density: 200
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatBear
+      amount: 6
+    - id: ClothingNeckBearHide
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 300
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    damage:
+      types:
+        Slash: 20
+    animation: WeaponArcClaw
+  - type: NPCRetaliation
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 1.5
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      250: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      170: 0.7
+  - type: Temperature
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1
+  - type: TemperatureSpeed
+    thresholds:
+      73: 0.8
+      53: 0.6
+      33: 0.4
+# чтоб мобы не дохли пока генерируется грид фауны
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+
+- type: entity
+  name: спавнер белого медведя
+  id: SpawnMobWhiteBear
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobWhiteBear

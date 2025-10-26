@@ -22,8 +22,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingCloakVavevSponsor
-  name: плащ имени каца великого
-  description: Носи с честью!
+  name: чёрная накидка легендарного спонсора
+  description: Чёрный плащ с жёлтыми узорами.
   suffix: Sponsor
   components:
     - type: Sprite
@@ -101,7 +101,7 @@
 - type: entity
   parent: BasePlushie
   id: Plushieromakatz
-  name: Плюшевый Химик
+  name: плюшевый химик
   description: Не давайте этому плюшевому засранцу калий и воду!!!
   suffix: AdvPlushie
   components:
@@ -117,7 +117,7 @@
 - type: entity
   parent: BasePlushie
   id: PlushieMravka
-  name: Плюшевая ГП
+  name: плюшевая ГП
   description: Мяу!
   suffix: AdvPlushie
   components:
@@ -133,7 +133,7 @@
 - type: entity
   parent: BasePlushie
   id: PlushieElan
-  name: Плюшевый ОЦК
+  name: плюшевый ОЦК
   suffix: AdvPlushie
   description: Не самый умный ОЦК....
   components:
@@ -196,7 +196,7 @@
 - type: entity
   parent: [ClothingUniformBase]
   id: ClothingUniformJumpsuitOldMoney
-  name: Старая водолазка
+  name: старая водолазка
   description: Old Money - утонченный, элегантный и безупречный вид. Этот комплект подчеркнёт вашу индивидуальность и станет незаменимой частью вашего гардероба. Белая водолазка, выполненная из высококачественной ткани, прекрасно сочетается с брюками, создавая гармоничный и элегантный силуэт.
   suffix: Sponsor
   components:

@@ -142,3 +142,99 @@
   baseSprite:
     sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
     state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPlasManLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPlasManLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPlasManLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasManRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPlasManRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPlasManRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasManRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPlasManLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPlasManLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPlasManLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPlasManLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasManRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPlasManRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPlasManRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasManRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPlasManLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+    state: l_foot

@@ -18,7 +18,9 @@
           Quantity: 2
         - ReagentId: MindbreakerToxin
           Quantity: 2
-
+  - type: Tag
+    tags:
+    - Cupcake
 
 - type: microwaveMealRecipe
   id: RecipeCupcakeRainbow

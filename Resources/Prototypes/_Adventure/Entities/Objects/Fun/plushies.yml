@@ -192,8 +192,228 @@
   id: PlushieResomi
   name: плюшевый резоми
   suffix: AdvPlushie
-  description: Очаровательная мягкая игрушка, низковата...
+  description: Мягкая игрушка резоми. Эти глазки гипнотизируют вас
   components:
   - type: Sprite
     sprite: _Adventure/Objects/Fun/resomi.rsi
     state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Fun/resomi.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/Resomi/ResomiSpeech1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/Resomi/ResomiScream1.ogg
+      params:
+        volume: -1
+  - type: UseDelay
+    delay: 1
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Resomi/ResomiSpeech2.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieAelout
+  name: плюшевый слаймолюд
+  suffix: AdvPlushie
+  description: Плюшевая игрушка голубого слаймолюда, от неё сильно пахнет спиртом.
+  components:
+  - type: Sprite
+    state: plushieAelout
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieFool
+  name: плюшевый шут
+  suffix: AdvPlushie
+  description: Плюшевая игрушка шута. Вас тоже бесит этот хонк?
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/clown.rsi
+    state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Fun/clown.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/bikehorn.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/bikehorn.ogg
+  - type: UseDelay
+    delay: 1
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Items/bikehorn.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieDrask
+  name: плюшевый драск
+  suffix: AdvPlushie
+  description: Плюшевая игрушка драска, трёхглазик.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/drask-plush.rsi
+    state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Fun/drask-plush.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/Drask/octoCry1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/Drask/octoScream1.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Drask/octoHaha1.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushiePigMan
+  name: плюшевый троттин
+  suffix: AdvPlushie
+  description: Плюшевая игрушка троттина, увесистый и объёмный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/pig-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/PigMan/PigTalk1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/PigMan/PigScream1.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/PigMan/PigTalk2.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushiePlasmaMan
+  name: плюшевый плазмалюд
+  suffix: AdvPlushie
+  description: Плюшевая игрушка плазмолюда, пахнет плазмой.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/plasma-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Skeleton/skeleton_scream.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Skeleton/skeleton_scream.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Voice/Skeleton/skeleton_scream.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieIPC
+  name: плюшевый КПБ
+  suffix: AdvPlushie
+  description: Плюшевая игрушка КПБ, состоит на 1% из железа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/robot-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/IPC/RobotHaha4.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/IPC/Droid_Scream_3.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/IPC/SynthDead1.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieSkrell
+  name: плюшевый скрелл
+  suffix: AdvPlushie
+  description: Плюшевая игрушка скрелла, слегка влажная.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/skrell-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/Skrell/skrell_kva1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/Skrell/skrell_scream2.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Skrell/skrell_haha3.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieZerah
+  name: плюшевый зерах
+  suffix: AdvPlushie
+  description: Плюшевая игрушка зераха, по меркам игрушек, очень даже слизкая.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/snake-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Adventure/Voice/Snake/ZerahHaha1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Adventure/Voice/Snake/ZerahScream3.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/_Adventure/Voice/Snake/ZerahSpeach3.ogg
+
+- type: entity
+  parent: PlushieWiki
+  id: PlushieSonya
+  name: плюшевый детектив
+  suffix: AdvPlushie
+  description: Плюшевая игрушка детектива, она раскроет это дело.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/sonya-plush.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/cat_meow.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Animals/cat_meow.ogg

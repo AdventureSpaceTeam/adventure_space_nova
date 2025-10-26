@@ -187,8 +187,8 @@
     - type: Gun
       minAngle: 21
       maxAngle: 32
-      fireRate: 6 # Adventure
-      burstFireRate: 6 # Adventure
+      fireRate: 12
+      burstFireRate: 12
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
       selectedMode: Burst

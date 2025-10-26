@@ -141,6 +141,7 @@
     - HeadSide
   - type: Inventory
     templateId: Zerah
+    speciesId: zerah
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -178,7 +179,7 @@
     species: Zerah
   - type: Inventory
     templateId: Zerah
-    speciesId: Zerah
+    speciesId: zerah
     femaleDisplacements:
       jumpsuit:
         sizeMaps:

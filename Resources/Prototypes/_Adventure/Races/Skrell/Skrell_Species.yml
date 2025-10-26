@@ -16,7 +16,7 @@
   markingLimits: MobSkrellMarkingLimits
   dollPrototype: MobSkrellDummy
   skinColoration: Hues
-  defaultSkinTone: "#96db8b"
+  defaultSkinTone: "#4dd7ab"
   minAge: 30
   youngAge: 120
   oldAge: 240
@@ -152,3 +152,99 @@
   baseSprite:
     sprite: _Adventure/Races/Skrell/Species/parts.rsi
     state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSkrellLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSkrellLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSkrellRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSkrellRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSkrellRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSkrellRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_legF
+
+- type: humanoidBaseSprite
+  id: MobSkrellLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_armF
+
+- type: humanoidBaseSprite
+  id: MobSkrellLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_handF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_legF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_armF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_handF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_footF
+
+- type: humanoidBaseSprite
+  id: MobSkrellLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_footF

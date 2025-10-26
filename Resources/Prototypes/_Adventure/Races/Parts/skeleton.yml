@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobSkeletonLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSkeletonLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSkeletonLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSkeletonLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobSkeletonLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSkeletonLArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSkeletonLHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSkeletonLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSkeletonRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Skeleton/parts.rsi
+    state: r_foot

@@ -29,7 +29,7 @@
   markingLimits: MobZerahMarkingLimits
   dollPrototype: MobZerahDummy
   skinColoration: Hues
-  defaultSkinTone: "#96db8b"
+  defaultSkinTone: "#bfa010"
   minAge: 12
   youngAge: 15
   oldAge: 25
@@ -139,6 +139,30 @@
     state: l_hand
 
 - type: humanoidBaseSprite
+  id: MobSnakeLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSnakeLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSnakeLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: l_armF
+
+- type: humanoidBaseSprite
+  id: MobSnakeLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: l_handF   
+
+- type: humanoidBaseSprite
   id: MobSnakeRArm
   baseSprite:
     sprite: _Adventure/Races/Snake/Species/parts.rsi
@@ -149,3 +173,28 @@
   baseSprite:
     sprite: _Adventure/Races/Snake/Species/parts.rsi
     state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSnakeRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSnakeRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: r_hand
+
+
+- type: humanoidBaseSprite
+  id: MobSnakeRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: r_armF
+
+- type: humanoidBaseSprite
+  id: MobSnakeRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+    state: r_handF

@@ -943,3 +943,33 @@
   - type: Tag
     tags:
       - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterChestplateModsuitSealedBase
+  id: ClothingOuterChestplateModsuitMagmatiteSealed
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/Clothing/OuterClothing/magmatite.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Modsuits/Clothing/OuterClothing/magmatite.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.00005
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.65
+        Heat: 0.15
+        Radiation: 0.3
+        Caustic: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetModsuitMagmatiteSealed
+    requiredSlot: outerClothing
+    slot: head

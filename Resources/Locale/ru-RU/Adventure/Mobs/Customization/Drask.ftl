@@ -14,3 +14,7 @@ marking-DraskBodyTentaclesSmall-tentacles_small = Драск, тело (Торч
 marking-DraskBodyTentaclesSmall = Драск, тело (Торчащие щупальца)
 marking-DraskBodyTentaclesMany-tentacles_many = Драск, тело (Большие торчащие щупальца)
 marking-DraskBodyTentaclesMany = Драск, тело (Большие торчащие щупальца)
+marking-DraskHeadSquid-squid = Драск, голова (Длинная голова)
+marking-DraskHeadSquid = Драск, голова (Длинная голова)
+marking-DraskHeadSquidTent-squid_tent = Драск, голова (Длинная голова с щупальцами)
+marking-DraskHeadSquidTent = Драск, голова (Длинная голова с щупальцами)

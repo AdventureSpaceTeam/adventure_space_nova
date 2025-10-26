@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobArachnidLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobArachnidLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobArachnidLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobArachnidLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobArachnidRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobArachnidRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobArachnidRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobArachnidRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobArachnidLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobArachnidLHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobArachnidLArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobArachnidLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobArachnidRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobArachnidRHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobArachnidRArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobArachnidRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Arachnid/parts.rsi
+    state: r_foot

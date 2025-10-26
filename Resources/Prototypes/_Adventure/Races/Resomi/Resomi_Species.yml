@@ -7,7 +7,7 @@
   markingLimits: MobResomiMarkingLimits
   dollPrototype: MobResomiDummy
   skinColoration: Hues
-  defaultSkinTone: "#96db8b"
+  defaultSkinTone: "#36c9c0"
   minAge: 15
   youngAge: 30
   oldAge: 40
@@ -145,6 +145,102 @@
 
 - type: humanoidBaseSprite
   id: MobResomiLFoot
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobResomiLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobResomiLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobResomiLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobResomiRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobResomiRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobResomiRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobResomiRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobResomiLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobResomiLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobResomiLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobResomiLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobResomiRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobResomiRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobResomiRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobResomiRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobResomiLFootFemale
   baseSprite:
     sprite: _Adventure/Races/Resomi/Species/parts.rsi
     state: l_foot

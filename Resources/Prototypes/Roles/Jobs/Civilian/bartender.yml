@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Civilian
-      time: 3600 #1 Hr # Adventure
+      time: 1h # Adventure
   startingGear: BartenderGear
   icon: "JobIconBartender"
   supervisors: job-supervisors-hop

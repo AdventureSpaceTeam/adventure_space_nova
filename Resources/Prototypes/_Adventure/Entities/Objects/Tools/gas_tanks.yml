@@ -1,0 +1,165 @@
+- type: entity
+  parent: GasTankRoundBase
+  id: OxygenTankDouble
+  name: двойной кислородный баллон
+  description: Стандартные цинидрические баллоны для кислорода. Вмещают в общем 10 Л газа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Tanks/oxygen.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Tanks/oxygen.rsi
+    size: Large
+  - type: MultiHandedItem
+  - type: MeleeWeapon
+    attackRate: 0.5
+    damage:
+      types:
+        Blunt: 15
+  - type: Clothing
+    sprite: _Adventure/Objects/Tanks/oxygen.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: GasTank
+    air:
+      volume: 10
+      temperature: 293.15
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 370
+  - type: Construction
+    graph: OxygenTankDouble
+    node: oxygentank
+
+- type: entity
+  id: OxygenTankDoubleFilled
+  parent: OxygenTankDouble
+  suffix: Заполненный
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      volume: 10
+      moles:
+        Oxygen: 4.102758100 # oxygen
+      temperature: 293.15
+
+- type: entity
+  parent: OxygenTankDouble
+  id: NitrogenTankDouble
+  name: двойной баллон азота
+  description: Стандартные цинидрические баллоны для азота. Вмещают в общем 10 Л газа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Tanks/red.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Tanks/red.rsi
+    size: Large
+  - type: Clothing
+    sprite: _Adventure/Objects/Tanks/red.rsi
+  - type: Construction
+    graph: NitrogenTankDouble
+    node: nitrogentank
+
+- type: entity
+  id: NitrogenTankDoubleFilled
+  parent: NitrogenTankDouble
+  suffix: Заполненный
+  components:
+  - type: GasTank
+    air:
+      volume: 10
+      moles:
+        Nitrogen: 4.102758100 # nitrogen
+      temperature: 293.15
+
+- type: entity
+  parent: OxygenTankDouble
+  id: AirTankDouble
+  name: двойной баллон
+  description: Стандартные цинидрические баллоны. Вмещают в общем 10 Л газа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Tanks/generic.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Tanks/generic.rsi
+    size: Large
+  - type: Clothing
+    sprite: _Adventure/Objects/Tanks/generic.rsi
+  - type: Construction
+    graph: AirTankDouble
+    node: tank
+
+- type: entity
+  id: AirTankDoubleFilled
+  parent: AirTankDouble
+  suffix: Заполненный
+  components:
+  - type: GasTank
+    outputPressure: 101.3
+    air:
+      # 12 minutes due to output pressure
+      volume: 10
+      moles:
+        Oxygen: 0.902606782 # 22% oxygen
+        Nitrogen: 3.200151318 # 78% nitrogen
+        # 4.102758100       total
+      temperature: 293.15
+
+- type: entity
+  parent: OxygenTankDouble
+  id: PlasmaTankDoubleAdventure
+  name: двойной баллон плазмы
+  description: Стандартные цинидрические баллоны для плазмы. Вмещают в общем 10 Л газа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Tanks/plasmaman.rsi
+  - type: Item
+    sprite: _Adventure/Objects/Tanks/plasmaman.rsi
+    size: Large
+  - type: Clothing
+    sprite: _Adventure/Objects/Tanks/plasmaman.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: Construction
+    graph: PlasmaTankDoubleAdventure
+    node: plasmatank
+
+- type: entity
+  id: PlasmaTankAdventureDoubleFilled
+  parent: PlasmaTankDoubleAdventure
+  suffix: Заполненный
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      volume: 10
+      moles:
+        - 0 # oxygen
+        - 0 # nitrogen
+        - 0 # CO2
+        - 4.102758100 # plasma
+      temperature: 293.15
+
+- type: entity
+  id: RandomDoubleTankSpawner
+  name: random DoubleTank spawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Specific/Xenoarchaeology/xeno_artifacts.rsi
+          state: ano01
+    - type: RandomSpawner
+      prototypes:
+        - OxygenTankDouble
+        - OxygenTankDoubleFilled
+        - NitrogenTankDouble
+        - NitrogenTankDoubleFilled
+        - AirTankDouble
+        - AirTankDoubleFilled
+        - PlasmaTankDoubleAdventure
+        - PlasmaTankAdventureDoubleFilled
+      chance: 1

@@ -50,6 +50,7 @@
   - type: Tag
     tags:
     - Carnation
+    - Flower
   - type: Sprite
     sprite: _Adventure/Objects/Botany/Produce/Flovers/carnation.rsi
     state: icon
@@ -101,6 +102,7 @@
   - type: Tag
     tags:
     - Orchid
+    - Flower
   - type: Sprite
     sprite: _Adventure/Objects/Botany/Produce/Flovers/orchid.rsi
     state: icon
@@ -154,6 +156,7 @@
   - type: Tag
     tags:
     - RoseRed
+    - Flower
   - type: Sprite
     sprite: _Adventure/Objects/Botany/Produce/Flovers/rose_red.rsi
     state: icon
@@ -205,6 +208,7 @@
   - type: Tag
     tags:
     - RoseWhite
+    - Flower
   - type: Sprite
     sprite: _Adventure/Objects/Botany/Produce/Flovers/rose_white.rsi
     state: icon
@@ -256,6 +260,7 @@
   - type: Tag
     tags:
     - Tulip
+    - Flower
   - type: Sprite
     sprite: _Adventure/Objects/Botany/Produce/Flovers/tulip.rsi
     state: icon

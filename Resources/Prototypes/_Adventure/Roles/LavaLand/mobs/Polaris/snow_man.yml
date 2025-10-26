@@ -1,0 +1,79 @@
+- type: entity
+  name: йети
+  parent: MobGorilla
+  id: MobGorillaSnowMan
+  description: ЭТО ЖЕ СНЕЖНЫЙ МАТЬ ЕГО ЧЕЛОВЕК!!!!
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: _Adventure/Roles/LavaLand/mobs/Polaris/SnowMan.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    damage:
+      types:
+        Blunt: 25
+    animation: WeaponArcFist
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Temperature
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1
+  - type: TemperatureSpeed
+    thresholds:
+      73: 0.8
+      53: 0.6
+      33: 0.4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Critical
+      350: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      270: 0.7
+# чтоб мобы не дохли пока генерируется грид фауны
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+
+- type: entity
+  name: спавнер йети
+  id: SpawnMobSnowMan
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobGorillaSnowMan

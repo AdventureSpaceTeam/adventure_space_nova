@@ -114,14 +114,9 @@ public sealed partial class TTSSystem : EntitySystem
 
     private async void OnTTSRadioPlayEvent(EntityUid uid, ActorComponent comp, TTSRadioPlayEvent args)
     {
-        HandleReceiveRadio(uid, args.Message, args.Voice);
-    }
-
-    private async void HandleReceiveRadio(EntityUid uid, string message, string speaker)
-    {
-        var soundData = await GenerateTTS(message, speaker, "radio");
+        var soundData = await GenerateTTS(args.Message, args.Voice, "radio");
         if (soundData is null) return;
-        RaiseNetworkEvent(new PlayTTSEvent(soundData, null), uid);
+        RaiseNetworkEvent(new PlayTTSEvent(soundData, args.Source, false, args.Author), uid);
     }
 
     private async void HandleSay(EntityUid uid, string message, string speaker)

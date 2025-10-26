@@ -13,6 +13,7 @@
       Flammable: [Touch]
       Extinguish: [Touch]
       Acidic: [Touch, Ingestion]
+      Acidic_Organic: [Touch] #Adventure
   - type: Internals
   - type: MovementSpeedModifier
     baseWalkSpeed : 4

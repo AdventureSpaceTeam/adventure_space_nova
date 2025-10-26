@@ -109,3 +109,27 @@
   sprite:
     sprite: _Adventure/Decals/dirty.rsi
     state: mould10
+
+- type: decal
+  id: SnowDirt1
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: _Adventure/Decals/dirty.rsi
+    state: snow1
+
+- type: decal
+  id: SnowDirt2
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: _Adventure/Decals/dirty.rsi
+    state: snow2
+
+- type: decal
+  id: SnowDirt3
+  tags: ["station", "dirty"]
+  defaultCleanable: true
+  sprite:
+    sprite: _Adventure/Decals/dirty.rsi
+    state: snow3
