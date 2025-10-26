@@ -77,6 +77,26 @@
       285: 0.8 # Adventure
       280: 0.6 # Adventure
       273: 0.4 # Adventure
+#Adventure-edit
+  - type: JumpAbility
+    action: ActionJumpSpecies
+    canCollide: true
+    jumpDistance: 1.5
+    jumpSound:
+      path: /Audio/Effects/thudswoosh.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 90
+    damage:
+      types:
+        Heat: -0.05
+      groups:
+        Brute: -0.05
+#Adventure-edit
   - type: Wagging
   - type: Inventory
     speciesId: reptilian

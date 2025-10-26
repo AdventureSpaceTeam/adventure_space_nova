@@ -388,7 +388,7 @@
   categories: [ HideSpawnMenu ]
   suffix: LavaLand
   name: сердце легиона
-  description: Каменное цердце, обладающее целебными свойствами.
+  description: Каменное сердце, обладающее целебными свойствами.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -414,9 +414,13 @@
     - Meat
     - ClothMade
     - LegionHeart
+    - LiveLegionHeart
 
 - type: Tag
   id: LegionHeart
+
+- type: Tag
+  id: LiveLegionHeart
 
 - type: entity
   id: FoodLegionHeartDead
@@ -434,6 +438,9 @@
     size: Normal
   - type: StaticPrice
     price: 500
+  - type: Tag
+    tags:
+    - LegionHeart
 
 #Рудожор
 - type: entity

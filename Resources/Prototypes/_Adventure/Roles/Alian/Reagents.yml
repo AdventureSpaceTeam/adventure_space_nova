@@ -11,7 +11,7 @@
       effects:
       - !type:ModifyStatusEffect
         conditions:
-        - !type:OrganType 
+        - !type:OrganType
           type: Alian
           shouldHave: false
         - !type:ReagentThreshold

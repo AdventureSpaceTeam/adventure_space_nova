@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobDionaLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobDionaLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobDionaLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobDionaLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobDionaRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobDionaRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobDionaRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobDionaRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobDionaLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobDionaLHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobDionaLArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobDionaLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobDionaRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobDionaRHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobDionaRArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobDionaRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Diona/parts.rsi
+    state: r_foot

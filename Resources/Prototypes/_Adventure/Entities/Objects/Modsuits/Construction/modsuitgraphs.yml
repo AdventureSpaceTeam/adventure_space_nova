@@ -15,7 +15,7 @@
           state: small
 
       - tag: CoreModsuit
-        name: Ядро Р.И.Г.-а
+        name: ядро Р.И.Г.-а
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -79,6 +79,112 @@
     actions:
     - !type:BuildMech
       mechPrototype: ControlModsuitConstructingEnd
+
+- type: constructionGraph
+  id: MagmatiteModsuitConstructed
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: magmatitemodsuitconstructed
+      steps:
+      - component: PowerCell
+        name: батарейку
+        doAfter: 1
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+
+      - tag: LegionCoreModsuit
+        name: легионское ядро Р.И.Г.-а
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 1
+
+      - tool: Screwing
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
+
+      - tag: MagmatiteModsuitHelmet
+        name: магматитовый шлем РИГ-а
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - tag: MagmatiteModsuitChestplate
+        name: магматитовый нагрудник РИГ-а
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - tag: MagmatiteModsuitGauntlets
+        name: магматитовые рукавицы РИГ-а
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 5
+
+      - tag: MagmatiteModsuitBoots
+        name: магматитовые ботинки РИГ-а
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tool: Anchoring
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 7
+
+      - tool: Screwing
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 8
+
+  - node: magmatitemodsuitconstructed
+    actions:
+    - !type:BuildMech
+      mechPrototype: ControlMagmatiteModsuitConstructingEnd
+
+- type: constructionGraph
+  id: LegionCoreConstructing
+  start: start
+  graph:
+  - node: start
+    entity: EmptyCoreModsuit
+    edges:
+      - to: legionheartinserted
+        steps:
+          - tag: LiveLegionHeart
+            name: сердце легиона
+            doAfter: 2
+
+  - node: legionheartinserted
+    entity: LegionCoreUnsecuredHeart
+    edges:
+      - to: corecomplete
+        steps:
+          - tool: Screwing
+            doAfter: 1
+
+  - node: corecomplete
+    entity: LegionCore
 
 - type: constructionGraph
   id: ModsuitEngineer
@@ -332,3 +438,26 @@
               doAfter: 2
     - node: modsuithos
       entity: ClothingControlModsuitHOSSealed
+
+- type: constructionGraph
+  id: ModsuitMagmatite
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: modsuitmagmatite
+          steps:
+            - tag: PlatingMagmatiteModsuit
+              name: покрытие магматитового РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: magmatite-plating
+              doAfter: 2
+            - tag: MagmatiteModsuitControlEnd
+              name: собранный каркас магматитового РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+                state: LEGION-CORE-equip8
+              doAfter: 2
+    - node: modsuitmagmatite
+      entity: ClothingControlModsuitMagmatiteSealed

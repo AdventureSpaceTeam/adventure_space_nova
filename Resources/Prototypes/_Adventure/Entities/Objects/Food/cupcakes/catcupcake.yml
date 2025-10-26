@@ -1,0 +1,36 @@
+- type: entity
+  name: желейный котик
+  parent: FoodInjectableBase
+  id: FoodBakedCatCupcake
+  description: Тающий во рту десерт в самой милой оболочке.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - coffee
+      - cat
+      - jelly
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/muffins.rsi
+    state: muffin-cat
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 2
+
+
+- type: microwaveMealRecipe
+  id: RecipeCupcakeCat
+  name: рецепт желейного котика
+  result: FoodBakedCatCupcake
+  time: 10
+  group: Dessert
+  reagents:
+    Enzyme: 5
+    Cream: 5
+    CafeLatte: 5
+

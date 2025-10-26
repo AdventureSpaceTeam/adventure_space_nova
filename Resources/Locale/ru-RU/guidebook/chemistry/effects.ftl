@@ -1,4 +1,4 @@
--create-3rd-person =
+﻿-create-3rd-person =
     { $chance ->
         [1] Создаёт
        *[other] создают
@@ -94,22 +94,114 @@ reagent-effect-guidebook-even-health-change =
     } { $changes }
 reagent-effect-guidebook-status-effect =
     { $type ->
+        [update]
+            { $chance ->
+                [1] Вызывает
+                *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект не накапливается
         [add]
             { $chance ->
                 [1] Вызывает
                *[other] вызывают
-            } { LOC($key) } минимум на { NATURALFIXED($time, 3) }, эффект накапливается
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект накапливается
        *[set]
             { $chance ->
                 [1] Вызывает
                *[other] вызывают
-            } { LOC($key) } минимум на { NATURALFIXED($time, 3) }, эффект не накапливается
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект не накапливается
         [remove]
             { $chance ->
                 [1] Удаляет
                *[other] удаляют
             } { NATURALFIXED($time, 3) } от { LOC($key) }
     }
+
+reagent-effect-guidebook-status-effect-delay =
+    { $type ->
+        [add]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект накапливается
+       *[set]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект не накапливается
+        [remove]
+            { $chance ->
+                [1] Удаляет
+               *[other] удаляют
+            } { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                } от { LOC($key) }
+    } после { NATURALFIXED($delay, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                } задержки
+reagent-effect-guidebook-knockdown =
+    { $type ->
+        [update]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект не накапливается
+        [add]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } нокдаун минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект накапливается
+       *[set]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } нокдаун минимум на { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                }, эффект не накапливается
+        [remove]
+            { $chance ->
+                [1] Удаляет
+               *[other] удаляют
+            } { NATURALFIXED($time, 3) } { $time ->
+                    [one] секунду
+                    [few] секунды
+                    *[other] секунд
+                } от нокдауна
+    }
+
 reagent-effect-guidebook-set-solution-temperature-effect =
     { $chance ->
         [1] Устанавливает

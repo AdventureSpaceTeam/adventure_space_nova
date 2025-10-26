@@ -1,0 +1,96 @@
+- type: entity
+  name: северный олень-самец
+  parent: MobReindeerBuck
+  id: MobReindeerBuckPolaris
+  description: Думаете, он может тянуть сани?
+  components:
+  - type: Temperature
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1
+  - type: TemperatureSpeed
+    thresholds:
+      73: 0.8
+      53: 0.6
+      33: 0.4
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 10
+  - type: NpcFactionMember
+    factions:
+      - PassivePolaris
+# чтоб мобы не дохли пока генерируется грид фауны
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+
+- type: entity
+  name: спавнер северного оленя-самца
+  id: SpawnMobReindeerBuckPolaris
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+      - MobReindeerBuckPolaris
+
+- type: entity
+  name: северный олень-самка
+  description: Думаете, она может тянуть сани?
+  parent: MobReindeerDoe
+  id: MobReindeerDoePolaris
+  components:
+  - type: Temperature
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 1
+  - type: TemperatureSpeed
+    thresholds:
+      73: 0.8
+      53: 0.6
+      33: 0.4
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: NpcFactionMember
+    factions:
+      - PassivePolaris
+# чтоб мобы не дохли пока генерируется грид фауны
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0

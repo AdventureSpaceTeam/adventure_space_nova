@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "size": {
+    "x": 48,
+    "y": 48
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "asdsadas",
+  "states": [
+    {
+      "name": "dead"
+    },
+    {
+      "name": "alive",
+      "directions": 4
+    }
+  ]
+}

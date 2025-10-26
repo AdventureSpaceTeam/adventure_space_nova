@@ -267,6 +267,22 @@
   - ERTweapons
 
 - type: listing
+  id: WeaponLaserCarbineERT
+  productEntity: WeaponLaserCarbine
+  cost:
+    CentCommCrystal: 10
+  categories:
+  - ERTweapons
+
+- type: listing
+  id: WeaponSubMachineGunDrozdERT
+  productEntity: WeaponSubMachineGunDrozd
+  cost:
+    CentCommCrystal: 12
+  categories:
+  - ERTweapons
+
+- type: listing
   id: WeaponSubMachineGunWt550ERTs
   productEntity: WeaponSubMachineGunWt550
   cost:
@@ -389,7 +405,6 @@
     CentCommCrystal: 3
   categories:
   - ERTammo
-  - CBURNammo
 
 - type: listing
   id: MagazineShotgunERT
@@ -408,6 +423,42 @@
     CentCommCrystal: 15
   categories:
   - ERTammo
+
+- type: listing
+  id: MagazineBoxPistolPulseERT
+  productEntity: MagazineBoxPistolPulse
+  description: Коробка калибра .35 авто. Подходящий для простых пистолетов.
+  cost:
+    CentCommCrystal: 20
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazineBoxRiflePulseERT
+  productEntity: MagazineBoxRiflePulse
+  description: Коробка калибра .20 винтовочный. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 20
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazineBoxRifleExplosiveERT
+  productEntity: MagazineBoxRifleExplosive
+  description: Коробка калибра .20 винтовочный. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 20
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazineBoxLightRiflePulseERT
+  productEntity: MagazineBoxLightRiflePulse
+  description: Коробка калибра .30 винтовочный. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 25
+  categories:
+  - ERTleader
 
 # Предметы аплинка - Боеприпасы
 
@@ -764,6 +815,20 @@
     CentCommCrystal: 14
   categories:
   - ERTleader
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: WeaponRifleAkERT
+  productEntity: WeaponRifleAk
+  cost:
+    CentCommCrystal: 15
+  categories:
+  - ERTleader
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
 
 - type: listing
   id: MagazineBoxAntiMaterielERT

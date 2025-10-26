@@ -3,7 +3,6 @@
   parent: BaseItem
   id: BS-Jug
   description: Кувшин, работает на экспериментальной блюспейс технологии.
-  suffix: Genesis_Dynamics
   components:
     - type: SolutionContainerManager
       solutions:
@@ -35,8 +34,11 @@
       interfaces:
         enum.TransferAmountUiKey.Key:
           type: TransferAmountBoundUserInterface
-    - type: Drink
+    - type: Edible
+      edible: Drink
       solution: beaker
+      destroyOnEmpty: false
+      utensil: Spoon
     - type: Spillable
       solution: beaker
     - type: Appearance

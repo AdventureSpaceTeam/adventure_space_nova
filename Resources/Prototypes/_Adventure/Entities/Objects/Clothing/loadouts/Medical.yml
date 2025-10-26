@@ -1,6 +1,6 @@
 #униформа медсестры
 - type: entity
-  parent: ClothingUniformJumpskirtMedicalDoctor
+  parent: [ClothingUniformJumpskirtMedicalDoctor, ClothingUniformFoldableBase]
   id: ClothingUniformJumpskirtMedicalNurse
   name: униформа медсестры
   description: Крест на груди указывает на то, что его обладатель имеет медицинское образование.

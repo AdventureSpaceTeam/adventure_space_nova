@@ -1,0 +1,52 @@
+- type: entity
+  name: колдовской кекс
+  parent: FoodBakedMuffin
+  id: FoodBakedWitchCupcake
+  description: Вкусный и таинственный кекс.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - magical
+      - funny
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/muffins.rsi
+    state: muffin-witch
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 2
+  - type: Tag
+    tags:
+    - Cupcake
+
+- type: microwaveMealRecipe
+  id: RecipeCupcakeWitch
+  name: рецепт колдовского кекса
+  result: FoodBakedWitchCupcake
+  time: 10
+  group: Dessert
+  solids:
+    FoodPlateMuffinTin: 1
+    FoodDoughSlice: 1
+    ClothingHeadHatWitch: 1
+  reagents:
+    Sugar: 5
+
+- type: microwaveMealRecipe
+  id: RecipeCupcakeWitch1
+  name: рецепт колдовского кекса
+  result: FoodBakedWitchCupcake
+  time: 10
+  group: Dessert
+  solids:
+    FoodPlateMuffinTin: 1
+    FoodDoughSlice: 1
+    ClothingHeadHatWitch1: 1
+  reagents:
+    Sugar: 5

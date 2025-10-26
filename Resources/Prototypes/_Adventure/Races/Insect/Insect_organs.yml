@@ -86,6 +86,7 @@
     state: stomach
   - type: Metabolizer 
     metabolizerTypes: [InsectSerpentide]
+    removeEmpty: true
     groups:
     - id: Food
     - id: Drink

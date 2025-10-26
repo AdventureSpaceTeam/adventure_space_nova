@@ -4,20 +4,18 @@
   description: job-description-qm
   playTimeTracker: JobQuartermaster
   requirements:
-# adventure begin
-#    - !type:RoleTimeRequirement
-#      role: JobCargoTechnician
-#      time: 21600 #6 hrs
-# adventure end
+    - !type:RoleTimeRequirement
+      role: JobCargoTechnician
+      time: 5h
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
-      time: 9000 #2.5 hrs
+      time: 2.5h
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 36000 #10 hours
+      time: 10h
 # Adventure begin
     - !type:AgeRequirement
-      requiredAge: 30 # Adventure
+      requiredAge: 21 # Adventure
     - !type:SpeciesRequirement
       inverted: true
       species:

@@ -70,6 +70,22 @@
     {
       "name": "new",
       "directions": 4
+    },
+    {
+      "name": "box",
+      "directions": 4
+    },
+    {
+      "name": "camera",
+      "directions": 4
+    },
+    {
+      "name": "lamp",
+      "directions": 4
+    },
+    {
+      "name": "lamp_light",
+      "directions": 4
     }
   ]
 }

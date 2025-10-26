@@ -13,9 +13,8 @@
     unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: Storage
     capacity: 30
-#Modsuit Parts start
 
-- type: entity
+- type: entity #Modsuit Parts start
   parent: BaseItem
   id: BootsModsuitConstructing
   name: CE modsuit helmet
@@ -61,6 +60,29 @@
     graph: ModsuitConstructed
     node: start
     defaultTarget: modsuitconstructed
+  - type: Item
+    size: Huge
+
+- type: entity
+  parent: BaseItem
+  id: ControlMagmatiteModsuitConstructingStart
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: LEGION-CORE-equip0
+    noRot: true
+  - type: Tag
+    tags:
+    - LegionModsuitControlStart
+  - type: Appearance
+  - type: MechAssemblyVisuals
+    statePrefix: LEGION-CORE-equip
+  - type: Construction
+    graph: MagmatiteModsuitConstructed
+    node: start
+    defaultTarget: magmatitemodsuitconstructed
   - type: Item
     size: Huge
 
@@ -141,6 +163,21 @@
 
 - type: entity
   parent: BaseItem
+  id: ControlMagmatiteModsuitConstructingEnd
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: LEGION-CORE-equip8
+  - type: Tag
+    tags:
+    - MagmatiteModsuitControlEnd
+  - type: Item
+    size: Huge
+
+- type: entity
+  parent: BaseItem
   id: GauntletsModsuitConstructing
   name: CE modsuit helmet
   description: Special hardsuit helmet, made for the CE of the station.
@@ -165,6 +202,63 @@
     tags:
     - ModsuitHelmet
 
+- type: entity
+  parent: BaseItem
+  id: EmptyCoreModsuit
+  name: EmptyCoreModsuit
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: mod-core-empty
+  - type: Tag
+    tags:
+    - EmptyCore
+  - type: Appearance
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: start
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseItem
+  id: LegionCoreUnsecuredHeart
+  name: LegionCoreUnsecuredHeart
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: mod-core-legionUnsecured
+  - type: Tag
+    tags:
+    - LegionCoreUnsecured
+  - type: Appearance
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: legionheartinserted
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseItem
+  id: LegionCore
+  name: LegionCore
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: mod-core-legion
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - LegionCoreModsuit
+  - type: Appearance
+  - type: Construction
+    graph: LegionCoreConstructing
+    node: corecomplete
+
 - type: entity #cores end
   parent: BaseItem
   id: CoreModsuitConstructing
@@ -174,6 +268,8 @@
   - type: Sprite
     sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
     state: mod-core
+  - type: Item
+    size: Small
   - type: Tag
     tags:
     - CoreModsuit #plating start
@@ -258,6 +354,19 @@
 
 - type: entity
   parent: BaseItem
+  id: PlatingMagmatiteModsuitConstructing
+  name: magmatite-plating
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/plating.rsi
+    state: magmatite-plating
+  - type: Tag
+    tags:
+    - PlatingMagmatiteModsuit
+
+- type: entity
+  parent: BaseItem
   id: PlatingEngineeringModsuitConstructing
   name: CE modsuit helmet
   description: Special hardsuit helmet, made for the CE of the station.
@@ -320,3 +429,55 @@
   - type: Tag
     tags:
     - PlatingRNDModsuit
+
+- type: entity #Modsuit Parts start
+  parent: BaseItem
+  id: MagmatiteBootsModsuitConstructing
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: magmatite-boots
+  - type: Tag
+    tags:
+    - MagmatiteModsuitBoots
+
+- type: entity
+  parent: BaseItem
+  id: MagmatiteChestplateModsuitConstructing
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: magmatite-chestplate
+  - type: Tag
+    tags:
+    - MagmatiteModsuitChestplate
+
+- type: entity
+  parent: BaseItem
+  id: MagmatiteGauntletsModsuitConstructing
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: magmatite-gauntlets
+  - type: Tag
+    tags:
+    - MagmatiteModsuitGauntlets
+
+- type: entity
+  parent: BaseItem
+  id: MagmatiteHelmetModsuitConstructing
+  name: CE modsuit helmet
+  description: Special hardsuit helmet, made for the CE of the station.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/constructing_modsuit.rsi
+    state: magmatite-helmet
+  - type: Tag
+    tags:
+    - MagmatiteModsuitHelmet

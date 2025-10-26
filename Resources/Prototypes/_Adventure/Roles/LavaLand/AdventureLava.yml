@@ -407,7 +407,7 @@
 - type: tile
   id: FloorBasaltLavaLand
   parent: FloorBasalt
-  name: пол базальт
+  name: базальтные плиты
 
 - type: localizedDataset
   id: LavaName
@@ -511,6 +511,7 @@
       percent: 0.01
       tiles:
         - FloorBasaltLavaLand
+        - FloorSnowPolaris
       range: 10
 
 - type: ambientMusic

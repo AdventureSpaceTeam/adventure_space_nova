@@ -25,6 +25,8 @@
   name: Урист МакПлазма
   parent: BaseMobPlasMan
   id: MobPlasMan
+  components:
+  - type: FlashImmunity
 
 - type: entity
   save: false
@@ -82,6 +84,7 @@
   - type: HumanoidAppearance
     species: PlasMan
   - type: Inventory
+    speciesId: plasmaman
   - type: Barotrauma
     damage:
       types:
@@ -97,7 +100,6 @@
       groups:
         Brute: -0.07
   - type: Fingerprint
-  - type: Blindable
   - type: Temperature
     heatDamageThreshold: 325
     coldDamageThreshold: 260

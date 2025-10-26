@@ -20,7 +20,7 @@
     - PlasMan
 # Adventure-edit-end
   - !type:OverallPlaytimeRequirement
-    time: 18000 # 5h
+    time: 5h
   guides: [ Wizard ]
 
 # See wizard_startinggear for wiz start gear options

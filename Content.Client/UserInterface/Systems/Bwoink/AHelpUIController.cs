@@ -104,7 +104,7 @@ public sealed class AHelpUIController: UIController, IOnSystemChanged<BwoinkSyst
         _bwoinkSystem.OnBwoinkTextMessageRecieved += ReceivedBwoink;
 
         _input.SetInputCommand(ContentKeyFunctions.OpenAHelp,
-            InputCmdHandler.FromDelegate(_ => ToggleWindow()));
+            InputCmdHandler.FromDelegate(_ => _staffHelp.ToggleWindow())); // adventure fix mentor help
     }
 
     public void OnSystemUnloaded(BwoinkSystem system)

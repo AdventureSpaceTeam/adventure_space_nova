@@ -6,7 +6,7 @@
   objective: roles-antag-syndicate-agent-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 36000 #10 hrs # Adventure
+    time: 10h # Adventure
   guides: [ Traitors ]
 
 - type: antag
@@ -18,7 +18,7 @@
   guides: [ Traitors ]
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 3600 # 1h
+    time: 1h
 
 # Syndicate Operative Outfit - Monkey
 - type: startingGear

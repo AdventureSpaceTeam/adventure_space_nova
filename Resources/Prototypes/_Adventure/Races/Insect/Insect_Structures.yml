@@ -1,0 +1,371 @@
+#воск
+- type: entity
+  parent: MaterialBase
+  id: MaterialWax
+  name: воск
+  description: мягкий воск, только что выплюнутый.
+  suffix: Full
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      WebSilk: 100
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Structures.rsi
+    state: wax
+  - type: Stack
+    count: 20
+    stackType: InsectWax
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 3
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 3
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 3
+  - type: Tag
+    tags:
+      - ClothMade
+
+- type: entity
+  parent: MaterialWax
+  id: MaterialWax1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: InsectWax
+  name: воск
+  icon: { sprite: /Textures/_Adventure/Races/Insect/Structures.rsi, state: wax }
+  spawn: MaterialWax1
+  maxCount: 20
+
+#пол
+- type: entity
+  id: InsectWaxTile
+  name: напольный воск
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
+  - type: Clickable
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Structures.rsi
+    layers:
+      - state: tile
+    drawdepth: FloorTiles
+  - type: Icon
+    sprite: _Adventure/Races/Insect/Structures.rsi
+    state: tile
+  - type: Transform
+    anchored: true
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: LarvaFootStep
+      params:
+        volume: -5
+  - type: Tag
+    tags:
+      - Catwalk
+  - type: Construction
+    graph: InsectStructures
+    node: tile
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: InsectArmor
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWax1:
+            min: 2
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: AliensWallDestroy
+  - type: TrayScanReveal
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.9
+    sprintSpeedModifier: 0.9
+    ignoreWhitelist:
+      tags:
+      - SpiderCraft
+      - InsectCraft
+
+#стена
+- type: entity
+  parent: BaseWall
+  id: InsectWaxWall
+  name: восковая стена
+  description: Стена из твёрдого, насекомого воска.
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: InsectArmor
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Structures.rsi
+    state: wall1
+  - type: Icon
+    sprite: _Adventure/Races/Insect/Structures.rsi
+    state: wall1
+  - type: Construction
+    graph: InsectStructures
+    node: wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWax1:
+            min: 4
+            max: 4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: AliensWallDestroy
+  - type: RandomSprite
+    available:
+    - 0:
+        wall1: ""
+    - 0:
+        wall2: ""
+    - 0:
+        wall3: ""
+    - 0:
+        wall4: ""
+
+#дверь
+- type: entity
+  id: InsectWaxDoor
+  name: восковой проход
+  description: Липкая восковая дырка.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Appearance
+  - type: Clickable
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Structures.rsi
+    state: door
+    drawdepth: Overdoors
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - Impassable
+        layer:
+        - MidImpassable
+  - type: Construction
+    graph: InsectStructures
+    node: door
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: InsectArmor
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWax1:
+            min: 6
+            max: 6
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: AliensWallDestroy
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.7
+    sprintSpeedModifier: 0.7
+    ignoreWhitelist:
+      tags:
+      - SpiderCraft
+      - InsectCraft
+
+#крафт
+- type: constructionGraph
+  id: InsectStructures
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: wall
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: InsectWax
+        amount: 4
+        doAfter: 5
+
+    - to: tile
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: InsectWax
+        amount: 2
+        doAfter: 3
+
+    - to: door
+      completed:
+      - !type:SnapToGrid
+        southRotation: true
+      steps:
+      - material: InsectWax
+        amount: 6
+        doAfter: 5
+
+  - node: wall
+    entity: InsectWaxWall
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWax1
+        amount: 4
+      steps:
+      - tool: Cutting
+        doAfter: 20
+
+  - node: door
+    entity: InsectWaxDoor
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWax1
+        amount: 6
+      steps:
+      - tool: Cutting
+        doAfter: 15
+
+  - node: tile
+    entity: InsectWaxTile
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWax1
+        amount: 2
+      steps:
+      - tool: Cutting
+        doAfter: 10
+
+- type: construction
+  id: InsectWaxWall
+  graph: InsectStructures
+  startNode: start
+  targetNode: wall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  entityWhitelist:
+    tags:
+    - InsectCraft
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: InsectWaxDoor
+  graph: InsectStructures
+  startNode: start
+  targetNode: door
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  entityWhitelist:
+    tags:
+    - InsectCraft
+
+- type: construction
+  id: InsectWaxTile
+  graph: InsectStructures
+  startNode: start
+  targetNode: tile
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  entityWhitelist:
+    tags:
+    - InsectCraft
+
+- type: Tag
+  id: InsectCraft
+
+#экшон
+- type: entity
+  parent: BaseAction
+  id: ActionSericultureInsectWax
+  name: Произвести воск
+  description: Производите воск для строительства.
+  components:
+  - type: Action
+    icon:
+      sprite: _Adventure/Races/Insect/Structures.rsi
+      state: wax_icon
+    useDelay: 1
+  - type: InstantAction
+    event: !type:SericultureActionEvent

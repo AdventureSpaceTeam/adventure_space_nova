@@ -64,7 +64,7 @@ public sealed class RadioSystem : EntitySystem
         // adventure tts begin
         if (args.Voice is not null)
         {
-            var ev = new TTSRadioPlayEvent(args.Message, args.Voice);
+            var ev = new TTSRadioPlayEvent(args.Message, args.Voice, GetNetEntity(uid), GetNetEntity(args.MessageSource));
             RaiseLocalEvent(uid, ev);
         }
         // adventure tts end

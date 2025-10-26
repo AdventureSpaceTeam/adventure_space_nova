@@ -1,0 +1,38 @@
+- type: entity
+  name: разноцветный кекс
+  parent: FoodBakedMuffin
+  id: FoodBakedRainbowCupcake
+  description: Вкусный и хрустящий разноцветный кекс.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/muffins.rsi
+    state: muffin-rainbow
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: MindbreakerToxin
+          Quantity: 2
+  - type: Tag
+    tags:
+    - Cupcake
+
+- type: microwaveMealRecipe
+  id: RecipeCupcakeRainbow
+  name: рецепт разноцветного кекса
+  result: FoodBakedRainbowCupcake
+  time: 10
+  group: Dessert
+  solids:
+    FoodPlateMuffinTin: 1
+    FoodDoughSlice: 1
+    CrayonRed: 1
+    CrayonYellow: 1
+    CrayonBlue: 1
+  reagents:
+    Sugar: 5

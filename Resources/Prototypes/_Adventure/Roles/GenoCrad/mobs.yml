@@ -1,0 +1,36 @@
+- type: entity
+  parent: MobLing
+  id: MobLingAdventure
+  name: генокрад
+  suffix: тест
+  components:
+  - type: ActionGrant
+    actions:
+    - ActionRetractableItemArmClaw
+    - ActionRetractableItemArmHammer
+  - type: NightVision
+    color: "#592929"
+    luminancethreshold: 0.1
+    noiseamount: 0.8
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+
+- type: entity
+  id: SpawnPointGhostLingAdventure
+  name: спавнер генокрада
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: генокрад
+    description: Выживите любой ценой.
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobLingAdventure
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai

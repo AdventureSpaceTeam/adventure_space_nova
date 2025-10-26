@@ -1,0 +1,386 @@
+- type: dungeonConfig
+  id: AdventurePolar
+  layers:
+    - !type:PrototypeDunGen
+      proto: PolarBlob
+    - !type:PrototypeDunGen
+      proto: PolarSmallPaths
+      inheritDungeons: All
+#Rooms
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: PolarisRoomMarker1
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: PolarisRoomMarker2
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: PolarisRoomMarker3
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: PolarisRoomMarker4
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: PolarisRoomMarker5
+    - !type:EntityTableDunGen
+      minCount: 1
+      maxCount: 1
+      table:
+        id: PolarisRoomMarker6
+#Rooms
+    - !type:PrototypeDunGen
+      proto: PolarFill
+      inheritDungeons: All
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowTin
+      count: 30
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowCoal
+      count: 30
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockSnow
+      count: 30
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowQuartz
+      count: 30
+      minGroupSize: 10
+      maxGroupSize: 15
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowGold
+      count: 30
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowSilver
+      count: 30
+      minGroupSize: 8
+      maxGroupSize: 12
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowPlasma
+      count: 30
+      minGroupSize: 4
+      maxGroupSize: 8
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowUranium
+      count: 30
+      minGroupSize: 4
+      maxGroupSize: 8
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowArtifactFragment
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 3
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowDiamond
+      count: 10
+      minGroupSize: 1
+      maxGroupSize: 2
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowGem
+      count: 15
+      minGroupSize: 3
+      maxGroupSize: 6
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: IcePolar
+      count: 50
+      minGroupSize: 8
+      maxGroupSize: 15
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: SnowPolar
+      count: 500
+      minGroupSize: 6
+      maxGroupSize: 10
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: SnowPolarDug
+      count: 50
+      minGroupSize: 8
+      maxGroupSize: 15
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: SnowGrassPolar
+      count: 90
+      minGroupSize: 3
+      maxGroupSize: 8
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: SnowPolarChasm
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 1
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: FloraIceRock
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 2
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: FloraSnowRockSolid
+      count: 70
+      minGroupSize: 3
+      maxGroupSize: 6
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: FloraTreeSnow
+      count: 40
+      minGroupSize: 1
+      maxGroupSize: 6
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: LightTree
+      count: 20
+      minGroupSize: 1
+      maxGroupSize: 3
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: FloraTreeConifer
+      count: 40
+      minGroupSize: 1
+      maxGroupSize: 6
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: MobNorthWolf
+      count: 10
+      minGroupSize: 2
+      maxGroupSize: 4
+    - !type:OreDunGen
+      replacement: SnowPolar
+      entity: MobPenguinPolaris
+      count: 10
+      minGroupSize: 2
+      maxGroupSize: 4
+    - !type:OreDunGen
+      replacement: WallRockBasaltSnow
+      entity: WallRockBasaltSnowPolaris
+      count: 70
+      minGroupSize: 15
+      maxGroupSize: 35
+
+- type: dungeonConfig
+  id: PolarBlob
+  layers:
+  - !type:NoiseDistanceDunGen
+    size: 272, 272
+    distanceConfig: !type:DunGenEuclideanSquaredDistance
+      blendWeight: 0.80
+    layers:
+    - tile: FloorSnowPolaris
+      threshold: 0.50
+      noise:
+        frequency: 0.010
+        noiseType: OpenSimplex2
+        fractalType: FBm
+        octaves: 5
+        lacunarity: 2
+        gain: 0.5
+
+- type: dungeonConfig
+  id: PolarSmallPaths
+  reserveTiles: true
+  layers:
+  - !type:ReplaceTileDunGen
+    layers:
+    - tile: FloorSnowPolaris
+      threshold: 0.75
+      noise:
+        frequency: 0.040
+        noiseType: OpenSimplex2
+        fractalType: Ridged
+        lacunarity: 1.5
+        octaves: 2
+        gain: 2.0
+  - !type:MobsDunGen
+    minCount: 30
+    maxCount: 40
+    contents: PolarSmallPathsMobs
+
+- type: entityTable
+  id: PolarSmallPathsMobs
+  table: !type:GroupSelector
+    children:
+    - id: SalvageSpawnerMobPolaris
+      amount: 1
+
+- type: dungeonConfig
+  id: PolarFill
+  layers:
+  - !type:FillGridDunGen
+    entity: WallRockBasaltSnow
+    allowedTiles:
+    - FloorSnowPolaris
+
+- type: tile
+  id: FloorSnowPolaris
+  parent: FloorSnow
+  name: густой снег
+
+- type: tile
+  id: FloorSnowCave
+  parent: FloorSnow
+  name: пещерный снег
+  weather: false
+
+- type: tile
+  id: FloorSnowDugCave
+  parent: FloorSnowDug
+  name: пещерный снег
+  weather: false
+
+#спавнеры мобов
+- type: entity
+  parent: MarkerBase
+  id: SalvageSpawnerMobPolaris
+  name: Mining Polaris Mob Spawner
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Aliens/Asteroid/goliath.rsi
+      state: goliath
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: MobNorthWolf
+        weight: 20
+      - id: MobWhiteBear
+        weight: 15
+      - id: MobReindeerBuckPolaris
+        weight: 20
+      - id: MobPenguinPolaris
+        weight: 30
+      - id: MobReindeerDoePolaris
+        weight: 15
+
+- type: entity
+  id: PolarisStationShuttles
+  abstract: true
+  components:
+    - type: StationCargoShuttle
+      path: /Maps/Shuttles/cargo.yml
+    - type: GridSpawn
+      groups:
+        trade: !type:GridSpawnGroup
+          addComponents:
+            - type: ProtectedGrid
+            - type: TradeStation
+          paths:
+            - /Maps/Shuttles/trading_outpost.yml
+        mining: !type:GridSpawnGroup
+          paths:
+          - /Maps/_Adventure/mining.yml
+        ruins: !type:GridSpawnGroup
+          hide: true
+          nameGrid: true
+          minCount: 2
+          maxCount: 2
+          stationGrid: false
+          paths:
+          - /Maps/Ruins/abandoned_outpost.yml
+          - /Maps/Ruins/atmos_interchange.yml
+          - /Maps/Ruins/chunked_tcomms.yml
+          - /Maps/Ruins/biodome_satellite.yml
+          - /Maps/Ruins/derelict.yml
+          - /Maps/Ruins/djstation.yml
+          - /Maps/Ruins/empty_flagship.yml
+          - /Maps/Ruins/hydro_outpost.yml
+          - /Maps/Ruins/old_ai_sat.yml
+          - /Maps/Ruins/ruined_prison_ship.yml
+          - /Maps/Ruins/syndicate_dropship.yml
+          - /Maps/Ruins/whiteship_ancient.yml
+          - /Maps/Ruins/whiteship_bluespacejumper.yml
+          - /Maps/Ruins/wrecklaimer.yml
+          - /Maps/Ruins/displaced_telescience.yml
+        wrecks: !type:DungeonSpawnGroup
+          minimumDistance: 150
+          maximumDistance: 300
+          stationGrid: false
+          minCount: 12
+          maxCount: 16
+          addComponents:
+          - type: Gravity
+            enabled: true
+            inherent: true
+          - type: IFF
+            flags: HideLabel
+            color: "#88b0d1"
+          protos:
+          - ChunkDebrisSmall
+          - ChunkDebrisSmall
+          - ChunkDebrisSmall
+          - ChunkDebrisSmall
+          - ChunkDebris
+        vgroid: !type:DungeonSpawnGroup
+          minimumDistance: 300
+          maximumDistance: 350
+          nameDataset: PolarName
+          stationGrid: false
+          addComponents:
+          - type: Gravity
+            enabled: true
+            inherent: true
+          - type: IFF
+            flags: HideLabel
+            color: "#12b5d8"
+          protos:
+          - AdventurePolar
+
+- type: localizedDataset
+  id: PolarName
+  values:
+    prefix: names-polar-dataset-
+    count: 1
+
+- type: entity
+  id: PolarNanotrasenStation
+  parent:
+    - BaseStation
+    - BaseStationNews
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationArrivals
+    - BaseStationGateway
+    - PolarisStationShuttles
+    - BaseStationCentcomm
+    - BaseStationEvacuation
+    - BaseStationAlertLevels
+    - BaseStationMagnet
+    - BaseStationExpeditions
+    - BaseStationSalvageJobs
+    - BaseStationSiliconLawCrewsimov
+    - BaseStationAllEventsEligible
+    - BaseStationNanotrasen
+    - BaseStationDeliveries
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform

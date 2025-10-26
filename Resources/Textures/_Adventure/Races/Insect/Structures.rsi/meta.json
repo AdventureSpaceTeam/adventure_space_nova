@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "wax"
+    },
+    {
+      "name": "wax_icon"
+    },
+    {
+      "name": "door"
+    },
+    {
+      "name": "tile"
+    },
+    {
+      "name": "wall1"
+    },
+    {
+      "name": "wall2"
+    },
+    {
+      "name": "wall3"
+    },
+    {
+      "name": "wall4"
+    }
+  ]
+}

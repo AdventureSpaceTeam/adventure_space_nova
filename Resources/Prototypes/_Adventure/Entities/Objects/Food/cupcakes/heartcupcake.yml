@@ -1,0 +1,36 @@
+- type: entity
+  name: кекс в форме сердца
+  parent: FoodBakedMuffin
+  id: FoodBakedHeartCupcake
+  description: Сладкий и манящий кекс в форме сердца.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/muffins.rsi
+    state: muffin-heart
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 12
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Bicaridine
+          Quantity: 2
+  - type: Tag
+    tags:
+    - Cupcake
+
+- type: microwaveMealRecipe
+  id: RecipeCupcakeHeart
+  name: рецепт кекса в форме сердца
+  result: FoodBakedHeartCupcake
+  time: 10
+  group: Dessert
+  solids:
+    FoodPlateMuffinTin: 1
+    FoodDoughSlice: 1
+    FoodPoppy: 1
+  reagents:
+    Sugar: 5

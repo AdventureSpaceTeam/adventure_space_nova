@@ -107,6 +107,7 @@
   - type: Physics
     bodyType: Static
   - type: Sprite
+    noRot: true
     sprite: _Adventure/Roles/LavaLand/necro_spike/basalt_chasm_spawn.rsi
     layers:
     - state: basalt_chasm_spawn
@@ -125,6 +126,41 @@
     lifetime: 5.0
   - type: SpawnOnDespawn
     prototype: FloorChasmEntity
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_Adventure/LavaLand/StoneDown.ogg
+
+# обвал снега
+- type: entity
+  id: SpawnSnowChalm
+  categories: [ HideSpawnMenu ]
+  name: обвал
+  components:
+  - type: Transform
+    anchored: True
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    noRot: true
+    sprite: _Adventure/Roles/LavaLand/necro_spike/basalt_chasm_spawn.rsi
+    layers:
+    - state: snow_chasm_spawn
+    drawdepth: BelowFloor
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - SlipLayer
+  - type: TimedDespawn
+    lifetime: 5.0
+  - type: SpawnOnDespawn
+    prototype: FloorSnowChasm
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/_Adventure/LavaLand/StoneDown.ogg
