@@ -1,7 +1,7 @@
 - type: species
   id: Android
   name: Андроид
-  roundStart: true
+  roundStart: false
   prototype: MobAndroid
   sprites: MobAndroidSprites
   markingLimits: MobAndroidMarkingLimits
