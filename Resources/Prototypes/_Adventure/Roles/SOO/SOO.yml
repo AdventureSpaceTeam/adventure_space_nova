@@ -23,7 +23,7 @@
   parent: JobIcon
   id: JobIconSOO
   icon:
-    sprite: _Adventure/Roles/SOO/misc/SOO_icon.rsi
+    sprite: /Textures/_Adventure/Roles/SOO/misc/SOO_icon.rsi
     state: SpecialOperationsOfficer
   jobName: Офицер Специальных Операций
 
@@ -43,7 +43,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadCapSOO
-  name: Фуражка ОСО
+  name: фуражка ОСО
   description: Фуражка Офицера Спецопераций. Символ власти — и прицел для врагов.
   components:
   - type: Sprite
@@ -77,6 +77,9 @@
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
+    tags:
+    - HudSecurity
+    - HudMedical
 
 #Перчатки ОСО
 - type: entity
@@ -178,6 +181,7 @@
     - id: BoxZiptie
     - id: CrowbarRed
     - id: DoubleEmergencyOxygenTankFilled
+    - id: ToolDebug
 
 #ID карта ОСО
 - type: entity
