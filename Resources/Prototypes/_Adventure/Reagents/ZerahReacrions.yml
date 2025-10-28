@@ -49,9 +49,9 @@
             types:
               Poison: 1
           conditions:
-          - !type:OrganType
-            type: Zerah
-            shouldHave: false
+          - !type:MetabolizerTypeCondition
+            type: [ Zerah ]
+            inverted: true
 
 - type: reaction
   id: ZToxin
@@ -186,9 +186,9 @@
       - !type:ChemVomit
         probability: 0.04
         conditions:
-        - !type:ReagentThreshold
-          reagent: GoodMorning
-          min: 10
+        - !type:ReagentCondition
+        reagent: GoodMorning
+        min: 10
 
 - type: reaction
   id: GoodMorning

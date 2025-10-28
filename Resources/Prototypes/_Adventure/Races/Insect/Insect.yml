@@ -121,7 +121,7 @@
       methods: [ Touch, Ingestion, Injection ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         damage:
           types:
             Poison: 2

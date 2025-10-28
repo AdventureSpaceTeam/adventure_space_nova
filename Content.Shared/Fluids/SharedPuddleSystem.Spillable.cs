@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.Bartender.Systems; // Adventure
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -21,6 +22,7 @@ namespace Content.Shared.Fluids;
 
 public abstract partial class SharedPuddleSystem
 {
+    [Dependency] private readonly SpillProofThrowerSystem _nonspillthrower = default!; // Adventure
     private static readonly FixedPoint2 MeleeHitTransferProportion = 0.25;
 
     protected virtual void InitializeSpillable()
@@ -187,6 +189,10 @@ public abstract partial class SharedPuddleSystem
             || solution.Volume <= 0)
             return;
 
+        // Adventure start
+        if (_nonspillthrower.GetSpillProofThrow(args.PlayerUid))
+            return;
+        // Adventure end
         args.Cancel("pacified-cannot-throw-spill");
     }
 }

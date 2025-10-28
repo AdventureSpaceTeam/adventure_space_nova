@@ -378,7 +378,7 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         damage:
           types:
             Heat: -1
@@ -417,7 +417,7 @@
       methods: [ Touch, Ingestion, Injection ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         damage:
           types:
             Heat: 2

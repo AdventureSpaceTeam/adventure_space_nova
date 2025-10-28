@@ -28,7 +28,7 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         damage:
           types:
             Heat: -1
