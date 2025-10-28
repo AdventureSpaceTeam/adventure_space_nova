@@ -23,8 +23,8 @@
   parent: JobIcon
   id: JobIconSOO
   icon:
-    sprite: /Textures/_Adventure/Roles/SOO/misc/SOO_icon.rsi
-    state: SpecialOperationsOfficer
+    sprite: /Textures/_Adventure/Roles/SpecialForces/SOO/misc/SOO_icon.rsi
+    state: SOO
   jobName: Офицер Специальных Операций
 
 #Комбинезон ОСО
@@ -35,9 +35,11 @@
   description: Чёрный тактический комбинезон с армированными вставками, готов к любому сценарию.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Uniform.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Uniform.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Uniform.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Uniform.rsi
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Фуражка ОСО
 - type: entity
@@ -47,9 +49,11 @@
   description: Фуражка Офицера Спецопераций. Символ власти — и прицел для врагов.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Cap.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Cap.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Cap.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Cap.rsi
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Гарнитура-наушники ОСО
 - type: entity
@@ -59,9 +63,11 @@
   description: Тактическая гарнитура. Говори тихо — тебя и так слышат.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_HeadSet.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_HeadSet.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_HeadSet.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_HeadSet.rsi
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Очки ОСО
 - type: entity
@@ -71,15 +77,16 @@
   name: очки ОСО
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Glasses.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Glasses.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Glasses.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Glasses.rsi
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
-    tags:
-    - HudSecurity
-    - HudMedical
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Перчатки ОСО
 - type: entity
@@ -89,9 +96,11 @@
   description: Не просто перчатки. Это подпись на каждом трупе.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Gloves.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Gloves.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Gloves.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Gloves.rsi
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Плащ ОСО
 - type: entity
@@ -101,9 +110,11 @@
   description: Под ним — форма. Под формой — оружие. Под оружием — приказ.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Mantle.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Mantle.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Mantle.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Mantle.rsi
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Ботинки ОСО
 - type: entity
@@ -113,9 +124,11 @@
   description: Прошли через плазму, вакуум и трупы. Не снимали.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Boots.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Boots.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Boots.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Boots.rsi
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Противогаз ОСО
 - type: entity
@@ -127,9 +140,9 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Mask.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Mask.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Mask.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Mask.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -139,10 +152,11 @@
         Heat: 0.80
   - type: IngestionBlocker
   - type: IdentityBlocker
-  - type: Tag
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Трэнч ОСО
 - type: entity
@@ -152,9 +166,9 @@
   description: На внутренней подкладке — схема станции. Последняя метка — там, где ещё никто не умер… но скоро умрёт.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_Trench.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Trench.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_Trench.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_Trench.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -164,6 +178,8 @@
         Heat: 0.60
   - type: ExplosionResistance
     damageCoefficient: 0.75
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Рюкзак ОСО
 - type: entity
@@ -173,24 +189,25 @@
   description: Тактический ранец. Всё необходимое — под рукой. Даже то, о чём ты не должен знать.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_BackPack.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_BackPack.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_BackPack.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_BackPack.rsi
   - type: StorageFill
     contents:
     - id: BoxZiptie
     - id: CrowbarRed
     - id: DoubleEmergencyOxygenTankFilled
     - id: ToolDebug
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #ID карта ОСО
 - type: entity
   parent: IDCardStandard
   id: SOOIDCard
-  name: ID карта ОСО
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/misc/SOO_IDcard.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/misc/SOO_IDcard.rsi
     layers:
     - state: idSOO
   - type: PresetIdCard
@@ -226,9 +243,9 @@
   description: Последний скафандр, который ты наденешь. Потому что следующий — уже не потребуется.
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_hardsuit/SOO_hardsuit.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_hardsuit/SOO_hardsuit.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -249,6 +266,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSOO
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
@@ -258,12 +277,25 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit_helmet.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_hardsuit/SOO_hardsuit_helmet.rsi
   - type: Clothing
-    sprite: _Adventure/Roles/SOO/SOO_hardhuit/SOO_hardhuit_helmet.rsi
+    sprite: _Adventure/Roles/SpecialForces/SOO/SOO_hardsuit/SOO_hardsuit_helmet.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
+        Radiation: 0.80
+        Caustic: 0.95
+  - type: PointLight
+    color: orange
+  - type: Contraband
+    allowedDepartments: [ CentralCommand ]
 
 #Гир
 - type: startingGear
