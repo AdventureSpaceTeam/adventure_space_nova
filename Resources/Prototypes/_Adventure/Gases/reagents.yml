@@ -17,7 +17,7 @@
         visualType: Medium
         messages: [ "effect-sleepy" ]
         probability: 0.1
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Slime ]
@@ -268,7 +268,7 @@
         minScale: 12
         time: 4
         type: Remove
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         minScale: 6
         statusLifetime: 20
         walkSpeedModifier: 1.5
@@ -291,7 +291,7 @@
         minScale: 12
         time: 4
         type: Remove
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         minScale: 6
         statusLifetime: 20
         walkSpeedModifier: 1.5

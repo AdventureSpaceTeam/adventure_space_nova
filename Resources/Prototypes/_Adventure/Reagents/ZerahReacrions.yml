@@ -164,7 +164,7 @@
   metabolisms:
     Alcohol:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:ModifyStatusEffect
@@ -183,12 +183,12 @@
         refresh: false
       - !type:Drunk
         boozePower: 4
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.04
         conditions:
         - !type:ReagentCondition
-        reagent: GoodMorning
-        min: 10
+          reagent: GoodMorning
+          min: 10
 
 - type: reaction
   id: GoodMorning

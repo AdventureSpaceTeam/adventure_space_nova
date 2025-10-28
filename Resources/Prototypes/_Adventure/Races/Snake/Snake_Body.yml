@@ -46,7 +46,7 @@
         - !type:MetabolizerTypeCondition
           type: [ Zerah ]
           inverted: true
-      - !type:ChemVomit
+      - !type:Vomit
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Zerah ]
@@ -66,7 +66,7 @@
         - !type:ReagentCondition
           reagent: ZerahPoison
           min: 25
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.90
         sprintSpeedModifier: 0.90
         conditions:

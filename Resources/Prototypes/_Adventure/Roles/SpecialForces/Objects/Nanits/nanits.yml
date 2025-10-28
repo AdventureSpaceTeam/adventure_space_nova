@@ -16,7 +16,7 @@
             - !type:ReagentCondition
               reagent: fullnanits
               min: 10
-      - !type:ChemHealEyeDamage
+      - !type:EyeDamage
       - !type:HealthChange
         damage:
           groups:
@@ -26,7 +26,7 @@
             Brute: -5
     Narcotic:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 2
         sprintSpeedModifier: 2
       - !type:ModifyStatusEffect
@@ -48,7 +48,7 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:ChemHealEyeDamage
+      - !type:EyeDamage
       - !type:HealthChange
         damage:
           groups:
@@ -58,7 +58,7 @@
             Brute: -2
     Narcotic:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.5
         sprintSpeedModifier: 1.5
       - !type:ModifyStatusEffect
@@ -80,7 +80,7 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:ChemHealEyeDamage
+      - !type:EyeDamage
       - !type:HealthChange
         damage:
           groups:
@@ -90,7 +90,7 @@
             Brute: -0
     Narcotic:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.2
         sprintSpeedModifier: 1.2
       - !type:ModifyStatusEffect

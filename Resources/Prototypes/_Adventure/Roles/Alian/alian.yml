@@ -36,14 +36,14 @@
   components:
   - type: Metabolizer
     maxReagents: 2
-    metabolizerTypes: [ Alian ]
+    metabolizerTypes: [Alien]
     groups:
     - id: Medicine
     - id: Poison
     - id: Narcotic
 
 - type: metabolizerType
-  id: Alian
+  id: Alien
   name: Ксеноморф
 
 # броня
@@ -373,7 +373,7 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:
@@ -412,7 +412,7 @@
     - reagents: [Water, SpaceCleaner]
       methods: [Touch]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
     - reagents: [ PestKiller ]
       methods: [ Touch, Ingestion, Injection ]
       effects:
