@@ -18,6 +18,9 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
 
+- type: playTimeTracker
+  id: JobSOO
+
   #Иконка
 - type: jobIcon
   parent: JobIcon
