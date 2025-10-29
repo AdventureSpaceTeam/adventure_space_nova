@@ -8,7 +8,7 @@
 
 "sprite":
 - changed-files:
-  - any-glob-to-any-file: '**/*.rsi'
+  - any-glob-to-any-file: '**/*.rsi/*'
 
 "no C#":
 - changed-files:
