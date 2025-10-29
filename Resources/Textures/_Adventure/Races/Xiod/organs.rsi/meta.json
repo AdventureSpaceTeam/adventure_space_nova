@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by bork",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "brain"
+    },
+    {
+      "name": "eyeball-l"
+    },
+    {
+      "name": "eyeball-r"
+    },
+    {
+      "name": "heart-off"
+    }
+  ]
+}

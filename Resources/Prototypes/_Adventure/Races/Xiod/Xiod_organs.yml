@@ -1,0 +1,88 @@
+﻿- type: entity
+  id: OrganXiodBrain
+  parent: OrganHumanBrain
+  name: ядро ксиода
+  description: Источник невероятного, бесконечного интеллекта.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/organs.rsi
+    state: brain
+  - type: Stomach
+  - type: Metabolizer
+    maxReagents: 6
+    metabolizerTypes: [ Drask ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Food
+    - id: Drink
+    - id: Narcotic
+    - id: Alcohol
+    removeEmpty: true
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50.0
+      organ:
+        reagents:
+        - ReagentId: Water
+          Quantity: 10
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Water
+          Quantity: 5
+
+- type: entity
+  id: OrganXiodEyes
+  parent: OrganHumanEyes
+  name: глаза ксиода
+  description: Я тебя вижу.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Water
+          Quantity: 10
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Water
+          Quantity: 5
+
+- type: entity
+  id: OrganXiodLungs
+  parent: OrganHumanLungs
+  name: воздушная губка ксиода
+  description: Буль буль.
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ InsectSerpentide ]
+  - type: Lung
+    alert: LowOxygen
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/organs.rsi
+    layers:
+      - state: heart-off
+      - state: heart-off
+  - type: Organ
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Water
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Water
+          Quantity: 5

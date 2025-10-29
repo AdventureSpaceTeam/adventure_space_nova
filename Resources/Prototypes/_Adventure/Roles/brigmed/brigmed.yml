@@ -24,6 +24,7 @@
       inverted: true
       species:
       - PigMan
+      - Xiod
 # Adventure-edit-end
   startingGear: BrigmedicGearADVENT
   icon: "JobIconBrigmedic"
@@ -54,6 +55,7 @@
     ears: ClothingHeadsetBrigmedic
     belt: ClothingBeltMedicalFilled
     ipc: IPCModulSec # Adventure-IPC
+    exo: ClothingOuterExoSecBattary # Adventure-IPC
   storage:
     back:
     - Flash

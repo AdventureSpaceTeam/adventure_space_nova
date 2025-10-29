@@ -25,6 +25,7 @@
     id: BartenderPDA
     ears: ClothingHeadsetService
     ipc: IPCModulBeer # Adventure-IPC
+    exo: ClothingOuterExoBattary # Adventure
   #storage:
     #back:
     #- Stuff

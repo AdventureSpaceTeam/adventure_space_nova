@@ -35,6 +35,7 @@
     - map: [ "ears" ]
     - map: [ "eyes" ]
     - map: [ "outerClothing" ]
+    - map: [ "exo" ] # Adventure
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "neck" ]

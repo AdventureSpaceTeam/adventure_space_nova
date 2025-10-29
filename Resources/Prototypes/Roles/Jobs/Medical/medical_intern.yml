@@ -25,6 +25,7 @@
     belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
     ipc: IPCModulMed # Adventure-IPC
+    exo: ClothingOuterExoMedBattary # Adventure
   #storage:
     #back:
     #- Stuff

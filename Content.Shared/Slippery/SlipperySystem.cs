@@ -167,7 +167,7 @@ public sealed class SlipAttemptEvent : EntityEventArgs, IInventoryRelayEvent
 
     public EntityUid? SlipCausingEntity;
 
-    public SlotFlags TargetSlots { get; } = SlotFlags.FEET;
+    public SlotFlags TargetSlots { get; } = SlotFlags.FEET | SlotFlags.EXO; // Adventure;
 
     public SlipAttemptEvent(EntityUid? slipCausingEntity)
     {

@@ -24,6 +24,7 @@
     shoes: ClothingShoesColorBlack
     id: ServiceWorkerPDA
     ears: ClothingHeadsetService
+    exo: ClothingOuterExoBattary # Adventure
   #storage:
     #back:
     #- Stuff
