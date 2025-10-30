@@ -26,6 +26,10 @@
     {
       "name": "tent5",
       "directions": 4
+    },
+    {
+      "name": "tent6",
+      "directions": 4
     }
   ]
 }

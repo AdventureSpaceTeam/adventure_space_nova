@@ -8,3 +8,5 @@ marking-XiodTailsLittleHead-tent4 = Ксиод, щупальца (Тонкая �
 marking-XiodTailsLittleHead = Ксиод, щупальца (Тонкая голова)
 marking-XiodTailsTent-tent5 = Ксиод, щупальца (Гибкие щупальца)
 marking-XiodTailsTent = Ксиод, щупальца (Гибкие щупальца)
+marking-XiodTailsGreat-tent6 = Ксиод, щупальца (Великие)
+marking-XiodTailsGreat = Ксиод, щупальца (Великие)
