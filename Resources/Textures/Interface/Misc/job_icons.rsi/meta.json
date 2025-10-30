@@ -238,6 +238,9 @@
         },
         {
             "name": "Zookeeper"
+        },
+        {
+            "name": "BlueShieldOfficer"
         }
     ]
 }

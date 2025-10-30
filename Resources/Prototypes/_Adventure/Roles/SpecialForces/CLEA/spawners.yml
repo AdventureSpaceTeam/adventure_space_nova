@@ -3,8 +3,8 @@
   parent: JobIcon
   id: JobIconCLEA
   icon:
-    sprite: /Textures/_Adventure/Roles/SpecialForces/CLEA/other/CLEA_icon.rsi
-    state: CLEA
+    sprite: &icon-rsi /Textures/Interface/Misc/job_icons.rsi
+    state: ERTSecurity
   jobName: ЦСС
 
 #ГИР солдата ЦСС Base
