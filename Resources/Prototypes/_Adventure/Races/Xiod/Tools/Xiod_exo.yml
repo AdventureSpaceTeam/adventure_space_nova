@@ -325,10 +325,10 @@
     clothingPrototype: ClothingHeadHelmetExoParamed
   - type: ActionGrant
     actions:
-    - ActionRetractableItemHypoHand
+    - ActionRetractableItemDefibrillatorExo
   - type: ItemActionGrant
     actions:
-    - ActionRetractableItemHypoHand
+    - ActionRetractableItemDefibrillatorExo
     activeIfWorn: true
 
 - type: entity
@@ -360,7 +360,7 @@
 
 #врач
 - type: entity
-  parent: ClothingOuterExoParamed
+  parent: [ClothingOuterExoNT, BaseMedicalContraband]
   suffix: Пустой/датчики
   id: ClothingOuterExoMed
   name: медицинский экзоскелет ксиодов
@@ -373,8 +373,25 @@
     layers:
     - state: icon
       map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.7
+        Cold: 0.7
+        Radiation: 0.7
+        Caustic: 0.5
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetExoMed
+  - type: ActionGrant
+    actions:
+    - ActionRetractableItemHypoHand
+  - type: ItemActionGrant
+    actions:
+    - ActionRetractableItemHypoHand
+    activeIfWorn: true
   - type: Construction
     graph: ExoMed
     node: exomed
@@ -404,7 +421,7 @@
 
 #химик
 - type: entity
-  parent: ClothingOuterExoParamed
+  parent: ClothingOuterExoMed
   suffix: Пустой/датчики
   id: ClothingOuterExoChem
   name: лабораторный экзоскелет ксиодов
@@ -672,6 +689,69 @@
   - type: Clothing
     sprite: _Adventure/Objects/Xiod_exo/ward/helmet.rsi
 
+#бм
+- type: entity
+  parent: [ClothingOuterExoNT, BaseSecurityContraband]
+  suffix: Пустой/датчики
+  id: ClothingOuterExoSecMed
+  name: медицинский экзоскелет охраны
+  description: Модель экзоскелета, используемая ксиодами-врачами охраны.
+  components:
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/secmed/suit.rsi
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/secmed/suit.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.45
+        Heat: 0.65
+        Cold: 0.65
+        Radiation: 0.7
+        Caustic: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetExoSecMed
+  - type: ActionGrant
+    actions:
+    - ActionRetractableItemHypoHand
+  - type: ItemActionGrant
+    actions:
+    - ActionRetractableItemHypoHand
+    activeIfWorn: true
+  - type: Construction
+    graph: ExoMed
+    node: exomed
+
+- type: entity
+  parent: ClothingOuterExoSecMed
+  suffix: Батарея
+  id: ClothingOuterExoSecMedBattary
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+
+- type: entity
+  parent: [ClothingHeadHelmetExoParamed, ShowSecurityIcons]
+  id: ClothingHeadHelmetExoSecMed
+  categories: [ HideSpawnMenu ]
+  name: шлем медицинского экзоскелета охраны
+  description: Небольшой шлем, для защиты мягких голов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/secmed/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/secmed/helmet.rsi
+
 #грузчик
 - type: entity
   parent: [ClothingOuterExoNT, BaseCargoContraband]
@@ -742,10 +822,10 @@
     clothingPrototype: ClothingHeadHelmetExoSalv
   - type: ActionGrant
     actions:
-    - ActionRetractableItemProtoKineticAcceleratorExo
+    - ActionRetractableItemWeaponGrapplingGunExo
   - type: ItemActionGrant
     actions:
-    - ActionRetractableItemProtoKineticAcceleratorExo
+    - ActionRetractableItemWeaponGrapplingGunExo
     activeIfWorn: true
   - type: Construction
     graph: ExoSalv

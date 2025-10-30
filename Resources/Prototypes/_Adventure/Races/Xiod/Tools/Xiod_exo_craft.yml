@@ -72,7 +72,16 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 1
 
+      - component: PowerCell
+        name: батарейку
+        doAfter: 2
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+
       - material: Cable
+        doAfter: 2
         amount: 10
         completed:
         - !type:VisualizerDataInt
@@ -87,6 +96,7 @@
           data: 3
 
       - material: Glass
+        doAfter: 2
         amount: 5
         completed:
         - !type:VisualizerDataInt
@@ -94,6 +104,7 @@
           data: 4
 
       - material: Steel
+        doAfter: 2
         amount: 5
         completed:
         - !type:VisualizerDataInt
@@ -108,6 +119,7 @@
           data: 5
 
       - material: Steel
+        doAfter: 2
         amount: 5
         completed:
         - !type:VisualizerDataInt
@@ -129,6 +141,7 @@
           data: 6
 
       - material: Steel
+        doAfter: 2
         amount: 5
         completed:
         - !type:VisualizerDataInt
@@ -143,6 +156,7 @@
           data: 7
 
       - material: Steel
+        doAfter: 2
         amount: 5
         completed:
         - !type:VisualizerDataInt
@@ -444,6 +458,9 @@
               icon:
                 sprite: _Adventure/Objects/Modsuits/plating.rsi
                 state: engineering-plating
+            - material: Cable
+              amount: 5
+              doAfter: 2
             - tag: ExoFrameEnd
               name: каркас экзоскелета ксиодов
               icon:
@@ -478,6 +495,9 @@
               icon:
                 sprite: _Adventure/Objects/Modsuits/plating.rsi
                 state: rnd-plating
+            - material: Cable
+              amount: 5
+              doAfter: 2
             - tag: ExoFrameEnd
               name: каркас экзоскелета ксиодов
               icon:

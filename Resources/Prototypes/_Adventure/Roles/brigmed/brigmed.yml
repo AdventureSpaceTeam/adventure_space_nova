@@ -54,8 +54,8 @@
     id: BrigmedicPDAADV
     ears: ClothingHeadsetBrigmedic
     belt: ClothingBeltMedicalFilled
-    ipc: IPCModulSec # Adventure-IPC
-    exo: ClothingOuterExoSecBattary # Adventure-IPC
+    ipc: IPCModulSec
+    exo: ClothingOuterExoSecMedBattary
   storage:
     back:
     - Flash

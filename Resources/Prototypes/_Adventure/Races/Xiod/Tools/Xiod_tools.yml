@@ -14,7 +14,7 @@
     wideAnimationRotation: 90
     damage:
       types:
-        Blunt: 10
+        Blunt: 5
     soundHit:
       collection: MetalThud
   - type: Sprite
@@ -111,7 +111,7 @@
   - type: Hypospray
     onlyAffectsMobs: false
   - type: UseDelay
-    delay: 0.5 
+    delay: 2 
 
 - type: entity
   parent: BaseAction
@@ -130,6 +130,64 @@
     event: !type:OnRetractableItemActionEvent
   - type: RetractableItemAction
     spawnedPrototype: HypoHand
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#парамед
+- type: entity
+  id: DefibrillatorExo
+  parent: BaseItem
+  name: ручной дефибриллятор
+  description: РАЗРЯД!
+  components:
+    - type: Sprite
+      sprite: _Adventure/Objects/Xiod_exo/Tools/defib.rsi
+      layers:
+        - state: icon
+        - state: screen
+          map: [ "enum.ToggleableVisuals.Layer" ]
+          visible: false
+          shader: unshaded
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ToggleableVisuals.Layer:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Item
+      size: Large
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Items/Defib/defib_safety_on.ogg
+      soundDeactivate:
+        path: /Audio/Items/Defib/defib_safety_off.ogg
+    - type: Defibrillator
+      zapHeal:
+        types:
+          Asphyxiation: -40
+    - type: DoAfter
+    - type: UseDelay
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemDefibrillatorExo
+  name: Ручной дефибриллятор
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/defib.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: DefibrillatorExo
     summonSounds:
       collection: ActivHand 
     retractSounds:
@@ -169,7 +227,7 @@
   - type: SolutionContainerManager
     solutions:
       tank:
-        maxVol: 500
+        maxVol: 200
   - type: SolutionTransfer
     transferAmount: 50
     maxTransferAmount: 100
@@ -266,20 +324,20 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: AnomalousParticleDeltaStrong
-    fireCost: 100
+    fireCost: 200
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: AnomalousParticleDeltaStrong
-      fireCost: 100
+      fireCost: 200
     - proto: AnomalousParticleEpsilonStrong
-      fireCost: 100
+      fireCost: 200
     - proto: AnomalousParticleZetaStrong
-      fireCost: 100
+      fireCost: 200
     - proto: AnomalousParticleSigmaStrong
-      fireCost: 100
+      fireCost: 200
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 10
+    autoRechargeRate: 20
 
 - type: entity
   parent: BaseAction
@@ -305,38 +363,28 @@
 
 #утиль
 - type: entity
-  id: WeaponProtoKineticAcceleratorExo
-  name: ручной ускоритель
-  description: Тяжёлый, но мощный.
-  parent: BaseItem
+  name: ручной крюк
+  parent: WeaponGrapplingGun
+  id: WeaponGrapplingGunExo
   components:
-  - type: Sprite
-    sprite: _Adventure/Objects/Xiod_exo/Tools/kinetic_accelerator.rsi
-    state: icon
-  - type: Item
-    sprite: _Adventure/Objects/Xiod_exo/Tools/kinetic_accelerator.rsi
-  - type: Gun
-    fireRate: 0.6
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
-  - type: AmmoCounter
-  - type: Appearance
-  - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 0.45
-    rechargeSound:
-      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
-  - type: BasicEntityAmmoProvider
-    proto: BulletKinetic
-    capacity: 1
-    count: 1
+    - type: Sprite
+      sprite: _Adventure/Objects/Xiod_exo/Tools/grappling_gun.rsi
+      layers:
+        - state: base
+        - state: base-unshaded
+          map: [ "unshaded" ]
+          visible: true
+    - type: GenericVisualizer
+      visuals:
+        enum.TetherVisualsStatus.Key:
+          unshaded:
+            True: { state: base-unshaded }
+            False: { state: base-unshaded-off }
 
 - type: entity
   parent: BaseAction
-  id: ActionRetractableItemProtoKineticAcceleratorExo
-  name: Ручной ускоритель
+  id: ActionRetractableItemWeaponGrapplingGunExo
+  name: Ручной крюк
   description: Активируйте инструменты своего костюма.
   components:
   - type: Action
@@ -344,12 +392,12 @@
     raiseOnAction: true
     itemIconStyle: BigAction
     icon:
-      sprite: _Adventure/Objects/Xiod_exo/Tools/kinetic_accelerator.rsi
-      state: icon
+      sprite: _Adventure/Objects/Xiod_exo/Tools/grappling_gun.rsi
+      state: hook
   - type: InstantAction
     event: !type:OnRetractableItemActionEvent
   - type: RetractableItemAction
-    spawnedPrototype: WeaponProtoKineticAcceleratorExo
+    spawnedPrototype: WeaponGrapplingGunExo
     summonSounds:
       collection: ActivHand 
     retractSounds:
