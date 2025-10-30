@@ -178,9 +178,9 @@
     layers:
     - state: centcom
     - state: stripe_top
-      color: *color-security-top
+      color: &color-security-top "#cb0000"
     - state: stripe_bottom
-      color: *color-security-bottom
+      color: &color-security-bottom "#830000"
     - sprite: &icon-rsi Interface/Misc/job_icons.rsi
       offset: &icon-offset -0.09375, 0.0625
       state: ERTSecurity
@@ -199,11 +199,11 @@
     layers:
     - state: gold
     - state: stripe_top
-      color: *color-centcomm-top
+      color: &color-centcomm-top "#134975"
     - state: stripe_bottom
-      color: *color-centcomm-bottom
-    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
-      offset: &icon-offset -0.09375, 0.0625
+      color: &color-centcomm-bottom "#0d304d"
+    - sprite: *icon-rsi
+      offset: *icon-offset
       state: ERTSecurity
   - type: PresetIdCard
     job: CLEAOfficer

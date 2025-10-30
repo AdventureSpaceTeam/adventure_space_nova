@@ -67,9 +67,9 @@
     layers:
     - state: silver
     - state: stripe_top
-      color: *color-centcomm-top
+      color: &color-centcomm-top "#134975"
     - state: stripe_bottom
-      color: *color-centcomm-bottom
+      color: &color-centcomm-bottom "#0d304d"
     - sprite: &icon-rsi Interface/Misc/job_icons.rsi
       offset: &icon-offset -0.09375, 0.0625
       state: BlueShieldOfficer
@@ -117,7 +117,7 @@
   parent: JobIcon
   id: JobIconBlueshield
   icon:
-    sprite: &icon-rsi /Textures/Interface/Misc/job_icons.rsi
+    sprite: *icon-rsi
     state: BlueShieldOfficer
   jobName: синий щит
 

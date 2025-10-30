@@ -140,7 +140,7 @@ ent-UniversalIDCard = универсальная ID карта
 # Adventure
 ent-CLEAIDCard = ID карта Солдата ЦСС
     .desc = { ent-IDCardStandard.desc }
-ent-CLEAOfficerIDCard = ID карта Солдата ЦСС
+ent-CLEAOfficerIDCard = ID карта Офицера ЦСС
     .desc = { ent-IDCardStandard.desc }
 ent-BlueshieldIDCard = ID карта офицера синий щит
     .desc = { ent-IDCardStandard.desc }
