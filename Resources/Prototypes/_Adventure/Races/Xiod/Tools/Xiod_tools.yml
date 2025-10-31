@@ -6,6 +6,7 @@
 #инж
 - type: entity
   name: омнирука
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
   id: OmniHand
   description: Ручной инструмент, во всех смыслах.
@@ -92,6 +93,7 @@
 - type: entity
   name: гипорука
   parent: BaseItem
+  categories: [ HideSpawnMenu ]
   description: Устройство для быстрого введения.
   id: HypoHand
   components:
@@ -106,9 +108,12 @@
         maxVol: 15
   - type: RefillableSolution
     solution: hypospray
+    refillTime: 1.25
+    maxRefill: 5
   - type: ExaminableSolution
     solution: hypospray
   - type: Hypospray
+    drawTime: 1.25
     onlyAffectsMobs: false
   - type: UseDelay
     delay: 2 
@@ -139,6 +144,7 @@
 - type: entity
   id: DefibrillatorExo
   parent: BaseItem
+  categories: [ HideSpawnMenu ]
   name: ручной дефибриллятор
   description: РАЗРЯД!
   components:
@@ -196,6 +202,7 @@
 #уборщик
 - type: entity
   id: WeaponSprayNozzleExo
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
   name: распылитель
   description: Мощный распылитель всякой подозрительной жидкости.
@@ -297,6 +304,7 @@
 #учён
 - type: entity
   name: ручной излучатель М.А.Р.Т.Ы.Х.
+  categories: [ HideSpawnMenu ]
   parent: BaseWeaponBatterySmall
   id: WeaponPistolCHIMPExo
   description: То, что это маленький М.А.Р.Т.Ы.Х., не означает, что он не может бить как М.А.К.А.К.
@@ -365,6 +373,7 @@
 - type: entity
   name: ручной крюк
   parent: WeaponGrapplingGun
+  categories: [ HideSpawnMenu ]
   id: WeaponGrapplingGunExo
   components:
     - type: Sprite
@@ -424,6 +433,10 @@
   - type: Gun
     selectedMode: FullAuto
     fireRate: 8
+    minAngle: 4
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 16
     availableModes:
       - FullAuto
     soundGunshot:

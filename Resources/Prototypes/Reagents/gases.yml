@@ -14,7 +14,7 @@
         scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant ]
+          type: [ Human, Animal, Rat, Plant, InsectSerpentide ]
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         scaling: true
@@ -48,7 +48,7 @@
         scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant ]
+          type: [ Human, Animal, Rat, Plant, InsectSerpentide ]
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         scaling: true
@@ -86,10 +86,6 @@
         damage:
           types:
             Heat: 10
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ InsectSerpentide ]
 #Adventure-end
 
 - type: reagent
@@ -140,6 +136,7 @@
         clear: True
         time: 5
       - !type:Oxygenate
+        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ PlasMan ]
@@ -278,7 +275,7 @@
         scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Vox, Slime ]
+          type: [ Vox, Slime, InsectSerpentide ]
       # Converts Nitrogen into Ammonia
       - !type:ModifyLungGas
         scaling: true
@@ -296,12 +293,6 @@
         ratios:
           NitrousOxide: 1.0
           Nitrogen: -1.0
-#Adventure-start
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ InsectSerpentide ]
-#Adventure-end
 
 - type: reagent
   id: NitrousOxide
