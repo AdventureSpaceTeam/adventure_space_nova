@@ -144,3 +144,5 @@ ent-CLEAOfficerIDCard = ID карта Офицера ЦСС
     .desc = { ent-IDCardStandard.desc }
 ent-BlueshieldIDCard = ID карта офицера синий щит
     .desc = { ent-IDCardStandard.desc }
+ent-SOOIDCard = ID карта ОСО
+    .desc = { ent-IDCardStandard.desc }
