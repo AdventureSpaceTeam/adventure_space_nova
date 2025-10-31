@@ -12,7 +12,12 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Client._Adventure.Sponsors; // Adventure sponsors
+// Adventure sponsors start
+using Content.Client._Adventure.Sponsors;
+using Content.Shared.Humanoid.Prototypes;
+using System.Linq;
+using System.Text;
+// Adventure sponsors end
 
 namespace Content.Client.Players.PlayTimeTracking;
 
@@ -95,6 +100,45 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         Updated?.Invoke();
     }
 
+    // Adventure check start
+    /// <summary>
+    /// Species requirement check
+    /// </summary>
+    public bool CheckSpeciesRequirement(
+        HumanoidCharacterProfile? profile,
+        HashSet<ProtoId<SpeciesPrototype>> speciesSet,
+        bool inverted,
+        [NotNullWhen(false)] out FormattedMessage? reason)
+    {
+        reason = null;
+        if (profile is null)
+            return true;
+
+        var sb = new StringBuilder();
+        sb.Append("[color=yellow]");
+        foreach (var s in speciesSet)
+        {
+            sb.Append(Loc.GetString(_prototypes.Index(s).Name) + " ");
+        }
+        sb.Append("[/color]");
+
+        if (!inverted)
+        {
+            reason = FormattedMessage.FromMarkupPermissive($"{Loc.GetString("role-timer-whitelisted-species")}\n{sb}");
+            if (!speciesSet.Contains(profile.Species))
+                return false;
+        }
+        else
+        {
+            reason = FormattedMessage.FromMarkupPermissive($"{Loc.GetString("role-timer-blacklisted-species")}\n{sb}");
+            if (speciesSet.Contains(profile.Species))
+                return false;
+        }
+
+        return true;
+    }
+    // Adventure check end
+
     /// <summary>
     /// Check a list of job- and antag prototypes against the current player, for requirements and bans.
     /// </summary>
@@ -149,12 +193,28 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         if (!CheckWhitelist(job, out reason))
             return false;
 
+        // Adventure checks start
+        var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job) ?? new HashSet<JobRequirement>();
+
+        foreach (var req in reqs)
+        {
+            if (req is SpeciesRequirement speciesReq)
+            {
+                if (!CheckSpeciesRequirement(profile, speciesReq.Species, speciesReq.Inverted, out reason))
+                {
+                    return false;
+                }
+            }
+        }
+
         if (_sponsors.GetMySponsor()?.Level >= job.SponsorOpenMinLevel)
             return true;
+        // Adventure checks end
 
-        // Check other role requirements
-        var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job);
-        if (!CheckRoleRequirements(reqs, profile, out reason))
+        // Adventure other check
+        var otherReqs = reqs.Where(r => r is not SpeciesRequirement).ToHashSet();
+
+        if (!CheckRoleRequirements(otherReqs, profile, out reason))
             return false;
 
         return true;
