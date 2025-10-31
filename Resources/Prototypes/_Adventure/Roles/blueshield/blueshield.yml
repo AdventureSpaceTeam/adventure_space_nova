@@ -64,10 +64,15 @@
   name: ID карта офицера синий щит
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/blueshield/PDA/ID.rsi
     layers:
     - state: silver
-    - state: idblueshield
+    - state: stripe_top
+      color: &color-centcomm-top "#134975"
+    - state: stripe_bottom
+      color: &color-centcomm-bottom "#0d304d"
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625
+      state: BlueShieldOfficer
   - type: Item
     heldPrefix: silver
   - type: PresetIdCard
@@ -112,7 +117,7 @@
   parent: JobIcon
   id: JobIconBlueshield
   icon:
-    sprite: /Textures/_Adventure/Roles/blueshield/PDA/JobIcons.rsi
+    sprite: *icon-rsi
     state: BlueShieldOfficer
   jobName: синий щит
 

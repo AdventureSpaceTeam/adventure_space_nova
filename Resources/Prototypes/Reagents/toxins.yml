@@ -67,16 +67,16 @@
         emote: Yawn
         showInChat: true
         probability: 0.1
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:ModifyStatusEffect
         effectProto: StatusEffectDrowsiness
         time: 4
-        type: Add
+        type: Update
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: ChloralHydrate
           min: 20
         damage:
@@ -99,34 +99,33 @@
             types:
               Poison: 2
           conditions:
-          - !type:OrganType # Adventure
-            type: InsectSerpentide
-            shouldHave: false
-        - !type:ChemVomit
+          - !type:MetabolizerTypeCondition # Adventure
+            type: [InsectSerpentide]
+            inverted: true
+        - !type:Vomit
           conditions:
-          - !type:OrganType # Adventure
-            type: InsectSerpentide
-            shouldHave: false
-          - !type:ReagentThreshold
+          - !type:MetabolizerTypeCondition # Adventure
+            type: [InsectSerpentide]
+            inverted: true
+          - !type:ReagentCondition
+            reagent: GastroToxin
             min: 2
           probability: 0.2
 # Adventure-edit-start
-    Food: 
-      effects: 
+    Food:
+      effects:
       - !type:AdjustReagent
         conditions:
-        - !type:OrganType
-          type: InsectSerpentide
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [InsectSerpentide]
         reagent: Protein
         amount: 0.5
     Drink:
       effects:
-      - !type:AdjustReagent 
+      - !type:AdjustReagent
         conditions:
-        - !type:OrganType
-          type: InsectSerpentide
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [InsectSerpentide]
         reagent: Protein
         amount: 0.5
 # Adventure-edit-end
@@ -171,7 +170,7 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false
         damage:
           types:
@@ -210,7 +209,7 @@
       - !type:SatiateThirst
         factor: -1.5
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -233,7 +232,7 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false
         damage:
           types:
@@ -283,7 +282,7 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false
         damage:
           types:
@@ -405,7 +404,8 @@
       # todo: cough, sneeze
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Histamine
           min: 45
         damage:
           groups:
@@ -419,7 +419,8 @@
         probability: 0.1
       - !type:PopupMessage
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Histamine
           min: 45
         type: Local
         visualType: Medium
@@ -441,16 +442,16 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Animal # Applying damage to the mobs with lower metabolism capabilities
+        - !type:MetabolizerTypeCondition
+          type: [Animal] # Applying damage to the mobs with lower metabolism capabilities
         damage:
           types:
             Poison: 0.4
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.04 #Scaled for time, not metabolismrate.
         conditions:
-          - !type:OrganType
-            type: Animal
+          - !type:MetabolizerTypeCondition
+            type: [Animal]
 
 - type: reagent
   id: Amatoxin
@@ -469,25 +470,23 @@
           types:
             Poison: 3
         conditions: # Adventure
-        - !type:OrganType 
-          type: PigMan
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [PigMan]
+          inverted: true
     Food: # Adventure
-      effects: 
+      effects:
       - !type:AdjustReagent # Adventure
         conditions:
-        - !type:OrganType
-          type: PigMan
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [PigMan]
         reagent: Protein
         amount: 0.5
     Drink: # Adventure
       effects:
       - !type:AdjustReagent # Adventure
         conditions:
-        - !type:OrganType
-          type: PigMan
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [PigMan]
         reagent: Protein
         amount: 0.5
 
@@ -522,7 +521,8 @@
       effects:
         - !type:CauseZombieInfection
           conditions:
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
+              reagent: Romerol
               min: 5
 
 - type: reagent
@@ -538,79 +538,39 @@
       effects:
       - !type:PopupMessage
         conditions:
-          - !type:OrganType
-            type: Animal
-            shouldHave: false
-          - !type:OrganType # Adventure
-            type: PigMan
-            shouldHave: false
-          - !type:OrganType
-            type: Vox
-            shouldHave: false
-          - !type:OrganType # Adventure
-            type: InsectSerpentide
-            shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Animal, Vox, PigMan, InsectSerpentide ] # Adventure
+          inverted: true
         type: Local
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-sick" ]
         probability: 0.5
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.1
         conditions:
-          - !type:OrganType # Adventure
-            type: PigMan
-            shouldHave: false
-          - !type:OrganType
-            type: Animal
-            shouldHave: false
-          - !type:OrganType
-            type: Vox
-            shouldHave: false
-          - !type:OrganType # Adventure
-            type: InsectSerpentide
-            shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Animal, Vox, PigMan, InsectSerpentide ] # Adventure
+          inverted: true
       - !type:HealthChange
         conditions:
-        - !type:OrganType # Adventure
-          type: PigMan
-          shouldHave: false
-        - !type:OrganType
-          type: Animal
-          shouldHave: false
-        - !type:OrganType
-          type: Vox
-          shouldHave: false
-        - !type:OrganType # Adventure
-          type: InsectSerpentide
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Animal, Vox, PigMan, InsectSerpentide ] # Adventure
+          inverted: true
         damage:
           types:
             Poison: 1
       - !type:AdjustReagent
         conditions:
-        - !type:OrganType
-          type: Animal
-        reagent: Protein
-        amount: 0.5
-      - !type:AdjustReagent # Adventure
-        conditions:
-        - !type:OrganType # Adventure
-          type: PigMan
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [ Animal, InsectSerpentide, PigMan ] # Adventure
         reagent: Protein
         amount: 0.5
       - !type:AdjustReagent
         conditions:
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [ Vox ]
         reagent: Protein
         amount: 0.25
-      - !type:AdjustReagent # Adventure
-        conditions:
-        - !type:OrganType # Adventure
-          type: InsectSerpentide
-        reagent: Protein
-        amount: 0.5
 
 - type: reagent
   id: Allicin
@@ -626,10 +586,11 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Allicin
           min: 1
-        - !type:OrganType
-          type: Animal
+        - !type:MetabolizerTypeCondition
+          type: [Animal]
         damage:
           types:
             Poison: 0.06
@@ -652,7 +613,6 @@
       - !type:GenericStatusEffect
         key: Pacified
         component: Pacified
-        type: Add
         time: 4
 
 - type: reagent
@@ -675,10 +635,11 @@
         probability: 0.2
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Honk
           min: 1
-        - !type:OrganType
-          type: Animal
+        - !type:MetabolizerTypeCondition
+          type: [ Animal ]
         damage:
           types:
             Poison: 0.06
@@ -732,9 +693,10 @@
       effects:
       - !type:Jitter
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Vestine
           min: 5
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.8
         sprintSpeedModifier: 0.8
       - !type:HealthChange
@@ -772,7 +734,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:Hunger
+        - !type:HungerCondition
           max: 50
         damage:
           types:
@@ -796,30 +758,30 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Arachnid
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Arachnid]
+          inverted: true
         damage:
           types:
             Poison: 1.6
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: Mechanotoxin
           min: 2
-        - !type:OrganType
-          type: Arachnid
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Arachnid]
+          inverted: true
         walkSpeedModifier: 0.8
         sprintSpeedModifier: 0.8
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: Mechanotoxin
           min: 4
-        - !type:OrganType
-          type: Arachnid
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Arachnid]
+          inverted: true
         walkSpeedModifier: 0.4
         sprintSpeedModifier: 0.4
 
@@ -836,11 +798,5 @@
       - !type:SatiateHunger
         factor: 3
         conditions:
-        - !type:OrganType
-          type: Vox
-# Adventure-edit-start
-        - !type:OrganType
-          type: PigMan
-        - !type:OrganType
-          type: InsectSerpentide
-# Adventure-edit-end
+        - !type:MetabolizerTypeCondition
+          type: [ Vox, PigMan, InsectSerpentide ] # Adventure

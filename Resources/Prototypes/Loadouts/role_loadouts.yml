@@ -10,6 +10,7 @@
   - CaptainOuterClothing
   - Survival
   - Trinkets
+  - CaptainJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -27,6 +28,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - HoPJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -58,6 +60,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - PassengerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -71,10 +74,10 @@
   - BartenderJumpsuit
   - CommonBackpack
   - BartenderOuterClothing
-  - BartenderGoldenShaker
   - Glasses
   - Survival
   - Trinkets
+  - BartenderJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -89,6 +92,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ServiceWorkerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -106,6 +110,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ChefJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -120,6 +125,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - LibrarianJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -135,6 +141,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - LawyerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -154,6 +161,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ChaplainJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -171,6 +179,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - JanitorJobTrinkets
   - JanitorPlunger
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
@@ -189,6 +198,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - BotanistJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -207,6 +217,7 @@
   - Glasses
   - SurvivalClown
   - Trinkets
+  - ClownJobTrinkets
   - BrassGroup #Adventure
   - PantsGroup #Adventure
 
@@ -225,6 +236,7 @@
   - Glasses
   - SurvivalMime
   - Trinkets
+  - MimeJobTrinkets
   - BrassGroup #Adventure
   - PantsGroup #Adventure
 
@@ -240,6 +252,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - MusicianJobTrinkets
   - Instruments
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
@@ -260,6 +273,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - QuartermasterJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -278,6 +292,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - CargoTechnicianJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -295,6 +310,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - SalvageSpecialistJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -313,6 +329,7 @@
   - ChiefEngineerShoes
   - SurvivalExtended
   - Trinkets
+  - ChiefEngineerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -326,6 +343,7 @@
   - StationEngineerBackpack
   - SurvivalExtended
   - Trinkets
+  - TechnicalAssistantJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -343,6 +361,7 @@
   # Adventure- StationEngineerID
   - SurvivalExtended
   - Trinkets
+  - StationEngineerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -359,6 +378,7 @@
   - AtmosphericTechnicianShoes
   - SurvivalExtended
   - Trinkets
+  - AtmosphericTechnicianJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -379,6 +399,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ResearchDirectorJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -399,6 +420,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ScientistJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -413,6 +435,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ResearchAssistantJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -431,6 +454,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - HeadofSecurityJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
@@ -449,6 +473,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - WardenJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
@@ -468,6 +493,7 @@
   - SecurityBelt
   - SurvivalSecurity
   - Trinkets
+  - SecurityJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
@@ -485,6 +511,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - DetectiveJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
@@ -498,6 +525,7 @@
   - SecurityBackpack
   - SurvivalSecurity
   - Trinkets
+  - SecurityCadetJobTrinkets
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -519,6 +547,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -539,6 +568,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -553,6 +583,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -571,6 +602,7 @@
   - MedicalShoes
   - SurvivalMedical
   - Trinkets
+  - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -590,6 +622,7 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -604,6 +637,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ZookeeperJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -618,6 +652,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - ReporterJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -632,6 +667,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - PsychologistJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -647,6 +683,7 @@
   - Glasses
   - Survival
   - Trinkets
+  - BoxerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure

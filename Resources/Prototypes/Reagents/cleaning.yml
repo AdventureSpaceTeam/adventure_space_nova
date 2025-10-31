@@ -19,41 +19,39 @@
             Poison: 2
             Caustic: 2
         conditions: # Adventure
-        - !type:OrganType 
-          type: Drask
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
+          inverted: true
       - !type:PopupMessage
         type: Local
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-burning-insides" ]
         probability: 0.33
         conditions: # Adventure
-        - !type:OrganType 
-          type: Drask
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
+          inverted: true
       - !type:Emote
         emote: Scream
         probability: 0.15
         conditions: # Adventure
-        - !type:OrganType 
-          type: Drask
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
+          inverted: true
     Drink: # Adventure
       effects:
       - !type:AdjustReagent # Adventure
         conditions:
-        - !type:OrganType
-          type: Drask
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
         reagent: Protein
         amount: 0.5
     Food: # Adventure
       effects:
       - !type:AdjustReagent # Adventure
         conditions:
-        - !type:OrganType
-          type: Drask
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
         reagent: Protein
         amount: 0.5
 
@@ -87,36 +85,36 @@
   metabolisms:
     Food:
       effects:
-      - !type:ChemVomit
+      - !type:Vomit
         conditions:
-        - !type:OrganType # Adventure
-          type: Drask
-          shouldHave: false
-        - !type:ReagentThreshold
+        - !type:MetabolizerTypeCondition # Adventure
+          type: [Drask]
+          inverted: true
+        - !type:ReagentCondition
+          reagent: SoapReagent
           min: 6
         probability: 0.20
       - !type:AdjustReagent # Adventure
         conditions:
-        - !type:OrganType
-          type: Drask
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
         reagent: Protein
         amount: 0.5
     Drink:
       effects:
-      - !type:ChemVomit
+      - !type:Vomit
         conditions:
-        - !type:OrganType # Adventure
-          type: Drask
-          shouldHave: false
-        - !type:ReagentThreshold
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
+          inverted: true
+        - !type:ReagentCondition
+          reagent: SoapReagent
           min: 6
         probability: 0.20
       - !type:AdjustReagent # Adventure
         conditions:
-        - !type:OrganType
-          type: Drask
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [Drask]
         reagent: Protein
         amount: 0.5
 
@@ -155,7 +153,7 @@
       methods: [ Touch ]
       effects:
       # pva glue? no, antibiotic glue for sealing wounds
-      - !type:ModifyBleedAmount
+      - !type:ModifyBleed
         amount: -1.5
   metabolisms:
     Narcotic:
@@ -169,8 +167,6 @@
       - !type:GenericStatusEffect
         key: Muted
         component: Muted
-        type: Add
         time: 5
-        refresh: false
   footstepSound:
     collection: FootstepSlime

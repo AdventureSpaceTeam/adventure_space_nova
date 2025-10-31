@@ -20,7 +20,7 @@
       effects:
         - !type:HealthChange
           conditions:
-          - !type:Temperature
+          - !type:TemperatureCondition
             max: 213.15
           damage:
             groups:
