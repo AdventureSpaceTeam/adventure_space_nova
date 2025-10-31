@@ -87,6 +87,7 @@
           types:
             Heat: 10
       - !type:Oxygenate
+        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ InsectSerpentide ]
@@ -140,6 +141,7 @@
         clear: True
         time: 5
       - !type:Oxygenate
+        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ PlasMan ]
@@ -298,6 +300,7 @@
           Nitrogen: -1.0
 #Adventure-start
       - !type:Oxygenate
+        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ InsectSerpentide ]
