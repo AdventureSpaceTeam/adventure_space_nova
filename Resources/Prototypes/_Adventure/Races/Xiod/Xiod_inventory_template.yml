@@ -56,7 +56,7 @@
       slotGroup: MainHotbar
       stripTime: 3
       uiWindowPos: 2,0
-      strippingWindowPos: 2,5
+      strippingWindowPos: 0,5
       dependsOn: exo
       dependsOnComponents:
       - type: AllowSuitStorage
@@ -68,7 +68,7 @@
       slotGroup: SecondHotbar
       stripTime: 6
       uiWindowPos: 2,1
-      strippingWindowPos: 2,4
+      strippingWindowPos: 2,5
       dependsOn: exo
       displayName: ID
     - name: belt
@@ -81,13 +81,3 @@
       strippingWindowPos: 1,5
       dependsOn: exo
       displayName: Belt
-    - name: back
-      slotTexture: back
-      fullTextureName: template_small
-      slotFlags: BACK
-      slotGroup: SecondHotbar
-      stripTime: 6
-      uiWindowPos: 3,0
-      strippingWindowPos: 0,5
-      dependsOn: exo
-      displayName: Back
