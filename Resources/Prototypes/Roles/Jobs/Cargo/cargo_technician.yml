@@ -21,6 +21,7 @@
   equipment:
     ears: ClothingHeadsetCargo
     pocket1: AppraisalTool
+    exo: ClothingOuterExoCargo # Adventure
   #storage:
     #back:
     #- Stuff

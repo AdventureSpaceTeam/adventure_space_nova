@@ -29,6 +29,7 @@ public enum SlotFlags
     PANTS = 1 << 16, // Adventure-Slots
     BRASS = 1 << 17, // Adventure-Slots
     IPC = 1 << 18, // Adventure-Slots
+    EXO = 1 << 19, // Adventure-Slots
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

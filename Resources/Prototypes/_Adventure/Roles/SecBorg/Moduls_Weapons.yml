@@ -38,6 +38,8 @@
   id: WeaponLaserSecBorg
   description: Для особо буйных.
   components:
+  - type: Item
+    sprite: _Adventure/Roles/BorgDep/SecBorg/Borg_laser_gun.rsi
   - type: Sprite
     sprite: _Adventure/Roles/BorgDep/SecBorg/Borg_laser_gun.rsi
     layers:

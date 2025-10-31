@@ -21,6 +21,7 @@
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
     ears: ClothingHeadsetSecurity
+    exo: ClothingOuterExoBattary # Adventure
   inhand:
     - BriefcaseBrownFilled
   storage:

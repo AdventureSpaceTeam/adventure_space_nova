@@ -543,6 +543,13 @@ public abstract partial class SharedMoverController : VirtualController
             return sound != null;
         }
 
+        if (_inventory.TryGetSlotEntity(uid, "exo", out var exo) &&
+            FootstepModifierQuery.TryComp(exo, out var modifier2))
+        {
+            sound = modifier2.FootstepSoundCollection;
+            return sound != null;
+        }
+
         return TryGetFootstepSound(uid, xform, shoes != null, out sound, tileDef: tileDef);
     }
 

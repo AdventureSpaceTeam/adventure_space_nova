@@ -39,6 +39,7 @@
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltHolsterFilled
     ipc: IPCModulSec # Adventure-IPC
+    exo: ClothingOuterExoSecBattary # Adventure
   storage:
     back:
     - Flash

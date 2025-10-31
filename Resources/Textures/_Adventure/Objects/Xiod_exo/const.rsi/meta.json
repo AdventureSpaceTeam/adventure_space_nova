@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "made by borkroman",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "exo0"
+        },
+        {
+            "name": "exo1"
+        },
+        {
+            "name": "exo2"
+        },
+        {
+            "name": "exo3"
+        },
+        {
+            "name": "exo4"
+        },
+        {
+            "name": "exo5"
+        },
+        {
+            "name": "exo6"
+        },
+        {
+            "name": "exo7"
+        },
+        {
+            "name": "exo8"
+        },
+        {
+            "name": "exo9"
+        }
+    ]
+}

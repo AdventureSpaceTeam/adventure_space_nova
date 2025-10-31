@@ -18,6 +18,7 @@
     shoes: ClothingShoesLeather
     id: PsychologistPDA
     ears: ClothingHeadsetMedical
+    exo: ClothingOuterExoMedBattary # Adventure
   storage:
     back:
     - RubberStampPsychologist

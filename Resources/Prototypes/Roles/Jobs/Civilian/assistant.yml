@@ -14,6 +14,7 @@
   equipment:
     id: PassengerPDA
     ears: ClothingHeadsetGrey
+    exo: ClothingOuterExoBattary # Adventure
   #storage:
     #back:
     #- Stuff

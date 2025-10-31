@@ -28,6 +28,7 @@
     ears: ClothingHeadsetEngineering
     pocket2: BookEngineersHandbook
     ipc: IPCModulEng # Adventure-IPC
+    exo: ClothingOuterExoEngBattary # Adventure
   #storage:
     #back:
     #- Stuff

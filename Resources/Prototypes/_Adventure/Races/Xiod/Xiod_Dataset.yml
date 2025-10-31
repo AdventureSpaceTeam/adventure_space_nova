@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: NamesXiod
+  values:
+    prefix: names-xiod-dataset-
+    count: 20
