@@ -6,6 +6,7 @@
 #инж
 - type: entity
   name: омнирука
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
   id: OmniHand
   description: Ручной инструмент, во всех смыслах.
@@ -14,7 +15,7 @@
     wideAnimationRotation: 90
     damage:
       types:
-        Blunt: 5
+        Blunt: 8
     soundHit:
       collection: MetalThud
   - type: Sprite
@@ -91,6 +92,7 @@
 #мед
 - type: entity
   name: гипорука
+  categories: [ HideSpawnMenu ]
   parent: BaseItem
   description: Устройство для быстрого введения.
   id: HypoHand
@@ -106,9 +108,12 @@
         maxVol: 15
   - type: RefillableSolution
     solution: hypospray
+    refillTime: 1.25
+    maxRefill: 5
   - type: ExaminableSolution
     solution: hypospray
   - type: Hypospray
+    drawTime: 1.25
     onlyAffectsMobs: false
   - type: UseDelay
     delay: 2 
@@ -139,6 +144,7 @@
 - type: entity
   id: DefibrillatorExo
   parent: BaseItem
+  categories: [ HideSpawnMenu ]
   name: ручной дефибриллятор
   description: РАЗРЯД!
   components:
@@ -197,6 +203,7 @@
 - type: entity
   id: WeaponSprayNozzleExo
   parent: BaseItem
+  categories: [ HideSpawnMenu ]
   name: распылитель
   description: Мощный распылитель всякой подозрительной жидкости.
   components:
@@ -297,6 +304,7 @@
 #учён
 - type: entity
   name: ручной излучатель М.А.Р.Т.Ы.Х.
+  categories: [ HideSpawnMenu ]
   parent: BaseWeaponBatterySmall
   id: WeaponPistolCHIMPExo
   description: То, что это маленький М.А.Р.Т.Ы.Х., не означает, что он не может бить как М.А.К.А.К.
@@ -364,6 +372,7 @@
 #утиль
 - type: entity
   name: ручной крюк
+  categories: [ HideSpawnMenu ]
   parent: WeaponGrapplingGun
   id: WeaponGrapplingGunExo
   components:
@@ -424,6 +433,10 @@
   - type: Gun
     selectedMode: FullAuto
     fireRate: 8
+    minAngle: 4
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 16
     availableModes:
       - FullAuto
     soundGunshot:
