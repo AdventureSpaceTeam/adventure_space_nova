@@ -1,5 +1,5 @@
 using Content.Shared._Adventure.TTS; // adventure tts
-using Content.Server.Chat.Systems;
+using Content.Shared.Chat;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;

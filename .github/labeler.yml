@@ -1,0 +1,15 @@
+"audio":
+- changed-files:
+  - any-glob-to-any-file: '**/*.ogg'
+
+"C#":
+- changed-files:
+  - any-glob-to-any-file: '**/*.cs'
+
+"sprite":
+- changed-files:
+  - any-glob-to-any-file: '**/*.rsi/*'
+
+"no C#":
+- changed-files:
+  - all-globs-to-all-files: "!**/*.cs"

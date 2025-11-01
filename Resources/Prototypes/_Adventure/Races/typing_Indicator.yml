@@ -51,3 +51,9 @@
   spritePath: _Adventure/Interface/TypingIndicators/Speech40.rsi
   typingState: trottin0
   idleState: trottin1
+
+- type: typingIndicator
+  id: Xiod
+  spritePath: _Adventure/Interface/TypingIndicators/Speech.rsi
+  typingState: xiod0
+  idleState: xiod1

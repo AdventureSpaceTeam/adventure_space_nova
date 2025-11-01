@@ -175,10 +175,15 @@
   name: ID карта Солдата ЦСС
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/other/CLEA_IDcard.rsi
     layers:
-    - state: silver
-    - state: idCLEA
+    - state: centcom
+    - state: stripe_top
+      color: &color-security-top "#cb0000"
+    - state: stripe_bottom
+      color: &color-security-bottom "#830000"
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625
+      state: ERTSecurity
   - type: PresetIdCard
     job: CLEASoldier
   - type: Item
@@ -191,10 +196,15 @@
   name: ID карта Офицера ЦСС
   components:
   - type: Sprite
-    sprite: _Adventure/Roles/SpecialForces/CLEA/other/CLEA_IDcard.rsi
     layers:
-    - state: silver
-    - state: idCLEA
+    - state: gold
+    - state: stripe_top
+      color: &color-centcomm-top "#134975"
+    - state: stripe_bottom
+      color: &color-centcomm-bottom "#0d304d"
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: ERTSecurity
   - type: PresetIdCard
     job: CLEAOfficer
   - type: Item

@@ -39,6 +39,7 @@
     pocket1: WeaponPistolMk58
     ipc: IPCModulSec
     id: SeniorOfficerPDA
+    exo: ClothingOuterExoSecBattary
   storage:
     back:
     - Flash

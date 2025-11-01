@@ -1,0 +1,136 @@
+- type: species
+  id: Xiod
+  name: Ксиод
+  roundStart: true
+  prototype: MobXiod
+  sprites: MobXiodSprites
+  markingLimits: MobXiodMarkingLimits
+  dollPrototype: MobXiodDummy
+  skinColoration: Hues
+  defaultSkinTone: "#b17ac3"
+  minAge: 30
+  youngAge: 10000
+  oldAge: 50000
+  maxAge: 100000
+  sexes:
+    - Unsexed
+  maleFirstNames: NamesXiod
+  femaleFirstNames: NamesXiod
+  naming: First
+
+- type: markingPoints
+  id: MobXiodMarkingLimits
+  onlyWhitelisted: true
+  points:
+    HeadSide:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    Head:
+      points: 1
+      required: false
+    Chest:
+      points: 1
+      required: false
+    Legs:
+      points: 4
+      required: false
+    Arms:
+      points: 4
+      required: false
+    Tail:
+      points: 1
+      required: false
+
+- type: speciesBaseSprites
+  id: MobXiodSprites
+  sprites:
+    Tail: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    HeadTop: MobHumanoidAnyMarking
+    Head: MobXiodHead
+    Chest: MobXiodTorso
+    LLeg: MobXiodLLeg
+    RLeg: MobXiodRLeg
+    Eyes: MobXiodEyes
+
+- type: humanoidBaseSprite
+  id: MobXiodEyes
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: eyes
+
+- type: humanoidBaseSprite
+  id: MobXiodHead
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobXiodHeadMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobXiodHeadFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobXiodTorso
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobXiodTorsoMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobXiodTorsoFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobXiodLLeg
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodRLeg
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll

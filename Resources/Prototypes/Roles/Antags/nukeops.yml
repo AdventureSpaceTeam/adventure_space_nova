@@ -59,6 +59,7 @@
     pocket2: PlushieCarp
     belt: ClothingBeltMilitaryWebbing
     ipc: IPCModulSyndieNuker # Adventure-IPC
+    exo: ClothingOuterExoSyndBattary # Adventure
   storage:
     back:
     - WeaponPistolViper

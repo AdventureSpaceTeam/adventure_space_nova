@@ -6,6 +6,12 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800 #3 hrs # Adventure
+# Adventure begin
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Xiod
+# Adventure end
   startingGear: ClownGear
   icon: "JobIconClown"
   supervisors: job-supervisors-hop

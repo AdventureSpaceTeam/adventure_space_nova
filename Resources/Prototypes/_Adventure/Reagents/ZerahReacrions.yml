@@ -49,9 +49,9 @@
             types:
               Poison: 1
           conditions:
-          - !type:OrganType
-            type: Zerah
-            shouldHave: false
+          - !type:MetabolizerTypeCondition
+            type: [ Zerah ]
+            inverted: true
 
 - type: reaction
   id: ZToxin
@@ -164,7 +164,7 @@
   metabolisms:
     Alcohol:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:ModifyStatusEffect
@@ -183,10 +183,10 @@
         refresh: false
       - !type:Drunk
         boozePower: 4
-      - !type:ChemVomit
+      - !type:Vomit
         probability: 0.04
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: GoodMorning
           min: 10
 

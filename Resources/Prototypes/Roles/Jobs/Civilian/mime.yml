@@ -6,6 +6,12 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 4h
+# Adventure begin
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Xiod
+# Adventure end
   startingGear: MimeGear
   icon: "JobIconMime"
   supervisors: job-supervisors-hop

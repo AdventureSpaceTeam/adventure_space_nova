@@ -26,6 +26,7 @@
   <GuideEntityEmbed Entity="MobZerah" Caption="Зерах"/>
   <GuideEntityEmbed Entity="MobResomi" Caption="Резоми"/>
   <GuideEntityEmbed Entity="MobDrask" Caption="Драск"/>
+  <GuideEntityEmbed Entity="MobXiod" Caption="Ксиод"/>
   </Box>
   <!-- <Box> #Adventure vulps
     <GuideEntityEmbed Entity="MobVulpkanin" Caption="Vulpkanin"/>

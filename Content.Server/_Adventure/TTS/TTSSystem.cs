@@ -1,4 +1,4 @@
-using Content.Server.Chat.Systems;
+using Content.Shared.Chat;
 using Content.Server.Players.RateLimiting;
 using Content.Shared.GameTicking;
 using Content.Shared.Players.RateLimiting;
@@ -149,10 +149,10 @@ public sealed partial class TTSSystem : EntitySystem
 
             var xform = xformQuery.GetComponent(session.AttachedEntity.Value);
             var distance = (sourcePos - _xforms.GetWorldPosition(xform, xformQuery)).Length();
-            if (distance > ChatSystem.VoiceRange * ChatSystem.VoiceRange)
+            if (distance > SharedChatSystem.VoiceRange * SharedChatSystem.VoiceRange)
                 continue;
 
-            RaiseNetworkEvent(distance > ChatSystem.WhisperClearRange ? obfTtsEvent : fullTtsEvent, session);
+            RaiseNetworkEvent(distance > SharedChatSystem.WhisperClearRange ? obfTtsEvent : fullTtsEvent, session);
         }
     }
 

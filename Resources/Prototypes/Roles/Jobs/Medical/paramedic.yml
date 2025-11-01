@@ -23,6 +23,7 @@
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalEMTFilled
     ipc: IPCModulMed # Adventure-IPC
+    exo: ClothingOuterExoParamedBattary # Adventure
   storage:
     back:
     - EmergencyRollerBedSpawnFolded

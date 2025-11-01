@@ -18,6 +18,7 @@
     ears: ClothingHeadsetService
     pocket1: d20Dice
     pocket2: HandLabeler # for making named bestsellers
+    exo: ClothingOuterExoBattary # Adventure
   storage:
     back:
     - BookRandom

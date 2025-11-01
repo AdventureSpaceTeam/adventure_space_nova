@@ -35,6 +35,7 @@
     - map: [ "ears" ]
     - map: [ "eyes" ]
     - map: [ "outerClothing" ]
+    - map: [ "exo" ] # Adventure
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "neck" ]
@@ -124,7 +125,7 @@
     - reagents: [Water, SpaceCleaner]
       methods: [Touch]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie
   - type: StatusEffects
     allowed:
     - Electrocution
@@ -182,6 +183,9 @@
     factions:
     - NanoTrasen
   - type: CreamPied
+  - type: ParcelWrapOverride
+    parcelPrototype: WrappedParcelHumanoid
+    wrapDelay: 5
   - type: Stripping
   - type: UserInterface
     interfaces:

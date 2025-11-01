@@ -1,0 +1,496 @@
+﻿- type: soundCollection
+  id: ActivHand
+  files:
+    - /Audio/Items/change_drill.ogg
+
+#инж
+- type: entity
+  name: омнирука
+  categories: [ HideSpawnMenu ]
+  parent: BaseItem
+  id: OmniHand
+  description: Ручной инструмент, во всех смыслах.
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    damage:
+      types:
+        Blunt: 8
+    soundHit:
+      collection: MetalThud
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+    state: omnitool-screwing
+  - type: Item
+    sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+  - type: Prying
+    enabled: false
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 1.1
+    useSound: /Audio/Items/drill_use.ogg
+  - type: ToolTileCompatible
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+          state: omnitool-screwing
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Prying
+        sprite:
+          sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+          state: omnitool-prying
+        useSound:
+          path: /Audio/Items/jaws_pry.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+          state: omnitool-wrenching
+        useSound:
+          path: /Audio/Items/ratchet.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+          state: omnitool-snipping
+        useSound:
+          path: /Audio/Items/jaws_cut.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemOmniHand
+  name: Омнирука
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/omnitool.rsi
+      state: omnitool-wrenching
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: OmniHand
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#мед
+- type: entity
+  name: гипорука
+  categories: [ HideSpawnMenu ]
+  parent: BaseItem
+  description: Устройство для быстрого введения.
+  id: HypoHand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/Tools/hypospray.rsi
+    state: hypo
+  - type: Item
+    sprite: _Adventure/Objects/Xiod_exo/Tools/hypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 15
+  - type: RefillableSolution
+    solution: hypospray
+    refillTime: 1.25
+    maxRefill: 5
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    drawTime: 1.25
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 2 
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemHypoHand
+  name: Гипорука
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/hypospray.rsi
+      state: hypo
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: HypoHand
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#парамед
+- type: entity
+  id: DefibrillatorExo
+  parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  name: ручной дефибриллятор
+  description: РАЗРЯД!
+  components:
+    - type: Sprite
+      sprite: _Adventure/Objects/Xiod_exo/Tools/defib.rsi
+      layers:
+        - state: icon
+        - state: screen
+          map: [ "enum.ToggleableVisuals.Layer" ]
+          visible: false
+          shader: unshaded
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ToggleableVisuals.Layer:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Item
+      size: Large
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Items/Defib/defib_safety_on.ogg
+      soundDeactivate:
+        path: /Audio/Items/Defib/defib_safety_off.ogg
+    - type: Defibrillator
+      zapHeal:
+        types:
+          Asphyxiation: -40
+    - type: DoAfter
+    - type: UseDelay
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemDefibrillatorExo
+  name: Ручной дефибриллятор
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/defib.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: DefibrillatorExo
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#уборщик
+- type: entity
+  id: WeaponSprayNozzleExo
+  parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  name: распылитель
+  description: Мощный распылитель всякой подозрительной жидкости.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/Tools/spraynozzle.rsi
+    state: icon
+  - type: Item
+    sprite: _Adventure/Objects/Xiod_exo/Tools/spraynozzle.rsi
+    size: Normal
+  - type: Gun
+    cameraRecoilScalar: 0
+    fireRate: 4
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/water_spray.ogg
+  - type: Absorbent
+    pickupAmount: 35
+    solutionName: tank
+    useAbsorberSolution: false
+    pickupSound:
+      path: /Audio/Effects/Fluids/vacuum-cleaner-fast.ogg
+  - type: Appearance
+  - type: SolutionAmmoProvider
+    solutionId: tank
+    proto: BulletWaterShot
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 200
+  - type: SolutionTransfer
+    transferAmount: 50
+    maxTransferAmount: 100
+    minTransferAmount: 10
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: DrawableSolution
+    solution: tank
+  - type: RefillableSolution
+    solution: tank
+  - type: DrainableSolution
+    solution: tank
+  - type: ExaminableSolution
+    solution: tank
+    exactVolume: true
+  - type: UseDelay
+    delay: 1.0
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemSprayNozzle
+  name: Рука-распылитель
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/spraynozzle.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: WeaponSprayNozzleExo
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#СБ
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemLaserSec
+  name: Активировать "Усмиритель"
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Roles/BorgDep/SecBorg/Borg_laser_gun.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: WeaponLaserSecBorg
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#учён
+- type: entity
+  name: ручной излучатель М.А.Р.Т.Ы.Х.
+  categories: [ HideSpawnMenu ]
+  parent: BaseWeaponBatterySmall
+  id: WeaponPistolCHIMPExo
+  description: То, что это маленький М.А.Р.Т.Ы.Х., не означает, что он не может бить как М.А.К.А.К.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/Tools/chimp.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      visible: false
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    storedOffset: 0,-6
+  - type: Appearance
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Gun
+    projectileSpeed: 10
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: AnomalousParticleDeltaStrong
+    fireCost: 200
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: AnomalousParticleDeltaStrong
+      fireCost: 200
+    - proto: AnomalousParticleEpsilonStrong
+      fireCost: 200
+    - proto: AnomalousParticleZetaStrong
+      fireCost: 200
+    - proto: AnomalousParticleSigmaStrong
+      fireCost: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 20
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemCHIMPExo
+  name: Ручной излучатель
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/chimp.rsi
+      state: base
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: WeaponPistolCHIMPExo
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#утиль
+- type: entity
+  name: ручной крюк
+  categories: [ HideSpawnMenu ]
+  parent: WeaponGrapplingGun
+  id: WeaponGrapplingGunExo
+  components:
+    - type: Sprite
+      sprite: _Adventure/Objects/Xiod_exo/Tools/grappling_gun.rsi
+      layers:
+        - state: base
+        - state: base-unshaded
+          map: [ "unshaded" ]
+          visible: true
+    - type: GenericVisualizer
+      visuals:
+        enum.TetherVisualsStatus.Key:
+          unshaded:
+            True: { state: base-unshaded }
+            False: { state: base-unshaded-off }
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemWeaponGrapplingGunExo
+  name: Ручной крюк
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/grappling_gun.rsi
+      state: hook
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: WeaponGrapplingGunExo
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand
+
+#Разрушитель-ЯО
+- type: entity
+  name: разрушитель S-14
+  parent: BaseWeaponBatterySmall
+  categories: [ HideSpawnMenu ]
+  id: WeaponLaserSyndExo
+  description: Огроный и мощный.
+  components:
+  - type: Item
+    sprite: _Adventure/Objects/Xiod_exo/Tools/laser_gun.rsi
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/Tools/laser_gun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 8
+    minAngle: 4
+    maxAngle: 20
+    angleIncrease: 4
+    angleDecay: 16
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletSyndExo
+    fireCost: 20
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 5
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+
+- type: entity
+  id: BulletSyndExo
+  name: летальный заряд
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 10
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/Tools/laser_gun.rsi
+    layers:
+    - state: OmniLetal
+      shader: unshaded
+  - type: PointLight
+    enabled: true
+    color: "#ff4052"
+    radius: 1.5
+    energy: 2
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemWeaponLaserSyndExo
+  name: Активировать "Разрушитель"
+  description: Активируйте инструменты своего костюма.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Adventure/Objects/Xiod_exo/Tools/laser_gun.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: WeaponLaserSyndExo
+    summonSounds:
+      collection: ActivHand 
+    retractSounds:
+      collection: ActivHand

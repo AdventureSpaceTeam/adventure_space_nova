@@ -14,17 +14,17 @@
         showInChat: true
         probability: 0.1
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
       - !type:Emote
         emote: Crying
         showInChat: true
         probability: 0.1
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -34,24 +34,25 @@
         - "Вас начинает охватывать паника."
         probability: 0.1
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
       - !type:ModifyStatusEffect
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 5
         refresh: false
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
-      - !type:ChemVomit
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
+      - !type:Vomit
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
-        - !type:ReagentThreshold
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
+        - !type:ReagentCondition
+          reagent: ZerahPoison
           min: 15
         probability: 0.3
       - !type:GenericStatusEffect
@@ -59,24 +60,26 @@
         component: TemporaryBlindness
         time: 10
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
-        - !type:ReagentThreshold
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
+        - !type:ReagentCondition
+          reagent: ZerahPoison
           min: 25
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.90
         sprintSpeedModifier: 0.90
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Zerah
-          shouldHave: false
-        - !type:ReagentThreshold
+        - !type:MetabolizerTypeCondition
+          type: [ Zerah ]
+          inverted: true
+        - !type:ReagentCondition
+          reagent: ZerahPoison
           min: 30
           max: 100
         damage:

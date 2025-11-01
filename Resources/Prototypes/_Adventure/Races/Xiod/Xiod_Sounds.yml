@@ -1,0 +1,53 @@
+﻿- type: soundCollection
+  id: XiodcreamCollection
+  files:
+  - /Audio/_Adventure/Voice/Xiod/scream1.ogg
+  - /Audio/_Adventure/Voice/Xiod/scream2.ogg
+  - /Audio/_Adventure/Voice/Xiod/scream3.ogg
+
+- type: soundCollection
+  id: XiodDeadCollection
+  files:
+  - /Audio/_Adventure/Voice/Xiod/dead1.ogg
+  - /Audio/_Adventure/Voice/Xiod/dead2.ogg
+
+- type: speechSounds
+  id: XiodSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/Xiod/speach1.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/Xiod/speach3.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/Xiod/speach2.ogg
+
+- type: emoteSounds
+  id: XiodEmote
+  params:
+    variation: 0.125
+  sounds:
+    Yawn:
+      collection: MaleYawn
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Sigh:
+      collection: MaleSigh
+    Snore:
+      collection: Snores
+    Scream:
+      collection: DraskScreamCollection
+    Laugh:
+      collection: DraskLaughCollection
+    Honk:
+      collection: BikeHorn
+    Whistle:
+      collection: Whistles
+    Crying:
+      collection: DraskCryCollection
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: XiodDeadCollection

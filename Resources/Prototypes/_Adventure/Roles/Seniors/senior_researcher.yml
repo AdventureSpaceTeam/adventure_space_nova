@@ -20,6 +20,7 @@
   equipment:
     id: SeniorResearcherPDA
     ears: ClothingHeadsetScience
+    exo: ClothingOuterExoSciBattary
   #storage:
     #back:
     #- Stuff

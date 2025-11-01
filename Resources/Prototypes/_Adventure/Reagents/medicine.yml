@@ -14,7 +14,7 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -25,7 +25,7 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical # Работает, если в крите
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -56,7 +56,7 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -68,7 +68,7 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical # Работает, если в крите
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -101,7 +101,7 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -114,7 +114,7 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical # Работает, если в крите
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -155,7 +155,8 @@
             Burn: -0.1
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold #передоз
+        - !type:ReagentCondition
+          reagent: Perfluorodecalin
           min: 4
         damage:
           types:
@@ -175,9 +176,8 @@
       effects:
       - !type:HealthChange #Работает только на воксов
         conditions:
-          - !type:OrganType
-            type: Vox
-            shouldHave: true
+          - !type:MetabolizerTypeCondition
+            type: [Vox]
         damage:
           types:
             Asphyxiation: 1.5

@@ -32,6 +32,7 @@
     neck: ClothingNeckTieRed
     pocket1: WeaponPistolMk58
     ipc: IPCModulSec # Adventure-IPC
+    exo: ClothingOuterExoSecBattary # Adventure
   storage:
     back:
     - BoxSurvivalSecurity

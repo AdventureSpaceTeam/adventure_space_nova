@@ -203,7 +203,7 @@
     state: l_hand
 
 - type: humanoidBaseSprite
-  id: MobInsectRArmFelame
+  id: MobInsectRArmFemale
   baseSprite:
     sprite: _Adventure/Races/Insect/Species/parts.rsi
     state: r_arm

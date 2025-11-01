@@ -25,6 +25,8 @@
   - Detective
   - Cryogenics
   - External
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -37,6 +39,7 @@
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltHolsterFilled
     ipc: IPCModulSec # Adventure-IPC
+    exo: ClothingOuterExoSecBattary # Adventure
   storage:
     back:
     - Flash
