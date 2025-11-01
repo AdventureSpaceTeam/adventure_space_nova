@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingBeltSecurityWebbing, ContentsExplosionResistanceBase]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase]
   id: ClothingBeltMilitaryWebbingBlueshield
   name: РПС офицера синий щит
   description: Удобный и не сковывает движений.
