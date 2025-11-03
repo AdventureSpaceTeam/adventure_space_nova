@@ -274,6 +274,12 @@ binds:
   type: State
   key: V
   mod1: Shift
+#Adventure-Start
+- function: OpenExo
+  type: State
+  key: Z
+  mod1: Shift
+#Adventure-End
 - function: ShowDebugConsole
   type: State
   key: Tilde

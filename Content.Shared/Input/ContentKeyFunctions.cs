@@ -37,6 +37,7 @@ namespace Content.Shared.Input
         public static readonly BoundKeyFunction SmartEquipSuitStorage = "SmartEquipSuitStorage";
         public static readonly BoundKeyFunction OpenBackpack = "OpenBackpack";
         public static readonly BoundKeyFunction OpenBelt = "OpenBelt";
+        public static readonly BoundKeyFunction OpenExo = "OpenExo"; // Adventure
         public static readonly BoundKeyFunction OpenAHelp = "OpenAHelp";
         public static readonly BoundKeyFunction SwapHands = "SwapHands";
         public static readonly BoundKeyFunction SwapHandsReverse = "SwapHandsReverse";

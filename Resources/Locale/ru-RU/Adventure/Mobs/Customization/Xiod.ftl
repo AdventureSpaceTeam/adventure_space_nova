@@ -10,3 +10,7 @@ marking-XiodTailsTent-tent5 = Ксиод, щупальца (Гибкие щуп�
 marking-XiodTailsTent = Ксиод, щупальца (Гибкие щупальца)
 marking-XiodTailsGreat-tent6 = Ксиод, щупальца (Великие)
 marking-XiodTailsGreat = Ксиод, щупальца (Великие)
+marking-XiodTailsBrain-tent7 = Ксиод, щупальца (Мозг)
+marking-XiodTailsBrain = Ксиод, щупальца (Мозг)
+marking-XiodTailsKudri-tent8 = Ксиод, щупальца (Кудри)
+marking-XiodTailsKudri = Ксиод, щупальца (Кудри)

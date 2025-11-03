@@ -53,6 +53,8 @@
     - 3,0,4,3
     - 6,0,7,3
     maxItemSize: Huge
+    storageOpenSound:
+      path: /Audio/_Adventure/Modsuits/ballout.ogg
     storageInsertSound:
       path: /Audio/_Adventure/Modsuits/ballout.ogg
   - type: ContainerContainer
@@ -162,6 +164,11 @@
     sprite: _Adventure/Objects/Xiod_exo/basic/helmet.rsi
   - type: Clothing
     sprite: _Adventure/Objects/Xiod_exo/basic/helmet.rsi
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+  - type: TemperatureProtection
+    heatingCoefficient: 0.2
+    coolingCoefficient: 0.2
   - type: PointLight
     color: "#a4fef4"
   - type: FlashImmunity
