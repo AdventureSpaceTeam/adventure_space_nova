@@ -30,6 +30,14 @@
     {
       "name": "tent6",
       "directions": 4
+    },
+    {
+      "name": "tent7",
+      "directions": 4
+    },
+    {
+      "name": "tent8",
+      "directions": 4
     }
   ]
 }
