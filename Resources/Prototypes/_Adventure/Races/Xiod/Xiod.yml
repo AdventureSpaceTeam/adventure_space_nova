@@ -36,6 +36,19 @@
         damage:
           types:
             Cellular: 5
+    - reagents: [ Water ]
+      methods: [ Ingestion, Injection ]
+      effects:
+      - !type:ModifyBloodLevel
+        amount: 10
+      - !type:HealthChange
+        scaling: true
+        damage:
+          types:
+            Blunt: -0.01
+            Slash: -0.01
+            Piercing: -0.01
+            Heat: -0.01
 
 - type: entity
   abstract: true
