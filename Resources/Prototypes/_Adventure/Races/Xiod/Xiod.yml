@@ -12,6 +12,30 @@
   name: Урист макАмёба
   parent: BaseMobXiod
   id: MobXiod
+  components:
+  - type: MovementSpeedModifier
+    baseWeightlessAcceleration: 1.3
+    baseWeightlessFriction: 1.3
+    baseWeightlessModifier: 1.3
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+      Acidic: [Touch, Ingestion]
+      Acidic_Organic: [Touch]
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPie
+    - reagents: [ Ethanol, Cola, Vodka ]
+      methods: [ Ingestion, Injection ]
+      effects:
+      - !type:HealthChange
+        scaling: true
+        damage:
+          types:
+            Cellular: 5
 
 - type: entity
   abstract: true

@@ -26,9 +26,6 @@
       flatReductions:
         Heat: 10
     slots: EXO
-  - type: TemperatureProtection
-    heatingCoefficient: 0.01
-    coolingCoefficient: 0.01
   - type: Item
     size: Ginormous
   - type: Armor
@@ -166,9 +163,6 @@
     sprite: _Adventure/Objects/Xiod_exo/basic/helmet.rsi
     equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
     unequipSound: /Audio/_Adventure/Modsuits/ballin.ogg
-  - type: TemperatureProtection
-    heatingCoefficient: 0.2
-    coolingCoefficient: 0.2
   - type: PointLight
     color: "#a4fef4"
   - type: FlashImmunity
@@ -990,6 +984,11 @@
     actions:
     - ActionRetractableItemWeaponLaserSyndExo
     activeIfWorn: true
+  - type: StorageFill
+    contents:
+    - id: WeaponPistolViper
+    - id: PinpointerSyndicateNuclear
+    - id: DeathAcidifierImplanter
 
 - type: entity
   parent: ClothingOuterExoSynd
@@ -1016,3 +1015,196 @@
   - type: PointLight
     color: "#fd7a6e"
   - type: ShowSyndicateIcons
+
+#мед ЯО
+- type: entity
+  parent: ClothingOuterExoSynd
+  suffix: Пустой
+  id: ClothingOuterExoSyndMed
+  name: боевой экзоскелет медика
+  description: Боевая модель экзоскелета для ксиодов-медиков.
+  components:
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/syndmed/suit.rsi
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/syndmed/suit.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.3
+        Heat: 0.4
+        Cold: 0.4
+        Caustic: 0.5
+        Radiation: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetExoSyndMed
+  - type: StorageFill
+    contents:
+    - id: SyndiHypo
+    - id: WeaponPistolViper
+    - id: HandheldHealthAnalyzer
+    - id: PinpointerSyndicateNuclear
+    - id: CombatMedipen
+    - id: DeathAcidifierImplanter
+
+- type: entity
+  parent: ClothingOuterExoSyndMed
+  suffix: Батарея
+  id: ClothingOuterExoSyndMedBattary
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+
+- type: entity
+  parent: [ClothingHeadHelmetExoSynd, ShowMedicalIcons]
+  id: ClothingHeadHelmetExoSyndMed
+  categories: [ HideSpawnMenu ]
+  name: шлем боевого экзоскелета медика
+  description: Небольшой шлем, для защиты мягких голов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/syndmed/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/syndmed/helmet.rsi
+
+#ЯО кома
+- type: entity
+  parent: ClothingOuterExoSynd
+  suffix: Пустой
+  id: ClothingOuterExoSyndHeawy
+  name: тяжёлый боевой экзоскелет ксиодов
+  description: Боевая модель экзоскелета для ксиодов.
+  components:
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/syndcom/suit.rsi
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/syndcom/suit.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.15
+        Slash: 0.15
+        Piercing: 0.15
+        Heat: 0.25
+        Cold: 0.25
+        Caustic: 0.5
+        Radiation: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetExoSyndHeawy
+
+- type: entity
+  parent: ClothingOuterExoSyndHeawy
+  suffix: Батарея
+  id: ClothingOuterExoSyndHeawyBattary
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+
+- type: entity
+  parent: ClothingHeadHelmetExoSynd
+  id: ClothingHeadHelmetExoSyndHeawy
+  categories: [ HideSpawnMenu ]
+  name: шлем тяжёлого боевого экзоскелета ксиодов
+  description: Небольшой шлем, для защиты мягких голов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/syndcom/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/syndcom/helmet.rsi
+
+#ЯО Аплинк
+- type: entity
+  parent: ClothingOuterExoSynd
+  suffix: Пустой
+  id: ClothingOuterExoSyndKiller
+  name: лёгкий боевой экзоскелет ксиодов
+  description: Боевая модель экзоскелета для ксиодов, невероятно лёгкий и быстрый.
+  components:
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/killer/suit.rsi
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/killer/suit.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.55
+        Cold: 0.55
+        Caustic: 0.5
+        Radiation: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 2.3
+    sprintModifier: 2.3
+    standing: true
+  - type: StaminaResistance
+    damageCoefficient: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetExoSyndKiller
+
+- type: entity
+  parent: ClothingOuterExoSyndKiller
+  suffix: Батарея
+  id: ClothingOuterExoSyndKillerBattary
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+
+- type: listing
+  id: UplinkClothingOuterExoSyndKillerBattary
+  name: лёгкий боевой экзоскелет ксиодов
+  description: Боевая модель экзоскелета для ксиодов, невероятно лёгкий и быстрый.
+  icon: { sprite: /Textures/_Adventure/Objects/Xiod_exo/killer/suit.rsi, state: icon }
+  productEntity: ClothingOuterExoSyndKillerBattary
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: entity
+  parent: ClothingHeadHelmetExoSynd
+  id: ClothingHeadHelmetExoSyndKiller
+  categories: [ HideSpawnMenu ]
+  name: шлем лёгкого боевого экзоскелета ксиодов
+  description: Небольшой шлем, для защиты мягких голов.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/killer/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Xiod_exo/killer/helmet.rsi

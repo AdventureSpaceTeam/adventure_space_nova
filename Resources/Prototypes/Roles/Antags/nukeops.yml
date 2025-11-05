@@ -90,6 +90,7 @@
     id: SyndiCommanderPDA
     neck: SyndicateWhistle
     outerClothing: ClothingOuterHardsuitSyndieCommander
+    exo: ClothingOuterExoSyndHeawyBattary # Adventure
   inhand:
   - NukeOpsDeclarationOfWar
 
@@ -112,6 +113,7 @@
     shoes: ClothingShoesBootsMagSyndie
     id: SyndiCorpsmanPDA
     belt: ClothingBeltMilitaryWebbingMedFilled
+    exo: ClothingOuterExoSyndMedBattary # Adventure
   storage:
     back:
     - SyndiHypo
