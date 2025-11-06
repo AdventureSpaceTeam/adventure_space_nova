@@ -1022,7 +1022,7 @@
   suffix: Пустой
   id: ClothingOuterExoSyndMed
   name: боевой экзоскелет медика
-  description: Боевая модель экзоскелета для ксиодов-медиков.
+  description: Боевая модель экзоскелета, предназначенная для ксиодов-медиков.
   components:
   - type: Clothing
     sprite: _Adventure/Objects/Xiod_exo/syndmed/suit.rsi
@@ -1140,7 +1140,7 @@
   suffix: Пустой
   id: ClothingOuterExoSyndKiller
   name: лёгкий боевой экзоскелет ксиодов
-  description: Боевая модель экзоскелета для ксиодов, невероятно лёгкий и быстрый.
+  description: Боевая модель экзоскелета для ксиодов, невероятно лёгкая.
   components:
   - type: Clothing
     sprite: _Adventure/Objects/Xiod_exo/killer/suit.rsi
@@ -1184,7 +1184,7 @@
 - type: listing
   id: UplinkClothingOuterExoSyndKillerBattary
   name: лёгкий боевой экзоскелет ксиодов
-  description: Боевая модель экзоскелета для ксиодов, невероятно лёгкий и быстрый.
+  description: Боевая модель экзоскелета для ксиодов, невероятно лёгкая.
   icon: { sprite: /Textures/_Adventure/Objects/Xiod_exo/killer/suit.rsi, state: icon }
   productEntity: ClothingOuterExoSyndKillerBattary
   cost:
