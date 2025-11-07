@@ -1,0 +1,49 @@
+- type: entity
+  name: Хеклер
+  parent: WeaponSubMachineGunDrozd
+  id: WeaponSubMachineGunHeckler
+  description: Отличный пистолет-пулемёт, производства NanoTrasen's Small Arms Division. Использует патроны калибра .35 авто.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Objects/Weapons/heckler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: Clothing
+      sprite: _Adventure/Objects/Weapons/heckler.rsi
+    - type: Gun
+      minAngle: 21
+      maxAngle: 32
+      fireRate: 6
+      burstFireRate: 6
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      selectedMode: FullAuto
+      availableModes:
+      - Burst
+      - FullAuto
+      - SemiAuto
+      shotsPerBurst: 3
+      burstCooldown: 0.375
+
+- type: entity
+  parent: [GunSafeBaseSecure, BaseSecurityContraband]
+  id: GunSafeSubMachineGunHeckler
+  name: оружейный сейф Хеклеров
+  suffix: Хеклер
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillGunSafeSubMachineGunHeckler
+        
+- type: entityTable
+  id: FillGunSafeSubMachineGunHeckler
+  table: !type:AllSelector
+    children:
+    - id: WeaponSubMachineGunHeckler
+      amount: 2
+    - id: MagazinePistolSubMachineGun
+      amount: 4

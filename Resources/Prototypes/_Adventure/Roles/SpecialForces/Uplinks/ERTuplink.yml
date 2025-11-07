@@ -283,6 +283,14 @@
   - ERTweapons
 
 - type: listing
+  id: WeaponSubMachineGunHecklerERT
+  productEntity: WeaponSubMachineGunHeckler
+  cost:
+    CentCommCrystal: 12
+  categories:
+  - ERTweapons
+
+- type: listing
   id: WeaponSubMachineGunWt550ERTs
   productEntity: WeaponSubMachineGunWt550
   cost:

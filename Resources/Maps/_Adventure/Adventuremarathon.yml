@@ -97204,7 +97204,7 @@ entities:
     - type: Transform
       pos: -41.5,53.5
       parent: 30
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunHeckler
   entities:
   - uid: 20778
     components:
