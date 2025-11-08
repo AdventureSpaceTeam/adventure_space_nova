@@ -19,6 +19,7 @@
   equipment:
     ears: ClothingHeadsetScience
     id: SciencePDA # Adventure
+    exo: ClothingOuterExoSciBattary # Adventure
   #storage:
     #back:
     #- Stuff

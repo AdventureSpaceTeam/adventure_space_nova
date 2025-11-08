@@ -1,0 +1,519 @@
+﻿- type: entity
+  parent: BaseItem
+  id: ExoFrameStart
+  name: каркас экзоскелета ксиодов
+  description: Пустая оболочка.. Абсолютно пустая.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/const.rsi
+    state: exo0
+    noRot: true
+  - type: Tag
+    tags:
+    - ExoFrameStart
+  - type: Appearance
+  - type: MechAssemblyVisuals
+    statePrefix: exo
+  - type: Construction
+    graph: ExoFrame
+    node: start
+    defaultTarget: exoframe
+  - type: Item
+    size: Huge
+
+- type: Tag
+  id: ExoFrameStart
+
+- type: latheRecipe
+  parent: BaseRoboticsRecipe
+  id: ExoFrame
+  result: ExoFrameStart
+  materials:
+    Steel: 1500
+
+- type: entity
+  parent: BaseItem
+  id: ExoFrameEnd
+  name: каркас экзоскелета ксиодов
+  description: Пустая оболочка.. Абсолютно пустая.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Xiod_exo/const.rsi
+    state: exo9
+  - type: Tag
+    tags:
+    - ExoFrameEnd
+  - type: Item
+    size: Huge
+
+- type: Tag
+  id: ExoFrameEnd
+
+#крафт каркаса
+- type: constructionGraph
+  id: ExoFrame
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: exoframe
+      steps:
+      - tool: Anchoring
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 1
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 1
+
+      - component: PowerCell
+        name: батарейку
+        doAfter: 2
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+
+      - material: Cable
+        doAfter: 2
+        amount: 10
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 2
+
+      - tool: Cutting
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 3
+
+      - material: Glass
+        doAfter: 2
+        amount: 5
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 4
+
+      - material: Steel
+        doAfter: 2
+        amount: 5
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 5
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 5
+
+      - material: Steel
+        doAfter: 2
+        amount: 5
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - tool: Cutting
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 6
+
+      - material: Steel
+        doAfter: 2
+        amount: 5
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 7
+
+      - tool: Screwing
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 7
+
+      - material: Steel
+        doAfter: 2
+        amount: 5
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 8
+
+      - tool: Anchoring
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 8
+
+      - tool: Screwing
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 9
+
+      - tool: Screwing
+        doAfter: 2
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 9
+
+  - node: exoframe
+    actions:
+    - !type:BuildMech
+      mechPrototype: ExoFrameEnd
+
+#спец крафт
+
+#стандартный
+- type: constructionGraph
+  id: ExoBase
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exobase
+          steps:
+            - tag: PlatingCivillianModsuit
+              name: покрытие гражданского РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: civillian-plating
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exobase
+      entity: ClothingOuterExoNTCraft
+
+- type: construction
+  name: экзоскелет ксиодов
+  id: ExoBase
+  graph: ExoBase
+  startNode: start
+  targetNode: exobase
+  category: construction-category-clothing
+  description: Стандартная модель экзоскелета для ксиодов.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/basic/suit.rsi, state: icon }
+  objectType: Item
+
+#инж
+- type: constructionGraph
+  id: ExoEng
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exoeng
+          steps:
+            - tag: PlatingEngineerModsuit
+              name: покрытие инженерного РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: engineering-plating
+            - tag: Powerdrill
+              name: электродрель
+              icon:
+                sprite: Objects/Tools/drill.rsi
+                state: drill_screw
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exoeng
+      entity: ClothingOuterExoEng
+
+- type: construction
+  name: инженерный экзоскелет ксиодов
+  id: ExoEng
+  graph: ExoEng
+  startNode: start
+  targetNode: exoeng
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами-инженерами.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/eng/suit.rsi, state: icon }
+  objectType: Item
+
+#атмос
+- type: constructionGraph
+  id: ExoAtmo
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exoatmo
+          steps:
+            - tag: PlatingAtmosphericModsuit
+              name: покрытие РИГ-а атмосферного техника
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: atmospheric-plating
+            - tag: Powerdrill
+              name: электродрель
+              icon:
+                sprite: Objects/Tools/drill.rsi
+                state: drill_screw
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exoatmo
+      entity: ClothingOuterExoAtmo
+
+- type: construction
+  name: экзоскелет атмосферного техника
+  id: ExoAtmo
+  graph: ExoAtmo
+  startNode: start
+  targetNode: exoatmo
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами-атмосами.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/atmo/suit.rsi, state: icon }
+  objectType: Item
+
+#врач
+- type: constructionGraph
+  id: ExoMed
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exomed
+          steps:
+            - tag: PlatingMedicalModsuit
+              name: покрытие медицинского РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: medical-plating
+            - tag: GlassBeaker
+              name: мензурка
+              icon:
+                sprite: Objects/Specific/Chemistry/beaker.rsi
+                state: beaker
+              doAfter: 2
+            - tag: Syringe
+              name: шприц
+              icon:
+                sprite: Objects/Specific/Chemistry/syringe.rsi
+                state: syringe_base0
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exomed
+      entity: ClothingOuterExoMed
+
+- type: construction
+  name: медицинский экзоскелет ксиодов
+  id: ExoMed
+  graph: ExoMed
+  startNode: start
+  targetNode: exomed
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами-врачами.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/med/suit.rsi, state: icon }
+  objectType: Item
+
+#уборщик
+- type: constructionGraph
+  id: ExoJan
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exojan
+          steps:
+            - tag: PlatingMedicalModsuit
+              name: покрытие медицинского РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: medical-plating
+            - tag: GlassBeaker
+              name: мензурка
+              icon:
+                sprite: Objects/Specific/Chemistry/beaker.rsi
+                state: beaker
+              doAfter: 2
+            - tag: Soap
+              name: мыло
+              icon:
+                sprite: Objects/Specific/Janitorial/soap.rsi
+                state: soap-4
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exojan
+      entity: ClothingOuterExoJan
+
+- type: construction
+  name: экзоскелет ксиода-уборщика
+  id: ExoJan
+  graph: ExoJan
+  startNode: start
+  targetNode: exojan
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами-уборщиками.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/jani/suit.rsi, state: icon }
+  objectType: Item
+
+#сб
+- type: constructionGraph
+  id: ExoSec
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exosec
+          steps:
+            - tag: PlatingSecurityModsuit
+              name: покрытие охранного РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: security-plating
+            - tag: Taser
+              name: станнер
+              icon:
+                sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+                state: base
+              doAfter: 2
+            - tag: HudSecurity
+              name: визор охраны
+              icon:
+                sprite: Clothing/Eyes/Hud/sec.rsi
+                state: icon
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exosec
+      entity: ClothingOuterExoSec
+
+- type: construction
+  name: экзоскелет охраны
+  id: ExoSec
+  graph: ExoSec
+  startNode: start
+  targetNode: exosec
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами Службы Безопасности.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/sec/suit.rsi, state: icon }
+  objectType: Item
+
+#утиль
+- type: constructionGraph
+  id: ExoSalv
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exosalv
+          steps:
+            - tag: PlatingAsteroidModsuit
+              name: покрытие РИГ-а утилизатора
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: engineering-plating
+            - material: Cable
+              amount: 5
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exosalv
+      entity: ClothingOuterExoSalv
+
+- type: construction
+  name:  экзоскелет утилизатора
+  id: ExoSalv
+  graph: ExoSalv
+  startNode: start
+  targetNode: exosalv
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами-утилизаторами.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/salv/suit.rsi, state: icon }
+  objectType: Item
+
+#учён
+- type: constructionGraph
+  id: ExoSci
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: exosci
+          steps:
+            - tag: PlatingRNDModsuit
+              name: покрытие научного РИГ-а
+              icon:
+                sprite: _Adventure/Objects/Modsuits/plating.rsi
+                state: rnd-plating
+            - material: Cable
+              amount: 5
+              doAfter: 2
+            - tag: ExoFrameEnd
+              name: каркас экзоскелета ксиодов
+              icon:
+                sprite: _Adventure/Objects/Xiod_exo/const.rsi
+                state: exo9
+              doAfter: 2
+    - node: exosci
+      entity: ClothingOuterExoSci
+
+- type: construction
+  name:  научный экзоскелет ксиодов
+  id: ExoSci
+  graph: ExoSci
+  startNode: start
+  targetNode: exosci
+  category: construction-category-clothing
+  description: Модель экзоскелета, используемая ксиодами-учёными.
+  icon: { sprite: _Adventure/Objects/Xiod_exo/sci/suit.rsi, state: icon }
+  objectType: Item

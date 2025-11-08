@@ -15,6 +15,9 @@
   - type: Appearance
   - type: Stack
     stackType: Magmatite
+  - type: Tag
+    tags:
+      - Ore
   - type: Item
     size: Large
   - type: PointLight

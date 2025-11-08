@@ -103,6 +103,9 @@
       "name": "welded"
     },
     {
+      "name": "sparks"
+    },
+    {
       "name": "emergency_unlit",
       "delays": [
         [

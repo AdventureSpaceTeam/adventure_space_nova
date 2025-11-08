@@ -21,6 +21,7 @@
     shoes: ClothingShoesBootsLaceup
     id: MusicianPDA
     ears: ClothingHeadsetService
+    exo: ClothingOuterExoBattary # Adventure
   #storage:
     #back:
     #- Stuff

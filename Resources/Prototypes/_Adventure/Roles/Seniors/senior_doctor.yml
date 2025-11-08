@@ -29,6 +29,7 @@
     belt: ClothingBeltMedicalFilled
     ipc: IPCModulMed # Adventure-IPC
     id: SeniorPhysicianPDA # Adventure
+    exo: ClothingOuterExoMedBattary # Adventure
   #storage:
     #back:
     #- Stuff

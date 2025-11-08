@@ -21,6 +21,8 @@
   - Service
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -36,6 +38,7 @@
     pocket1: WeaponPistolMk58
     pocket2: BookSecurity
     ipc: IPCModulSec # Adventure-IPC
+    exo: ClothingOuterExoSecBattary # Adventure
   storage:
     back:
     - Flash

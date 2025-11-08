@@ -28,6 +28,7 @@
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
     ipc: IPCModulEng # Adventure-IPC
+    exo: ClothingOuterExoAtmoBattary # Adventure
   #storage:
     #back:
     #- Stuff

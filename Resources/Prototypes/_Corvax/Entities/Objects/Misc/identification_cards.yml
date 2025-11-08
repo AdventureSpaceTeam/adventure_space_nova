@@ -3,21 +3,33 @@
   id: IAAIDCard
   name: internal affairs agent ID card
   components:
-    - type: Sprite
-      layers:
-        - state: silver
-        - state: idGenericCommand # Adventure-Resprite
-    - type: PresetIdCard
-      job: IAA
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: stripe_top
+      color: &color-centcomm-top "#134975"
+    - state: stripe_bottom
+      color: &color-centcomm-bottom "#0d304d"
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625
+      state: IAA
+  - type: PresetIdCard
+    job: IAA
 
 - type: entity
   parent: IDCardStandard
   id: PilotIDCard
   name: pilot ID card
   components:
-    - type: Sprite
-      layers:
-        - state: default
-        - state: idGenericSecurity # Adventure-Resprite
-    - type: PresetIdCard
-      job: Pilot
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: &color-security-top "#cb0000"
+    - state: stripe_bottom
+      color: &color-security-bottom "#830000"
+    - sprite: *icon-rsi
+      offset: *icon-offset
+      state: Pilot
+  - type: PresetIdCard
+    job: Pilot

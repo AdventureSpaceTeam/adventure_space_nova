@@ -18,6 +18,8 @@
   - Service
   - External
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -30,6 +32,7 @@
     pocket1: WeaponPistolMk58
     ipc: IPCModulSec # Adventure-IPC
     id: SecurityPDA # Adventure
+    exo: ClothingOuterExoSecBattary # Adventure
   storage:
     back:
     - Flash

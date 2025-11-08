@@ -174,6 +174,7 @@ ui-options-function-smart-equip-pocket1 = Умная экипировка в к�
 ui-options-function-smart-equip-pocket2 = Умная экипировка в карман 2
 ui-options-function-open-backpack = Открыть рюкзак
 ui-options-function-open-belt = Открыть пояс
+ui-options-function-open-exo = Открыть хранилище экзокостюма
 ui-options-function-throw-item-in-hand = Бросить предмет
 ui-options-function-try-pull-object = Тянуть объект
 ui-options-function-move-pulled-object = Тянуть объект в сторону

@@ -11,10 +11,10 @@
       effects:
       - !type:ModifyStatusEffect
         conditions:
-        - !type:OrganType
-          type: Alian
-          shouldHave: false
-        - !type:ReagentThreshold
+        - !type:MetabolizerTypeCondition
+          type: [ Alien ]
+          inverted: true
+        - !type:ReagentCondition
           reagent: AlianToxin
           min: 5
         effectProto: StatusEffectForcedSleeping
@@ -54,7 +54,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroBase
           min: 5
 
 - type: reaction
@@ -82,7 +83,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaDraskMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroDrask
           min: 5
 
 - type: reaction
@@ -110,7 +112,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaResomiMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroResomi
           min: 5
 
 - type: reaction
@@ -138,7 +141,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaSkrellMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroSkrell
           min: 5
 
 - type: reaction
@@ -166,7 +170,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaInsectMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroInsect
           min: 5
 
 - type: reaction
@@ -194,7 +199,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaArachnidMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroArachnid
           min: 5
 
 - type: reaction
@@ -222,7 +228,8 @@
       - !type:Polymorph
         prototype: MobAlienLarvaSnakeMorph
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: AlianFeroSnake
           min: 5
 
 - type: reaction

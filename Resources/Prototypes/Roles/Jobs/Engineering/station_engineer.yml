@@ -25,6 +25,7 @@
     ears: ClothingHeadsetEngineering
     ipc: IPCModulEng # Adventure-IPC
     id: EngineerPDA # Adventure
+    exo: ClothingOuterExoEngBattary # Adventure
   #storage:
     #back:
     #- Stuff

@@ -1,0 +1,92 @@
+﻿#Тело Ксиода
+- type: body
+  name: "Ксиод"
+  id: Xiod
+  root: torso
+  slots:
+    head:
+      part: HeadXiod
+      connections:
+      - torso
+    torso:
+      part: TorsoXiod
+      connections:
+      - right leg
+      - left leg
+      organs:
+        core: OrganXiodBrain
+        eyes: OrganXiodEyes
+        lungs: OrganXiodLungs
+    right leg:
+      part: RightLegXiod
+    left leg:
+      part: LeftLegXiod
+
+#Части Ксиода
+- type: entity
+  id: PartXiod
+  parent: [BaseItem, BasePart]
+  name: "Часть тела ксиода"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 10
+
+- type: entity
+  id: TorsoXiod
+  name: "туловище ксиода"
+  parent: [PartXiod, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: "torso"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 20
+
+- type: entity
+  id: HeadXiod
+  name: "голова ксиода"
+  parent: [PartXiod, BaseHead]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: "head"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 10
+
+- type: entity
+  id: LeftLegXiod
+  categories: [ HideSpawnMenu ]
+  name: "щупальце ксиода"
+  parent: [PartXiod, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: "nulll"
+  - type: MovementBodyPart
+    walkSpeed : 1
+    sprintSpeed : 2
+
+- type: entity
+  id: RightLegXiod
+  categories: [ HideSpawnMenu ]
+  name: "щупальце ксиода"
+  parent: [PartXiod, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: "nulll"
+  - type: MovementBodyPart
+    walkSpeed : 1
+    sprintSpeed : 2

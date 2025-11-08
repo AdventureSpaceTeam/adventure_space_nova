@@ -25,6 +25,7 @@
 #   id: BotanistPDA # Adventure
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
+    exo: ClothingOuterExoHydroBattary # Adventure
   #storage:
     #back:
     #- Stuff

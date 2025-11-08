@@ -21,6 +21,7 @@
     ears: ClothingHeadsetService
     shoes: ClothingShoesColorRed
     belt: ClothingBeltChampion
+    exo: ClothingOuterExoBattary # Adventure
   #storage:
     #back:
     #- Stuff

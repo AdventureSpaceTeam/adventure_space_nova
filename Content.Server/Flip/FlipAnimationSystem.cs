@@ -1,5 +1,5 @@
 using Content.Shared.Buckle;
-using Content.Server.Chat.Systems;
+using Content.Shared.Chat;
 using Content.Shared.Flip;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Stunnable;

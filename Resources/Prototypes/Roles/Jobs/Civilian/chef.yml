@@ -25,6 +25,7 @@
     id: ChefPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltChefFilled
+    exo: ClothingOuterExoBattary # Adventure
   #storage:
     #back:
     #- Stuff
