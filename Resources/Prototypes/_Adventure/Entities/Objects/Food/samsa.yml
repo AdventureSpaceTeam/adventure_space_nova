@@ -9,8 +9,8 @@
       - meaty
       - spicy
   - type: Sprite
-    sprite: _Adventure/Objects/Food/shawarma.rsi
-    state: shawarma
+    sprite: _Adventure/Objects/Food/samsa.rsi
+    state: icon
   - type: Tag
     tags:
     - Meat
