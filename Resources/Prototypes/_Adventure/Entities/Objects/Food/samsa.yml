@@ -2,7 +2,7 @@
   name: самса
   parent: FoodMealBase
   id: FoodMealSamsa
-  description: Вкусная мясная булка.
+  description: Вкусная, мягкая, мясная булочка.
   components:
   - type: FlavorProfile
     flavors:
