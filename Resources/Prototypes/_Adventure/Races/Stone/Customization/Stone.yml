@@ -170,3 +170,39 @@
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: tree
+
+- type: marking
+  id: StoneNeck
+  bodyPart: Back
+  markingCategory: Chest
+  speciesRestriction: [Stone]
+  sprites:
+  - sprite: _Adventure/Races/Stone/Customization/Body.rsi
+    state: neckbeard
+
+- type: marking
+  id: StoneSpine
+  bodyPart: Back
+  markingCategory: Chest
+  speciesRestriction: [Stone]
+  sprites:
+  - sprite: _Adventure/Races/Stone/Customization/Body.rsi
+    state: spine
+
+- type: marking
+  id: StoneMagma
+  bodyPart: Back
+  markingCategory: Chest
+  speciesRestriction: [Stone]
+  sprites:
+  - sprite: _Adventure/Races/Stone/Customization/Body.rsi
+    state: magma
+
+- type: marking
+  id: StoneMohawk
+  bodyPart: Back
+  markingCategory: Chest
+  speciesRestriction: [Stone]
+  sprites:
+  - sprite: _Adventure/Races/Stone/Customization/Body.rsi
+    state: mohawk

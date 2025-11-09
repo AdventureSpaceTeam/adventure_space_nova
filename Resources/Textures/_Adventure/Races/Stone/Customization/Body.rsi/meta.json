@@ -70,6 +70,22 @@
     {
       "name": "monolith",
       "directions": 4
+    },
+    {
+      "name": "neckbeard",
+      "directions": 4
+    },
+    {
+      "name": "spine",
+      "directions": 4
+    },
+    {
+      "name": "magma",
+      "directions": 4
+    },
+    {
+      "name": "mohawk",
+      "directions": 4
     }
   ]
 }

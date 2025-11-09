@@ -12,15 +12,6 @@
       types:
         Blunt: 1
   - type: ProtectedFromStepTriggers
-  - type: JumpAbility
-    action: ActionJumpSpecies
-    canCollide: true
-    jumpDistance: 1
-    jumpSound:
-      collection: StoneStepCollection
-      params:
-        volume: -1
-        variation: 0.05
 
 - type: entity
   abstract: true
@@ -229,6 +220,7 @@
   - type: TypingIndicator
     proto: Stone
   - type: Crawler
+    speedModifier : 0.2
   - type: DamageOnInteractProtection
     damageProtection:
       flatReductions:

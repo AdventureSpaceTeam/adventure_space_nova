@@ -48,3 +48,15 @@ marking-StoneGrass = Голем, тело (Мох)
 
 marking-StoneTree-tree = Голем, тело (Дерево)
 marking-StoneTree = Голем, тело (Дерево)
+
+marking-StoneNeck-neckbeard = Голем, тело (Кристаллическая накидка)
+marking-StoneNeck = Голем, тело (Кристаллическая накидка)
+
+marking-StoneSpine-spine = Голем, тело (Кристаллическая спина)
+marking-StoneSpine = Голем, тело (Кристаллическая спина)
+
+marking-StoneMagma-magma = Голем, тело (Рудная жила)
+marking-StoneMagma = Голем, тело (Рудная жила)
+
+marking-StoneMohawk-mohawk = Голем, тело (Кристаллический ирокез)
+marking-StoneMohawk = Голем, тело (Кристаллический ирокез)
