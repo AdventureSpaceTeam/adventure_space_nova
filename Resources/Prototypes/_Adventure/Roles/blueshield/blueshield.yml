@@ -24,11 +24,11 @@
       species:
       - Synth
       - Zerah
-      - PigMan
       - Vox
-      - PlasMan
+      - PigMan
       - InsectSerpentide
       - Xiod
+      - Stone
 # Adventure-edit-end
   startingGear: BlueshieldGear
   icon: "JobIconBlueshield"

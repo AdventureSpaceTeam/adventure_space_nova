@@ -57,3 +57,9 @@
   spritePath: _Adventure/Interface/TypingIndicators/Speech.rsi
   typingState: xiod0
   idleState: xiod1
+
+- type: typingIndicator
+  id: Stone
+  spritePath: _Adventure/Interface/TypingIndicators/Speech40.rsi
+  typingState: stone0
+  idleState: stone1

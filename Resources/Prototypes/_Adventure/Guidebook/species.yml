@@ -47,3 +47,8 @@
   id: Xiod
   name: Ксиод
   text: "/ServerInfo/_Adventure/Guidebook/Races/Xiod.xml"
+
+- type: guideEntry
+  id: Stone
+  name: Голем
+  text: "/ServerInfo/_Adventure/Guidebook/Races/Stone.xml"

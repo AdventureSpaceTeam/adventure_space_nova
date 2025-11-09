@@ -11,6 +11,7 @@
       inverted: true
       species:
       - Xiod
+      - Stone
 # Adventure end
   startingGear: MimeGear
   icon: "JobIconMime"

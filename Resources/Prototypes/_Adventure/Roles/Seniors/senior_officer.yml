@@ -16,6 +16,10 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 216000 # 60 hrs
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Stone
   weight: 9
   startingGear: SeniorOfficerGearAdv
   icon: "JobIconSeniorOfficer"

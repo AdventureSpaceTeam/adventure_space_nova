@@ -1,0 +1,16 @@
+- type: damageContainer
+  id: Stone
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Cold
+
+- type: damageModifierSet
+  id: Stone
+  coefficients:
+    Blunt: 0.70
+    Slash: 0.70
+    Piercing: 0.70
+    Heat: 0.70
+    Cold: 0.70

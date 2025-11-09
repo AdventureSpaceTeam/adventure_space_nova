@@ -105,6 +105,7 @@
     thermalRegulationTemperatureThreshold: 2
   - type: DamagedSiliconAccent
   - type: AtmosExposed
+  - type: MovedByPressure
   - type: Barotrauma
     damage:
       types:
