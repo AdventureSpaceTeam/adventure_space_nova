@@ -23,6 +23,22 @@
           - ItemMask
         restitution: 0.3
         friction: 0.2
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -5
+        Slash: -5
+        Piercing: -5
+        Heat: -5
+        Cold: -5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: OreBase
@@ -52,6 +68,22 @@
     tags:
     - Ore
     - OreGold
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -2
+        Slash: -2
+        Piercing: -2
+        Heat: -5
+        Cold: -5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: GoldOre
@@ -85,6 +117,22 @@
           Quantity: 20
   - type: Item
     heldPrefix: diamond
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -8
+        Slash: -8
+        Piercing: -8
+        Heat: -5
+        Cold: -5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: DiamondOre
@@ -118,6 +166,22 @@
           Quantity: 10
   - type: Item
     heldPrefix: iron
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -5
+        Piercing: -5
+        Heat: -2
+        Cold: -2
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   id: SteelOre1

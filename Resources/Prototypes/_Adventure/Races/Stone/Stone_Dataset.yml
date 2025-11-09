@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: NamesStone
+  values:
+    prefix: names-stone-dataset-
+    count: 30

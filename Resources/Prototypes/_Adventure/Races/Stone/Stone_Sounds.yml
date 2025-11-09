@@ -1,0 +1,82 @@
+﻿- type: soundCollection
+  id: StoneDeadCollection
+  files:
+  - /Audio/_Adventure/Voice/Stone/dead1.ogg
+  - /Audio/_Adventure/Voice/Stone/dead2.ogg
+  - /Audio/_Adventure/Voice/Stone/dead3.ogg
+
+- type: soundCollection
+  id: StoneScreamCollection
+  files:
+  - /Audio/_Adventure/Voice/Stone/Scream1.ogg
+  - /Audio/_Adventure/Voice/Stone/Scream2.ogg
+  - /Audio/_Adventure/Voice/Stone/Scream3.ogg
+
+- type: soundCollection
+  id: StoneStepCollection
+  files:
+  - /Audio/_Adventure/Voice/Stone/step1.ogg
+  - /Audio/_Adventure/Voice/Stone/step2.ogg
+  - /Audio/_Adventure/Voice/Stone/step3.ogg
+  - /Audio/_Adventure/Voice/Stone/step4.ogg
+
+- type: soundCollection
+  id: StoneLaughCollection
+  files:
+  - /Audio/_Adventure/Voice/Stone/Haha1.ogg
+  - /Audio/_Adventure/Voice/Stone/Haha2.ogg
+
+- type: speechSounds
+  id: StoneSpeach
+  saySound:
+    path: /Audio/_Adventure/Voice/Stone/Speach1.ogg
+  askSound:
+    path: /Audio/_Adventure/Voice/Stone/Speach2.ogg
+  exclaimSound:
+    path: /Audio/_Adventure/Voice/Stone/Speach3.ogg
+
+#Смерть
+- type: emote
+  id: StoneDeathgasp
+  name: chat-emote-name-deathgasp
+  icon: Interface/Emotes/deathgasp.png
+  chatMessages: ["замирает и осыпается, его тело совершенно неподвижно"]
+  whitelist:
+    requireAll: true
+    components:
+    - MobState
+    - FlashImmunity
+    - ZombieImmune
+
+#эмоции
+- type: emoteSounds
+  id: StoneEmote
+  params:
+    variation: 0.125
+  sounds:
+    Laugh:
+      collection: StoneLaughCollection
+    Scream:
+      collection: StoneScreamCollection
+    StoneDeathgasp:
+      collection: StoneDeadCollection
+
+- type: emoteSounds
+  id: StoneBodyEmotes
+  sounds:
+    Scratch:
+      collection: StoneDeadCollection
+    Crunch:
+      path: /Audio/_Adventure/Voice/Stone/crunch.ogg
+    Facepalm:
+      collection: StoneDeadCollection
+    Clap:
+      collection: Claps
+    ClapSingle:
+      collection: ClapSingle
+    Snap:
+      collection: Snaps
+      params:
+        volume: -6
+    Salute:
+      collection: Salutes

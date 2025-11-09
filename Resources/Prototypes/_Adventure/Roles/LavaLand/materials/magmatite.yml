@@ -56,6 +56,20 @@
             max: 10
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -15
+        Slash: -15
+        Piercing: -15
+        Heat: -15
+        Cold: -15
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: entity
   parent: MaterialMagmatite

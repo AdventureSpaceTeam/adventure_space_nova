@@ -18,9 +18,10 @@
   <GuideEntityEmbed Entity="MobSynth" Caption="КПБ"/>
   <GuideEntityEmbed Entity="MobPlasMan" Caption="Плазмалюд"/>
   <GuideEntityEmbed Entity="MobInsect" Caption="Серпентид"/>
+  <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="MobPigMan" Caption="Троттин"/>
+  <GuideEntityEmbed Entity="MobStone" Caption="Голем"/>
   <GuideEntityEmbed Entity="MobSkrell" Caption="Скрелл"/>
   <GuideEntityEmbed Entity="MobFelinid" Caption="Фелинид"/>
   <GuideEntityEmbed Entity="MobZerah" Caption="Зерах"/>

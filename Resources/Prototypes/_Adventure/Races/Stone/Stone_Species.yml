@@ -1,0 +1,260 @@
+- type: loadoutEffectGroup
+  id: StoneOre
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Stone
+
+- type: loadout
+  id: EmergencyStone
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: StoneOre
+  storage:
+    back:
+    - Coal10
+
+- type: species
+  id: Stone
+  name: Голем
+  roundStart: true
+  prototype: MobStone
+  sprites: MobStoneSprites
+  markingLimits: MobStoneMarkingLimits
+  dollPrototype: MobStoneDummy
+  skinColoration: Hues
+  defaultSkinTone: "#868991"
+  minAge: 1
+  youngAge: 100
+  oldAge: 25000
+  maxAge: 50000
+  sexes:
+    - Unsexed
+  maleFirstNames: NamesStone
+  femaleFirstNames: NamesStone
+  naming: First
+
+- type: markingPoints
+  id: MobStoneMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Head:
+      points: 1
+      required: false
+    HeadTop:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    Chest:
+      points: 3
+      required: false
+    Legs:
+      points: 4
+      required: false
+    Arms:
+      points: 4
+      required: false
+    Back:
+      points: 1
+      required: true
+      defaultMarkings: [ StoneBase ]
+
+- type: speciesBaseSprites
+  id: MobStoneSprites
+  sprites:
+    Snout: MobHumanoidAnyMarking
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Head: MobStoneHead
+    Chest: MobStoneTorso
+    LArm: MobStoneLArm
+    RArm: MobStoneRArm
+    LHand: MobStoneLHand
+    RHand: MobStoneRHand
+    LLeg: MobStoneLLeg
+    RLeg: MobStoneRLeg
+    LFoot: MobStoneLFood
+    RFoot: MobStoneRFood
+    Back: MobHumanoidAnyMarking
+
+- type: humanoidBaseSprite
+  id: MobStoneHead
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobStoneHeadMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobStoneHeadFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobStoneTorso
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobStoneTorsoMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobStoneTorsoFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobStoneLLeg
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobStoneLArm
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobStoneLHand
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobStoneRLeg
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobStoneRArm
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobStoneRHand
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobStoneRFood
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobStoneLFood
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobStoneLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobStoneLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobStoneLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobStoneRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobStoneRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobStoneRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobStoneRFoodMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobStoneLFoodMale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobStoneLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobStoneLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobStoneLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobStoneRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobStoneRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobStoneRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobStoneRFoodFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobStoneLFoodFemale
+  baseSprite:
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: l_foot

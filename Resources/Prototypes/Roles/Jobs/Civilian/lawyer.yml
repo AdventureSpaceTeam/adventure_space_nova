@@ -6,6 +6,12 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 2.5h
+# Adventure begin
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Stone
+# Adventure end
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hop

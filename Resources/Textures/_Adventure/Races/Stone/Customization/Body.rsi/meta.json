@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by borkroman",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "crystal1",
+      "directions": 4
+    },
+    {
+      "name": "crystal2",
+      "directions": 4
+    },
+    {
+      "name": "crystalgeode",
+      "directions": 4
+    },
+    {
+      "name": "crystalhorns",
+      "directions": 4
+    },
+    {
+      "name": "crystalnail",
+      "directions": 4
+    },
+    {
+      "name": "crystalstar",
+      "directions": 4
+    },
+    {
+      "name": "crystalsun",
+      "directions": 4
+    },
+    {
+      "name": "crystalveins",
+      "directions": 4
+    },
+    {
+      "name": "ore",
+      "directions": 4
+    },
+    {
+      "name": "grass",
+      "directions": 4
+    },
+    {
+      "name": "tree",
+      "directions": 4
+    },
+    {
+      "name": "stalagmite",
+      "directions": 4
+    },
+    {
+      "name": "rift",
+      "directions": 4
+    },
+    {
+      "name": "demon",
+      "directions": 4
+    },
+    {
+      "name": "monolith",
+      "directions": 4
+    }
+  ]
+}

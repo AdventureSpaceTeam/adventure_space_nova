@@ -1,0 +1,260 @@
+﻿- type: entity
+  id: SpawnOreRandomStone
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+      - GoldOre1
+      - UraniumOre1
+      - DiamondOre1
+      - SteelOre1
+      - SilverOre1
+      - SpaceQuartz1
+
+#Мозг
+- type: entity
+  id: StoneBrain
+  name: камень души
+  parent: BaseItem
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Stone
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnOreRandomStone:
+            min: 1
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: Sprite
+    sprite: _Adventure/Races/Stone/organs.rsi
+    layers:
+    - state: brain
+  - type: Organ
+  - type: Brain
+  - type: Input
+    context: "ghost"
+  - type: InputMover
+  - type: Examiner
+  - type: BlockMovement
+
+#Тело
+- type: body
+  name: "Stone"
+  id: Stone
+  root: torso
+  slots:
+    head:
+      part: HeadStone
+      connections:
+      - torso
+    torso:
+      part: TorsoStone
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        brain: StoneBrain
+    right arm:
+      part: RightArmStone
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmStone
+      connections:
+      - left hand
+    right hand:
+      part: RightHandStone
+    left hand:
+      part: LeftHandStone
+    right leg:
+      part: RightLegStone
+    left leg:
+      part: LeftLegStone
+
+#Части
+- type: entity
+  id: PartStone
+  parent: BaseItem
+  name: "Stone body part"
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Stone
+  - type: BodyPart
+  - type: ContainerContainer
+    containers:
+      bodypart: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+      - Trash
+  - type: Sprite
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SpawnOreRandomStone:
+            min: 1
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+
+- type: entity
+  id: TorsoStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "torso_m"
+  - type: BodyPart
+    partType: Torso
+
+- type: entity
+  id: HeadStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "head_m"
+  - type: BodyPart
+    partType: Head
+    vital: true
+  - type: Input
+    context: "ghost"
+  - type: Tag
+    tags:
+      - Head
+
+- type: entity
+  id: LeftArmStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "l_arm"
+  - type: BodyPart
+    partType: Arm
+    symmetry: Left
+
+- type: entity
+  id: RightArmStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "r_arm"
+  - type: BodyPart
+    partType: Arm
+    symmetry: Right
+
+- type: entity
+  id: LeftHandStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "l_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Left
+
+- type: entity
+  id: RightHandStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "r_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Right
+
+- type: entity
+  id: LeftLegStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "l_leg"
+  - type: BodyPart
+    partType: Leg
+    symmetry: Left
+  - type: MovementBodyPart
+    walkSpeed : 2
+    sprintSpeed : 3
+
+- type: entity
+  id: RightLegStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "r_leg"
+  - type: BodyPart
+    partType: Leg
+    symmetry: Right
+  - type: MovementBodyPart
+    walkSpeed : 2
+    sprintSpeed : 3
+
+- type: entity
+  id: LeftFootStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "l_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Left
+
+- type: entity
+  id: RightFootStone
+  name: "осколок голема"
+  parent: PartStone
+  components:
+  - type: Sprite
+    state: "r_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Right
