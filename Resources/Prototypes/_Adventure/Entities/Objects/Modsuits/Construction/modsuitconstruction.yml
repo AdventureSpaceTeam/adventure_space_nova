@@ -158,6 +158,9 @@
   - type: Tag
     tags:
     - ModsuitControlEnd
+  - type: Construction
+    graph: ModsuitConstructed
+    node: modsuitconstructed
   - type: Item
     size: Huge
 
@@ -173,6 +176,9 @@
   - type: Tag
     tags:
     - MagmatiteModsuitControlEnd
+  - type: Construction
+    graph: MagmatiteModsuitConstructed
+    node: magmatitemodsuitconstructed
   - type: Item
     size: Huge
 
