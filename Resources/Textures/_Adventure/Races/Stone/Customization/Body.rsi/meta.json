@@ -44,6 +44,10 @@
       "directions": 4
     },
     {
+      "name": "ore2",
+      "directions": 4
+    },
+    {
       "name": "grass",
       "directions": 4
     },

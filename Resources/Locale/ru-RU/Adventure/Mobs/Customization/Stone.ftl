@@ -37,6 +37,9 @@ marking-StoneSun = Голем, тело (Кристаллическое солн
 marking-StoneOre-ore = Голем, тело (Рудная жила)
 marking-StoneOre = Голем, тело (Рудная жила)
 
+marking-StoneOre2-ore2 = Голем, тело (Рудная жила)
+marking-StoneOre2 = Голем, тело (Рудная жила)
+
 marking-StoneOreVeins-crystalveins = Голем, тело (Рудная жила)
 marking-StoneOreVeins = Голем, тело (Рудная жила)
 

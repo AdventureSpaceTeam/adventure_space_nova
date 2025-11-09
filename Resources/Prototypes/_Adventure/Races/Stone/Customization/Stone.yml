@@ -126,6 +126,15 @@
     state: ore
 
 - type: marking
+  id: StoneOre2
+  bodyPart: Back
+  markingCategory: Chest
+  speciesRestriction: [Stone]
+  sprites:
+  - sprite: _Adventure/Races/Stone/Customization/Body.rsi
+    state: ore2
+
+- type: marking
   id: StoneOreVeins
   bodyPart: Back
   markingCategory: Chest
