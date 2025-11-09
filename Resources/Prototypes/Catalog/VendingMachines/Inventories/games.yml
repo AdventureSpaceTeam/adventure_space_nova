@@ -18,6 +18,7 @@
     MysteryFigureBox: 2
     BooksBag: 3
     CardBox: 4 # Adventure
+    CardBoxUno: 4 # Adventure
     PockerChipsBox: 2 # Adventure
     Shuffler: 1 # Adventure
   contrabandInventory:

@@ -2,7 +2,7 @@
   parent: BaseCard
   id: BaseCardUno
   abstract: true
-  name: игральная карта УНО
+  name: игральная карта UNO
   components:
   - type: Item
     size: Tiny
@@ -997,7 +997,7 @@
 - type: entity
   parent: BaseStorageItem
   id: CardBoxUno
-  name: коробка игральных карт уно
+  name: коробка игральных карт UNO
   suffix: AdvFun
   components:
   - type: StorageFill
@@ -1277,8 +1277,8 @@
       - id: CardHolder
       - id: CardHolder
   - type: Sprite
-    sprite: _Adventure/Objects/Fun/cards.rsi
-    state: card_box
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    state: UNObox
   - type: Item
     size: Small
   - type: Dumpable
