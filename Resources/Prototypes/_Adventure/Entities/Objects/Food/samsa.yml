@@ -1,0 +1,43 @@
+- type: entity
+  name: самса
+  parent: FoodMealBase
+  id: FoodMealSamsa
+  description: Вкусная, мягкая, мясная булочка.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - meaty
+      - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/samsa.rsi
+    state: icon
+  - type: Tag
+    tags:
+    - Meat
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 32
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 14
+        - ReagentId: Protein
+          Quantity: 9
+        - ReagentId: Vitamin
+          Quantity: 3
+
+- type: microwaveMealRecipe
+  id: RecipeSamsa
+  name: самса
+  result: FoodMealSamsa
+  time: 30
+  group: Savory
+  reagents:
+    Egg: 6
+    TableSalt: 5
+    Ketchup: 5
+    Blackpepper: 5
+  solids:
+    FoodDough: 1
+    FoodMeat: 1
+    FoodOnionSlice: 2
