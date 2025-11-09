@@ -109,6 +109,14 @@
   - CLEAweapons
 
 - type: listing
+  id: WeaponSubMachineGunHecklerCLEA
+  productEntity: WeaponSubMachineGunHeckler
+  cost:
+    CentCommCrystal: 12
+  categories:
+  - CLEAweapons
+
+- type: listing
   id: WeaponRifleLecterCLEA
   productEntity: WeaponRifleLecter
   cost:

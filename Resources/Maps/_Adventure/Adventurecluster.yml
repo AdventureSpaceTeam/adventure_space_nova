@@ -61937,7 +61937,7 @@ entities:
     - type: Transform
       pos: 38.5,12.5
       parent: 1
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunHeckler
   entities:
   - uid: 5435
     components:

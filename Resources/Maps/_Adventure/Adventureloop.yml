@@ -71581,7 +71581,7 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunHeckler
   entities:
   - uid: 4507
     components:

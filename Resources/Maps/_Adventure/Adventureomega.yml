@@ -60738,7 +60738,7 @@ entities:
       parent: 4812
     - type: Physics
       bodyType: Static
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunHeckler
   entities:
   - uid: 8377
     components:
