@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by @hatlesshatmann (discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "b0"
+    },
+    {
+      "name": "b1"
+    },
+    {
+      "name": "b2"
+    },
+    {
+      "name": "b3"
+    },
+    {
+      "name": "b4"
+    },
+    {
+      "name": "b5"
+    },
+    {
+      "name": "b6"
+    },
+    {
+      "name": "b7"
+    },
+    {
+      "name": "b8"
+    },
+    {
+      "name": "b9"
+    },
+    {
+      "name": "bplus2"
+    },
+    {
+      "name": "breverse"
+    },
+    {
+      "name": "bskip"
+    },
+    {
+      "name": "g0"
+    },
+    {
+      "name": "g1"
+    },
+    {
+      "name": "g2"
+    },
+    {
+      "name": "g3"
+    },
+    {
+      "name": "g4"
+    },
+    {
+      "name": "g5"
+    },
+    {
+      "name": "g6"
+    },
+    {
+      "name": "g7"
+    },
+    {
+      "name": "g8"
+    },
+    {
+      "name": "g9"
+    },
+    {
+      "name": "gplus2"
+    },
+    {
+      "name": "greverse"
+    },
+    {
+      "name": "gskip"
+    },
+    {
+      "name": "r0"
+    },
+    {
+      "name": "r1"
+    },
+    {
+      "name": "r2"
+    },
+    {
+      "name": "r3"
+    },
+    {
+      "name": "r4"
+    },
+    {
+      "name": "r5"
+    },
+    {
+      "name": "r6"
+    },
+    {
+      "name": "r7"
+    },
+    {
+      "name": "r8"
+    },
+    {
+      "name": "r9"
+    },
+    {
+      "name": "rplus2"
+    },
+    {
+      "name": "rreverse"
+    },
+    {
+      "name": "rskip"
+    },
+    {
+      "name": "y0"
+    },
+    {
+      "name": "y1"
+    },
+    {
+      "name": "y2"
+    },
+    {
+      "name": "y3"
+    },
+    {
+      "name": "y4"
+    },
+    {
+      "name": "y5"
+    },
+    {
+      "name": "y6"
+    },
+    {
+      "name": "y7"
+    },
+    {
+      "name": "y8"
+    },
+    {
+      "name": "y9"
+    },
+    {
+      "name": "yplus2"
+    },
+    {
+      "name": "yreverse"
+    },
+    {
+      "name": "yskip"
+    },
+    {
+      "name": "plus4"
+    },
+    {
+      "name": "wildcard"
+    },
+    {
+      "name": "bc"
+    },
+    {
+      "name": "UNObox"
+    }
+  ]
+}

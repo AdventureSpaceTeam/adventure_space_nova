@@ -1,0 +1,1130 @@
+- type: entity
+  parent: BaseCard
+  id: BaseCardUno
+  abstract: true
+  name: игральная карта UNO
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: bc
+      map: ["base"]
+  - type: ScaleVisuals
+    scale: 0.5, 0.5
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: wildcard
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b0card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b0
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b0
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b1card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b1
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b1
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b3card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b3
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b3
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b4card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b4
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b4
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b5card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b5
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b5
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b6card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b6
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b6
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b7card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b7
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b7
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b8card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b8
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b8
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: b9card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: b9
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: b9
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: bplus2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: bplus2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: bplus2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: breversecard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: breverse
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: breverse
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: bskipcard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: bskip
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: bskip
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g0card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g0
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g0
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g1card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g1
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g1
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g3card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g3
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g3
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g4card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g4
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g4
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g5card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g5
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g5
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g6card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g6
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g6
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g7card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g7
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g7
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g8card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g8
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g8
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: g9card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: g9
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: g9
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: gplus2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: gplus2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: gplus2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: greversecard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: greverse
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: greverse
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: gskipcard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: gskip
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: gskip
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r0card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r0
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r0
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r1card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r1
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r1
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r3card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r3
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r3
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r4card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r4
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r4
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r5card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r5
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r5
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r6card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r6
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r6
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r7card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r7
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r7
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r8card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r8
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r8
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: r9card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: r9
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: r9
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: rplus2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: rplus2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: rplus2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: rreversecard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: rreverse
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: rreverse
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: rskipcard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: rskip
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: rskip
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y0card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y0
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y0
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y1card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y1
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y1
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y3card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y3
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y3
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y4card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y4
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y4
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y5card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y5
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y5
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y6card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y6
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y6
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y7card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y7
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y7
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y8card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y8
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y8
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: y9card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: y9
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: y9
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: yplus2card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: yplus2
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: yplus2
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: yreversecard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: yreverse
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: yreverse
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: yskipcard
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: yskip
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: yskip
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: plus4card
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: plus4
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: plus4
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseCardUno
+  id: wildcarduno
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    layers:
+    - state: wildcard
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.CardsVisual.Visual:
+        base:
+          Normal:
+            state: wildcard
+          Flipped:
+            state: bc
+
+- type: entity
+  parent: BaseStorageItem
+  id: CardBoxUno
+  name: коробка игральных карт UNO
+  suffix: AdvFun
+  components:
+  - type: StorageFill
+    contents:
+      - id: b0card
+        amount: 5
+      - id: b1card
+        amount: 5
+      - id: b2card
+        amount: 5
+      - id: b3card
+        amount: 5
+      - id: b4card
+        amount: 5
+      - id: b5card
+        amount: 5
+      - id: b6card
+        amount: 5
+      - id: b7card
+        amount: 5
+      - id: b8card
+        amount: 5
+      - id: b9card
+        amount: 5
+      - id: bplus2card
+        amount: 5
+      - id: bskipcard
+        amount: 5
+      - id: breversecard
+        amount: 5
+      - id: g0card
+        amount: 5
+      - id: g1card
+        amount: 5
+      - id: g2card
+        amount: 5
+      - id: g3card
+        amount: 5
+      - id: g4card
+        amount: 5
+      - id: g5card
+        amount: 5
+      - id: g6card
+        amount: 5
+      - id: g7card
+        amount: 5
+      - id: g8card
+        amount: 5
+      - id: g9card
+        amount: 5
+      - id: gplus2card
+        amount: 5
+      - id: gskipcard
+        amount: 5
+      - id: greversecard
+        amount: 5
+      - id: r0card
+        amount: 5
+      - id: r1card
+        amount: 5
+      - id: r2card
+        amount: 5
+      - id: r3card
+        amount: 5
+      - id: r4card
+        amount: 5
+      - id: r5card
+        amount: 5
+      - id: r6card
+        amount: 5
+      - id: r7card
+        amount: 5
+      - id: r8card
+        amount: 5
+      - id: r9card
+        amount: 5
+      - id: rplus2card
+        amount: 5
+      - id: rskipcard
+        amount: 5
+      - id: rreversecard
+        amount: 5
+      - id: y0card
+        amount: 5
+      - id: y1card
+        amount: 5
+      - id: y2card
+        amount: 5
+      - id: y3card
+        amount: 5
+      - id: y4card
+        amount: 5
+      - id: y5card
+        amount: 5
+      - id: y6card
+        amount: 5
+      - id: y7card
+        amount: 5
+      - id: y8card
+        amount: 5
+      - id: y9card
+        amount: 5
+      - id: yplus2card
+        amount: 5
+      - id: yskipcard
+        amount: 5
+      - id: yreversecard
+        amount: 5
+      - id: wildcarduno
+        amount: 5
+      - id: plus4card
+        amount: 5
+      - id: CardHolder
+        amount: 3
+  - type: Sprite
+    sprite: _Adventure/Objects/Fun/uno.rsi
+    state: UNObox
+  - type: Item
+    size: Small
+  - type: Dumpable
+    distance: 0.5
+  - type: Storage
+    grid:
+    - 0,0,20,12
+    maxItemSize: Small
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      tags:
+      - Card
