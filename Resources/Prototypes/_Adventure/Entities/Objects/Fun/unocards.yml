@@ -1003,279 +1003,115 @@
   - type: StorageFill
     contents:
       - id: b0card
-      - id: b0card
-      - id: b0card
-      - id: b0card
-      - id: b0card
+        amount: 5
       - id: b1card
-      - id: b1card
-      - id: b1card
-      - id: b1card
-      - id: b1card
+        amount: 5
       - id: b2card
-      - id: b2card
-      - id: b2card
-      - id: b2card
-      - id: b2card
+        amount: 5
       - id: b3card
-      - id: b3card
-      - id: b3card
-      - id: b3card
-      - id: b3card
+        amount: 5
       - id: b4card
-      - id: b4card
-      - id: b4card
-      - id: b4card
-      - id: b4card
+        amount: 5
       - id: b5card
-      - id: b5card
-      - id: b5card
-      - id: b5card
-      - id: b5card
+        amount: 5
       - id: b6card
-      - id: b6card
-      - id: b6card
-      - id: b6card
-      - id: b6card
+        amount: 5
       - id: b7card
-      - id: b7card
-      - id: b7card
-      - id: b7card
-      - id: b7card
+        amount: 5
       - id: b8card
-      - id: b8card
-      - id: b8card
-      - id: b8card
-      - id: b8card
+        amount: 5
       - id: b9card
-      - id: b9card
-      - id: b9card
-      - id: b9card
-      - id: b9card
+        amount: 5
       - id: bplus2card
-      - id: bplus2card
-      - id: bplus2card
-      - id: bplus2card
-      - id: bplus2card
+        amount: 5
       - id: bskipcard
-      - id: bskipcard
-      - id: bskipcard
-      - id: bskipcard
-      - id: bskipcard
+        amount: 5
       - id: breversecard
-      - id: breversecard
-      - id: breversecard
-      - id: breversecard
-      - id: breversecard
+        amount: 5
       - id: g0card
-      - id: g0card
-      - id: g0card
-      - id: g0card
-      - id: g0card
+        amount: 5
       - id: g1card
-      - id: g1card
-      - id: g1card
-      - id: g1card
-      - id: g1card
+        amount: 5
       - id: g2card
-      - id: g2card
-      - id: g2card
-      - id: g2card
-      - id: g2card
+        amount: 5
       - id: g3card
-      - id: g3card
-      - id: g3card
-      - id: g3card
-      - id: g3card
+        amount: 5
       - id: g4card
-      - id: g4card
-      - id: g4card
-      - id: g4card
-      - id: g4card
+        amount: 5
       - id: g5card
-      - id: g5card
-      - id: g5card
-      - id: g5card
-      - id: g5card
+        amount: 5
       - id: g6card
-      - id: g6card
-      - id: g6card
-      - id: g6card
-      - id: g6card
+        amount: 5
       - id: g7card
-      - id: g7card
-      - id: g7card
-      - id: g7card
-      - id: g7card
+        amount: 5
       - id: g8card
-      - id: g8card
-      - id: g8card
-      - id: g8card
-      - id: g8card
+        amount: 5
       - id: g9card
-      - id: g9card
-      - id: g9card
-      - id: g9card
-      - id: g9card
+        amount: 5
       - id: gplus2card
-      - id: gplus2card
-      - id: gplus2card
-      - id: gplus2card
-      - id: gplus2card
+        amount: 5
       - id: gskipcard
-      - id: gskipcard
-      - id: gskipcard
-      - id: gskipcard
-      - id: gskipcard
+        amount: 5
       - id: greversecard
-      - id: greversecard
-      - id: greversecard
-      - id: greversecard
-      - id: greversecard
+        amount: 5
       - id: r0card
-      - id: r0card
-      - id: r0card
-      - id: r0card
-      - id: r0card
+        amount: 5
       - id: r1card
-      - id: r1card
-      - id: r1card
-      - id: r1card
-      - id: r1card
+        amount: 5
       - id: r2card
-      - id: r2card
-      - id: r2card
-      - id: r2card
-      - id: r2card
+        amount: 5
       - id: r3card
-      - id: r3card
-      - id: r3card
-      - id: r3card
-      - id: r3card
+        amount: 5
       - id: r4card
-      - id: r4card
-      - id: r4card
-      - id: r4card
-      - id: r4card
+        amount: 5
       - id: r5card
-      - id: r5card
-      - id: r5card
-      - id: r5card
-      - id: r5card
+        amount: 5
       - id: r6card
-      - id: r6card
-      - id: r6card
-      - id: r6card
-      - id: r6card
+        amount: 5
       - id: r7card
-      - id: r7card
-      - id: r7card
-      - id: r7card
-      - id: r7card
+        amount: 5
       - id: r8card
-      - id: r8card
-      - id: r8card
-      - id: r8card
-      - id: r8card
+        amount: 5
       - id: r9card
-      - id: r9card
-      - id: r9card
-      - id: r9card
-      - id: r9card
+        amount: 5
       - id: rplus2card
-      - id: rplus2card
-      - id: rplus2card
-      - id: rplus2card
-      - id: rplus2card
+        amount: 5
       - id: rskipcard
-      - id: rskipcard
-      - id: rskipcard
-      - id: rskipcard
-      - id: rskipcard
+        amount: 5
       - id: rreversecard
-      - id: rreversecard
-      - id: rreversecard
-      - id: rreversecard
-      - id: rreversecard
+        amount: 5
       - id: y0card
-      - id: y0card
-      - id: y0card
-      - id: y0card
-      - id: y0card
+        amount: 5
       - id: y1card
-      - id: y1card
-      - id: y1card
-      - id: y1card
-      - id: y1card
+        amount: 5
       - id: y2card
-      - id: y2card
-      - id: y2card
-      - id: y2card
-      - id: y2card
+        amount: 5
       - id: y3card
-      - id: y3card
-      - id: y3card
-      - id: y3card
-      - id: y3card
+        amount: 5
       - id: y4card
-      - id: y4card
-      - id: y4card
-      - id: y4card
-      - id: y4card
+        amount: 5
       - id: y5card
-      - id: y5card
-      - id: y5card
-      - id: y5card
-      - id: y5card
+        amount: 5
       - id: y6card
-      - id: y6card
-      - id: y6card
-      - id: y6card
-      - id: y6card
+        amount: 5
       - id: y7card
-      - id: y7card
-      - id: y7card
-      - id: y7card
-      - id: y7card
+        amount: 5
       - id: y8card
-      - id: y8card
-      - id: y8card
-      - id: y8card
-      - id: y8card
+        amount: 5
       - id: y9card
-      - id: y9card
-      - id: y9card
-      - id: y9card
-      - id: y9card
+        amount: 5
       - id: yplus2card
-      - id: yplus2card
-      - id: yplus2card
-      - id: yplus2card
-      - id: yplus2card
+        amount: 5
       - id: yskipcard
-      - id: yskipcard
-      - id: yskipcard
-      - id: yskipcard
-      - id: yskipcard
+        amount: 5
       - id: yreversecard
-      - id: yreversecard
-      - id: yreversecard
-      - id: yreversecard
-      - id: yreversecard
+        amount: 5
       - id: wildcarduno
-      - id: wildcarduno
-      - id: wildcarduno
-      - id: wildcarduno
-      - id: wildcarduno
+        amount: 5
       - id: plus4card
-      - id: plus4card
-      - id: plus4card
-      - id: plus4card
-      - id: plus4card
+        amount: 5
       - id: CardHolder
-      - id: CardHolder
-      - id: CardHolder
-      - id: CardHolder
+        amount: 3
   - type: Sprite
     sprite: _Adventure/Objects/Fun/uno.rsi
     state: UNObox
@@ -1285,7 +1121,7 @@
     distance: 0.5
   - type: Storage
     grid:
-    - 0,0,30,9
+    - 0,0,20,12
     maxItemSize: Small
     quickInsert: true
     areaInsert: true
