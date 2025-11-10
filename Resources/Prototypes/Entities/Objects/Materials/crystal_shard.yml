@@ -39,6 +39,22 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 50
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -1.5
+        Slash: -1.5
+        Piercing: -1.5
+        Heat: -1.5
+        Cold: -1.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: ShardCrystalBase
