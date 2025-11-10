@@ -60,6 +60,22 @@
         reagents:
         - ReagentId: Gold
           Quantity: 10
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -2
+        Slash: -2
+        Piercing: -2
+        Heat: -5
+        Cold: -5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: IngotGold
@@ -105,6 +121,22 @@
         reagents:
         - ReagentId: Silver
           Quantity: 10
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -5
+        Slash: -5
+        Piercing: -5
+        Heat: -5
+        Cold: -5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: IngotSilver

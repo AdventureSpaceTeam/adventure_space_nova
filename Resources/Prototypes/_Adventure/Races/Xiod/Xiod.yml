@@ -53,7 +53,7 @@
 - type: entity
   abstract: true
   save: false
-  parent: BaseMobSpeciesOrganic
+  parent: BaseMobSpeciesOrganicNoFingerprint
   id: BaseMobXiod
   name: Урист макАмёба
   components:

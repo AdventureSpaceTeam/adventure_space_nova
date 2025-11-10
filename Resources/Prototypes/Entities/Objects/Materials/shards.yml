@@ -111,6 +111,22 @@
   - type: Construction
     graph: ShivConstruct
     node: start
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -0.5
+        Slash: -0.5
+        Piercing: -0.5
+        Heat: -0.5
+        Cold: -0.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: ShardBase
@@ -147,6 +163,22 @@
   - type: Construction
     graph: ReinforcedShivConstruct
     node: start
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -1
+        Slash: -1
+        Piercing: -1
+        Heat: -1
+        Cold: -1
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: ShardBase
@@ -185,6 +217,22 @@
   - type: Construction
     graph: PlasmaShivConstruct
     node: start
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -1.5
+        Slash: -1.5
+        Piercing: -1.5
+        Heat: -1.5
+        Cold: -1.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: ShardBase
@@ -225,6 +273,22 @@
   - type: Construction
     graph: UraniumShivConstruct
     node: start
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -2
+        Slash: -2
+        Piercing: -2
+        Heat: -2
+        Cold: -2
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end
 
 - type: entity
   parent: ShardBase
@@ -258,3 +322,19 @@
           Quantity: 1.65
         - ReagentId: Copper
           Quantity: 3.35
+#Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -2.5
+        Slash: -2.5
+        Piercing: -2.5
+        Heat: -2.5
+        Cold: -2.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+#Adventure-end

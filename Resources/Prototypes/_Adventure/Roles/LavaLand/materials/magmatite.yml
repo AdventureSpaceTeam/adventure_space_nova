@@ -61,11 +61,11 @@
       - Stone
     damage:
       types:
-        Blunt: -15
-        Slash: -15
-        Piercing: -15
-        Heat: -15
-        Cold: -15
+        Blunt: -30
+        Slash: -30
+        Piercing: -30
+        Heat: -30
+        Cold: -30
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -144,6 +144,20 @@
           Quantity: 1
         - ReagentId: Iron
           Quantity: 1
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -15
+        Slash: -15
+        Piercing: -15
+        Heat: -15
+        Cold: -15
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: entity
   parent: MaterialMagmatiteFragment
