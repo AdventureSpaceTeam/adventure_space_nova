@@ -54,6 +54,11 @@
           type: [Drask]
         reagent: Protein
         amount: 0.5
+  tileReactions:
+  - !type:CleanTileReaction
+    cleanCost: 0.13
+  - !type:CleanDecalsReaction
+    cleanCost: 0.13
 
 - type: reagent
   id: SpaceCleaner
