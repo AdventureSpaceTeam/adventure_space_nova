@@ -89,6 +89,7 @@ public sealed partial class AtmosphereSystem
             tile.Air == null ||
             tile.Air.GetMoles(Gas.Oxygen) < 0.5f ||
             tile.Air.GetMoles(Gas.Plasma) < 0.5f && tile.Air.GetMoles(Gas.Tritium) < 0.5f && tile.Air.GetMoles(Gas.Hydrogen) < 0.5f) // Adventure gases
+        {
             tile.Hotspot = new Hotspot();
             InvalidateVisuals(ent, tile);
             return;

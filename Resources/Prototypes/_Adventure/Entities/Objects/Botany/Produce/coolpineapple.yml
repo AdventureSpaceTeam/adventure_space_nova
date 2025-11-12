@@ -63,7 +63,7 @@
       reagents:
       - ReagentId: Laughter
         Quantity: 5
-  - type: Food
+  - type: Edible
     trash:
     - ClothingEyesGlassesCheapSunglasses
   - type: Tag

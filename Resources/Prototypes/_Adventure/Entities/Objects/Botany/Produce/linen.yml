@@ -44,7 +44,7 @@
   - type: FlavorProfile
     flavors:
       - cotton
-  - type: Food
+  - type: Edible
     requiresSpecialDigestion: true
   - type: SolutionContainerManager
     solutions:
