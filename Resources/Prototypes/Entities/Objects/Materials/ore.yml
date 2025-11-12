@@ -224,9 +224,11 @@
     tags:
     - Ore
     - OrePlasma
-  - type: Healing # Adventure
+# Adventure-start
+  - type: Healing
     damageContainers:
       - Plasman
+      - Stone
     damage:
       types:
         Blunt: -2
@@ -240,6 +242,7 @@
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: PlasmaOre

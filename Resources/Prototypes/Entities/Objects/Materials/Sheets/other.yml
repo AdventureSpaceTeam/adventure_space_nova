@@ -108,9 +108,11 @@
         - ReagentId: Plasma
           Quantity: 10
         canReact: false
-  - type: Healing # Adventure
+# Adventure-start
+  - type: Healing
     damageContainers:
       - Plasman
+      - Stone
     damage:
       types:
         Blunt: -5
@@ -124,6 +126,7 @@
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: SheetPlasma
@@ -249,6 +252,22 @@
         - ReagentId: Radium
           Quantity: 2
         canReact: false
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -5
+        Slash: -5
+        Piercing: -5
+        Heat: -10
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: SheetUranium

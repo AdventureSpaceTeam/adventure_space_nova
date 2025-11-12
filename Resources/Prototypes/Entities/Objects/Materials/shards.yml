@@ -117,11 +117,11 @@
       - Stone
     damage:
       types:
-        Blunt: -0.5
-        Slash: -0.5
-        Piercing: -0.5
-        Heat: -0.5
-        Cold: -0.5
+        Blunt: -1
+        Slash: -1
+        Piercing: -1
+        Heat: -1
+        Cold: -1
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -169,11 +169,11 @@
       - Stone
     damage:
       types:
-        Blunt: -1
-        Slash: -1
-        Piercing: -1
-        Heat: -1
-        Cold: -1
+        Blunt: -1.5
+        Slash: -1.5
+        Piercing: -1.5
+        Heat: -1.5
+        Cold: -1.5
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -223,11 +223,11 @@
       - Stone
     damage:
       types:
-        Blunt: -1.5
-        Slash: -1.5
-        Piercing: -1.5
-        Heat: -1.5
-        Cold: -1.5
+        Blunt: -2
+        Slash: -2
+        Piercing: -2
+        Heat: -2
+        Cold: -2
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -279,11 +279,11 @@
       - Stone
     damage:
       types:
-        Blunt: -2
-        Slash: -2
-        Piercing: -2
-        Heat: -2
-        Cold: -2
+        Blunt: -2.5
+        Slash: -2.5
+        Piercing: -2.5
+        Heat: -2.5
+        Cold: -2.5
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -324,11 +324,11 @@
       - Stone
     damage:
       types:
-        Blunt: -2.5
-        Slash: -2.5
-        Piercing: -2.5
-        Heat: -2.5
-        Cold: -2.5
+        Blunt: -3
+        Slash: -3
+        Piercing: -3
+        Heat: -3
+        Cold: -3
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:

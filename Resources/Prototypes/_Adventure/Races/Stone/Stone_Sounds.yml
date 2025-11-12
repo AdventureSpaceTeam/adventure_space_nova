@@ -26,6 +26,15 @@
   - /Audio/_Adventure/Voice/Stone/Haha1.ogg
   - /Audio/_Adventure/Voice/Stone/Haha2.ogg
 
+- type: soundCollection
+  id: StoneScratchCollection
+  files:
+  - /Audio/_Adventure/Voice/Stone/Scratch1.ogg
+  - /Audio/_Adventure/Voice/Stone/Scratch2.ogg
+  - /Audio/_Adventure/Voice/Stone/dead1.ogg
+  - /Audio/_Adventure/Voice/Stone/dead2.ogg
+  - /Audio/_Adventure/Voice/Stone/dead3.ogg
+
 - type: speechSounds
   id: StoneSpeach
   saySound:
@@ -60,12 +69,16 @@
       collection: StoneScreamCollection
     StoneDeathgasp:
       collection: StoneDeadCollection
+    Yawn:
+      collection: StoneLaughCollection
+    Sigh:
+      collection: StoneScreamCollection
 
 - type: emoteSounds
   id: StoneBodyEmotes
   sounds:
     Scratch:
-      collection: StoneDeadCollection
+      collection: StoneScratchCollection
     Crunch:
       path: /Audio/_Adventure/Voice/Stone/crunch.ogg
     Facepalm:
