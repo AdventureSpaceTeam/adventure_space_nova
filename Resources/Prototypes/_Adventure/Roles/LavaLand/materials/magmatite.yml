@@ -56,16 +56,18 @@
             max: 10
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: ExplosionResistance
+    damageCoefficient: 0.0
   - type: Healing
     damageContainers:
       - Stone
     damage:
       types:
-        Blunt: -30
-        Slash: -30
-        Piercing: -30
-        Heat: -30
-        Cold: -30
+        Blunt: -50
+        Slash: -50
+        Piercing: -50
+        Heat: -50
+        Cold: -50
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -144,6 +146,8 @@
           Quantity: 1
         - ReagentId: Iron
           Quantity: 1
+  - type: ExplosionResistance
+    damageCoefficient: 0.0
   - type: Healing
     damageContainers:
       - Stone
@@ -283,6 +287,20 @@
   - type: PhysicalComposition
     materialComposition:
       ProcessedMagmatite: 100
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -25
+        Slash: -25
+        Piercing: -25
+        Heat: -25
+        Cold: -25
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: ProcessedMagmatite

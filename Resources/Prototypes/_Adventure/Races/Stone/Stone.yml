@@ -12,6 +12,8 @@
       types:
         Blunt: 1
   - type: ProtectedFromStepTriggers
+  - type: Reflect
+    reflectProb: 0.01
 
 - type: entity
   abstract: true
@@ -151,6 +153,7 @@
     damage:
       types:
         Blunt: 15
+        Structural: 10
   - type: HumanoidAppearance
     species: Stone
   - type: Icon

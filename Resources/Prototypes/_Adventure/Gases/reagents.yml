@@ -49,7 +49,6 @@
     Narcotic:
       effects:
       - !type:HealthChange
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -80,7 +79,6 @@
     Gas:
       effects:
       - !type:Oxygenate
-        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Plant ]
@@ -90,7 +88,6 @@
           type: [ Vox, Plant ]
           inverted: true
         minScale: 1
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -116,7 +113,6 @@
           type: [ Vox, Plant ]
           inverted: true
         minScale: 1
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -135,7 +131,6 @@
       effects:
       - !type:HealthChange
         minScale: 2
-        scaling: true
         ignoreResistances: true
         damage:
           groups:
@@ -151,7 +146,6 @@
       effects:
       - !type:HealthChange
         conditions:
-        scaling: true
         ignoreResistances: true
         damage:
           groups:
@@ -182,7 +176,6 @@
     Gas:
       effects:
       - !type:Oxygenate
-        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Human, Animal, Rat, Plant ]
@@ -200,7 +193,6 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -217,7 +209,6 @@
     Poison:
       effects:
       - !type:Oxygenate
-        scaling: true
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Human, Animal, Rat, Plant ]
@@ -235,7 +226,6 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -278,7 +268,6 @@
         sprintSpeedModifier: 1.5
       - !type:HealthChange
         minScale: 18
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -301,7 +290,6 @@
         sprintSpeedModifier: 1.5
       - !type:HealthChange
         minScale: 18
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -355,7 +343,6 @@
           reagent: Zauker
           min: 0.25
           max: 8
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -368,7 +355,6 @@
         - !type:ReagentCondition
           reagent: Zauker
           min: 8
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -384,7 +370,6 @@
           reagent: Zauker
           min: 0.25
           max: 8
-        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -397,7 +382,6 @@
         - !type:ReagentCondition
           reagent: Zauker
           min: 8
-        scaling: true
         ignoreResistances: true
         damage:
           types:
