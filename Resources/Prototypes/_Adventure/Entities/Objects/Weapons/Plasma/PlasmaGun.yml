@@ -47,7 +47,7 @@
   - type: ProjectileBatteryAmmoProvider
     proto: BulletPlasmaLaser
     fireCost: 40
-  - type: Food
+  - type: Edible
     requiresSpecialDigestion: true
 
 - type: entity

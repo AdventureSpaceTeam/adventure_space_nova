@@ -4,7 +4,7 @@
   id: CandyBase
   abstract: true
   components:
-  - type: Food
+  - type: Edible
   - type: Tag
     tags:
       - FoodSnack
@@ -434,7 +434,7 @@
   id: MeatCandyBase
   abstract: true
   components:
-  - type: Food
+  - type: Edible
   - type: Tag
     tags:
       - Meat
@@ -457,7 +457,7 @@
   id: ClothCandyBase
   abstract: true
   components:
-  - type: Food
+  - type: Edible
   - type: Tag
     tags:
       - ClothMade
@@ -476,7 +476,6 @@
   parent: BaseItem
   name: конфета
   components:
-  - type: Food
   - type: Sprite
     sprite: _Adventure/Objects/Consumable/Candies/candies.rsi
     state: RedWrapCandy
@@ -497,7 +496,6 @@
   parent: MeatCandyBase
   name: конфета
   components:
-  - type: Food
   - type: FlavorProfile
     flavors:
       - meaty
@@ -510,7 +508,7 @@
   parent: BaseItem
   name: конфета
   components:
-  - type: Food
+  - type: Edible
   - type: Sprite
     sprite: _Adventure/Objects/Consumable/Candies/candies.rsi
     state: GreenWrapCandy
@@ -531,7 +529,6 @@
   parent: MeatCandyBase
   name: конфета
   components:
-  - type: Food
   - type: FlavorProfile
     flavors:
       - meaty
@@ -544,7 +541,6 @@
   parent: BaseItem
   name: конфета
   components:
-  - type: Food
   - type: Sprite
     sprite: _Adventure/Objects/Consumable/Candies/candies.rsi
     state: WhiteWrapCandy
@@ -565,7 +561,6 @@
   parent: ClothCandyBase
   name: конфета
   components:
-  - type: Food
   - type: FlavorProfile
     flavors:
       - indescribably

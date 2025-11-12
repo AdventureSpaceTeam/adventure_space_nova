@@ -59,7 +59,7 @@
     sprite: _Adventure/Objects/Botany/Produce/bananagundop.rsi
   - type: Produce
     seedId: BananaGunPlant
-  - type: Food
+  - type: Edible
     trash:
     - BananaGunRev
   - type: Tag
