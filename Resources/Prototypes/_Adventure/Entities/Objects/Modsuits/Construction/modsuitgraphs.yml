@@ -76,9 +76,7 @@
           data: 8
 
   - node: modsuitconstructed
-    actions:
-    - !type:BuildMech
-      mechPrototype: ControlModsuitConstructingEnd
+    entity: ControlModsuitConstructingEnd
 
 - type: constructionGraph
   id: MagmatiteModsuitConstructed
@@ -158,9 +156,7 @@
           data: 8
 
   - node: magmatitemodsuitconstructed
-    actions:
-    - !type:BuildMech
-      mechPrototype: ControlMagmatiteModsuitConstructingEnd
+    entity: ControlMagmatiteModsuitConstructingEnd
 
 - type: constructionGraph
   id: LegionCoreConstructing

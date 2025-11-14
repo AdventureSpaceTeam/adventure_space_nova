@@ -67,3 +67,6 @@
     settings:
       scanDelay: 0.1
       advScanDelay: 0.5
+
+- type: Tag
+  id: PlantAnalyzer

@@ -70771,12 +70771,12 @@ entities:
       currentLabel: 2
     - type: NameModifier
       baseName: kammerer safe
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunHeckler
   entities:
   - uid: 10682
     components:
     - type: MetaData
-      name: drozd safe (2)
+      name: оружейный сейф Хеклеров (2)
     - type: Transform
       pos: 45.5,36.5
       parent: 2
@@ -70791,7 +70791,7 @@ entities:
     - type: Label
       currentLabel: 2
     - type: NameModifier
-      baseName: drozd safe
+      baseName: оружейный сейф Хеклеров
 - proto: Handcuffs
   entities:
   - uid: 9397

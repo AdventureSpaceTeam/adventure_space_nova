@@ -64071,7 +64071,7 @@ entities:
     - type: Transform
       pos: 28.5,-8.5
       parent: 2
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunHeckler
   entities:
   - uid: 8457
     components:

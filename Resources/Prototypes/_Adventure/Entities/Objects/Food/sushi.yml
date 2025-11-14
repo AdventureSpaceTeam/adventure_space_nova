@@ -5,7 +5,7 @@
   id: FoodMealSushi
   description: Не стоит рассказывать Скреллам из чего это сделано...
   components:
-  - type: Food
+  - type: Edible
     trash:
     - FoodPlateSmall
   - type: FlavorProfile

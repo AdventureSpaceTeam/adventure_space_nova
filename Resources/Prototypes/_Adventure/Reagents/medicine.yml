@@ -14,7 +14,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -25,7 +24,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical # Работает, если в крите
-        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -56,7 +54,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -68,7 +65,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical # Работает, если в крите
-        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -101,7 +97,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
@@ -114,7 +109,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical # Работает, если в крите
-        scaling: true
         ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:

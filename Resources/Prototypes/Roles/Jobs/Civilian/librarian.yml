@@ -3,6 +3,13 @@
   name: job-name-librarian
   description: job-description-librarian
   playTimeTracker: JobLibrarian
+# Adventure begin
+  requirements:
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Stone
+# Adventure end
   startingGear: LibrarianGear
   icon: "JobIconLibrarian"
   supervisors: job-supervisors-hop

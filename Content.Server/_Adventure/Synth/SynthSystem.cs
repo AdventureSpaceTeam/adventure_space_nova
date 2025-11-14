@@ -50,7 +50,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
-    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
+    [Dependency] private readonly Shared.Damage.Systems.DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;

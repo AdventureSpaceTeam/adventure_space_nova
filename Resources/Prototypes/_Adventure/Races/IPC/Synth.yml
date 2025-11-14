@@ -86,7 +86,6 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaling: true
         damage:
           types:
             Cold: -2
@@ -105,6 +104,7 @@
     thermalRegulationTemperatureThreshold: 2
   - type: DamagedSiliconAccent
   - type: AtmosExposed
+  - type: MovedByPressure
   - type: Barotrauma
     damage:
       types:

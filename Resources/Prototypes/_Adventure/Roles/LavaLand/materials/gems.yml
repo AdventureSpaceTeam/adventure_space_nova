@@ -17,6 +17,20 @@
   - type: PhysicalComposition
     materialComposition:
       ProcessedEmerald: 100
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: Emerald
@@ -67,6 +81,20 @@
   - type: PhysicalComposition
     materialComposition:
       ProcessedRuby: 100
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: Ruby
@@ -117,6 +145,20 @@
   - type: PhysicalComposition
     materialComposition:
       ProcessedSapphire: 100
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: Sapphire
@@ -167,6 +209,20 @@
   - type: PhysicalComposition
     materialComposition:
       ProcessedTopaz: 100
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: Topaz
@@ -222,6 +278,20 @@
     radius: 2
     energy: 1.5
     color: "#ee5858"
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -50
+        Slash: -50
+        Piercing: -50
+        Heat: -50
+        Cold: -50
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: DragonRuby
@@ -276,6 +346,20 @@
     radius: 2
     energy: 1.5
     color: "#cb5ee5"
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -20
+        Slash: -20
+        Piercing: -20
+        Heat: -20
+        Cold: -20
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: Phoron
@@ -326,6 +410,20 @@
   - type: PhysicalComposition
     materialComposition:
       ProcessedRupee: 100
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
+        Cold: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: latheRecipe
   id: Rupee

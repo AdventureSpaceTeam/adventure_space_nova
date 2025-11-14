@@ -41,7 +41,7 @@
   - type: PowerCellVisuals
   - type: Riggable
 #Adventure-edit-start
-  - type: Food
+  - type: Edible
     requiresSpecialDigestion: true
 #Adventure-edit-end
 
@@ -310,7 +310,7 @@
     sprintModifier: 0.8
   - type: HeldSpeedModifier
 #Adventure-edit-start
-  - type: Food
+  - type: Edible
     requiresSpecialDigestion: true
 #Adventure-edit-end
 

@@ -45,23 +45,25 @@
   - OffsetCaneMime
   - OffsetCaneNT
   - Cane
-  - TowelColorBlack
-  - TowelColorDarkBlue
-  - TowelColorDarkGreen
-  - TowelColorGold
+  - TowelColorWhite
   - TowelColorGray
+  - TowelColorBlack
+  - TowelColorRed
+  - TowelColorOrange
+  - TowelColorLightBrown
+  - TowelColorYellow
+  - TowelColorDarkGreen
   - TowelColorGreen
   - TowelColorLightBlue
-  - TowelColorLightBrown
+  - TowelColorDarkBlue
+  - TowelColorPurple
   - TowelColorMaroon
   - TowelColorMime
-  - TowelColorOrange
-  - TowelColorPurple
-  - TowelColorRed
   - TowelColorSilver
   - TowelColorWhite
   - TowelColorYellow
-  - DonateUplink
+  - TowelColorGold
+  - DonateUplink # Adventure
 
 - type: loadoutGroup
   id: Glasses
@@ -91,6 +93,7 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyPlasma #Adventure
   - LoadoutSpeciesPlasManTank #Adventure
+  - EmergencyStone #Adventure
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -1027,6 +1030,7 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyPlasma #Adventure
   - LoadoutSpeciesPlasManTank #Adventure
+  - EmergencyStone #Adventure
 
 # Science
 - type: loadoutGroup
@@ -1372,6 +1376,7 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyPlasma #Adventure
   - LoadoutSpeciesPlasManTank #Adventure
+  - EmergencyStone #Adventure
 
 - type: loadoutGroup
   id: SecurityStar
@@ -1621,6 +1626,7 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyPlasma #Adventure
   - LoadoutSpeciesPlasManTank #Adventure
+  - EmergencyStone #Adventure
 
 # Wildcards
 - type: loadoutGroup
@@ -1693,6 +1699,7 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyPlasma #Adventure
   - LoadoutSpeciesPlasManTank #Adventure
+  - EmergencyStone #Adventure
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

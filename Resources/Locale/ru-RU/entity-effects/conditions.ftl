@@ -1,4 +1,4 @@
-reagent-effect-condition-guidebook-total-damage =
+entity-condition-guidebook-total-damage =
     { $max ->
         [2147483648] тело имеет по крайней мере { NATURALFIXED($min, 2) } общего урона
        *[other]
@@ -26,7 +26,7 @@ reagent-effect-condition-guidebook-group-damage =
                  }
     }
 
-reagent-effect-condition-guidebook-total-hunger =
+entity-condition-guidebook-total-hunger =
     { $max ->
         [2147483648] цель имеет по крайней мере { NATURALFIXED($min, 2) } общего голода
        *[other]
@@ -36,7 +36,7 @@ reagent-effect-condition-guidebook-total-hunger =
             }
     }
 
-reagent-effect-condition-guidebook-reagent-threshold =
+entity-condition-guidebook-reagent-threshold =
     { $max ->
         [2147483648] в кровеносной системе имеется по крайней мере { NATURALFIXED($min, 2) } ед. { $reagent }
        *[other]
@@ -59,7 +59,7 @@ reagent-effect-condition-guidebook-solution-temperature =
             }
     }
 
-reagent-effect-condition-guidebook-body-temperature =
+entity-condition-guidebook-body-temperature =
     температура тела составляет { $max ->
         [2147483648] не менее { NATURALFIXED($min, 2) }k
        *[other]

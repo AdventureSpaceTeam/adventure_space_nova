@@ -1,0 +1,253 @@
+- type: entity
+  save: false
+  name: Урист макКэмень
+  parent: BaseMobStone
+  id: MobStone
+  components:
+  - type: PassiveDamage
+    allowedStates:
+    - Critical
+    damageCap: 200
+    damage:
+      types:
+        Blunt: 1
+  - type: ProtectedFromStepTriggers
+  - type: Reflect
+    reflectProb: 0.01
+
+- type: entity
+  abstract: true
+  save: false
+  name: Урист макКэмень
+  parent:
+  - MobFlammable
+  - BaseMobSpeciesInorganicIPC
+  id: BaseMobStone
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+  - type: Sprite
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["brass"]
+    - map: ["pants"]
+    - map: ["jumpsuit"]
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
+    - map: [ "back" ]
+    - map: [ "ipc" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+  - type: ScaleVisuals
+    scale: 1.1, 1.1
+  - type: Deathgasp
+    prototype: StoneDeathgasp
+  - type: BodyEmotes
+    soundsId: StoneBodyEmotes
+  - type: FlashImmunity
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 2
+  - type: Temperature
+    heatDamageThreshold: 1273.15
+    coldDamageThreshold: 3.15
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 0.1
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage:
+      types:
+        Heat: 0.1
+  - type: TemperatureSpeed
+    thresholds:
+      233: 0.8
+      228: 0.6
+      225: 0.4
+  - type: AtmosExposed
+  - type: MovedByPressure
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.05
+  - type: StatusEffects
+    allowed:
+      - KnockedDown
+      - SlowedDown
+      - RatvarianLanguage
+      - PressureImmunity
+      - TemporaryBlindness
+      - Pacified
+      - Flashed
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 2000
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/smash.ogg
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 0.8
+    damage:
+      types:
+        Blunt: 15
+        Structural: 10
+  - type: HumanoidAppearance
+    species: Stone
+  - type: Icon
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+    state: full
+  - type: Body
+    prototype: Stone
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Stone
+    damageModifierSet: Stone
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#25262a"
+  - type: MobState
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+  - type: TransferMindOnGib
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:GibBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.9
+      80: 0.7
+  - type: Speech
+    speechVerb: Stone
+    speechSounds: StoneSpeach
+  - type: ZombieImmune
+  - type: Vocal
+    sounds:
+      Male: StoneEmote
+      Female: StoneEmote
+      Unsexed: StoneEmote
+  - type: FireVisuals
+    alternateState: Standing
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: StoneStepCollection
+      params:
+        volume: -1
+  - type: TypingIndicator
+    proto: Stone
+  - type: Crawler
+    speedModifier : 0.2
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+  - type: GuideHelp
+    guides:
+    - Species
+  - type: Inventory
+    templateId: Stone
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobStoneDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: Stone
+    - type: Inventory
+      templateId: Stone
+
+- type: speechVerb
+  id: Stone
+  name: chat-speech-verb-name-electricity
+  speechVerbStrings:
+  - скрипит
+  - шкрябает
+  - сыплет

@@ -290,6 +290,20 @@
           Quantity: 3
         - ReagentId: Sulfur
           Quantity: 2
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -30
+        Slash: -30
+        Piercing: -30
+        Heat: -30
+        Cold: -30
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
 
 - type: entity
   parent: OreDragon

@@ -397,6 +397,22 @@
     tags:
     - RawMaterial
     - Diamond
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -8
+        Cold: -8
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: MaterialDiamond
@@ -569,6 +585,22 @@
   - type: Appearance
   - type: Item
     heldPrefix: bananium
+# Adventure-start
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -8
+        Slash: -8
+        Piercing: -8
+        Heat: -8
+        Cold: -8
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+# Adventure-end
 
 - type: entity
   parent: MaterialBananium

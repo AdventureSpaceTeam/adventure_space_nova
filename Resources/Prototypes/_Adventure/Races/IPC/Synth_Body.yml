@@ -48,7 +48,8 @@
   - type: Organ
   - type: Brain
   - type: Input
-    context: human
+    context: "ghost"
+  - type: InputMover
   - type: BlockMovement
   - type: Examiner
   - type: BorgBrain
