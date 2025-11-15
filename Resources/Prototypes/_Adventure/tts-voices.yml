@@ -3,30 +3,35 @@
   description: Голос популярного стримера Папича
   speaker: papich
   id: papich
+  gender: Male
 
 - type: ttsVoice
   name: Бэбэй
   description: Голос популярного стримера Бэбэя
   speaker: bebey
   id: bebey
+  gender: Male
 
 - type: ttsVoice
   name: Дмитрий Пучков
   description:
   speaker: puchkow
   id: puchkow
+  gender: Male
 
 - type: ttsVoice
   name: Мориарти
   description:
   speaker: moriarti
   id: moriarti
+  gender: Male
 
 - type: ttsVoice
   name: Шарлотта
   description: Голос виртуального ютубера Charlotte Ch
   speaker: charlotte
   id: charlotte
+  gender: Female
 
 - type: ttsVoice
   name: Планя
