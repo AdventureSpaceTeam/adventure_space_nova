@@ -69,3 +69,12 @@ marking-InsectHeadBigHead = Серпентид, голова (Большая г�
 
 marking-InsectHeadForehead-forehead = Серпентид, голова (Большой лоб)
 marking-InsectHeadForehead = Серпентид, голова (Большой лоб)
+
+marking-InsectHeadStretch-stretch = Серпентид, усики (Тянущиеся)
+marking-InsectHeadStretch = Серпентид, усики (Тянущиеся)
+
+marking-InsectTailCentipede-centipede = Серпентид, хвост (Многоножка)
+marking-InsectTailCentipede = Серпентид, хвост (Многоножка)
+
+marking-InsectHandDouble-hand_double = Серпентид, клешни (Двойные)
+marking-InsectHandDouble = Серпентид, клешни (Двойные)
