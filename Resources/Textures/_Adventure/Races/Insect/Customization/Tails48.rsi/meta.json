@@ -54,6 +54,14 @@
     {
       "name": "gusenica",
       "directions": 4
+    },
+    {
+      "name": "centipede",
+      "directions": 4
+    },
+    {
+      "name": "centipede_body",
+      "directions": 4
     }
   ]
 }

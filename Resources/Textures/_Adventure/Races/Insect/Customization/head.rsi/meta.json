@@ -32,6 +32,10 @@
       "directions": 4
     },
     {
+      "name": "stretch",
+      "directions": 4
+    },
+    {
       "name": "forehead",
       "directions": 4
     }
