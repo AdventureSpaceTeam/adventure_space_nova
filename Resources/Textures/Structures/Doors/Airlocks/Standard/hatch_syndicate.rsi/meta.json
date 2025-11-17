@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by Hyenh",
+  "copyright": "by borkroman",
   "size": {
     "x": 32,
     "y": 32
@@ -9,6 +9,9 @@
   "states": [
     {
       "name": "assembly"
+    },
+    {
+      "name": "open_unlit"
     },
     {
       "name": "bolted_unlit"
@@ -25,25 +28,15 @@
         [
           0.1,
           0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.07,
+          0.07,
+          0.07,
+          0.2
         ]
       ]
     },
     {
-      "name": "closing_unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
+      "name": "closing_unlit"
     },
     {
       "name": "deny_unlit",
@@ -59,12 +52,7 @@
       ]
     },
     {
-      "name": "open",
-      "delays": [
-        [
-          1
-        ]
-      ]
+      "name": "open"
     },
     {
       "name": "opening",
@@ -72,25 +60,15 @@
         [
           0.1,
           0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.07,
+          0.07,
+          0.07,
+          0.2
         ]
       ]
     },
     {
-      "name": "opening_unlit",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
+      "name": "opening_unlit"
     },
     {
       "name": "panel_closing",
@@ -98,20 +76,15 @@
         [
           0.1,
           0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.07,
+          0.07,
+          0.07,
+          0.2
         ]
       ]
     },
     {
-      "name": "panel_open",
-      "delays": [
-        [
-          1
-        ]
-      ]
+      "name": "panel_open"
     },
     {
       "name": "panel_opening",
@@ -119,10 +92,10 @@
         [
           0.1,
           0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
+          0.07,
+          0.07,
+          0.07,
+          0.2
         ]
       ]
     },
@@ -148,9 +121,6 @@
           0.1,
           0.1,
           0.1,
-          0.1,
-          0.1,
-          0.1,
           0.1
         ]
       ]
@@ -164,8 +134,7 @@
           0.1,
           0.1,
           0.1,
-          0.1,
-          1.7
+          0.1
         ]
       ]
     },
@@ -189,8 +158,8 @@
       "name": "emergency_unlit",
       "delays": [
         [
-          0.4,
-          0.4
+          1.2,
+          1.2
         ]
       ]
     }
