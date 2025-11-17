@@ -260,3 +260,25 @@
   sprites:
   - sprite: _Adventure/Races/Insect/Customization/head.rsi
     state: stretch
+
+- type: marking
+  id: InsectHeadCrown
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: crown
+
+- type: marking
+  id: InsectBodyHump
+  bodyPart: RHand
+  markingCategory: Overlay
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: hump

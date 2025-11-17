@@ -78,3 +78,9 @@ marking-InsectTailCentipede = Серпентид, хвост (Многоножк
 
 marking-InsectHandDouble-hand_double = Серпентид, клешни (Двойные)
 marking-InsectHandDouble = Серпентид, клешни (Двойные)
+
+marking-InsectBodyHump-humb = Серпентид, тело (Горб)
+marking-InsectBodyHump = Серпентид, тело (Горб)
+
+marking-InsectHeadCrown-crown = Серпентид, голова (Корона)
+marking-InsectHeadCrown = Серпентид, голова (Корона)

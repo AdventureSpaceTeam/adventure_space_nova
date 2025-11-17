@@ -28,6 +28,10 @@
       "directions": 4
     },
     {
+      "name": "hump",
+      "directions": 4
+    },
+    {
       "name": "hand_double",
       "directions": 4
     }
