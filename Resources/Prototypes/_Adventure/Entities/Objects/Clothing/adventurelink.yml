@@ -506,3 +506,18 @@
     sprite: _Adventure/sponsor_uplink/alt/osheynik.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/alt/osheynik.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: reinforcedjumpsuit
+  name: укреплённый комбинезон
+  description: Дорогой крепкий комбинезон.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/reinforced_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/reinforced_jumpsuit.rsi
+    slots: [innerclothing]
+    equipSound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+    

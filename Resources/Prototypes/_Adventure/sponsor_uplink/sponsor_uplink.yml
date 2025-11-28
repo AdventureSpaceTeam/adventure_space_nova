@@ -925,6 +925,21 @@
     whitelist:
     - Scientist
     - SeniorResearcherAdv
+    
+- type: listing
+  id: UplinkSponsorClothScienceJob2
+  productEntity: reinforcedjumpsuit
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Scientist
+    - SeniorResearcherAdv
 # End Science
 
 # Medical
