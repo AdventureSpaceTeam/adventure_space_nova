@@ -886,6 +886,14 @@
   categories:
   - SponsorThing
 
+- type: listing
+  id: UplinkSponsorCloth83
+  productEntity: ClothingJumpsuitImportantPerson
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
 # Jobs
 
 # Clown

@@ -531,3 +531,14 @@
     sprite: _Adventure/sponsor_uplink/femboy_skirt.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/femboy_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitImportantPerson
+  name: комбинезон важного человека
+  description: Комбинезон с узором, который носил важный человек.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/important_person_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/important_person_jumpsuit.rsi
