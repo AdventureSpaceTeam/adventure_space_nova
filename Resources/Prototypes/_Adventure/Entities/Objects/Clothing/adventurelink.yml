@@ -521,3 +521,13 @@
     equipSound:
       path: /Audio/Items/jumpsuit_equip.ogg
     
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitFemboy
+  name: розовая юбка
+  description: Наряд самого мужественного дворфа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/femboy_skirt.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/femboy_skirt.rsi
