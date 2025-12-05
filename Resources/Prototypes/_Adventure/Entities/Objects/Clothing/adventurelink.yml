@@ -575,3 +575,38 @@
     sprite: _Adventure/sponsor_uplink/royalcape.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/royalcape.rsi
+
+- type: entity
+  id: BunnyBackpackGroup
+  parent: ClothingBackpack
+  name: рюкзак с костюмом кролика
+  description: Рюкзак заполненый одеждой.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingJumpsuitBunnySuit
+      amount: 1
+    - id: ClothingHeadBunnyEars
+      amount: 1
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitBunnySuit
+  name: чёрный костюм кролика
+  description: В таком костюме вы чувствуете себя героиней романа
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/bunnysuitSuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/bunnysuitSuit.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBunnySuit
+  name: чёрные ушки кролика
+  description: Из натурального пуха!
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/bunnysuitEars.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/bunnysuitEars.rsi

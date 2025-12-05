@@ -918,6 +918,17 @@
   categories:
   - SponsorThings
 
+- type: listing
+  id: UplinkSponsorCloth86
+  productEntity: BunnyBackpackGroup
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 # Jobs
 
 # Clown
