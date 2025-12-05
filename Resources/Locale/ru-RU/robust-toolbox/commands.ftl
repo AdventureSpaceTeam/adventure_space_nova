@@ -64,7 +64,7 @@ cmd-gc-help =
     Использование: gc [поколение]
     Использует GC.Collect() для запуска Сборки мусора.
     Если был предоставлен аргумент, то он спарсится как номер поколения GC и используется GC.Collect(int).
-    Используйте команду 'gfc' для проведения сборки мусора, со сжатием 'кучи больших объектов' (LOH-compacting).
+    Используйте команду 'gfc' для проведения сборки мусора со сжатием 'кучи больших объектов' (LOH-compacting).
 cmd-gc-failed-parse = Не удалось спарсить аргумент.
 cmd-gc-arg-generation = [поколение]
 
@@ -82,7 +82,7 @@ cmd-gc_mode-desc = Изменяет/отображает режим задерж
 cmd-gc_mode-help =
     Использование: gc_mode [тип]
     Если аргумент не был предоставлен, вернётся текущий режим задержки GC.
-    Если аргумент был пропущен, он спарсится как GCLatencyMode и будет установлен как режим задержки GC.
+    Если аргумент был предоставлен, он спарсится как GCLatencyMode и будет установлен как режим задержки GC.
 cmd-gc_mode-current = текущий режим задержки gc: { $prevMode }
 cmd-gc_mode-possible = возможные режимы:
 cmd-gc_mode-option = - { $mode }
@@ -146,7 +146,7 @@ cmd-monitor-plus-all-hint = Показывает все мониторы
 
 ## Mapping commands
 
-cmd-set-ambient-light-desc = Позволяет установить эмбиентое освещение для указанной карты, в формате SRGB.
+cmd-set-ambient-light-desc = Позволяет установить эмбиентное освещение для указанной карты, в формате SRGB.
 cmd-set-ambient-light-help = setambientlight [mapid] [r g b a]
 cmd-set-ambient-light-parse = Не удалось спарсить аргументы как байтовые значения цветов.
 cmd-savemap-desc = Сериализует карту на диск. Не будет сохранять карту после инициализации, если это не будет сделано принудительно.
@@ -262,7 +262,7 @@ cmd-rmmap-desc = Удаляет карту из мира. Вы не можете
 cmd-rmmap-help = rmmap <mapId>
 cmd-savegrid-desc = Сериализует грид на диск.
 cmd-savegrid-help = savegrid <gridID> <Path>
-cmd-testbed-desc = Загружает физический испытательный стенд на указаной карте.
+cmd-testbed-desc = Загружает физический испытательный стенд на указанной карте.
 cmd-testbed-help = testbed <mapid> <test>
 cmd-saveconfig-desc = Сохраняет конфигурацию клиента в файл конфигурации.
 cmd-saveconfig-help = saveconfig

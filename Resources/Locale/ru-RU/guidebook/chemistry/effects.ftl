@@ -6,7 +6,17 @@
         [1] { $entname }
        *[other] { $amount } { $entname }
     }
-reagent-effect-guidebook-explosion-reaction-effect =
+entity-effect-guidebook-destroy =
+    { $chance ->
+        [1] Уничтожает
+        *[other] уничтожают
+    } объект
+entity-effect-guidebook-break =
+    { $chance ->
+        [1] Ломает
+        *[other] ломают
+    } объект
+entity-effect-guidebook-explosion =
     { $chance ->
         [1] Вызывает
        *[other] вызывают
@@ -115,6 +125,14 @@ reagent-effect-guidebook-status-effect =
 
 reagent-effect-guidebook-status-effect-delay =
     { $type ->
+        [update]{ $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                 } {LOC($key)} минимум на {NATURALFIXED($time, 3)} { $time ->
+                [one] секунду
+                [few] секунды
+               *[other] секунд
+            }, эффект не накапливается
         [add]
             { $chance ->
                 [1] Вызывает
@@ -138,16 +156,45 @@ reagent-effect-guidebook-status-effect-delay =
                 [1] Удаляет
                *[other] удаляют
             } { NATURALFIXED($time, 3) } { $time ->
-                    [one] секунду
-                    [few] секунды
-                    *[other] секунд
-                } от { LOC($key) }
-    } после { NATURALFIXED($delay, 3) } { $time ->
-                    [one] секунду
-                    [few] секунды
-                    *[other] секунд
-                } задержки
-reagent-effect-guidebook-knockdown =
+                [one] секунду
+                [few] секунды
+               *[other] секунд
+            } от { LOC($key) }
+    } { $delay ->
+        [0] немедленно
+        *[other] после { NATURALFIXED($delay, 3) } { $delay ->
+            [one] секунду
+            [few] секунды
+            *[other] секунд
+        } задержки
+    }
+entity-effect-guidebook-status-effect-indef =
+    { $type ->
+        [update]{ $chance ->
+                    [1] Вызывает
+                    *[other] вызывает
+                 } постоянный {LOC($key)}
+        [add]   { $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                } постоянный{LOC($key)}
+        [set]  { $chance ->
+                    [1] Вызывает
+                    *[other] вызывают
+                } постоянный{LOC($key)}
+        *[remove]{ $chance ->
+                    [1] Убирает
+                    *[other] убирают
+                } {LOC($key)}
+    } { $delay ->
+        [0] мгновенно
+        *[other] после { NATURALFIXED($delay, 3) } { $delay ->
+            [one] секунду
+            [few] секунды
+            *[other] секунд
+        } задержки
+    }
+entity-effect-guidebook-knockdown =
     { $type ->
         [update]
             { $chance ->
@@ -316,8 +363,8 @@ reagent-effect-guidebook-electrocute =
     { $chance ->
         [1] Бьёт током
        *[other] бьют током
-    } употребившего в течении { NATURALFIXED($time, 3) }
-reagent-effect-guidebook-emote =
+    } употребившего в течение { NATURALFIXED($time, 3) }
+entity-effect-guidebook-emote =
     { $chance ->
         [1] Вызывает
        *[other] вызвать
