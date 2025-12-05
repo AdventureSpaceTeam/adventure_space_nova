@@ -542,3 +542,14 @@
     sprite: _Adventure/sponsor_uplink/important_person_jumpsuit.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/important_person_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitSportWhite
+  name: белый спортивный костюм
+  description: Владелец любит выходить на пробежки. Или стрелять сижки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/white_sportik.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/white_sportik.rsi
