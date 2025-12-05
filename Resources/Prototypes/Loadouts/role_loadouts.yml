@@ -180,7 +180,6 @@
   - Survival
   - Trinkets
   - JanitorJobTrinkets
-  - JanitorPlunger
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -455,7 +454,6 @@
   - SurvivalSecurity
   - Trinkets
   - HeadofSecurityJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -474,7 +472,6 @@
   - SurvivalSecurity
   - Trinkets
   - WardenJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -494,7 +491,6 @@
   - SurvivalSecurity
   - Trinkets
   - SecurityJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -512,7 +508,6 @@
   - SurvivalSecurity
   - Trinkets
   - DetectiveJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - BrassGroup #Adventure
   - PantsGroup #Adventure
