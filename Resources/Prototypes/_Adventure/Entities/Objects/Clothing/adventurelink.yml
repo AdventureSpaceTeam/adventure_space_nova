@@ -564,3 +564,14 @@
     sprite: _Adventure/sponsor_uplink/red_sportik.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/red_sportik.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckRoyal
+  name: королевский плащ
+  description: Царь во дворца, царь во дворца!
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/royalcape.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/royalcape.rsi

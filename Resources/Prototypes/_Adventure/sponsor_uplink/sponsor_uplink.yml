@@ -910,6 +910,14 @@
   categories:
   - SponsorThing
 
+- type: listing
+  id: UplinkSponsorCloth85
+  productEntity: ClothingNeckRoyal
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThings
+
 # Jobs
 
 # Clown
