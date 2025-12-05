@@ -553,3 +553,14 @@
     sprite: _Adventure/sponsor_uplink/white_sportik.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/white_sportik.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitSportRed
+  name: красный спортивный костюм
+  description: Владелец любит стрелять сижки. Или выходить на пробежки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/red_sportik.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/red_sportik.rsi

@@ -902,6 +902,14 @@
   categories:
   - SponsorThing
 
+- type: listing
+  id: UplinkSponsorCloth84
+  productEntity: ClothingJumpsuitSportRed
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
 # Jobs
 
 # Clown
