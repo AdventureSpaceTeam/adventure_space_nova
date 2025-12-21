@@ -976,7 +976,7 @@
     whitelist:
     - Scientist
     - SeniorResearcherAdv
-    
+
 - type: listing
   id: UplinkSponsorClothScienceJob2
   productEntity: reinforcedjumpsuit

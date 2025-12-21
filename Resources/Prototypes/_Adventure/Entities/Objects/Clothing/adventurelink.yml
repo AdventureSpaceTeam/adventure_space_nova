@@ -520,7 +520,7 @@
     slots: [innerclothing]
     equipSound:
       path: /Audio/Items/jumpsuit_equip.ogg
-    
+
 - type: entity
   parent: ClothingUniformBase
   id: ClothingJumpsuitFemboy
