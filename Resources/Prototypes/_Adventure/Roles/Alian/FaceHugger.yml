@@ -49,24 +49,23 @@
   - type: SolutionScanner
   - type: SolutionContainerManager
     solutions:
-      chemicals: 
+      chemicals:
         reagents:
         - ReagentId: AlianFero
           Quantity: 100
       melee:
         reagents:
         - ReagentId: AlianToxin
-          Quantity: 100
+          Quantity: 5
   - type: SolutionRegeneration
     solution: melee
     generated:
       reagents:
       - ReagentId: AlianToxin
-        Quantity: 0.5
+        Quantity: 0.2
   - type: MeleeChemicalInjector
     solution: melee
     transferAmount: 5
-
 - type: speechSounds
   id: HuggerSpeach
   saySound:
