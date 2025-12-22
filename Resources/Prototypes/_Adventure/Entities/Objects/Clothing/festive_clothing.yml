@@ -1,0 +1,53 @@
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterGreenSweaterFestive
+  name: зелёный свитер
+  description: Тёплый и уютный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/sweaters/green_sweater.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/sweaters/green_sweater.rsi
+    state: equipped-OUTERCLOTHING
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterRedSweaterFestive
+  name: красный свитер
+  description: Тёплый и уютный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/sweaters/red_sweater.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/sweaters/red_sweater.rsi
+    state: equipped-OUTERCLOTHING
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterWhiteSweaterFestive
+  name: белый свитер
+  description: Тёплый и уютный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/sweaters/white_sweater.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/sweaters/white_sweater.rsi
+    state: equipped-OUTERCLOTHING
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadFestiveWreath
+  name: рождественнский венок
+  description: Венок из Натуральных еловых веток.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/festive-wreath.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/festive-wreath.rsi
+    slots:
+    - HEAD
+    - neck
