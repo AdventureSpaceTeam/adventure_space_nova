@@ -506,3 +506,107 @@
     sprite: _Adventure/sponsor_uplink/alt/osheynik.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/alt/osheynik.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: reinforcedjumpsuit
+  name: укреплённый комбинезон
+  description: Дорогой крепкий комбинезон.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/reinforced_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/reinforced_jumpsuit.rsi
+    slots: [innerclothing]
+    equipSound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitFemboy
+  name: розовая юбка
+  description: Наряд самого мужественного дворфа.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/femboy_skirt.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/femboy_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitImportantPerson
+  name: комбинезон важного человека
+  description: Комбинезон с узором, который носил важный человек.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/important_person_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/important_person_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitSportWhite
+  name: белый спортивный костюм
+  description: Владелец любит выходить на пробежки. Или стрелять сижки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/white_sportik.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/white_sportik.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitSportRed
+  name: красный спортивный костюм
+  description: Владелец любит стрелять сижки. Или выходить на пробежки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/red_sportik.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/red_sportik.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckRoyal
+  name: королевский плащ
+  description: Царь во дворца, царь во дворца!
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/royalcape.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/royalcape.rsi
+
+- type: entity
+  id: BunnyBackpackGroup
+  parent: ClothingBackpack
+  name: рюкзак с костюмом кролика
+  description: Рюкзак заполненый одеждой.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingJumpsuitBunnySuit
+      amount: 1
+    - id: ClothingHeadBunnyEars
+      amount: 1
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitBunnySuit
+  name: чёрный костюм кролика
+  description: В таком костюме вы чувствуете себя героиней романа
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/bunnysuitSuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/bunnysuitSuit.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBunnySuit
+  name: чёрные ушки кролика
+  description: Из натурального пуха!
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/bunnysuitEars.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/bunnysuitEars.rsi

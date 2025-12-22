@@ -878,6 +878,57 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth82
+  productEntity: ClothingJumpsuitFemboy
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
+- type: listing
+  id: UplinkSponsorCloth83
+  productEntity: ClothingJumpsuitImportantPerson
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
+- type: listing
+  id: UplinkSponsorCloth84
+  productEntity: ClothingJumpsuitSportWhite
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
+- type: listing
+  id: UplinkSponsorCloth84
+  productEntity: ClothingJumpsuitSportRed
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThing
+
+- type: listing
+  id: UplinkSponsorCloth85
+  productEntity: ClothingNeckRoyal
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorThings
+
+- type: listing
+  id: UplinkSponsorCloth86
+  productEntity: BunnyBackpackGroup
+  cost:
+    DonateCrystal: 10
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 # Jobs
 
 # Clown
@@ -914,6 +965,21 @@
 - type: listing
   id: UplinkSponsorClothScienceJob1
   productEntity: ClothingNeckScientists
+  cost:
+    DonateCrystal: 5
+  categories:
+  - SponsorJob
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - Scientist
+    - SeniorResearcherAdv
+
+- type: listing
+  id: UplinkSponsorClothScienceJob2
+  productEntity: reinforcedjumpsuit
   cost:
     DonateCrystal: 5
   categories:
