@@ -139,7 +139,9 @@
     soundHit:
      collection: AlienClaw
     animation: WeaponArcClaw
-  - type: SSDIndicator
+  - type: StaminaDamageOnCollide #COTULa's, при прыжке оно сносит с ног нахуй (стаминакрит)
+    damage: 100
+#  - type: SSDIndicator # COTULa's, Чтоб NPC ксеноморф не засыпал и мог давать зазу игрокам + багуется и после сна ксенос ходит по траве как пьяный.
   - type: Tag
     tags:
     - FootstepSound
@@ -188,18 +190,18 @@
       Unsexed: Alien
   - type: Puller
     needsHands: false
-  - type: PassiveDamage
+  - type: PassiveDamage # COTULa's, усилил реген в 2 раза.
     allowedStates:
     - Alive
     - Critical
     damageCap: 1000
     damage:
       groups:
-        Brute: -1.50
-        Burn: -1.50
-        Airloss: -1.50
-        Toxin: -1.50
-        Genetic: -1.50
+        Brute: -3
+        Burn: -3
+        Airloss: -3
+        Toxin: -3
+        Genetic: -3
   - type: Emoting
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.8
@@ -257,7 +259,7 @@
   description: Используйте свои ловкие ноги, чтобы перепрыгнуть небольшое расстояние.
   components:
   - type: Action
-    useDelay: 10
+    useDelay: 30 # COTULa's, в 3 раза больше.
     icon:
       sprite: Interface/Actions/jump.rsi
       state: icon
