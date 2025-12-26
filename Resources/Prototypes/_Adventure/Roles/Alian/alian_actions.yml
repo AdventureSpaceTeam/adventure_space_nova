@@ -10,7 +10,7 @@
     icon:
       sprite: _Adventure/Roles/Alian/alien_egg/alien_egg.rsi
       state: alienegg
-    useDelay: 60
+    useDelay: 60 # COTULa's, увеличил в 2 раза
     itemIconStyle: BigAction
   - type: InstantAction
     event: !type:EggLayInstantActionEvent
@@ -40,7 +40,7 @@
   description: Возведите стену для своей защиты.
   components:
   - type: Action
-    useDelay: 20
+    useDelay: 40 # COTULa's, увеличил в 2 раза
     itemIconStyle: BigAction
     icon:
       sprite: _Adventure/Roles/Alian/alian_Wall.rsi
@@ -78,7 +78,7 @@
   description: Возведите проход для своей защиты.
   components:
   - type: Action
-    useDelay: 30
+    useDelay: 60
     itemIconStyle: BigAction
     icon:
       sprite: _Adventure/Roles/Alian/alian_door.rsi

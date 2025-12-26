@@ -9,14 +9,14 @@
     snap:
       - Wall
   components:
-    - type: DamageContacts
+    - type: DamageContacts # COTULa's, усилил в 2 раза
       damage:
         groups:
-          Brute: -0.5
-          Burn: -0.5
-          Airloss: -0.5
-          Toxin: -0.5
-          Genetic: -0.5
+          Brute: -1
+          Burn: -1
+          Airloss: -1
+          Toxin: -1
+          Genetic: -1
       ignoreWhitelist:
         tags:
         - CanPilot
@@ -135,7 +135,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 600 # COTULa's, на 50% больше
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -156,7 +156,7 @@
   - type: SpawnOnDespawn
     prototype: AlianWall
   - type: TimedDespawn
-    lifetime: 0.7
+    lifetime: 1.4 # Было 0.7
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/_Adventure/Voice/alian/alien_slime_spawn.ogg
@@ -241,7 +241,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 600 # COTULa's, на 50% больше
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -262,7 +262,7 @@
   - type: SpawnOnDespawn
     prototype: AlienDoor
   - type: TimedDespawn
-    lifetime: 0.7
+    lifetime: 1.4 # Было 0.7
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/_Adventure/Voice/alian/alien_slime_spawn.ogg

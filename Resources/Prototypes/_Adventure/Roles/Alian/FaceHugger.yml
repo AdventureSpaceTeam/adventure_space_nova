@@ -56,13 +56,13 @@
       melee:
         reagents:
         - ReagentId: AlianToxin
-          Quantity: 5
+          Quantity: 20
   - type: SolutionRegeneration
     solution: melee
     generated:
       reagents:
       - ReagentId: AlianToxin
-        Quantity: 0.2
+        Quantity: 0.5
   - type: MeleeChemicalInjector
     solution: melee
     transferAmount: 5
