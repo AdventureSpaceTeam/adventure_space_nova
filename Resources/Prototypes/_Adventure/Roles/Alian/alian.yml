@@ -259,7 +259,7 @@
   description: Используйте свои ловкие ноги, чтобы перепрыгнуть небольшое расстояние.
   components:
   - type: Action
-    useDelay: 30 # COTULa's, в 3 раза больше.
+    useDelay: 120 # COTULa's, в 3 раза больше.
     icon:
       sprite: Interface/Actions/jump.rsi
       state: icon
