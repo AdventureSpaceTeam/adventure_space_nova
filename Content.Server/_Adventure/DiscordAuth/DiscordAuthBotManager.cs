@@ -457,18 +457,36 @@ public sealed class DiscordAuthBotManager
                                         break;
                                     case "wyci":
                                     {
-                                        var attachmentData = await File.ReadAllBytesAsync($"{ContentFolder}/wyci.png");
-                                        var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment("wyci.png", attachmentData)});
+                                        string fileName = "wyci.png";
+                                        string filePath = Path.Combine(ContentFolder, fileName);
+                                        try {
+                                            var attachmentData = await File.ReadAllBytesAsync(filePath);
+                                            var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment(fileName, attachmentData)});
+                                        } catch (IOException e) {
+                                            _sawmill.Error($"Exception when tried to read {filePath}: {e}");
+                                        }
                                     } break;
                                     case "wysi":
                                     {
-                                        var attachmentData = await File.ReadAllBytesAsync($"{ContentFolder}/wysi.png");
-                                        var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment("wysi.png", attachmentData)});
+                                        string fileName = "wysi.png";
+                                        string filePath = Path.Combine(ContentFolder, fileName);
+                                        try {
+                                            var attachmentData = await File.ReadAllBytesAsync(filePath);
+                                            var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment(fileName, attachmentData)});
+                                        } catch (IOException e) {
+                                            _sawmill.Error($"Exception when tried to read {filePath}: {e}");
+                                        }
                                     } break;
                                     case "wypi":
                                     {
-                                        var attachmentData = await File.ReadAllBytesAsync($"{ContentFolder}/wypi.png");
-                                        var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment("wypi.png", attachmentData)});
+                                        string fileName = "wypi.png";
+                                        string filePath = Path.Combine(ContentFolder, fileName);
+                                        try {
+                                            var attachmentData = await File.ReadAllBytesAsync(filePath);
+                                            var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment(fileName, attachmentData)});
+                                        } catch (IOException e) {
+                                            _sawmill.Error($"Exception when tried to read {filePath}: {e}");
+                                        }
                                     } break;
                                     default:
                                     {
