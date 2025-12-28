@@ -903,7 +903,7 @@
   - SponsorThing
 
 - type: listing
-  id: UplinkSponsorCloth84
+  id: UplinkSponsorCloth85
   productEntity: ClothingJumpsuitSportRed
   cost:
     DonateCrystal: 5
@@ -911,7 +911,7 @@
   - SponsorThing
 
 - type: listing
-  id: UplinkSponsorCloth85
+  id: UplinkSponsorCloth86
   productEntity: ClothingNeckRoyal
   cost:
     DonateCrystal: 5
@@ -919,7 +919,7 @@
   - SponsorThings
 
 - type: listing
-  id: UplinkSponsorCloth86
+  id: UplinkSponsorCloth87
   productEntity: BunnyBackpackGroup
   cost:
     DonateCrystal: 10
