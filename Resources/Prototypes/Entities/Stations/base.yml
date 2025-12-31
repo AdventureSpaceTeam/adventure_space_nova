@@ -128,7 +128,7 @@
   abstract: true
   components:
     - type: StationCentcomm
-      map: "/Maps/_Corvax/corvax_centcomm.yml" # Corvax-Mapping
+      map: "/Maps/_Adventure/Advcentcom.yml" # Adventure-Mapping
 
 - type: entity
   id: BaseStationEvacuation
