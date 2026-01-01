@@ -59,24 +59,34 @@ public abstract class SharedHandLabelerSystem : EntitySystem
     {
     }
 
-    private void AddLabelTo(EntityUid uid, HandLabelerComponent? handLabeler, EntityUid target, out string? result)
+    private void AddLabelTo(Entity<HandLabelerComponent> ent, EntityUid user, EntityUid target)
     {
-        if (!Resolve(uid, ref handLabeler))
+        if (ent.Comp.AssignedLabel == string.Empty)
         {
-            result = null;
+            RemoveLabelFrom(ent, user, target);
             return;
         }
 
-        if (handLabeler.AssignedLabel == string.Empty)
-        {
-            if (_netManager.IsServer)
-                _labelSystem.Label(target, null);
-            result = Loc.GetString("hand-labeler-successfully-removed");
-            return;
-        }
         if (_netManager.IsServer)
-            _labelSystem.Label(target, handLabeler.AssignedLabel);
-        result = Loc.GetString("hand-labeler-successfully-applied");
+            _labelSystem.Label(target, ent.Comp.AssignedLabel);
+
+        _popupSystem.PopupClient(Loc.GetString("hand-labeler-successfully-applied"), user, user);
+
+        // Log labeling
+        _adminLogger.Add(LogType.Action, LogImpact.Low,
+            $"{ToPrettyString(user):user} labeled {ToPrettyString(target):target} with {ToPrettyString(ent):labeler}");
+    }
+
+    private void RemoveLabelFrom(EntityUid uid, EntityUid user, EntityUid target)
+    {
+        if (_netManager.IsServer)
+            _labelSystem.Label(target, null);
+
+        _popupSystem.PopupClient(Loc.GetString("hand-labeler-successfully-removed"), user, user);
+
+        // Log labeling
+        _adminLogger.Add(LogType.Action, LogImpact.Low,
+            $"{ToPrettyString(user):user} removed label from {ToPrettyString(target):target} with {ToPrettyString(uid):labeler}");
     }
 
     private void OnUtilityVerb(EntityUid uid, HandLabelerComponent handLabeler, GetVerbsEvent<UtilityVerb> args)
@@ -87,18 +97,34 @@ public abstract class SharedHandLabelerSystem : EntitySystem
             || !args.CanAccess) // Adventure races end
             return;
 
-        var labelerText = handLabeler.AssignedLabel == string.Empty ? Loc.GetString("hand-labeler-remove-label-text") : Loc.GetString("hand-labeler-add-label-text");
+        var user = args.User;   // can't use ref parameter in lambdas
 
-        var verb = new UtilityVerb()
+        if (ent.Comp.AssignedLabel != string.Empty)
+        {
+            var labelVerb = new UtilityVerb()
+            {
+                Act = () =>
+                {
+                    AddLabelTo(ent, user, target);
+                },
+                Text = Loc.GetString("hand-labeler-add-label-text")
+            };
+
+            args.Verbs.Add(labelVerb);
+        }
+
+        // add the unlabel verb to the menu even when the labeler has text
+        var unLabelVerb = new UtilityVerb()
         {
             Act = () =>
             {
-                Labeling(uid, target, args.User, handLabeler);
+                RemoveLabelFrom(ent, user, target);
             },
-            Text = labelerText
+            Text = Loc.GetString("hand-labeler-remove-label-text"),
+            Priority = -1,
         };
 
-        args.Verbs.Add(verb);
+        args.Verbs.Add(unLabelVerb);
     }
 
     private void AfterInteractOn(EntityUid uid, HandLabelerComponent handLabeler, AfterInteractEvent args)
@@ -109,20 +135,7 @@ public abstract class SharedHandLabelerSystem : EntitySystem
             || !args.CanReach) // Adventure races end
             return;
 
-        Labeling(uid, target, args.User, handLabeler);
-    }
-
-    private void Labeling(EntityUid uid, EntityUid target, EntityUid User, HandLabelerComponent handLabeler)
-    {
-        AddLabelTo(uid, handLabeler, target, out var result);
-        if (result == null)
-            return;
-
-        _popupSystem.PopupClient(result, User, User);
-
-        // Log labeling
-        _adminLogger.Add(LogType.Action, LogImpact.Low,
-            $"{ToPrettyString(User):user} labeled {ToPrettyString(target):target} with {ToPrettyString(uid):labeler}");
+        AddLabelTo(ent, args.User, target);
     }
 
     private void OnHandLabelerLabelChanged(EntityUid uid, HandLabelerComponent handLabeler, HandLabelerLabelChangedMessage args)
