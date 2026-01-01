@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server.PowerCell; // Adventure monitors
+using Content.Shared.PowerCell; // Adventure monitors
 using Content.Server.Station.Systems;
 using Content.Server.StationRecords.Components;
 using Content.Shared.StationRecords;

@@ -346,6 +346,8 @@
         orGroup: GiftPool
       - id: ToySword
         orGroup: GiftPool
+      - id: ToyDualSword # Adventure
+        orGroup: GiftPool
       - id: RevolverCapGun
         orGroup: GiftPool
       - id: Ash

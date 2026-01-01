@@ -89,11 +89,11 @@ public abstract class SharedHandLabelerSystem : EntitySystem
             $"{ToPrettyString(user):user} removed label from {ToPrettyString(target):target} with {ToPrettyString(uid):labeler}");
     }
 
-    private void OnUtilityVerb(EntityUid uid, HandLabelerComponent handLabeler, GetVerbsEvent<UtilityVerb> args)
+    private void OnUtilityVerb(Entity<HandLabelerComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
     {
         if (args.Target is not { Valid: true } target // Adventure races start
-            || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target)
-            || _whitelistSystem.IsBlacklistPass(handLabeler.Blacklist, target)
+            || _whitelistSystem.IsWhitelistFail(ent.Comp.Whitelist, target)
+            || _whitelistSystem.IsWhitelistPass(ent.Comp.Blacklist, target)
             || !args.CanAccess) // Adventure races end
             return;
 
@@ -127,11 +127,11 @@ public abstract class SharedHandLabelerSystem : EntitySystem
         args.Verbs.Add(unLabelVerb);
     }
 
-    private void AfterInteractOn(EntityUid uid, HandLabelerComponent handLabeler, AfterInteractEvent args)
+    private void AfterInteractOn(Entity<HandLabelerComponent> ent, ref AfterInteractEvent args)
     {
         if (args.Target is not { Valid: true } target // Adventure races start
-            || _whitelistSystem.IsWhitelistFail(handLabeler.Whitelist, target)
-            || _whitelistSystem.IsBlacklistPass(handLabeler.Blacklist, target)
+            || _whitelistSystem.IsWhitelistFail(ent.Comp.Whitelist, target)
+            || _whitelistSystem.IsWhitelistPass(ent.Comp.Blacklist, target)
             || !args.CanReach) // Adventure races end
             return;
 

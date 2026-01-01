@@ -1,5 +1,5 @@
 using Content.Server.Popups;
-using Content.Server.PowerCell; // Adventure monitors
+using Content.Shared.PowerCell; // Adventure monitors
 using Content.Server.Radio.EntitySystems;
 using Content.Server.Station.Systems;
 using Content.Server.StationRecords;

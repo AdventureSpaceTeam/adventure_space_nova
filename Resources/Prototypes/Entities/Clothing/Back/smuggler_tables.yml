@@ -54,6 +54,7 @@
       weight: 20
     - id: WhoopieCushion
     - id: RubberChicken
+    - id: RubberPig # Corvax-Toys
     - id: PlasticBanana
       amount: !type:RangeNumberSelector
         range: 1, 5
@@ -453,6 +454,7 @@
         range: 1, 3
     - id: GatfruitSeeds
     - id: ToySword
+    - id: ToyDualSword # Adventure
     - id: NukeDiskFake
     - id: RadioJammer
     - id: SoapSyndie

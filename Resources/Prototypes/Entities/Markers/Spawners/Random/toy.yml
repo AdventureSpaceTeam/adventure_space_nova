@@ -39,6 +39,19 @@
     - id: PlushieArachind
     - id: PlushiePenguin
     - id: PlushieVulp
+# Adventure_plushie_start
+    - id: PlushieIAA
+    - id: PlushieERT
+    - id: PlushieMaid
+    - id: PlushieBartender
+    - id: PlushieHOS
+    - id: PlushieCBURN
+    - id: PlushieCMO
+    - id: PlushieRD
+    - id: PlushieCentCommRG
+    - id: PlushieBS
+    - id: PlushieResomi
+# Adventure_plushie_end
     - !type:GroupSelector
       children:
       - id: PlushieBee
@@ -231,6 +244,7 @@
       children:
       - id: ToyHammer
       - id: ToySword
+      - id: ToyDualSword # Adventure
       - id: FoamBlade
       - id: FoamCutlass
       - id: CardSword
@@ -339,6 +353,7 @@
     children:
     - id: ToyRubberDuck
     - id: RubberChicken
+    - id: RubberPig # Corvax-Toys
     - id: ClownRecorder
     - id: WhoopieCushion
     - id: NewtonCradle

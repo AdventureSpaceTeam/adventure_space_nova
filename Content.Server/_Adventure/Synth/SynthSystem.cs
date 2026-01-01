@@ -5,7 +5,7 @@ using Content.Shared.Damage;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
-using Content.Server.PowerCell;
+using Content.Shared.PowerCell;
 using Content.Shared.Alert;
 using Content.Shared.Database;
 using Content.Shared.Emp;
@@ -88,24 +88,28 @@ public sealed partial class SynthSystem : SharedSynthSystem
         _action.AddAction(uid, ref component.ActionEntity, component.DrainBatteryAction);
     }
 
-    private void UpdateBatteryAlert(Entity<SynthComponent> ent, PowerCellSlotComponent? slotComponent = null)
+    private void UpdateBatteryAlert(Entity<SynthComponent, PowerCellSlotComponent?> ent)
     {
-        if (!_powerCell.TryGetBatteryFromSlot(ent, out var battery, slotComponent))
+        if (!Resolve(ent, ref ent.Comp2, false))
+            return;
+
+        if (!_powerCell.TryGetBatteryFromSlot((ent.Owner, ent.Comp2), out var battery))
         {
-            _alerts.ClearAlert(ent.Owner, ent.Comp.BatteryAlert);
-            _alerts.ShowAlert(ent.Owner, ent.Comp.NoBatteryAlert);
+            _alerts.ShowAlert(ent.Owner, ent.Comp1.NoBatteryAlert);
             return;
         }
 
-        var chargePercent = (short) MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
+        // Alert levels from 0 to 10.
+        var chargeLevel = (short)MathF.Round(_battery.GetChargeLevel(battery.Value.AsNullable()) * 10f);
 
-        if (chargePercent == 0 && _powerCell.HasDrawCharge(ent, cell: slotComponent))
+        // we make sure 0 only shows if they have absolutely no battery.
+        // also account for floating point imprecision
+        if (chargeLevel == 0 && _powerCell.HasDrawCharge((ent.Owner, null, ent.Comp2)))
         {
-            chargePercent = 1;
+            chargeLevel = 1;
         }
 
-        _alerts.ClearAlert(ent.Owner, ent.Comp.NoBatteryAlert);
-        _alerts.ShowAlert(ent.Owner, ent.Comp.BatteryAlert, chargePercent);
+        _alerts.ShowAlert(ent.Owner, ent.Comp1.BatteryAlert, chargeLevel);
     }
 
     private void OnPowerCellChanged(EntityUid uid, SynthComponent component, PowerCellChangedEvent args)
