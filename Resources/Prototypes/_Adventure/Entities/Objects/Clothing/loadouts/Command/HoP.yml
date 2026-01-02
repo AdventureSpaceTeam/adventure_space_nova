@@ -15,6 +15,14 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitJacketHoP
 
+- type: latheRecipe
+  id: ClothingUniformJumpsuitJacketHoP
+  result: ClothingUniformJumpsuitJacketHoP
+  completetime: 4
+  materials:
+    Cloth: 300
+    Durathread: 100
+
 - type: entity
   parent: ClothingUniformJumpskirtHoP
   id: ClothingUniformJumpskirtJacketHoP
@@ -30,6 +38,14 @@
   id: ClothingUniformJumpskirtJacketHoP
   equipment:
     jumpsuit: ClothingUniformJumpskirtJacketHoP
+
+- type: latheRecipe
+  id: ClothingUniformJumpskirtJacketHoP
+  result: ClothingUniformJumpskirtJacketHoP
+  completetime: 4
+  materials:
+    Cloth: 300
+    Durathread: 100
 
 #фуражка
 - type: entity
