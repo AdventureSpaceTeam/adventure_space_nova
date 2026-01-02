@@ -149,21 +149,6 @@ public sealed class ACVars : CVars
     public static readonly CVarDef<string> DiscordAuthClientSecret =
         CVarDef.Create("discord_auth.client_secret", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
-    public static readonly CVarDef<string> DiscordBotToken =
-        CVarDef.Create("discord_auth.bot_token", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
-
-    public static readonly CVarDef<string> DiscordAuthManagementRole =
-        CVarDef.Create("discord_auth.management_role", string.Empty, CVar.SERVERONLY);
-
-    public static readonly CVarDef<string> DiscordAuthGuildId =
-        CVarDef.Create("discord_auth.guild_id", string.Empty, CVar.SERVERONLY);
-
-    public static readonly CVarDef<string> DiscordAuthApplicationId =
-        CVarDef.Create("discord_auth.application_id", string.Empty, CVar.SERVERONLY);
-
     public static readonly CVarDef<string> DiscordAuthDebugApiUrl =
         CVarDef.Create("discord_auth.debug_api_url", "https://discord.com/api/v10", CVar.SERVERONLY);
-
-    public static readonly CVarDef<string> DiscordAuthContentFolder =
-        CVarDef.Create("discord_auth.content_folder", string.Empty, CVar.SERVERONLY);
 }
