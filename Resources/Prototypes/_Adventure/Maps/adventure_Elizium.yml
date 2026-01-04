@@ -69,7 +69,8 @@
             ServiceWorker: [ 2, 2 ]
             Passenger: [ -1, -1 ]
             # silicon
-            Borg: [ 1, 1 ]
+            StationAi: [ 1, 1 ]
+            Borg: [ 2, 3 ]
             # remap
             Blueshield: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
