@@ -156,3 +156,24 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+
+#берет
+- type: entity
+  parent: ClothingHeadHatHopcap
+  id: ClothingHeadHatHopBeret
+  name: берет главы персонала
+  description: Восхитительный стильный берет главы персонала.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/HoP/beret_hop.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/HoP/beret_hop.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: loadout
+  id: ClothingHeadHatHopBeret
+  equipment:
+    head: ClothingHeadHatHopBeret
