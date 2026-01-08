@@ -238,6 +238,7 @@
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_wall_west
         - state: rock_magma
+          visible: false
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
     - type: PointLight
       radius: 2

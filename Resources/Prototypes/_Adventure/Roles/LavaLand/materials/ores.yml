@@ -237,6 +237,7 @@
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_wall_west
         - state: rock_gem
+          visible: false
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: ore

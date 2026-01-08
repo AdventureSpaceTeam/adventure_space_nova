@@ -11,5 +11,6 @@
     WeaponGrapplingGun: 4
     WeaponProtoKineticAccelerator: 4
     PinpointerMining: 4 # Adventure-LavaLand
+    MineralScanner: 2 # Adventure
   contrabandInventory:
     PlushieCarp: 1
