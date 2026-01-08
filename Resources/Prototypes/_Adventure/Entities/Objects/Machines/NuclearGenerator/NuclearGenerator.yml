@@ -69,7 +69,7 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 850
+          damage: 1700
         behaviors:
         - !type:PlaySoundBehavior
           sound:
@@ -78,13 +78,13 @@
               volume: 5
       - trigger:
           !type:DamageTrigger
-          damage: 950
+          damage: 1900
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
       - trigger:
           !type:DamageTrigger
-          damage: 900
+          damage: 1800
         behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
