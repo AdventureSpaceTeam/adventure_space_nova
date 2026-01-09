@@ -54,7 +54,7 @@ public sealed class CriminalRecordsConsoleSystem : SharedCriminalRecordsConsoleS
     {
         // TODO: this is probably wasteful, maybe better to send a message to modify the exact state?
         // Adventure monitors start
-        if (!_cell.TryUseActivatableCharge(ent))
+        if (!_cell.TryUseActivatableCharge(ent.Owner))
             return;
         // Adventure monitors end
 

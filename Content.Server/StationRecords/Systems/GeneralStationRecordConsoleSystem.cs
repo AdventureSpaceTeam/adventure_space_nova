@@ -44,7 +44,7 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
     private void UpdateUserInterface<T>(Entity<GeneralStationRecordConsoleComponent> ent, ref T args)
     {
         // Adventure monitors start
-        if (!_cell.TryUseActivatableCharge(ent))
+        if (!_cell.TryUseActivatableCharge(ent.Owner))
             return;
         // Adventure monitors end
         UpdateUserInterface(ent);

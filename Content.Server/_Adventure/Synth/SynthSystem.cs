@@ -32,6 +32,7 @@ using Content.Shared.Ninja.Components;
 using Content.Shared.Ninja.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Actions;
+using Content.Shared.Power.EntitySystems;
 
 
 namespace Content.Server._Adventure.Synth;
@@ -55,6 +56,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly PredictedBatterySystem _battery = default!;
     [Dependency] private readonly SharedBatteryDrainerSystem _batteryDrainer = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedActionsSystem _action = default!;
@@ -149,7 +151,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         _action.SetToggled(component.ActionEntity, component.DrainActivated);
         args.Handled = true;
 
-        if (component.DrainActivated && _powerCell.TryGetBatteryFromSlot(uid, out var battery, out var _))
+        if (component.DrainActivated && _powerCell.TryGetBatteryFromSlot(uid, out var battery))
         {
             EnsureComp<BatteryDrainerComponent>(uid);
             _batteryDrainer.SetBattery(uid, battery);
