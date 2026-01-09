@@ -46,7 +46,7 @@ public sealed partial class SynthSystem
         if (_powerCell.TryGetBatteryFromSlot(uid, out var battery))
         {
             hasBattery = true;
-            chargePercent = battery.CurrentCharge / battery.MaxCharge;
+            chargePercent = _battery.GetChargeLevel(battery.Value.AsNullable());
         }
 
         var state = new SynthBuiState(chargePercent, hasBattery);

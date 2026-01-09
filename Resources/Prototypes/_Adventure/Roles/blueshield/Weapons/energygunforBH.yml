@@ -21,7 +21,7 @@
   - type: Item
     sprite: _Adventure/Roles/blueshield/Weapons/energy_gun.rsi
     size: Small
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: LaserBullet
     fireCost: 200
   - type: BatteryWeaponFireModes

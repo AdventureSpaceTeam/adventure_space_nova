@@ -624,20 +624,6 @@
 
 # Wildcards
 - type: roleLoadout
-  id: JobZookeeper
-  groups:
-  - GroupPlasManSuitBase #Adventure
-  - GroupTankHarness
-  - CommonBackpack
-  - Glasses
-  - Survival
-  - Trinkets
-  - ZookeeperJobTrinkets
-  - GroupSpeciesBreathTool
-  - BrassGroup #Adventure
-  - PantsGroup #Adventure
-
-- type: roleLoadout
   id: JobReporter
   groups:
   - GroupPlasManSuitBase #Adventure
@@ -663,22 +649,6 @@
   - Survival
   - Trinkets
   - PsychologistJobTrinkets
-  - GroupSpeciesBreathTool
-  - BrassGroup #Adventure
-  - PantsGroup #Adventure
-
-- type: roleLoadout
-  id: JobBoxer
-  groups:
-  - GroupPlasManSuitBase #Adventure
-  - GroupTankHarness
-  - BoxerJumpsuit
-  - BoxerGloves
-  - CommonBackpack
-  - Glasses
-  - Survival
-  - Trinkets
-  - BoxerJobTrinkets
   - GroupSpeciesBreathTool
   - BrassGroup #Adventure
   - PantsGroup #Adventure
@@ -747,6 +717,11 @@
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalMilitaryDouble
+  groups:
+  - SurvivalMilitaryDouble
 
 - type: roleLoadout
   id: RoleSurvivalNukie

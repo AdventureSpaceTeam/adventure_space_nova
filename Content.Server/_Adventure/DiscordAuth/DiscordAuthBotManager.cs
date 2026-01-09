@@ -221,7 +221,275 @@ public sealed class DiscordAuthBotManager
         }
     }
 
-    // {"token_type": "Bearer", "access_token": "ibnjoi44JCapPRWRDU4EPtE3slJFWC", "expires_in": 604800, "refresh_token": "Ljk03G6mG6du1Lo6yazxrQ6Se7oLY1", "scope": "identify"}
+    private async Task<string> ReceiveAsyncAll(ClientWebSocket ws, CancellationToken cancel)
+    {
+        StringBuilder sb = new();
+        WebSocketReceiveResult result;
+        var buffer = new byte[1024];
+        var arrayBuffer = new ArraySegment<byte>(buffer);
+        do {
+            result = await ws.ReceiveAsync(arrayBuffer, cancel);
+            var chunk = System.Text.Encoding.UTF8.GetString(buffer, 0, result.Count);
+            sb.Append(chunk);
+        } while (!result.EndOfMessage);
+        return sb.ToString();
+    }
+
+    public async Task HeartbeatThread(ClientWebSocket ws, float hb, CancellationToken cancel)
+    {
+        var rand = _random.NextFloat();
+        if (rand < 0.2) rand = 0.2f;
+        hb = hb * rand;
+        while (!cancel.IsCancellationRequested)
+        {
+            Thread.Sleep((int)hb);
+            await ws.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes("{\"op\": 1, \"d\": null}")), WebSocketMessageType.Text, true, cancel);
+        }
+    }
+
+    public async Task<HttpResponseMessage> SendResponse(string id, string token, string? message = null, bool mention = true, Attachment[]? attachments = null)
+    {
+        var encMsg = HttpUtility.JavaScriptStringEncode(message);
+        var disableMention = mention ? "" : ",\"allowed_mentions\":{\"parse\":[]}";
+        var content = message is not null ? $"\"content\":\"{encMsg}\"" : "";
+        string attachmentJson = string.Empty;
+        int attachmentId = 0;
+        if (attachments is not null)
+        {
+            bool isFirst = true;
+            if (!mention || message is not null) attachmentJson += ",";
+            attachmentJson += "\"attachments\": [";
+            foreach (var attachment in attachments)
+            {
+                if (!isFirst) attachmentJson += ",";
+                attachmentJson += $"{{\"id\": {attachmentId}}}";
+                attachmentId += 1;
+                isFirst = true;
+            }
+            attachmentJson += "]";
+        }
+        var data = $"{{\"type\": 4, \"data\": {{{content}{disableMention}{attachmentJson}}}}}";
+        Console.WriteLine($"Sending {data}");
+        HttpContent? httpContent = null;
+        if (attachments is not null)
+        {
+            var mp = new MultipartFormDataContent
+            {
+                {new StringContent(data, Encoding.UTF8, "application/json"), "payload_json"}
+            };
+            attachmentId = 0;
+            foreach (var attachment in attachments)
+            {
+                mp.Add(new ByteArrayContent(attachment.data), $"files[{attachmentId}]", attachment.filename);
+                attachmentId += 1;
+            }
+            httpContent = mp;
+        }
+        else
+        {
+            httpContent = new System.Net.Http.StringContent(data, Encoding.UTF8, "application/json");
+        }
+        using var request = new HttpRequestMessage(HttpMethod.Post, $"interactions/{id}/{token}/callback")
+        {
+            Content = httpContent,
+        };
+        return await discordClient.SendAsync(request);
+    }
+
+    public async Task CommandListenerThread()
+    {
+        try {
+            while (!(CommandListeningCancelation?.Token.IsCancellationRequested ?? true))
+            {
+                using (ClientWebSocket ws = new ClientWebSocket())
+                {
+                    Uri serverUri = new Uri("wss://gateway.discord.gg/?v=10&encoding=json");
+                    await ws.ConnectAsync(serverUri, CommandListeningCancelation?.Token ?? default);
+                    var result = await ReceiveAsyncAll(ws, CommandListeningCancelation?.Token ?? default);
+                    var hello = JsonSerializer.Deserialize<HelloMessage>(result);
+                    if (hello is null || hello.op != 10)
+                    {
+                        _sawmill.Error($"Error, hello message doesn't contain heartbeat interval");
+                        return;
+                    }
+                    var hb = hello.d?.heartbeat_interval ?? 100000;
+                    _sawmill.Info($"Heartbeat interval: {hb}");
+                    Task.Run(() => HeartbeatThread(ws, hb, CommandListeningCancelation?.Token ?? default));
+                    ws.SendAsync(
+                        new ArraySegment<byte>(Encoding.UTF8.GetBytes($"{{\"op\": 2, \"d\": {{\"token\": \"{botToken}\"," +
+                                                                      $"\"intents\": 512, \"properties\": {{\"os\": \"linux\"," +
+                                                                      $"\"browser\": \"irc was better\", \"device\": " +
+                                                                      $"\"c4lldev\"}}}}}}")),
+                        WebSocketMessageType.Text, true,
+                        CommandListeningCancelation?.Token ?? default);
+                    DiscordCommand[] commands =
+                        {
+                            new("unlink_discord", 1, "Отвязать аккаунт дискорда от аккаунта игры",
+                                new DiscordCommandOption[]{
+                                    new("user", "Пользователь, которого надо отвязать", 6, true)
+                                }),
+                            new("discord_name", 1, "Найти пользователя по нику",
+                                new DiscordCommandOption[]{
+                                    new("ckey", "Ник пользователя в игре", 3, true)
+                                }),
+                            new("wyci", 1, "When you code it", Array.Empty<DiscordCommandOption>()),
+                            new("wysi", 1, "When you sprite it", Array.Empty<DiscordCommandOption>()),
+                            new("wypi", 1, "When you prototype it", Array.Empty<DiscordCommandOption>()),
+                        };
+                    DiscordCommand[] existingCommands;
+                    using (var request = new HttpRequestMessage(HttpMethod.Get, $"applications/{ApplicationId}/guilds/{GuildId}/commands"))
+                    {
+                        request.Headers.Add("Authorization", $"Bot {botToken}");
+                        using HttpResponseMessage resp = await discordClient.SendAsync(request);
+                        string response = await resp.Content.ReadAsStringAsync();
+                        existingCommands = JsonSerializer.Deserialize<DiscordCommand[]>(response) ?? new DiscordCommand[]{};
+                    }
+                    foreach (var command in commands)
+                    {
+                        bool added = false;
+                        foreach (var existCommand in existingCommands)
+                        {
+                            // If you have free life to waste, add options comparision.
+                            if (existCommand.name == command.name &&
+                                existCommand.type == command.type &&
+                                existCommand.description == command.description) added = true;
+                        }
+                        if (added) continue;
+                        _sawmill.Info($"Adding command {command.name}");
+                        _sawmill.Debug($"Path: applications/{ApplicationId}/guilds/{GuildId}/commands");
+                        string payload = JsonSerializer.Serialize(command);
+                        _sawmill.Debug($"Content: {payload}");
+                        using var request = new HttpRequestMessage(HttpMethod.Post, $"applications/{ApplicationId}/guilds/{GuildId}/commands")
+                        {
+                            Content = new System.Net.Http.StringContent(payload, Encoding.UTF8, "application/json"),
+                        };
+                        request.Headers.Add("Authorization", $"Bot {botToken}");
+                        _sawmill.Debug($"Auth: Bot {botToken}");
+                        using HttpResponseMessage resp = await discordClient.SendAsync(request);
+                        string response = await resp.Content.ReadAsStringAsync();
+                        var commandResp = JsonSerializer.Deserialize<DiscordCommandResponse>(result);
+                        _sawmill.Debug($"Command {command.name} resp: {response}");
+                    }
+                    while (!(CommandListeningCancelation?.Token.IsCancellationRequested ?? true))
+                    {
+                        result = await ReceiveAsyncAll(ws, CommandListeningCancelation?.Token ?? default);
+                        var msg = JsonSerializer.Deserialize<GenericMessageType>(result);
+                        if (msg is not null && msg.op == 0 && msg.t == "INTERACTION_CREATE")
+                        {
+                            var interaction = JsonSerializer.Deserialize<InteractionCreateMessage>(result);
+                            if (interaction is not null && interaction.d is not null)
+                            {
+                                var id = interaction.d.id;
+                                var token = interaction.d.token;
+                                var options = interaction.d.data?.options;
+                                switch (interaction.d.data?.name)
+                                {
+                                    case "discord_name":
+                                        if (options is null || options.Count < 1)
+                                        {
+                                            await SendResponse(id, token, "Error, no name provided");
+                                            break;
+                                        }
+                                        if (!(interaction.d.member?.roles?.Contains(ManagementRole) ?? false))
+                                        {
+                                            await SendResponse(id, token, "Error, insufficient rights");
+                                            break;
+                                        }
+                                        var username = options[0].value;
+                                        var player = await _db.GetPlayerRecordByUserName(username);
+                                        if (player is null)
+                                        {
+                                            await SendResponse(id, token, "Error, player doesn't exists");
+                                            break;
+                                        }
+                                        var discordId = player.DiscordId;
+                                        if (discordId is null)
+                                        {
+                                            await SendResponse(id, token, "Error, player doesn't have a linked discord account");
+                                            break;
+                                        }
+                                        await SendResponse(id, token, $"<@{discordId}>", mention: false);
+                                        break;
+                                    case "unlink_discord":
+                                        if (options is null || options.Count < 1)
+                                        {
+                                            await SendResponse(id, token, "Error, no user provided");
+                                            break;
+                                        }
+                                        if (!(interaction.d.member?.roles?.Contains(ManagementRole) ?? false))
+                                        {
+                                            await SendResponse(id, token, "Error, insufficient rights");
+                                            break;
+                                        }
+                                        discordId = options[0].value;
+                                        player = await _db.GetPlayerRecordByDiscordId(discordId);
+                                        if (player is null)
+                                        {
+                                            await SendResponse(id, token, "Error, account doesn't linked to game");
+                                            break;
+                                        }
+                                        if (!await _db.SetPlayerRecordDiscordId(player.UserId, null))
+                                        {
+                                            await SendResponse(id, token, "Unknown Error");
+                                            break;
+                                        }
+                                        await SendResponse(id, token, "Success!");
+                                        break;
+                                    case "wyci":
+                                    {
+                                        string fileName = "wyci.png";
+                                        string filePath = Path.Combine(ContentFolder, fileName);
+                                        try {
+                                            var attachmentData = await File.ReadAllBytesAsync(filePath);
+                                            var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment(fileName, attachmentData)});
+                                        } catch (IOException e) {
+                                            _sawmill.Error($"Exception when tried to read {filePath}: {e}");
+                                        }
+                                    } break;
+                                    case "wysi":
+                                    {
+                                        string fileName = "wysi.png";
+                                        string filePath = Path.Combine(ContentFolder, fileName);
+                                        try {
+                                            var attachmentData = await File.ReadAllBytesAsync(filePath);
+                                            var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment(fileName, attachmentData)});
+                                        } catch (IOException e) {
+                                            _sawmill.Error($"Exception when tried to read {filePath}: {e}");
+                                        }
+                                    } break;
+                                    case "wypi":
+                                    {
+                                        string fileName = "wypi.png";
+                                        string filePath = Path.Combine(ContentFolder, fileName);
+                                        try {
+                                            var attachmentData = await File.ReadAllBytesAsync(filePath);
+                                            var resp = await SendResponse(id, token, attachments: new Attachment[] {new Attachment(fileName, attachmentData)});
+                                        } catch (IOException e) {
+                                            _sawmill.Error($"Exception when tried to read {filePath}: {e}");
+                                        }
+                                    } break;
+                                    default:
+                                    {
+                                        _sawmill.Error($"Unknown command: {interaction.d.data?.name}");
+                                    } break;
+                                }
+                            }
+                        }
+                        else if (msg is not null && msg.op == 1)
+                        {
+                            _sawmill.Debug($"Sending forced heartbeat");
+                            await ws.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes("{\"op\": 1, \"d\": null}")),
+                                               WebSocketMessageType.Text, true, CommandListeningCancelation?.Token ?? default);
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            _sawmill.Error($"Error handling discord gateway:\n{e}");
+        }
+    }
+
+    // {"token_type": "Bearer", "access_token": "ibnxxxxxxxxxxxxxxxxxxxxxxxxFWC", "expires_in": 604800, "refresh_token": "LjxxxxxxxxxxxxxxxxxxxxxxxxxXY1", "scope": "identify"}
     public record class TokenResponse(
         string token_type = "Bearer",
         string? access_token = null,
