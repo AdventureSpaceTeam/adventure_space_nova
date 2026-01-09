@@ -2,15 +2,21 @@ using Content.Server.Database;
 using Content.Shared._Adventure.ACVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
+using Robust.Shared.Random;
 using System.Collections.Specialized;
+using System.IO;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Net.Http;
+using System.Net.WebSockets;
 using System.Net;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Web;
 using System;
 
 namespace Content.Server._Adventure.DiscordAuth;
@@ -18,21 +24,28 @@ namespace Content.Server._Adventure.DiscordAuth;
 public sealed class DiscordAuthBotManager
 {
     [Dependency] public IConfigurationManager _cfg = default!;
+    [Dependency] public IRobustRandom _random = default!;
     [Dependency] public IServerDbManager _db = default!;
     [Dependency] public IServerNetManager _net = default!;
 
     public HttpListener listener = default!;
     public bool discordAuthEnabled = false;
+    public string botToken = string.Empty;
     public string listeningUrl = string.Empty;
     public string redirectUrl = string.Empty;
     public string clientId = string.Empty;
     public string clientSecret = string.Empty;
+    public string ManagementRole = string.Empty;
+    public string GuildId = string.Empty;
+    public string ApplicationId = string.Empty;
+    public string ContentFolder = string.Empty;
     public static HttpClient discordClient = new()
     {
         BaseAddress = new Uri("https://discord.com/api/v10")
     };
     public Dictionary<Guid, NetUserId> stateToUid = new();
     public CancellationTokenSource? ListeningCancelation;
+    public CancellationTokenSource? CommandListeningCancelation;
 
     public ISawmill _sawmill = default!;
 
@@ -41,9 +54,14 @@ public sealed class DiscordAuthBotManager
         _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("discord_auth");
         _cfg.OnValueChanged(ACVars.DiscordAuthClientId, _ => UpdateAuthHeader(), false);
         _cfg.OnValueChanged(ACVars.DiscordAuthClientSecret, _ => UpdateAuthHeader(), true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthManagementRole, managementRole => ManagementRole = managementRole, true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthGuildId, guildId => GuildId = guildId, true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthApplicationId, applicationId => ApplicationId = applicationId, true);
         _cfg.OnValueChanged(ACVars.DiscordAuthListeningUrl, url => listeningUrl = url, true);
+        _cfg.OnValueChanged(ACVars.DiscordBotToken, token => botToken = token, true);
         _cfg.OnValueChanged(ACVars.DiscordAuthRedirectUrl, url => redirectUrl = url, true);
         _cfg.OnValueChanged(ACVars.DiscordAuthDebugApiUrl, url => discordClient.BaseAddress = new Uri(url), true);
+        _cfg.OnValueChanged(ACVars.DiscordAuthContentFolder, path => ContentFolder = path, true);
 
         listener = new HttpListener();
         listener.Prefixes.Add(listeningUrl);
@@ -56,8 +74,10 @@ public sealed class DiscordAuthBotManager
         if (val)
         {
             ListeningCancelation = new CancellationTokenSource();
+            CommandListeningCancelation = new CancellationTokenSource();
             listener.Start();
             Task.Run(ListenerThread, ListeningCancelation.Token);
+            Task.Run(CommandListenerThread, CommandListeningCancelation.Token);
             _net.Connecting += OnConnecting;
         } else {
             ListeningCancelation?.Cancel();
@@ -99,7 +119,7 @@ public sealed class DiscordAuthBotManager
         if (discordClient.BaseAddress is null) return string.Empty;
         var guid = Guid.NewGuid();
         stateToUid[guid] = uid;
-        // https://discord.com/oauth2/authorize?client_id=1336163093159481397&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3963%2F&scope=identify
+        // https://discord.com/oauth2/authorize?client_id=1999999999999999997&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3963%2F&scope=identify
         NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
         queryString.Add("client_id", clientId);
         queryString.Add("response_type", "code");
@@ -500,4 +520,24 @@ public sealed class DiscordAuthBotManager
 
     // {"id":"642524678136659968","username":"c4llv07e","avatar":"417944fb9465a53484dd8f6b4282c580","discriminator":"0","public_flags":0,"flags":0,"banner":null,"accent_color":null,"global_name":"c4llv07e","avatar_decoration_data":null,"banner_color":null,"clan":null,"primary_guild":null,"mfa_enabled":true,"locale":"en-US","premium_type":0}
     public record class UserResponse(string? id = null);
+
+    public record class HeartbeatReceiveMessage(int heartbeat_interval = 100000);
+
+    // {"t":null,"s":null,"op":10,"d":{"heartbeat_interval":41250,"_trace":["[\"gateway-prd-us-east1-d-7bqh\",{\"micros\":0.0}]"]}
+    public record class HelloMessage(int op = 0, HeartbeatReceiveMessage? d = null);
+    public record class GenericMessageType(int op = 0, string t = "");
+
+    public record class InteractionCreateMessage(int op = 0, string t = "", InteractionMessageInfo? d = null);
+    public record class InteractionMessageInfo(string id = "", string token = "", DiscordMember? member = null, InteractionData? data = null);
+
+    public record class DiscordMember(List<string>? roles = null, string nick = "");
+    public record class Attachment(string filename, byte[] data);
+
+    public record class InteractionData(List<InteractionOption>? options = null, string name = "");
+    public record class InteractionOption(string value = "");
+
+    public record struct DiscordCommandOption(string name, string description, int type, bool required);
+    public record struct DiscordCommand(string name, int type, string description, DiscordCommandOption[] options);
+
+    public record struct DiscordCommandResponse(int id);
 }
