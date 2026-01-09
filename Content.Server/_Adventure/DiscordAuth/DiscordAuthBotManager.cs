@@ -318,9 +318,9 @@ public sealed class DiscordAuthBotManager
 
     public async Task CommandListenerThread()
     {
-        while (!(CommandListeningCancelation?.Token.IsCancellationRequested ?? true))
-        {
-            try {
+        try {
+            while (!(CommandListeningCancelation?.Token.IsCancellationRequested ?? true))
+            {
                 using (ClientWebSocket ws = new ClientWebSocket())
                 {
                     Uri serverUri = new Uri("wss://gateway.discord.gg/?v=10&encoding=json");
@@ -503,9 +503,9 @@ public sealed class DiscordAuthBotManager
                         }
                     }
                 }
-            } catch (Exception e) {
-                _sawmill.Error($"Error handling discord gateway:\n{e}");
             }
+        } catch (Exception e) {
+            _sawmill.Error($"Error handling discord gateway:\n{e}");
         }
     }
 
