@@ -165,15 +165,6 @@
   - CBURNammo
 
 - type: listing
-  id: MagazinePistolSubMachineGunTopMountedCBURN
-  description: Надствольный магазин калибра .35 авто. Подходящий для пистолетов-пулемётов.
-  productEntity: MagazinePistolSubMachineGunTopMounted
-  cost:
-    CentCommCrystal: 2
-  categories:
-  - CBURNammo
-
-- type: listing
   id: MagazineBoxPistolCBURN
   description: Коробка калибра .35 авто. Подходящий для простых пистолетов.
   productEntity: MagazineBoxPistol
@@ -280,6 +271,14 @@
   productEntity: JawsOfLife
   cost:
     CentCommCrystal: 5
+  categories:
+  - CBURNmore
+
+- type: listing
+  id: PortableRechargerCBURN
+  productEntity: PortableRecharger
+  cost:
+    CentCommCrystal: 7
   categories:
   - CBURNmore
 
