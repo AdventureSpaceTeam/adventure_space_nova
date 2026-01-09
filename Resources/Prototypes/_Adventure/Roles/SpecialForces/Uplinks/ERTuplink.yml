@@ -361,9 +361,27 @@
   - ERTammo
 
 - type: listing
+  id: MagazineLightRifleERT
+  productEntity: MagazineLightRifle
+  description: Магазин калибра .30 авто. Подходящий для лёгких винтовок.
+  cost:
+    CentCommCrystal: 3
+  categories:
+  - ERTleader
+
+- type: listing
   id: MagazineMagnumERT
   productEntity: MagazineMagnum
   description: Магазин калибра .45 магнум. Подходящий для тяжёлых пистолетов или револьверов.
+  cost:
+    CentCommCrystal: 2
+  categories:
+  - ERTammo
+
+- type: listing
+  id: MagazinePistolSubMachineGunERT
+  productEntity: MagazinePistolSubMachineGun
+  description: Магазин калибра .35 винтовочный. Подходящий для пистолетов-пулемётов.
   cost:
     CentCommCrystal: 2
   categories:
@@ -465,6 +483,15 @@
   description: Коробка калибра .30 винтовочный. Винтовочный подходящий для автоматов.
   cost:
     CentCommCrystal: 25
+  categories:
+  - ERTleader
+
+- type: listing
+  id: MagazineBoxLightRifleERT
+  productEntity: MagazineBoxLightRifle
+  description: Коробка калибра .30 винтовочный. Винтовочный подходящий для автоматов.
+  cost:
+    CentCommCrystal: 3
   categories:
   - ERTleader
 
