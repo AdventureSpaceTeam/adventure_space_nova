@@ -23,7 +23,7 @@
   - type: Item
     sprite: _Adventure/Roles/blueshield/Weapons/DualphasBH.rsi
     size: Small
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: LaserBulletForBH
     fireCost: 200
   - type: BatteryWeaponFireModes
