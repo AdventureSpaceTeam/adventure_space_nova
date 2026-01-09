@@ -50,7 +50,7 @@
     maxCharge: 200
     startingCharge: 200
     pricePerJoule: 0.3
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: Advanced-BulletProtoCutter
     fireCost: 20
   - type: BatterySelfRecharger
@@ -84,7 +84,7 @@
   - type: StaminaDamageOnCollide
     damage: 10
   - type: TimedDespawn
-    lifetime: 0.5
+    lifetime: 0.2
   - type: PointLight
     color: "#d31e45b8"
     energy: 4

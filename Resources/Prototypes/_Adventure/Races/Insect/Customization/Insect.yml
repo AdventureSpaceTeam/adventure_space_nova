@@ -227,3 +227,58 @@
   sprites:
   - sprite: _Adventure/Races/Insect/Customization/head.rsi
     state: forehead
+
+- type: marking
+  id: InsectTailCentipede
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: centipede
+  - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
+    state: centipede_body
+
+- type: marking
+  id: InsectHandDouble
+  bodyPart: Back
+  followSkinColor: true
+  forcedColoring: true
+  markingCategory: Back
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: hand_double
+
+- type: marking
+  id: InsectHeadStretch
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: stretch
+
+- type: marking
+  id: InsectHeadCrown
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/head.rsi
+    state: crown
+
+- type: marking
+  id: InsectBodyHump
+  bodyPart: RHand
+  markingCategory: Overlay
+  followSkinColor: true
+  forcedColoring: true
+  speciesRestriction: [InsectSerpentide]
+  sprites:
+  - sprite: _Adventure/Races/Insect/Customization/body.rsi
+    state: hump

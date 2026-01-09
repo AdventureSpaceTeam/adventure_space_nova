@@ -1,0 +1,10 @@
+
+- type: entity
+  id: PottedPlantFestive
+  name: ель в горшке
+  description: Кусочек новогоднего настроения в горшке.
+  parent: PottedPlantBase
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/potted_plants.rsi
+    state: plant-0

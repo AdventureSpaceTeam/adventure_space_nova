@@ -42,7 +42,7 @@
   - type: Tag
     tags:
       - TankFlamethrower
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: FireBallFlamethrower
     fireCost: 50
   - type: ContainerContainer

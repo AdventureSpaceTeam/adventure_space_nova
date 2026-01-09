@@ -25,24 +25,6 @@ entity-effect-guidebook-spawn-entity =
         *[other] {$amount} {MAKEPLURAL($entname)}
     }
 
-entity-effect-guidebook-destroy =
-    { $chance ->
-        [1] Destroys
-        *[other] destroy
-    } the object
-
-entity-effect-guidebook-break =
-    { $chance ->
-        [1] Breaks
-        *[other] break
-    } the object
-
-entity-effect-guidebook-explosion =
-    { $chance ->
-        [1] Causes
-        *[other] cause
-    } an explosion
-
 entity-effect-guidebook-emp =
     { $chance ->
         [1] Causes
@@ -154,49 +136,6 @@ entity-effect-guidebook-status-effect =
     } { $delay ->
         [0] immediately
         *[other] after a {NATURALFIXED($delay, 3)} second delay
-    }
-
-entity-effect-guidebook-status-effect-indef =
-    { $type ->
-        [update]{ $chance ->
-                    [1] Causes
-                    *[other] cause
-                 } permanent {LOC($key)}
-        [add]   { $chance ->
-                    [1] Causes
-                    *[other] cause
-                } permanent {LOC($key)}
-        [set]  { $chance ->
-                    [1] Causes
-                    *[other] cause
-                } permanent {LOC($key)}
-        *[remove]{ $chance ->
-                    [1] Removes
-                    *[other] remove
-                } {LOC($key)}
-    } { $delay ->
-        [0] immediately
-        *[other] after a {NATURALFIXED($delay, 3)} second delay
-    }
-
-entity-effect-guidebook-knockdown =
-    { $type ->
-        [update]{ $chance ->
-                    [1] Causes
-                    *[other] cause
-                    } {LOC($key)} for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
-        [add]   { $chance ->
-                    [1] Causes
-                    *[other] cause
-                } knockdown for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} with accumulation
-        *[set]  { $chance ->
-                    [1] Causes
-                    *[other] cause
-                } knockdown for at least {NATURALFIXED($time, 3)} {MANY("second", $time)} without accumulation
-        [remove]{ $chance ->
-                    [1] Removes
-                    *[other] remove
-                } {NATURALFIXED($time, 3)} {MANY("second", $time)} of knockdown
     }
 
 entity-effect-guidebook-set-solution-temperature-effect =
@@ -338,12 +277,6 @@ entity-effect-guidebook-electrocute =
         [1] Electrocutes
         *[other] electrocute
     } the metabolizer for {NATURALFIXED($time, 3)} {MANY("second", $time)}
-
-entity-effect-guidebook-emote =
-    { $chance ->
-        [1] Will force
-        *[other] force
-    } the metabolizer to [bold][color=white]{$emote}[/color][/bold]
 
 entity-effect-guidebook-extinguish-reaction =
     { $chance ->

@@ -35,6 +35,10 @@
   - ClothingHeadHatHopcap
   - ClothingUniformJumpsuitHoP
   - ClothingUniformJumpskirtHoP
+  - ClothingUniformJumpsuitJacketHoP #Adventure starts
+  - ClothingUniformJumpskirtJacketHoP
+  - ClothingUniformJumpsuitHoPTurtleneck
+  - ClothingUniformJumpskirtHoPTurtleneck #Adventure ends
   # Generic
   - ClothingHeadHatBeretCommand
   - ClothingHeadHatCommandSoft
@@ -126,11 +130,13 @@
   - ClothingUniformJumpsuitChef
   - ClothingUniformJumpskirtChef
   - ClothingUniformJumpsuitClown
+  - ClothingUniformJumpskirtClown
   - ClothingUniformJumpsuitHydroponics
   - ClothingUniformJumpskirtHydroponics
   - ClothingUniformJumpsuitJanitor
   - ClothingUniformJumpskirtJanitor
   - ClothingUniformJumpsuitLawyerBlack
+  - ClothingUniformJumpskirtLawyerBlack
   - ClothingUniformJumpsuitLibrarian
   - ClothingUniformJumpskirtColorLightBrown
   - ClothingUniformJumpsuitMime

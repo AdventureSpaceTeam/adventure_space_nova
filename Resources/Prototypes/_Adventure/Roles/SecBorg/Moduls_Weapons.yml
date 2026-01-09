@@ -10,17 +10,40 @@
   - type: Tag
     tags:
     - SecModul
+  - type: BorgModule
+    borgFitTypes:
+    - borg-type-security
+  - type: Sprite
+    sprite: _Adventure/Roles/BorgDep/SecBorg/modul.rsi
+  - type: Item
+    storedRotation: -90
+    inhandVisuals:
+      left:
+      - state: base-icon-inhand-left
+        color: "#b86221"
+      - state: base-module-inhand-left
+        color: "#85282a"
+      - state: base-part-inhand-left
+      - state: base-stripes-inhand-left
+        color: "#85282a"
+      right:
+      - state: base-icon-inhand-right
+        color: "#b86221"
+      - state: base-module-inhand-right
+        color: "#85282a"
+      - state: base-part-inhand-right
+      - state: base-stripes-inhand-right
+        color: "#85282a"
 
 - type: entity
   id: ModuleSec
   parent: [ BaseModuleSec, BaseProviderBorgModule ]
   description: Всё для вас и вашей безопасности.
-  name: Охранный модуль киборга
+  name: охранный модуль киборга
   components:
   - type: BorgModuleIcon
     icon: { sprite: _Adventure/Roles/BorgDep/SecBorg/modul.rsi, state: Sec-module }
   - type: Sprite
-    sprite: _Adventure/Roles/BorgDep/SecBorg/modul.rsi
     layers:
     - state: SecModul
     - state: SecModul-icon
@@ -53,7 +76,7 @@
     fireRate: 3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletDisabler
     fireCost: 100
   - type: BatteryWeaponFireModes

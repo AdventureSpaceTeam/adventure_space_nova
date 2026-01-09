@@ -114,7 +114,8 @@
   id: FillLockerBrigmedic
   table: !type:AllSelector
     children:
-    - id: ClothingEyesGlassesSecurity
+    # - id: ClothingEyesGlassesSecurity # Adventure
+    - id: ClothingEyesHudMedSec # Adventure
     - id: WeaponHybridTaser # Adventure
     # - id: WeaponDisabler # Adventure
     - id: TrackingImplanter

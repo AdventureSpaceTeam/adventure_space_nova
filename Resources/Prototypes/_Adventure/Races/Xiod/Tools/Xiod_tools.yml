@@ -330,7 +330,7 @@
     fireRate: 1.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: AnomalousParticleDeltaStrong
     fireCost: 200
   - type: BatteryWeaponFireModes
@@ -441,7 +441,7 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletSyndExo
     fireCost: 20
   - type: BatterySelfRecharger

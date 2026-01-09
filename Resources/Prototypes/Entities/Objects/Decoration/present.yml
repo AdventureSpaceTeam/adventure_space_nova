@@ -346,6 +346,8 @@
         orGroup: GiftPool
       - id: ToySword
         orGroup: GiftPool
+      - id: ToyDualSword # Adventure
+        orGroup: GiftPool
       - id: RevolverCapGun
         orGroup: GiftPool
       - id: Ash
@@ -360,7 +362,7 @@
         orGroup: GiftPool
       - id: Bola
         orGroup: GiftPool
-      - id: GlowstickBase
+      - id: GlowstickGreen
         orGroup: GiftPool
       - id: GlowstickBlue
         orGroup: GiftPool

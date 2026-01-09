@@ -12,7 +12,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Slime ]
-        minScale: 1
+        minScale: 0.5
         type: Local
         visualType: Medium
         messages: [ "effect-sleepy" ]
@@ -21,31 +21,31 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Slime ]
-        minScale: 2
+        minScale: 1
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:ModifyStatusEffect
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Slime ]
-        minScale: 3.6
+        minScale: 1.8
         effectProto: StatusEffectForcedSleeping
         time: 3
         type: Update
       - !type:HealthChange
-        minScale: 1
+        minScale: 0.5
         ignoreResistances: true
         damage:
           types:
             Poison: 0.25
       - !type:ModifyStatusEffect
-        minScale: 2
+        minScale: 1
         effectProto: StatusEffectSeeingRainbow
         type: Add
         time: 500
       - !type:Drunk
         boozePower: 500
-        minScale: 2
+        minScale: 1
     Narcotic:
       effects:
       - !type:HealthChange
@@ -87,7 +87,7 @@
         - !type:MetabolizerTypeCondition
           type: [ Vox, Plant ]
           inverted: true
-        minScale: 1
+        minScale: 0.5
         ignoreResistances: true
         damage:
           types:
@@ -130,7 +130,7 @@
     Gas:
       effects:
       - !type:HealthChange
-        minScale: 2
+        minScale: 1
         ignoreResistances: true
         damage:
           groups:
@@ -138,11 +138,11 @@
             Burn: -1
             Toxin: -2.5
       - !type:ModifyStatusEffect
-        minScale: 4
+        minScale: 2
         effectProto: StatusEffectForcedSleeping
         time: 3
         type: Add
-    Poison:
+    Medicine:
       effects:
       - !type:HealthChange
         conditions:
@@ -203,7 +203,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
-        minScale: 0.125
+        minScale: 0.0625
         clear: true
         time: 5
     Poison:
@@ -253,26 +253,26 @@
     Gas:
       effects:
       - !type:ModifyStatusEffect
-        minScale: 12
+        minScale: 6
         effectProto: StatusEffectStunned
         time: 1
         type: Remove
       - !type:ModifyKnockdown
-        minScale: 12
+        minScale: 6
         time: 4
         type: Remove
       - !type:MovementSpeedModifier
-        minScale: 6
+        minScale: 3
         statusLifetime: 20
         walkSpeedModifier: 1.5
         sprintSpeedModifier: 1.5
       - !type:HealthChange
-        minScale: 18
+        minScale: 9
         ignoreResistances: true
         damage:
           types:
             Poison: 0.05
-    Poison:
+    Narcotic:
       effects:
       - !type:ModifyStatusEffect
         minScale: 12

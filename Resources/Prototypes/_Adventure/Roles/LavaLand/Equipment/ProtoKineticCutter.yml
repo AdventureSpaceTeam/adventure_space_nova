@@ -28,7 +28,7 @@
     maxCharge: 200
     startingCharge: 200
     pricePerJoule: 0.3
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletProtoCutter
     fireCost: 35
   - type: BatteryWeaponFireModes
@@ -76,7 +76,7 @@
   - type: StaminaDamageOnCollide
     damage: 15
   - type: TimedDespawn
-    lifetime: 0.35
+    lifetime: 0.2
   - type: PointLight
     color: "#ffaf3892"
     energy: 3
@@ -112,7 +112,7 @@
   - type: StaminaDamageOnCollide
     damage: 5
   - type: TimedDespawn
-    lifetime: 0.5
+    lifetime: 0.2
   - type: PointLight
     color: "#88225eb8"
     energy: 3
