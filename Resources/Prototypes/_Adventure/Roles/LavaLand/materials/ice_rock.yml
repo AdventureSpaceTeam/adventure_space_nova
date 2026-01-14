@@ -48,6 +48,7 @@
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_wall_west
         - state: rock_gem
+          visible: false
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -71,6 +72,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_coal
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -94,6 +96,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_gold
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -117,6 +120,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_diamond
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -140,6 +144,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_phoron
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -163,6 +168,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_quartz
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -186,6 +192,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_silver
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -209,6 +216,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_tin
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -232,6 +240,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_uranium
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -255,4 +264,5 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_artifact_fragment
+      visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]

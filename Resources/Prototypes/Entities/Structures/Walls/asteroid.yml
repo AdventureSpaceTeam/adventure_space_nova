@@ -135,7 +135,9 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+
 
 - type: entity
   id: AsteroidRockCoalCrab
@@ -166,6 +168,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -197,6 +200,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -219,6 +223,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -242,6 +247,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -273,6 +279,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -305,6 +312,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -336,6 +344,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -367,6 +376,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -398,6 +408,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_salt
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -421,6 +432,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -439,7 +451,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_asteroid_west
     - state: gibtonite_inactive
-      visible: false
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
 
 - type: entity
@@ -513,6 +525,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -536,6 +549,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -559,6 +573,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -582,6 +597,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -605,6 +621,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -628,6 +645,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -651,6 +669,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -674,6 +693,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -697,6 +717,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_salt
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -720,6 +741,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -738,7 +760,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: gibtonite_inactive
-      visible: false
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
 
 - type: entity
@@ -762,6 +784,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: ironrock_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Rocks and ore veins
@@ -839,6 +862,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -869,6 +893,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -892,6 +917,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -922,6 +948,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -952,6 +979,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -982,6 +1010,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Yes I know it drops steel but we may get smelting at some point
@@ -1013,6 +1042,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1043,6 +1073,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 
@@ -1074,6 +1105,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1104,6 +1136,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1134,6 +1167,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
     - state: rock_salt
+      visible: false  # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Basalt variants
@@ -1179,6 +1213,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1202,6 +1237,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1225,6 +1261,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1248,6 +1285,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1271,6 +1309,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1294,6 +1333,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1317,6 +1357,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1340,6 +1381,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 
@@ -1364,6 +1406,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1387,6 +1430,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1410,6 +1454,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
     - state: rock_salt
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Snow variants
@@ -1455,6 +1500,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1478,6 +1524,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1501,6 +1548,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1524,6 +1572,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1547,6 +1596,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1570,6 +1620,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1593,6 +1644,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1616,6 +1668,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 
@@ -1640,6 +1693,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1663,6 +1717,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1686,6 +1741,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
     - state: rock_salt
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Sand variants
@@ -1731,6 +1787,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1754,6 +1811,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1777,6 +1835,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1800,6 +1859,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1823,6 +1883,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1846,6 +1907,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1869,6 +1931,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1892,6 +1955,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1915,6 +1979,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1938,6 +2003,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -1961,6 +2027,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_sand_west
     - state: rock_salt
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Chromite variants
@@ -2006,6 +2073,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2029,6 +2097,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2052,6 +2121,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2075,6 +2145,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2098,6 +2169,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2121,6 +2193,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2144,6 +2217,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2167,6 +2241,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 
@@ -2191,6 +2266,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2214,6 +2290,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_chromite_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2282,6 +2359,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_coal
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2305,6 +2383,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_gold
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2328,6 +2407,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_diamond
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2351,6 +2431,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_phoron
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2374,6 +2455,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_quartz
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2397,6 +2479,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_silver
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2420,6 +2503,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_tin
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2443,6 +2527,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_uranium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 
@@ -2467,6 +2552,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_bananium
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2490,6 +2576,7 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_artifact_fragment
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
@@ -2513,4 +2600,5 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_andesite_west
     - state: rock_salt
+      visible: false # Adventure
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
