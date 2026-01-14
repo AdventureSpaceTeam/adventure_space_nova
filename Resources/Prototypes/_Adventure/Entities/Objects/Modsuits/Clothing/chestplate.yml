@@ -973,3 +973,35 @@
     clothingPrototype: ClothingHeadHelmetModsuitMagmatiteSealed
     requiredSlot: outerClothing
     slot: head
+
+- type: entity
+  parent: ClothingOuterChestplateModsuitSealedBase
+  id: ClothingOuterChestplateModsuitBSOSealed
+  name: корпус Р.И.Г.-а
+  description: Надёжно защищает офицера от пуль и лазеров, наверное.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/Clothing/OuterClothing/bso.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Modsuits/Clothing/OuterClothing/bso.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.00005
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+        Radiation: 0.8
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetModsuitBSOSealed
+    requiredSlot: outerClothing
+    slot: head

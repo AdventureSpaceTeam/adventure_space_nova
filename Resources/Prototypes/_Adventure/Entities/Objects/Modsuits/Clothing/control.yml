@@ -672,3 +672,28 @@
     node: modsuitmagmatite
   - type: StaticPrice
     price: 10000
+
+- type: entity
+  parent: ClothingControlModsuitBase
+  id: ClothingControlModsuitBSOSealed
+  name: Р.И.Г. Офицера синего щита
+  description: Заменяет скафандр и сумку, в стиле "Синего Щита".
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/Clothing/Back/bso.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Modsuits/Clothing/Back/bso.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingOuterChestplateModsuitBSOSealed
+  - type: Storage
+    grid:
+    - 0,0,8,4
+  - type: PointLight
+    color: "#1539eb"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    radius: 12
+    softness: 20
+    autoRot: true
+  - type: StaticPrice
+    price: 10000
