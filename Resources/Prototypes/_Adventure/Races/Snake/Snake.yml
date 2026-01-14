@@ -83,7 +83,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#e1b52e"
   - type: Bloodstream
-    bloodReagent: ZerahBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ZerahBlood
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: MaleZerah

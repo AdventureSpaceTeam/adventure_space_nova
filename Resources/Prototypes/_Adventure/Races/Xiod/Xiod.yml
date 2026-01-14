@@ -86,7 +86,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#75b1f0"
   - type: Bloodstream
-    bloodReagent: Water
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: XiodEmote

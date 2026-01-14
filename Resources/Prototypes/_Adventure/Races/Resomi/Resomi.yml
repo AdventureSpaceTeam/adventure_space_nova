@@ -59,8 +59,11 @@
   - type: MultiHandedItem
   - type: CanEscapeInventory # надо
   - type: Bloodstream
-    bloodMaxVolume: 180 # на 40% меньше
-    bloodReagent: ResomiBlood
+    #bloodMaxVolume: 180 # на 40% меньше
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ResomiBlood
+        Quantity: 180
   - type: Vocal
     sounds:
       Male: MaleResomi
