@@ -139,8 +139,8 @@
     soundHit:
      collection: AlienClaw
     animation: WeaponArcClaw
-  - type: StaminaDamageOnCollide #COTULa's, при прыжке оно сносит с ног нахуй (стаминакрит)
-    damage: 100
+  - type: StaminaDamageOnCollide #COTULa's, при прыжке оно наносит урон по стамине
+    damage: 70
 #  - type: SSDIndicator # COTULa's, Чтоб NPC ксеноморф не засыпал и мог давать зазу игрокам + багуется и после сна ксенос ходит по траве как пьяный.
   - type: Tag
     tags:
