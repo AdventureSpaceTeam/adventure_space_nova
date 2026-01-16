@@ -104,6 +104,7 @@
       - Critical
     - type: RattleOnTrigger
       radioChannel: "Security"
+      targetUser: true
 # Adventure end
 
 #Traitor implants
