@@ -8,18 +8,18 @@ namespace Content.Shared._Adventure.TTS;
 /// </summary>
 [Prototype("ttsVoice")]
 // ReSharper disable once InconsistentNaming
-public sealed class TTSVoicePrototype : IPrototype
+public sealed partial class TTSVoicePrototype : IPrototype
 {
     [IdDataField]
-    public string ID { get; } = default!;
+    public string ID { get; private set; } = default!;
 
     [DataField("name")]
-    public string Name { get; } = string.Empty;
+    public string Name { get; private set; } = string.Empty;
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("speaker", required: true)]
-    public string Speaker { get; } = string.Empty;
+    public string Speaker { get; private set; } = string.Empty;
 
     [DataField("sponsorOnly")]
-    public bool SponsorOnly { get; } = false;
+    public bool SponsorOnly { get; private set; } = false;
 }
