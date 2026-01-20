@@ -176,7 +176,7 @@ public sealed class CryostorageSystem : SharedCryostorageSystem
             return;
 
         // if we have a session, we use that to add back in all the job slots the player had.
-        if (userId != null)
+        if (userId != null && !CryoSleepRejoiningEnabled)
         {
             foreach (var uniqueStation in _station.GetStationsSet())
             {
@@ -225,7 +225,7 @@ public sealed class CryostorageSystem : SharedCryostorageSystem
 
         var jobName = Loc.GetString("earlyleave-cryo-job-unknown");
         var recordId = _stationRecords.GetRecordByName(station.Value, name);
-        if (recordId != null)
+        if (recordId != null && !CryoSleepRejoiningEnabled)
         {
             var key = new StationRecordKey(recordId.Value, station.Value);
             if (_stationRecords.TryGetRecord<GeneralStationRecord>(key, out var entry, stationRecords))
