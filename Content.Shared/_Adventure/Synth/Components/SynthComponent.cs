@@ -6,10 +6,12 @@ using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared._Adventure.Synth.Components;
 
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedSynthSystem))]
+[AutoGenerateComponentPause]
 public sealed partial class SynthComponent : Component
 {
     [DataField]
@@ -17,6 +19,14 @@ public sealed partial class SynthComponent : Component
 
     [DataField]
     public ProtoId<AlertPrototype> NoBatteryAlert = "BorgBatteryNone";
+
+    /// <summary>
+    /// The next update time for the battery charge level.
+    /// Used for the alert and borg UI.
+    /// </summary>
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [AutoPausedField]
+    public TimeSpan NextBatteryUpdate = TimeSpan.Zero;
 
     [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier EmpDamage = new()

@@ -32,6 +32,7 @@ using Content.Shared.Ninja.Components;
 using Content.Shared.Ninja.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Actions;
+using Content.Shared.Power;
 using Content.Shared.Power.EntitySystems;
 
 
@@ -68,6 +69,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         SubscribeLocalEvent<SynthComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<SynthComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
+        SubscribeLocalEvent<SynthComponent, PredictedBatteryChargeChangedEvent>(OnBatteryChargeChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
         SubscribeLocalEvent<SynthComponent, ItemToggledEvent>(OnToggled);
         SubscribeLocalEvent<SynthComponent, ToggleDrainActionEvent>(OnToggleAction);
@@ -90,39 +92,14 @@ public sealed partial class SynthSystem : SharedSynthSystem
         _action.AddAction(uid, ref component.ActionEntity, component.DrainBatteryAction);
     }
 
-    private void UpdateBatteryAlert(Entity<SynthComponent, PowerCellSlotComponent?> ent)
+    private void OnPowerCellChanged(Entity<SynthComponent> ent, ref PowerCellChangedEvent args)
     {
-        if (!Resolve(ent, ref ent.Comp2, false))
-            return;
-
-        if (!_powerCell.TryGetBatteryFromSlot((ent.Owner, ent.Comp2), out var battery))
-        {
-            _alerts.ShowAlert(ent.Owner, ent.Comp1.NoBatteryAlert);
-            return;
-        }
-
-        // Alert levels from 0 to 10.
-        var chargeLevel = (short)MathF.Round(_battery.GetChargeLevel(battery.Value.AsNullable()) * 10f);
-
-        // we make sure 0 only shows if they have absolutely no battery.
-        // also account for floating point imprecision
-        if (chargeLevel == 0 && _powerCell.HasDrawCharge((ent.Owner, null, ent.Comp2)))
-        {
-            chargeLevel = 1;
-        }
-
-        _alerts.ShowAlert(ent.Owner, ent.Comp1.BatteryAlert, chargeLevel);
+        UpdateBattery(ent);
     }
 
-    private void OnPowerCellChanged(EntityUid uid, SynthComponent component, PowerCellChangedEvent args)
+    private void OnBatteryChargeChanged(Entity<SynthComponent> ent, ref PredictedBatteryChargeChangedEvent args)
     {
-        UpdateBatteryAlert((uid, component));
-
-        if (_powerCell.HasDrawCharge(uid))
-        {
-            Toggle.TryActivate(uid);
-        }
-        UpdateUI(uid, component);
+        UpdateBattery(ent);
     }
 
     private void OnPowerCellSlotEmpty(EntityUid uid, SynthComponent component, ref PowerCellSlotEmptyEvent args)
@@ -165,5 +142,12 @@ public sealed partial class SynthSystem : SharedSynthSystem
     private void OnComponentShutdown(EntityUid uid, SynthComponent component, ComponentShutdown args)
     {
         _action.RemoveAction(uid, component.ActionEntity);
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        UpdateBattery(frameTime);
     }
 }
