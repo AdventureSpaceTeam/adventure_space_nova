@@ -26,7 +26,14 @@ namespace Content.Client.Access.UI
             _window.OnNameChanged += OnNameChanged;
             _window.OnJobChanged += OnJobChanged;
             _window.OnJobIconChanged += OnJobIconChanged;
+            _window.OnNumberChanged += OnNumberChanged; // Adv-space: НТ-грам
         }
+        // Adv-space: НТ-грам старт
+        private void OnNumberChanged(uint newNumber)
+        {
+            SendMessage(new AgentIDCardNumberChangedMessage(newNumber));
+        }
+        // Adv-space: НТ-грам конец
 
         private void OnNameChanged(string newName)
         {
@@ -56,6 +63,7 @@ namespace Content.Client.Access.UI
             _window.SetCurrentName(cast.CurrentName);
             _window.SetCurrentJob(cast.CurrentJob);
             _window.SetAllowedIcons(cast.CurrentJobIconId);
+            _window.SetCurrentNumber(cast.CurrentNumber); // Adv-space: НТ-грам
         }
     }
 }

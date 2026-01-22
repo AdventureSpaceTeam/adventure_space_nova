@@ -13,8 +13,8 @@ using Content.Server.Clothing.Systems;
 using Content.Server.Implants;
 using Content.Shared.Implants;
 using Content.Shared.Inventory;
-using Content.Shared.Lock;
 using Content.Shared.PDA;
+using Content.Shared.DeltaV.Cartridges.NanoChat;
 
 namespace Content.Server.Access.Systems
 {
@@ -24,9 +24,9 @@ namespace Content.Server.Access.Systems
         [Dependency] private readonly IdCardSystem _cardSystem = default!;
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly SharedNanoChatSystem _nanoChat = default!;
         [Dependency] private readonly ChameleonClothingSystem _chameleon = default!;
         [Dependency] private readonly ChameleonControllerSystem _chamController = default!;
-        [Dependency] private readonly LockSystem _lock = default!;
 
         public override void Initialize()
         {
@@ -38,14 +38,24 @@ namespace Content.Server.Access.Systems
             SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardJobChangedMessage>(OnJobChanged);
             SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardJobIconChangedMessage>(OnJobIconChanged);
             SubscribeLocalEvent<AgentIDCardComponent, InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent>>(OnChameleonControllerOutfitChangedItem);
+            SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardNumberChangedMessage>(OnNumberChanged); // Adv-space: наночат
         }
+        // Adv-space-start: наночат
+        private void OnNumberChanged(Entity<AgentIDCardComponent> ent, ref AgentIDCardNumberChangedMessage args)
+        {
+            if (!TryComp<NanoChatCardComponent>(ent, out var comp))
+                return;
 
+            _nanoChat.SetNumber((ent, comp), args.Number);
+            Dirty(ent, comp);
+        }
+        // Adv-space-end
         private void OnChameleonControllerOutfitChangedItem(Entity<AgentIDCardComponent> ent, ref InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent> args)
         {
             if (!TryComp<IdCardComponent>(ent, out var idCardComp))
                 return;
 
-            _prototypeManager.Resolve(args.Args.ChameleonOutfit.Job, out var jobProto);
+            _prototypeManager.TryIndex(args.Args.ChameleonOutfit.Job, out var jobProto);
 
             var jobIcon = args.Args.ChameleonOutfit.Icon ?? jobProto?.Icon;
             var jobName = args.Args.ChameleonOutfit.Name ?? jobProto?.Name ?? "";
@@ -81,8 +91,7 @@ namespace Content.Server.Access.Systems
 
         private void OnAfterInteract(EntityUid uid, AgentIDCardComponent component, AfterInteractEvent args)
         {
-            if (args.Target == null || !args.CanReach || _lock.IsLocked(uid) ||
-                !TryComp<AccessComponent>(args.Target, out var targetAccess) || !HasComp<IdCardComponent>(args.Target))
+            if (args.Target == null || !args.CanReach || !TryComp<AccessComponent>(args.Target, out var targetAccess) || !HasComp<IdCardComponent>(args.Target))
                 return;
 
             if (!TryComp<AccessComponent>(uid, out var access) || !HasComp<IdCardComponent>(uid))
@@ -91,6 +100,48 @@ namespace Content.Server.Access.Systems
             var beforeLength = access.Tags.Count;
             access.Tags.UnionWith(targetAccess.Tags);
             var addedLength = access.Tags.Count - beforeLength;
+
+            //Adv-space-start: Наночат
+            if (TryComp<NanoChatCardComponent>(args.Target, out var targetNanoChat) &&
+                TryComp<NanoChatCardComponent>(uid, out var agentNanoChat))
+            {
+                // First clear existing data
+                _nanoChat.Clear((uid, agentNanoChat));
+
+                // Copy the number
+                if (_nanoChat.GetNumber((args.Target.Value, targetNanoChat)) is { } number)
+                    _nanoChat.SetNumber((uid, agentNanoChat), number);
+
+                // Copy all recipients and their messages
+                foreach (var (recipientNumber, recipient) in _nanoChat.GetRecipients((args.Target.Value, targetNanoChat)))
+                {
+                    _nanoChat.SetRecipient((uid, agentNanoChat), recipientNumber, recipient);
+
+                    if (_nanoChat.GetMessagesForRecipient((args.Target.Value, targetNanoChat), recipientNumber) is not
+                        { } messages)
+                        continue;
+
+                    foreach (var message in messages)
+                    {
+                        _nanoChat.AddMessage((uid, agentNanoChat), recipientNumber, message);
+                    }
+                }
+            }
+
+            if (addedLength == 0)
+            {
+                _popupSystem.PopupEntity(Loc.GetString("agent-id-no-new", ("card", args.Target)), args.Target.Value, args.User);
+                return;
+            }
+
+            Dirty(uid, access);
+
+            if (addedLength == 1)
+            {
+                _popupSystem.PopupEntity(Loc.GetString("agent-id-new-1", ("card", args.Target)), args.Target.Value, args.User);
+                return;
+            }
+            //Adv-space-end
 
             _popupSystem.PopupEntity(Loc.GetString("agent-id-new", ("number", addedLength), ("card", args.Target)), args.Target.Value, args.User);
             if (addedLength > 0)
@@ -105,7 +156,18 @@ namespace Content.Server.Access.Systems
             if (!TryComp<IdCardComponent>(uid, out var idCard))
                 return;
 
-            var state = new AgentIDCardBoundUserInterfaceState(idCard.FullName ?? "", idCard.LocalizedJobTitle ?? "", idCard.JobIcon);
+            // Adv-space-start
+            uint? currentNumber = null;
+            if (TryComp<NanoChatCardComponent>(uid, out var comp))
+                currentNumber = comp.Number;
+
+            var state = new AgentIDCardBoundUserInterfaceState(
+                idCard.FullName ?? "",
+                idCard.LocalizedJobTitle ?? "",
+                idCard.JobIcon,
+                currentNumber);
+            // Adv-space-end
+
             _uiSystem.SetUiState(uid, AgentIDCardUiKey.Key, state);
         }
 
@@ -130,7 +192,7 @@ namespace Content.Server.Access.Systems
             if (!TryComp<IdCardComponent>(uid, out var idCard))
                 return;
 
-            if (!_prototypeManager.Resolve(args.JobIconId, out var jobIcon))
+            if (!_prototypeManager.TryIndex(args.JobIconId, out var jobIcon))
                 return;
 
             _cardSystem.TryChangeJobIcon(uid, jobIcon, idCard);

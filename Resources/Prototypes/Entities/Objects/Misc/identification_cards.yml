@@ -25,6 +25,7 @@
     - WhitelistChameleonIdCard
   - type: StealTarget
     stealGroup: IDCard
+  - type: NanoChatCard # Adv-space: Наночат
 
 #IDs with layers
 
@@ -898,6 +899,8 @@
     jobTitle: job-title-cluwne
     jobIcon: JobIconCluwne
   - type: Unremoveable
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -945,6 +948,8 @@
         type: AgentIDCardBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: AgentIDCard
@@ -1095,6 +1100,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: CentralCommandOfficial
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1115,6 +1122,8 @@
     heldPrefix: gold
   - type: PresetIdCard
     job: ERTLeader
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1135,6 +1144,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTChaplain
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1155,6 +1166,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTEngineer
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1175,6 +1188,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTJanitor
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1195,6 +1210,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTMedical
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1215,6 +1232,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTSecurity
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1233,6 +1252,8 @@
       state: DeathSquad
   - type: PresetIdCard
     job: DeathSquad
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1254,6 +1275,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: CBURN
+  - type: NanoChatCard # Adv-space: Наночат
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard

@@ -1,3 +1,4 @@
+using Content.Shared.DeltaV.Cartridges.NanoChat;
 using Content.Shared.CartridgeLoader.Cartridges;
 ﻿using Content.Shared.Paper;
 using Robust.Shared.Audio;
@@ -27,6 +28,14 @@ public sealed partial class LogProbeCartridgeComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier SoundScan = new SoundPathSpecifier("/Audio/Machines/scan_finish.ogg", AudioParams.Default.WithVariation(0.25f));
+
+    // Adv-space-start
+    /// <summary>
+    /// Последняя дата наночата которую просканили
+    /// </summary>
+    [DataField]
+    public NanoChatData? ScannedNanoChatData;
+    // Adv-space-end
 
     /// <summary>
     /// Paper to spawn when printing logs.
