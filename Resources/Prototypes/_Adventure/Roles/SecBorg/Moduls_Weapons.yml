@@ -85,7 +85,7 @@
       fireCost: 100
     - proto: BorgLethalBullet
       fireCost: 100
-  - type: PredictedBatterySelfRecharger
+  - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 20
   - type: MagazineVisuals
