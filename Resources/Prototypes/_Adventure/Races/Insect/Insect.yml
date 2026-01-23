@@ -181,7 +181,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#808A51"
   - type: Bloodstream
-    bloodReagent: InsectBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: UnisexInsect
