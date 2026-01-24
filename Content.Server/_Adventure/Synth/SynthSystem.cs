@@ -69,7 +69,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         SubscribeLocalEvent<SynthComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<SynthComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
-        SubscribeLocalEvent<SynthComponent, PredictedBatteryChargeChangedEvent>(OnBatteryChargeChanged);
+        SubscribeLocalEvent<SynthComponent, ChargeChangedEvent>(OnBatteryChargeChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
         SubscribeLocalEvent<SynthComponent, ItemToggledEvent>(OnToggled);
         SubscribeLocalEvent<SynthComponent, ToggleDrainActionEvent>(OnToggleAction);
@@ -97,7 +97,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         UpdateBattery(ent);
     }
 
-    private void OnBatteryChargeChanged(Entity<SynthComponent> ent, ref PredictedBatteryChargeChangedEvent args)
+    private void OnBatteryChargeChanged(Entity<SynthComponent> ent, ref ChargeChangedEvent args)
     {
         UpdateBattery(ent);
     }
