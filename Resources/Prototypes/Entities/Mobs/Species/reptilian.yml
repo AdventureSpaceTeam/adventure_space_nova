@@ -66,6 +66,9 @@
     coldDamageThreshold: 273.15 # Adventure 0с
     currentTemperature: 291.15 # Adventure
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
     coldDamage:
       types:
         Cold : 0.1 #per second, scales with temperature & other constants

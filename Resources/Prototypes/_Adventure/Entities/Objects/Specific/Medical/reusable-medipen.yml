@@ -1,7 +1,7 @@
 - type: entity
   name: многоразовый медипен
   suffix: AdvMedical
-  parent: BaseItem
+  parent: BaseHypospray
   description: Учёные NT смогли создать новейшую медицинскую разработку! Медипен, но многоразовый.
   id: ReusableMedipen
   components:
@@ -17,8 +17,6 @@
     solution: hypospray
   - type: ExaminableSolution
     solution: hypospray
-  - type: Hypospray
-    onlyAffectsMobs: false
   - type: UseDelay
     delay: 0.5
 

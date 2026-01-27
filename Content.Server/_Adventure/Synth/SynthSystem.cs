@@ -57,7 +57,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly PredictedBatterySystem _battery = default!;
+    [Dependency] private readonly SharedBatterySystem _battery = default!;
     [Dependency] private readonly SharedBatteryDrainerSystem _batteryDrainer = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedActionsSystem _action = default!;

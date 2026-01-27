@@ -90,7 +90,7 @@ namespace Content.Shared.Roles
         public bool CanBeAntag { get; private set; } = true;
 
         [DataField("radioBold")]
-        public bool RadioIsBold { get; } = false;
+        public bool RadioIsBold { get; private set; } = false;
 
         /// <summary>
         ///     The "weight" or importance of this job. If this number is large, the job system will assign this job

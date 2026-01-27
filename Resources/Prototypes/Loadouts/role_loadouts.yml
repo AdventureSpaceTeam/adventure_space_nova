@@ -737,3 +737,8 @@
   - GroupPlasManSuitBase #Adventure
   - GroupEVATank
   - SurvivalExtended
+
+- type: roleLoadout
+  id: RoleSurvivalSpaceNinja
+  groups:
+  - GroupEVATank
