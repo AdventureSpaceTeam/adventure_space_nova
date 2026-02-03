@@ -5,7 +5,8 @@
 
 ## Лицензия
 
-Весь код репозитория лицензирован под [MIT](https://github.com/AdventureSpaceTeam/adventure_space_nova/blob/master/LICENSE.TXT).
+Весь код репозитория, за исключением некоторого списка, лицензирован под [MIT](https://github.com/AdventureSpaceTeam/adventure_space_nova/blob/master/LICENSE.TXT).
+Код, находящийся в папках DeltaV лицензирован под [AGPLv3](https://github.com/AdventureSpaceTeam/adventure_space_nova/blob/master/LICENSE-AGPLv3.txt) и приведен без изменений.
 
 Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), если не указано иное. Ассеты имеют свою лицензию и авторские права в файле метаданных. [Пример](https://github.com/AdventureSpaceTeam/adventure_space_nova/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
