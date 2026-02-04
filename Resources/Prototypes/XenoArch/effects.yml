@@ -78,7 +78,7 @@
     - id: XenoArtifactPuddleRare
       weight: 2.0
     - id: XenoArtifactAnomalySpawn
-      weight: 10.0
+      weight: 0.5
     - id: XenoArtifactIgnite
       weight: 2.0
     - id: XenoArtifactTeleport

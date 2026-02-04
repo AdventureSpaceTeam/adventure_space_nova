@@ -264,6 +264,7 @@
       path: /Audio/Machines/anomaly_generate.ogg
     generatingFinishedSound:
       path: /Audio/Machines/beep.ogg
+    materialPerAnomaly: 9000
   - type: MaterialStorage
     whitelist:
       tags:

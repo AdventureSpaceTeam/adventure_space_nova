@@ -8,6 +8,7 @@
   rules:
   - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
+  - WLStationEventScheduler
 
 - type: gamePreset
   id: Night #RaidGo

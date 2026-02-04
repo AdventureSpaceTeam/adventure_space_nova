@@ -142,6 +142,108 @@
     reagents:
     - Frezon
 
+# TG GASES ADVENTURE START
+- type: xenoArchTrigger
+  id: TriggerBZ
+  tip: xenoarch-trigger-tip-bz
+  components:
+  - type: XATGas
+    targetGas: BZ
+  - type: XATReactive
+    reagents:
+    - BZ
+
+- type: xenoArchTrigger
+  id: TriggerHalon
+  tip: xenoarch-trigger-tip-halon
+  components:
+  - type: XATGas
+    targetGas: Halon
+  - type: XATReactive
+    reagents:
+    - Halon
+
+- type: xenoArchTrigger
+  id: TriggerHealium
+  tip: xenoarch-trigger-tip-healium
+  components:
+  - type: XATGas
+    targetGas: Healium
+  - type: XATReactive
+    reagents:
+    - Healium
+
+- type: xenoArchTrigger
+  id: TriggerHyperNoblium
+  tip: xenoarch-trigger-tip-hypernoblium
+  components:
+  - type: XATGas
+    targetGas: HyperNoblium
+  - type: XATReactive
+    reagents:
+    - HyperNoblium
+
+- type: xenoArchTrigger
+  id: TriggerHydrogen
+  tip: xenoarch-trigger-tip-hydrogen
+  components:
+  - type: XATGas
+    targetGas: Hydrogen
+  - type: XATReactive
+    reagents:
+    - Hydrogen
+
+- type: xenoArchTrigger
+  id: TriggerPluoxium
+  tip: xenoarch-trigger-tip-pluoxium
+  components:
+  - type: XATGas
+    targetGas: Pluoxium
+  - type: XATReactive
+    reagents:
+    - Pluoxium
+
+- type: xenoArchTrigger
+  id: TriggerNitrium
+  tip: xenoarch-trigger-tip-nitrium
+  components:
+  - type: XATGas
+    targetGas: Nitrium
+  - type: XATReactive
+    reagents:
+    - Nitrium
+
+- type: xenoArchTrigger
+  id: TriggerProtoNitrate
+  tip: xenoarch-trigger-tip-protonitrate
+  components:
+  - type: XATGas
+    targetGas: ProtoNitrate
+  - type: XATReactive
+    reagents:
+    - ProtoNitrate
+
+- type: xenoArchTrigger
+  id: TriggerAntiNoblium
+  tip: xenoarch-trigger-tip-antinoblium
+  components:
+  - type: XATGas
+    targetGas: AntiNoblium
+  - type: XATReactive
+    reagents:
+    - AntiNoblium
+
+# - type: xenoArchTrigger скажите спасибо Рою
+#   id: TriggerZauker
+#   tip: xenoarch-trigger-tip-zauker
+#   components:
+#   - type: XATGas
+#     targetGas: Zauker
+#   - type: XATReactive
+#     reagents:
+#     - Zauker
+# TG GASES ADVENTURE END
+
 - type: xenoArchTrigger
   id: TriggerRadiation
   tip: xenoarch-trigger-tip-radiation

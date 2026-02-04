@@ -1,0 +1,54 @@
+- type: entity
+  id: WLStationEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minMaxEventTiming:
+      min: 1800
+      max: 5400
+    scheduledGameRules: !type:NestedSelector
+      tableId: WLBasicGameRulesTable
+
+- type: entityTable
+  id: WLBasicGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: WLCargoGiftsTable
+      - !type:NestedSelector
+        tableId: WLCargoGiftsTable
+
+- type: entityTable
+  id: WLCargoGiftsTable
+  table: !type:GroupSelector
+    children:
+    - id: GiftsEngineering
+    - id: GiftsFireProtection
+    - id: GiftsJanitor
+    - id: GiftsMedical
+    - id: GiftsPizzaPartyLarge
+    - id: GiftsPizzaPartySmall
+    - id: GiftsSecurityGuns
+    - id: GiftsSpacingSupplies
+    - id: GiftsVendingRestock
+
+
+- type: entityTable
+  id: WLBasicCalmEventsTable
+  table: !type:AllSelector
+    children:
+    - id: AnomalySpawn
+    - id: BluespaceArtifact
+    - id: CockroachMigration
+    - id: GasLeak
+    - id: IonStorm
+    - id: KudzuGrowth
+    - id: MassHallucinations
+    - id: MouseMigration
+    - id: PowerGridCheck
+    - id: SlimesSpawn
+    - id: SolarFlare
+    - id: SnakeSpawn
+    - id: SpiderClownSpawn
+    - id: SpiderSpawn
+    - id: VentClog
