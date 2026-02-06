@@ -15,9 +15,6 @@ public sealed partial class HypernobliumEffect : IGasReactionEffect
 {
     public ReactionResult React(GasMixture mixture, IGasMixtureHolder? holder, AtmosphereSystem atmosphereSystem, float heatScale)
     {
-        if (this is HyperNobliumProductionReaction)
-            return ReactionResult.NoReaction;
-
         var hyperNobliumMoles = mixture.GetMoles(Gas.HyperNoblium);
         var totalMoles = mixture.TotalMoles;
 

@@ -82,7 +82,7 @@ public sealed class SponsorChangeEui : BaseEui
             return;
         }
         _sawmill.Warning($"{AdminUnique} set {player.LastSeenUserName} ({player.UserId}) sponsor tier to {tier?.Id}");
-        _db.SetPlayerRecordSponsor(player.UserId, tier?.Id);
+        await _db.SetPlayerRecordSponsor(player.UserId, tier?.Id);
         if (tier is null)
         {
             _sponsors.Sponsors[player.UserId] = null;

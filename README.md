@@ -1,7 +1,7 @@
 ![image](https://github.com/user-attachments/assets/0bb6186c-8fd5-4c22-b2f1-395fddb32462)
 
 [Дискорд](https://discord.gg/AD5rBEu9hk)
-[Вики](https://adventure-space.ru/)
+[Вики](https://wiki.adven.space/)
 
 ## Лицензия
 

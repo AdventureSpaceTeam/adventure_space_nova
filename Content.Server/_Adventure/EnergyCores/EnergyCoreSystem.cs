@@ -123,7 +123,7 @@ public sealed partial class EnergyCoreSystem : EntitySystem
             {
                 if (!core.Overheat)
                 {
-                    OverHeating(core);
+                    OverHeating(uid, core);
                 }
             }
             else if (core.Overheat)
@@ -155,80 +155,79 @@ public sealed partial class EnergyCoreSystem : EntitySystem
         }
     }
 
-    private void OverHeating(EnergyCoreComponent component)
+    private void OverHeating(EntityUid uid, EnergyCoreComponent component)
     {
         if (!component.OverheatSent)
         {
             component.Overheat = true;
             component.OverheatSent = true;
             var message = Loc.GetString("energy-core-overheat-warning");
-            _radio.SendRadioMessage(component.Owner, message,
-                _prototype.Index<RadioChannelPrototype>(component.EngineeringChannel),
-                component.Owner);
+            _radio.SendRadioMessage(uid, message,
+                _prototype.Index<RadioChannelPrototype>(component.EngineeringChannel), uid);
         }
-        _damageable.TryChangeDamage(component.Owner, component.Damage, true);
+        _damageable.TryChangeDamage(uid, component.Damage, true);
 
-        var environment = _atmosphereSystem.GetTileMixture(component.Owner);
+        var environment = _atmosphereSystem.GetTileMixture(uid);
         if (environment != null)
             environment.Temperature += component.Heating;
     }
-    private void Absorb(EnergyCoreComponent component, PipeNode air)
+    private void Absorb(EntityUid uid, EnergyCoreComponent component, PipeNode air)
     {
-        if (!TryComp(component.Owner, out HeatFreezingCoreComponent? heatfreeze)) return;
+        if (!TryComp(uid, out HeatFreezingCoreComponent? heatfreeze)) return;
         if (component.Overheat && component.TimeOfLife > 0)
         {
-            ForceTurnOff(component);
+            ForceTurnOff(uid, component);
         }
     }
 
-    private void ForceTurnOff(EnergyCoreComponent component)
+    private void ForceTurnOff(EntityUid uid, EnergyCoreComponent component)
     {
         component.Overheat = false;
         component.ForceDisabled = true;
-        TogglePower(component.Owner);
+        TogglePower(uid);
     }
 
-    private void Working(EnergyCoreComponent component, PipeNode air)
+    private void Working(EntityUid uid, EnergyCoreComponent component, PipeNode air)
     {
-        Absorb(component, air);
-        var pos = Transform(component.Owner);
-        var environment = _atmosphereSystem.GetTileMixture(pos.GridUid, pos.MapUid, _transformSystem.GetGridTilePositionOrDefault(component.Owner), true);
+        Absorb(uid, component, air);
+        var pos = Transform(uid);
+        var environment = _atmosphereSystem.GetTileMixture(pos.GridUid, pos.MapUid, _transformSystem.GetGridTilePositionOrDefault(uid), true);
         if (component.Working && !component.ForceDisabled && environment != null)
         {
             if (component.TimeOfLife > component.LifeAfterOverheat)
             {
                 component.TimeOfLife -= 1;
                 if (component.TimeOfLife <= 0 && !component.isUndead)
-                    OverHeating(component);
+                    OverHeating(uid, component);
             }
             else
             {
-                ForceTurnOff(component);
+                ForceTurnOff(uid, component);
             }
         }
     }
     private void EnergyCoreTick()
     {
         var query = EntityQueryEnumerator<EnergyCoreComponent>();
-        while (query.MoveNext(out var ent, out var target))
+        while (query.MoveNext(out var uid, out var comp))
         {
-            if (!TryComp(target.Owner, out DamageableComponent? damage)) return;
-            var energyCore = target.Owner;
-            var timeOfLife = target.TimeOfLife;
-            var isOn = target.Working;
-            var console = target.EnergyCoreConsoleEntity;
+            if (!TryComp(uid, out DamageableComponent? damage)) return;
+            var energyCore = uid;
+            var timeOfLife = comp.TimeOfLife;
+            var isOn = comp.Working;
+            var console = comp.EnergyCoreConsoleEntity;
             var curDamage = damage.TotalDamage.Float();
-            if (_timing.CurTime > target.NextTick)
+            if (_timing.CurTime > comp.NextTick)
             {
-                if (!TryComp<NodeContainerComponent>(target.Owner, out var component))
+                if (!TryComp<NodeContainerComponent>(uid, out var component))
                     continue;
-                if (!TryComp<HeatFreezingCoreComponent>(target.Owner, out var heatfreeze))
+                if (!TryComp<HeatFreezingCoreComponent>(uid, out var heatfreeze))
                     continue;
-                if (!_nodeContainer.TryGetNode(target.Owner, heatfreeze.PortName, out PipeNode? cur))
+                if (!_nodeContainer.TryGetNode(uid, heatfreeze.PortName, out PipeNode? cur))
                 {
                     continue;
                 }
-                Working(target, cur);
+                Working(uid, comp, cur);
             }
             if (console is not EntityUid entity) return;
             _ui.SetUiState(entity, EnergyCoreConsoleUiKey.Key, new EnergyCoreConsoleUpdateState(GetNetEntity(energyCore), timeOfLife, isOn, curDamage));
@@ -325,8 +324,8 @@ public sealed partial class EnergyCoreSystem : EntitySystem
     }
     private void OnPowerToggled(EntityUid uid, EnergyCoreConsoleComponent component, EnergyCoreConsoleIsOnMessage args)
     {
-        if (!TryComp(component.EnergyCoreEntity, out EnergyCoreComponent? core)) return;
-        TogglePower(core.Owner);
+        if (component.EnergyCoreEntity is null || !TryComp(component.EnergyCoreEntity, out EnergyCoreComponent? core)) return;
+        TogglePower(component.EnergyCoreEntity.Value);
     }
     private void OnParentChanged(EntityUid uid, EnergyCoreComponent component, ref EntParentChangedMessage args)
     {

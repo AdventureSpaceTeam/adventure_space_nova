@@ -16,7 +16,6 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Trigger;
 using Content.Shared.Trigger.Systems;
 using Content.Shared.Trigger.Components;
-using Content.Shared.PowerCell;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
@@ -41,23 +40,15 @@ namespace Content.Server._Adventure.Synth;
 public sealed partial class SynthSystem : SharedSynthSystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ActionsSystem _actions = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly DeviceNetworkSystem _deviceNetwork = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly TriggerSystem _trigger = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
     [Dependency] private readonly Shared.Damage.Systems.DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
-    [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly PredictedBatterySystem _battery = default!;
+    [Dependency] private readonly SharedBatterySystem _battery = default!;
     [Dependency] private readonly SharedBatteryDrainerSystem _batteryDrainer = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedActionsSystem _action = default!;
@@ -69,7 +60,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         SubscribeLocalEvent<SynthComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<SynthComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
-        SubscribeLocalEvent<SynthComponent, PredictedBatteryChargeChangedEvent>(OnBatteryChargeChanged);
+        SubscribeLocalEvent<SynthComponent, ChargeChangedEvent>(OnBatteryChargeChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
         SubscribeLocalEvent<SynthComponent, ItemToggledEvent>(OnToggled);
         SubscribeLocalEvent<SynthComponent, ToggleDrainActionEvent>(OnToggleAction);
@@ -97,7 +88,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         UpdateBattery(ent);
     }
 
-    private void OnBatteryChargeChanged(Entity<SynthComponent> ent, ref PredictedBatteryChargeChangedEvent args)
+    private void OnBatteryChargeChanged(Entity<SynthComponent> ent, ref ChargeChangedEvent args)
     {
         UpdateBattery(ent);
     }

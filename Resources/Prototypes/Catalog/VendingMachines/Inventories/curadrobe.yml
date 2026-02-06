@@ -14,6 +14,7 @@
     ClothingUniformJumpskirtLibrarian: 3
     ClothingShoesBootsLaceup: 2
     ClothingHeadsetService: 2
+    PrinterFlatpack: 2 # Adv printer
   contrabandInventory:
     ToyFigurineLibrarian: 1
 

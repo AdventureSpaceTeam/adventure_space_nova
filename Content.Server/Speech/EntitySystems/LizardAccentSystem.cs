@@ -13,6 +13,23 @@ public sealed class LizardAccentSystem : EntitySystem
     private static readonly Regex RegexLowerEndX = new(@"\bx([\-|r|R]|\b)");
     private static readonly Regex RegexUpperEndX = new(@"\bX([\-|r|R]|\b)");
 
+    // adventure zero warnings begin
+    public static readonly Regex regSLowerMulti = new("с+", RegexOptions.Compiled);
+    public static readonly Regex regSUpperMulti = new("С+", RegexOptions.Compiled);
+    public static readonly Regex regZLowerMulti = new("з+", RegexOptions.Compiled);
+    public static readonly Regex regZUpperMulti = new("З+", RegexOptions.Compiled);
+    public static readonly Regex regShLower = new("ш+", RegexOptions.Compiled);
+    public static readonly Regex regShUpper = new("Ш+", RegexOptions.Compiled);
+    public static readonly Regex regChLowerMulti = new("ч+", RegexOptions.Compiled);
+    public static readonly Regex regChUpperMulti = new("Ч+", RegexOptions.Compiled);
+    public static readonly Regex regZhLowerMulti = new("ж+", RegexOptions.Compiled);
+    public static readonly Regex regZhUpperMulti = new("Ж+", RegexOptions.Compiled);
+    public static readonly Regex regSchLowerMulti = new("щ+", RegexOptions.Compiled);
+    public static readonly Regex regSchUpperMulti = new("Щ+", RegexOptions.Compiled);
+    public static readonly Regex regTsLowerMulti = new("ц+", RegexOptions.Compiled);
+    public static readonly Regex regTsUpperMulti = new("Ц+", RegexOptions.Compiled);
+    // adventure zero warnings end
+
     [Dependency] private readonly IRobustRandom _random = default!; // Corvax-Localization
 
     public override void Initialize()
@@ -36,95 +53,22 @@ public sealed class LizardAccentSystem : EntitySystem
         // eckS
         message = RegexUpperEndX.Replace(message, "ECKS$1");
 
-        // Corvax-Localization-Start
-        // c => ссс
-        message = Regex.Replace(
-            message,
-            "с+",
-            _random.Pick(new List<string>() { "сс", "ссс" })
-        );
-        // С => CCC
-        message = Regex.Replace(
-            message,
-            "С+",
-            _random.Pick(new List<string>() { "СС", "ССС" })
-        );
-        // з => ссс
-        message = Regex.Replace(
-            message,
-            "з+",
-            _random.Pick(new List<string>() { "сс", "ссс" })
-        );
-        // З => CCC
-        message = Regex.Replace(
-            message,
-            "З+",
-            _random.Pick(new List<string>() { "СС", "ССС" })
-        );
-        // ш => шшш,щщщ
-        message = Regex.Replace(
-            message,
-            "ш+",
-            _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" }) // Adventure
-        );
-        // Ш => ШШШ,ЩЩЩ
-        message = Regex.Replace(
-            message,
-            "Ш+",
-            _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" }) // Adventure
-        );
-        // ч => щщщ,шшш
-        message = Regex.Replace(
-            message,
-            "ч+",
-            _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" }) // Adventure
-        );
-        // Ч => ЩЩЩ,ШШШ
-        message = Regex.Replace(
-            message,
-            "Ч+",
-            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" }) // Adventure
-        );
-        // Corvax-Localization-End
-
-        // Adventure-Localization-Start
-        // ж => жжж
-        message = Regex.Replace(
-            message,
-            "ж+",
-            _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" })
-        );
-        // Ж => ЖЖЖ
-        message = Regex.Replace(
-            message,
-            "Ж+",
-            _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" })
-        );
-        // щ => щщщ,шшш
-        message = Regex.Replace(
-            message,
-            "щ+",
-            _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" })
-        );
-        // Щ => ЩЩЩ,ШШШ
-        message = Regex.Replace(
-            message,
-            "Щ+",
-            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" })
-        );
-        // ц => ссс
-        message = Regex.Replace(
-            message,
-            "ц+",
-            _random.Pick(new List<string> { "сс", "ссс" })
-        );
-        // Ц => ССС
-        message = Regex.Replace(
-            message,
-            "Ц+",
-            _random.Pick(new List<string> { "СС", "ССС" })
-        );
-        // Adventure-Localization-End
+        // adventure zero warnings begin
+        message = regSLowerMulti.Replace(message, _random.Pick(new List<string>() { "сс", "ссс" }));
+        message = regSUpperMulti.Replace(message, _random.Pick(new List<string>() { "СС", "ССС" }));
+        message = regZLowerMulti.Replace(message, _random.Pick(new List<string>() { "сс", "ссс" }));
+        message = regZUpperMulti.Replace(message, _random.Pick(new List<string>() { "СС", "ССС" }));
+        message = regShLower.Replace(message, _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" }));
+        message = regShUpper.Replace(message, _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" }));
+        message = regChLowerMulti.Replace(message, _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" }));
+        message = regChUpperMulti.Replace(message, _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" }));
+        message = regZhLowerMulti.Replace(message, _random.Pick(new List<string>() { "шш", "шшш", "щщ", "щщщ" }));
+        message = regZhUpperMulti.Replace(message, _random.Pick(new List<string>() { "ШШ", "ШШШ", "ЩЩ", "ЩЩЩ" }));
+        message = regSchLowerMulti.Replace(message, _random.Pick(new List<string>() { "щщ", "щщщ", "шш", "шшш" }));
+        message = regSchUpperMulti.Replace(message, _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ", "ШШ", "ШШШ" }));
+        message = regTsLowerMulti.Replace(message, _random.Pick(new List<string> { "сс", "ссс" }));
+        message = regTsUpperMulti.Replace(message, _random.Pick(new List<string> { "СС", "ССС" }));
+        // adventure zero warnings end
 
         args.Message = message;
     }
