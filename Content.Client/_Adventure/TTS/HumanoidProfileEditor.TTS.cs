@@ -16,6 +16,7 @@ public sealed partial class HumanoidProfileEditor
         _voiceList = _prototypeManager
             .EnumeratePrototypes<TTSVoicePrototype>()
             .OrderBy(o => Loc.GetString(o.Name))
+            .OrderBy(o => ((o.Gender == "male") ? 0b01 : 0) + ((o.Gender == "female") ? 0b10 : 0))
             .ToList();
 
         VoiceButton.OnItemSelected += args =>

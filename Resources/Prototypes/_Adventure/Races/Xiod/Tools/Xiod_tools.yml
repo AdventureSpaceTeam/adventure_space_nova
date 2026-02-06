@@ -93,7 +93,7 @@
 - type: entity
   name: гипорука
   categories: [ HideSpawnMenu ]
-  parent: BaseItem
+  parent: BaseHypospray
   description: Устройство для быстрого введения.
   id: HypoHand
   components:
@@ -112,9 +112,11 @@
     maxRefill: 5
   - type: ExaminableSolution
     solution: hypospray
-  - type: Hypospray
-    drawTime: 1.25
-    onlyAffectsMobs: false
+  - type: Injector
+    activeModeProtoId: HypopenDynamicMode
+    allowedModes:
+    - HyposprayInjectMode
+    - HypopenDynamicMode
   - type: UseDelay
     delay: 2 
 

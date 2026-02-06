@@ -1,7 +1,7 @@
 #Created: raidgo Transferred:  depresh
 - type: entity
   name: инъектор сильных нанитов
-  parent: BaseItem
+  parent: BaseHypospray
   description: Стерильный инъектор самых сильных нанитов. Это передовая разработка НТ, предназначенная только для самых элитных отрядов, таких как Эскадрон Смерти. Он способен вылечить практически все, однако не способен восстановить тело из отдельных органов. Также он сильно стимулирует организм, улучшая реакцию и обеспечивая огромные дозы адреналина в кровь, который, к удивлению, не наносит вреда.
   id: InjectorFullNanits
   components:
@@ -17,9 +17,9 @@
         - ReagentId: fullnanits
           Quantity: 100
         maxVol: 100
-  - type: Hypospray
-    onlyAffectsMobs: false
-    injectOnly: true
+  - type: Injector
+    allowedModes:
+    - HyposprayInjectMode
   - type: UseDelay
     delay: 0.5
   - type: StaticPrice
@@ -27,7 +27,7 @@
 
 - type: entity
   name: инъектор средних нанитов
-  parent: BaseItem
+  parent: BaseHypospray
   description: Стерильный инъектор нанитов. Это передовая разработка НТ, предназначенная для элитных отрядов, например, таких как ОБР или РХБЗЗ. Способен излечить многие недуги, однако не восстановит тело из органов. Также стимулирует организм, улучшая реакцию и обеспечивая адреналин в кровь.
   id: InjectorMediumNanits
   components:
@@ -43,9 +43,9 @@
         - ReagentId: Mediumnanits
           Quantity: 30
         maxVol: 30
-  - type: Hypospray
-    onlyAffectsMobs: false
-    injectOnly: true
+  - type: Injector
+    allowedModes:
+    - HyposprayInjectMode
   - type: UseDelay
     delay: 0.5
   - type: StaticPrice
@@ -53,7 +53,7 @@
 
 - type: entity
   name: инъектор слабых нанитов
-  parent: BaseItem
+  parent: BaseHypospray
   description: Стерильный инъектор нанитов. Это передовая разработка НТ, предназначенная для боевых отрядов, таких как ЦСС. Способен излечить многие недуги, однако не восстановит тело из органов. Также немного стимулирует организм, улучшая реакцию и обеспечивая небольшой приток адреналина в кровь.
   id: InjectorWeakNanits
   components:
@@ -69,9 +69,9 @@
         - ReagentId: weaknanits
           Quantity: 30
         maxVol: 30
-  - type: Hypospray
-    onlyAffectsMobs: false
-    injectOnly: true
+  - type: Injector
+    allowedModes:
+    - HyposprayInjectMode
   - type: UseDelay
     delay: 0.5
   - type: StaticPrice

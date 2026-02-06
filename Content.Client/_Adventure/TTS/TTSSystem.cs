@@ -70,7 +70,7 @@ public sealed class TTSSystem : EntitySystem
         _toDelete.Clear();
         foreach (var (uid, comp) in _playing)
         {
-            if (comp != null && !EntityManager.Deleted(comp.Owner) && !comp.Deleted)
+            if (comp != null && !comp.Deleted)
             {
                 if (!comp.Playing)
                     _toDelete.Add(uid);

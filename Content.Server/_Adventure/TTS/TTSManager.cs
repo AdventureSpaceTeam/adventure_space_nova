@@ -96,7 +96,7 @@ public sealed class TTSManager
             {
                 if (response.StatusCode == HttpStatusCode.TooManyRequests)
                 {
-                    _sawmill.Warning("TTS request was rate limited");
+                    _sawmill.Warning($"TTS request for {text} was rate limited");
                     return null;
                 }
 

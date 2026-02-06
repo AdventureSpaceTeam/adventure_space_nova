@@ -39,7 +39,10 @@
   - type: Ammo
     muzzleFlash: null
   - type: Injector
-    injectOnly: false
+    activeModeProtoId: SyringeDrawMode
+    allowedModes:
+    - SyringeDrawMode
+    - SyringeInjectMode
   - type: InjectableSolution
     solution: injector
   - type: ExaminableSolution
