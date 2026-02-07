@@ -1,5 +1,7 @@
 ent-BoxCardboard = картонная коробка
     .desc = Картонная коробка для хранения вещей.
+ent-BoxCardboardSmall = small cardboard box
+    .desc = A small cardboard box for storing things.
 ent-BoxMousetrap = коробка мышеловок
     .desc = Коробка, наполненная мышеловками. Постарайтесь не поймать себя за руку.
 ent-BoxLightbulb = коробка лампочек
@@ -18,6 +20,8 @@ ent-BoxID = коробка ID-карт
     .desc = Коробка запасных чистых ID-карт.
 ent-BoxHeadset = коробка гарнитур
     .desc = Коробка запасных пассажирских гарнитур.
+ent-BoxStamps = stamp box
+    .desc = A small box containing stamps.
 ent-BoxMesonScanners = коробка инженерных очков
     .desc = Коробка запасных инженерных очков.
 ent-BoxMRE = сухой паёк

@@ -1,5 +1,7 @@
 ent-BaseShield = base shield
     .desc = A shield!
+ent-BaseRepairableShield = base repairable shield
+    .desc = A repairable shield!
 ent-RiotShield = riot shield
     .desc = A large tower shield. Good for controlling crowds.
 ent-RiotLaserShield = riot laser shield
