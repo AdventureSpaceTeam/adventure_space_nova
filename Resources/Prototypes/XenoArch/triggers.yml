@@ -9,9 +9,9 @@
     TriggerCO2: 0.5
     TriggerPlasma: 0.5
     TriggerN2O: 0.5
-    TriggerTritium: 0.1
+    TriggerTritium: 0.2
     TriggerAmmonia: 0.2
-    TriggerFrezon: 0.1
+    TriggerFrezon: 0.2
     TriggerBZ: 0.2
     TriggerHalon: 0.1
     TriggerHealium: 0.2
