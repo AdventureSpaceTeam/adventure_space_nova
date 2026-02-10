@@ -599,3 +599,28 @@
     lowPressureMultiplier: 1000
   - type: FlashImmunity
   - type: IdentityBlocker
+
+- type: entity
+  parent: ClothingHeadHelmetModsuitCEBase
+  id: ClothingHeadHelmetModsuitBSOSealed
+  name: шлем Р.И.Г.-а
+  description: Шлем Р.И.Г.-а ОСЩ, хороший вкус и защита.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Modsuits/Clothing/Head/bso.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Modsuits/Clothing/Head/bso.rsi
+    equipSound: /Audio/_Adventure/Modsuits/ballin.ogg
+    unequipSound: /Audio/_Adventure/Modsuits/ballout.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Heat: 0.9
+        Piercing: 0.9
+        Slash: 0.9
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: FlashImmunity
+  - type: IdentityBlocker

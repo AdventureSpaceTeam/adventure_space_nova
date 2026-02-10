@@ -81,7 +81,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#0091ff"
   - type: Bloodstream
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: DraskEmote

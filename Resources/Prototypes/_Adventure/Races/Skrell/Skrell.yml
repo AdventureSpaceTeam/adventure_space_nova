@@ -44,7 +44,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#454078"
   - type: Bloodstream
-    bloodReagent: SkrellBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: SkrellBlood
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: MaleSkrell

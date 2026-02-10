@@ -518,8 +518,13 @@ reagent-effect-guidebook-plant-seeds-add =
         [1] Восстанавливает
        *[other] восстанавливают
     } семена растения
-reagent-effect-guidebook-plant-seeds-remove =
+entity-effect-guidebook-plant-seeds-remove =
     { $chance ->
         [1] Убирает
        *[other] убирают
     } семена из растения
+entity-effect-guidebook-plant-mutate-chemicals =
+    { $chance ->
+        [1] Мутирует
+       *[other] мутируют
+    } растение, чтобы то производило { $name }

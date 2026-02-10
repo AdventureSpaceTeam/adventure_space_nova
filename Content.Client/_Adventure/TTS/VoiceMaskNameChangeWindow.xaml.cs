@@ -30,6 +30,7 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
         _voices = _proto
             .EnumeratePrototypes<TTSVoicePrototype>()
             .OrderBy(o => Loc.GetString(o.Name))
+            .OrderBy(o => ((o.Gender == "male") ? 0b01 : 0) + ((o.Gender == "female") ? 0b10 : 0))
             .ToList();
         for (var i = 0; i < _voices.Count; i++)
         {

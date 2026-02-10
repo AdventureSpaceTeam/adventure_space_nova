@@ -16,7 +16,6 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Trigger;
 using Content.Shared.Trigger.Systems;
 using Content.Shared.Trigger.Components;
-using Content.Shared.PowerCell;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
@@ -32,6 +31,7 @@ using Content.Shared.Ninja.Components;
 using Content.Shared.Ninja.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Actions;
+using Content.Shared.Power;
 using Content.Shared.Power.EntitySystems;
 
 
@@ -40,23 +40,15 @@ namespace Content.Server._Adventure.Synth;
 public sealed partial class SynthSystem : SharedSynthSystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ActionsSystem _actions = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly DeviceNetworkSystem _deviceNetwork = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly TriggerSystem _trigger = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
     [Dependency] private readonly Shared.Damage.Systems.DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
-    [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly PredictedBatterySystem _battery = default!;
+    [Dependency] private readonly SharedBatterySystem _battery = default!;
     [Dependency] private readonly SharedBatteryDrainerSystem _batteryDrainer = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedActionsSystem _action = default!;
@@ -68,6 +60,7 @@ public sealed partial class SynthSystem : SharedSynthSystem
         SubscribeLocalEvent<SynthComponent, EmpPulseEvent>(OnEmpPulse);
         SubscribeLocalEvent<SynthComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<SynthComponent, PowerCellChangedEvent>(OnPowerCellChanged);
+        SubscribeLocalEvent<SynthComponent, ChargeChangedEvent>(OnBatteryChargeChanged);
         SubscribeLocalEvent<SynthComponent, PowerCellSlotEmptyEvent>(OnPowerCellSlotEmpty);
         SubscribeLocalEvent<SynthComponent, ItemToggledEvent>(OnToggled);
         SubscribeLocalEvent<SynthComponent, ToggleDrainActionEvent>(OnToggleAction);
@@ -90,39 +83,14 @@ public sealed partial class SynthSystem : SharedSynthSystem
         _action.AddAction(uid, ref component.ActionEntity, component.DrainBatteryAction);
     }
 
-    private void UpdateBatteryAlert(Entity<SynthComponent, PowerCellSlotComponent?> ent)
+    private void OnPowerCellChanged(Entity<SynthComponent> ent, ref PowerCellChangedEvent args)
     {
-        if (!Resolve(ent, ref ent.Comp2, false))
-            return;
-
-        if (!_powerCell.TryGetBatteryFromSlot((ent.Owner, ent.Comp2), out var battery))
-        {
-            _alerts.ShowAlert(ent.Owner, ent.Comp1.NoBatteryAlert);
-            return;
-        }
-
-        // Alert levels from 0 to 10.
-        var chargeLevel = (short)MathF.Round(_battery.GetChargeLevel(battery.Value.AsNullable()) * 10f);
-
-        // we make sure 0 only shows if they have absolutely no battery.
-        // also account for floating point imprecision
-        if (chargeLevel == 0 && _powerCell.HasDrawCharge((ent.Owner, null, ent.Comp2)))
-        {
-            chargeLevel = 1;
-        }
-
-        _alerts.ShowAlert(ent.Owner, ent.Comp1.BatteryAlert, chargeLevel);
+        UpdateBattery(ent);
     }
 
-    private void OnPowerCellChanged(EntityUid uid, SynthComponent component, PowerCellChangedEvent args)
+    private void OnBatteryChargeChanged(Entity<SynthComponent> ent, ref ChargeChangedEvent args)
     {
-        UpdateBatteryAlert((uid, component));
-
-        if (_powerCell.HasDrawCharge(uid))
-        {
-            Toggle.TryActivate(uid);
-        }
-        UpdateUI(uid, component);
+        UpdateBattery(ent);
     }
 
     private void OnPowerCellSlotEmpty(EntityUid uid, SynthComponent component, ref PowerCellSlotEmptyEvent args)
@@ -165,5 +133,12 @@ public sealed partial class SynthSystem : SharedSynthSystem
     private void OnComponentShutdown(EntityUid uid, SynthComponent component, ComponentShutdown args)
     {
         _action.RemoveAction(uid, component.ActionEntity);
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        UpdateBattery(frameTime);
     }
 }

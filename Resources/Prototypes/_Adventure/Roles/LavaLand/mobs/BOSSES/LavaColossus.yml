@@ -151,7 +151,7 @@
   parent: BaseStructure
   suffix: Спавн колосса LavaLand
   name: магматитовая скала
-  description: Огромная сказал магматита.
+  description: Огромная скала магматита.
   components:
     - type: Sprite
       sprite: _Adventure/Roles/LavaLand/mobs/BOSSES/colossus.rsi

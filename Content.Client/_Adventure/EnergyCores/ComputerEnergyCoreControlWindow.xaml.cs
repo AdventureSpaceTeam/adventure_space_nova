@@ -12,7 +12,6 @@ namespace Content.Client._Adventure.EnergyCores;
 public sealed partial class ComputerEnergyCoreControlWindow : DefaultWindow
 {
     public event Action<bool>? OnPowerToggleButton;
-    public event Action<float>? OnPowerSupplyChanged;
     public ComputerEnergyCoreControlWindow()
     {
         RobustXamlLoader.Load(this);

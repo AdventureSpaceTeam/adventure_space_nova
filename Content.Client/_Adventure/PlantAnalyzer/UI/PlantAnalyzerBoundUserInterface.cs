@@ -1,5 +1,6 @@
 using Content.Shared._Adventure.PlantAnalyzer;
 using JetBrains.Annotations;
+using Robust.Client.UserInterface;
 
 namespace Content.Client._Adventure.PlantAnalyzer.UI;
 
@@ -9,19 +10,13 @@ public sealed class PlantAnalyzerBoundUserInterface : BoundUserInterface
     [ViewVariables]
     private PlantAnalyzerWindow? _window;
 
-    public PlantAnalyzerBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
-    {
-    }
+    public PlantAnalyzerBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) {}
 
     protected override void Open()
     {
         base.Open();
-        _window = new PlantAnalyzerWindow(this)
-        {
-            Title = Loc.GetString("plant-analyzer-interface-title"),
-        };
-        _window.OnClose += Close;
-        _window.OpenCenteredLeft();
+        _window = this.CreateWindow<PlantAnalyzerWindow>();
+        _window.OnToggled += AdvPressed;
     }
 
     protected override void ReceiveMessage(BoundUserInterfaceMessage message)
@@ -37,17 +32,5 @@ public sealed class PlantAnalyzerBoundUserInterface : BoundUserInterface
     public void AdvPressed(bool scanMode)
     {
         SendMessage(new PlantAnalyzerSetMode(scanMode));
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        base.Dispose(disposing);
-        if (!disposing)
-            return;
-
-        if (_window != null)
-            _window.OnClose -= Close;
-
-        _window?.Dispose();
     }
 }

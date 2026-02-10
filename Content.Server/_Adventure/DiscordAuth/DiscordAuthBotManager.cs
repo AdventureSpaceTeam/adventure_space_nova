@@ -68,6 +68,23 @@ public sealed class DiscordAuthBotManager
         _cfg.OnValueChanged(ACVars.DiscordAuthEnabled, OnToggledDiscordAuth, true);
     }
 
+    public async Task<T?> TryParse<T>(string value)
+    {
+        try {
+            return JsonSerializer.Deserialize<T>(value);
+        } catch (JsonException) {
+            var typeName = typeof(T);
+            _sawmill.Error($"Error, can't convert {value} to {typeName}");
+        }
+        return default;
+    }
+
+    public async Task<T?> TryParse<T>(HttpContent content)
+    {
+        var str = await content.ReadAsStringAsync();
+        return await TryParse<T>(str);
+    }
+
     public void OnToggledDiscordAuth(bool val)
     {
         discordAuthEnabled = val;
@@ -178,11 +195,10 @@ public sealed class DiscordAuthBotManager
             Content = new FormUrlEncodedContent(rqArgs),
         };
         using HttpResponseMessage response = await discordClient.SendAsync(getTokenMsg);
-        var str = await response.Content.ReadAsStringAsync();
-        var res = JsonSerializer.Deserialize<TokenResponse>(str);
+        var res = await TryParse<TokenResponse>(response.Content);
         if (res is null)
         {
-            _sawmill.Error($"Error {str}");
+            _sawmill.Error($"Error, can't get token response");
             errorReturn(resp, "Error on connection to discord api");
             return;
         }
@@ -190,11 +206,10 @@ public sealed class DiscordAuthBotManager
         using var getUserMsg = new HttpRequestMessage(HttpMethod.Get, "users/@me");
         getUserMsg.Headers.Authorization = new AuthenticationHeaderValue(res.token_type, res.access_token);
         using HttpResponseMessage userResp = await discordClient.SendAsync(getUserMsg);
-        var userRespStr = await userResp.Content.ReadAsStringAsync();
-        var userRespRes = JsonSerializer.Deserialize<UserResponse>(userRespStr);
+        var userRespRes = await TryParse<UserResponse>(userResp.Content);
         if (userRespRes is null)
         {
-            _sawmill.Error($"Error {userRespStr}");
+            _sawmill.Error($"Error, can't get user information");
             errorReturn(resp, "Error on getting user information");
             return;
         }
@@ -234,9 +249,10 @@ public sealed class DiscordAuthBotManager
         {
             try {
                 HttpListenerContext ctx = listener.GetContext();
-                HandleConnection(ctx);
+                await HandleConnection(ctx);
             } catch (Exception e) {
                 _sawmill.Error($"Error handling discord callback:\n{e}");
+                Thread.Sleep((int)20000); // Sleep 20 seconds
             }
         }
     }
@@ -318,6 +334,16 @@ public sealed class DiscordAuthBotManager
 
     public async Task CommandListenerThread()
     {
+        if (GuildId == string.Empty)
+        {
+            _sawmill.Error($"No {ACVars.DiscordAuthGuildId.Name} for command listener");
+            return;
+        }
+        if (ApplicationId == string.Empty)
+        {
+            _sawmill.Error($"No {ACVars.DiscordAuthApplicationId.Name} for command listener");
+            return;
+        }
         try {
             while (!(CommandListeningCancelation?.Token.IsCancellationRequested ?? true))
             {
@@ -326,7 +352,7 @@ public sealed class DiscordAuthBotManager
                     Uri serverUri = new Uri("wss://gateway.discord.gg/?v=10&encoding=json");
                     await ws.ConnectAsync(serverUri, CommandListeningCancelation?.Token ?? default);
                     var result = await ReceiveAsyncAll(ws, CommandListeningCancelation?.Token ?? default);
-                    var hello = JsonSerializer.Deserialize<HelloMessage>(result);
+                    var hello = await TryParse<HelloMessage>(result);
                     if (hello is null || hello.op != 10)
                     {
                         _sawmill.Error($"Error, hello message doesn't contain heartbeat interval");
@@ -334,8 +360,8 @@ public sealed class DiscordAuthBotManager
                     }
                     var hb = hello.d?.heartbeat_interval ?? 100000;
                     _sawmill.Info($"Heartbeat interval: {hb}");
-                    Task.Run(() => HeartbeatThread(ws, hb, CommandListeningCancelation?.Token ?? default));
-                    ws.SendAsync(
+                    _ = Task.Run(() => HeartbeatThread(ws, hb, CommandListeningCancelation?.Token ?? default));
+                    await ws.SendAsync(
                         new ArraySegment<byte>(Encoding.UTF8.GetBytes($"{{\"op\": 2, \"d\": {{\"token\": \"{botToken}\"," +
                                                                       $"\"intents\": 512, \"properties\": {{\"os\": \"linux\"," +
                                                                       $"\"browser\": \"irc was better\", \"device\": " +
@@ -357,12 +383,19 @@ public sealed class DiscordAuthBotManager
                             new("wypi", 1, "When you prototype it", Array.Empty<DiscordCommandOption>()),
                         };
                     DiscordCommand[] existingCommands;
-                    using (var request = new HttpRequestMessage(HttpMethod.Get, $"applications/{ApplicationId}/guilds/{GuildId}/commands"))
+                    var uri = $"applications/{ApplicationId}/guilds/{GuildId}/commands";
+                    using (var request = new HttpRequestMessage(HttpMethod.Get, uri))
                     {
                         request.Headers.Add("Authorization", $"Bot {botToken}");
                         using HttpResponseMessage resp = await discordClient.SendAsync(request);
-                        string response = await resp.Content.ReadAsStringAsync();
-                        existingCommands = JsonSerializer.Deserialize<DiscordCommand[]>(response) ?? new DiscordCommand[]{};
+                        var remoteCommands = await TryParse<DiscordCommand[]>(resp.Content);
+                        if (remoteCommands is null)
+                        {
+                            _sawmill.Error("Can't get remote commands");
+                            _sawmill.Debug($"req {uri}");
+                            return;
+                        }
+                        existingCommands = remoteCommands;
                     }
                     foreach (var command in commands)
                     {
@@ -386,17 +419,16 @@ public sealed class DiscordAuthBotManager
                         request.Headers.Add("Authorization", $"Bot {botToken}");
                         _sawmill.Debug($"Auth: Bot {botToken}");
                         using HttpResponseMessage resp = await discordClient.SendAsync(request);
-                        string response = await resp.Content.ReadAsStringAsync();
-                        var commandResp = JsonSerializer.Deserialize<DiscordCommandResponse>(result);
-                        _sawmill.Debug($"Command {command.name} resp: {response}");
+                        var commandResp = await TryParse<DiscordCommandResponse>(resp.Content);
+                        _sawmill.Debug($"Command {command.name}, resp {commandResp}");
                     }
                     while (!(CommandListeningCancelation?.Token.IsCancellationRequested ?? true))
                     {
                         result = await ReceiveAsyncAll(ws, CommandListeningCancelation?.Token ?? default);
-                        var msg = JsonSerializer.Deserialize<GenericMessageType>(result);
+                        var msg = await TryParse<GenericMessageType>(result);
                         if (msg is not null && msg.op == 0 && msg.t == "INTERACTION_CREATE")
                         {
-                            var interaction = JsonSerializer.Deserialize<InteractionCreateMessage>(result);
+                            var interaction = await TryParse<InteractionCreateMessage>(result);
                             if (interaction is not null && interaction.d is not null)
                             {
                                 var id = interaction.d.id;
