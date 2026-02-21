@@ -586,7 +586,7 @@
     contents:
     - id: ClothingJumpsuitBunnySuit
       amount: 1
-    - id: ClothingHeadBunnyEars
+    - id: ClothingHeadBunnySuit
       amount: 1
 
 - type: entity
@@ -610,3 +610,109 @@
     sprite: _Adventure/sponsor_uplink/bunnysuitEars.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/bunnysuitEars.rsi
+
+- type: entity
+  id: DarkBunnyBackpackGroup
+  parent: ClothingBackpack
+  name: рюкзак с тёмным костюмом кролика
+  description: Рюкзак заполненый одеждой.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingJumpsuitDarkBunnySuit
+      amount: 1
+    - id: ClothingHeadDarkBunnySuit
+      amount: 1
+    - id: ClothingShoesDarkBunnySuit
+      amount: 1
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitDarkBunnySuit
+  suffix: AdvClothing
+  name: тёмный костюм кролика
+  description: Мне кажется, оно явно не из этого сектора...
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/darksuit/dark-bunnysuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/darksuit/dark-bunnysuit.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadDarkBunnySuit
+  suffix: AdvClothing
+  name: тёмные ушки кролика
+  description: Мне кажется, оно явно не из этого сектора...
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/darksuit/dark-bunnyears.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/darksuit/dark-bunnyears.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesDarkBunnySuit
+  suffix: AdvClothing
+  description: Мне кажется, оно явно не из этого сектора...
+  name: тёмные каблуки с колготками
+  components:
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHighHeels
+      params:
+        variation: 0.09
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 2
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/darksuit/dark-highheels.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/darksuit/dark-highheels.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped
+      shoes-reptilian:
+      - state: equipped-rep
+
+- type: entity
+  id: RedBunnyBackpackGroup
+  parent: ClothingBackpack
+  name: рюкзак с красным костюмом кролика
+  description: Рюкзак заполненый одеждой.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingJumpsuitRedBunnySuit
+      amount: 1
+    - id: ClothingHeadRedBunnySuit
+      amount: 1
+    - id: ClothingShoesHeeledRed
+      amount: 1
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitRedBunnySuit
+  suffix: AdvClothing
+  name: красный костюм кролика
+  description: Он больше белый, чем красный.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/redsuit/redbunnysuit.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/redsuit/redbunnysuit.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadRedBunnySuit
+  suffix: AdvClothing
+  name: красные ушки кролика
+  description: Они больше белые, чем красные.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/redsuit/redbunnyears.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/redsuit/redbunnyears.rsi

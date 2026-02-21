@@ -929,6 +929,28 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth88
+  productEntity: DarkBunnyBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth89
+  productEntity: RedBunnyBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 # Jobs
 
 # Clown
