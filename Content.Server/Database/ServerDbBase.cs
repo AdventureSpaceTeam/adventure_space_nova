@@ -617,18 +617,18 @@ namespace Content.Server.Database
                 // We don't have a record for this player in the database.
                 // This is possible, for example, when banning people that never connected to the server.
                 // Just return fallback data here, I guess.
-                return new PlayerRecord(new NetUserId(userId), default, userId.ToString(), default, null, null);
+                return new PlayerRecord(new NetUserId(userId), null, null, default, userId.ToString(), default, null, null);
             }
 
             return new PlayerRecord(
                 new NetUserId(player.UserId),
+                player.SponsorTier, // Adventure sponsor api
+                player.DiscordId, // Adventure discord auth
                 new DateTimeOffset(NormalizeDatabaseTime(player.FirstSeenTime)),
                 player.LastSeenUserName,
                 new DateTimeOffset(NormalizeDatabaseTime(player.LastSeenTime)),
                 player.LastSeenAddress,
-                player.LastSeenHWId,
-                player.SponsorTier, // Adventure sponsor api
-                player.DiscordId); // Adventure discord auth
+                player.LastSeenHWId);
         }
 
         #endregion

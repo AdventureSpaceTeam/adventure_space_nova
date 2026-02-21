@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS;
 using Content.Shared._Adventure.Sponsors;
 using Content.Server._Adventure.Sponsors;
 using System.Diagnostics.CodeAnalysis;
@@ -153,6 +154,10 @@ namespace Content.Server.Preferences.Managers
 
             var loadouts = new Dictionary<string, RoleLoadout>();
 
+            // Adventure tts begin
+            var voice = TTSConfig.DefaultVoice;
+            // Adventure tts end
+
             foreach (var role in profile.Loadouts)
             {
                 var loadout = new RoleLoadout(role.RoleName)
@@ -193,7 +198,8 @@ namespace Content.Server.Preferences.Managers
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
+                loadouts,
+                voice // Adventure tts
             );
         }
 

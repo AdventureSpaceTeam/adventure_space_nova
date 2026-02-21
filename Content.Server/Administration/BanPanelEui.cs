@@ -143,7 +143,7 @@ public sealed class BanPanelEui : BaseEui
             foreach (var row in ban.BannedJobs ?? [])
             {
                 if (roleBans is not null)
-                    roleBans.Add(role);
+                    roleBans.Add(row);
                 roleBanInfo.AddJob(row);
             }
 

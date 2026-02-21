@@ -1,3 +1,4 @@
+using Content.Shared._Adventure.TTS;
 using System.Numerics;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -52,6 +53,11 @@ public sealed partial class HumanoidCharacterProfileV1
     [DataField("_loadouts")]
     public Dictionary<string, RoleLoadout> Loadouts = new();
 
+    // Adventure tts begin
+    [DataField]
+    public string Voice { get; set; } = TTSConfig.DefaultVoice;
+    // Adventure tts end
+
     [DataField]
     public string Name;
 
@@ -81,7 +87,7 @@ public sealed partial class HumanoidCharacterProfileV1
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, Species, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
+        return new(Name, FlavorText, Species, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts, Voice);
     }
 }
 
