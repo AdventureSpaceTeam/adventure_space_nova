@@ -12,6 +12,8 @@
     - id: DoorRemoteCargo
     - id: AstroNavCartridge
     - id: ClothingHandsKnuckleDustersQM
+    - id: PlushieLizardJobQuartermaster
+      prob: 0.02
 
 - type: entity
   id: LockerQuarterMasterFilled
@@ -49,12 +51,13 @@
     - id: ClothingHeadCaptainHat
     - id: ClothingOuterCoatCaptain
     # Corvax-Resprite-End
-    - id: HandheldCommunicationsMonitor # Adventure
-    - id: HeadSkeleton # A skull to accompany your skeleton crew
+    - id: OrganSkeletonPersonHead # A skull to accompany your skeleton crew
       conditions:
       - !type:PlayerCountCondition
         max: 15
     - id: ControlModsuitMagnate # Adventure modsuits
+    - id: PlushieLizardJobCaptain
+      prob: 0.02
 
 # No laser table + Laser table
 - type: entityTable
@@ -143,6 +146,8 @@
     - id: PlantAnalyzerCartridge
     - id: HandheldRecordsMonitor
     # Adventure end
+    - id: PlushieLizardJobHeadofpersonnel
+      prob: 0.02
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -181,6 +186,8 @@
     - id: ControlModsuitAdvanced
     - id: HandheldAtmosMonitor
     # Adventure end
+    - id: PlushieLizardJobChiefengineer
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -224,24 +231,24 @@
   id: LockerFillChiefMedicalOfficerNoHardsuit
   table: !type:AllSelector
     children:
-    - id: BoxEncryptionKeyMedical
-    - id: ClothingBackpackDuffelSurgeryFilled
     - id: ClothingEyesHudMedical
-    - id: ClothingHandsGlovesNitrile
-    - id: ClothingHeadsetAltMedical
-    - id: ClothingMaskSterile
-    - id: DoorRemoteMedical
+    - id: ClothingBeltMedicalFilled
     - id: HandheldCrewMonitor
     # Adventure start
     - id: ClothingEyesHudCMO
     - id: CompactDefibrillator
     # Adventure end
     - id: Hypospray
-    - id: BoxCMOCircuitboards
-    - id: MedkitFilled
-    - id: RubberStampCMO
     - id: MedTekCartridge
     - id: ControlModsuitRescue # Adventure modsuits
+    # Standard command gear
+    - id: RubberStampCMO
+    - id: ClothingHeadsetAltMedical
+    - id: DoorRemoteMedical
+    - id: BoxEncryptionKeyMedical
+    - id: BoxCMOCircuitboards
+    - id: PlushieLizardJobChiefmedicalofficer
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -295,6 +302,8 @@
     - id: ClothingEyesGlassesRD
     - id: HandheldResearchMonitor
     # Adventure end
+    - id: PlushieLizardJobResearchdirector
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -364,6 +373,8 @@
     - id: WeaponNemesis
     # Adventure end
     - id: DrinkHosFlask
+    - id: PlushieLizardJobHeadofsecurity
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

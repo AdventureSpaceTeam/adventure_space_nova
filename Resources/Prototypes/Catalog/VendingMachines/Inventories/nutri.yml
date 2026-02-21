@@ -18,6 +18,10 @@
     BoxMouthSwab: 1
     BoxAgrichem: 1
     PlantAnalyzer: 2 # Adventure
+    MortarAndPestle: 1
+    HandheldJuicer: 1
+    #TO DO:
+    #plant analyzer
   contrabandInventory:
     ChemistryBottleUnstableMutagen: 1
     Joint: 1
