@@ -334,7 +334,7 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
 
         while (biomes.MoveNext(out var biome))
         {
-            if (biome.LifeStage < ComponentLifeStage.Running)
+            if (biome.LifeStage < ComponentLifeStage.Running || _activeChunks.ContainsKey(biome))
                 continue;
 
             _activeChunks.Add(biome, _tilePool.Get());
