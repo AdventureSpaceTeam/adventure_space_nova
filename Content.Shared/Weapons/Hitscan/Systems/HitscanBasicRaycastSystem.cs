@@ -38,6 +38,41 @@ public sealed class HitscanBasicRaycastSystem : EntitySystem
         var mapCords = _transform.ToMapCoordinates(args.FromCoordinates);
         var ray = new CollisionRay(mapCords.Position, args.ShotDirection, (int) ent.Comp.CollisionMask);
         var rayCastResults = _physics.IntersectRay(mapCords.MapId, ray, ent.Comp.MaxDistance, shooter, false);
+        // Adventure BSA start
+        if (HasComp<HitscanPierceComponent>(ent.Owner))
+        {
+            var pierceDistance = ent.Comp.MaxDistance;
+            FireEffects(args.FromCoordinates, pierceDistance, args.ShotDirection.ToAngle(), ent.Owner);
+
+            foreach (var hit in rayCastResults)
+            {
+                var hitUid = hit.HitEntity;
+
+                if (!_container.IsEntityOrParentInContainer(shooter) &&
+                    hitUid != args.Target &&
+                    CompOrNull<RequireProjectileTargetComponent>(hitUid)?.Active == true)
+                    continue;
+
+                var pierceData = new HitscanRaycastFiredData
+                {
+                    ShotDirection = args.ShotDirection,
+                    Gun = args.Gun,
+                    Shooter = args.Shooter,
+                    HitEntity = hitUid,
+                };
+
+                var pierceAttemptEvent = new AttemptHitscanRaycastFiredEvent { Data = pierceData };
+                RaiseLocalEvent(ent, ref pierceAttemptEvent);
+
+                if (pierceAttemptEvent.Cancelled)
+                    continue;
+
+                var pierceHitEvent = new HitscanRaycastFiredEvent { Data = pierceData };
+                RaiseLocalEvent(ent, ref pierceHitEvent);
+            }
+            return;
+        }
+        // Adventure BSA end
 
         var target = args.Target;
         // If you are in a container, use the raycast result
@@ -144,6 +179,7 @@ public sealed class HitscanBasicRaycastSystem : EntitySystem
             RaiseNetworkEvent(new SharedGunSystem.HitscanEvent
             {
                 Sprites = sprites,
+                Lifetime = vizComp.EffectLifetime, // Adventure BSA
             }, Filter.Pvs(fromCoordinates, entityMan: EntityManager));
         }
     }

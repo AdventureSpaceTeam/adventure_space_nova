@@ -1,0 +1,28 @@
+- type: entity
+  id: ArtilleryBluespaceHitscan
+  name: artillery bluespace laser ray
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicRaycast
+    collisionMask:
+    - AllMask
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 3000
+        Cold: 3000
+        Structural: 5000
+  - type: HitscanPierce
+  - type: HitscanAmmo
+  - type: HitscanBasicEffects
+  - type: HitscanBasicVisuals
+    effectLifetime: 0.72
+    muzzleFlash:
+      sprite: _Adventure/Objects/Weapons/BSA.rsi
+      state: muzzle_BSA
+    travelFlash:
+      sprite: _Adventure/Objects/Weapons/BSA.rsi
+      state: beam_BSA
+    impactFlash:
+      sprite: _Adventure/Objects/Weapons/BSA.rsi
+      state: impact_BSA

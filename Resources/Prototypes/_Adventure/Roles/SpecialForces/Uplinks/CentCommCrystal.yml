@@ -41,5 +41,5 @@
 - type: stack
   id: CentCommCrystal
   name: Блюспейс Кристаллы
-  icon: _Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi
+  icon: { sprite: /Textures/_Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi, state: telecrystal }
   spawn: CentCommCrystal1
