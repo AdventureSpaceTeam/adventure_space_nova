@@ -37,7 +37,6 @@
       types:
         Blunt: 10
         Structural: 12
-    ignoreResistances: true
 
 #патрон 20 авто
 - type: entity
@@ -78,7 +77,6 @@
       types:
         Blunt: 18
         Structural: 22
-    ignoreResistances: true
 
 #патрон 30 авто
 - type: entity
@@ -119,7 +117,6 @@
       types:
         Blunt: 22
         Structural: 26
-    ignoreResistances: true
 
 #коробки патронов
 
