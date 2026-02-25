@@ -716,3 +716,69 @@
     sprite: _Adventure/sponsor_uplink/redsuit/redbunnyears.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/redsuit/redbunnyears.rsi
+
+- type: entity
+  id: DarkBunnyBackpackGroup
+  parent: ClothingBackpack
+  name: рюкзак костюма без глаз
+  description: Рюкзак заполненый одеждой.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingJumpsuitNoface
+      amount: 1
+    - id: ClothingShoesNoface
+      amount: 1
+    - id: ClothingEyesNoface
+      amount: 1
+    - id: ClothingPantsNoface
+      amount: 1
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingJumpsuitNoface
+  suffix: AdvClothing
+  name: вязанный костюм
+  description: Почему-то вам досталась только эта половина водолазки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/noface/uniform.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/noface/uniform.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesNoface
+  name: вязанные чулки
+  description: Для тех, кому холодно в половине водолазки.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/noface/socks.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/noface/socks.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesNoface
+  name: очки цензура
+  description: Для тех, кому не стыдно носить половину водолазки, но стыдно смотреть в глаза другим.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/noface/glasses.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/noface/glasses.rsi
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsNoface
+  description: Для тех, кому не стыдно носить половину водолазки, но стыдно показывать своё достоинство.
+  name: вязанные трусы
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/noface/pants.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/noface/pants.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+    slots: [pants]
