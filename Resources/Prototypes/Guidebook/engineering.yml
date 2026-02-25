@@ -8,9 +8,6 @@
   - Atmospherics
   - ShuttleCraft
   - Networking
-  #Adventure
-  - EnergyCoresGuide
-  - NuclearGenerator
 
 - type: guideEntry
   id: Construction
@@ -325,6 +322,10 @@
   - TEG
   - RTG
   - SolarPanels
+  #Adventure
+  - EnergyCoresGuide
+  - NuclearGenerator
+  - Supermatter
 
 - type: guideEntry
   id: AME

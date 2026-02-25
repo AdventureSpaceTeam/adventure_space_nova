@@ -1,0 +1,102 @@
+﻿- type: entity
+  parent: BaseFlatpack
+  id: SupermatterFlatpack
+  name: Supermatter flatpack
+  description: A flatpack used for constructing an supermatter engine reactor.
+  components:
+  - type: Sprite
+    layers:
+    - state: supermatter
+  - type: Flatpack
+    entity: supermatter
+  - type: StaticPrice
+    price: 500
+  - type: CargoSellBlacklist
+
+
+- type: entity
+  id: supermatter
+  name: Supermatter
+  description: A strangely translucent and iridescent crystal.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Supermatter
+    whitelist:
+      tags:
+      - EmitterBolt
+      components:
+      - Body
+      - Item
+      - Damageable
+  - type: RadiationSource
+  - type: AmbientSound
+    range: 5
+    volume: -5
+    sound:
+      path: /Audio/_Adventure/Supermatter/calm.ogg
+  - type: Physics
+  - type: Speech
+    speechSounds: Pai
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 600
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Anchorable
+  - type: Pullable
+  - type: Transform
+    anchored: true
+    noRot: true
+  - type: CollisionWake
+    enabled: false
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Adventure/Supermatter/supermatter.rsi
+    state: supermatter
+  - type: Icon
+    sprite: _Adventure/Supermatter/supermatter.rsi
+    state: supermatter
+  - type: PointLight
+    enabled: true
+    radius: 10
+    energy: 5
+    color: "#d9ce00"
+  - type: Explosive
+    explosionType: Supermatter
+    maxIntensity: 10000
+    intensitySlope: 10
+    totalIntensity: 10000
+  - type: GuideHelp
+    guides:
+    - Supermatter
+
+- type: explosion
+  id: Supermatter
+  damagePerIntensity:
+    types:
+      Radiation: 5
+      Heat: 4
+      Blunt: 3
+      Piercing: 3
+  tileBreakChance: [0, 0.5, 1]
+  tileBreakIntensity: [0, 10, 30]
+  tileBreakRerollReduction: 20
+  lightColor: Yellow
+  fireColor: Green
+  texturePath: /Textures/Effects/fire_greyscale.rsi
+  fireStates: 3
+
+- type: guideEntry
+  id: Supermatter
+  name: guide-entry-supermatter
+  text: "/ServerInfo/_Adventure/Guidebook/Supermatter.xml"
+

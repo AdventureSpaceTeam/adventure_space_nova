@@ -141,6 +141,9 @@
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: ClothingGrant # Adventure
+    component:
+    - type: SupermatterImmune
   - type: DamageOnInteractProtection
     damageProtection:
       flatReductions:
