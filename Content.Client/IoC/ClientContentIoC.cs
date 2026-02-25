@@ -1,5 +1,6 @@
 using Content.Shared._Adventure.Sponsors; // c4llv07e sponsors
 using Content.Client._Adventure.Sponsors; // c4llv07e sponsors
+using Content.Client._Adventure.Lust; // adventure lust
 using Content.Client._Adventure.DiscordAuth; // adventure discord auth
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
@@ -40,6 +41,7 @@ namespace Content.Client.IoC
 
             collection.Register<ISponsorsManager, SponsorsManager>(); // Adventure sponsor
             collection.Register<SponsorsManager>(); // Adventure sponsor
+            collection.Register<LustManager>(); // Adventure lust
             collection.Register<DiscordAuthLinkManager>(); // Adventure discord Auth
             collection.Register<IParallaxManager, ParallaxManager>();
             collection.Register<GeneratedParallaxCache>();
