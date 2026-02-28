@@ -860,3 +860,81 @@
     sprite: _Adventure/sponsor_uplink/white-cow/head.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/white-cow/head.rsi
+
+- type: entity
+  id: BlackCowBackpackGroup
+  parent: ClothingBackpack
+  name: рюкзак костюма с чёрным принтом коровы
+  description: Рюкзак заполненый одеждой.
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingShoesBlackCow
+      amount: 1
+    - id: ClothingHandsBlackCow
+      amount: 1
+    - id: ClothingPantsBlackCow
+      amount: 1
+    - id: ClothingBraBlackCow
+      amount: 1
+    - id: ClothingHeadBlackCow
+      amount: 1
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesBlackCow
+  name: гетры чёрной коровы
+  description: Копыта в комплекте не идут.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/Black-cow/legs.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/Black-cow/legs.rsi
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsBlackCow
+  name: митенки чёрной коровы
+  description: Копыта в комплекте не идут.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/Black-cow/hands.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/Black-cow/hands.rsi
+
+- type: entity
+  parent: BaseClothingPants
+  id: ClothingPantsBlackCow
+  description: Зачем коровам трусы...
+  name: стринги чёрной коровы
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/Black-cow/pants.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/Black-cow/pants.rsi
+    clothingVisuals:
+      pants:
+      - state: equipped-box
+    slots: [pants]
+
+- type: entity
+  parent: BaseClothingBrass
+  id: ClothingBraBlackCow
+  description: Вымя в комплекте не идёт.
+  name: бюстгалтер чёрной коровы
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/Black-cow/bra.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/Black-cow/bra.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBlackCow
+  name: ободок чёрной коровы
+  description: Рога в комплекте ИДУТ.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/Black-cow/head.rsi
+  - type: Clothing
+    sprite: _Adventure/sponsor_uplink/Black-cow/head.rsi
