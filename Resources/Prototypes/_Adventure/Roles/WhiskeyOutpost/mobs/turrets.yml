@@ -1,59 +1,23 @@
 - type: entity
-  parent: BaseWeaponBallisticTurret
-  id: WeaponTurretHostileAllBase
-  name: баллистическая турель
-  description: Турель
-  components:
-  - type: NpcFactionMember
-    factions:
-    - AllHostile
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
-    noRot: true
-    layers:
-    - state: syndie_lethal
-  - type: BallisticAmmoProvider
-    proto: CartridgePistol
-    capacity: 200
-  - type: Gun
-    fireRate: 3
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-  - type: HTN
-    rootTask:
-      task: TurretCompound
-    blackboard:
-      RotateSpeed: !type:Single
-        3.141
-      SoundTargetInLOS: !type:SoundPathSpecifier
-        path: /Audio/Effects/double_beep.ogg
-  - type: Damageable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger: !type:DamageTrigger
-      damage: 200
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
-
-- type: entity
-  parent: WeaponTurretHostileAllBase
+  parent: WeaponTurretAllHostile
   id: WeaponTurretRocket
-  name: ракетная турель "Блять"
+  name: 'RT-17 "Импульс"'
   suffix: WhiskeyOutpost
   components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    drawdepth: Mobs
+    granularLayersRendering: true
+    layers:
+    - state: turret_base
+      renderingStrategy: NoRotation
+    - state: syndie_rocket
   - type: BallisticAmmoProvider
     proto: CartridgeRocket
-    capacity: 15
+    capacity: 60
   - type: Gun
-    fireRate: 1
+    fireRate: 0.5
     selectedMode: FullAuto
     availableModes:
     - FullAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
