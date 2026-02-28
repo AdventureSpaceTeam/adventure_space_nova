@@ -951,6 +951,28 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth90
+  productEntity: NoFaceBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
+- type: listing
+  id: UplinkSponsorCloth91
+  productEntity: WhiteCowBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
+
 # Jobs
 
 # Clown
