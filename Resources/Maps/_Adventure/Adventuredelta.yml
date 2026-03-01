@@ -201982,7 +201982,7 @@ entities:
       pos: 41.291656,-52.558475
       parent: 2
     - type: Paper
-      content: НЕ СМОТРИ НА ВЕРХ! ПОТОЛОК ПРОЗРАЧНЫЙ!!
+      content: НЕ СМОТРИ НА ВЕРХ! ПОТОЛОК ПРОЗРАЧНЫЙ!!!
   - uid: 25976
     components:
     - type: Transform

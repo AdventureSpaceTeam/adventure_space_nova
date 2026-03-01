@@ -1552,7 +1552,7 @@ entities:
       pos: -3.3216329,-5.1215596
       parent: 1
     - type: Paper
-      content: Мы не хотели убирать стыковочные шлюзы... Нас заставили!!
+      content: Мы не хотели убирать стыковочные шлюзы... Нас заставили!!!
 - proto: PosterLegitHelio
   entities:
   - uid: 156
