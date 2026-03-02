@@ -82,13 +82,14 @@
     thermalRegulationTemperatureThreshold: 2
   - type: NoInteractionInHands
   - type: Temperature
+    currentTemperature: 291.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 298.15 # 25с - начинаем получать урон.
     coldDamageThreshold: 213
-    currentTemperature: 291.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
     coldDamage:
       types:
         Cold : 0.1
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 1.5

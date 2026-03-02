@@ -1,0 +1,26 @@
+- type: entity
+  id: ADVCrateArmorSWAT
+  parent: CrateWeaponSecure
+  name: ящик с набором спецназа
+  description: Набор спецназа, состоящий из тяжёлого бронекостюма, противогаза, ботинок и шлема спецназа.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHeadHelmetSwat
+        amount: 1
+      - id: ClothingMaskGasSwat
+        amount: 1
+      - id: ClothingHandsGlovesCombat
+        amount: 1
+      - id: ClothingOuterArmorHeavy
+        amount: 1
+      - id: ClothingShoesSwat
+        amount: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]

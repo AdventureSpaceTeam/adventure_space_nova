@@ -585,19 +585,26 @@
   suffix: Battery, Module, Operative
   components:
   - type: NukeOperative
+  - type: BorgChassis
+    maxModules: 8
   - type: ContainerFill
     containers:
       borg_brain:
         - PositronicBrain
-      borg_module:
-        - BorgModuleTool
+      borg_module: #ADV Modules
+        - BorgModuleAdvancedTool
         - BorgModuleOperative
         - BorgModuleSyndicateWeapon
+        - BorgModuleSaboteur
+        - BorgModuleSpyBug
   - type: ItemSlots
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellHyper
+  - type: MovementSpeedModifier #ADV
+    baseWalkSpeed : 2.75
+    baseSprintSpeed : 4.75
 
 - type: entity
   id: PlayerBorgSyndicateSaboteurGhostRole

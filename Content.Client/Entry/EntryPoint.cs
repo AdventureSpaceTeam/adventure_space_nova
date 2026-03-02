@@ -160,6 +160,10 @@ namespace Content.Client.Entry
 
             _parallaxManager.LoadDefaultParallax();
 
+            // adventure space disable loc warnings begin
+            _logManager.GetSawmill("loc").Level = LogLevel.Error;
+            // adventure space disable loc warnings end
+
             _overlayManager.AddOverlay(new SingularityOverlay());
             _overlayManager.AddOverlay(new RadiationPulseOverlay());
             _chatManager.Initialize();
