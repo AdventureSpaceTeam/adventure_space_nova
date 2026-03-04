@@ -857,9 +857,9 @@
   description: Рога в комплекте ИДУТ.
   components:
   - type: Sprite
-    sprite: _Adventure/sponsor_uplink/white-cow/head.rsi
+    sprite: _Adventure/sponsor_uplink/white-cow/horns.rsi
   - type: Clothing
-    sprite: _Adventure/sponsor_uplink/white-cow/head.rsi
+    sprite: _Adventure/sponsor_uplink/white-cow/horns.rsi
 
 - type: entity
   id: BlackCowBackpackGroup
@@ -935,6 +935,6 @@
   description: Рога в комплекте ИДУТ.
   components:
   - type: Sprite
-    sprite: _Adventure/sponsor_uplink/Black-cow/head.rsi
+    sprite: _Adventure/sponsor_uplink/Black-cow/horns.rsi
   - type: Clothing
-    sprite: _Adventure/sponsor_uplink/Black-cow/head.rsi
+    sprite: _Adventure/sponsor_uplink/Black-cow/horns.rsi
