@@ -6,7 +6,6 @@
   showInVote: true #RaidGocalmgamemode
   description: Режим игры без агрессивных событий.
   rules:
-  - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
   - WLStationEventScheduler
 
