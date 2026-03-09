@@ -56,6 +56,9 @@
   - Engineering
   - Science
 
+  addComponents:
+  - type: ShowAccessReaderSettings #adventure
+
   # Visual
   inventoryTemplateId: borgShort
   spriteBodyState: engineer

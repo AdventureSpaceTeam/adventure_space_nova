@@ -38,6 +38,7 @@ public sealed class TTSManager
 
     private ISawmill _sawmill = default!;
     private readonly Dictionary<string, byte[]> _cache = new();
+    private readonly Dictionary<string, SemaphoreSlim> _semaphores = new();
     private readonly List<string> _cacheKeysSeq = new();
     private int _maxCachedCount = 200;
     private string _apiUrl = string.Empty;
@@ -71,68 +72,80 @@ public sealed class TTSManager
     {
         WantedCount.Inc();
         var cacheKey = GenerateCacheKey(speaker, text, effect);
-        if (_cache.TryGetValue(cacheKey, out var data))
-        {
-            ReusedCount.Inc();
-            _sawmill.Verbose($"Use cached sound for '{text}' speech by '{speaker}'({effect}) speaker");
-            return data;
-        }
-
-        _sawmill.Verbose($"Generate new audio for '{text}' speech by '{speaker}'({effect}) speaker");
-
-        var reqTime = DateTime.UtcNow;
+        _sawmill.Verbose($"Cache key for '{text}' is '{cacheKey}'");
+        var semaphore = _semaphores.GetValueOrDefault(cacheKey, new SemaphoreSlim(1, 1));
+        _semaphores[cacheKey] = semaphore;
         try
         {
-            var timeout = _cfg.GetCVar(ACVars.TTSApiTimeout);
-            var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
-            // c4llv07e fix tts start
-            if (effect == null)
-                effect = "";
-            var requestUrl = _apiUrl + $"?speaker={speaker}&text={text}&ext=wav&effect={effect}";
-            var response = await _httpClient.GetAsync(requestUrl, cts.Token);
-            _sawmill.Debug($"requested api url: {requestUrl}");
-            // c4llv07e fix tts end
-            if (!response.IsSuccessStatusCode)
+            await semaphore.WaitAsync();
+            if (_cache.TryGetValue(cacheKey, out var data))
             {
-                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                ReusedCount.Inc();
+                _sawmill.Verbose($"Use cached sound for '{text}' speech by '{speaker}'({effect}) speaker");
+                return data;
+            }
+
+            _sawmill.Verbose($"Generate new audio for '{text}' speech by '{speaker}'({effect}) speaker");
+
+            var reqTime = DateTime.UtcNow;
+            try
+            {
+                var timeout = _cfg.GetCVar(ACVars.TTSApiTimeout);
+                var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
+                // c4llv07e fix tts start
+                if (effect == null)
+                    effect = "";
+                var requestUrl = _apiUrl + $"?speaker={speaker}&text={text}&ext=wav&effect={effect}";
+                var response = await _httpClient.GetAsync(requestUrl, cts.Token);
+                _sawmill.Debug($"requested api url: {requestUrl}");
+                // c4llv07e fix tts end
+                if (!response.IsSuccessStatusCode)
                 {
-                    _sawmill.Warning($"TTS request for {text} was rate limited");
+                    if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                    {
+                        _sawmill.Warning($"TTS request for {text} was rate limited");
+                        return null;
+                    }
+
+                    _sawmill.Error($"TTS request returned bad status code: {response.StatusCode}");
                     return null;
                 }
 
-                _sawmill.Error($"TTS request returned bad status code: {response.StatusCode}");
+                var soundData = await response.Content.ReadAsByteArrayAsync();
+
+                // Because internet is slow and mutexes is hard in sandbox, we might override previous cache, but it doesn't
+                // really matter.
+                _cache[cacheKey] = soundData;
+                _cacheKeysSeq.Add(cacheKey);
+                if (_cache.Count > _maxCachedCount)
+                {
+                    var firstKey = _cacheKeysSeq.First();
+                    _cache.Remove(firstKey);
+                    _cacheKeysSeq.Remove(firstKey);
+                }
+
+                _sawmill.Debug($"Generated new audio for '{text}' speech by '{speaker}'({effect}) speaker ({soundData.Length} bytes)");
+                RequestTimings.WithLabels("Success").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
+
+                return soundData;
+            }
+            catch (TaskCanceledException)
+            {
+                RequestTimings.WithLabels("Timeout").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
+                _sawmill.Error($"Timeout of request generation new audio for '{text}' speech by '{speaker}'({effect}) speaker");
                 return null;
             }
-
-            var soundData = await response.Content.ReadAsByteArrayAsync();
-
-            // Because internet is slow and mutexes is hard in sandbox, we might override previous cache, but it doesn't
-            // really matter.
-            _cache[cacheKey] = soundData;
-            _cacheKeysSeq.Add(cacheKey);
-            if (_cache.Count > _maxCachedCount)
+            catch (Exception e)
             {
-                var firstKey = _cacheKeysSeq.First();
-                _cache.Remove(firstKey);
-                _cacheKeysSeq.Remove(firstKey);
+                RequestTimings.WithLabels("Error").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
+                _sawmill.Error($"Failed of request generation new sound for '{text}' speech by '{speaker}'({effect}) speaker\n{e}");
+                return null;
             }
-
-            _sawmill.Debug($"Generated new audio for '{text}' speech by '{speaker}'({effect}) speaker ({soundData.Length} bytes)");
-            RequestTimings.WithLabels("Success").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
-
-            return soundData;
         }
-        catch (TaskCanceledException)
+        finally
         {
-            RequestTimings.WithLabels("Timeout").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
-            _sawmill.Error($"Timeout of request generation new audio for '{text}' speech by '{speaker}'({effect}) speaker");
-            return null;
-        }
-        catch (Exception e)
-        {
-            RequestTimings.WithLabels("Error").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
-            _sawmill.Error($"Failed of request generation new sound for '{text}' speech by '{speaker}'({effect}) speaker\n{e}");
-            return null;
+            _semaphores.Remove(cacheKey);
+            semaphore.Release();
         }
     }
 

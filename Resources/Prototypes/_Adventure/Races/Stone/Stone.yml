@@ -96,10 +96,11 @@
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
-    heatDamageThreshold: 1273.15
-    coldDamageThreshold: 3.15
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 1273.15
+    coldDamageThreshold: 3.15
     coldDamage:
       types:
         Cold: 0.1

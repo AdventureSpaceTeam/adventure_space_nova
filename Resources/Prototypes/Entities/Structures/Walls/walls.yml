@@ -652,6 +652,10 @@
         layer:
         - WallLayer
         density: 2000
+  - type: RCDDeconstructable
+    deviceType: Disassembler
+    cost: 5
+    delay: 8
 
 - type: entity
   parent: WallReinforced

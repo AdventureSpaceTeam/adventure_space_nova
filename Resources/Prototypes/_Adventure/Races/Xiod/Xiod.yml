@@ -107,13 +107,14 @@
     normalBodyTemperature: 291.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
+    currentTemperature: 291.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 323.15
     coldDamageThreshold: 3.15
-    currentTemperature: 291.15
     coldDamage:
       types:
         Cold : 5.0
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 10.0

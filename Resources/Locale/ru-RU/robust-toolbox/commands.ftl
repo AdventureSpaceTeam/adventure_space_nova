@@ -253,9 +253,6 @@ cmd-bind-help = Использование: {$command} { cmd-bind-arg-key } { cm
 cmd-bind-arg-key = <KeyName>
 cmd-bind-arg-mode = <BindMode>
 cmd-bind-arg-command = <InputCommand>
-
-# TODO перевести
-
 cmd-net-draw-interp-desc = Переключает отладочный рисунок сетевой интерполяции.
 cmd-net-draw-interp-help = Использование: {$command}
 

@@ -57,7 +57,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
-      cell_slot: !type:ContainerSlot 
+      cell_slot: !type:ContainerSlot
       storagebase: !type:Container
         ents: []
   - type: UserInterface
@@ -79,6 +79,9 @@
     walkModifier: 2.1
     sprintModifier: 2.1
     standing: true
+  - type: TemperatureProtection
+    heatingCoefficient: 0.01
+    coolingCoefficient: 0.01
   - type: PowerCellDraw
     drawRate: 0.6
   - type: ToggleCellDraw

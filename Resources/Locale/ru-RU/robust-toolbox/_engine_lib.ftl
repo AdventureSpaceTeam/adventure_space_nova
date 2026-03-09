@@ -71,3 +71,12 @@ zzzz-conjugate-basic =
         [epicene] { $first }
        *[other] { $second }
     }
+# Used internally by the GENITIVE() function.
+# Not used in en-US. Created to support other languages.
+# e.g., "у него" (Russian), "seines Vaters" (German).
+zzzz-genitive = { GENDER($ent) ->
+    [male] него
+    [female] неё
+    [epicene] них
+   *[neuter] него
+   }
