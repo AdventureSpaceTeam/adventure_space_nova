@@ -180,6 +180,7 @@
     - id: EnergyCoreCircuitboard
     - id: ControlModsuitAdvanced
     - id: HandheldAtmosMonitor
+    - id: SupermatterFlatpack
     # Adventure end
 
 # Hardsuit table, used for suit storage as well

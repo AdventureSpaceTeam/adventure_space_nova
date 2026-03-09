@@ -1,4 +1,5 @@
-﻿using Robust.Shared.Serialization;
+﻿using Content.Shared.DeltaV.Cartridges.NanoChat;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.CartridgeLoader.Cartridges;
 
@@ -15,10 +16,18 @@ public sealed class LogProbeUiState : BoundUserInterfaceState
     /// </summary>
     public List<PulledAccessLog> PulledLogs;
 
-    public LogProbeUiState(string entityName, List<PulledAccessLog> pulledLogs)
+    //Adv-space-start: Дата наночата
+    /// <summary>
+    /// The NanoChat data if a card was scanned, null otherwise
+    /// </summary>
+    public NanoChatData? NanoChatData { get; }
+    //ADt-tweak-end
+
+    public LogProbeUiState(string entityName, List<PulledAccessLog> pulledLogs, NanoChatData? nanoChatData = null) // Adv-space: добавлна дата наночата
     {
         EntityName = entityName;
         PulledLogs = pulledLogs;
+        NanoChatData = nanoChatData; // Adv-space
     }
 }
 

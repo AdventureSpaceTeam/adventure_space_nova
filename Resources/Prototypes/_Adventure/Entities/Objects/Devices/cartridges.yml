@@ -35,3 +35,29 @@
         sprite: _Adventure/Objects/Devices/plant_analyzer.rsi
         state: icon
     - type: AgroScanCartridge
+
+- type: entity
+  parent: BaseItem
+  id: NanoChatCartridge
+  name: NanoChat cartridge
+  description: Lets you message other people!
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-y
+  - type: UIFragment
+    ui: !type:NanoChatUi
+  - type: NanoChatCartridge
+  - type: Cartridge
+    programName: nano-chat-program-name
+    icon:
+      sprite: _Adventure/Misc/program_icons.rsi
+      state: nanochat
+  - type: ActiveRadio
+    channels:
+    - Common
+
+- type: nameIdentifierGroup
+  id: NanoChat
+  minValue: 1000
+  maxValue: 9999

@@ -15,7 +15,23 @@
   <ItemGroup>
     <ProjectReference Include="..\Content.Shared.Database\Content.Shared.Database.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Update="_Adventure\Supermatter\Components\SupermatterComponent.calculation.cs">
+      <DependentUpon>SupermatterComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Update="_Adventure\Supermatter\Components\SupermatterComponent.delamm.cs">
+      <DependentUpon>SupermatterComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Update="_Adventure\Supermatter\Components\SupermatterComponent.sound.cs">
+      <DependentUpon>SupermatterComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Update="_Adventure\Supermatter\Components\SupermatterComponent.threshold.cs">
+      <DependentUpon>SupermatterComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Update="_Adventure\Supermatter\Components\SupermatterComponent.timer.cs">
+      <DependentUpon>SupermatterComponent.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
 </Project>

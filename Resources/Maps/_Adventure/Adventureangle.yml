@@ -100230,13 +100230,6 @@ entities:
     - type: Transform
       pos: 3.5,-63.5
       parent: 9
-- proto: VendingMachineMedicalAndroid
-  entities:
-  - uid: 18338
-    components:
-    - type: Transform
-      pos: -10.5,-19.5
-      parent: 9
 - proto: VendingMachineMediDrobe
   entities:
   - uid: 1251

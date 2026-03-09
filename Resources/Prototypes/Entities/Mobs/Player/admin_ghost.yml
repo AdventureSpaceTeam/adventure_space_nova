@@ -114,6 +114,7 @@
   # Corvax-End
   - type: ExplosionResistance
     damageCoefficient: 0
+  - type: SupermatterImmune # Adventure
 
 - type: entity
   abstract: true
