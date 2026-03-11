@@ -83,10 +83,11 @@
     speedModifierThresholds:
       100: 0.7
   - type: Temperature
-    heatDamageThreshold: 313.15
-    coldDamageThreshold: 73
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
     coldDamage:
       types:
         Cold: 0.1

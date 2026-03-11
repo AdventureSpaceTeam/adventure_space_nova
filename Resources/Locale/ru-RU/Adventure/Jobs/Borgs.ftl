@@ -47,3 +47,7 @@ xenoborg-type-engi = [color= #edd45b]Ксеноборги-инженеры[/colo
 xenoborg-type-heavy = [color= #d62020]Тяжелые ксеноборги[/color]
 xenoborg-type-scout = [color= #6a6b6f]Ксеноборги-разведчики[/color]
 xenoborg-type-stealth = [color= #ff00cc]Скрытые ксеноборги[/color]
+
+ghost-role-information-syndicate-cyborg-medical-name = Медицинский киборг Синдиката
+ghost-role-information-syndicate-cyborg-medical-description = Синдикату нужна медицинская помощь. Вы, механический фельдшер, поможете им.
+ghost-role-information-syndicate-cyborg-saboteur-description = Синдикату нужен взломщик. Вы, первоклассная машина саботажа, поможете им.

@@ -119,3 +119,4 @@
       job: Borg
     - type: GhostRoleMobSpawner
       prototype: PlayerBorgSyndicateAssaultBattery
+      selectablePrototypes: ["SyndicateAssaultBorg", "SyndicateSaboteurBorg", "SyndicateMedicalBorg"] #Adventure

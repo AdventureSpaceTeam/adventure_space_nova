@@ -72,13 +72,14 @@
   - type: TypingIndicator
     proto: Pig
   - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 243.15
-    currentTemperature: 310.15
     coldDamage:
       types:
         Cold : 0.1
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 1.5

@@ -439,9 +439,3 @@ entity-effect-guidebook-plant-seeds-add =
         [1] Restores the
         *[other] restore the
     } seeds of the plant
-
-entity-effect-guidebook-plant-seeds-remove =
-    { $chance ->
-        [1] Removes the
-        *[other] remove the
-    } seeds of the plant

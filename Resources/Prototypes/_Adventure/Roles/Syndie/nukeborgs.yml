@@ -1,0 +1,271 @@
+
+- type: ghostRole
+  id: SyndicateAssaultBorg
+  name: ghost-role-information-syndicate-cyborg-assault-name
+  description: ghost-role-information-syndicate-cyborg-description
+  rules: ghost-role-information-nukeop-reinforcement-rules
+  entityPrototype: PlayerBorgSyndicateAssaultBattery
+
+- type: ghostRole
+  id: SyndicateSaboteurBorg
+  name: ghost-role-information-syndicate-cyborg-saboteur-name
+  description: ghost-role-information-syndicate-cyborg-saboteur-description
+  rules: ghost-role-information-nukeop-reinforcement-rules
+  entityPrototype: PlayerBorgSyndicateSaboteurBattery
+
+- type: ghostRole
+  id: SyndicateMedicalBorg
+  name: ghost-role-information-syndicate-cyborg-medical-name
+  description: ghost-role-information-syndicate-cyborg-medical-description
+  rules: ghost-role-information-nukeop-reinforcement-rules
+  entityPrototype: PlayerBorgSyndicateMedicalBattery
+
+- type: entity
+  id: PlayerBorgSyndicateMedicalBattery
+  parent: BorgChassisSyndicateMedical
+  suffix: Battery, Module, Operative
+  name: медицинский киборг Синдиката
+  description: Боевой медицинский киборг. Имеет ограниченный наступательный потенциал, но с лихвой компенсирует его своими вспомогательными возможностями.
+  components:
+  - type: NukeOperative
+  - type: BorgChassis
+    maxModules: 6
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleTool
+        - BorgModuleCrossbow
+        - BorgModuleLaboratory
+        - BorgModuleParamedic
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.75
+    baseSprintSpeed : 4.75
+
+
+- type: entity
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  id: BorgModuleCrossbow
+  name: модуль киборга-крестоносца
+  description: Модуль, содержащий в себе энергощит и энергетический арбалет, на короткое время сбивающий цель с ног.
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      hands:
+      - item: WeaponEnergyCrossbow
+      - item: EnergyShield
+    - type: BorgModuleIcon
+      icon: { sprite: _Adventure/Interface/Actions/actions_borg_syndie.rsi, state: syndicate-crossbow-module }
+
+- type: entity
+  id: DefibrillatorSyndicateBorg
+  parent: [ DefibrillatorOneHandedUnpowered, BaseSyndicateContraband ]
+  name: дефибриллятор Interdyne
+  description: Также служит оружием самообороны против склонных к военным преступлениям тайдеров.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/defibsyndi.rsi
+    layers:
+      - state: icon
+      - state: screen
+        map: [ "enum.ToggleableVisuals.Layer" ]
+        visible: false
+        shader: unshaded
+      - state: ready
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+        shader: unshaded
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 4
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedDamage:
+      types:
+        Blunt: 4
+        Shock: 10
+
+- type: entity
+  parent: [ BorgHypo, BaseSyndicateContraband ]
+  id: EpinephrineHypo
+  name: эпинефрин-гипо
+  description: Самозаполняющийся инъектор для оперативного введения эпинефрина пострадавшим.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 7
+        reagents:
+        - ReagentId: Epinephrine
+          Quantity: 7
+  - type: SolutionRegeneration
+    solution: hypospray
+    generated:
+      reagents:
+      - ReagentId: Epinephrine
+        Quantity: 0.2
+
+
+- type: entity
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  id: BorgModuleParamedic
+  name: модуль киборга-парамедика
+  description: Техническая деталь, содержащая в себе набор для реанимации ваших союзников и для причинения вреда тем, кто пытается реанимации воспрепятствовать.
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      hands:
+      - item: HandheldHealthAnalyzerUnpowered
+      - item: DefibrillatorSyndicateBorg
+      - item: EpinephrineHypo
+    - type: BorgModuleIcon
+      icon: { sprite: _Adventure/Interface/Actions/actions_borg_syndie.rsi, state: syndicate-paramedic-module }
+
+
+- type: entity
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  id: BorgModuleLaboratory
+  name: модуль киборга-лаборанта
+  description: Техническая деталь, превращающая киборга в переносную лабораторию.
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      hands:
+      - item: HandheldHealthAnalyzerUnpowered
+      - item: SyndiHypo
+      - item: Jug
+        hand:
+          emptyLabel: borg-slot-chemical-containers-empty
+          emptyRepresentative: Jug
+          whitelist:
+            components:
+            - FitsInDispenser
+            tags:
+            - ChemDispensable
+      - item: Jug
+        hand:
+          emptyLabel: borg-slot-chemical-containers-empty
+          emptyRepresentative: Jug
+          whitelist:
+            components:
+            - FitsInDispenser
+            tags:
+            - ChemDispensable
+      - item: Jug
+        hand:
+          emptyLabel: borg-slot-chemical-containers-empty
+          emptyRepresentative: Jug
+          whitelist:
+            components:
+            - FitsInDispenser
+            tags:
+            - ChemDispensable
+      - item: Jug
+        hand:
+          emptyLabel: borg-slot-chemical-containers-empty
+          emptyRepresentative: Jug
+          whitelist:
+            components:
+            - FitsInDispenser
+            tags:
+            - ChemDispensable
+      - item: LargeBeaker
+        hand:
+          emptyLabel: borg-slot-chemical-containers-empty
+          emptyRepresentative: LargeBeaker
+          whitelist:
+            components:
+            - FitsInDispenser
+            tags:
+            - ChemDispensable
+    - type: BorgModuleIcon
+      icon: { sprite: _Adventure/Interface/Actions/actions_borg_syndie.rsi, state: syndicate-laboratory-module }
+
+- type: entity
+  id: RPDRecharging
+  parent: RPD
+  name: экспериментальное УПТ
+  description: Новейшее ручное устройство подачи труб, которое может быстро размещать трубы и вентиляции.
+  suffix: AutoRecharge
+  components:
+  - type: LimitedCharges
+    maxCharges: 20
+  - type: AutoRecharge
+    rechargeDuration: 10
+
+- type: entity
+  id: Disassembler
+  parent: RCD
+  name: дизассемблер
+  description: Отмычка, специально сконструированная для разбора укрепленных стен.
+  components:
+   - type: RCD
+     deviceType: Disassembler
+     availablePrototypes:
+     - Deconstruct
+   - type: Sprite
+     sprite: _Adventure/Interface/Actions/actions_borg_syndie.rsi
+     state: icon
+   - type: LimitedCharges
+     maxCharges: 20
+   - type: AutoRecharge
+     rechargeDuration: 10
+
+- type: entity
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  id: BorgModuleSaboteur
+  name: саботажный модуль киборга
+  description: Техническая деталь, содержащая в себе набор для разбора большинства несущих конструкций.
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      hands:
+      - item: RCDRecharging
+      - item: RPDRecharging
+      - item: Disassembler
+    - type: BorgModuleIcon
+      icon: { sprite: _Adventure/Interface/Actions/actions_borg_syndie.rsi, state: syndicate-saboteur-module }
+
+- type: entity
+  parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, BaseSyndicateContraband ]
+  id: BorgModuleSpyBug
+  name: шпионский модуль киборга
+  description: Техническая деталь, дающая киборгу способности вторжения в системы станции.
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      hands:
+      - item: XenoborgRadioJammer
+      - item: HandheldStationMapUnpowered
+      - item: CameraBug
+    - type: BorgModuleIcon
+      icon: { sprite: _Adventure/Interface/Actions/actions_borg_syndie.rsi, state: syndicate-spybug-module }
