@@ -33,10 +33,11 @@
   - type: StaminaDamageOnCollide
     damage: 2
   - type: Projectile
+    ignoreResistances: true
     damage:
       types:
-        Blunt: 10
-        Structural: 12
+        Blunt: 5
+        Structural: 6
 
 #патрон 20 авто
 - type: entity
@@ -73,10 +74,11 @@
   - type: StaminaDamageOnCollide
     damage: 2
   - type: Projectile
+    ignoreResistances: true
     damage:
       types:
-        Blunt: 18
-        Structural: 22
+        Blunt: 8
+        Structural: 10
 
 #патрон 30 авто
 - type: entity
@@ -113,10 +115,11 @@
   - type: StaminaDamageOnCollide
     damage: 2
   - type: Projectile
+    ignoreResistances: true
     damage:
       types:
-        Blunt: 22
-        Structural: 26
+        Blunt: 10
+        Structural: 22
 
 #коробки патронов
 
