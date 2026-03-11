@@ -210,7 +210,7 @@
     state: icon
   discipline: Arsenal
   tier: 2
-  cost: 15000
+  cost: 20000
   recipeUnlocks:
   - MagazineBoxPistolPulse
   - MagazineBoxRiflePulse
