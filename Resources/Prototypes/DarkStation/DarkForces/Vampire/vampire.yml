@@ -26,7 +26,7 @@
         - map: ["enum.DamageStateVisualLayers.Base"]
           state: standing
     - type: Physics
-      bodyType: Dynamic
+      bodyType: KinematicController
     - type: Fixtures
       fixtures:
         fix1:

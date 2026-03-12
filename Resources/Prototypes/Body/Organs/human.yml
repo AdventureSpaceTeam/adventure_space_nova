@@ -81,6 +81,10 @@
   name: eyes
   description: "I see you!"
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Eyes
   - type: Sprite
     layers:
       - state: eyeball-l
@@ -124,6 +128,10 @@
   name: lungs
   description: "Filters oxygen from an atmosphere, which is then sent into the bloodstream to be used as an electron carrier."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Lungs
   - type: Sprite
     layers:
       - state: lung-l
@@ -161,6 +169,10 @@
   name: heart
   description: "I feel bad for the heartless bastard who lost this."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Heart
   - type: Sprite
     state: heart-on
   # The heart 'metabolizes' medicines and poisons that aren't filtered out by other organs.
@@ -183,6 +195,10 @@
   name: stomach
   description: "Gross. This is hard to stomach."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Stomach
   - type: Sprite
     state: stomach
   - type: Item
@@ -215,6 +231,10 @@
   name: liver
   description: "Pairing suggestion: chianti and fava beans."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Liver
   - type: Sprite
     state: liver
   - type: Item
@@ -232,6 +252,10 @@
   name: kidneys
   description: "Filters toxins from the bloodstream."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Kidneys
   - type: Sprite
     layers:
       - state: kidney-l

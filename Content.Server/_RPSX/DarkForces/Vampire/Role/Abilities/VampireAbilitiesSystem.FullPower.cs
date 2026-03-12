@@ -49,7 +49,7 @@ public sealed partial class VampireAbilitiesSystem
         var originalActions = _actionsSystem.GetActions(uid);
         foreach (var action in originalActions)
         {
-            var keyWord = FindVampireAction(action.Comp);
+            var keyWord = FindVampireAction(action.Owner);
             if (keyWord == null)
                 continue;
 
@@ -64,15 +64,10 @@ public sealed partial class VampireAbilitiesSystem
         }
     }
 
-    private string? FindVampireAction(ActionComponent component)
+    private string? FindVampireAction(EntityUid uid)
     {
-        foreach (var keyword in component.Keywords)
-        {
-            if (!keyword.Contains("Vampire"))
-                continue;
-
-            return keyword;
-        }
+        if (_tagSystem.HasTag(uid, "VampireAbility"))
+            return "VampireAbility";
 
         return null;
     }

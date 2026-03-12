@@ -44,7 +44,8 @@ public sealed class GameGlobalSoundEvent : GlobalSoundEvent
 public enum StationEventMusicType : byte
 {
     Nuke,
-    Narsi
+    Narsi,
+    AiHacked,
 }
 
 /// <summary>

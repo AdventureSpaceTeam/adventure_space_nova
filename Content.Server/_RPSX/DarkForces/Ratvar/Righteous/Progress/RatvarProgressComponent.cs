@@ -28,4 +28,7 @@ public sealed partial class RatvarProgressComponent : Component
 
     [DataField]
     public TimeSpan ObjectivesCheckPeriod = TimeSpan.FromSeconds(30);
+
+    [ViewVariables]
+    public bool IsAIHacked;
 }

@@ -56,6 +56,10 @@
   name: lungs
   description: "Filters oxygen from an atmosphere... just more greedily."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Lungs
   - type: Sprite
     layers:
       - state: lung-l
@@ -91,6 +95,10 @@
   name: heart
   description: "A disgustingly persistent little biological pump made for spiders."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Heart
   - type: Sprite
     state: heart-on
   - type: Item
@@ -112,6 +120,10 @@
   description: "Pairing suggestion: chianti and fava beans."
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Liver
   - type: Item
     size: Small
     heldPrefix: liver
@@ -131,6 +143,10 @@
   description: "Filters toxins from the bloodstream."
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Kidneys
   - type: Sprite
     layers:
       - state: kidney-l
@@ -151,6 +167,10 @@
   name: eyes
   description: "Two was already too many."
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Eyes
   - type: Sprite
     layers:
       - state: eyeball-l

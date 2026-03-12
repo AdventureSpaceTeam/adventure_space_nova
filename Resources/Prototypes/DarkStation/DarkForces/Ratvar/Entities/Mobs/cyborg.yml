@@ -111,8 +111,6 @@
   - type: WiresPanel
     openingTool: RatvarScrewing
   - type: ActivatableUIRequiresPanel
-  - type: Wires
-    layoutId: Borg
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot { }

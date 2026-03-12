@@ -87,7 +87,7 @@ public sealed partial class VampireAbilitiesSystem : EntitySystem
         var actions = _actionsSystem.GetActions(uid);
         foreach (var action in actions)
         {
-            var actionId = FindVampireAction(action.Comp);
+            var actionId = FindVampireAction(action.Owner);
             if (actionId != args.ReplaceId)
                 continue;
 
@@ -117,7 +117,7 @@ public sealed partial class VampireAbilitiesSystem : EntitySystem
         var actions = _actionsSystem.GetActions(uid);
         foreach (var action in actions)
         {
-            var actionId = FindVampireAction(action.Comp);
+            var actionId = FindVampireAction(action.Owner);
             if (actionId == null)
                 continue;
 

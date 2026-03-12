@@ -55,6 +55,9 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Material
+  - type: MidasMaterial
+    targets:
+    - MidasTouchSteel
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -192,6 +195,9 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Material
+  - type: MidasMaterial
+    targets:
+    - MidasTouchSteel
   - type: PhysicalComposition
     materialComposition:
       Plasteel: 100

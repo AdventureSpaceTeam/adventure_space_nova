@@ -31,6 +31,10 @@
   name: сердце драска
   description: тук тук
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Heart
   - type: Sprite
     sprite: _Adventure/Races/Drask/organs.rsi
     state: heart-off

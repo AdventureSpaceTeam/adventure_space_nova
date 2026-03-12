@@ -90,6 +90,11 @@
     price: 350
   - type: Paintable
     group: null
+  - type: SaintSilver
+    damageOnCollide:
+      types:
+        Holiness: 20
+    pushOnCollide: true
 
 - type: entity
   id: AirlockGlassShuttle

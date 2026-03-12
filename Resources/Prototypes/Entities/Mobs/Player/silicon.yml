@@ -330,6 +330,7 @@
   - type: ContainerSpawnPoint
     containerId: station_ai_mind_slot
     job: StationAi
+  - type: MidasTarget
 
 # The station AI core assembly
 - type: entity

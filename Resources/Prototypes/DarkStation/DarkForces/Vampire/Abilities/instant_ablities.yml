@@ -4,6 +4,9 @@
   name: Statistics
   description: Learn about your abilities and your blood level
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 0
@@ -20,6 +23,9 @@
   name: Drink Blood
   description: Drink the blood of your victim
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 0
@@ -44,6 +50,9 @@
   name: Rejuvenation
   description: Removes stun and restores stamina
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 0
@@ -63,6 +72,9 @@
   name: Flash
   description: Stuns everyone standing right next to you
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 30
@@ -79,6 +91,9 @@
   name: Hypnosis
   description: Puts the victim to sleep
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 180
@@ -101,6 +116,9 @@
   name: Dash  
   description: After activation, you will lunge toward the tile you clicked on
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 1
@@ -121,6 +139,9 @@
   name: Transformation
   description: Randomly changes your body features
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 10
@@ -139,6 +160,9 @@
   name: Wings
   description: Turns you into a bat for 1 minute
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 60
@@ -157,6 +181,9 @@
   name: Rejuvenation+
   description: In addition to removing stun, now also grants you short-term regeneration.
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 40
@@ -177,6 +204,9 @@
   description: Summons two swarms of bats that attack everyone who is not a vampire
     or a thrall
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 180
@@ -194,6 +224,9 @@
   description: Stuns all humans within hearing range and breaks glass. Can stun vampire
     thralls but not other vampires.
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 180
@@ -212,6 +245,9 @@
   name: Порабощение
   description: Превращает жертву в вашего верного раба.
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 180
@@ -234,6 +270,9 @@
   name: Full Power
   description: Now you are the greatest vampire! Holy water is like mineral water to you. Bullets barely tickle. But silver weapons deal significant damage.
   components:
+  - type: Tag
+    tags:
+      - VampireAbility
   - type: Action
     itemIconStyle: NoItem
     useDelay: 0

@@ -15,6 +15,8 @@ using Robust.Shared.Player;
 using Content.Server.Antag;
 using Content.Server.RPSX.GameTicking.Rules.Ratvar;
 using Content.Server.RPSX.CCvars;
+using Content.Server.Access.Systems;
+using Content.Shared.Access.Systems;
 
 namespace Content.Server.RPSX.DarkForces.Ratvar.Righteous.Structures.Altar;
 
@@ -28,6 +30,8 @@ public sealed class RatvarAltarSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _sharedAppearance = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
+    [Dependency] private readonly AccessSystem _access = default!;
+    [Dependency] private readonly SharedIdCardSystem _idCard = default!;
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string AltarGlow = "RatvarAltarActivateEffect";
@@ -90,6 +94,7 @@ public sealed class RatvarAltarSystem : EntitySystem
                     if (!TryComp<ActorComponent>(uid, out var actor)) return;
                     _antag.ForceMakeAntag<RatvarRuleComponent>(actor.PlayerSession, "Ratvar");
                     _progressSystem.TryRequestChangePower(PowerForConvert);
+                    UpdateAccess(uid);
                     ToIdleState((uid, component));
                     break;
                 case AltarActiveType.Die:
@@ -99,6 +104,22 @@ public sealed class RatvarAltarSystem : EntitySystem
                     break;
             }
         }
+    }
+
+    public void UpdateAccess(EntityUid uid)
+    {
+        if (!EntityQuery<RatvarProgressComponent>().Any(c => c.IsAIHacked == true))
+            return;
+
+        if (!_idCard.TryFindIdCard(uid, out var idCard))
+            return;
+
+        var tags = _access.TryGetTags(idCard);
+        if (tags == null)
+            return;
+
+        var newTags = tags.Append("Borg").Append("BasicSilicon");
+        _access.TrySetTags(idCard, newTags);
     }
 
     private void OnUserDie(EntityUid target, RatvarAltarComponent component)

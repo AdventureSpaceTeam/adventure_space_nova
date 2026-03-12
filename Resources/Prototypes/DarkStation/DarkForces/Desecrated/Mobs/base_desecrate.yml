@@ -43,7 +43,7 @@
   - type: Bloodstream
     bloodReagent: DemonsBlood
   - type: Physics
-    bodyType: Dynamic
+    bodyType: KinematicController
   - type: Fixtures
     fixtures:
       fix1:

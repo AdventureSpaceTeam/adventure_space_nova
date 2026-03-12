@@ -36,6 +36,10 @@
   name: animal lungs
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Lungs
   - type: Sprite
     layers:
     - state: lung-l
@@ -70,6 +74,10 @@
   name: animal stomach
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Stomach
   - type: Sprite
     state: stomach
   - type: Organ
@@ -117,6 +125,10 @@
   name: animal liver
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Liver
   - type: Sprite
     state: liver
   - type: Organ
@@ -135,6 +147,10 @@
   name: animal heart
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Heart
   - type: Sprite
     state: heart-on
   - type: Organ
@@ -155,6 +171,10 @@
   name: animal kidneys
   categories: [ HideSpawnMenu ]
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Kidneys
   - type: Sprite
     layers:
     - state: kidney-l

@@ -58,6 +58,9 @@
       energy: 15
       color: OrangeRed
     - type: ChaplainBarrierTarget
+    - type: InteractionPopup
+      interactSuccessString: petting-success-mail-teleporter
+      interactFailureString: petting-failure-mail-teleporter
     - type: NpcFactionMember
       factions:
       - NarsiCult

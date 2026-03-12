@@ -1,6 +1,4 @@
-﻿using Robust.Shared.GameObjects;
-
-namespace Content.Server.RPSX.DarkForces.Ratvar.Righteous.Abilities.Midas;
+﻿namespace Content.Server.RPSX.DarkForces.Ratvar.Righteous.Abilities.Midas;
 
 [ByRefEvent]
 public record MidasTargetEvent(EntityUid User);

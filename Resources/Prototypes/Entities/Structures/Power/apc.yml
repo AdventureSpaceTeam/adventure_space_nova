@@ -149,6 +149,15 @@
     lowVoltageNode: output
   - type: LightningTarget
     priority: 1
+  - type: RatvarGearTarget
+    gearSlot:
+      ejectOnBreak: true
+      whitelist:
+        components:
+        - RatvarGear
+  - type: ContainerContainer
+    containers:
+      RatvarGear: !type:ContainerSlot
   - type: StaticPrice
     price: 500
   - type: GuideHelp

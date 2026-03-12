@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Content.Server.RPSX.DarkForces.Vampire.Role.Components;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
@@ -23,7 +24,7 @@ public sealed partial class VampireAbilitiesSystem
     private const int MaxBloodFromTarget = 200;
     private const int DrinkedBloodPerAction = 20;
 
-    private static readonly HashSet<string> AvilableBloodReagents = new() {"Blood", "SpiderBlood"};
+    private static readonly HashSet<string> AvilableBloodReagents = new() { "Blood", "InsectBlood" };
     [Dependency] private readonly BloodstreamSystem _bloodstreamSystem = default!;
     [Dependency] private readonly ThirstSystem _thirstSystem = default!;
 
@@ -67,7 +68,8 @@ public sealed partial class VampireAbilitiesSystem
     private bool IsTargetHasBlood(EntityUid target)
     {
         var isHumanoid = HasComp<HumanoidAppearanceComponent>(target);
-        var hasCorrectBlood = TryComp(target, out BloodstreamComponent? bloodStream) && AvilableBloodReagents.Contains(bloodStream.BloodSolutionName);
+        var hasCorrectBlood = TryComp(target, out BloodstreamComponent? bloodStream)
+            && bloodStream.BloodReferenceSolution.Contents.Any(r => AvilableBloodReagents.Contains(r.Reagent.Prototype));
 
         return isHumanoid && hasCorrectBlood;
     }
