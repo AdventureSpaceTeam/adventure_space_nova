@@ -1,0 +1,49 @@
+- type: flavor
+  id: jobfueleng
+  flavorType: Complex
+  description: как шипучий отдых от работы в бескрайнем космосе
+
+- type: flavor
+  id: jobfuelmed
+  flavorType: Complex
+  description: как лекарство и как обезболивающее
+
+- type: flavor
+  id: jobfuelsrv
+  flavorType: Complex
+  description: как подозрительно вкусный сладкий банановый милкшейк
+
+- type: flavor
+  id: jobfuelsec
+  flavorType: Complex
+  description: как подгоревший чип с нотками многослойного алкоголя
+
+- type: flavor
+  id: jobfuelcrg
+  flavorType: Complex
+  description: как чистейшая свобода на Силли Айленде
+
+- type: flavor
+  id: jobfuelrndlight
+  flavorType: Complex
+  description: как утренний прием алкоголя с кофе
+
+- type: flavor
+  id: jobfuelrnddark
+  flavorType: Complex
+  description: как ночной прием взрывного кофе
+
+- type: flavor
+  id: jobfuelcmd
+  flavorType: Complex
+  description: как роскошный кофе для самых важных личностей
+
+- type: flavor
+  id: stationblessing
+  flavorType: Complex
+  description: как пожелание удачи с ноткой неуверенности
+
+- type: flavor
+  id: jobfuelsyndie
+  flavorType: Complex
+  description: как шипучий прогоревший порох

@@ -267,6 +267,18 @@
             weight: 1.5
           - id: FoodPizzaVegetable
             weight: 1.5
+# Adventure-changes start
+          - id: FoodPizzaBBQ
+            weight: 1.5
+          - id: FoodPizzaPumpkin
+            weight: 1.5
+          - id: FoodPizzaMexican
+            weight: 1.5
+          - id: FoodPizzaSeafood
+            weight: 1.5
+          - id: FoodPizzaChocolate
+            weight: 1.5
+# Adventure-changes end
           - id: FoodPizzaDank
           - id: FoodPizzaDonkpocket
           - id: FoodPizzaCotton

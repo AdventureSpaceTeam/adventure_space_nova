@@ -1,0 +1,90 @@
+# Пиццы: начало
+- type: microwaveMealRecipe
+  id: RecipeChocolatePizza
+  name: рецепт шоколадной пиццы
+  result: FoodPizzaChocolate
+  time: 30
+  group: Pizza
+  reagents:
+    Sugar: 5
+    Cream: 10
+  solids:
+    FoodDoughFlat: 1
+    FoodSnackChocolateBar: 3
+
+- type: microwaveMealRecipe
+  id: RecipeSeafoodPizza
+  name: рецепт пиццы с морепродуктами
+  result: FoodPizzaSeafood
+  time: 30
+  group: Pizza
+  solids:
+    FoodDoughFlat: 1
+    FoodMeatFish: 2
+    FoodTomato: 2
+    FoodCheeseSlice: 2
+
+- type: microwaveMealRecipe
+  id: RecipeMexicanPizza
+  name: рецепт мексиканской пиццы
+  result: FoodPizzaMexican
+  time: 30
+  group: Pizza
+  solids:
+    FoodDoughFlat: 1
+    FoodCorn: 1
+    FoodTomato: 2
+    FoodChiliPepper: 2
+    FoodCheeseSlice: 1
+
+- type: microwaveMealRecipe
+  id: RecipePumpkinPizza
+  name: рецепт тыквенной пиццы
+  result: FoodPizzaPumpkin
+  time: 30
+  group: Pizza
+  solids:
+    FoodDoughFlat: 1
+    FoodPumpkin: 1
+    FoodCheeseSlice: 2
+
+- type: microwaveMealRecipe
+  id: RecipeBBQPizza
+  name: рецепт пиццы барбекю
+  result: FoodPizzaBBQ
+  time: 30
+  group: Pizza
+  reagents:
+    BbqSauce: 5
+  solids:
+    FoodDoughFlat: 1
+    FoodMeatCutlet: 2
+    FoodOnionSlice: 2
+# Пиццы: конец
+
+# Закуски: начало
+- type: microwaveMealRecipe
+  id: RecipeBakedNugget
+  name: рецепт куриного наггетса
+  result: FoodBakedNugget
+  time: 5
+  group: Savory
+  reagents:
+    OilOlive: 5
+  solids:
+    FoodMeatChickenCutlet: 1
+
+- type: microwaveMealRecipe
+  id: RecipeSoupDad
+  name: рецепт батиного супа
+  result: FoodDadSoup
+  time: 20
+  group: Savory
+  reagents:
+    Flour: 10
+    Water: 15
+  solids:
+    FoodTomato: 2
+    FoodOnionSlice: 2
+    FoodChiliPepper: 2
+#Закуски: конец

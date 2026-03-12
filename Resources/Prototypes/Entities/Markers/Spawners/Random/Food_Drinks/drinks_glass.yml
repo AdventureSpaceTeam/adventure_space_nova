@@ -119,6 +119,16 @@
       - DrinkShakeWhite
       - DrinkTheMartinez
       - DrinkMoonshineGlass
+# Adventure starts
+      - DrinkEngFuel
+      - DrinkMedFuel
+      - DrinkSrvFuel
+      - DrinkSecFuel
+      - DrinkCrgFuel
+      - DrinkRNDLightFuel
+      - DrinkRNDDarkFuel
+      - DrinkCmdFuel
+# Adventure ends
     chance: 0.8
     offset: 0.0
     #rare
@@ -137,4 +147,8 @@
       - DrinkHoochGlass
       - DrinkBeepskySmashGlass
       - DrinkBacchusBlessing
+# Adventure stars
+      - DrinkSyndieFuel
+      - DrinkStationBlessing
+# Adventure ends
     rareChance: 0.05
