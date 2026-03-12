@@ -59,6 +59,7 @@
       color: OrangeRed
     - type: ChaplainBarrierTarget
     - type: InteractionPopup
+      successChance: 0.00025
       interactSuccessString: petting-success-mail-teleporter
       interactFailureString: petting-failure-mail-teleporter
     - type: NpcFactionMember
