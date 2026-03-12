@@ -148,6 +148,8 @@
   completetime: 3
   materials:
     Plastic: 800
+    Steel: 800
+    Uranium: 200
 
 #коробка патронов 20 винтовочные импульсные
 - type: entity
@@ -174,6 +176,8 @@
   completetime: 3
   materials:
     Plastic: 1200
+    Steel: 1200
+    Uranium: 200
 
 #коробка патронов 30 винтовочные импульсные
 - type: entity
@@ -200,6 +204,8 @@
   completetime: 3
   materials:
     Plastic: 1500
+    Steel: 1500
+    Uranium: 200
 
 #изучение
 - type: technology
