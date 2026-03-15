@@ -154,8 +154,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkSyndieFuel
-  suffix: Темно-красное топливо
-  desc: Зловещий темно-красный напиток с сильным запахом.
+  suffix: Кроваво-красное топливо
+  desc: Зловещий кроваво-красный напиток с сильным запахом.
   components:
   - type: SolutionContainerManager
     solutions:

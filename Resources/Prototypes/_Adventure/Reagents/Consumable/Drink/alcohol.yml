@@ -247,9 +247,9 @@
 
 - type: reagent
   id: SyndieFuel
-  name: темно-красное топливо
+  name: кроваво-красное топливо
   parent: BaseAlcohol
-  desc: Зловещий темно-красный напиток с сильным запахом.
+  desc: Зловещий кроваво-красный напиток с сильным запахом.
   physicalDesc: reagent-physical-desc-dark-red
   flavor: jobfuelsyndie
   color: "#580202"
