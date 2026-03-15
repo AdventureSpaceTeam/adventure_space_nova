@@ -2,7 +2,7 @@
   parent: FoodMealBase
   id: FoodDadSoup
   name: батин суп
-  description: Адовое хрючево, лучше не нюхать.
+  description: Адское хрючево, лучше не нюхать.
   components:
   - type: Item
     storedOffset: 3,-7

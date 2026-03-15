@@ -42,7 +42,7 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.1
       - !type:HealthChange
         damage:
           groups:
@@ -85,7 +85,7 @@
 
 - type: reagent
   id: SecFuel
-  name: топливо безопасности
+  name: топливо службы безопасности
   parent: BaseAlcohol
   desc: Все стереотипы в одном напитке. Этот посвящен отделу службы безопасности.
   physicalDesc: reagent-physical-desc-overpowering
@@ -127,13 +127,13 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.25
+        amount: 0.2
 
 - type: reagent
   id: RNDLightFuel
   name: светлое топливо науки
   parent: BaseAlcohol
-  desc: Все стереотипы в одном напитке. Этот посвящен отделу исследований и разработок.
+  desc: Все стереотипы в одном напитке. Этот посвящен отделу исследований и разработок. Светлое.
   physicalDesc: reagent-physical-desc-enigmatic
   flavor: jobfuelrndlight
   color: "#f099f8"
@@ -150,13 +150,13 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.25
+        amount: 0.2
 
 - type: reagent
   id: RNDDarkFuel
   name: темное топливо науки
   parent: BaseAlcohol
-  desc: Все стереотипы в одном напитке. Этот посвящен отделу исследований и разработок.
+  desc: Все стереотипы в одном напитке. Этот посвящен отделу исследований и разработок. Темное.
   physicalDesc: reagent-physical-desc-inversed
   flavor: jobfuelrnddark
   color: "#7a0b85"
@@ -173,7 +173,7 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.25
+        amount: 0.3
 
 - type: reagent
   id: CmdFuel
@@ -196,13 +196,13 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.15
+        amount: 0.1
 
 - type: reagent
   id: StationBlessing
   name: благословение станции
   parent: BaseAlcohol
-  desc: Это может быть как ваш лучший напиток, так и ваш последний напиток в жизни.
+  desc: Смесь нескольких напитков. Окрыляет.
   physicalDesc: reagent-physical-desc-holy
   flavor: stationblessing
   color: "#ffec3d"
@@ -219,7 +219,7 @@
         factor: 0.75
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.25
+        amount: 0.4
       - !type:HealthChange
         damage:
           types:
@@ -247,9 +247,9 @@
 
 - type: reagent
   id: SyndieFuel
-  name: топливо синдиката
+  name: темно-красное топливо
   parent: BaseAlcohol
-  desc: Все слухи и догадки в одном напитке. Этот посвящен синдикату.
+  desc: Зловещий темно-красный напиток с сильным запахом.
   physicalDesc: reagent-physical-desc-dark-red
   flavor: jobfuelsyndie
   color: "#580202"
@@ -266,7 +266,7 @@
         factor: 1
       - !type:AdjustReagent
         reagent: Ethanol
-        amount: 0.25
+        amount: 0.3
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05

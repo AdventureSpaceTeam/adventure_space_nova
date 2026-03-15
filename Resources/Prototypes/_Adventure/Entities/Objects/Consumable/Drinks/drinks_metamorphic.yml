@@ -1,7 +1,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkEngFuel
-  suffix: engineering fuel
+  suffix: Топливо инженерии
+  desc: Все стереотипы в одном напитке. Этот посвящен инженерному отделу.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -17,7 +18,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkMedFuel
-  suffix: medicine fuel
+  suffix: Топливо медицины
+  desc: Все стереотипы в одном напитке. Этот посвящен медицинскому отделу.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -33,7 +35,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkSrvFuel
-  suffix: service fuel
+  suffix: Топливо сервиса
+  desc: Все стереотипы в одном напитке. Этот посвящен сервисному отделу.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -49,7 +52,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkSecFuel
-  suffix: security fuel
+  suffix: Топливо службы безопасности
+  desc: Все стереотипы в одном напитке. Этот посвящен отделу службы безопасности.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -65,7 +69,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkCrgFuel
-  suffix: cargo fuel
+  suffix: Топливо снабжения
+  desc: Все стереотипы в одном напитке. Этот посвящен отделу снабжения.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -81,7 +86,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkRNDLightFuel
-  suffix: light RND fuel
+  suffix: Светлое топливо науки
+  desc: Все стереотипы в одном напитке. Этот посвящен отделу исследований и разработок. Светлое.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -97,7 +103,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkRNDDarkFuel
-  suffix: dark RND fuel
+  suffix: Темное топливо науки
+  desc: Все стереотипы в одном напитке. Этот посвящен отделу исследований и разработок. Темное.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -113,7 +120,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkCmdFuel
-  suffix: command fuel
+  suffix: Топливо командования
+  desc: Все стереотипы в одном напитке. Этот посвящен членам командования.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -129,7 +137,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkStationBlessing
-  suffix: station blessing
+  suffix: Благословение станции
+  desc: Смесь нескольких напитков. Окрыляет.
   components:
   - type: SolutionContainerManager
     solutions:
@@ -145,7 +154,8 @@
 - type: entity
   parent: DrinkGlass
   id: DrinkSyndieFuel
-  suffix: syndicate fuel
+  suffix: Темно-красное топливо
+  desc: Зловещий темно-красный напиток с сильным запахом.
   components:
   - type: SolutionContainerManager
     solutions:

@@ -261,7 +261,7 @@
   - type: FlavorProfile
     flavors:
     - bread
-    - oily
+    - smokey
     - meaty
     - spicy
   - type: Sprite
@@ -292,12 +292,12 @@
   name: кусок пиццы барбекю
   parent: FoodPizzaSliceBase
   id: FoodPizzaBBQSlice
-  description: Только не пускай так слюни.
+  description: Кусок с ароматом углей и сочным мясом
   components:
   - type: FlavorProfile
     flavors:
     - bread
-    - oily
+    - smokey
     - meaty
     - spicy
   - type: Sprite
