@@ -1,19 +1,8 @@
 - type: entity
   id: MobHostileOPSBase
   parent: [ BaseMobAsteroid, FlyingMobBase ]
-  abstract: true
+  hidespawnmenu: true
   components:
-  - type: Sprite
-    sprite: _Adventure/Roles/LavaLand/mobs/goliath.rsi
-    layers:
-      - map: [ "enum.DamageStateVisualLayers.Base" ]
-        state: alive
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: alive
-      Dead:
-        Base: dead
   - type: Flammable
     fireSpread: false
     canResistFire: true
@@ -35,9 +24,6 @@
   - type: NpcFactionMember
     factions:
     - AllHostile
-  - type: Tag
-    tags:
-    - CannotSuicide
   - type: Temperature
     heatDamageThreshold: 100273,15
     specificHeat: 10000
