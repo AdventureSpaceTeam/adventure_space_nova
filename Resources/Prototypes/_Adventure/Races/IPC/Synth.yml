@@ -110,10 +110,11 @@
       types:
         Blunt: 0.30
   - type: Temperature
-    heatDamageThreshold: 773.15
-    coldDamageThreshold: 173
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 773.15
+    coldDamageThreshold: 173
     coldDamage:
       types:
         Cold: 0.1

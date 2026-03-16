@@ -3,7 +3,7 @@
   maps:
   - AdventureAmber      #min 0  max 50
   - AdventureAspid      #min 20 max 55
-# - AdventureAvrite     #min 40 max N/A
+  - AdventureAvrite     #min 35 max N/A
   - AdventureBagel      #min 30 max 120
   - AdventureBoxNew     #min 25 max 120 #rework (too big, original min 50)
   - AdventureCluster    #min 0  max 35

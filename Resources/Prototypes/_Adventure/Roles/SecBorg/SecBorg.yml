@@ -33,6 +33,7 @@
   addComponents:
   - type: BorgCuffed
   - type: FlashImmunity
+  - type: ShowCriminalRecordIcons
 
   inventoryTemplateId: borgShort
   spriteBodyState: sec

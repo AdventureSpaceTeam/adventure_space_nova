@@ -1,0 +1,38 @@
+- type: entity
+  id: BorgModuleRPD
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: атмосферный модуль киборга
+  description: Техническая деталь, дающая киборгам новые способности.
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-rpd
+  - type: ItemBorgModule
+    hands:
+    - item: RPDRecharging
+    - item: GasAnalyzer
+    - item: trayScanner
+    - item: HolofanProjectorBorg
+    - item: AirTank
+      hand:
+        emptyLabel: borg-slot-atmospheric-containers-empty
+        emptyRepresentative: AirTank
+        whitelist:
+          components:
+          - GasTank
+        blacklist:
+          components:
+          - Jetpack
+    - item: AirTank
+      hand:
+        emptyLabel: borg-slot-atmospheric-containers-empty
+        emptyRepresentative: AirTank
+        whitelist:
+          components:
+          - GasTank
+        blacklist:
+          components:
+          - Jetpack
+  - type: BorgModuleIcon
+    icon: { sprite: _Adventure/Interface/Actions/actions_borg.rsi, state: rpd-module }

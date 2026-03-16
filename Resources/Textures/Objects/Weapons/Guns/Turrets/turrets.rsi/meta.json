@@ -21,6 +21,13 @@
     {
       "name": "syndie_stun",
       "directions": 8
+    },
+    {
+      "name": "turret_base"
+    },
+    {
+      "name": "syndie_rocket",
+      "directions": 8
     }
   ]
 }

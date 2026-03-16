@@ -1,0 +1,44 @@
+- type: entity
+  name: спавнер ядерного оперативника
+  id: SpawnMobHostileOPSSMG
+  suffix: Adventure
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: ConditionalSpawner
+      chance: 1.0
+      prototypes:
+        - MobHostileOPSSMG
+
+- type: entity
+  name: спавнер специалиста
+  id: SpawnMobHostileOPSLMG
+  suffix: Adventure
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: ConditionalSpawner
+      chance: 1.0
+      prototypes:
+        - MobHostileOPSLMG
+
+- type: entity
+  name: спавнер командира
+  id: SpawnMobHostileOPSCommander
+  suffix: Adventure
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: ConditionalSpawner
+      chance: 1.0
+      prototypes:
+        - MobHostileOPSCommander

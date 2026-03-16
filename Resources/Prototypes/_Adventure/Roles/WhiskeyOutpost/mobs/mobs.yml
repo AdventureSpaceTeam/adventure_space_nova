@@ -1,0 +1,193 @@
+- type: entity
+  id: MobHostileOPSBase
+  parent: [ BaseMobAsteroid, FlyingMobBase ]
+  hidespawnmenu: true
+  components:
+  - type: Flammable
+    fireSpread: false
+    canResistFire: true
+    damage:
+      types:
+        Heat: 0.0
+  - type: ZombieImmune
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+          - FlyingMobMask
+        layer:
+          - FlyingMobLayer
+  - type: NpcFactionMember
+    factions:
+    - AllHostile
+  - type: Temperature
+    heatDamageThreshold: 100273,15
+    specificHeat: 10000
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: StatusEffects
+    allowed:
+    - SlowedDown
+    - Electrocution
+    - TemporaryBlindness
+    - RadiationProtection
+    - Drowsiness
+    - Adrenaline
+
+  - type: TriggerOnMobstateChange
+    mobState:
+      - Dead
+    triggers:
+      - GibOnTrigger
+
+  - type: GibOnTrigger
+    gibPrototype: GibHuman
+    gibSound: /Audio/Effects/gib.ogg
+
+- type: entity
+  id: MobHostileOPSSMG
+  parent: MobHostileOPSBase
+  name: ядерный оперативник
+  suffix: Adventure
+  description: ПП герой... Один его вид вызывает у вас страх.
+  components:
+    - type: Sprite
+      sprite: _Adventure/Roles/WhiskeyOutpost/mobs/OPSSMG.rsi
+      state: alive
+
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 50
+
+    - type: Battery
+      maxCharge: 90
+      startingCharge: 90
+
+    - type: BatteryAmmoProvider
+      proto: CartridgePistolUranium
+      fireCost: 1
+
+    - type: Gun
+      showExamineText: false
+      fireRate: 9
+      minAngle: 0
+      maxAngle: 10
+      angleIncrease: 1
+      angleDecay: 3
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/C-20r.ogg
+
+    - type: Damageable
+      damageContainer: Biological
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        300: Dead
+    - type: MobState
+
+    - type: HTN
+      rootTask:
+        task: SimpleRangedHostileCompound
+      blackboard:
+        VisionRadius: !type:Single
+          10
+        AggroVisionRadius: !type:Single
+          15
+          
+- type: entity
+  id: MobHostileOPSLMG
+  parent: MobHostileOPSBase
+  name: специалист ядерных оперативников
+  suffix: Adventure
+  description: Интересно, какие у него комплексы?
+  components:
+    - type: Sprite
+      sprite: _Adventure/Roles/WhiskeyOutpost/mobs/OPSLMG.rsi
+      state: alive
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 50
+    - type: Battery
+      maxCharge: 90
+      startingCharge: 90
+    - type: BatteryAmmoProvider
+      proto: CartridgeLightRifleUranium
+      fireCost: 1
+    - type: Gun
+      showExamineText: false
+      fireRate: 8
+      minAngle: 0
+      maxAngle: 10
+      angleIncrease: 1
+      angleDecay: 3
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+    - type: Damageable
+      damageContainer: Biological
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        900: Dead
+    - type: MobState
+    - type: HTN
+      rootTask:
+        task: SimpleRangedHostileCompound
+      blackboard:
+        VisionRadius: !type:Single
+          10
+        AggroVisionRadius: !type:Single
+          15
+
+- type: entity
+  id: MobHostileOPSCommander
+  parent: MobHostileOPSBase
+  name: командир ядерных оперативников
+  suffix: Adventure
+  description: А он стильный!
+  components:
+    - type: Sprite
+      sprite: _Adventure/Roles/WhiskeyOutpost/mobs/OPSCom.rsi
+      state: alive
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 50
+    - type: Battery
+      maxCharge: 6
+      startingCharge: 6
+    - type: BatteryAmmoProvider
+      proto: CartridgeMagnumAP
+      fireCost: 1
+    - type: Gun
+      showExamineText: false
+      fireRate: 2
+      minAngle: 0
+      maxAngle: 0
+      angleIncrease: 1
+      angleDecay: 3
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+    - type: Damageable
+      damageContainer: Biological
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        550: Dead
+    - type: MobState
+    - type: HTN
+      rootTask:
+        task: SimpleRangedHostileCompound
+      blackboard:
+        VisionRadius: !type:Single
+          12
+        AggroVisionRadius: !type:Single
+          18

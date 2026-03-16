@@ -50,11 +50,15 @@
   - BorgModuleTool
   - BorgModuleConstruction
   - BorgModuleRCD
+  - BorgModuleRPD #Adventure
   - BorgModuleCable
 
   radioChannels:
   - Engineering
   - Science
+
+  addComponents:
+  - type: ShowAccessReaderSettings #adventure
 
   # Visual
   inventoryTemplateId: borgShort
