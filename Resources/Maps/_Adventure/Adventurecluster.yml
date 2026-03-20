@@ -8499,24 +8499,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -39.5,7.5
       parent: 2
-- proto: BigPresentBox
-  entities:
-  - uid: 464
-    components:
-    - type: Transform
-      pos: -16.613178,7.4808955
-      parent: 2
-  - uid: 465
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 28.827911,26.554987
-      parent: 2
-  - uid: 466
-    components:
-    - type: Transform
-      pos: -9.162062,-13.532875
-      parent: 2
 - proto: Biogenerator
   entities:
   - uid: 467
@@ -33740,6 +33722,13 @@ entities:
     - type: Transform
       pos: -9.354882,-29.035347
       parent: 2
+- proto: GasAnalyzer
+  entities:
+  - uid: 6640
+    components:
+    - type: Transform
+      pos: -14.47985,-9.759103
+      parent: 2
 - proto: ClothingMaskGas
   entities:
   - uid: 5263
@@ -42889,81 +42878,6 @@ entities:
     components:
     - type: Transform
       pos: -13.20612,-28.277647
-      parent: 2
-- proto: Garlands
-  entities:
-  - uid: 6629
-    components:
-    - type: Transform
-      pos: -26.5,17.5
-      parent: 2
-  - uid: 6630
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -26.5,-1.5
-      parent: 2
-  - uid: 6631
-    components:
-    - type: Transform
-      pos: -37.5,22.5
-      parent: 2
-- proto: GarlandsOff
-  entities:
-  - uid: 6632
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 40.5,-6.5
-      parent: 2
-  - uid: 6633
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 24.5,-6.5
-      parent: 2
-  - uid: 6634
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 24.5,-5.5
-      parent: 2
-  - uid: 6635
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -42.5,6.5
-      parent: 2
-  - uid: 6636
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -42.5,2.5
-      parent: 2
-  - uid: 6637
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -42.5,8.5
-      parent: 2
-  - uid: 6638
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -42.5,12.5
-      parent: 2
-  - uid: 6639
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -42.5,14.5
-      parent: 2
-- proto: GasAnalyzer
-  entities:
-  - uid: 6640
-    components:
-    - type: Transform
-      pos: -14.47985,-9.759103
       parent: 2
 - proto: GasFilterFlipped
   entities:
@@ -64671,52 +64585,6 @@ entities:
     - type: Transform
       pos: -23.5,7.5
       parent: 2
-- proto: MediumPresentBox
-  entities:
-  - uid: 9751
-    components:
-    - type: Transform
-      pos: -16.253803,7.4496455
-      parent: 2
-  - uid: 9752
-    components:
-    - type: Transform
-      pos: -39.73545,12.291752
-      parent: 2
-  - uid: 9753
-    components:
-    - type: Transform
-      pos: -33.69807,11.369877
-      parent: 2
-  - uid: 9754
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 28.140411,26.226862
-      parent: 2
-  - uid: 9755
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 28.796661,26.117487
-      parent: 2
-  - uid: 9756
-    components:
-    - type: Transform
-      pos: -9.458937,-13.657875
-      parent: 2
-- proto: MedkitAdvancedFilled
-  entities:
-  - uid: 9757
-    components:
-    - type: Transform
-      pos: -2.430763,27.440598
-      parent: 2
-  - uid: 9758
-    components:
-    - type: Transform
-      pos: -26.652166,11.588954
-      parent: 2
 - proto: MedkitBruteFilled
   entities:
   - uid: 9759
@@ -68739,27 +68607,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -42.5,-23.5
-      parent: 2
-- proto: PresentRandom
-  entities:
-  - uid: 10398
-    components:
-    - type: Transform
-      pos: -5.5345826,19.645008
-      parent: 2
-- proto: PresentRandomInsane
-  entities:
-  - uid: 10400
-    components:
-    - type: Transform
-      pos: 17.504517,27.592072
-      parent: 2
-- proto: PresentRandomUnsafe
-  entities:
-  - uid: 10401
-    components:
-    - type: Transform
-      pos: -27.507666,41.50687
       parent: 2
 - proto: Printer
   entities:
@@ -74572,24 +74419,6 @@ entities:
     - type: Transform
       pos: 18.5,-0.5
       parent: 2
-- proto: SmallPresentBox
-  entities:
-  - uid: 11357
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 40.593536,21.554987
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 11358
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 38.17166,21.648737
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
 - proto: SMESAdvanced
   entities:
   - uid: 11359

@@ -67526,31 +67526,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: Garlands
-  entities:
-  - uid: 8406
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -41.5,-85.5
-      parent: 2
-  - uid: 8434
-    components:
-    - type: Transform
-      pos: -57.5,-7.5
-      parent: 2
-  - uid: 8439
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -92.5,-25.5
-      parent: 2
-  - uid: 8440
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -90.5,-25.5
-      parent: 2
 - proto: GasAnalyzer
   entities:
   - uid: 8453
@@ -67643,7 +67618,7 @@ entities:
       pos: -75.5,10.5
       parent: 2
     - type: GasMiner
-      spawnAmount: 25
+      spawnAmount: 250
 - proto: GasMinerWaterVapor
   entities:
   - uid: 8467
