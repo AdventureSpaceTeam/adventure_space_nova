@@ -1,10 +1,9 @@
 - type: marking
   id: PigNoseBase
   bodyPart: Snout
-  markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [PigMan]
+  groupWhitelist: [PigMan]
   sprites:
   - sprite: _Adventure/Races/PigMan/Species/parts.rsi
     state: nose_base
@@ -12,10 +11,9 @@
 - type: marking
   id: PigEarsBase
   bodyPart: HeadSide
-  markingCategory: HeadSide
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [PigMan]
+  groupWhitelist: [PigMan]
   sprites:
   - sprite: _Adventure/Races/PigMan/Species/parts.rsi
     state: ears_base

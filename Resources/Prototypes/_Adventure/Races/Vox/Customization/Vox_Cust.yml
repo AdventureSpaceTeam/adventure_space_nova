@@ -1,9 +1,8 @@
 - type: marking
   id: VoxBeakVulture
   bodyPart: Snout
-  markingCategory: Snout
   forcedColoring: true
-  speciesRestriction: [Vox]
+  groupWhitelist: [Vox]
   sprites:
   - sprite: _Adventure/Races/Vox/Customization/parts.rsi
     state: beak_vulture
@@ -16,9 +15,8 @@
 - type: marking
   id: VoxBeakPenguin
   bodyPart: Snout
-  markingCategory: Snout
   forcedColoring: true
-  speciesRestriction: [Vox]
+  groupWhitelist: [Vox]
   sprites:
   - sprite: _Adventure/Races/Vox/Customization/parts.rsi
     state: beak_penguin
@@ -31,8 +29,7 @@
 - type: marking
   id: VoxTailBigSpike
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vox]
+  groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
   - sprite: _Adventure/Races/Vox/Customization/parts.rsi

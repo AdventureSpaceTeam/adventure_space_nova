@@ -3,8 +3,7 @@
   bodyPart: Back
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Back
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Species/parts.rsi
     state: stone
@@ -14,8 +13,7 @@
   bodyPart: Back
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Back
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: stalagmite
@@ -25,8 +23,7 @@
   bodyPart: Back
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Back
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: monolith
@@ -36,8 +33,7 @@
   bodyPart: Back
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Back
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: demon
@@ -47,8 +43,7 @@
   bodyPart: Back
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: rift
@@ -56,8 +51,7 @@
 - type: marking
   id: StoneCrystal1
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystal1
@@ -65,8 +59,7 @@
 - type: marking
   id: StoneCrystal2
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystal2
@@ -74,8 +67,7 @@
 - type: marking
   id: StoneGeode
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystalgeode
@@ -83,8 +75,7 @@
 - type: marking
   id: StoneHorns
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystalhorns
@@ -92,8 +83,7 @@
 - type: marking
   id: StoneNail
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystalnail
@@ -101,8 +91,7 @@
 - type: marking
   id: StoneStar
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystalstar
@@ -110,8 +99,7 @@
 - type: marking
   id: StoneSun
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystalsun
@@ -119,8 +107,7 @@
 - type: marking
   id: StoneOre
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: ore
@@ -128,8 +115,7 @@
 - type: marking
   id: StoneOre2
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: ore2
@@ -137,8 +123,7 @@
 - type: marking
   id: StoneOreVeins
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: crystalveins
@@ -146,8 +131,7 @@
 - type: marking
   id: StoneGrass
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   coloring:
     default:
       type:
@@ -160,8 +144,7 @@
 - type: marking
   id: StoneTree
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   coloring:
     default:
       type:
@@ -174,8 +157,7 @@
 - type: marking
   id: StoneNeck
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: neckbeard
@@ -183,8 +165,7 @@
 - type: marking
   id: StoneSpine
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: spine
@@ -192,8 +173,7 @@
 - type: marking
   id: StoneMagma
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: magma
@@ -201,8 +181,7 @@
 - type: marking
   id: StoneMohawk
   bodyPart: Back
-  markingCategory: Chest
-  speciesRestriction: [Stone]
+  groupWhitelist: [Stone]
   sprites:
   - sprite: _Adventure/Races/Stone/Customization/Body.rsi
     state: mohawk

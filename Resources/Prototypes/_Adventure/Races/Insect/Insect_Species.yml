@@ -1,10 +1,9 @@
 - type: marking
   id: InsectHeadBase
   bodyPart: HeadTop
-  markingCategory: HeadTop
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [InsectSerpentide]
+  groupWhitelist: [InsectSerpentide]
   sprites:
   - sprite: _Adventure/Races/Insect/Customization/head.rsi
     state: base
@@ -14,8 +13,7 @@
   bodyPart: Back
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Back
-  speciesRestriction: [InsectSerpentide]
+  groupWhitelist: [InsectSerpentide]
   sprites:
   - sprite: _Adventure/Races/Insect/Species/parts.rsi
     state: hand
@@ -25,8 +23,7 @@
   bodyPart: Tail
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Tail
-  speciesRestriction: [InsectSerpentide]
+  groupWhitelist: [InsectSerpentide]
   sprites:
   - sprite: _Adventure/Races/Insect/Customization/Tails48.rsi
     state: base_tail

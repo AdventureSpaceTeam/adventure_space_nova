@@ -1,10 +1,9 @@
 - type: marking
   id: FaceDraskBig
   bodyPart: Snout
-  markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Face.rsi
     state: tentacles_big
@@ -12,10 +11,9 @@
 - type: marking
   id: FaceDrask
   bodyPart: Snout
-  markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Face.rsi
     state: tentacles
@@ -23,10 +21,9 @@
 - type: marking
   id: FaceDraskDouble
   bodyPart: Snout
-  markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Face.rsi
     state: tentacles_double
@@ -34,10 +31,9 @@
 - type: marking
   id: DraskHeadBig
   bodyPart: HeadSide
-  markingCategory: HeadSide
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Head.rsi
     state: head_big
@@ -45,8 +41,7 @@
 - type: marking
   id: DraskBodyTentaclesSmall
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   followSkinColor: true
   forcedColoring: true
   sprites:
@@ -56,8 +51,7 @@
 - type: marking
   id: DraskBodyTentaclesMany
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   followSkinColor: true
   forcedColoring: true
   sprites:
@@ -67,10 +61,9 @@
 - type: marking
   id: DraskHeadSquid
   bodyPart: HeadSide
-  markingCategory: HeadSide
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Head.rsi
     state: squid
@@ -78,10 +71,9 @@
 - type: marking
   id: DraskHeadSquidTent
   bodyPart: HeadSide
-  markingCategory: HeadSide
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Drask]
+  groupWhitelist: [Drask]
   sprites:
   - sprite: _Adventure/Races/Drask/Customization/Head.rsi
     state: squid_tent

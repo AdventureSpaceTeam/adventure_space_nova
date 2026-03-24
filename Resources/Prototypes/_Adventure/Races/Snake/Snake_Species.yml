@@ -1,10 +1,9 @@
 - type: marking
   id: SnakeHeadBase
   bodyPart: HeadSide
-  markingCategory: HeadSide
   followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Species/parts.rsi
     state: Head
@@ -14,8 +13,7 @@
   bodyPart: Tail
   followSkinColor: true
   forcedColoring: true
-  markingCategory: Tail
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Species/parts.rsi
     state: Tail_base
