@@ -768,9 +768,16 @@
     - item: RCDRecharging
     - item: BorgFireExtinguisher
     - item: BorgHandheldGPSBasic
-    - item: GasAnalyzer
-    - item: HolofanProjectorBorg
+    # - item: GasAnalyzer
+    # - item: HolofanProjectorBorg
+    # были перемещены в атмос модуль.
     - item: GeigerCounter
+    - hand: #Adventure
+        emptyLabel: borg-slot-ame-containers-empty
+        emptyRepresentative: AmeJar
+        whitelist:
+          components:
+          - AmeFuelContainer
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: rcd-module }
 

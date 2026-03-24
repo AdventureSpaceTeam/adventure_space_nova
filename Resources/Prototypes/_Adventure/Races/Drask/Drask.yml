@@ -24,11 +24,11 @@
             max: 213.15
           damage:
             groups:
-              Burn: -2
+              Burn: -1
             types:
-              Slash: -2
-              Piercing: -2
-              Bloodloss: -2
+              Slash: -1
+              Piercing: -1
+              Bloodloss: -1
 
 - type: entity
   save: false
@@ -55,12 +55,12 @@
   - type: UrUAccent # Adventure-Accent
   - type: SolutionContainerManager
     solutions:
-      chemicals: # тупой, но рабочий костыль, 20u слабого приоксадона находятся в качестве введёного реагента и постоянно метаболизируются, но не реенерируют до достижения телом температуры в -40с.
-        reagents:
+      bloodstream: # тупой, но рабочий костыль, 20u слабого приоксадона находятся в качестве введёного реагента и постоянно метаболизируются, но не реенерируют до достижения телом температуры в -40с.
+        reagents: # upd: Костыль стал ещё тупее, но всё-равно работает
         - ReagentId: CryoxadoneDrask
           Quantity: 20
   - type: SolutionRegeneration
-    solution: chemicals
+    solution: bloodstream
     generated:
       reagents:
       - ReagentId: CryoxadoneDrask

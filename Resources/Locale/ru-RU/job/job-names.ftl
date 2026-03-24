@@ -49,6 +49,10 @@ job-name-ertjanitor = Уборщик ОБР
 job-name-boxer = Боксёр
 job-name-zookeeper = Зоотехник
 job-name-visitor = Посетитель
+job-name-senior-researcher = Старший Научный Сотрудник
+job-name-senior-officer = Инструктор СБ
+job-name-senior-physician = Ведущий Врач
+job-name-senior-engineer = Ведущий Инженер
 # unused jobs
 # these are required for the agent ID job icon tooltips
 # I am keeping them for roleplaying opportunities

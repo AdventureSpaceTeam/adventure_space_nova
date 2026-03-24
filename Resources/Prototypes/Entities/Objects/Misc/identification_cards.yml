@@ -263,6 +263,8 @@
     - sprite: *icon-rsi
       offset: *icon-offset
       state: SeniorEngineer
+  - type: PresetIdCard
+    job: SeniorEngineerAdv
 
 #Medical
 
@@ -371,6 +373,8 @@
     - sprite: *icon-rsi
       offset: *icon-offset
       state: SeniorPhysician
+  - type: PresetIdCard
+    job: SeniorMedicAdv
 
 #Science
 
@@ -425,6 +429,8 @@
     - sprite: *icon-rsi
       offset: *icon-offset
       state: SeniorResearcher
+  - type: PresetIdCard
+    job: SeniorResearcherAdv
 
 #Security
 
@@ -531,6 +537,8 @@
     - sprite: *icon-rsi
       offset: *icon-offset
       state: SeniorOfficer
+  - type: PresetIdCard
+    job: SeniorOfficerAdv
 
 #Service
 

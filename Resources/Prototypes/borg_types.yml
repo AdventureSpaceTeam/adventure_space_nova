@@ -50,6 +50,7 @@
   - BorgModuleTool
   - BorgModuleConstruction
   - BorgModuleRCD
+  - BorgModuleRPD #Adventure
   - BorgModuleCable
 
   radioChannels:

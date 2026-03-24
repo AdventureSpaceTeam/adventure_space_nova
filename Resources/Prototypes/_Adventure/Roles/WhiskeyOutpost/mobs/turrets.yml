@@ -1,0 +1,23 @@
+- type: entity
+  parent: WeaponTurretAllHostile
+  id: WeaponTurretRocket
+  name: 'RT-17 "Импульс"'
+  suffix: WhiskeyOutpost
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+    drawdepth: Mobs
+    granularLayersRendering: true
+    layers:
+    - state: turret_base
+      renderingStrategy: NoRotation
+    - state: syndie_rocket
+  - type: BallisticAmmoProvider
+    proto: CartridgeRocket
+    capacity: 60
+  - type: Gun
+    fireRate: 0.5
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
