@@ -54,11 +54,3 @@
     layers:
       - state: green
       - state: seniorengineer
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconSeniorEngineer
-  icon:
-    sprite: &icon-rsi /Textures/Interface/Misc/job_icons.rsi
-    state: SeniorEngineer
-  jobName: job-name-senior-engineer
