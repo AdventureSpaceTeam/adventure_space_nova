@@ -36,163 +36,65 @@
   femaleFirstNames: NamesZerah
   naming: First
 
-- type: markingPoints
-  id: MobZerahMarkingLimits
+- id: Zerah
+  limits:
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      default:
+      - SnakeHeadBase
+      limit: 1
+      required: true
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      default:
+      - SnakeTailBase
+      limit: 1
+      required: true
   onlyWhitelisted: true
-  points:
-    HeadSide:
-      points: 1
-      required: true
-      defaultMarkings: [ SnakeHeadBase ]
-    HeadTop:
-      points: 1
-      required: false
-    Head:
-      points: 1
-      required: false
-    Chest:
-      points: 1
-      required: false
-    Legs:
-      points: 4
-      required: false
-    Arms:
-      points: 4
-      required: false
-    Tail:
-      points: 1
-      required: true
-      defaultMarkings: [ SnakeTailBase ]
-    Snout:
-      points: 2
-      required: false
+  parent: Undergarments
+  type: markingsGroup
 
-- type: speciesBaseSprites
-  id: MobZerahSprites
-  sprites:
-    HeadSide: MobHumanoidAnyMarking
-    Tail: MobHumanoidAnyMarking
-    HeadTop: MobHumanoidAnyMarking
-    Head: MobSnakeHead
-    Chest: MobSnakeTorso
-    LArm: MobSnakeLArm
-    RArm: MobSnakeRArm
-    LHand: MobSnakeLHand
-    RHand: MobSnakeRHand
-    Eyes: MobSnakeEyes
-    Snout: MobHumanoidAnyMarking
-
-- type: humanoidBaseSprite
-  id: MobSnakeEyes
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: eyes
-
-- type: humanoidBaseSprite
-  id: MobSnakeHead
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobSnakeHeadMale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobSnakeHeadFemale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: head_f
-
-- type: humanoidBaseSprite
-  id: MobSnakeTorso
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: torso_m
-
-- type: humanoidBaseSprite
-  id: MobSnakeTorsoMale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: torso_m
-
-- type: humanoidBaseSprite
-  id: MobSnakeTorsoFemale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: torso_f
-
-- type: humanoidBaseSprite
-  id: MobSnakeLArm
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobSnakeLHand
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobSnakeLArmMale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobSnakeLHandMale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobSnakeLArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: l_armF
-
-- type: humanoidBaseSprite
-  id: MobSnakeLHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: l_handF   
-
-- type: humanoidBaseSprite
-  id: MobSnakeRArm
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobSnakeRHand
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobSnakeRArmMale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobSnakeRHandMale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: r_hand
-
-
-- type: humanoidBaseSprite
-  id: MobSnakeRArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: r_armF
-
-- type: humanoidBaseSprite
-  id: MobSnakeRHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/Snake/Species/parts.rsi
-    state: r_handF
+- type: entity
+  id: OrganZerahVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/Snake/Species/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Zerah

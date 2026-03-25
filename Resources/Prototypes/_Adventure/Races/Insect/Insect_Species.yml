@@ -46,167 +46,71 @@
   femaleFirstNames: NamesInsect
   naming: First
 
-- type: markingPoints
-  id: MobInsectMarkingLimits
+- id: Insect
+  limits:
+    enum.HumanoidVisualLayers.Back:
+      default:
+      - InsectHandBase
+      limit: 1
+      required: true
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      default:
+      - InsectHeadBase
+      limit: 1
+      required: true
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      default:
+      - InsectTailBase
+      limit: 1
+      required: true
   onlyWhitelisted: true
-  points:
-    HeadSide:
-      points: 1
-      required: false
-    HeadTop:
-      points: 1
-      required: true
-      defaultMarkings: [ InsectHeadBase ]
-    Head:
-      points: 1
-      required: false
-    Chest:
-      points: 1
-      required: false
-    Legs:
-      points: 4
-      required: false
-    Arms:
-      points: 4
-      required: false
-    Tail:
-      points: 1
-      required: true
-      defaultMarkings: [ InsectTailBase ]
-    Snout:
-      points: 2
-      required: false
-    Back:
-      points: 1
-      required: true
-      defaultMarkings: [ InsectHandBase ]
+  parent: Undergarments
+  type: markingsGroup
 
-- type: speciesBaseSprites
-  id: MobInsectSprites
-  sprites:
-    HeadSide: MobHumanoidAnyMarking
-    Tail: MobHumanoidAnyMarking
-    HeadTop: MobHumanoidAnyMarking
-    Head: MobInsectHead
-    Chest: MobInsectTorso
-    LArm: MobInsectLArm
-    RArm: MobInsectRArm
-    LHand: MobInsectLHand
-    RHand: MobInsectRHand
-    Eyes: MobInsectEyes
-    Snout: MobHumanoidAnyMarking
-    Back: MobHumanoidAnyMarking 
 
-- type: humanoidBaseSprite
-  id: MobInsectEyes
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: eyes
-
-- type: humanoidBaseSprite
-  id: MobInsectHead
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobInsectHeadMale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobInsectHeadFemale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: head_f
-
-- type: humanoidBaseSprite
-  id: MobInsectTorso
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: torso_m
-
-- type: humanoidBaseSprite
-  id: MobInsectTorsoMale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: torso_m
-
-- type: humanoidBaseSprite
-  id: MobInsectTorsoFemale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: torso_f
-
-- type: humanoidBaseSprite
-  id: MobInsectLArm
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobInsectLHand
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobInsectRArm
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobInsectRHand
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobInsectLArmMale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobInsectLHandMale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobInsectRArmMale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobInsectRHandMale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobInsectLArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobInsectLHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobInsectRArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobInsectRHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/Insect/Species/parts.rsi
-    state: r_hand
+- type: entity
+  id: OrganInsectVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/Insect/Species/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Insect

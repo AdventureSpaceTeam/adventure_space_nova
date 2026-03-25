@@ -13,38 +13,64 @@
   oldAge: 39
   maxAge: 65
 
-- type: markingPoints
-  id: MobFelinidMarkingLimits
-  points:
-    Tail:
-      points: 1
+- id: Felinid
+  limits:
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      default:
+      - FelinidEars
+      limit: 1
       required: true
-      defaultMarkings: [ FelinidTail ]
-    HeadTop:
-      points: 1
+    enum.HumanoidVisualLayers.LArm:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      default:
+      - FelinidTail
+      limit: 1
       required: true
-      defaultMarkings: [ FelinidEars ]
-    Hair:
-      points: 1
+    enum.HumanoidVisualLayers.UndergarmentBottom:
+      limit: 1
+      nudityDefault:
+      - UndergarmentBottomBoxersFelinid
       required: false
-    FacialHair:
-      points: 1
+    enum.HumanoidVisualLayers.UndergarmentTop:
+      limit: 1
+      nudityDefault:
+      - UndergarmentTopTanktopFelinid
       required: false
-    Snout:
-      points: 1
-      required: false
-    UndergarmentTop:
-      points: 1
-      required: false
-    UndergarmentBottom:
-      points: 1
-      required: false
-    Chest:
-      points: 2
-      required: false
-    Legs:
-      points: 2
-      required: false
-    Arms:
-      points: 2
-      required: false
+  parent: Undergarments
+  type: markingsGroup
+
