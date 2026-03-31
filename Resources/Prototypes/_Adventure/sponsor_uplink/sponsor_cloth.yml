@@ -229,38 +229,23 @@
     sprite: _Adventure/sponsor_uplink/15.rsi
 
 - type: entity
-  abstract: true
   parent: BaseItem
-  id: ClothingEliteEyesBaseUnshaded
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-unshaded
-      shader: unshaded
-    state: icon
-  - type: Clothing
-    slots: [eyes]
-    clothingVisuals:
-      eyes:
-      - state: equipped-EYES
-      - state: equipped-EYES-unshaded
-        shader: unshaded
-  - type: Item
-    size: Small
-    storedRotation: -90
-
-- type: entity
-  parent: ClothingEliteEyesBaseUnshaded
   id: ClothingAdvNeonGlasses
   name: киберочки
   description: Киберпанк уже сегодня, бесполезно правда, но красиво.
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/17.rsi
+    state: icon
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/17.rsi
-
+    slots: [eyes]
+    clothingVisuals:
+      eyes:
+      - state: equipped-EYES
+  - type: Item
+    size: Small
+    storedRotation: -90
 
 # cotula
 
