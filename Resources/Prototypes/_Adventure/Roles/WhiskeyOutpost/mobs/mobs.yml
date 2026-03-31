@@ -53,7 +53,7 @@
   parent: MobHostileOPSBase
   name: ядерный оперативник
   suffix: Adventure
-  description: ПП герой... Один его вид вызывает у вас страх.
+  description: Один его вид вызывает у вас страх.
   components:
     - type: Sprite
       sprite: _Adventure/Roles/WhiskeyOutpost/mobs/OPSSMG.rsi
@@ -68,7 +68,7 @@
       startingCharge: 90
 
     - type: BatteryAmmoProvider
-      proto: CartridgePistolUranium
+      proto: CartridgePistol
       fireCost: 1
 
     - type: Gun
