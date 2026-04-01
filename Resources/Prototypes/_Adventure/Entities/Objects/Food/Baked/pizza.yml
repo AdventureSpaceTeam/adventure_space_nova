@@ -1,0 +1,326 @@
+- type: entity
+  name: шоколадная пицца
+  parent: FoodPizzaBase
+  id: FoodPizzaChocolate
+  description: Блюдо для тех, кто не может выбрать между шоколадом и пиццей.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - sweet
+    - chocolate
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: chocolate
+  - type: SliceableFood
+    slice: FoodPizzaChocolateSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Theobromine
+          Quantity: 10
+        - ReagentId: CocoaPowder
+          Quantity: 5
+  - type: Tag
+    tags:
+    - Pizza
+
+- type: entity
+  name: кусок шоколадной пиццы
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaChocolateSlice
+  description: Мечта сладкоежек. А не слипнется?
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - sweet
+    - chocolate
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: chocolate-slice
+  - type: Item
+    heldPrefix: chocolate-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 0.8
+        - ReagentId: Theobromine
+          Quantity: 2
+        - ReagentId: CocoaPowder
+          Quantity: 0.8
+  - type: Tag
+    tags:
+    - Pizza
+    - Slice
+
+- type: entity
+  name: пицца с морепродуктами
+  parent: FoodPizzaBase
+  id: FoodPizzaSeafood
+  description: Пицца с морепродуктами, жаль без креветок.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - fishy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: seafood
+  - type: SliceableFood
+    slice: FoodPizzaSeafoodSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: CarpoToxin
+          Quantity: 3
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+
+- type: entity
+  name: кусок пиццы c морепродуктами
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaSeafoodSlice
+  description: Сочная рыба сначала тает во рту, а потом ваше горло немеет.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - fishy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: seafood-slice
+  - type: Item
+    heldPrefix: seafood-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 0.8
+        - ReagentId: CarpoToxin
+          Quantity: 0.5
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - Slice
+
+- type: entity
+  name: мексиканская пицца
+  parent: FoodPizzaBase
+  id: FoodPizzaMexican
+  description: Вкус Мексики.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - meaty
+    - corn
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: mexican
+  - type: SliceableFood
+    slice: FoodPizzaMexicanSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: CapsaicinOil
+          Quantity: 12
+  - type: Tag
+    tags:
+    - Pizza
+
+- type: entity
+  name: кусок мексиканской пиццы
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaMexicanSlice
+  description: Кусок Мексики.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - meaty
+    - corn
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: mexican-slice
+  - type: Item
+    heldPrefix: mexican-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 0.8
+        - ReagentId: CapsaicinOil
+          Quantity: 2
+  - type: Tag
+    tags:
+    - Pizza
+    - Slice
+
+- type: entity
+  name: тыквенная пицца
+  parent: FoodPizzaBase
+  id: FoodPizzaPumpkin
+  description: Вкус Хэллоуина.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - pumpkin
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: pumpkin
+  - type: SliceableFood
+    slice: FoodPizzaPumpkinSlice
+  - type: Tag
+    tags:
+    - Pizza
+
+- type: entity
+  name: кусок тыквенной пиццы
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaPumpkinSlice
+  description: Кусок Хэллоуина.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - cheesy
+    - oily
+    - pumpkin
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: pumpkin-slice
+  - type: Item
+    heldPrefix: pumpkin-slice
+  - type: Tag
+    tags:
+    - Pizza
+    - Slice
+
+- type: entity
+  name: пицца барбекю
+  parent: FoodPizzaBase
+  id: FoodPizzaBBQ
+  description: Такой аромат углей и сочного мяса манит даже вегетарианцев.
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - smokey
+    - meaty
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: bbq
+  - type: SliceableFood
+    slice: FoodPizzaBBQSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: CapsaicinOil
+          Quantity: 6
+        - ReagentId: BbqSauce
+          Quantity: 6
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+
+- type: entity
+  name: кусок пиццы барбекю
+  parent: FoodPizzaSliceBase
+  id: FoodPizzaBBQSlice
+  description: Кусок с ароматом углей и сочным мясом
+  components:
+  - type: FlavorProfile
+    flavors:
+    - bread
+    - smokey
+    - meaty
+    - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/pizza.rsi
+    layers:
+    - state: bbq-slice
+  - type: Item
+    heldPrefix: bbq-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 0.8
+        - ReagentId: CapsaicinOil
+          Quantity: 1
+        - ReagentId: BbqSauce
+          Quantity: 1
+  - type: Tag
+    tags:
+    - Meat
+    - Pizza
+    - Slice

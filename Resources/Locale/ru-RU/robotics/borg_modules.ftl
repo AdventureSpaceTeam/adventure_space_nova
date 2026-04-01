@@ -12,3 +12,5 @@ borg-slot-instruments-empty = Музыкальные инструменты
 borg-slot-beakers-empty = Мензурки
 borg-slot-inflatable-door-empty = Надувная дверь
 borg-slot-inflatable-wall-empty = Надувная стена
+borg-slot-atmospheric-containers-empty = Газовые баллоны
+borg-slot-ame-containers-empty = Топливный бак ДАМ

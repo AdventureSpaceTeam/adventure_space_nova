@@ -1,0 +1,159 @@
+- type: entity
+  parent: DrinkGlass
+  id: DrinkEngFuel
+  suffix: топливо инженерии
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: EngFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/engfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkMedFuel
+  suffix: топливо медицины
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: MedFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/medfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSrvFuel
+  suffix: топливо сервиса
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SrvFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/srvfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSecFuel
+  suffix: топливо службы безопасности
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SecFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/secfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCrgFuel
+  suffix: топливо снабжения
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: CrgFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/crgfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkRNDLightFuel
+  suffix: светлое топливо науки
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: RNDLightFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/rndlightfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkRNDDarkFuel
+  suffix: темное топливо науки
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: RNDDarkFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/rnddarkfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkCmdFuel
+  suffix: топливо командования
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: CmdFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/cmdfuelglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkStationBlessing
+  suffix: благословение станции
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: StationBlessing
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/stationblessingglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSyndieFuel
+  suffix: кроваво-красное топливо
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SyndieFuel
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/synfuelglass.rsi
+    state: icon

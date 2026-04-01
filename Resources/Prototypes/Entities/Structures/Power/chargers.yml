@@ -60,6 +60,7 @@
         density: 500
         mask:
         - TabletopMachineMask
+        - BulletImpassable # Adventure
         layer:
         - BulletImpassable
   - type: PowerChargerVisuals

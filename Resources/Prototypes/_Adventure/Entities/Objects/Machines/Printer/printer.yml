@@ -51,6 +51,7 @@
         density: 25
         mask:
         - TabletopMachineMask
+        - BulletImpassable # Adventure
         layer:
         - TabletopMachineLayer
   - type: Destructible

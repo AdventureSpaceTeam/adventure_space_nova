@@ -1,0 +1,30 @@
+- type: entity
+  id: PrinterCentComm
+  parent: Printer
+  name: принтер оператора Центкома
+  suffix: AdvPrinter, AdvMapping
+  description: Позволяет печатать документы.
+  components:
+  - type: Lathe
+    producingSound: /Audio/Machines/scanning.ogg
+    idleState: icon
+    runningState: building
+    staticPacks:
+      - AdvPrinterCentComm
+  - type: Machine
+    board: PrinterCentCommMachineCircuitboard
+
+- type: entity
+  id: PrinterCentCommMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: принтер оЦК (машинная плата)
+  description: Микросхема для создания принтера.
+  components:
+    - type: Sprite
+      state: cpuboard_adv
+    - type: MachineBoard
+      prototype: PrinterCentComm
+      requirements:
+        Manipulator: 3
+      materialRequirements:
+        Glass: 1

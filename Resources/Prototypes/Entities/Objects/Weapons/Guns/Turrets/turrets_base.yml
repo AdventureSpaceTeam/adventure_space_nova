@@ -21,7 +21,10 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
     drawdepth: Mobs
+    granularLayersRendering: true # Adventure
     layers:
+    - state: turret_base # Adventure
+      renderingStrategy: NoRotation
     - state: syndie_lethal
   - type: InteractionPopup
     interactDelay: 0.2

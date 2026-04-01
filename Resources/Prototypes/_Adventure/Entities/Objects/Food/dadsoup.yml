@@ -1,0 +1,26 @@
+- type: entity
+  parent: FoodMealBase
+  id: FoodDadSoup
+  name: батин суп
+  description: Адское хрючево, лучше не нюхать.
+  components:
+  - type: Item
+    storedOffset: 3,-7
+  - type: FlavorProfile
+    flavors:
+      - tomato
+      - spicy
+  - type: Sprite
+    sprite: _Adventure/Objects/Food/dadsoup.rsi
+    state: dadsoup
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 45
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 30
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: CapsaicinOil
+          Quantity: 8
