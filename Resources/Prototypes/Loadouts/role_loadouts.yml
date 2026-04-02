@@ -176,6 +176,7 @@
   - JanitorGloves
   - CommonBackpack
   - JanitorOuterClothing
+  - JanitorShoes
   - Glasses
   - Survival
   - Trinkets
@@ -245,6 +246,7 @@
   groups:
   - GroupPlasManSuitMusician #Adventure
   - GroupTankHarness
+  - MusicianHead
   - MusicianJumpsuit
   - CommonBackpack
   - MusicianOuterClothing

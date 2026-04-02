@@ -137,3 +137,17 @@
   minLimit: 0
   loadouts:
   - NeckMining
+
+- type: loadoutGroup
+  id: MusicianHead
+  name: Музыкант, голова
+  minLimit: 0
+  loadouts:
+  - BardHat
+
+- type: loadoutGroup
+  id: JanitorShoes
+  name: Уборщик, обувь
+  loadouts:
+  - Galoshes
+  - BlueJaniShoes

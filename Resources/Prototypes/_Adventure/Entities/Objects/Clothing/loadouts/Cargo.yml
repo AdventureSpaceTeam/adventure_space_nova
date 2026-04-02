@@ -1,0 +1,18 @@
+#рабочий комбинезон грузчика
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCargoTechWork
+  name: рабочий комбинезон грузчика
+  description: Таскать тяжеленные ящики с металлом удобнее всего в толстом комбинезоне.
+  suffix: AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/cargo/cargotech.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/cargo/cargotech.rsi
+    femaleMask: UniformTop
+
+- type: loadout
+  id: CargoTechWorkJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCargoTechWork

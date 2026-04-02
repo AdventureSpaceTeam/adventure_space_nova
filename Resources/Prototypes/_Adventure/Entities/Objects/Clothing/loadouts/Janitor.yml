@@ -1,0 +1,45 @@
+#синий комбинезон уборщика
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlueJani
+  name: синий комбинезон уборщика
+  description: И снова всю ночь я просто драил полы в компании швабры. Да, это карма.
+  suffix: AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/janitor/bluejani.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/janitor/bluejani.rsi
+    femaleMask: UniformTop
+
+- type: loadout
+  id: BlueJani
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBlueJani
+
+- type: entity
+  parent: [ ClothingShoesBase, BaseJanitorContraband ]
+  id: ClothingShoesBlueJani
+  name: галоши-шлёпанцы
+  description: Очень важно задеть лужу какой-нибудь гадости пяткой.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/janitor/bluejanislippers.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/janitor/bluejanislippers.rsi
+  - type: NoSlip
+  - type: SlowedOverSlippery
+    slowdownModifier: 0.7
+  - type: SpeedModifierContactCapClothing
+    maxContactSprintSlowdown: 0.7
+    maxContactWalkSlowdown: 0.7
+
+- type: loadout
+  id: BlueJaniShoes
+  equipment:
+    shoes: ClothingShoesBlueJani
+
+- type: loadout
+  id: Galoshes
+  equipment:
+    shoes: ClothingShoesGaloshes

@@ -176,6 +176,7 @@
   loadouts:
   - HoPHead
   - ClothingHeadHatHopHat # Adventure
+  - ClothingHeadHatHopBeret # Adventure
 
 - type: loadoutGroup
   id: HoPJumpsuit
@@ -480,6 +481,7 @@
   loadouts:
   - JanitorJumpsuit
   - JanitorJumpskirt
+  - BlueJani #adventure
 
 - type: loadoutGroup
   id: JanitorGloves
@@ -675,6 +677,7 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
+  - BardJumpsuit #adventure
 
 - type: loadoutGroup
   id: MusicianOuterClothing
@@ -787,6 +790,7 @@
   loadouts:
   - CargoTechnicianJumpsuit
   - CargoTechnicianJumpskirt
+  - CargoTechWorkJumpsuit #Adventure
 
 - type: loadoutGroup
   id: CargoTechnicianBackpack

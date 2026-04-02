@@ -16,3 +16,46 @@
   storage:
     back:
     - SuperSynthesizerInstrument
+
+#комбинезон барда
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBard
+  name: комбинезон барда
+  description: Бля, ну хайп
+  suffix: AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/musician/Bard/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/musician/Bard/suit.rsi
+    femaleMask: UniformTop
+
+- type: loadout
+  id: BardJumpsuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: FamousMusician
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBard
+
+#шляпа барда
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBard
+  name: шляпа барда
+  description: Просто фак ми
+  suffix: AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/musician/Bard/hat.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/musician/Bard/hat.rsi
+
+- type: loadout
+  id: BardHat
+  equipment:
+    head: ClothingHeadBard
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: FamousMusician
