@@ -25,9 +25,14 @@
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Hair:
+      default:
+      - ResomiDefault
+      limit: 1
+      required: true
+    enum.HumanoidVisualLayers.Head:
       limit: 1
       required: false
-    enum.HumanoidVisualLayers.Head:
+    enum.HumanoidVisualLayers.HeadTop:
       default:
       - ResomiEarsBase
       limit: 1

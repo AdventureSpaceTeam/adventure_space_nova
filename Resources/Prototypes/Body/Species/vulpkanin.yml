@@ -15,18 +15,18 @@
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true
-      default: [ VulpEar ]
+      default: [ FoxEar ]
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: true
-      default: [ VulpSnout ]
+      default: [ FoxSnout ]
     enum.HumanoidVisualLayers.SnoutCover:
       limit: 3
       required: false
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ VulpTailVulp ]
+      default: [ FoxTail ]
     enum.HumanoidVisualLayers.LArm:
       limit: 2
       required: false

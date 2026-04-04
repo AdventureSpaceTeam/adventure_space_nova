@@ -86,18 +86,18 @@
     species: Felinid
   - type: InitialBody
     organs:
-      Torso: OrganHumanTorso
-      Head: OrganHumanHead
-      ArmLeft: OrganHumanArmLeft
-      ArmRight: OrganHumanArmRight
-      HandRight: OrganHumanHandRight
-      HandLeft: OrganHumanHandLeft
-      LegLeft: OrganHumanLegLeft
-      LegRight: OrganHumanLegRight
-      FootLeft: OrganHumanFootLeft
-      FootRight: OrganHumanFootRight
+      Torso: OrganFelinidTorso
+      Head: OrganFelinidHead
+      ArmLeft: OrganFelinidArmLeft
+      ArmRight: OrganFelinidArmRight
+      HandRight: OrganFelinidHandRight
+      HandLeft: OrganFelinidHandLeft
+      LegLeft: OrganFelinidLegLeft
+      LegRight: OrganFelinidLegRight
+      FootLeft: OrganFelinidFootLeft
+      FootRight: OrganFelinidFootRight
       Brain: OrganHumanBrain
-      Eyes: OrganHumanEyes
+      Eyes: OrganFelinidEyes
       Tongue: OrganHumanTongue
       Appendix: OrganHumanAppendix
       Ears: OrganHumanEars
@@ -111,6 +111,94 @@
     noRot: true
     drawdepth: Mobs
     scale: 0.85, 0.85
+
+- type: entity
+  id: OrganFelinidTorso
+  parent: OrganHumanTorso
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidHead
+  parent: OrganHumanHead
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidArmLeft
+  parent: OrganHumanArmLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidArmRight
+  parent: OrganHumanArmRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidHandLeft
+  parent: OrganHumanHandLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidHandRight
+  parent: OrganHumanHandRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidLegLeft
+  parent: OrganHumanLegLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidLegRight
+  parent: OrganHumanLegRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidFootLeft
+  parent: OrganHumanFootLeft
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidFootRight
+  parent: OrganHumanFootRight
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidEyes
+  parent: OrganHumanEyes
+  components:
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
 
 - type: speechVerb
   id: Neco

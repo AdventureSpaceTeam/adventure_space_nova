@@ -782,13 +782,17 @@ HeadSkeleton: OrganSkeletonPersonHead
 LeftArmHuman: OrganHumanArmLeft
 LeftArmSkeleton: OrganSkeletonPersonArmLeft
 LeftHandSkeleton: OrganSkeletonPersonHandLeft
+LeftFootHuman: OrganHumanFootLeft
 LeftLegHuman: OrganHumanLegLeft
 LeftLegSkeleton: OrganSkeletonPersonLegLeft
 RightArmHuman: OrganHumanArmRight
 RightHandSkeleton: OrganSkeletonPersonHandRight
 RightLegHuman: OrganHumanLegRight
+RightLegSkeleton: OrganSkeletonPersonLegRight
+TorsoHuman: OrganHumanTorso
 TorsoSkeleton: OrganSkeletonPersonTorso
 RightArmSkeleton: OrganSkeletonPersonArmRight
+RightFootSkeleton: OrganSkeletonPersonFootRight
 
 # 2026-01-19
 TowelColorPurple: null
