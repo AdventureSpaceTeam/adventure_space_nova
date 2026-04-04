@@ -32,7 +32,7 @@
   components:
   - type: Sprite
     sprite: _Adventure/Races/Snake/organs.rsi
-    state: heart-off
+    state: heart-on
   - type: Organ
   - type: Metabolizer
     maxReagents: 2

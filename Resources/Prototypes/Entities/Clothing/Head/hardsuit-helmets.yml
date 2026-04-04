@@ -109,9 +109,7 @@
     sprite: Clothing/Head/Hardsuits/goliathhelm.rsi
     layers:
     - state: icon
-    - state: icon-unshaded
-      shader: unshaded
-    - state: light-overlay
+    - state: icon-flash
       visible: false
       shader: unshaded
       map: [ "light" ]
@@ -120,16 +118,16 @@
   - type: ToggleableVisuals
     clothingVisuals:
       head:
-      - state: equipped-head-light
+      - state: on-equipped-HELMET
         shader: unshaded
       head-vox:
-      - state: equipped-head-light-vox
+      - state: on-equipped-HELMET-vox
         shader: unshaded
       head-reptilian:
-      - state: equipped-head-light-reptilian
+      - state: on-equipped-HELMET-reptilian
         shader: unshaded
       head-dog:
-      - state: equipped-head-light-dog
+      - state: on-equipped-HELMET-dog
         shader: unshaded
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/goliathhelm.rsi # Adventure
