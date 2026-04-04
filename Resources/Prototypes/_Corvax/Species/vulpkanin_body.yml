@@ -220,7 +220,7 @@
   components:
   - type: VisualOrgan
     data:
-      sprite: Mobs/Species/Vulpkanin/parts.rsi
+      sprite: _Corvax/Mobs/Species/Vulpkanin/parts.rsi
   - type: VisualOrganMarkings
     markingData:
       group: Vulpkanin
@@ -231,7 +231,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Vulpkanin/parts.rsi
+    sprite: _Corvax/Mobs/Species/Vulpkanin/parts.rsi
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganVulpkaninExternal ]
