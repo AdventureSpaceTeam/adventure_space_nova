@@ -5,7 +5,7 @@
   prototype: MobSynth
   sprites: MobSynthSprites
   markingLimits: MobSynthMarkingLimits
-  dollPrototype: MobSynthDummy
+  dollPrototype: AppearanceSynth
   skinColoration: Hues
   defaultSkinTone: "#ebebeb"
   minAge: 1
@@ -72,3 +72,63 @@
   - type: VisualOrganMarkings
     markingData:
       group: Synth
+
+- type: entity
+  id: OrganSynthExternal
+  abstract: true
+  parent: OrganSynthVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/IPC/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganSynthExternal ]
+  id: OrganSynthTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganSynthExternal ]
+  id: OrganSynthHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganSynthExternal ]
+  id: OrganSynthArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganSynthExternal ]
+  id: OrganSynthArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganSynthExternal ]
+  id: OrganSynthHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganSynthExternal ]
+  id: OrganSynthHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganSynthExternal ]
+  id: OrganSynthLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganSynthExternal ]
+  id: OrganSynthLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganSynthExternal ]
+  id: OrganSynthFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganSynthExternal ]
+  id: OrganSynthFootRight

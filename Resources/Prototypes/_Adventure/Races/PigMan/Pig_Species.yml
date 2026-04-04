@@ -25,7 +25,7 @@
   prototype: MobPigMan
   sprites: MobPigManSprites
   markingLimits: MobPigManMarkingLimits
-  dollPrototype: MobPigManDummy
+  dollPrototype: AppearancePigMan
   skinColoration: HumanToned
   minAge: 18
   youngAge: 25
@@ -93,3 +93,63 @@
   - type: VisualOrganMarkings
     markingData:
       group: PigMan
+
+- type: entity
+  id: OrganPigManExternal
+  abstract: true
+  parent: OrganPigManVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganPigManExternal ]
+  id: OrganPigManTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganPigManExternal ]
+  id: OrganPigManHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganPigManExternal ]
+  id: OrganPigManArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganPigManExternal ]
+  id: OrganPigManArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganPigManExternal ]
+  id: OrganPigManHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganPigManExternal ]
+  id: OrganPigManHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganPigManExternal ]
+  id: OrganPigManLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganPigManExternal ]
+  id: OrganPigManLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganPigManExternal ]
+  id: OrganPigManFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganPigManExternal ]
+  id: OrganPigManFootRight

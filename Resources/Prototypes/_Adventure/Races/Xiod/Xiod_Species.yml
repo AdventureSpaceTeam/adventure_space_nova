@@ -5,7 +5,7 @@
   prototype: MobXiod
   sprites: MobXiodSprites
   markingLimits: MobXiodMarkingLimits
-  dollPrototype: MobXiodDummy
+  dollPrototype: AppearanceXiod
   skinColoration: Hues
   defaultSkinTone: "#b17ac3"
   minAge: 30
@@ -73,3 +73,39 @@
   - type: VisualOrganMarkings
     markingData:
       group: Xiod
+
+- type: entity
+  id: OrganXiodExternal
+  abstract: true
+  parent: OrganXiodVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganXiodExternal ]
+  id: OrganXiodTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganXiodExternal ]
+  id: OrganXiodHead
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganXiodExternal ]
+  id: OrganXiodLegLeft
+  components:
+  - type: Sprite
+    state: nulll
+  - type: VisualOrgan
+    data:
+      state: nulll
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganXiodExternal ]
+  id: OrganXiodLegRight
+  components:
+  - type: Sprite
+    state: nulll
+  - type: VisualOrgan
+    data:
+      state: nulll

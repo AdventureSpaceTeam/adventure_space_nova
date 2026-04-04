@@ -31,10 +31,11 @@
 - type: entity
   save: false
   parent:
+  - AppearancePlasMan
   - MobRespirator
   - MobAtmosStandard
   - MobFlammable
-  - BaseMobSpecies
+  - BaseSpeciesMob
   id: BaseMobPlasMan
   abstract: true
   components:
@@ -77,13 +78,6 @@
   - type: Damageable
     damageContainer: Plasman
     damageModifierSet: PlasMan
-  - type: Body
-    prototype: PlasMan
-    requiredLegs: 2
-  - type: HumanoidAppearance
-    species: PlasMan
-  - type: Inventory
-    speciesId: plasmaman
   - type: Barotrauma
     damage:
       types:
@@ -187,8 +181,25 @@
           collection: MeatLaserImpact
 
 - type: entity
-  parent: BaseSpeciesDummy
-  id: MobPlasManDummy
+  parent: BaseSpeciesAppearance
+  id: AppearancePlasMan
   categories: [ HideSpawnMenu ]
   components:
+  - type: HumanoidProfile
+    species: PlasMan
+  - type: InitialBody
+    organs:
+      Torso: OrganPlasManTorso
+      Head: OrganPlasManHead
+      ArmLeft: OrganPlasManArmLeft
+      ArmRight: OrganPlasManArmRight
+      HandRight: OrganPlasManHandRight
+      HandLeft: OrganPlasManHandLeft
+      LegLeft: OrganPlasManLegLeft
+      LegRight: OrganPlasManLegRight
+      FootLeft: OrganPlasManFootLeft
+      FootRight: OrganPlasManFootRight
+      Brain: OrganPlasManBrain
+      Lungs: OrganPlasManLungs
   - type: Inventory
+    speciesId: plasmaman

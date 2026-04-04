@@ -21,7 +21,7 @@
   prototype: MobStone
   sprites: MobStoneSprites
   markingLimits: MobStoneMarkingLimits
-  dollPrototype: MobStoneDummy
+  dollPrototype: AppearanceStone
   skinColoration: Hues
   defaultSkinTone: "#868991"
   minAge: 1
@@ -91,3 +91,63 @@
   - type: VisualOrganMarkings
     markingData:
       group: Stone
+
+- type: entity
+  id: OrganStoneExternal
+  abstract: true
+  parent: OrganStoneVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Stone/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganStoneExternal ]
+  id: OrganStoneTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganStoneExternal ]
+  id: OrganStoneHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganStoneExternal ]
+  id: OrganStoneArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganStoneExternal ]
+  id: OrganStoneArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganStoneExternal ]
+  id: OrganStoneHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganStoneExternal ]
+  id: OrganStoneHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganStoneExternal ]
+  id: OrganStoneLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganStoneExternal ]
+  id: OrganStoneLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganStoneExternal ]
+  id: OrganStoneFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganStoneExternal ]
+  id: OrganStoneFootRight

@@ -39,7 +39,9 @@
 - type: entity
   abstract: true
   save: false
-  parent: BaseMobSpeciesOrganic
+  parent:
+  - AppearanceDrask
+  - BaseSpeciesMobOrganic
   id: BaseMobDrask
   name: Урист макТентакль
   components:
@@ -121,9 +123,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: DraskCryo
-  - type: Body
-    prototype: Drask
-    requiredLegs: 2
   - type: Hunger
   - type: Thirst
   - type: Icon
@@ -134,71 +133,35 @@
     spawned:
     - id: FoodMeatLizard
       amount: 5
-  - type: HumanoidAppearance
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceDrask
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidProfile
     species: Drask
     hideLayersOnEquip:
     - HeadSide
+  - type: InitialBody
+    organs:
+      Torso: OrganDraskTorso
+      Head: OrganDraskHead
+      ArmLeft: OrganDraskArmLeft
+      ArmRight: OrganDraskArmRight
+      HandRight: OrganDraskHandRight
+      HandLeft: OrganDraskHandLeft
+      LegLeft: OrganDraskLegLeft
+      LegRight: OrganDraskLegRight
+      Brain: OrganDraskBrain
+      Eyes: OrganDraskEyes
+      Lungs: OrganDraskLungs
+      Heart: OrganDraskHeart
+      Stomach: OrganDraskStomach
+      Liver: OrganDraskLiver
+      Kidneys: OrganDraskKidneys
   - type: Inventory
     speciesId: drask
-    templateId: Drask
-  - type: ScaleVisuals
-    scale: 1, 1.1 # рост 2 метра.
-  - type: Sprite
-    layers:
-    - map: [ "enum.HumanoidVisualLayers.Chest" ]
-    - map: [ "enum.HumanoidVisualLayers.Head" ]
-    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
-    - map: [ "enum.HumanoidVisualLayers.RArm" ]
-    - map: [ "enum.HumanoidVisualLayers.LArm" ]
-    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
-    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-    - map: ["brass"]
-    - map: ["pants"]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: ["jumpsuit"]
-    - map: ["enum.HumanoidVisualLayers.LFoot"]
-    - map: ["enum.HumanoidVisualLayers.RFoot"]
-    - map: ["enum.HumanoidVisualLayers.LHand"]
-    - map: ["enum.HumanoidVisualLayers.RHand"]
-    - map: [ "gloves" ]
-    - map: [ "shoes" ]
-    - map: [ "ears" ]
-    - map: [ "outerClothing" ]
-    - map: [ "belt" ]
-    - map: [ "id" ]
-    - map: [ "neck" ]
-    - map: [ "enum.HumanoidVisualLayers.Back" ]
-    - map: [ "back" ]
-    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
-    - map: [ "enum.HumanoidVisualLayers.Hair" ]
-    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
-    - map: [ "eyes" ]
-    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-    - map: [ "enum.HumanoidVisualLayers.Tail" ]
-    - map: [ "mask" ]
-    - map: [ "head" ]
-    - map: [ "pocket1" ]
-    - map: [ "pocket2" ]
-    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
-    - map: [ "enum.HumanoidVisualLayers.Snout" ]
-    - map: [ "clownedon" ]
-      sprite: "Effects/creampie.rsi"
-      state: "creampie_human"
-      visible: false
-
-- type: entity
-  parent: BaseSpeciesDummy
-  id: MobDraskDummy
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HumanoidAppearance
-    species: Drask
-  - type: Inventory
     templateId: Drask
   - type: ScaleVisuals
     scale: 1, 1.1

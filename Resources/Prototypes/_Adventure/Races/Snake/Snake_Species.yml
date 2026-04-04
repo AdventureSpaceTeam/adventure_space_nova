@@ -25,7 +25,7 @@
   prototype: MobZerah
   sprites: MobZerahSprites
   markingLimits: MobZerahMarkingLimits
-  dollPrototype: MobZerahDummy
+  dollPrototype: AppearanceZerah
   skinColoration: Hues
   defaultSkinTone: "#bfa010"
   minAge: 12
@@ -98,3 +98,47 @@
   - type: VisualOrganMarkings
     markingData:
       group: Zerah
+
+- type: entity
+  id: OrganZerahExternal
+  abstract: true
+  parent: OrganZerahVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Snake/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganZerahExternal ]
+  id: OrganZerahTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganZerahExternal ]
+  id: OrganZerahHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganZerahExternal ]
+  id: OrganZerahArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganZerahExternal ]
+  id: OrganZerahArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganZerahExternal ]
+  id: OrganZerahHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganZerahExternal ]
+  id: OrganZerahHandRight

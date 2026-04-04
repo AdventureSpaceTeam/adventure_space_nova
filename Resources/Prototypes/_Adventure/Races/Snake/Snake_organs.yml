@@ -1,4 +1,4 @@
-﻿- type: metabolizerType
+- type: metabolizerType
   id: Zerah
   name: Зерах
 
@@ -26,7 +26,7 @@
 
 - type: entity
   id: OrganZerahHeart
-  parent: BaseAnimalOrgan
+  parent: OrganAnimal
   name: Сердце зераха
   description: Тук тук.
   components:

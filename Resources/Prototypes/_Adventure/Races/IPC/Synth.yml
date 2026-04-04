@@ -55,8 +55,9 @@
   save: false
   name: Урист макКПБ
   parent:
+  - AppearanceSynth
   - MobFlammable
-  - BaseMobSpeciesInorganicIPC
+  - BaseSpeciesMobInorganicIPC
   id: BaseMobSynth
   components:
   - type: BodyEmotes
@@ -164,14 +165,9 @@
     damage:
       types:
         Blunt: 10
-  - type: HumanoidAppearance
-    species: Synth
   - type: Icon
     sprite: _Adventure/Races/IPC/Species/parts.rsi
     state: full
-  - type: Body
-    prototype: Synth
-    requiredLegs: 2
   - type: Damageable
     damageContainer: Synth
     damageModifierSet: Synth
@@ -264,22 +260,27 @@
   - type: GuideHelp
     guides:
     - Species
-  - type: Inventory
-    templateId: Synth
-    displacements:
-      pants:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/IPC/displacement.rsi
-            state: pants
 
 - type: entity
-  parent: BaseSpeciesDummy
-  id: MobSynthDummy
-  noSpawn: true
+  parent: BaseSpeciesAppearance
+  id: AppearanceSynth
+  categories: [ HideSpawnMenu ]
   components:
-    - type: HumanoidAppearance
+    - type: HumanoidProfile
       species: Synth
+    - type: InitialBody
+      organs:
+        Torso: OrganSynthTorso
+        Head: OrganSynthHead
+        ArmLeft: OrganSynthArmLeft
+        ArmRight: OrganSynthArmRight
+        HandRight: OrganSynthHandRight
+        HandLeft: OrganSynthHandLeft
+        LegLeft: OrganSynthLegLeft
+        LegRight: OrganSynthLegRight
+        FootLeft: OrganSynthFootLeft
+        FootRight: OrganSynthFootRight
+        Brain: SynthPosiBrain
     - type: Inventory
       templateId: Synth
       displacements:

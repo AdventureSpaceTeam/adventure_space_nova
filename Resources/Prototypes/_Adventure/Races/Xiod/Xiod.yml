@@ -53,7 +53,9 @@
 - type: entity
   abstract: true
   save: false
-  parent: BaseMobSpeciesOrganicNoFingerprint
+  parent:
+  - AppearanceXiod
+  - BaseSpeciesMobOrganicNoFingerprint
   id: BaseMobXiod
   name: Урист макАмёба
   components:
@@ -126,9 +128,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Xiod
-  - type: Body
-    prototype: Xiod
-    requiredLegs: 2
   - type: Hunger
   - type: Thirst
   - type: Icon
@@ -139,40 +138,23 @@
     spawned:
     - id: WaterDropletHat
       amount: 5
-  - type: HumanoidAppearance
-    species: Xiod
-  - type: Inventory
-    speciesId: xiod
-    templateId: Xiod
-    displacements:
-      back:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Xiod/displacement.rsi
-            state: back
-      suitstorage:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Xiod/displacement.rsi
-            state: suit
-      belt:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Xiod/displacement.rsi
-            state: belt
-      gloves:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Xiod/displacement.rsi
-            state: hand
 
 - type: entity
-  parent: BaseSpeciesDummy
-  id: MobXiodDummy
+  parent: BaseSpeciesAppearance
+  id: AppearanceXiod
   categories: [ HideSpawnMenu ]
   components:
-  - type: HumanoidAppearance
+  - type: HumanoidProfile
     species: Xiod
+  - type: InitialBody
+    organs:
+      Torso: OrganXiodTorso
+      Head: OrganXiodHead
+      LegLeft: OrganXiodLegLeft
+      LegRight: OrganXiodLegRight
+      Brain: OrganXiodBrain
+      Eyes: OrganXiodEyes
+      Lungs: OrganXiodLungs
   - type: Inventory
     speciesId: xiod
     templateId: Xiod

@@ -38,7 +38,9 @@
 - type: entity
   abstract: true
   save: false
-  parent: BaseMobSpeciesOrganic
+  parent:
+  - AppearanceInsectSerpentide
+  - BaseSpeciesMobOrganic
   id: BaseMobInsect
   name: Урист макЛичинус
   components:
@@ -57,53 +59,6 @@
         Poison: -0.50
       groups:
         Brute: -0.07
-  - type: Sprite
-    layers:
-    - map: [ "enum.HumanoidVisualLayers.Chest" ]
-    - map: [ "enum.HumanoidVisualLayers.Head" ]
-    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
-    - map: [ "enum.HumanoidVisualLayers.RArm" ]
-    - map: [ "enum.HumanoidVisualLayers.LArm" ]
-    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
-    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-    - map: ["brass"]
-    - map: ["pants"]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: ["jumpsuit"]
-    - map: ["enum.HumanoidVisualLayers.LFoot"]
-    - map: ["enum.HumanoidVisualLayers.RFoot"]
-    - map: ["enum.HumanoidVisualLayers.LHand"]
-    - map: ["enum.HumanoidVisualLayers.RHand"]
-    - map: [ "gloves" ]
-    - map: [ "shoes" ]
-    - map: [ "ears" ]
-    - map: [ "eyes" ]
-    - map: [ "outerClothing" ]
-    - map: [ "belt" ]
-    - map: [ "id" ]
-    - map: [ "neck" ]
-    - map: [ "enum.HumanoidVisualLayers.Back" ]
-    - map: [ "back" ]
-    - map: [ "enum.HumanoidVisualLayers.Snout" ]
-    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
-    - map: [ "enum.HumanoidVisualLayers.Hair" ]
-    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
-    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-    - map: [ "enum.HumanoidVisualLayers.Tail" ]
-    - map: [ "mask" ]
-    - map: [ "head" ]
-    - map: [ "pocket1" ]
-    - map: [ "pocket2" ]
-    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-insect
-      visible: false
-    - map: [ "clownedon" ]
-      sprite: "Effects/creampie.rsi"
-      state: "creampie_human"
-      visible: false
   - type: ExplosionResistance
     damageCoefficient: 0.8
   - type: Reactive
@@ -221,8 +176,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: InsectArmor
-  - type: Body
-    prototype: InsectSerpentide
   - type: Icon
     sprite: _Adventure/Races/Insect/Species/parts.rsi
     state: full
@@ -231,62 +184,76 @@
     spawned:
     - id: FoodMeatSpider
       amount: 5
-  - type: HumanoidAppearance
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceInsectSerpentide
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidProfile
     species: InsectSerpentide
     hideLayersOnEquip:
     - HeadSide
-  - type: Inventory
-    templateId: InsectSerpentide
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: Uniforms
-      outerClothing:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: OuterClothing
-      neck:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: neck
-      head:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: head
-    maleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: Uniforms
-      outerClothing:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: OuterClothing
-      neck:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: neck
-      head:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Insect/displacement.rsi
-            state: head
-
-- type: entity
-  parent: BaseSpeciesDummy
-  id: MobInsectDummy
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HumanoidAppearance
-    species: InsectSerpentide
+  - type: InitialBody
+    organs:
+      Torso: OrganInsectTorso
+      Head: OrganInsectHead
+      ArmLeft: OrganInsectArmLeft
+      ArmRight: OrganInsectArmRight
+      HandRight: OrganInsectHandRight
+      HandLeft: OrganInsectHandLeft
+      Brain: OrganInsectiBrain
+      Eyes: OrganInsectEyes
+      Heart: OrganInsectHeart
+      Lungs: OrganInsectLungs
+      Stomach: OrganInsectStomach
+  - type: Sprite
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["brass"]
+    - map: ["pants"]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: ["jumpsuit"]
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "outerClothing" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
+    - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-insect
+      visible: false
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
   - type: Inventory
     templateId: InsectSerpentide
     femaleDisplacements:

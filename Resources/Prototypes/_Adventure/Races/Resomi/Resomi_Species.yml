@@ -5,7 +5,7 @@
   prototype: MobResomi
   sprites: MobResomiSprites
   markingLimits: MobResomiMarkingLimits
-  dollPrototype: MobResomiDummy
+  dollPrototype: AppearanceResomi
   skinColoration: Hues
   defaultSkinTone: "#36c9c0"
   minAge: 15
@@ -72,3 +72,63 @@
   - type: VisualOrganMarkings
     markingData:
       group: Resomi
+
+- type: entity
+  id: OrganResomiExternal
+  abstract: true
+  parent: OrganResomiVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Resomi/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganResomiExternal ]
+  id: OrganResomiTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganResomiExternal ]
+  id: OrganResomiHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganResomiExternal ]
+  id: OrganResomiArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganResomiExternal ]
+  id: OrganResomiArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganResomiExternal ]
+  id: OrganResomiHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganResomiExternal ]
+  id: OrganResomiHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganResomiExternal ]
+  id: OrganResomiLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganResomiExternal ]
+  id: OrganResomiLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganResomiExternal ]
+  id: OrganResomiFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganResomiExternal ]
+  id: OrganResomiFootRight

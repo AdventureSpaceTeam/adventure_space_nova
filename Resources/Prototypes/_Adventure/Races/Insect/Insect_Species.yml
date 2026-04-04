@@ -35,7 +35,7 @@
   prototype: MobInsect
   sprites: MobInsectSprites
   markingLimits: MobInsectMarkingLimits
-  dollPrototype: MobInsectDummy
+  dollPrototype: AppearanceInsectSerpentide
   skinColoration: Hues
   defaultSkinTone: "#835629"
   minAge: 10
@@ -114,3 +114,47 @@
   - type: VisualOrganMarkings
     markingData:
       group: Insect
+
+- type: entity
+  id: OrganInsectExternal
+  abstract: true
+  parent: OrganInsectVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganInsectExternal ]
+  id: OrganInsectTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganInsectExternal ]
+  id: OrganInsectHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganInsectExternal ]
+  id: OrganInsectArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganInsectExternal ]
+  id: OrganInsectArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganInsectExternal ]
+  id: OrganInsectHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganInsectExternal ]
+  id: OrganInsectHandRight

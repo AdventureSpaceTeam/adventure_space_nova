@@ -5,7 +5,7 @@
   prototype: MobPlasMan
   sprites: MobPlasManSprites
   markingLimits: MobPlasManMarkingLimits
-  dollPrototype: MobPlasManDummy
+  dollPrototype: AppearancePlasMan
   skinColoration: VoxFeathers
   minAge: 18
   youngAge: 50
@@ -72,3 +72,63 @@
   - type: VisualOrganMarkings
     markingData:
       group: PlasMan
+
+- type: entity
+  id: OrganPlasManExternal
+  abstract: true
+  parent: OrganPlasManVisual
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganPlasManExternal ]
+  id: OrganPlasManTorso
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+
+- type: entity
+  parent: [ OrganBaseHead, OrganPlasManExternal ]
+  id: OrganPlasManHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganPlasManExternal ]
+  id: OrganPlasManArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganPlasManExternal ]
+  id: OrganPlasManArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganPlasManExternal ]
+  id: OrganPlasManHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganPlasManExternal ]
+  id: OrganPlasManHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganPlasManExternal ]
+  id: OrganPlasManLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganPlasManExternal ]
+  id: OrganPlasManLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganPlasManExternal ]
+  id: OrganPlasManFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganPlasManExternal ]
+  id: OrganPlasManFootRight
