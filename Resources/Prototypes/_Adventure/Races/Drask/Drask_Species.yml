@@ -38,7 +38,10 @@
   femaleFirstNames: NamesDrask
   naming: First
 
-- id: Drask
+- type: markingsGroup
+  parent: Undergarments
+  id: Drask
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 1
@@ -80,10 +83,6 @@
       - FaceDraskBase
       limit: 1
       required: true
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
-
 
 - type: entity
   id: OrganDraskVisual

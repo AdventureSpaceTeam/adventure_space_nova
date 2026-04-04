@@ -13,7 +13,10 @@
   oldAge: 39
   maxAge: 65
 
-- id: Felinid
+- type: markingsGroup
+  parent: Undergarments
+  id: Felinid
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 2
@@ -71,6 +74,4 @@
       nudityDefault:
       - UndergarmentTopTanktopFelinid
       required: false
-  parent: Undergarments
-  type: markingsGroup
 

@@ -36,7 +36,10 @@
   femaleFirstNames: NamesZerah
   naming: First
 
-- id: Zerah
+- type: markingsGroup
+  parent: Undergarments
+  id: Zerah
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 1
@@ -84,9 +87,6 @@
       - SnakeTailBase
       limit: 1
       required: true
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
 
 - type: entity
   id: OrganZerahVisual

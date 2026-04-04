@@ -32,7 +32,10 @@
   oldAge: 42
   maxAge: 70
 
-- id: PigMan
+- type: markingsGroup
+  parent: Undergarments
+  id: PigMan
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 1
@@ -80,8 +83,6 @@
       - PigNoseBase
       limit: 1
       required: true
-  parent: Undergarments
-  type: markingsGroup
 
 - type: entity
   id: OrganPigManVisual

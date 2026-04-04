@@ -16,7 +16,10 @@
   femaleFirstNames: NamesResomiFemale
   naming: First
 
-- id: Resomi
+- type: markingsGroup
+  parent: Undergarments
+  id: Resomi
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 1
@@ -58,9 +61,6 @@
       - ResomiTailBase
       limit: 1
       required: true
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
 
 - type: entity
   id: OrganResomiVisual

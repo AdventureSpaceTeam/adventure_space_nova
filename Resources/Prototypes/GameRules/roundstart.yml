@@ -516,6 +516,18 @@
       prob: 0.05 # Only 1 in 20 rounds...
       tableId: SpaceTrafficControlTable
 
+- type: entity
+  id: SpaceTrafficControlFriendlyEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1500 # 25 mins
+    minMaxEventTiming:
+      min: 1200 # 20 mins
+      max: 2700 # 30 mins
+    scheduledGameRules: !type:NestedSelector
+      tableId: UnknownShuttlesFriendlyTable
+
 # variation passes
 - type: entity
   id: BasicRoundstartVariation

@@ -34,7 +34,10 @@
   femaleFirstNames: NamesStone
   naming: First
 
-- id: Stone
+- type: markingsGroup
+  parent: Undergarments
+  id: Stone
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Back:
       default:
@@ -77,9 +80,6 @@
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: false
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
 
 - type: entity
   id: OrganStoneVisual

@@ -46,7 +46,10 @@
   femaleFirstNames: NamesInsect
   naming: First
 
-- id: Insect
+- type: markingsGroup
+  parent: Undergarments
+  id: Insect
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Back:
       default:
@@ -99,10 +102,6 @@
       - InsectTailBase
       limit: 1
       required: true
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
-
 
 - type: entity
   id: OrganInsectVisual

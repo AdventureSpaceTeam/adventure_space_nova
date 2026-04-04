@@ -18,7 +18,10 @@
   femaleFirstNames: NamesXiod
   naming: First
 
-- id: Xiod
+- type: markingsGroup
+  parent: Undergarments
+  id: Xiod
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 1
@@ -59,9 +62,6 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: false
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
 
 - type: entity
   id: OrganXiodVisual

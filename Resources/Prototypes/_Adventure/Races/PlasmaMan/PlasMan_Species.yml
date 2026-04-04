@@ -18,7 +18,10 @@
   maleLastNames: NamesPlasManLast
   femaleLastNames: NamesPlasManLast
 
-- id: PlasMan
+- type: markingsGroup
+  parent: Undergarments
+  id: PlasMan
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 3
@@ -56,11 +59,6 @@
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: false
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
-
-
 
 - type: entity
   id: OrganPlasManVisual

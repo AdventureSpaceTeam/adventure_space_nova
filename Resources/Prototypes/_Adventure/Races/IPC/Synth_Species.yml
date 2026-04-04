@@ -18,7 +18,10 @@
   femaleFirstNames: NamesSynth
   naming: First
 
-- id: Synth
+- type: markingsGroup
+  parent: Undergarments
+  id: Synth
+  onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Chest:
       limit: 3
@@ -58,9 +61,6 @@
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: false
-  onlyWhitelisted: true
-  parent: Undergarments
-  type: markingsGroup
 
 - type: entity
   id: OrganSynthVisual
