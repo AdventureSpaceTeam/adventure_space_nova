@@ -1,28 +1,4 @@
 ﻿- type: lobbyBackground
-  id: WafelErp
-  background: /Textures/_Adventure/LobbyScreens/erp.png
-
-- type: lobbyBackground
-  id: WafelRHBZZ
-  background: /Textures/_Adventure/LobbyScreens/rhbzz.png
-
-- type: lobbyBackground
-  id: WafelUtil
-  background: /Textures/_Adventure/LobbyScreens/util.png
-
-- type: lobbyBackground
-  id: WafelNuke
-  background: /Textures/_Adventure/LobbyScreens/nuke.png
-
-- type: lobbyBackground
-  id: WafelOBR
-  background: /Textures/_Adventure/LobbyScreens/obr.png
-
-- type: lobbyBackground
-  id: WafelSynd
-  background: /Textures/_Adventure/LobbyScreens/synd.png
-
-- type: lobbyBackground
   id: LimelingFelenidCmo
   background: /Textures/_Adventure/LobbyScreens/limeling_felenid_cmo.png
 
@@ -37,3 +13,7 @@
 - type: lobbyBackground
   id: spotted
   background: /Textures/_Adventure/LobbyScreens/spotted.png
+
+- type: lobbyBackground
+  id: AeloutLoneop
+  background: /Textures/_Adventure/LobbyScreens/aelout_loneop.png

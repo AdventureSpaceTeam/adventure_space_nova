@@ -76,7 +76,7 @@
 
 - type: microwaveMealRecipe
   id: RecipeSoupDad
-  name: рецепт батиного супа
+  name: рецепт батиного хрючева
   result: FoodDadSoup
   time: 20
   group: Savory
