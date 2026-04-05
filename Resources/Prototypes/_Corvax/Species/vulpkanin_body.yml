@@ -291,6 +291,10 @@
 - type: entity
   parent: [ OrganVulpkaninVisual, OrganBaseEyes, OrganVulpkaninInternal ]
   id: OrganVulpkaninEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
 
 - type: entity
   parent: [ OrganBaseTongue, OrganVulpkaninInternal ]
