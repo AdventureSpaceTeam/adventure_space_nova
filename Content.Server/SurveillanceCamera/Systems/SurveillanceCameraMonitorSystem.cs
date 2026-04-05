@@ -2,7 +2,7 @@ using System.Linq;
 using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Power.Components;
-using Content.Server.PowerCell; // Adventure monitors
+using Content.Shared.PowerCell; // Adventure monitors
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.Power;

@@ -138,7 +138,7 @@
 
 - type: entity
   id: LockerBlueshieldFilledHardsuit
-  suffix: Заполненный, Скафандр, AdvRoles, AdvMapping
+  suffix: Заполненный, РИГ, AdvRoles, AdvMapping
   parent: LockerBlueshield
   components:
   - type: StorageFill
@@ -148,7 +148,6 @@
       - id: MedkitCombatFilled
       - id: MedkitFilled
       - id: HandheldCrewMonitor
-      - id: ClothingOuterHardsuitBlueshield
       - id: TrackingImplanter
       - id: TrackingImplanter
       - id: TrackingImplanter
@@ -156,7 +155,9 @@
       - id: RubberStampblueshield
       - id: WeaponX2DualphaseEnergyLaserGun
       - id: ClothingBeltSheathBS
+      - id: ClothingControlModsuitBSOSealed
 #      - id: BSuplink Устарел и заменён на торгомат
+#      - id: ClothingOuterHardsuitBlueshield Заменён на РИГ
 
 #Печать ОСЩ by raidgo
 - type: entity

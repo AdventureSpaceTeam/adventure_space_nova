@@ -14,25 +14,25 @@ namespace Content.Client._Adventure.PlantAnalyzer.UI;
 [GenerateTypedNameReferences]
 public sealed partial class PlantAnalyzerWindow : FancyWindow
 {
-    private readonly IEntityManager _entityManager;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
     private readonly ButtonGroup _buttonGroup = new();
+
+    public event Action<bool>? OnToggled;
 
     private const string IndentedNewline = "\n   ";
 
-    public PlantAnalyzerWindow(PlantAnalyzerBoundUserInterface owner)
+    public PlantAnalyzerWindow()
     {
         RobustXamlLoader.Load(this);
-
-        var dependencies = IoCManager.Instance!;
-        _entityManager = dependencies.Resolve<IEntityManager>();
+        IoCManager.InjectDependencies(this);
 
         OnButton.Group = _buttonGroup;
         OnButton.ToggleMode = true;
         OffButton.Group = _buttonGroup;
         OffButton.ToggleMode = true;
 
-        OnButton.OnPressed += _ => owner.AdvPressed(true);
-        OffButton.OnPressed += _ => owner.AdvPressed(false);
+        OnButton.OnPressed += _ => OnToggled?.Invoke(true);
+        OffButton.OnPressed += _ => OnToggled?.Invoke(false);
     }
 
     public void Populate(PlantAnalyzerScannedSeedPlantInformation msg)

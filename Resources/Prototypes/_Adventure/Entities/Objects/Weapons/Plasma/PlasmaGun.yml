@@ -44,7 +44,7 @@
       - PlasmaMag
   - type: Appearance
   - type: PowerCellVisuals
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletPlasmaLaser
     fireCost: 40
   - type: Edible

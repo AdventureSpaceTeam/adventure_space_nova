@@ -28,7 +28,7 @@
     maxCharge: 200
     startingCharge: 200
     pricePerJoule: 0.3
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletProtoCutter
     fireCost: 35
   - type: BatteryWeaponFireModes

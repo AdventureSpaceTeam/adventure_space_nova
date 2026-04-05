@@ -50,11 +50,15 @@
   - BorgModuleTool
   - BorgModuleConstruction
   - BorgModuleRCD
+  - BorgModuleRPD #Adventure
   - BorgModuleCable
 
   radioChannels:
   - Engineering
   - Science
+
+  addComponents:
+  - type: ShowAccessReaderSettings #adventure
 
   # Visual
   inventoryTemplateId: borgShort
@@ -120,7 +124,6 @@
     - BorgModuleJanitor
 
   defaultModules:
-  - BorgModuleTool
   - BorgModuleCleaning
   - BorgModuleCustodial
 
@@ -156,7 +159,6 @@
     - BorgModuleMedical
 
   defaultModules:
-  - BorgModuleTool
   - BorgModuleChemical
   - BorgModuleTopicals
   - BorgModuleRescue
@@ -208,7 +210,6 @@
     - BorgModuleService
 
   defaultModules:
-  - BorgModuleTool
   - BorgModuleMusique
   - BorgModuleService
   - BorgModuleClowning

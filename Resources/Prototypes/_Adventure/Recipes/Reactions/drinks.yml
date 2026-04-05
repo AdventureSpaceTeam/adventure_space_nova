@@ -1,0 +1,127 @@
+- type: reaction
+  id: EngFuel
+  reactants:
+    BudgetInsulsDrink:
+      amount: 3
+    CrushDepth:
+      amount: 1
+    ScrewdriverCocktail:
+      amount: 2
+  products:
+    EngFuel: 6
+
+- type: reaction
+  id: MedFuel
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    DoctorsDelight:
+      amount: 7
+    Painkiller:
+      amount: 2
+    Ice:
+      amount: 1
+  products:
+    MedFuel: 10
+
+- type: reaction
+  id: SrvFuel
+  reactants:
+    BananaHonk:
+      amount: 2
+    Tortuga:
+      amount: 1
+    OrangeLimeSoda:
+      amount: 3
+  products:
+    SrvFuel: 6
+
+- type: reaction
+  id: SecFuel
+  reactants:
+    Amasec:
+      amount: 1
+    SyndicateBomb:
+      amount: 1
+  products:
+    SecFuel: 2
+
+- type: reaction
+  id: CrgFuel
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    ElectricShark:
+      amount: 3
+    LongIslandIcedTea:
+      amount: 1
+    Moonshine:
+      amount: 2
+  products:
+    CrgFuel: 6
+
+- type: reaction
+  id: RNDLightFuel
+  reactants:
+    GargleBlaster:
+      amount: 1
+    WhiteRussian:
+      amount: 2
+  products:
+    RNDLightFuel: 3
+
+- type: reaction
+  id: RNDDarkFuel
+  reactants:
+    GargleBlaster:
+      amount: 1
+    BlackRussian:
+      amount: 2
+  products:
+    RNDDarkFuel: 3
+
+- type: reaction
+  id: CmdFuel
+  reactants:
+    Boyarsky:
+      amount: 1
+    Kalimotxo:
+      amount: 3
+    IcedCoffee:
+      amount: 2
+  products:
+    CmdFuel: 6
+
+- type: reaction
+  id: StationBlessing
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    RNDLightFuel:
+      amount: 1
+    CrgFuel:
+      amount: 1
+    CmdFuel:
+      amount: 1
+    SecFuel:
+      amount: 1
+    SrvFuel:
+      amount: 1
+    EngFuel:
+      amount: 1
+    MedFuel:
+      amount: 1
+  products:
+    StationBlessing: 6
+
+- type: reaction
+  id: SyndieFuel
+  reactants:
+    Cosmopolitan:
+      amount: 2
+    Daiquiri:
+      amount: 2
+    AtomicBomb:
+      amount: 1
+  products:
+    SyndieFuel: 5

@@ -120,7 +120,7 @@
   description: Довольно крепкое сооружение ксеноморфов из слизи.
   components:
   - type: Damageable
-    damageModifierSet: Aliens
+    damageModifierSet: Alien
   - type: IconSmooth
     key: walls
     base: Alian
@@ -236,7 +236,7 @@
   - type: Occluder
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: Aliens
+    damageModifierSet: Alien
   - type: Destructible
     thresholds:
     - trigger:

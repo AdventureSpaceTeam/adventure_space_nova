@@ -2,7 +2,7 @@ using Content.Server.Atmos.Monitor.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Pinpointer;
 using Content.Server.Power.Components;
-using Content.Server.PowerCell; // Adventure monitors
+using Content.Shared.PowerCell; // Adventure monitors
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Consoles;

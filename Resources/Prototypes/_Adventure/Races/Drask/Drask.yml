@@ -24,11 +24,11 @@
             max: 213.15
           damage:
             groups:
-              Burn: -2
+              Burn: -1
             types:
-              Slash: -2
-              Piercing: -2
-              Bloodloss: -2
+              Slash: -1
+              Piercing: -1
+              Bloodloss: -1
 
 - type: entity
   save: false
@@ -55,12 +55,12 @@
   - type: UrUAccent # Adventure-Accent
   - type: SolutionContainerManager
     solutions:
-      chemicals: # тупой, но рабочий костыль, 20u слабого приоксадона находятся в качестве введёного реагента и постоянно метаболизируются, но не реенерируют до достижения телом температуры в -40с.
-        reagents:
+      bloodstream: # тупой, но рабочий костыль, 20u слабого приоксадона находятся в качестве введёного реагента и постоянно метаболизируются, но не реенерируют до достижения телом температуры в -40с.
+        reagents: # upd: Костыль стал ещё тупее, но всё-равно работает
         - ReagentId: CryoxadoneDrask
           Quantity: 20
   - type: SolutionRegeneration
-    solution: chemicals
+    solution: bloodstream
     generated:
       reagents:
       - ReagentId: CryoxadoneDrask
@@ -81,7 +81,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#0091ff"
   - type: Bloodstream
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: DraskEmote
@@ -99,13 +102,14 @@
     normalBodyTemperature: 291.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
+    currentTemperature: 291.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 298.15
     coldDamageThreshold: 3.15
-    currentTemperature: 291.15
     coldDamage:
       types:
         Cold : 0.0
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 2.0

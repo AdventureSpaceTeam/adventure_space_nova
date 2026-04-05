@@ -1,8 +1,4 @@
-﻿marking-VoxHairMadScientist = Вокс, Безумный учёный
-marking-VoxHairHedgehog = Вокс Ёж
-marking-VoxHairBushy = Вокс, Иглы
-marking-VoxHairSlick = Вокс, Гладкие перья
-marking-VoxTailBigSpike-big_spike = Вокс, Хвост (Большой с шипами)
+﻿marking-VoxTailBigSpike-big_spike = Вокс, Хвост (Большой с шипами)
 marking-VoxTailBigSpike = Вокс, Хвост (Большой с шипами)
 marking-VoxBeak-beak = Вокс, Клюв (Стандарт)
 marking-VoxBeak = Вокс, Клюв (Стандарт)

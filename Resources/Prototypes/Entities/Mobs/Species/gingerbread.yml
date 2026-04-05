@@ -29,13 +29,20 @@
       - id: FoodBakedCookie #should be replaced with gingerbread sheets or something... provided you're willing to make a full spriteset of those.
         amount: 5
   - type: Bloodstream
-    bloodReagent: Sugar
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 100
+      - ReagentId: Butter
+        Quantity: 200
+# Adventure start
   - type: GhostRole
     prob: 1
     name: ghost-role-information-gingerbread-name
     allowMovement: true
     description: ghost-role-information-gingerbread-description
     rules: ghost-role-information-nonantagonist-rules
+# Adventure end
   - type: GhostTakeoverAvailable
   - type: Fixtures
     fixtures:

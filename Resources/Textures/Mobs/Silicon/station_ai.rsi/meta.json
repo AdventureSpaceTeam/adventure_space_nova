@@ -249,7 +249,15 @@
             "name": "frame_3"
         },
         {
-            "name": "frame_3b"
+            "name": "frame_3b",
+            "delays": [
+                [
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
+                ]
+            ]
         },
         {
             "name": "frame_4"

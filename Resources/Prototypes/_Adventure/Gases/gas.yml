@@ -1,5 +1,5 @@
 - type: gas
-  id: 9
+  id: BZ
   name: gases-bz
   specificHeat: 20
   heatCapacityRatio: 1.33
@@ -9,7 +9,7 @@
   pricePerMole: 4
 
 - type: gas
-  id: 10
+  id: Halon
   name: gases-halon
   specificHeat: 175
   heatCapacityRatio: 1.33
@@ -21,7 +21,7 @@
   pricePerMole: 16
 
 - type: gas
-  id: 11
+  id: Healium
   name: gases-healium
   specificHeat: 10
   heatCapacityRatio: 1.33
@@ -33,7 +33,7 @@
   pricePerMole: 24
 
 - type: gas
-  id: 12
+  id: HyperNoblium
   name: gases-hyper-noblium
   specificHeat: 2000
   heatCapacityRatio: 1.33
@@ -47,7 +47,7 @@
   pricePerMole: 30
 
 - type: gas
-  id: 13
+  id: Hydrogen
   name: gases-hydrogen
   specificHeat: 15
   heatCapacityRatio: 1.5
@@ -57,7 +57,7 @@
   pricePerMole: 10
 
 - type: gas
-  id: 14
+  id: Pluoxium
   name: gases-pluoxium
   specificHeat: 80
   heatCapacityRatio: 1.5
@@ -70,7 +70,7 @@
   pricePerMole: 10
 
 - type: gas
-  id: 15
+  id: Nitrium
   name: gases-nitrium
   specificHeat: 10
   heatCapacityRatio: 1.3
@@ -83,7 +83,7 @@
   pricePerMole: 24
 
 - type: gas
-  id: 16
+  id: Helium
   name: gases-helium
   specificHeat: 15
   heatCapacityRatio: 15
@@ -93,7 +93,7 @@
   pricePerMole: 14
 
 - type: gas
-  id: 17
+  id: AntiNoblium
   name: gases-anti-noblium
   specificHeat: 1
   heatCapacityRatio: 1
@@ -107,7 +107,7 @@
   pricePerMole: 40
 
 - type: gas
-  id: 18
+  id: ProtoNitrate
   name: gases-proto-nitrate
   specificHeat: 30
   heatCapacityRatio: 1.33
@@ -121,7 +121,7 @@
   pricePerMole: 10
 
 - type: gas
-  id: 19
+  id: Zauker
   name: gases-zauker
   specificHeat: 350
   heatCapacityRatio: 1.33

@@ -5,10 +5,11 @@
   description: Думаете, он может тянуть сани?
   components:
   - type: Temperature
-    heatDamageThreshold: 313.15
-    coldDamageThreshold: 73
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
     coldDamage:
       types:
         Cold: 0.1
@@ -60,10 +61,11 @@
   id: MobReindeerDoePolaris
   components:
   - type: Temperature
-    heatDamageThreshold: 313.15
-    coldDamageThreshold: 73
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 313.15
+    coldDamageThreshold: 73
     coldDamage:
       types:
         Cold: 0.1

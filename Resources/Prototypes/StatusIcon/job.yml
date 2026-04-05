@@ -443,7 +443,7 @@
   icon:
     sprite: *icon-rsi
     state: SeniorPhysician
-  allowSelection: false
+  jobName: job-name-senior-physician #Adventure
 
 - type: jobIcon
   parent: JobIcon
@@ -451,7 +451,7 @@
   icon:
     sprite: *icon-rsi
     state: SeniorOfficer
-  allowSelection: false
+  jobName: job-name-senior-officer #Adventure
 
 - type: jobIcon
   parent: JobIcon
@@ -459,7 +459,7 @@
   icon:
     sprite: *icon-rsi
     state: SeniorEngineer
-  allowSelection: false
+  jobName: job-name-senior-engineer #Adventure
 
 - type: jobIcon
   parent: JobIcon
@@ -467,7 +467,7 @@
   icon:
     sprite: *icon-rsi
     state: SeniorResearcher
-  allowSelection: false
+  jobName: job-name-senior-researcher #Adventure
 
 # Other
 

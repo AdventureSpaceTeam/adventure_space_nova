@@ -276,7 +276,7 @@
     radius: 4
     energy: 1.5
     color: "#f2511e"
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: MobLavaLandLegionSkull
     fireCost: 50
   - type: Gun

@@ -24,7 +24,6 @@ namespace Content.Server._Adventure.Sponsors;
 public sealed class SponsorsManager : ISponsorsManager
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IEntityManager _ent = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IServerDbManager _db = default!;
     [Dependency] private readonly IServerNetManager _net = default!;

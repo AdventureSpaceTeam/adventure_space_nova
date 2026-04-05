@@ -49,10 +49,10 @@
   - type: SolutionScanner
   - type: SolutionContainerManager
     solutions:
-      chemicals:
+      bloodstream:
         reagents:
         - ReagentId: AlianFero
-          Quantity: 100
+          Quantity: 50
       melee:
         reagents:
         - ReagentId: AlianToxin

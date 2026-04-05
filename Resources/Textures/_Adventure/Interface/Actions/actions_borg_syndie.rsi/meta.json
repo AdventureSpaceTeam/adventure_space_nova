@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by @Elsuert",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name":"syndicate-crossbow-module"
+        },
+        {
+            "name":"syndicate-laboratory-module"
+        },
+        {
+            "name":"syndicate-paramedic-module"
+        },
+        {
+            "name":"syndicate-saboteur-module"
+        },
+        {
+            "name":"syndicate-spybug-module"
+        },
+        {
+            "name":"icon"
+        }
+    ]
+}

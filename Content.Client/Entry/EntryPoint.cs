@@ -112,7 +112,6 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("htnPrimitive");
             _prototypeManager.RegisterIgnore("gameMap");
             _prototypeManager.RegisterIgnore("gameMapPool");
-            _prototypeManager.RegisterIgnore("lobbyBackground");
             _prototypeManager.RegisterIgnore("gamePreset");
             _prototypeManager.RegisterIgnore("noiseChannel");
             _prototypeManager.RegisterIgnore("playerConnectionWhitelist");
@@ -160,6 +159,10 @@ namespace Content.Client.Entry
             ContentContexts.SetupContexts(_inputManager.Contexts);
 
             _parallaxManager.LoadDefaultParallax();
+
+            // adventure space disable loc warnings begin
+            _logManager.GetSawmill("loc").Level = LogLevel.Error;
+            // adventure space disable loc warnings end
 
             _overlayManager.AddOverlay(new SingularityOverlay());
             _overlayManager.AddOverlay(new RadiationPulseOverlay());

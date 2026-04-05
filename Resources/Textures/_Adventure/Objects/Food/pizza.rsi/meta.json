@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by Discord @xaunto",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "chocolate"
+    },
+    {
+      "name": "chocolate-slice"
+    },
+    {
+      "name": "chocolate-slice-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "chocolate-slice-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "seafood"
+    },
+    {
+      "name": "seafood-slice"
+    },
+    {
+      "name": "seafood-slice-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "seafood-slice-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "mexican"
+    },
+    {
+      "name": "mexican-slice"
+    },
+    {
+      "name": "mexican-slice-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "mexican-slice-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "pumpkin"
+    },
+    {
+      "name": "pumpkin-slice"
+    },
+    {
+      "name": "pumpkin-slice-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "pumpkin-slice-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "bbq"
+    },
+    {
+      "name": "bbq-slice"
+    },
+    {
+      "name": "bbq-slice-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "bbq-slice-inhand-left",
+      "directions": 4
+    }
+  ]
+}

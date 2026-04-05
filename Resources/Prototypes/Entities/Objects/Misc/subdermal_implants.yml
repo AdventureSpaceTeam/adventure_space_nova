@@ -104,6 +104,7 @@
       - Critical
     - type: RattleOnTrigger
       radioChannel: "Security"
+      targetUser: true
 # Adventure end
 
 #Traitor implants
@@ -245,6 +246,25 @@
     interfaces:
       enum.ChameleonControllerKey.Key:
         type: ChameleonControllerBoundUserInterface
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: VoiceMaskImplant
+  name: voice mask implant
+  description: This implant allows you to change your voice at will.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionChangeVoiceMaskImplant
+  - type: VoiceMask
+    overrideIdentity: true
+  - type: UserInterface
+    interfaces:
+      enum.VoiceMaskUIKey.Key:
+        type: VoiceMaskBoundUserInterface
+  - type: Tag
+    tags:
+    - SubdermalImplant
 
 #Nuclear Operative/Special Exclusive implants
 

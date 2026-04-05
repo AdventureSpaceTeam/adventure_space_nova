@@ -59,8 +59,11 @@
   - type: MultiHandedItem
   - type: CanEscapeInventory # надо
   - type: Bloodstream
-    bloodMaxVolume: 180 # на 40% меньше
-    bloodReagent: ResomiBlood
+    #bloodMaxVolume: 180 # на 40% меньше
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ResomiBlood
+        Quantity: 180
   - type: Vocal
     sounds:
       Male: MaleResomi
@@ -79,13 +82,14 @@
     thermalRegulationTemperatureThreshold: 2
   - type: NoInteractionInHands
   - type: Temperature
+    currentTemperature: 291.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 298.15 # 25с - начинаем получать урон.
     coldDamageThreshold: 213
-    currentTemperature: 291.15 # температура 20с = стандартной атмосферной на станции (+-). Модификаторы на изменения температуры описаны ниже.
     coldDamage:
       types:
         Cold : 0.1
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 1.5

@@ -181,7 +181,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#808A51"
   - type: Bloodstream
-    bloodReagent: InsectBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: UnisexInsect
@@ -200,13 +203,14 @@
     normalBodyTemperature: 291.15
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
+    currentTemperature: 291.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 473.15
     coldDamageThreshold: 273.15
-    currentTemperature: 291.15
     coldDamage:
       types:
         Cold : 1.5
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 1.5

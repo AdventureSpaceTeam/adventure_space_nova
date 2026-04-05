@@ -23,6 +23,8 @@
   - type: Tag
     tags:
     - CaptainSabre
+  - type: Contraband
+    allowedDepartments: [ Command ]
 
 - type: entity
   parent: [ClothingBeltBase, ClothingSlotBase, BaseRestrictedContraband]

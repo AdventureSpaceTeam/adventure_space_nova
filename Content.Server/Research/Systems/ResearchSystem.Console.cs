@@ -1,5 +1,5 @@
 using Content.Server.Power.EntitySystems;
-using Content.Server.PowerCell; // Adventure monitors
+using Content.Shared.PowerCell; // Adventure monitors
 using Content.Server.Research.Components;
 using Content.Shared.UserInterface;
 using Content.Shared.Access.Components;

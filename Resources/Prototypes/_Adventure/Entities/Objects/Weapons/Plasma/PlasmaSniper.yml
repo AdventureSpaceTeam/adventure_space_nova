@@ -44,7 +44,7 @@
       - PlasmaMagSniper
   - type: Appearance
   - type: PowerCellVisuals
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletPlasmaLaserSniper
     fireCost: 333.33
   - type: Edible

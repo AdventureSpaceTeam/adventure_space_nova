@@ -46,8 +46,6 @@
     solution: melee
     transferAmount: 5
   - type: NoSlip
-  - type: PermanentBlindness
-    blindness: 3
   - type: FootstepModifier
     footstepSoundCollection:
       collection: SnakeStep
@@ -83,7 +81,10 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#e1b52e"
   - type: Bloodstream
-    bloodReagent: ZerahBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ZerahBlood
+        Quantity: 300
   - type: Vocal
     sounds:
       Male: MaleZerah
@@ -102,13 +103,14 @@
     normalBodyTemperature: 291.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
+    currentTemperature: 291.15
+    specificHeat: 42
+  - type: TemperatureDamage
     heatDamageThreshold: 353.15
     coldDamageThreshold: 288.15
-    currentTemperature: 291.15
     coldDamage:
       types:
         Cold : 1.5
-    specificHeat: 42
     heatDamage:
       types:
         Heat : 1.5
