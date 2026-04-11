@@ -47,3 +47,13 @@
   id: jobfuelsyndie
   flavorType: Complex
   description: как шипучий прогоревший порох
+
+- type: flavor
+  id: firstblizzard
+  flavorType: Complex
+  description: как снежная буря и пробирающий до костей холод
+
+- type: flavor
+  id: raiderraid
+  flavorType: Complex
+  description: как удачное ограбление

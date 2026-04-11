@@ -63,6 +63,10 @@
   id: SponsorJob
   name: Должность
 
+- type: storeCategory
+  id: SponsorNTGlory
+  name: Гордость НТ
+
 #conditions:
 #  - !type:BuyerJobCondition
 #    whitelist:
@@ -896,6 +900,28 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
+- type: listing
+  id: UplinkSponsorCloth93
+  productEntity: Plushiekacherizhka
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorNTGlory
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
+- type: listing
+  id: UplinkSponsorCloth94
+  productEntity: ToyFigurinetkotik
+  cost:
+    DonateCrystal: 3
+  categories:
+  - SponsorNTGlory
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 1
+
 # Jobs
 
 # Clown
@@ -1174,6 +1200,7 @@
       - SponsorThin
       - SponsorToys
       - SponsorJob
+      - SponsorNTGlory
     currencyWhitelist:
       - DonateCrystal
     balance:
@@ -1191,3 +1218,4 @@
 #Raidgo / last upd 21/12/24
 #Siginanto / last upd 17/02/25
 #Connection / last upd 21/10/25
+#Brg / last upd 11/04/26

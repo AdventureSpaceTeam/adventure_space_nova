@@ -283,3 +283,62 @@
     sprite: _Adventure/sponsor_uplink/Punk_jacket.rsi
   - type: Clothing
     sprite: _Adventure/sponsor_uplink/Punk_jacket.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: Plushiekacherizhka
+  name: Хихревра
+  description: Представитель великой рассы воксов. Не потерпит оскорблений и брани.
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/kacherizhka.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound: &PlushiekacherizhkaSound
+      path: /Audio/Voice/Vox/shriek1.ogg
+      params:
+        volume: -5
+  - type: EmitSoundOnLand
+    sound: *PlushiekacherizhkaSound
+  - type: EmitSoundOnActivate
+    sound: *PlushiekacherizhkaSound
+  - type: EmitSoundOnTrigger
+    sound: *PlushiekacherizhkaSound
+  - type: EmitSoundOnCollide
+    sound: *PlushiekacherizhkaSound
+  - type: Edible
+    useSound: *PlushiekacherizhkaSound
+  - type: MeleeWeapon
+    soundHit: *PlushiekacherizhkaSound
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: RaiderRaid
+        Quantity: 30
+  - type: Clothing
+    quickEquip: false
+    sprite: _Adventure/sponsor_uplink/kacherizhka.rsi
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.09"
+
+- type: entity
+  parent: BaseFigurine
+  id: ToyFigurinetkotik
+  name: Аэрон Итоу
+  description: Глава персонала. Создается ощущение, что фигурка постоянно за тобой наблюдает...
+  components:
+  - type: Sprite
+    sprite: _Adventure/sponsor_uplink/tkotik.rsi
+    state: tkotik
+  - type: SpeakOnTrigger
+    pack: Figurinestkotik
+
+- type: localizedDataset
+  id: Figurinestkotik
+  values:
+    prefix: figurines-tkotik-
+    count: 10

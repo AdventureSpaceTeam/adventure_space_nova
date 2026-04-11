@@ -157,3 +157,35 @@
   - type: Icon
     sprite: _Adventure/Objects/Consumable/Drinks/synfuelglass.rsi
     state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkFirstBlizzard
+  suffix: первая метель
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: FirstBlizzard
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/firstblizzardglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkRaiderRaid
+  suffix: рейдерский налёт
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: RaiderRaid
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/raiderraidglass.rsi
+    state: icon

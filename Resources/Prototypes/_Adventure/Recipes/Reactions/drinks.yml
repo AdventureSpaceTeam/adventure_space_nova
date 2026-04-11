@@ -125,3 +125,27 @@
       amount: 1
   products:
     SyndieFuel: 5
+
+- type: reaction
+  id: FirstBlizzard
+  reactants:
+    Moonshine:
+      amount: 3
+    SnowWhite:
+      amount: 2
+    Ice:
+      amount: 1
+  products:
+    FirstBlizzard: 6
+
+- type: reaction
+  id: RaiderRaid
+  reactants:
+    ResomiBlood:
+      amount: 2
+    Nutriment:
+      amount: 3
+    WeldingFuel:
+      amount: 1
+  products:
+    RaiderRaid: 6

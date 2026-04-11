@@ -270,3 +270,40 @@
       - !type:AdjustReagent
         reagent: Uranium
         amount: 0.05
+
+- type: reagent
+  id: FirstBlizzard
+  name: первая метель
+  parent: BaseAlcohol
+  desc: Похож на миниатюру умирающих под сигнальным огнём.
+  physicalDesc: метельное
+  flavor: firstblizzard
+  color: "#90afe7"
+  metamorphicSprite:
+    sprite: _Adventure/Objects/Consumable/Drinks/firstblizzardglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 1
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: FirstBlizzard
+          min: 15
+        damage:
+          types:
+            Cold: 0.25
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentCondition
+          reagent: FirstBlizzard
+          min: 15
+        amount: -2000

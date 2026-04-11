@@ -1,0 +1,30 @@
+- type: reagent
+  id: RaiderRaid
+  name: рейдерский налёт
+  parent: BaseDrink
+  desc: Экзотический рецепт прямиком с Ковчегов!
+  physicalDesc: древнее и пахучее
+  flavor: raiderraid
+  color: "#d2aef5"
+  metamorphicSprite:
+    sprite: _Adventure/Objects/Consumable/Drinks/raiderraidglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: RaiderRaid
+          min: 6
+        - !type:MetabolizerTypeCondition
+          type: [Vox]
+          inverted: true
+        damage:
+          types:
+            Poison: 0.75
