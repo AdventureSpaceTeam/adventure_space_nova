@@ -287,8 +287,8 @@
 - type: entity
   parent: BasePlushie
   id: Plushiekacherizhka
-  name: Хихревра
-  description: Представитель великой рассы воксов. Не потерпит оскорблений и брани.
+  name: плюшевый Хихревра
+  description: Представитель великой расы воксов. Не потерпит оскорблений и брани.
   components:
   - type: Sprite
     sprite: _Adventure/sponsor_uplink/kacherizhka.rsi
@@ -328,7 +328,7 @@
 - type: entity
   parent: BaseFigurine
   id: ToyFigurinetkotik
-  name: Аэрон Итоу
+  name: фигурка Аэрона Итоу
   description: Глава персонала. Создается ощущение, что фигурка постоянно за тобой наблюдает...
   components:
   - type: Sprite

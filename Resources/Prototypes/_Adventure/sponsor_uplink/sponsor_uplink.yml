@@ -773,7 +773,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth80
+  id: UplinkSponsorCloth72
   productEntity: PlushieSonya
   cost:
     DonateCrystal: 3
@@ -784,7 +784,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth81
+  id: UplinkSponsorCloth73
   productEntity: AltBackpackGroup
   cost:
     DonateCrystal: 15
@@ -795,7 +795,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth82
+  id: UplinkSponsorCloth74
   productEntity: ClothingJumpsuitFemboy
   cost:
     DonateCrystal: 5
@@ -803,7 +803,7 @@
   - SponsorThing
 
 - type: listing
-  id: UplinkSponsorCloth83
+  id: UplinkSponsorCloth75
   productEntity: ClothingJumpsuitImportantPerson
   cost:
     DonateCrystal: 5
@@ -811,7 +811,7 @@
   - SponsorThing
 
 - type: listing
-  id: UplinkSponsorCloth84
+  id: UplinkSponsorCloth76
   productEntity: ClothingJumpsuitSportWhite
   cost:
     DonateCrystal: 5
@@ -819,7 +819,7 @@
   - SponsorThing
 
 - type: listing
-  id: UplinkSponsorCloth85
+  id: UplinkSponsorCloth77
   productEntity: ClothingJumpsuitSportRed
   cost:
     DonateCrystal: 5
@@ -827,7 +827,7 @@
   - SponsorThing
 
 - type: listing
-  id: UplinkSponsorCloth86
+  id: UplinkSponsorCloth78
   productEntity: ClothingNeckRoyal
   cost:
     DonateCrystal: 5
@@ -835,7 +835,7 @@
   - SponsorThings
 
 - type: listing
-  id: UplinkSponsorCloth87
+  id: UplinkSponsorCloth79
   productEntity: BunnyBackpackGroup
   cost:
     DonateCrystal: 10
@@ -846,7 +846,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth88
+  id: UplinkSponsorCloth80
   productEntity: DarkBunnyBackpackGroup
   cost:
     DonateCrystal: 15
@@ -857,7 +857,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth89
+  id: UplinkSponsorCloth81
   productEntity: RedBunnyBackpackGroup
   cost:
     DonateCrystal: 15
@@ -868,7 +868,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth90
+  id: UplinkSponsorCloth82
   productEntity: NoFaceBackpackGroup
   cost:
     DonateCrystal: 15
@@ -879,7 +879,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth91
+  id: UplinkSponsorCloth83
   productEntity: WhiteCowBackpackGroup
   cost:
     DonateCrystal: 15
@@ -890,7 +890,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth92
+  id: UplinkSponsorCloth84
   productEntity: BlackCowBackpackGroup
   cost:
     DonateCrystal: 15
@@ -901,7 +901,7 @@
    stock: 2
 
 - type: listing
-  id: UplinkSponsorCloth93
+  id: UplinkSponsorCloth85
   productEntity: Plushiekacherizhka
   cost:
     DonateCrystal: 3
@@ -912,7 +912,7 @@
    stock: 1
 
 - type: listing
-  id: UplinkSponsorCloth94
+  id: UplinkSponsorCloth86
   productEntity: ToyFigurinetkotik
   cost:
     DonateCrystal: 3
