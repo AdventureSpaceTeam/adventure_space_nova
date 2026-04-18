@@ -22,3 +22,8 @@
         type: WiresBoundUserInterface
   - type: AccessReader
     access: [[ "Command" ]]
+  - type: Computer
+    board: ArtilleryComputerCircuitboard
+  - type: Construction
+    graph: ArtilleryConsoleConstruction
+    node: ArtilleryConsole

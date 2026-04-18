@@ -8,6 +8,12 @@
   },
     "states": [
         {
+            "name": "build_1"
+        },
+        {
+            "name": "build_2"
+        },
+        {
             "name": "base"
         },
         {

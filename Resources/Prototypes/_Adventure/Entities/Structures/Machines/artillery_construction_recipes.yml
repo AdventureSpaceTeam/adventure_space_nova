@@ -1,5 +1,5 @@
 - type: construction
-  name: Bluespace Artillery
+  name: construction-recipe-bluespace-artillery
   id: BluespaceArtilleryConstructionItem
   graph: BluespaceArtilleryConstruction
   startNode: start
@@ -7,7 +7,7 @@
   mirror: BluespaceArtilleryMirrorConstructionItem
   canRotate: false
   category: construction-category-structures
-  description: High-tech artillery using bluespace technologies. A fearsome weapon.
+  description: construction-recipe-bluespace-artillery-desc
   icon:
     sprite: _Adventure/Structures/BSA.rsi
     state: cannon_east
@@ -21,7 +21,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Bluespace Artillery (Mirror)
+  name: construction-recipe-bluespace-artillery-west
   id: BluespaceArtilleryMirrorConstructionItem
   graph: BluespaceArtilleryConstructionFlipped
   startNode: start
@@ -30,7 +30,7 @@
   hide: true
   canRotate: false
   category: construction-category-structures
-  description: High-tech artillery using bluespace technologies. A fearsome weapon, facing west.
+  description: construction-recipe-bluespace-artillery-west-desc
   icon:
     sprite: _Adventure/Structures/BSA.rsi
     state: cannon_west

@@ -160,7 +160,7 @@
 
 - type: entity
   id: BSAExplosion
-  name: kakashki
+  name: Bluespace artillery explosion
   categories: [ HideSpawnMenu ]
   components:
   - type: Transform

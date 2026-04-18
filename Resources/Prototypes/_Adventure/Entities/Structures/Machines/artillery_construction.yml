@@ -9,8 +9,8 @@
       - !type:SnapToGrid { }
       steps:
       - material: Plasteel
-        amount: 15
-        doAfter: 2
+        amount: 30
+        doAfter: 5
   - node: frame1
     entity: BluespaceArtilleryFrame
     actions:
@@ -25,7 +25,7 @@
       completed:
       - !type:SpawnPrototype
         prototype: SheetPlasteel1
-        amount: 15
+        amount: 30
       - !type:DeleteEntity {}
       conditions:
       - !type:EntityAnchored
@@ -485,8 +485,8 @@
       - !type:SnapToGrid { }
       steps:
       - material: Plasteel
-        amount: 15
-        doAfter: 2
+        amount: 30
+        doAfter: 5
   - node: frame1
     entity: BluespaceArtilleryFrameFlipped
     actions:
@@ -501,7 +501,7 @@
       completed:
       - !type:SpawnPrototype
         prototype: SheetPlasteel1
-        amount: 15
+        amount: 30
       - !type:DeleteEntity {}
       conditions:
       - !type:EntityAnchored
