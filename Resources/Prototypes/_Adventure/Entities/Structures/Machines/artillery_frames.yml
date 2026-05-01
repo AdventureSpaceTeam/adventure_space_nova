@@ -11,6 +11,11 @@
     sprite: _Adventure/Structures/BSA.rsi
     layers:
     - state: cannon_east_1
+  - type: Physics
+    bodyType: Static
+    linearDamping: 999
+  - type: TileFrictionModifier
+    modifier: 10000
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Key:
@@ -61,11 +66,6 @@
         - MachineMask
         layer:
         - MachineLayer
-  - type: Physics
-    bodyType: Static
-    linearDamping: 999
-  - type: TileFrictionModifier
-    modifier: 10000
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -80,6 +80,11 @@
     sprite: _Adventure/Structures/BSA.rsi
     layers:
     - state: cannon_west_1
+  - type: Physics
+    bodyType: Static
+    linearDamping: 999
+  - type: TileFrictionModifier
+    modifier: 10000
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Key:
