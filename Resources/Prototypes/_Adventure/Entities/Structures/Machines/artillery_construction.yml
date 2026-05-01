@@ -33,6 +33,8 @@
       - !type:SpawnPrototype
         prototype: SheetPlasteel1
         amount: 30
+      - !type:SpawnPrototype
+        prototype: BlueprintBSA
       - !type:DeleteEntity {}
       conditions:
       - !type:EntityAnchored
@@ -664,6 +666,8 @@
       - !type:SpawnPrototype
         prototype: SheetPlasteel1
         amount: 30
+      - !type:SpawnPrototype
+        prototype: BlueprintBSA
       - !type:DeleteEntity {}
       conditions:
       - !type:EntityAnchored

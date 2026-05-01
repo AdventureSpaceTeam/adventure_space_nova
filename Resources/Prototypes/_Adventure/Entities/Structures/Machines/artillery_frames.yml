@@ -61,6 +61,11 @@
         - MachineMask
         layer:
         - MachineLayer
+  - type: Physics
+    bodyType: Static
+    linearDamping: 999
+  - type: TileFrictionModifier
+    modifier: 10000
 
 - type: entity
   categories: [ HideSpawnMenu ]
