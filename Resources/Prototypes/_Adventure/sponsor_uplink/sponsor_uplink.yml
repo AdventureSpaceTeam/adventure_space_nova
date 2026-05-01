@@ -845,60 +845,60 @@
   - !type:ListingLimitedStockCondition
    stock: 2
 
-#- type: listing
-#  id: UplinkSponsorCloth80
-#  productEntity: DarkBunnyBackpackGroup
-#  cost:
-#    DonateCrystal: 15
-#  categories:
-#  - SponsorThing
-#  conditions:
-#  - !type:ListingLimitedStockCondition
-#   stock: 2
+- type: listing
+  id: UplinkSponsorCloth80
+  productEntity: DarkBunnyBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
-#- type: listing
-#  id: UplinkSponsorCloth81
-#  productEntity: RedBunnyBackpackGroup
-#  cost:
-#    DonateCrystal: 15
-#  categories:
-#  - SponsorThing
-#  conditions:#
-#  - !type:ListingLimitedStockCondition
-#   stock: 2
+- type: listing
+  id: UplinkSponsorCloth81
+  productEntity: RedBunnyBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
-#- type: listing
-#  id: UplinkSponsorCloth82
-#  productEntity: NoFaceBackpackGroup
-#  cost:
-#    DonateCrystal: 15
-#  categories:
-#  - SponsorThing
-#  conditions:
-#  - !type:ListingLimitedStockCondition
-#   stock: 2
+- type: listing
+  id: UplinkSponsorCloth82
+  productEntity: NoFaceBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
-#- type: listing
-#  id: UplinkSponsorCloth83
-#  productEntity: WhiteCowBackpackGroup
-#  cost:
-#    DonateCrystal: 15
-#  categories:
-#  - SponsorThing
-#  conditions:
-#  - !type:ListingLimitedStockCondition
-#   stock: 2
+- type: listing
+  id: UplinkSponsorCloth83
+  productEntity: WhiteCowBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
-#- type: listing
-#  id: UplinkSponsorCloth84
-#  productEntity: BlackCowBackpackGroup
-#  cost:
-#    DonateCrystal: 15
-#  categories:
-#  - SponsorThing
-#  conditions:
-#  - !type:ListingLimitedStockCondition
-#   stock: 2
+- type: listing
+  id: UplinkSponsorCloth84
+  productEntity: BlackCowBackpackGroup
+  cost:
+    DonateCrystal: 15
+  categories:
+  - SponsorThing
+  conditions:
+  - !type:ListingLimitedStockCondition
+   stock: 2
 
 - type: listing
   id: UplinkSponsorCloth85
