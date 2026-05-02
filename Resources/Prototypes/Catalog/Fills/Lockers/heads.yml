@@ -49,12 +49,16 @@
     - id: ClothingHeadCaptainHat
     - id: ClothingOuterCoatCaptain
     # Corvax-Resprite-End
-    - id: HandheldCommunicationsMonitor # Adventure
     - id: HeadSkeleton # A skull to accompany your skeleton crew
       conditions:
       - !type:PlayerCountCondition
         max: 15
-    - id: ControlModsuitMagnate # Adventure modsuits
+    # Adventure start
+    - id: ControlModsuitMagnate
+    - id: HandheldCommunicationsMonitor
+    - id: BlueprintBSA
+    - id: ArtilleryComputerCircuitboard
+    # Adventure end
 
 # No laser table + Laser table
 - type: entityTable

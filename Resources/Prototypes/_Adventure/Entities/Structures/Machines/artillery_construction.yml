@@ -362,7 +362,7 @@
         amount: 20
       - !type:SpawnPrototype
         prototype: CentCommCrystal1
-        amount: 10
+        amount: 5
       steps:
       - tool: Prying
         doAfter: 2
@@ -995,7 +995,7 @@
         amount: 20
       - !type:SpawnPrototype
         prototype: CentCommCrystal1
-        amount: 10
+        amount: 5
       steps:
       - tool: Prying
         doAfter: 2
