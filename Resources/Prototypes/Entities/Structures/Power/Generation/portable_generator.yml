@@ -199,7 +199,7 @@
   components:
     - type: Sprite
       layers:
-        - state: portgen1
+        - state: portgen2
           map: [ "enum.GeneratorVisualLayers.Body" ]
         - state: portgen_on_unlit
           map: [ "enum.GeneratorVisualLayers.Unlit" ]
@@ -209,8 +209,8 @@
       visuals:
         enum.GeneratorVisuals.Running:
           enum.GeneratorVisualLayers.Body:
-            True: { state: portgen1on }
-            False: { state: portgen1 }
+            True: { state: portgen2on }
+            False: { state: portgen2 }
           enum.GeneratorVisualLayers.Unlit:
             True: { visible: true }
             False: { visible: false }
@@ -239,7 +239,7 @@
         - output_hv
         - output_mv
       sprite: Structures/Power/Generation/portable_generator.rsi
-      state: portgen1
+      state: portgen2
     - type: PowerSupplier
       supplyRampRate: 7500
       supplyRampTolerance: 2500
