@@ -3,9 +3,7 @@
   name: Плазмалюд
   roundStart: true
   prototype: MobPlasMan
-  sprites: MobPlasManSprites
-  markingLimits: MobPlasManMarkingLimits
-  dollPrototype: MobPlasManDummy
+  dollPrototype: AppearancePlasMan
   skinColoration: VoxFeathers
   minAge: 18
   youngAge: 50
@@ -18,223 +16,121 @@
   maleLastNames: NamesPlasManLast
   femaleLastNames: NamesPlasManLast
 
-- type: markingPoints
-  id: MobPlasManMarkingLimits
-  onlyWhitelisted: true
-  points:
-    Head:
-      points: 1
+- type: markingsGroup
+  parent: Undergarments
+  id: PlasMan
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Chest:
+      limit: 3
       required: false
-    HeadTop:
-      points: 1
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
       required: false
-    Snout:
-      points: 1
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
       required: false
-    Chest:
-      points: 3
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
       required: false
-    Legs:
-      points: 4
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
       required: false
-    Arms:
-      points: 4
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
       required: false
 
-- type: speciesBaseSprites
-  id: MobPlasManSprites
-  sprites:
-    Snout: MobHumanoidAnyMarking
-    HeadTop: MobHumanoidAnyMarking
-    HeadSide: MobHumanoidAnyMarking
-    Head: MobPlasManHead
-    Chest: MobPlasManTorso
-    LArm: MobPlasManLArm
-    RArm: MobPlasManRArm
-    LHand: MobPlasManLHand
-    RHand: MobPlasManRHand
-    LLeg: MobPlasManLLeg
-    RLeg: MobPlasManRLeg
-    LFoot: MobPlasManLFoot
-    RFoot: MobPlasManRFoot
-    Eyes: MobHumanoidEyes
+- type: entity
+  id: OrganPlasManVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: PlasMan
 
-- type: humanoidBaseSprite
-  id: MobPlasManHead
-  baseSprite:
+- type: entity
+  id: OrganPlasManExternal
+  abstract: true
+  parent: OrganPlasManVisual
+  components:
+  - type: Sprite
     sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: head_m
 
-- type: humanoidBaseSprite
-  id: MobPlasManHeadMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobPlasManHeadFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: head_f
-
-- type: humanoidBaseSprite
-  id: MobPlasManTorso
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseTorso, OrganPlasManExternal ]
+  id: OrganPlasManTorso
+  components:
+  - type: Sprite
     state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+    sexStateOverrides:
+      Male: torso_m
+      Female: torso_f
 
-- type: humanoidBaseSprite
-  id: MobPlasManTorsoMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: torso_m
+- type: entity
+  parent: [ OrganBaseHead, OrganPlasManExternal ]
+  id: OrganPlasManHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+    sexStateOverrides:
+      Male: head_m
+      Female: head_f
 
-- type: humanoidBaseSprite
-  id: MobPlasManTorsoFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: torso_f
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganPlasManExternal ]
+  id: OrganPlasManArmLeft
 
-- type: humanoidBaseSprite
-  id: MobPlasManLLeg
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_leg
+- type: entity
+  parent: [ OrganBaseArmRight, OrganPlasManExternal ]
+  id: OrganPlasManArmRight
 
-- type: humanoidBaseSprite
-  id: MobPlasManLArm
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_arm
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganPlasManExternal ]
+  id: OrganPlasManHandLeft
 
-- type: humanoidBaseSprite
-  id: MobPlasManLHand
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_hand
+- type: entity
+  parent: [ OrganBaseHandRight, OrganPlasManExternal ]
+  id: OrganPlasManHandRight
 
-- type: humanoidBaseSprite
-  id: MobPlasManRLeg
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_leg
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganPlasManExternal ]
+  id: OrganPlasManLegLeft
 
-- type: humanoidBaseSprite
-  id: MobPlasManRArm
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_arm
+- type: entity
+  parent: [ OrganBaseLegRight, OrganPlasManExternal ]
+  id: OrganPlasManLegRight
 
-- type: humanoidBaseSprite
-  id: MobPlasManRHand
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_hand
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganPlasManExternal ]
+  id: OrganPlasManFootLeft
 
-- type: humanoidBaseSprite
-  id: MobPlasManRFoot
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobPlasManLFoot
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobPlasManLLegMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobPlasManLArmMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobPlasManLHandMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobPlasManRLegMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
-  id: MobPlasManRArmMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobPlasManRHandMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobPlasManRFootMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobPlasManLFootMale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobPlasManLLegFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobPlasManLArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobPlasManLHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobPlasManRLegFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
-  id: MobPlasManRArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobPlasManRHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobPlasManRFootFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobPlasManLFootFemale
-  baseSprite:
-    sprite: _Adventure/Races/PlasmaMan/Species/parts.rsi
-    state: l_foot
+- type: entity
+  parent: [ OrganBaseFootRight, OrganPlasManExternal ]
+  id: OrganPlasManFootRight

@@ -1,10 +1,8 @@
 - type: marking
   id: SnakeTailsBig
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
     state: Snake_tail_big
@@ -12,10 +10,8 @@
 - type: marking
   id: SnakeTailsTwisty
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
     state: Snake_tail_twisty
@@ -23,8 +19,7 @@
 - type: marking
   id: SnakeCollarCobra
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: base
@@ -34,8 +29,7 @@
 - type: marking
   id: SnakeCollarCobraSpike
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: base_spike
@@ -45,8 +39,7 @@
 - type: marking
   id: SnakeCollarKing
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: king
@@ -56,8 +49,7 @@
 - type: marking
   id: SnakeCollarKingSpike
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: king_spike
@@ -67,8 +59,7 @@
 - type: marking
   id: SnakeCollarWide
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: wide
@@ -78,8 +69,7 @@
 - type: marking
   id: SnakeBodyF
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/body.rsi
     state: body_f
@@ -87,8 +77,7 @@
 - type: marking
   id: SnakeBodyM
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/body.rsi
     state: body_m
@@ -96,8 +85,7 @@
 - type: marking
   id: SnakeChin
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/body.rsi
     state: chin
@@ -105,8 +93,7 @@
 - type: marking
   id: SnakeTailsBigBulge
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
     state: Snake_tail_bulge
@@ -116,8 +103,7 @@
 - type: marking
   id: SnakeCollarImperial
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: Imperial
@@ -127,8 +113,7 @@
 - type: marking
   id: SnakeCollarImperialSpike
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/collar.rsi
     state: Imperial_spike
@@ -138,8 +123,7 @@
 - type: marking
   id: SnakeTailsGiant
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   sprites:
   - sprite: _Adventure/Races/Snake/Customization/Tails48.rsi
     state: Snake_tail_giant
@@ -149,8 +133,7 @@
 - type: marking
   id: SnakeTongue
   bodyPart: HeadSide
-  markingCategory: Snout
-  speciesRestriction: [Zerah]
+  groupWhitelist: [Zerah]
   coloring:
     default:
       type:

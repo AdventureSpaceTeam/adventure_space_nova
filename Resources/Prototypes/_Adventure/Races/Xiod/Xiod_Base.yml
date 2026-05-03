@@ -5,8 +5,8 @@
   - MobRespirator
   - MobAtmosStandard
   - MobFlammable
-  - BaseMobSpecies
-  id: BaseMobSpeciesOrganicNoFingerprint
+  - BaseSpeciesMob
+  id: BaseSpeciesMobOrganicNoFingerprint
   abstract: true
   components:
   - type: Barotrauma

@@ -26,7 +26,9 @@
 - type: entity
   abstract: true
   save: false
-  parent: BaseMobSpeciesOrganic
+  parent:
+  - AppearanceResomi
+  - BaseSpeciesMobOrganic
   id: BaseMobResomi
   name: Урист макРезоми
   components:
@@ -45,8 +47,6 @@
     damage:
       types:
         Slash: 5
-  - type: ScaleVisuals
-    scale: 0.8, 0.8
   - type: Item
     size: Ginormous
   - type: Tag
@@ -106,9 +106,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Resomi
-  - type: Body
-    prototype: Resomi
-    requiredLegs: 2
   - type: Hunger
   - type: Icon
     sprite: _Adventure/Races/Resomi/Species/parts.rsi
@@ -120,11 +117,6 @@
     spawned:
     - id: FoodMeatLizard
       amount: 2
-  - type: HumanoidAppearance
-    species: Resomi
-    hideLayersOnEquip:
-    - HeadTop
-    - Hair
   - type: Fixtures
     fixtures:
       fix1:
@@ -137,89 +129,40 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Inventory
-    speciesId: resomi
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: jumpsuit
-      outerClothing:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: outerClothing
-      gloves:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: hand
-      shoes:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: shoes
-      back:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: back
-      brass:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: jumpsuit
-      pants:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: jumpsuit
-    maleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: jumpsuit
-      outerClothing:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: outerClothing
-      gloves:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: hand
-      shoes:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: shoes
-      back:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: back
-      brass:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: jumpsuit
-      pants:
-        sizeMaps:
-          32:
-            sprite: _Adventure/Races/Resomi/displacement.rsi
-            state: jumpsuit
 
 - type: entity
-  parent: BaseSpeciesDummy
-  id: MobResomiDummy
+  parent: BaseSpeciesAppearance
+  id: AppearanceResomi
   categories: [ HideSpawnMenu ]
   components:
-  - type: HumanoidAppearance
+  - type: HumanoidProfile
     species: Resomi
+    hideLayersOnEquip:
+    - HeadTop
+    - Hair
+  - type: InitialBody
+    organs:
+      Torso: OrganResomiTorso
+      Head: OrganResomiHead
+      ArmLeft: OrganResomiArmLeft
+      ArmRight: OrganResomiArmRight
+      HandRight: OrganResomiHandRight
+      HandLeft: OrganResomiHandLeft
+      LegLeft: OrganResomiLegLeft
+      LegRight: OrganResomiLegRight
+      FootLeft: OrganResomiFootLeft
+      FootRight: OrganResomiFootRight
+      Brain: OrganResomiBrain
+      Eyes: OrganResomiEyes
+      Heart: OrganResomiHeart
+      Lungs: OrganResomiLungs
+      Stomach: OrganResomiStomach
+      Liver: OrganResomiLiver
+      Kidneys: OrganResomiKidneys
+  - type: ScaleVisuals
+    scale: 0.8, 0.8
   - type: Inventory
+    speciesId: resomi
     femaleDisplacements:
       jumpsuit:
         sizeMaps:

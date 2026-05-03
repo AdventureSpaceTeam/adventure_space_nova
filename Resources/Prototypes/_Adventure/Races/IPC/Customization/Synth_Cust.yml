@@ -3,8 +3,7 @@
   id: SynthAltron
   name: КПБ, морда (Альтрон)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: Altron
@@ -13,8 +12,7 @@
   id: SynthBigEyes
   name: КПБ, морда (Большие глаза)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: Bigeyes
@@ -23,8 +21,7 @@
   id: SynthCyclops
   name: КПБ, морда (Циклоп)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: Cyclops
@@ -33,8 +30,7 @@
   name: КПБ, морда (Двойной Циклоп)
   id: SynthDoubleCyclops
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: DoubleCyclops
@@ -43,8 +39,7 @@
   id: SynthEyes
   name: КПБ, морда (Глаза)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: eyes
@@ -53,8 +48,7 @@
   id: SynthLens
   name: КПБ, морда (Линза)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: lens
@@ -63,8 +57,7 @@
   id: SynthScreen
   name: КПБ, морда (Экран)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -73,8 +66,7 @@
   id: SynthScreenFase
   name: КПБ, морда (Экран с лицом)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screenFase
@@ -83,8 +75,7 @@
   id: SynthSpider
   name: КПБ, морда (Паук)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: Spider
@@ -93,8 +84,7 @@
   id: SynthVisor
   name: КПБ, морда (Визор)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: Visor
@@ -103,8 +93,7 @@
   id: SynthScreenNo
   name: КПБ, морда (Крест)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -115,8 +104,7 @@
   id: SynthScreenBacklight
   name: КПБ, морда (Подсветка)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -127,8 +115,7 @@
   id: SynthEyesScreen
   name: КПБ, морда (Экран с глазами)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -139,8 +126,7 @@
   id: SynthScreenNoise
   name: КПБ, морда (Помехи)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: noiseScreen
@@ -149,8 +135,7 @@
   id: SynthScreenDoubleCyclops
   name: КПБ, морда (Двойной циклоп на экране)
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -160,8 +145,7 @@
 - type: marking
   id: SynthScreenMiner
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -171,8 +155,7 @@
 - type: marking
   id: SynthMiner
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: miner
@@ -180,8 +163,7 @@
 - type: marking
   id: SynthScreenFace
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: screen
@@ -191,8 +173,7 @@
 - type: marking
   id: SynthFace
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: face
@@ -200,8 +181,7 @@
 - type: marking
   id: SynthBox
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: box1
@@ -211,8 +191,7 @@
 - type: marking
   id: SynthCrash
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: crash
@@ -220,8 +199,7 @@
 - type: marking
   id: SynthCamera
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: camera
@@ -231,8 +209,7 @@
   id: SynthAntennaCurves
   name: КПБ, Голова (Кривые Антенны)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: AntennaCurves
@@ -241,8 +218,7 @@
   id: SynthAntennaLetf
   name: КПБ, Голова (Антенна слева)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: antennaLetf
@@ -253,8 +229,7 @@
   id: SynthAntennas
   name: КПБ, Голова (Антенны)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: antennas
@@ -263,8 +238,7 @@
   id: SynthWires
   name: КПБ, Голова (Провода)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: wires
@@ -273,8 +247,7 @@
   id: SynthAntennaRight
   name: КПБ, Голова (Антенна справа)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: antennaRight
@@ -285,8 +258,7 @@
   id: SynthAntennaChappi
   name: КПБ, Голова (Антенна Чаппи)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: antennaChappi
@@ -295,8 +267,7 @@
   id: SynthAntennaFront
   name: КПБ, Голова (Антенна с подсветкой)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: antennaFront
@@ -308,8 +279,7 @@
 - type: marking
   id: SynthAntennaCoils
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: coils
@@ -317,8 +287,7 @@
 - type: marking
   id: SynthAntennaBent
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: antennBent
@@ -330,8 +299,7 @@
 - type: marking
   id: SynthHeadCable
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: cable1
@@ -343,8 +311,7 @@
   id: SynthChestHeart
   name: КПБ, Грудь (Железное сердце)
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: heart
@@ -353,8 +320,7 @@
   id: SynthChestHPbar
   name: КПБ, Спина (ХП бар)
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: HPbar
@@ -363,8 +329,7 @@
   id: SynthChestHPbarDouble
   name: КПБ, Спина (Двойной ХП бар)
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: HPbarDouble
@@ -373,8 +338,7 @@
   id: SynthChestLight
   name: КПБ, Спина (Подсветка)
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: Light
@@ -382,8 +346,7 @@
 - type: marking
   id: SynthChestRust
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   coloring:
     default:
       type:
@@ -396,8 +359,7 @@
 - type: marking
   id: SynthChestLine
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: line
@@ -405,8 +367,7 @@
 - type: marking
   id: SynthChestLArm
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: left_arm
@@ -414,8 +375,7 @@
 - type: marking
   id: SynthChestRArm
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: right_arm
@@ -423,8 +383,7 @@
 - type: marking
   id: SynthChestLLeg
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: left_leg
@@ -432,8 +391,7 @@
 - type: marking
   id: SynthChestRLeg
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: right_leg
@@ -441,8 +399,7 @@
 - type: marking
   id: SynthChestLFoot
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: left_foot
@@ -450,8 +407,7 @@
 - type: marking
   id: SynthChestRFoot
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: right_foot
@@ -459,8 +415,7 @@
 - type: marking
   id: SynthChestLHand
   bodyPart: LHand
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: left_hand
@@ -468,8 +423,7 @@
 - type: marking
   id: SynthChestRHand
   bodyPart: RHand
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: right_hand
@@ -477,8 +431,7 @@
 - type: marking
   id: SynthChestBody
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: body
@@ -486,8 +439,7 @@
 - type: marking
   id: SynthChestHead
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: head
@@ -495,10 +447,8 @@
 - type: marking
   id: SynthChestBody1
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: body1
@@ -506,10 +456,8 @@
 - type: marking
   id: SynthChestBody2
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: body2
@@ -517,10 +465,8 @@
 - type: marking
   id: SynthChestHole
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: hole
@@ -528,10 +474,8 @@
 - type: marking
   id: SynthChestWoman
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: woman
@@ -539,10 +483,8 @@
 - type: marking
   id: SynthChestSkeleton
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: skeleton
@@ -550,10 +492,8 @@
 - type: marking
   id: SynthHeadArmored
   bodyPart: Head
-  markingCategory: Head
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: armored
@@ -561,10 +501,8 @@
 - type: marking
   id: SynthHeadOld
   bodyPart: Head
-  markingCategory: Head
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: old
@@ -572,10 +510,8 @@
 - type: marking
   id: SynthHeadNew
   bodyPart: Head
-  markingCategory: Head
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: new
@@ -587,10 +523,8 @@
 - type: marking
   id: SynthHeadCamepa
   bodyPart: Head
-  markingCategory: Head
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: camera
@@ -598,10 +532,8 @@
 - type: marking
   id: SynthHeadBox
   bodyPart: Head
-  markingCategory: Head
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: box
@@ -610,8 +542,7 @@
   id: SynthAntennaLamp
   name: КПБ, Голова (Антенна Чаппи)
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Head.rsi
     state: lamp
@@ -621,10 +552,8 @@
 - type: marking
   id: SynthChestRPS
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: rps
@@ -632,10 +561,8 @@
 - type: marking
   id: SynthChestSkeleton2
   bodyPart: Chest
-  markingCategory: Chest
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Body.rsi
     state: skeleton2
@@ -643,8 +570,7 @@
 - type: marking
   id: SynthSniper
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: sniper
@@ -654,8 +580,7 @@
 - type: marking
   id: SynthDron
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: dron
@@ -665,8 +590,7 @@
 - type: marking
   id: SynthMolni
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: molni
@@ -674,8 +598,7 @@
 - type: marking
   id: SynthPulse
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Synth]
+  groupWhitelist: [Synth]
   sprites:
   - sprite: _Adventure/Races/IPC/Customization/Face.rsi
     state: pulse
