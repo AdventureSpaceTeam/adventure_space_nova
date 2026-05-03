@@ -5,7 +5,7 @@
   prototype: MobSynth
   sprites: MobSynthSprites
   markingLimits: MobSynthMarkingLimits
-  dollPrototype: MobSynthDummy
+  dollPrototype: AppearanceSynth
   skinColoration: Hues
   defaultSkinTone: "#ebebeb"
   minAge: 1
@@ -18,223 +18,117 @@
   femaleFirstNames: NamesSynth
   naming: First
 
-- type: markingPoints
-  id: MobSynthMarkingLimits
-  onlyWhitelisted: true
-  points:
-    Head:
-      points: 1
+- type: markingsGroup
+  parent: Undergarments
+  id: Synth
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Chest:
+      limit: 3
       required: false
-    HeadTop:
-      points: 1
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      default:
+      - SynthAntennas
+      limit: 1
       required: true
-      defaultMarkings: [ SynthAntennas ]
-    Snout:
-      points: 1
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
       required: false
-    Chest:
-      points: 3
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
       required: false
-    Legs:
-      points: 4
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
       required: false
-    Arms:
-      points: 4
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
       required: false
 
-- type: speciesBaseSprites
-  id: MobSynthSprites
-  sprites:
-    Snout: MobHumanoidAnyMarking
-    HeadTop: MobHumanoidAnyMarking
-    HeadSide: MobHumanoidAnyMarking
-    Head: MobSynthHead
-    Chest: MobSynthTorso
-    LArm: MobSynthLArm
-    RArm: MobSynthRArm
-    LHand: MobSynthLHand
-    RHand: MobSynthRHand
-    LLeg: MobSynthLLeg
-    RLeg: MobSynthRLeg
-    LFoot: MobSynthLFood
-    RFoot: MobSynthRFood
+- type: entity
+  id: OrganSynthVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/IPC/Species/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Synth
 
-- type: humanoidBaseSprite
-  id: MobSynthHead
-  baseSprite:
+- type: entity
+  id: OrganSynthExternal
+  abstract: true
+  parent: OrganSynthVisual
+  components:
+  - type: Sprite
     sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: head_m
 
-- type: humanoidBaseSprite
-  id: MobSynthHeadMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobSynthHeadFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: head_f
-
-- type: humanoidBaseSprite
-  id: MobSynthTorso
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseTorso, OrganSynthExternal ]
+  id: OrganSynthTorso
+  components:
+  - type: Sprite
     state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
 
-- type: humanoidBaseSprite
-  id: MobSynthTorsoMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: torso_m
+- type: entity
+  parent: [ OrganBaseHead, OrganSynthExternal ]
+  id: OrganSynthHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
 
-- type: humanoidBaseSprite
-  id: MobSynthTorsoFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: torso_f
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganSynthExternal ]
+  id: OrganSynthArmLeft
 
-- type: humanoidBaseSprite
-  id: MobSynthLLeg
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_leg
+- type: entity
+  parent: [ OrganBaseArmRight, OrganSynthExternal ]
+  id: OrganSynthArmRight
 
-- type: humanoidBaseSprite
-  id: MobSynthLArm
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_arm
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganSynthExternal ]
+  id: OrganSynthHandLeft
 
-- type: humanoidBaseSprite
-  id: MobSynthLHand
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_hand
+- type: entity
+  parent: [ OrganBaseHandRight, OrganSynthExternal ]
+  id: OrganSynthHandRight
 
-- type: humanoidBaseSprite
-  id: MobSynthRLeg
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_leg
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganSynthExternal ]
+  id: OrganSynthLegLeft
 
-- type: humanoidBaseSprite
-  id: MobSynthRArm
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_arm
+- type: entity
+  parent: [ OrganBaseLegRight, OrganSynthExternal ]
+  id: OrganSynthLegRight
 
-- type: humanoidBaseSprite
-  id: MobSynthRHand
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_hand
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganSynthExternal ]
+  id: OrganSynthFootLeft
 
-- type: humanoidBaseSprite
-  id: MobSynthRFood
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobSynthLFood
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobSynthLLegMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobSynthLArmMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobSynthLHandMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobSynthRLegMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
-  id: MobSynthRArmMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobSynthRHandMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobSynthRFoodMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobSynthLFoodMale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobSynthLLegFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobSynthLArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobSynthLHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobSynthRLegFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
-  id: MobSynthRArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobSynthRHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobSynthRFoodFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobSynthLFoodFemale
-  baseSprite:
-    sprite: _Adventure/Races/IPC/Species/parts.rsi
-    state: l_foot
+- type: entity
+  parent: [ OrganBaseFootRight, OrganSynthExternal ]
+  id: OrganSynthFootRight

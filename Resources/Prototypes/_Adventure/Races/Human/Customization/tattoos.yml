@@ -1,8 +1,7 @@
 - type: marking
   id: TattooFaceLeft
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  groupWhitelist: [Human, Dwarf, Felinid, PigMan]
   coloring:
     default:
       type:
@@ -15,8 +14,7 @@
 - type: marking
   id: TattooFaceRight
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  groupWhitelist: [Human, Dwarf, Felinid, PigMan]
   coloring:
     default:
       type:
@@ -29,8 +27,7 @@
 - type: marking
   id: TattooHeartLeftLeg
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  groupWhitelist: [Human, Dwarf, Felinid, PigMan]
   coloring:
     default:
       type:
@@ -43,8 +40,7 @@
 - type: marking
   id: TattooChestCross
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  groupWhitelist: [Human, Dwarf, Felinid, PigMan]
   coloring:
     default:
       type:
@@ -57,8 +53,7 @@
 - type: marking
   id: TattooChestFly
   bodyPart: LArm
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Felinid, PigMan]
+  groupWhitelist: [Human, Dwarf, Felinid, PigMan]
   coloring:
     default:
       type:
