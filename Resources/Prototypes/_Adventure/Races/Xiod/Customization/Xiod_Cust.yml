@@ -1,10 +1,8 @@
 - type: marking
   id: XiodTailsDred
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent1
@@ -12,10 +10,8 @@
 - type: marking
   id: XiodTailsCurls
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent2
@@ -23,10 +19,8 @@
 - type: marking
   id: XiodTailsBigHead
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent3
@@ -34,10 +28,8 @@
 - type: marking
   id: XiodTailsLittleHead
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent4
@@ -45,10 +37,8 @@
 - type: marking
   id: XiodTailsTent
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent5
@@ -56,10 +46,8 @@
 - type: marking
   id: XiodTailsGreat
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent6
@@ -67,10 +55,8 @@
 - type: marking
   id: XiodTailsBrain
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent7
@@ -78,10 +64,8 @@
 - type: marking
   id: XiodTailsKudri
   bodyPart: Tail
-  markingCategory: Tail
-  followSkinColor: true
   forcedColoring: true
-  speciesRestriction: [Xiod]
+  groupWhitelist: [Xiod]
   sprites:
   - sprite: _Adventure/Races/Xiod/Customization/Tails.rsi
     state: tent8
