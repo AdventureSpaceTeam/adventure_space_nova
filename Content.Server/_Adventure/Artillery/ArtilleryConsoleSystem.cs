@@ -2,7 +2,9 @@ using Content.Server.Power.Components;
 using Content.Server.Popups;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
+using Content.Shared.Administration.Logs;
 using Content.Shared._Adventure.Artillery;
+using Content.Shared.Database;
 using Content.Shared.Pinpointer;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
@@ -17,6 +19,7 @@ public sealed class ArtilleryConsoleSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly AccessReaderSystem _access = default!;
+    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
 
@@ -81,6 +84,9 @@ public sealed class ArtilleryConsoleSystem : EntitySystem
 
         var fireEvent = new ArtilleryCannonFireEvent(mapCoords);
         RaiseLocalEvent(cannonUid, ref fireEvent);
+
+        _adminLogger.Add(LogType.Action,
+            $"{actor} caused {cannonUid} fire to: {beaconUid}");
 
         UpdateUi(uid, comp);
     }
