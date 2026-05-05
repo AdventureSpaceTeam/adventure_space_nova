@@ -1,9 +1,10 @@
 - type: marking
   id: PigNoseBase
   bodyPart: Snout
+  markingCategory: Snout
   followSkinColor: true
   forcedColoring: true
-  groupWhitelist: [PigMan]
+  speciesRestriction: [PigMan]
   sprites:
   - sprite: _Adventure/Races/PigMan/Species/parts.rsi
     state: nose_base
@@ -11,9 +12,10 @@
 - type: marking
   id: PigEarsBase
   bodyPart: HeadSide
+  markingCategory: HeadSide
   followSkinColor: true
   forcedColoring: true
-  groupWhitelist: [PigMan]
+  speciesRestriction: [PigMan]
   sprites:
   - sprite: _Adventure/Races/PigMan/Species/parts.rsi
     state: ears_base
@@ -25,132 +27,244 @@
   prototype: MobPigMan
   sprites: MobPigManSprites
   markingLimits: MobPigManMarkingLimits
-  dollPrototype: AppearancePigMan
+  dollPrototype: MobPigManDummy
   skinColoration: HumanToned
   minAge: 18
   youngAge: 25
   oldAge: 42
   maxAge: 70
 
-- type: markingsGroup
-  parent: Undergarments
-  id: PigMan
-  onlyGroupWhitelisted: true
-  limits:
-    enum.HumanoidVisualLayers.Chest:
-      limit: 1
+- type: markingPoints
+  id: MobPigManMarkingLimits
+  points:
+    FacialHair:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.FacialHair:
-      limit: 1
+    Hair:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.Hair:
-      limit: 1
-      required: false
-    enum.HumanoidVisualLayers.Head:
-      limit: 1
-      required: false
-    enum.HumanoidVisualLayers.HeadSide:
-      default:
-      - PigEarsBase
-      limit: 1
+    HeadSide:
+      points: 1
       required: true
-    enum.HumanoidVisualLayers.LArm:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.LFoot:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.LHand:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.LLeg:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RArm:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RFoot:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RHand:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RLeg:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.Snout:
-      default:
-      - PigNoseBase
-      limit: 1
+      defaultMarkings: [ PigEarsBase ]
+    Snout:
+      points: 1
       required: true
+      defaultMarkings: [ PigNoseBase ]
+    Head:
+      points: 1
+      required: false
+    Chest:
+      points: 1
+      required: false
+    Legs:
+      points: 4
+      required: false
+    Arms:
+      points: 4
+      required: false
 
-- type: entity
-  id: OrganPigManVisual
-  abstract: true
-  components:
-  - type: VisualOrgan
-    data:
-      sprite: _Adventure/Races/PigMan/Species/parts.rsi
-  - type: VisualOrganMarkings
-    markingData:
-      group: PigMan
+- type: speciesBaseSprites
+  id: MobPigManSprites
+  sprites:
+    FacialHair: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Hair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Head: MobPigManHead
+    Chest: MobPigManTorso
+    LArm: MobPigManLArm
+    RArm: MobPigManRArm
+    LHand: MobPigManLHand
+    RHand: MobPigManRHand
+    LLeg: MobPigManLLeg
+    RLeg: MobPigManRLeg
+    LFoot: MobPigManLFoot
+    RFoot: MobPigManRFoot
+    Eyes: MobPigManEyes
 
-- type: entity
-  id: OrganPigManExternal
-  abstract: true
-  parent: OrganPigManVisual
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobPigManEyes
+  baseSprite:
     sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: eyes
 
-- type: entity
-  parent: [ OrganBaseTorso, OrganPigManExternal ]
-  id: OrganPigManTorso
-  components:
-  - type: Sprite
-    state: torso_m
-  - type: VisualOrgan
-    data:
-      state: torso_m
-
-- type: entity
-  parent: [ OrganBaseHead, OrganPigManExternal ]
-  id: OrganPigManHead
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobPigManHead
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
     state: head_m
-  - type: VisualOrgan
-    data:
-      state: head_m
 
-- type: entity
-  parent: [ OrganBaseArmLeft, OrganPigManExternal ]
-  id: OrganPigManArmLeft
+- type: humanoidBaseSprite
+  id: MobPigManHeadMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: head_m
 
-- type: entity
-  parent: [ OrganBaseArmRight, OrganPigManExternal ]
-  id: OrganPigManArmRight
+- type: humanoidBaseSprite
+  id: MobPigManHeadFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: head_f
 
-- type: entity
-  parent: [ OrganBaseHandLeft, OrganPigManExternal ]
-  id: OrganPigManHandLeft
+- type: humanoidBaseSprite
+  id: MobPigManTorso
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: torso_m
 
-- type: entity
-  parent: [ OrganBaseHandRight, OrganPigManExternal ]
-  id: OrganPigManHandRight
+- type: humanoidBaseSprite
+  id: MobPigManTorsoMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: torso_m
 
-- type: entity
-  parent: [ OrganBaseLegLeft, OrganPigManExternal ]
-  id: OrganPigManLegLeft
+- type: humanoidBaseSprite
+  id: MobPigManTorsoFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: torso_f
 
-- type: entity
-  parent: [ OrganBaseLegRight, OrganPigManExternal ]
-  id: OrganPigManLegRight
+- type: humanoidBaseSprite
+  id: MobPigManLLeg
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_leg
 
-- type: entity
-  parent: [ OrganBaseFootLeft, OrganPigManExternal ]
-  id: OrganPigManFootLeft
+- type: humanoidBaseSprite
+  id: MobPigManLArm
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_arm
 
-- type: entity
-  parent: [ OrganBaseFootRight, OrganPigManExternal ]
-  id: OrganPigManFootRight
+- type: humanoidBaseSprite
+  id: MobPigManLHand
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRLeg
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManRArm
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManRHand
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRFoot
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLFoot
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobPigManRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobPigManRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobPigManRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobPigManLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/PigMan/Species/parts.rsi
+    state: l_foot

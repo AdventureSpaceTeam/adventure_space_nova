@@ -11,7 +11,7 @@
   boilingPoint: -183.0
   meltingPoint: -218.4
   metabolisms:
-    Bloodstream:
+    Poison:
       effects:
       - !type:Oxygenate
         conditions:
@@ -42,12 +42,12 @@
             type: [ Vox ]
         clear: true
         time: 5
-    Respiration:
+    Gas:
       effects:
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth ]
+          type: [ Human, Animal, Rat, Plant ]
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -102,7 +102,7 @@
   - !type:FlammableTileReaction
     temperatureMultiplier: 1.5
   metabolisms:
-    Bloodstream:
+    Poison:
       effects:
       - !type:HealthChange
         damage:
@@ -111,7 +111,7 @@
       - !type:AdjustReagent
         reagent: Inaprovaline
         amount: -2.0
-    Respiration:
+    Gas:
       effects:
       - !type:HealthChange
         ignoreResistances: true
@@ -164,13 +164,13 @@
       - !type:Flammable
         multiplier: 0.8
   metabolisms:
-    Bloodstream:
+    Poison:
       effects:
       - !type:HealthChange
         damage:
           types:
             Radiation: 1.5
-    Respiration:
+    Gas:
       effects:
       - !type:HealthChange
         ignoreResistances: true
@@ -193,7 +193,7 @@
   flavor: bitter
   color: "#66ff33"
   metabolisms:
-    Bloodstream:
+    Poison:
       effects:
       - !type:Oxygenate
         conditions:
@@ -215,7 +215,7 @@
           type: [ Plant ]
           inverted: true
         factor: -4
-    Respiration:
+    Gas:
       effects:
       - !type:Oxygenate
         conditions:
@@ -254,13 +254,13 @@
   boilingPoint: -195.8
   meltingPoint: -210.0
   metabolisms:
-    Bloodstream:
+    Poison:
       effects:
       - !type:HealthChange
         damage:
           types:
             Cold: 0.5 # liquid nitrogen is cold
-    Respiration:
+    Gas:
       effects:
       - !type:Oxygenate
         conditions:
@@ -298,13 +298,13 @@
   boilingPoint: -88
   meltingPoint: -90
   metabolisms:
-    Bloodstream:
+    Poison:
       effects:
       - !type:HealthChange
         damage:
           types:
             Poison: 1
-    Respiration:
+    Gas:
       effects:
       - !type:Emote
         minScale: 0.2
@@ -376,7 +376,7 @@
   boilingPoint: -195.8
   meltingPoint: -210.0
   metabolisms:
-    Bloodstream:
+    Narcotic:
       effects:
       - !type:HealthChange
         ignoreResistances: true
@@ -401,7 +401,7 @@
         probability: 0.1
         conditions:
         minScale: 2
-    Respiration:
+    Gas:
       effects:
       - !type:HealthChange
         minScale: 0.5

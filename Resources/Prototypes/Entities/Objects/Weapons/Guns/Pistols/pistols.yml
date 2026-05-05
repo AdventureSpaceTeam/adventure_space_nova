@@ -48,7 +48,6 @@
         whitelist:
           tags:
             - MagazinePistol
-            - MagazinePistolHighCapacity
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -81,7 +80,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolHighCapacity
+        startingItem: MagazinePistol
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
@@ -110,11 +109,11 @@
   description: A cyborg-mounted weapon system based on the Viper pistol. Creates ammunition on the fly from an internal fabricator, which slowly self-charges.
   components:
   - type: Gun
-    fireRate: 6
+    fireRate: 5
     selectedMode: SemiAuto
     availableModes:
-    - SemiAuto
-    - FullAuto
+      - SemiAuto
+      - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
   - type: Sprite
@@ -135,7 +134,7 @@
     proto: CartridgePistol
     cycleable: false # No synthesizing ammo for your syndicate masters.
   - type: BallisticAmmoSelfRefiller
-    autoRefillRate: 2s
+    autoRefillRate: 4s
     affectedByEmp: true
   - type: AmmoCounter
 

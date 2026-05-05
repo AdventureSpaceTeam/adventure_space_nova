@@ -29,14 +29,9 @@
   parent: ClothingOuterBase
   id: ClothingOuterStorageBase
   components:
-  - type: Item
-    size: Normal
-    shape:
-    - 0,0,1,2
   - type: Storage
     grid:
     - 0,0,2,1
-    maxItemSize: Small
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -215,6 +210,4 @@
   id: ClothingOuterBaseMedium
   components:
   - type: Item
-    size: Large
-    shape:
-    - 0,0,2,3
+    size: Huge

@@ -96,8 +96,8 @@
         - id: WireBrush
 
 - type: entity
-  parent: ClothingBeltMedical
   id: ClothingBeltMedicalFilled
+  parent: ClothingBeltMedical
   suffix: Filled
   components:
   - type: EntityTableContainerFill
@@ -105,37 +105,27 @@
       storagebase: !type:AllSelector
         children:
         - id: Brutepack
+          amount: 2
         - id: Ointment
+        - id: Bloodpack
         - id: Gauze
-        # Reagents reflect the bottles in CoreMedicineReagentBottleTable
-        - id: ChemistryBottleSaline
-        - id: ChemistryBottleBicaridine
-        - id: ChemistryBottleDexalin
-        - id: ChemistryBottleDylovene
-        - id: ChemistryBottleHyronalin
-        - id: ChemistryBottleKelotane
-        - id: ChemistryBottleEpinephrine # A power item for medical players that feels thematic and worth stealing
-        - id: PillCanisterTricordrazine
+        - id: EmergencyMedipen #You never know what people are going to latejoin into
 
 - type: entity
-  parent: ClothingBeltMedicalEMT
   id: ClothingBeltMedicalEMTFilled
-  suffix: Paramedic, Filled
+  parent: ClothingBeltMedicalEMT
+  suffix: Paramedic,Filled
   components:
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
         children:
+        - id: Brutepack
+        - id: Ointment
         - id: Bloodpack
-          amount: 2
         - id: Gauze
-        # Reagents focused on emergency response rather than outright healing
-        - id: ChemistryBottleInaprovaline
-          amount: 2
-        - id: ChemistryBottleHaloperidol
-        - id: ChemistryBottleEthylredoxrazine
-        - id: ChemistryBottleIpecac
-        - id: ChemistryBottleCharcoal
+        - id: EmergencyMedipen #You never know what people are going to latejoin into
+          amount: 3
 
 - type: entity
   id: ClothingBeltPlantFilled

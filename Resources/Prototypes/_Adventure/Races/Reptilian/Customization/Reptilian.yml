@@ -3,7 +3,8 @@
   id: LizardHornsArgali2
   name: Унатх, рожки (Толстый  Аргали)
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_argali2
@@ -11,7 +12,8 @@
 - type: marking
   id: LizardHornsAyrshire2
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_ayrshire2
@@ -19,7 +21,8 @@
 - type: marking
   id: LizardHornsBambi
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_bambi
@@ -27,7 +30,8 @@
 - type: marking
   id: LizardHornsBig
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_big
@@ -35,7 +39,8 @@
 - type: marking
   id: LizardHornsBighorn2
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_bighorn2
@@ -43,7 +48,8 @@
 - type: marking
   id: LizardHornsCorkscrew
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_corkscrew
@@ -51,7 +57,8 @@
 - type: marking
   id: LizardHornsDeathclaw
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_deathclaw
@@ -59,7 +66,8 @@
 - type: marking
   id: LizardHornsDeathclawgreat
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_deathclawgreat
@@ -67,7 +75,8 @@
 - type: marking
   id: LizardHornsDouble2
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_double2
@@ -75,7 +84,8 @@
 - type: marking
   id: LizardHornsDragon
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_dragon
@@ -83,7 +93,8 @@
 - type: marking
   id: LizardHornsMohawk
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_mohawk
@@ -91,7 +102,8 @@
 - type: marking
   id: LizardHornsOlddragon
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_olddragon
@@ -99,7 +111,8 @@
 - type: marking
   id: LizardHornsMyrsore2
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_myrsore2
@@ -107,7 +120,8 @@
 - type: marking
   id: LizardHornsTrike
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: horns_trike
@@ -115,7 +129,8 @@
 - type: marking
   id: LizardHornsFullSpike
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: full_spike
@@ -123,7 +138,8 @@
 - type: marking
   id: LizardHornsLittleTrike
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: little_trike
@@ -131,7 +147,8 @@
 - type: marking
   id: LizardHornsKrone
   bodyPart: HeadTop
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadTop
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/horns.rsi
     state: krone
@@ -140,7 +157,8 @@
 - type: marking
   id: LizardTailCurved
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_curved
@@ -150,7 +168,8 @@
 - type: marking
   id: LizardTailFlexible
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_flexible
@@ -160,7 +179,8 @@
 - type: marking
   id: LizardTailSpiky
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_spiky
@@ -170,7 +190,8 @@
 - type: marking
   id: LizardTailRidge
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_ridge
@@ -182,7 +203,8 @@
 - type: marking
   id: LizardTailSpike
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_spike
@@ -192,7 +214,8 @@
 - type: marking
   id: LizardTailOverBig
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_big
@@ -202,7 +225,8 @@
 - type: marking
   id: LizardTailOverBigSpike
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails.rsi
     state: tail_big_spike
@@ -212,7 +236,8 @@
 - type: marking
   id: LizardTailUltraBig
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: base
@@ -222,7 +247,8 @@
 - type: marking
   id: LizardTailUltraBigSpike
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: base
@@ -234,7 +260,8 @@
 - type: marking
   id: LizardTailUltraBigRidge
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: base
@@ -246,7 +273,8 @@
 - type: marking
   id: LizardTailUltraBigTiger
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: base
@@ -258,7 +286,8 @@
 - type: marking
   id: LizardTailUltraBigSpikeTiger
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: base
@@ -272,7 +301,8 @@
 - type: marking
   id: LizardTailUltraBigRidgeTiger
   bodyPart: Tail
-  groupWhitelist: [Reptilian]
+  markingCategory: Tail
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/tails48.rsi
     state: base
@@ -287,7 +317,8 @@
 - type: marking
   id: LizardChestPrickly
   bodyPart: Back
-  groupWhitelist: [Reptilian]
+  markingCategory: Back
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/body.rsi
     state: body_prickly
@@ -295,7 +326,8 @@
 - type: marking
   id: LizardChestRidge
   bodyPart: Back
-  groupWhitelist: [Reptilian]
+  markingCategory: Back
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/body.rsi
     state: body_ridge
@@ -303,7 +335,8 @@
 - type: marking
   id: LizardChestUnderbellyF
   bodyPart: Chest
-  groupWhitelist: [Reptilian]
+  markingCategory: Chest
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/body.rsi
     state: body_underbelly_f
@@ -311,7 +344,8 @@
 - type: marking
   id: LizardChestRidgeDouble
   bodyPart: Back
-  groupWhitelist: [Reptilian]
+  markingCategory: Back
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/body.rsi
     state: body_ridge_double
@@ -319,7 +353,8 @@
 - type: marking
   id: LizardChestRidgeSmall
   bodyPart: Back
-  groupWhitelist: [Reptilian]
+  markingCategory: Back
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/body.rsi
     state: body_ridge_small
@@ -328,7 +363,8 @@
 - type: marking
   id: LizardFrillsCollar
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_collar
@@ -338,7 +374,8 @@
 - type: marking
   id: LizardFrillsFins
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_fins
@@ -348,7 +385,8 @@
 - type: marking
   id: LizardFrillsFinsKing
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_finsking
@@ -358,7 +396,8 @@
 - type: marking
   id: LizardFrillsFinsBig
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_fins_big
@@ -368,7 +407,8 @@
 - type: marking
   id: LizardFrillsRidge
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge
@@ -376,7 +416,8 @@
 - type: marking
   id: LizardFrillsRidgeFull
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge_full
@@ -384,7 +425,8 @@
 - type: marking
   id: LizardFrillsRidgeFullFull
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge_fullfull
@@ -392,7 +434,8 @@
 - type: marking
   id: LizardFrillsRidgeSmall
   bodyPart: HeadSide
-  groupWhitelist: [Reptilian]
+  markingCategory: HeadSide
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/frills.rsi
     state: frills_ridge_small
@@ -401,8 +444,9 @@
 - type: marking
   id: LizardSnoutFlat
   bodyPart: Snout
+  markingCategory: Snout
   forcedColoring: true
-  groupWhitelist: [Reptilian]
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_flat
@@ -410,8 +454,9 @@
 - type: marking
   id: LizardSnoutHigh
   bodyPart: Snout
+  markingCategory: Snout
   forcedColoring: true
-  groupWhitelist: [Reptilian]
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_high
@@ -419,8 +464,9 @@
 - type: marking
   id: LizardSnoutCroc
   bodyPart: Snout
+  markingCategory: Snout
   forcedColoring: true
-  groupWhitelist: [Reptilian]
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_croc
@@ -428,8 +474,9 @@
 - type: marking
   id: LizardSnoutTumb
   bodyPart: Snout
+  markingCategory: Snout
   forcedColoring: true
-  groupWhitelist: [Reptilian]
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_tumb
@@ -437,8 +484,9 @@
 - type: marking
   id: LizardSnoutBeak
   bodyPart: Snout
+  markingCategory: Snout
   forcedColoring: true
-  groupWhitelist: [Reptilian]
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_beak
@@ -446,8 +494,9 @@
 - type: marking
   id: LizardSnoutSmall
   bodyPart: Snout
+  markingCategory: Snout
   forcedColoring: true
-  groupWhitelist: [Reptilian]
+  speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Adventure/Races/Reptilian/Customization/snout.rsi
     state: snout_small

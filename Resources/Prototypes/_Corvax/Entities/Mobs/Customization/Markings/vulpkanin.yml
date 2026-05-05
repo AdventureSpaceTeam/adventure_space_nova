@@ -1,7 +1,8 @@
 - type: marking
   id: PawSocks
-  bodyPart: RFoot #highest possible layer
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Overlay
+  bodyPart: RHand #highest possible layer
+  speciesRestriction: [Vulpkanin]
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: pawsocks
@@ -9,7 +10,8 @@
 - type: marking
   id: FoxTail
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: vulp_tail
@@ -19,7 +21,8 @@
 - type: marking
   id: FoxEar
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: vulp_ear
@@ -29,7 +32,8 @@
 - type: marking
   id: WolfTail
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: wolf_tail
@@ -39,7 +43,8 @@
 - type: marking
   id: FoxBelly
   bodyPart: Chest
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Chest
+  speciesRestriction: [Vulpkanin]
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: vulp_belly-torso
@@ -47,7 +52,8 @@
 - type: marking
   id: FoxSnout
   bodyPart: Snout
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Snout
+  speciesRestriction: [Vulpkanin]
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: vulp_face
@@ -56,7 +62,8 @@
 - type: marking
   id: FoxTailAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail
+  speciesRestriction: []
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: tail_fox_waggin
@@ -66,7 +73,8 @@
 - type: marking
   id: WolfTailAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail
+  speciesRestriction: []
   sprites:
     - sprite: _Corvax/Mobs/Customization/vulpkanin.rsi
       state: tail_wolf_waggin

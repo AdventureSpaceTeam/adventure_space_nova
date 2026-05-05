@@ -29,7 +29,7 @@ namespace Content.Server.StationEvents
             GameRuleStartedEvent args)
         {
             // A little starting variance so schedulers dont all proc at once.
-            component.TimeUntilNextEvent = RobustRandom.NextFloat(component.MinimumTimeUntilFirstEvent, component.MinimumTimeUntilFirstEvent + component.MaximumSpanUntilFirstEvent);
+            component.TimeUntilNextEvent = RobustRandom.NextFloat(component.MinimumTimeUntilFirstEvent, component.MinimumTimeUntilFirstEvent + 120);
         }
 
         protected override void Ended(EntityUid uid, BasicStationEventSchedulerComponent component, GameRuleComponent gameRule,
@@ -132,15 +132,14 @@ namespace Content.Server.StationEvents
                     // sim an event
                     curTime += TimeSpan.FromSeconds(compMinMax.Next(_random));
 
-                    if (!_stationEvent.TryBuildLimitedEvents(basicScheduler.ScheduledGameRules,
-                            out var selectedEvents,
-                            currentTime: curTime,
-                            playerCount: playerCount))
+                    var available = _stationEvent.AvailableEvents(false, playerCount, curTime);
+                    if (!_stationEvent.TryBuildLimitedEvents(basicScheduler.ScheduledGameRules, available, out var selectedEvents))
                     {
                         continue; // doesnt break because maybe the time is preventing events being available.
                     }
 
-                    if (_stationEvent.FindEvent(selectedEvents) is not { } ev)
+                    var ev = _stationEvent.FindEvent(selectedEvents);
+                    if (ev == null)
                         continue;
 
                     occurrences[ev] += 1;
@@ -162,14 +161,15 @@ namespace Content.Server.StationEvents
             if (!eventScheduler.TryGetComponent<BasicStationEventSchedulerComponent>(out var basicScheduler, _compFac))
                 yield break;
 
-            if (!_stationEvent.TryListLimitedEvents(basicScheduler.ScheduledGameRules, out var events))
+            var available = _stationEvent.AvailableEvents();
+            if (!_stationEvent.TryBuildLimitedEvents(basicScheduler.ScheduledGameRules, available, out var events))
                 yield break;
 
             var totalWeight = events.Sum(x => x.Value.Weight); // Well this shit definitely isnt correct now, and I see no way to make it correct.
                                                                // Its probably *fine* but it wont be accurate if the EntityTableSelector does any subsetting.
             foreach (var (proto, comp) in events)              // The only solution I see is to do a simulation, and we already have that, so...!
             {
-                yield return (proto.ID, comp.Weight * (float)basicScheduler.ScheduledGameRules.Prob / totalWeight);
+                yield return (proto.ID, comp.Weight / totalWeight);
             }
         }
 
@@ -187,10 +187,8 @@ namespace Content.Server.StationEvents
 
             var timemins = time * 60;
             var theoryTime = TimeSpan.Zero + TimeSpan.FromSeconds(timemins);
-            if (!_stationEvent.TryListLimitedEvents(basicScheduler.ScheduledGameRules,
-                    out var untimedEvents,
-                    currentTime: theoryTime,
-                    playerCount: playerCount))
+            var available = _stationEvent.AvailableEvents(false, playerCount, theoryTime);
+            if (!_stationEvent.TryBuildLimitedEvents(basicScheduler.ScheduledGameRules, available, out var untimedEvents))
                 yield break;
 
             var events = untimedEvents.Where(pair => pair.Value.EarliestStart <= timemins).ToList();
@@ -199,7 +197,7 @@ namespace Content.Server.StationEvents
 
             foreach (var (proto, comp) in events)
             {
-                yield return (proto.ID, comp.Weight * (float)basicScheduler.ScheduledGameRules.Prob / totalWeight);
+                yield return (proto.ID, comp.Weight / totalWeight);
             }
         }
 
@@ -215,14 +213,15 @@ namespace Content.Server.StationEvents
             if (!eventScheduler.TryGetComponent<BasicStationEventSchedulerComponent>(out var basicScheduler, _compFac))
                 return 0f;
 
-            if (!_stationEvent.TryListLimitedEvents(basicScheduler.ScheduledGameRules, out var events))
+            var available = _stationEvent.AvailableEvents();
+            if (!_stationEvent.TryBuildLimitedEvents(basicScheduler.ScheduledGameRules, available, out var events))
                 return 0f;
 
             var totalWeight = events.Sum(x => x.Value.Weight); // same subsetting issue as lsprob.
             var weight = 0f;
             if (events.TryFirstOrNull(p => p.Key.ID == eventId, out var pair))
             {
-                weight = pair.Value.Value.Weight * (float)basicScheduler.ScheduledGameRules.Prob;
+                weight = pair.Value.Value.Weight;
             }
 
             return weight / totalWeight;

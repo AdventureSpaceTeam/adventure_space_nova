@@ -92,15 +92,8 @@ public sealed class BanCommand : LocalizedCommands
         var targetUid = located.UserId;
         var targetHWid = located.LastHWId;
 
-        var banInfo = new CreateServerBanInfo(reason);
-        banInfo.WithBanningAdmin(player?.UserId);
-        banInfo.AddUser(targetUid, target);
-        banInfo.AddHWId(targetHWid);
-        if (minutes > 0)
-            banInfo.WithMinutes(minutes);
-        banInfo.WithSeverity(severity);
+        _bans.CreateServerBan(targetUid, target, player?.UserId, null, targetHWid, minutes, severity, reason);
 
-        _bans.CreateServerBan(banInfo);
         _discordWebhookBanSender.SendBanMessage(target, targetUid, player?.Name, player?.UserId, minutes, reason); // AdvSpace Discord Webhook
     }
 

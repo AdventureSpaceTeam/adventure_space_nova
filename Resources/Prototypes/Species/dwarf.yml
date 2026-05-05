@@ -3,7 +3,9 @@
   name: species-name-dwarf
   roundStart: true
   prototype: MobDwarf
-  dollPrototype: AppearanceDwarf
+  sprites: MobHumanSprites
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobDwarfDummy
   skinColoration: HumanToned
   minAge: 35 # Adventure
   youngAge: 150 # Adventure

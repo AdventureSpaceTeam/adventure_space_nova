@@ -1,7 +1,8 @@
 - type: marking
   id: FoxEars
   bodyPart: HeadTop
-  groupWhitelist: [Human]
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/fox_parts.rsi

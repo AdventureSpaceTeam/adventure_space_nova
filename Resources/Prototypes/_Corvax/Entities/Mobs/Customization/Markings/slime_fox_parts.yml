@@ -1,7 +1,8 @@
 - type: marking
   id: SlimeFoxEars # if cat ears from slime can exist, then why fox ears cannot?
   bodyPart: HeadTop
-  groupWhitelist: [SlimePerson]
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/slime_fox_parts.rsi

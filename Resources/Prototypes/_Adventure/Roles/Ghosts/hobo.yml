@@ -1,7 +1,7 @@
 - type: entity
   save: false
   name: Бездомный
-  parent: MobHuman
+  parent: BaseMobHuman
   id: BaseMobHoboPerson
   abstract: true
   components:
@@ -9,11 +9,11 @@
   - type: DeadHearing
 
 - type: entity
-  parent: MobHuman
+  parent: BaseSpeciesDummy
   id: MobHoboPersonDummy
   noSpawn: true
   components:
-    - type: HumanoidProfile
+    - type: HumanoidAppearance
 
 - type: startingGear
   id: HoboGear

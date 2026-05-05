@@ -2,6 +2,7 @@ using System.Numerics;
 using Content.Server.Stack;
 using Content.Server.Stunnable;
 using Content.Shared.ActionBlocker;
+using Content.Shared.Body.Part;
 using Content.Shared.CombatMode;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Explosion;
@@ -47,6 +48,9 @@ namespace Content.Server.Hands.Systems
             base.Initialize();
 
             SubscribeLocalEvent<HandsComponent, DisarmedEvent>(OnDisarmed, before: new[] {typeof(StunSystem), typeof(SharedStaminaSystem)});
+
+            SubscribeLocalEvent<HandsComponent, BodyPartAddedEvent>(HandleBodyPartAdded);
+            SubscribeLocalEvent<HandsComponent, BodyPartRemovedEvent>(HandleBodyPartRemoved);
 
             SubscribeLocalEvent<HandsComponent, ComponentGetState>(GetComponentState);
 
@@ -101,6 +105,32 @@ namespace Content.Server.Hands.Systems
             args.PopupPrefix = "disarm-action-";
 
             args.Handled = true; // no shove/stun.
+        }
+
+        private void HandleBodyPartAdded(Entity<HandsComponent> ent, ref BodyPartAddedEvent args)
+        {
+            if (args.Part.Comp.PartType != BodyPartType.Hand)
+                return;
+
+            // If this annoys you, which it should.
+            // Ping Smugleaf.
+            var location = args.Part.Comp.Symmetry switch
+            {
+                BodyPartSymmetry.None => HandLocation.Middle,
+                BodyPartSymmetry.Left => HandLocation.Left,
+                BodyPartSymmetry.Right => HandLocation.Right,
+                _ => throw new ArgumentOutOfRangeException(nameof(args.Part.Comp.Symmetry))
+            };
+
+            AddHand(ent.AsNullable(), args.Slot, location);
+        }
+
+        private void HandleBodyPartRemoved(EntityUid uid, HandsComponent component, ref BodyPartRemovedEvent args)
+        {
+            if (args.Part.Comp.PartType != BodyPartType.Hand)
+                return;
+
+            RemoveHand(uid, args.Slot);
         }
 
         #region interactions

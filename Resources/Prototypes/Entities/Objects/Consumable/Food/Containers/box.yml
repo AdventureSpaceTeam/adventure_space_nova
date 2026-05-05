@@ -595,7 +595,7 @@
           children:
           - id: FoodSaladValid
             weight: 0.05
-            amount: 2
+            amount: 4
           - id: FoodSnackSyndi
             amount: 4
 
@@ -712,18 +712,14 @@
 - type: entityTable # size: 1x2
   id: HappyHonkToyUnsafeEntityTable
   table: !type:GroupSelector
-    children: # Total Weight 6
-    - id: ClothingHeadHatCatEars
-      weight: 0.25
+    children:
     - id: C4
-      weight: 0.05
+      weight: 0.02
     - id: ToyMarauder
     - id: ToyMauler
     - id: ToyNuke
     - id: ToySword
     - id: ToyDualSword # Adventure
-    - id: WeaponRevolverPythonAP
-      weight: 0.4
     - id: BalloonSyn
-      weight: 0.3
+      weight: 0.6
     - id: PlushieNuke

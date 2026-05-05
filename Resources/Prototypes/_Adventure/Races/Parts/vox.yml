@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobVoxLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobVoxLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobVoxLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobVoxLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobVoxRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobVoxRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobVoxRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobVoxRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobVoxLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobVoxLArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobVoxLHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobVoxLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobVoxRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobVoxRArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobVoxRHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobVoxRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: r_foot

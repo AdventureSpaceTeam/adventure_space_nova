@@ -5,7 +5,7 @@
   prototype: MobXiod
   sprites: MobXiodSprites
   markingLimits: MobXiodMarkingLimits
-  dollPrototype: AppearanceXiod
+  dollPrototype: MobXiodDummy
   skinColoration: Hues
   defaultSkinTone: "#b17ac3"
   minAge: 30
@@ -18,94 +18,119 @@
   femaleFirstNames: NamesXiod
   naming: First
 
-- type: markingsGroup
-  parent: Undergarments
-  id: Xiod
-  onlyGroupWhitelisted: true
-  limits:
-    enum.HumanoidVisualLayers.Chest:
-      limit: 1
+- type: markingPoints
+  id: MobXiodMarkingLimits
+  onlyWhitelisted: true
+  points:
+    HeadSide:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.Head:
-      limit: 1
+    Snout:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.HeadSide:
-      limit: 1
+    Head:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.LArm:
-      limit: 4
+    Chest:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.LFoot:
-      limit: 4
+    Legs:
+      points: 4
       required: false
-    enum.HumanoidVisualLayers.LHand:
-      limit: 4
+    Arms:
+      points: 4
       required: false
-    enum.HumanoidVisualLayers.LLeg:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RArm:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RFoot:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RHand:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RLeg:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.Snout:
-      limit: 1
-      required: false
-    enum.HumanoidVisualLayers.Tail:
-      limit: 1
+    Tail:
+      points: 1
       required: false
 
-- type: entity
-  id: OrganXiodVisual
-  abstract: true
-  components:
-  - type: VisualOrgan
-    data:
-      sprite: _Adventure/Races/Xiod/Species/parts.rsi
-  - type: VisualOrganMarkings
-    markingData:
-      group: Xiod
+- type: speciesBaseSprites
+  id: MobXiodSprites
+  sprites:
+    Tail: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    HeadTop: MobHumanoidAnyMarking
+    Head: MobXiodHead
+    Chest: MobXiodTorso
+    LLeg: MobXiodLLeg
+    RLeg: MobXiodRLeg
+    Eyes: MobXiodEyes
 
-- type: entity
-  id: OrganXiodExternal
-  abstract: true
-  parent: OrganXiodVisual
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobXiodEyes
+  baseSprite:
     sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: eyes
 
-- type: entity
-  parent: [ OrganBaseTorso, OrganXiodExternal ]
-  id: OrganXiodTorso
+- type: humanoidBaseSprite
+  id: MobXiodHead
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: head
 
-- type: entity
-  parent: [ OrganBaseHead, OrganXiodExternal ]
-  id: OrganXiodHead
+- type: humanoidBaseSprite
+  id: MobXiodHeadMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: head
 
-- type: entity
-  parent: [ OrganBaseLegLeft, OrganXiodExternal ]
-  id: OrganXiodLegLeft
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobXiodHeadFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobXiodTorso
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobXiodTorsoMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobXiodTorsoFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobXiodLLeg
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
     state: nulll
-  - type: VisualOrgan
-    data:
-      state: nulll
 
-- type: entity
-  parent: [ OrganBaseLegRight, OrganXiodExternal ]
-  id: OrganXiodLegRight
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobXiodRLeg
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
     state: nulll
-  - type: VisualOrgan
-    data:
-      state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll
+
+- type: humanoidBaseSprite
+  id: MobXiodRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Xiod/Species/parts.rsi
+    state: nulll

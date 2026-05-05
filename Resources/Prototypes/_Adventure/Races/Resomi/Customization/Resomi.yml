@@ -2,7 +2,8 @@
   id: ResomiTailBase
   name: Резоми, Хвост (С перьями)
   bodyPart: Tail
-  groupWhitelist: [Resomi]
+  markingCategory: Tail
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Species/parts.rsi
     state: Tail_base
@@ -15,7 +16,8 @@
   bodyPart: HeadTop
   followSkinColor: true
   forcedColoring: true
-  groupWhitelist: [Resomi]
+  markingCategory: HeadTop
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Species/parts.rsi
     state: ears
@@ -24,7 +26,8 @@
   id: ResomiBackstrafe
   name: Резоми, Перья (Отступающие)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiBackstrafe
@@ -33,7 +36,8 @@
   id: ResomiBurstShort
   name: Резоми, Перья (Взыв)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiBurstShort
@@ -42,7 +46,8 @@
   id: ResomiDefault
   name: Резоми, Перья (Классика)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiDefault
@@ -51,7 +56,8 @@
   id: ResomiEars
   name: Резоми, Перья (Ушки)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiEars
@@ -60,7 +66,8 @@
   id: ResomiFluffymohawk
   name: Резоми, Перья (Панк)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiFluffymohawk
@@ -69,7 +76,8 @@
   id: ResomiHedge
   name: Резоми, Перья (Изгородь)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiHedge
@@ -78,7 +86,8 @@
   id: ResomiLong
   name: Резоми, Перья (Длинные)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiLong
@@ -87,7 +96,8 @@
   id: ResomiSpiky
   name: Резоми, Перья (Шипы)
   bodyPart: Hair
-  groupWhitelist: [Resomi]
+  markingCategory: Hair
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Heir.rsi
       state: ResomiSpiky
@@ -96,7 +106,8 @@
   id: ResomiTailBaseSpeak
   name: Резоми, Хвост (Торчащие перья)
   bodyPart: Tail
-  groupWhitelist: [Resomi]
+  markingCategory: Tail
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Species/parts.rsi
     state: Tail_base
@@ -107,7 +118,8 @@
   id: ResomiTailDown
   name: Резоми, Хвост (Опущенный)
   bodyPart: Tail
-  groupWhitelist: [Resomi]
+  markingCategory: Tail
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Customization/Tails.rsi
     state: Tail_down
@@ -118,7 +130,8 @@
   id: ResomiTailDownSpeak
   name: Резоми, Хвост (Опущенный с торчащими перьями)
   bodyPart: Tail
-  groupWhitelist: [Resomi]
+  markingCategory: Tail
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Customization/Tails.rsi
     state: Tail_down
@@ -129,7 +142,8 @@
   id: ResomiTailUp
   name: Резоми, Хвост (Поднятый)
   bodyPart: Tail
-  groupWhitelist: [Resomi]
+  markingCategory: Tail
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Customization/Tails.rsi
     state: Tail_up
@@ -140,7 +154,8 @@
   id: ResomiTailUpSpeak
   name: Резоми, Хвост (Поднятый с торчащими перьями)
   bodyPart: Tail
-  groupWhitelist: [Resomi]
+  markingCategory: Tail
+  speciesRestriction: [Resomi]
   sprites:
   - sprite: _Adventure/Races/Resomi/Customization/Tails.rsi
     state: Tail_up
@@ -151,7 +166,8 @@
   id: PlumageFoot
   name: Резоми, Ноги (Оперение)
   bodyPart: LLeg
-  groupWhitelist: [Resomi]
+  markingCategory: Overlay
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Hands-Foot.rsi
       state: plumage_foot
@@ -160,7 +176,8 @@
   id: PlumageHand
   name: Резоми, Руки (Оперение)
   bodyPart: LLeg
-  groupWhitelist: [Resomi]
+  markingCategory: Overlay
+  speciesRestriction: [Resomi]
   sprites:
     - sprite: _Adventure/Races/Resomi/Customization/Hands-Foot.rsi
       state: plumage_hand

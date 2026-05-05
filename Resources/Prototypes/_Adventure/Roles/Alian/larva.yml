@@ -137,13 +137,7 @@
       params:
         volume: -1
   - type: Body
-  - type: InitialBody
-    organs:
-      Lungs: OrganAnimalLungs
-      Heart: OrganAlianHeart
-      Stomach: OrganAnimalStomach
-      Liver: OrganAnimalLiver
-      Kidneys: OrganAnimalKidneys
+    prototype: Alian
 
 - type: emoteSounds
   id: AlienLarva

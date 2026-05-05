@@ -20,15 +20,68 @@
   save: false
   name: Урист макКэмень
   parent:
-  - AppearanceStone
   - MobFlammable
-  - BaseSpeciesMobInorganicIPC
+  - BaseMobSpeciesInorganicIPC
   id: BaseMobStone
   components:
   - type: ExplosionResistance
     damageCoefficient: 0.7
   - type: StaminaResistance
     damageCoefficient: 0.7
+  - type: Sprite
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: ["brass"]
+    - map: ["pants"]
+    - map: ["jumpsuit"]
+    - map: ["enum.HumanoidVisualLayers.LFoot"]
+    - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["enum.HumanoidVisualLayers.LHand"]
+    - map: ["enum.HumanoidVisualLayers.RHand"]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "neck" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "enum.HumanoidVisualLayers.Back" ]
+    - map: [ "back" ]
+    - map: [ "ipc" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+  - type: ScaleVisuals
+    scale: 1.1, 1.1
   - type: Deathgasp
     prototype: StoneDeathgasp
   - type: BodyEmotes
@@ -102,9 +155,14 @@
       types:
         Blunt: 15
         Structural: 10
+  - type: HumanoidAppearance
+    species: Stone
   - type: Icon
     sprite: _Adventure/Races/Stone/Species/parts.rsi
     state: full
+  - type: Body
+    prototype: Stone
+    requiredLegs: 2
   - type: Damageable
     damageContainer: Stone
     damageModifierSet: Stone
@@ -174,81 +232,16 @@
   - type: GuideHelp
     guides:
     - Species
+  - type: Inventory
+    templateId: Stone
 
 - type: entity
-  parent: BaseSpeciesAppearance
-  id: AppearanceStone
-  categories: [ HideSpawnMenu ]
+  parent: BaseSpeciesDummy
+  id: MobStoneDummy
+  noSpawn: true
   components:
-    - type: Sprite
-      layers:
-      - map: [ "enum.HumanoidVisualLayers.Chest" ]
-      - map: [ "enum.HumanoidVisualLayers.Head" ]
-      - map: [ "enum.HumanoidVisualLayers.Snout" ]
-      - map: [ "enum.HumanoidVisualLayers.Eyes" ]
-      - map: [ "enum.HumanoidVisualLayers.RArm" ]
-      - map: [ "enum.HumanoidVisualLayers.LArm" ]
-      - map: [ "enum.HumanoidVisualLayers.RLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-      - map: ["brass"]
-      - map: ["pants"]
-      - map: ["jumpsuit"]
-      - map: ["enum.HumanoidVisualLayers.LFoot"]
-      - map: ["enum.HumanoidVisualLayers.RFoot"]
-      - map: ["enum.HumanoidVisualLayers.LHand"]
-      - map: ["enum.HumanoidVisualLayers.RHand"]
-      - map: [ "gloves" ]
-      - map: [ "shoes" ]
-      - map: [ "ears" ]
-      - map: [ "outerClothing" ]
-      - map: [ "eyes" ]
-      - map: [ "belt" ]
-      - map: [ "id" ]
-      - map: [ "neck" ]
-      - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
-      - map: [ "enum.HumanoidVisualLayers.Hair" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-      - map: [ "enum.HumanoidVisualLayers.Tail" ]
-      - map: [ "mask" ]
-      - map: [ "head" ]
-      - map: [ "enum.HumanoidVisualLayers.Back" ]
-      - map: [ "back" ]
-      - map: [ "ipc" ]
-      - map: [ "pocket1" ]
-      - map: [ "pocket2" ]
-      - map: ["enum.HumanoidVisualLayers.Handcuffs"]
-        color: "#ffffff"
-        sprite: Objects/Misc/handcuffs.rsi
-        state: body-overlay-2
-        visible: false
-      - map: [ "clownedon" ]
-        sprite: "Effects/creampie.rsi"
-        state: "creampie_human"
-        visible: false
-    - type: GenericVisualizer
-      visuals:
-        enum.CreamPiedVisuals.Creamed:
-          clownedon:
-            True: {visible: true}
-            False: {visible: false}
-    - type: ScaleVisuals
-      scale: 1.1, 1.1
-    - type: HumanoidProfile
+    - type: HumanoidAppearance
       species: Stone
-    - type: InitialBody
-      organs:
-        Torso: OrganStoneTorso
-        Head: OrganStoneHead
-        ArmLeft: OrganStoneArmLeft
-        ArmRight: OrganStoneArmRight
-        HandRight: OrganStoneHandRight
-        HandLeft: OrganStoneHandLeft
-        LegLeft: OrganStoneLegLeft
-        LegRight: OrganStoneLegRight
-        FootLeft: OrganStoneFootLeft
-        FootRight: OrganStoneFootRight
-        Brain: StoneBrain
     - type: Inventory
       templateId: Stone
 

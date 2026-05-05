@@ -1,5 +1,4 @@
-﻿using Content.Client.FeedbackPopup;
-using Content.Client.Gameplay;
+﻿using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Client.UserInterface.Systems.Info;
@@ -26,7 +25,6 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
     [Dependency] private readonly InfoUIController _info = default!;
     [Dependency] private readonly OptionsUIController _options = default!;
     [Dependency] private readonly GuidebookUIController _guidebook = default!;
-    [Dependency] private readonly FeedbackPopupUIController _feedback = null!;
 
     private Options.UI.EscapeMenu? _escapeWindow;
 
@@ -64,12 +62,6 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
 
         _escapeWindow.OnClose += DeactivateButton;
         _escapeWindow.OnOpen += ActivateButton;
-
-        _escapeWindow.FeedbackButton.OnPressed += _ =>
-        {
-            CloseEscapeWindow();
-            _feedback.ToggleWindow();
-        };
 
         _escapeWindow.ChangelogButton.OnPressed += _ =>
         {

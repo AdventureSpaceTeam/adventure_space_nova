@@ -1,7 +1,8 @@
 - type: marking
   id: SkrellTailsBase
   bodyPart: Tail
-  groupWhitelist: [Skrell]
+  markingCategory: Tail
+  speciesRestriction: [Skrell]
   sprites:
   - sprite: _Adventure/Races/Skrell/Species/parts.rsi
     state: tails_base
@@ -13,7 +14,7 @@
   prototype: MobSkrell
   sprites: MobSkrellSprites
   markingLimits: MobSkrellMarkingLimits
-  dollPrototype: AppearanceSkrell
+  dollPrototype: MobSkrellDummy
   skinColoration: Hues
   defaultSkinTone: "#4dd7ab"
   minAge: 30
@@ -24,114 +25,226 @@
   femaleFirstNames: NamesSkrell
   naming: First
 
-- type: markingsGroup
-  parent: Undergarments
-  id: Skrell
-  onlyGroupWhitelisted: true
-  limits:
-    enum.HumanoidVisualLayers.Chest:
-      limit: 1
+- type: markingPoints
+  id: MobSkrellMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Head:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.Head:
-      limit: 1
+    Chest:
+      points: 1
       required: false
-    enum.HumanoidVisualLayers.LArm:
-      limit: 4
+    Legs:
+      points: 4
       required: false
-    enum.HumanoidVisualLayers.LFoot:
-      limit: 4
+    Arms:
+      points: 4
       required: false
-    enum.HumanoidVisualLayers.LHand:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.LLeg:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RArm:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RFoot:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RHand:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.RLeg:
-      limit: 4
-      required: false
-    enum.HumanoidVisualLayers.Tail:
-      default:
-      - SkrellTailsBase
-      limit: 1
+    Tail:
+      points: 1
       required: true
+      defaultMarkings: [ SkrellTailsBase ]
 
-- type: entity
-  id: OrganSkrellVisual
-  abstract: true
-  components:
-  - type: VisualOrgan
-    data:
-      sprite: _Adventure/Races/Skrell/Species/parts.rsi
-  - type: VisualOrganMarkings
-    markingData:
-      group: Skrell
+- type: speciesBaseSprites
+  id: MobSkrellSprites
+  sprites:
+    Tail: MobHumanoidAnyMarking
+    HeadTop: MobHumanoidAnyMarking
+    Head: MobSkrellHead
+    Chest: MobSkrellTorso
+    LArm: MobSkrellLArm
+    RArm: MobSkrellRArm
+    LHand: MobSkrellLHand
+    RHand: MobSkrellRHand
+    LLeg: MobSkrellLLeg
+    RLeg: MobSkrellRLeg
+    LFoot: MobSkrellLFoot
+    RFoot: MobSkrellRFoot
+    Eyes: MobSkrellEyes
 
-- type: entity
-  id: OrganSkrellExternal
-  abstract: true
-  parent: OrganSkrellVisual
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobSkrellEyes
+  baseSprite:
     sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: eyes
 
-- type: entity
-  parent: [ OrganBaseTorso, OrganSkrellExternal ]
-  id: OrganSkrellTorso
-  components:
-  - type: Sprite
-    state: torso_m
-  - type: VisualOrgan
-    data:
-      state: torso_m
-
-- type: entity
-  parent: [ OrganBaseHead, OrganSkrellExternal ]
-  id: OrganSkrellHead
-  components:
-  - type: Sprite
+- type: humanoidBaseSprite
+  id: MobSkrellHead
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
     state: head_m
-  - type: VisualOrgan
-    data:
-      state: head_m
 
-- type: entity
-  parent: [ OrganBaseArmLeft, OrganSkrellExternal ]
-  id: OrganSkrellArmLeft
+- type: humanoidBaseSprite
+  id: MobSkrellHeadMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: head_m
 
-- type: entity
-  parent: [ OrganBaseArmRight, OrganSkrellExternal ]
-  id: OrganSkrellArmRight
+- type: humanoidBaseSprite
+  id: MobSkrellHeadFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: head_f
 
-- type: entity
-  parent: [ OrganBaseHandLeft, OrganSkrellExternal ]
-  id: OrganSkrellHandLeft
+- type: humanoidBaseSprite
+  id: MobSkrellTorso
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: torso_m
 
-- type: entity
-  parent: [ OrganBaseHandRight, OrganSkrellExternal ]
-  id: OrganSkrellHandRight
+- type: humanoidBaseSprite
+  id: MobSkrellTorsoMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: torso_m
 
-- type: entity
-  parent: [ OrganBaseLegLeft, OrganSkrellExternal ]
-  id: OrganSkrellLegLeft
+- type: humanoidBaseSprite
+  id: MobSkrellTorsoFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: torso_f
 
-- type: entity
-  parent: [ OrganBaseLegRight, OrganSkrellExternal ]
-  id: OrganSkrellLegRight
+- type: humanoidBaseSprite
+  id: MobSkrellLLeg
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_leg
 
-- type: entity
-  parent: [ OrganBaseFootLeft, OrganSkrellExternal ]
-  id: OrganSkrellFootLeft
+- type: humanoidBaseSprite
+  id: MobSkrellLArm
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_arm
 
-- type: entity
-  parent: [ OrganBaseFootRight, OrganSkrellExternal ]
-  id: OrganSkrellFootRight
+- type: humanoidBaseSprite
+  id: MobSkrellLHand
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSkrellRLeg
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSkrellRArm
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSkrellRHand
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSkrellRFoot
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLFoot
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobSkrellLArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobSkrellLHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobSkrellRLegMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobSkrellRArmMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobSkrellRHandMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobSkrellRFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLFootMale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobSkrellLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_legF
+
+- type: humanoidBaseSprite
+  id: MobSkrellLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_armF
+
+- type: humanoidBaseSprite
+  id: MobSkrellLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_handF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_legF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_armF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_handF
+
+- type: humanoidBaseSprite
+  id: MobSkrellRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: r_footF
+
+- type: humanoidBaseSprite
+  id: MobSkrellLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+    state: l_footF

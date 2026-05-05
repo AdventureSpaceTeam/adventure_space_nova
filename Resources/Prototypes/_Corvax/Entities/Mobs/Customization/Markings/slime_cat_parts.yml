@@ -1,7 +1,8 @@
 - type: marking
   id: SlimeCatEars # Literally, why not?
   bodyPart: HeadTop
-  groupWhitelist: [SlimePerson]
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/slime_cat_parts.rsi
@@ -12,7 +13,8 @@
 - type: marking
   id: SlimeCatTail # Again, why not?
   bodyPart: Tail
-  groupWhitelist: [SlimePerson]
+  markingCategory: Tail
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/slime_cat_parts.rsi
@@ -21,7 +23,8 @@
 - type: marking
   id: SlimeCatEarsStubby
   bodyPart: HeadTop
-  groupWhitelist: [SlimePerson]
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/slime_cat_parts.rsi
@@ -32,7 +35,8 @@
 - type: marking
   id: SlimeCatEarsCurled
   bodyPart: HeadTop
-  groupWhitelist: [SlimePerson]
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/slime_cat_parts.rsi
@@ -43,7 +47,8 @@
 - type: marking
   id: SlimeCatEarsTorn
   bodyPart: HeadTop
-  groupWhitelist: [SlimePerson]
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
   - sprite: _Corvax/Mobs/Customization/slime_cat_parts.rsi
@@ -54,7 +59,8 @@
 - type: marking
   id: SlimeCatTailStripes
   bodyPart: Tail
-  groupWhitelist: [SlimePerson]
+  markingCategory: Tail
+  speciesRestriction: [SlimePerson]
   sponsorOnly: true # Corvax-Sponsors
   sprites:
     - sprite: _Corvax/Mobs/Customization/slime_cat_parts.rsi

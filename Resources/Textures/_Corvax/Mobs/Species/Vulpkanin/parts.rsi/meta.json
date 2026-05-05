@@ -11,10 +11,6 @@
             "name": "full"
         },
         {
-            "name": "head",
-            "directions": 4
-        },
-        {
             "name": "head_f",
             "directions": 4
         },

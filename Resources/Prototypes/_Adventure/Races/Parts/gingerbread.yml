@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobGingerbreadLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobGingerbreadLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadLHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadLArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobGingerbreadRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: r_foot

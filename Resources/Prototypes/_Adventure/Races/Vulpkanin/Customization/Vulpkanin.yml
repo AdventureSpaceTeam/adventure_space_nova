@@ -3,7 +3,8 @@
   id: EarClose
   name: Сближенные
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
     state: close
@@ -14,7 +15,8 @@
   id: EarHanging
   name: Висящие
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
     state: hanging
@@ -25,7 +27,8 @@
   id: EarHangingLeft
   name: Висящее левое ухо
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
     state: hanging_left
@@ -36,7 +39,8 @@
   id: EarWide
   name: Широкие
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
     state: wide
@@ -47,7 +51,8 @@
   id: EarWolf
   name: Узкие
   bodyPart: HeadTop
-  groupWhitelist: [Vulpkanin]
+  markingCategory: HeadTop
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/ear.rsi
     state: wolf
@@ -59,7 +64,8 @@
   id: TailDocked
   name: Купированный
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
     state: docked
@@ -68,7 +74,8 @@
   id: TailDoG
   name: Собачий
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
     state: dog
@@ -79,7 +86,8 @@
   id: TailRing
   name: Кольцом
   bodyPart: Tail
-  groupWhitelist: [Vulpkanin]
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
   sprites:
   - sprite: _Adventure/Races/Vulpkanin/Customization/tails.rsi
     state: ring

@@ -117,7 +117,9 @@
     solutionOnBody: false
     updateInterval: 0.25
     metabolizerTypes: [ Dragon ]
-    stages: [ Digestion, Bloodstream ]
+    groups:
+    - id: Medicine
+    - id: Poison
   - type: Butcherable
     spawned:
     - id: FoodMeatDragon
@@ -140,7 +142,7 @@
   - type: Devourer
     foodPreferenceWhitelist:
       components:
-      - HumanoidProfile
+      - HumanoidAppearance
     stomachStorageWhitelist:
       components:
       - MobState

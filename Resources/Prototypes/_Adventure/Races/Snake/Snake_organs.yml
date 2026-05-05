@@ -1,4 +1,4 @@
-- type: metabolizerType
+﻿- type: metabolizerType
   id: Zerah
   name: Зерах
 
@@ -26,13 +26,13 @@
 
 - type: entity
   id: OrganZerahHeart
-  parent: OrganAnimal
+  parent: BaseAnimalOrgan
   name: Сердце зераха
   description: Тук тук.
   components:
   - type: Sprite
     sprite: _Adventure/Races/Snake/organs.rsi
-    state: heart-on
+    state: heart-off
   - type: Organ
   - type: Metabolizer
     maxReagents: 2

@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobReptilianLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobReptilianLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobReptilianLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobReptilianLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobReptilianRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobReptilianRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobReptilianRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobReptilianRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobReptilianLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobReptilianLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/reptilian.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobReptilianLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/reptilian.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobReptilianLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobReptilianRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobReptilianRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/reptilian.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobReptilianRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/reptilian.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobReptilianRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: r_foot

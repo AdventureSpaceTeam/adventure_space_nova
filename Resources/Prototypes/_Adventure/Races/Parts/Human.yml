@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobHumanLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobHumanLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobHumanLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobHumanLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobHumanRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobHumanRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobHumanRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobHumanRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobHumanLLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobHumanLArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobHumanLHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobHumanLFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobHumanRLegFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobHumanRArmFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobHumanRHandFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobHumanRFootFemale
+  baseSprite:
+    sprite: _Adventure/Races/Parts/human.rsi
+    state: r_foot

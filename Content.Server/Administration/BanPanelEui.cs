@@ -30,8 +30,8 @@ public sealed class BanPanelEui : BaseEui
     private string PlayerName { get; set; } = string.Empty;
     private IPAddress? LastAddress { get; set; }
     private ImmutableTypedHwid? LastHwid { get; set; }
-    private const int Ipv4_CIDR = CreateBanInfo.DefaultMaskIpv4;
-    private const int Ipv6_CIDR = CreateBanInfo.DefaultMaskIpv6;
+    private const int Ipv4_CIDR = 32;
+    private const int Ipv6_CIDR = 64;
 
     public BanPanelEui()
     {
@@ -77,15 +77,6 @@ public sealed class BanPanelEui : BaseEui
             return;
         }
 
-        var isRoleBan = ban.BannedJobs?.Length > 0 || ban.BannedAntags?.Length > 0;
-
-        CreateBanInfo banInfo = isRoleBan ? new CreateRoleBanInfo(ban.Reason) : new CreateServerBanInfo(ban.Reason);
-
-        banInfo.WithBanningAdmin(Player.UserId);
-        banInfo.WithSeverity(ban.Severity);
-        if (ban.BanDurationMinutes > 0)
-            banInfo.WithMinutes(ban.BanDurationMinutes);
-
         (IPAddress, int)? addressRange = null;
         if (ban.IpAddress is not null)
         {
@@ -126,52 +117,76 @@ public sealed class BanPanelEui : BaseEui
             targetHWid = ban.UseLastHwid ? located.LastHWId : ban.Hwid;
         }
 
-        if (addressRange != null)
-            banInfo.AddAddressRange(addressRange.Value);
-
-        if (targetUid != null)
-            banInfo.AddUser(targetUid.Value, ban.Target!);
-
-        banInfo.AddHWId(targetHWid);
-
-        if (isRoleBan)
+        if (ban.BannedJobs?.Length > 0 || ban.BannedAntags?.Length > 0)
         {
+            var now = DateTimeOffset.UtcNow;
             List<string>? roleBans = null;
             if (ban.BannedJobs is not null)
                 roleBans = new(ban.BannedJobs.Length);
-            var roleBanInfo = (CreateRoleBanInfo)banInfo;
-            foreach (var row in ban.BannedJobs ?? [])
+            foreach (var role in ban.BannedJobs ?? [])
             {
+                _banManager.CreateRoleBan(
+                    targetUid,
+                    ban.Target,
+                    Player.UserId,
+                    addressRange,
+                    targetHWid,
+                    role,
+                    ban.BanDurationMinutes,
+                    ban.Severity,
+                    ban.Reason,
+                    now
+                );
                 if (roleBans is not null)
-                    roleBans.Add(row);
-                roleBanInfo.AddJob(row);
+                    roleBans.Add(role);
             }
 
-            foreach (var row in ban.BannedAntags ?? [])
+            foreach (var role in ban.BannedAntags ?? [])
             {
-                roleBanInfo.AddAntag(row);
+                _banManager.CreateRoleBan(
+                    targetUid,
+                    ban.Target,
+                    Player.UserId,
+                    addressRange,
+                    targetHWid,
+                    role,
+                    ban.BanDurationMinutes,
+                    ban.Severity,
+                    ban.Reason,
+                    now
+                );
             }
 
             _DiscordWebhookBanSender.SendRoleBansMessage(ban.Target, targetUid, Player.Name, Player.UserId, ban.BanDurationMinutes, ban.Reason, roleBans); // AdvSpace Discord Webhook
-            _banManager.CreateRoleBan(roleBanInfo);
-        }
-        else
-        {
-            if (ban.Erase && targetUid is not null)
-            {
-                try
-                {
-                    if (_entities.TrySystem(out AdminSystem? adminSystem))
-                        adminSystem.Erase(targetUid.Value);
-                }
-                catch (Exception e)
-                {
-                    _sawmill.Error($"Error while erasing banned player:\n{e}");
-                }
-            }
 
-            _banManager.CreateServerBan((CreateServerBanInfo)banInfo);
+            Close();
+
+            return;
         }
+
+        if (ban.Erase && targetUid is not null)
+        {
+            try
+            {
+                if (_entities.TrySystem(out AdminSystem? adminSystem))
+                    adminSystem.Erase(targetUid.Value);
+            }
+            catch (Exception e)
+            {
+                _sawmill.Error($"Error while erasing banned player:\n{e}");
+            }
+        }
+
+        _banManager.CreateServerBan(
+            targetUid,
+            ban.Target,
+            Player.UserId,
+            addressRange,
+            targetHWid,
+            ban.BanDurationMinutes,
+            ban.Severity,
+            ban.Reason
+        );
 
         _DiscordWebhookBanSender.SendBanMessage(ban.Target, targetUid, Player.Name, Player.UserId, ban.BanDurationMinutes, ban.Reason); // AdvSpace Discord Webhook
 

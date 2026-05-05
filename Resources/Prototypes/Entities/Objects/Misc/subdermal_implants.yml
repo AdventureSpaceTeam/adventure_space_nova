@@ -224,7 +224,7 @@
     implantAction: ActionActivateDnaScramblerImplant
     whitelist:
       components:
-      - HumanoidProfile # syndies cant turn hamlet into a human
+      - HumanoidAppearance # syndies cant turn hamlet into a human
   - type: TriggerOnActivateImplant
   - type: DnaScrambleOnTrigger
     targetUser: true
@@ -250,8 +250,8 @@
 - type: entity
   parent: BaseSubdermalImplant
   id: VoiceMaskImplant
-  name: identity mask implant
-  description: This implant allows you to change your identity at will.
+  name: voice mask implant
+  description: This implant allows you to change your voice at will.
   categories: [ HideSpawnMenu ]
   components:
   - type: SubdermalImplant

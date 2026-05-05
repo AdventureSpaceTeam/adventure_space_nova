@@ -28,7 +28,7 @@
   components:
   - type: Sprite
     sprite: _Adventure/Races/Skrell/organs.rsi
-    state: heart-on
+    state: heart-off
 
 - type: entity
   id: OrganSkrellLungs

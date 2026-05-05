@@ -21,8 +21,12 @@
   equipment:
     id: ParamedicPDA
     ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalEMTFilled
     ipc: IPCModulMed # Adventure-IPC
     exo: ClothingOuterExoParamedBattary # Adventure
+  storage:
+    back:
+    - EmergencyRollerBedSpawnFolded
 
 - type: chameleonOutfit
   id: ParamedicChameleonOutfit

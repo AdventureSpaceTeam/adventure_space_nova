@@ -1,4 +1,4 @@
-- type: metabolizerType
+﻿- type: metabolizerType
   id: Drask
   name: Драск
 
@@ -27,7 +27,7 @@
 
 - type: entity
   id: OrganDraskHeart
-  parent: OrganAnimal
+  parent: BaseAnimalOrgan
   name: сердце драска
   description: тук тук
   components:

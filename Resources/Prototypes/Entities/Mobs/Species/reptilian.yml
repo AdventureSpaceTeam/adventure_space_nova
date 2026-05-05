@@ -1,0 +1,191 @@
+- type: entity
+  save: false
+  name: Urisst' Mzhand
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobReptilian
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Reptilian
+    hideLayersOnEquip:
+    - Snout
+    - HeadTop
+    - HeadSide
+#    - Tail
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
+  - type: Hunger
+  - type: Puller
+    needsHands: false
+  - type: Thirst
+  - type: Icon
+    sprite: Mobs/Species/Reptilian/parts.rsi
+    state: full
+  - type: Body
+    prototype: Reptilian
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatLizard
+      amount: 5
+  - type: LizardAccent
+  - type: Speech
+    speechSounds: LizardADV # Adventure
+    speechVerb: Reptilian
+    allowedEmotes: ['Thump', 'Hissing']
+  - type: TypingIndicator
+    proto: lizard
+  - type: Vocal
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Scale
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: ThermalRegulator # Adventure
+    metabolismHeat: 800 # Adventure
+    radiatedHeat: 100 # Adventure
+    implicitHeatRegulation: 250 # Adventure
+    sweatHeatRegulation: 500 # Adventure
+    shiveringHeatRegulation: 500 # Adventure
+    normalBodyTemperature: 291.15 # Adventure
+    thermalRegulationTemperatureThreshold: 2 # Adventure
+  - type: Temperature
+    heatDamageThreshold: 400
+    coldDamageThreshold: 273.15 # Adventure 0с
+    currentTemperature: 291.15 # Adventure
+    specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
+    coldDamage:
+      types:
+        Cold : 0.1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 1.5 #per second, scales with temperature & other constants
+  - type: TemperatureSpeed
+    thresholds:
+      285: 0.8 # Adventure
+      280: 0.6 # Adventure
+      273: 0.4 # Adventure
+#Adventure-edit
+  - type: JumpAbility
+    action: ActionJumpSpecies
+    canCollide: true
+    jumpDistance: 1.5
+    jumpSound:
+      path: /Audio/Effects/thudswoosh.ogg
+      params:
+        volume: -1
+        variation: 0.05
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 90
+    damage:
+      types:
+        Heat: -0.05
+      groups:
+        Brute: -0.05
+#Adventure-edit
+  - type: Wagging
+  - type: Inventory
+    speciesId: reptilian
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-end
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
+    displacements:
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobReptilianDummy
+  categories: [ HideSpawnMenu ]
+  description: A dummy reptilian meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Reptilian
+    hideLayersOnEquip:
+    - Snout
+    - HeadTop
+    - HeadSide
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
+  - type: Inventory
+    speciesId: reptilian
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-end
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
+    displacements:
+      head:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: head
+      mask:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Reptilian/displacement.rsi
+            state: mask
+
+#Weh

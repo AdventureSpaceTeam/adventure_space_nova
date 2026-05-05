@@ -1,0 +1,97 @@
+#Мэн
+- type: humanoidBaseSprite
+  id: MobMothLLegMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobMothLHandMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobMothLArmMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobMothLFootMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobMothRLegMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobMothRHandMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobMothRArmMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobMothRFootMale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_foot
+
+#Вумэн
+- type: humanoidBaseSprite
+  id: MobMothLLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobMothLHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobMothLArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobMothLFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobMothRLegFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobMothRHandFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobMothRArmFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobMothRFootFemale
+  baseSprite:
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: r_foot

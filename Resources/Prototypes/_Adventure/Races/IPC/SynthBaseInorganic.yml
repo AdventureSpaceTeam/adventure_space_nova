@@ -6,7 +6,7 @@
   - MobPolymorphable
   - MobCombat
   - StripableInventoryBase
-  id: BaseSpeciesMobInorganicIPC
+  id: BaseMobSpeciesInorganicIPC
   abstract: true
   components:
   - type: Sprite
@@ -81,7 +81,7 @@
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
-  - type: HumanoidProfile
+  - type: HumanoidAppearance
     species: Human
   - type: SlowOnDamage
     speedModifierThresholds:

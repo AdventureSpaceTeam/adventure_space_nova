@@ -1,7 +1,8 @@
 - type: marking
   id: CyberRArmVox
   bodyPart: RArm
-  groupWhitelist: [Vox]
+  markingCategory: Arms
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -15,7 +16,8 @@
 - type: marking
   id: CyberLArmVox
   bodyPart: LArm
-  groupWhitelist: [Vox]
+  markingCategory: Arms
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -29,7 +31,8 @@
 - type: marking
   id: CyberRHandVox
   bodyPart: RHand
-  groupWhitelist: [Vox]
+  markingCategory: Arms
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -43,7 +46,8 @@
 - type: marking
   id: CyberLHandVox
   bodyPart: LHand
-  groupWhitelist: [Vox]
+  markingCategory: Arms
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -57,7 +61,8 @@
 - type: marking
   id: CyberRLegVox
   bodyPart: RLeg
-  groupWhitelist: [Vox]
+  markingCategory: Legs
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -71,7 +76,8 @@
 - type: marking
   id: CyberLLegVox
   bodyPart: LLeg
-  groupWhitelist: [Vox]
+  markingCategory: Legs
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -85,7 +91,8 @@
 - type: marking
   id: CyberLFootVox
   bodyPart: LFoot
-  groupWhitelist: [Vox]
+  markingCategory: Legs
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -99,7 +106,8 @@
 - type: marking
   id: CyberRFootVox
   bodyPart: RFoot
-  groupWhitelist: [Vox]
+  markingCategory: Legs
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -113,7 +121,8 @@
 - type: marking
   id: CyberHeadLVox1
   bodyPart: Head
-  groupWhitelist: [Vox]
+  markingCategory: Head
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -127,7 +136,8 @@
 - type: marking
   id: CyberHeadRVox1
   bodyPart: Head
-  groupWhitelist: [Vox]
+  markingCategory: Head
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -141,7 +151,8 @@
 - type: marking
   id: CyberHeadLVox2
   bodyPart: Head
-  groupWhitelist: [Vox]
+  markingCategory: Head
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -155,7 +166,8 @@
 - type: marking
   id: CyberHeadRVox2
   bodyPart: Head
-  groupWhitelist: [Vox]
+  markingCategory: Head
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -169,7 +181,8 @@
 - type: marking
   id: CyberHeadLVox3
   bodyPart: Head
-  groupWhitelist: [Vox]
+  markingCategory: Head
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:
@@ -183,7 +196,8 @@
 - type: marking
   id: CyberHeadRVox3
   bodyPart: Head
-  groupWhitelist: [Vox]
+  markingCategory: Head
+  speciesRestriction: [Vox]
   sponsorOnly: true
   coloring:
     default:

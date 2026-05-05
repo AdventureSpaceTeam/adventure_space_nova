@@ -602,12 +602,4 @@ public readonly record struct UtilityResult(Dictionary<EntityUid, float> Entitie
 
         return Entities.MinBy(x => x.Value).Key;
     }
-
-    /// <summary>
-    /// Returns a GetEnumerable sorted in descending score.
-    /// </summary>
-    public IEnumerable<KeyValuePair<EntityUid, float>> GetEnumerable()
-    {
-        return Entities.OrderByDescending(x => x.Value);
-    }
 }

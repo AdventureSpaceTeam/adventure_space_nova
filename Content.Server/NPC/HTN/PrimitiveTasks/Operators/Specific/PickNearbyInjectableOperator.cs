@@ -14,14 +14,9 @@ namespace Content.Server.NPC.HTN.PrimitiveTasks.Operators.Specific;
 public sealed partial class PickNearbyInjectableOperator : HTNOperator
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
+    private EntityLookupSystem _lookup = default!;
     private MedibotSystem _medibot = default!;
     private PathfindingSystem _pathfinding = default!;
-
-    private EntityQuery<DamageableComponent> _damageQuery = default!;
-    private EntityQuery<InjectableSolutionComponent> _injectQuery = default!;
-    private EntityQuery<NPCRecentlyInjectedComponent> _recentlyInjected = default!;
-    private EntityQuery<MobStateComponent> _mobState = default!;
-    private EntityQuery<EmaggedComponent> _emaggedQuery = default!;
 
     [DataField("rangeKey")] public string RangeKey = NPCBlackboard.MedibotInjectRange;
 
@@ -40,14 +35,9 @@ public sealed partial class PickNearbyInjectableOperator : HTNOperator
     public override void Initialize(IEntitySystemManager sysManager)
     {
         base.Initialize(sysManager);
+        _lookup = sysManager.GetEntitySystem<EntityLookupSystem>();
         _medibot = sysManager.GetEntitySystem<MedibotSystem>();
         _pathfinding = sysManager.GetEntitySystem<PathfindingSystem>();
-
-        _damageQuery = _entManager.GetEntityQuery<DamageableComponent>();
-        _injectQuery = _entManager.GetEntityQuery<InjectableSolutionComponent>();
-        _recentlyInjected = _entManager.GetEntityQuery<NPCRecentlyInjectedComponent>();
-        _mobState = _entManager.GetEntityQuery<MobStateComponent>();
-        _emaggedQuery = _entManager.GetEntityQuery<EmaggedComponent>();
     }
 
     public override async Task<(bool Valid, Dictionary<string, object>? Effects)> Plan(NPCBlackboard blackboard,
@@ -61,16 +51,18 @@ public sealed partial class PickNearbyInjectableOperator : HTNOperator
         if (!_entManager.TryGetComponent<MedibotComponent>(owner, out var medibot))
             return (false, null);
 
+        var damageQuery = _entManager.GetEntityQuery<DamageableComponent>();
+        var injectQuery = _entManager.GetEntityQuery<InjectableSolutionComponent>();
+        var recentlyInjected = _entManager.GetEntityQuery<NPCRecentlyInjectedComponent>();
+        var mobState = _entManager.GetEntityQuery<MobStateComponent>();
+        var emaggedQuery = _entManager.GetEntityQuery<EmaggedComponent>();
 
-        if (!blackboard.TryGetValue<IEnumerable<KeyValuePair<EntityUid, float>>>("TargetList", out var patients, _entManager))
-            return (false, null);
-
-        foreach (var (entity, _) in patients)
+        foreach (var entity in _lookup.GetEntitiesInRange(owner, range))
         {
-            if (_mobState.TryGetComponent(entity, out var state) &&
-                _injectQuery.HasComponent(entity) &&
-                _damageQuery.TryGetComponent(entity, out var damage) &&
-                !_recentlyInjected.HasComponent(entity))
+            if (mobState.TryGetComponent(entity, out var state) &&
+                injectQuery.HasComponent(entity) &&
+                damageQuery.TryGetComponent(entity, out var damage) &&
+                !recentlyInjected.HasComponent(entity))
             {
                 // no treating dead bodies
                 if (!_medibot.TryGetTreatment(medibot, state.CurrentState, out var treatment))
@@ -79,7 +71,7 @@ public sealed partial class PickNearbyInjectableOperator : HTNOperator
                 // Only go towards a target if the bot can actually help them or if the medibot is emagged
                 // note: this and the actual injecting don't check for specific damage types so for example,
                 // radiation damage will trigger injection but the tricordrazine won't heal it.
-                if (!_emaggedQuery.HasComponent(entity) && !treatment.IsValid(damage.TotalDamage))
+                if (!emaggedQuery.HasComponent(entity) && !treatment.IsValid(damage.TotalDamage))
                     continue;
 
                 //Needed to make sure it doesn't sometimes stop right outside it's interaction range

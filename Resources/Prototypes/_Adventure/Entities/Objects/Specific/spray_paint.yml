@@ -9,11 +9,6 @@
     sprite: _Adventure/Objects/Tools/spray_paint.rsi
     state: icon
   - type: MagicMirror
-    organs:
-    - Head
-    layers:
-    - Hair
-    - FacialHair
     changeHairSound: /Audio/_Adventure/Items/spray_paint.ogg
     availableActions: Color
   - type: ActivatableUI

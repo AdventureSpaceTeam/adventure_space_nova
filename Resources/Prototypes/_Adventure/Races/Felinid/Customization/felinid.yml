@@ -1,7 +1,8 @@
 - type: marking
   id: FelinidEars
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  markingCategory: HeadTop
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -23,7 +24,8 @@
 - type: marking
   id: FelinidTail
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  markingCategory: Tail
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -40,7 +42,8 @@
 - type: marking
   id: FelinidEarsStubby
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  markingCategory: HeadTop
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -62,7 +65,8 @@
 - type: marking
   id: FelinidEarsCurled
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  markingCategory: HeadTop
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -84,7 +88,8 @@
 - type: marking
   id: FelinidEarsTorn
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  markingCategory: HeadTop
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -106,7 +111,8 @@
 - type: marking
   id: FelinidTailStripes
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  markingCategory: Tail
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -125,7 +131,8 @@
 - type: marking
   id: FelinidTailBell
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  markingCategory: Tail
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -142,7 +149,8 @@
 - type: marking
   id: FelinidEarsBell
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  markingCategory: HeadTop
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -164,7 +172,8 @@
 - type: marking
   id: FelinidTailFox
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  markingCategory: Tail
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:
@@ -183,7 +192,8 @@
 - type: marking
   id: FelinidEarsFox
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  markingCategory: HeadTop
+  speciesRestriction: [Felinid]
   coloring:
     default:
       type:

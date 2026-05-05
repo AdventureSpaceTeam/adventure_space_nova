@@ -1,0 +1,112 @@
+﻿#Тело серпентида
+- type: body
+  name: "Серпентид"
+  id: InsectSerpentide
+  root: torso
+  slots:
+    head:
+      part: HeadInsect
+      connections:
+      - torso
+      organs:
+        brain: OrganInsectiBrain
+        eyes: OrganInsectEyes
+    torso:
+      part: TorsoSnake
+      connections:
+      - right arm
+      - left arm
+      organs:
+        heart: OrganInsectHeart
+        lungs: OrganInsectLungs
+        stomach: OrganInsectStomach
+    right arm:
+      part: RightArmInsect
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmInsect
+      connections:
+      - left hand
+    right hand:
+      part: RightHandInsect
+    left hand:
+      part: LeftHandInsect
+
+- type: entity
+  id: PartInsect
+  parent: [BaseItem, BasePart]
+  name: "Часть тела серпентида"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 10
+
+- type: entity
+  id: TorsoInsect
+  name: "Туловище серпентида"
+  parent: [PartInsect, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 20
+
+- type: entity
+  id: HeadInsect
+  name: "Голова серпентида"
+  parent: [PartInsect, BaseHead]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmInsect
+  name: "Левая рука серпентида"
+  parent: [PartInsect, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmInsect
+  name: "Правая рука серпентида"
+  parent: [PartInsect, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandInsect
+  name: "Левая рука серпентида"
+  parent: [PartInsect, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandInsect
+  name: "Правая рука серпентида"
+  parent: [PartInsect, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: _Adventure/Races/Insect/Species/parts.rsi
+    state: "r_hand"

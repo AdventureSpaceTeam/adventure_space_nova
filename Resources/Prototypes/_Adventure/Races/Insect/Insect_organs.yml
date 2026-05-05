@@ -1,4 +1,4 @@
-- type: metabolizerType
+﻿- type: metabolizerType
   id: InsectSerpentide
   name: Серпентид
 
@@ -26,13 +26,13 @@
 
 - type: entity
   id: OrganInsectHeart
-  parent: OrganAnimal
+  parent: BaseAnimalOrgan
   name: Сердце серпентида
   description: Тук тук.
   components:
   - type: Sprite
     sprite: _Adventure/Races/Insect/organs.rsi
-    state: heart-on
+    state: heart-off
   - type: Organ
   - type: Metabolizer
     maxReagents: 2
@@ -84,7 +84,7 @@
   - type: Sprite
     sprite: _Adventure/Races/Insect/organs.rsi
     state: stomach
-  - type: Metabolizer
+  - type: Metabolizer 
     metabolizerTypes: [InsectSerpentide]
     removeEmpty: true
     groups:
