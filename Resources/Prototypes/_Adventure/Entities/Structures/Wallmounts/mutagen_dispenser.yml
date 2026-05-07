@@ -1,0 +1,23 @@
+- type: entity
+  parent: BaseDispenser
+  id: MutagenDispenser
+  name: раздатчик нестабильного мутагена
+  description: Настенный раздатчик нестабильного мутагена.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Structures/Wallmounts/mutagen_dispenser.rsi
+    layers:
+    - state: mutagendispenser
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fill-
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 250
+        reagents:
+        - ReagentId: UnstableMutagen
+          Quantity: 250
