@@ -59,6 +59,8 @@
       amount: 10
     - id: MaterialMagmatite1
       amount: 10
+    - id: MaterialVolcanicGlass
+      amount: 1
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepThud
