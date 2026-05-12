@@ -33,7 +33,7 @@
   - 0     # bz
   - 0.01  # halon
   effects:
-  - !type:HalonFireSuppressionReaction {}
+  - !type:HalonOxygenAbsorptionReaction {}
 
 - type: gasReaction
   id: HealiumProduction
@@ -91,7 +91,7 @@
   - 0     # hyper-noblium
   - 0.02  # hydrogen
   effects:
-    - !type:HydrogenBurnReaction {}
+  - !type:HydrogenFireReaction {}
 
 - type: gasReaction
   id: PluoxiumProduction
@@ -114,7 +114,7 @@
   - 0     # hyper-noblium
   - 0     # hydrogen
   effects:
-    - !type:PluoxiumProductionReaction {}
+  - !type:PluoxiumProductionReaction {}
 
 - type: gasReaction
   id: NitriumProduction
@@ -136,7 +136,7 @@
   - 0     # hyper-noblium
   - 0     # hydrogen
   effects:
-    - !type:NitriumProductionReaction {}
+  - !type:NitriumProductionReaction {}
 
 - type: gasReaction
   id: NitriumDecomposition
@@ -164,7 +164,7 @@
   - 0     # protonitrate
   - 0     # zauker
   effects:
-    - !type:NitriumDecompositionReaction {}
+  - !type:NitriumDecompositionReaction {}
 
 - type: gasReaction
   id: PNProduction
@@ -188,7 +188,7 @@
   - 0.02  # hydrogen
   - 0.01  # pluoxium
   effects:
-    - !type:ProtoNitrateProductionReaction {}
+  - !type:ProtoNitrateProductionReaction {}
 
 - type: gasReaction
   id: PNHydrogenConversion
@@ -214,7 +214,7 @@
   - 0     # antinob
   - 0.01  # protonitrate
   effects:
-    - !type:ProtoNitrateHydrogenConversion {}
+  - !type:ProtoNitrateHydrogenConversionReaction {}
 
 - type: gasReaction
   id: PNTritiumDetox
@@ -242,7 +242,7 @@
   - 0     # antinob
   - 0.01  # protonitrate
   effects:
-    - !type:ProtoNitrateTritiumReaction {}
+  - !type:ProtoNitrateTritiumConversionReaction {}
 
 - type: gasReaction
   id: PNBZDecomposition
@@ -270,7 +270,7 @@
   - 0     # antinob
   - 0.01  # protonitrate
   effects:
-    - !type:ProtoNitrateBZDecomposition {}
+  - !type:ProtoNitrateBZaseConversionReaction {}
 
 - type: gasReaction
   id: ZaukerProduction
@@ -295,7 +295,7 @@
   - 0     # pluoxium
   - 0.01  # nitrium
   effects:
-    - !type:ZaukerProductionReaction {}
+  - !type:ZaukerProductionReaction {}
 
 - type: gasReaction
   id: ZaukerDecomposition
@@ -322,4 +322,4 @@
   - 0     # protonitrate
   - 0.01  # zauker
   effects:
-    - !type:ZaukerDecompositionReaction {}
+  - !type:ZaukerDecompositionReaction {}

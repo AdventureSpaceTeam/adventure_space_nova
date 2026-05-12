@@ -245,8 +245,6 @@ namespace Content.Server.Atmos.EntitySystems
                         barotrauma.TakingDamage = true;
                         _adminLogger.Add(LogType.Barotrauma, $"{ToPrettyString(uid):entity} started taking low pressure damage");
                     }
-
-                    _alertsSystem.ShowAlert(uid, barotrauma.LowPressureAlert, 2);
                 }
                 else if (pressure >= Atmospherics.HazardHighPressure)
                 {
@@ -260,8 +258,6 @@ namespace Content.Server.Atmos.EntitySystems
                         barotrauma.TakingDamage = true;
                         _adminLogger.Add(LogType.Barotrauma, $"{ToPrettyString(uid):entity} started taking high pressure damage");
                     }
-
-                    _alertsSystem.ShowAlert(uid, barotrauma.HighPressureAlert, 2);
                 }
                 else
                 {

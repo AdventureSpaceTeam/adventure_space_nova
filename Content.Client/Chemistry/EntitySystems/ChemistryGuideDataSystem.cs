@@ -77,6 +77,12 @@ public sealed class ChemistryGuideDataSystem : SharedChemistryGuideDataSystem
             if (gas.Reagent == null)
                 continue;
 
+            if (!_reagentSources.ContainsKey(gas.Reagent))
+            {
+                Logger.Warning($"Reagent '{gas.Reagent}' referenced by gas '{gas.ID}' not found in reagent prototypes, skipping...");
+                continue;
+            }
+
             var data = new ReagentGasSourceData(
                 new () { DefaultCondenseCategory },
                 gas);

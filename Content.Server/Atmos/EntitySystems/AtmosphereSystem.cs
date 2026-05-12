@@ -16,6 +16,7 @@ using Robust.Shared.Prototypes;
 using System.Linq;
 using Content.Shared.Damage.Systems;
 using Robust.Shared.Threading;
+using System.Diagnostics;
 
 namespace Content.Server.Atmos.EntitySystems;
 
@@ -73,6 +74,8 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypesReloaded);
 
         CacheDecals();
+
+        InitADTAtmosCVars();
     }
 
     public override void Shutdown()
@@ -80,6 +83,8 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
         base.Shutdown();
 
         ShutdownCommands();
+
+        ShutdownADTAtmosCVars();
     }
 
     private void OnTileChanged(ref TileChangedEvent ev)

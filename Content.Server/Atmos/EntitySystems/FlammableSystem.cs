@@ -24,6 +24,7 @@ using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.FixedPoint;
 using Content.Shared.Hands;
 using Content.Shared.Temperature.Components;
+using Content.Shared.Weapons.Ranged.Events;
 using Robust.Server.Audio;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
@@ -432,14 +433,6 @@ namespace Content.Server.Atmos.EntitySystems
                 {
                     flammable.FireStacks = MathF.Min(0, flammable.FireStacks + 1);
                 }
-
-                if (!flammable.OnFire)
-                {
-                    _alertsSystem.ClearAlert(uid, flammable.FireAlert);
-                    continue;
-                }
-
-                _alertsSystem.ShowAlert(uid, flammable.FireAlert);
 
                 if (flammable.FireStacks > 0)
                 {

@@ -9,6 +9,8 @@ public abstract partial class SharedAtmosAlertsComputerSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<AtmosAlertsComputerComponent, AtmosAlertsComputerDeviceSilencedMessage>(OnDeviceSilencedMessage);
+
+        InitializeADT();
     }
 
     private void OnDeviceSilencedMessage(EntityUid uid, AtmosAlertsComputerComponent component, AtmosAlertsComputerDeviceSilencedMessage args)
@@ -21,4 +23,5 @@ public abstract partial class SharedAtmosAlertsComputerSystem : EntitySystem
 
         Dirty(uid, component);
     }
+
 }
