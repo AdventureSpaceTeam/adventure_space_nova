@@ -272,6 +272,8 @@
       amount: 5
     - id: MaterialMagmatite1
       amount: 5
+    - id: MaterialCharredRib
+      amount: 1
   - type: PointLight
     radius: 4
     energy: 1.5
