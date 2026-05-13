@@ -1,0 +1,201 @@
+#Items
+- type: entity
+  parent: MaterialBase
+  id: MaterialCharredRib
+  name: ребро командира легиона
+  description: Крепкая окаменевшая кость, вырванная из грудной клетки командира легиона.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/boss_drops.rsi
+    layers:
+    - state: charred_rib
+    - state: charred_rib_light
+      shader: unshaded
+  - type: Appearance
+  - type: Item
+    size: Normal
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#f2511e"
+  - type: ExplosionResistance
+    damageCoefficient: 0.0
+  - type: Tag
+    tags:
+    - CharredRibTag
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialVolcanicGlass
+  name: вулканическое стекло
+  description: Вулканическое стекло, которое миллионы лет подвергалось метаморфизму в недрах некрополя.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/boss_drops.rsi
+    layers:
+    - state: volcanic_glass
+    - state: volcanic_glass_light
+      shader: unshaded
+  - type: Appearance
+  - type: Item
+    size: Normal
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#f2511e"
+  - type: ExplosionResistance
+    damageCoefficient: 0.0
+  - type: Tag
+    tags:
+    - VolcanicGlassTag
+
+#equipment
+- type: entity
+  parent: ClothingHandsBase
+  id: MagmaKnuckleDusters
+  name: кастет из окаменевшего ребра
+  description: Ударная поверхность, укреплённая ребром командира легиона способна крушить горные породы.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/magmaknuckleduster.rsi
+    layers:
+    - state: magmaknuckleduster
+    - state: magmaknuckleduster_light
+      shader: unshaded
+  - type: Clothing
+    sprite: _Adventure/Roles/LavaLand/Equipment/magmaknuckleduster.rsi
+  - type: MeleeWeapon
+    attackRate: 1.5
+    damage:
+      types:
+        Blunt: 10
+        Heat: 5 
+        Structural: 30
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: Construction
+    graph: MagmaDustersGraph
+    node: magmadusters
+  - type: Tag
+    tags:
+    - Pickaxe
+    - WhitelistChameleon
+    - Kangaroo
+
+- type: entity
+  parent: ClothingEyesBase
+  id: MagmaGoggles
+  name: мезонные очки утилизатора
+  description: Линзы из уникального стекла позволяют видеть скопления руды сквозь каменную породу.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/Equipment/magmagoggles.rsi
+    layers:
+    - state: icon
+    - state: icon-light
+      shader: unshaded
+  - type: Clothing
+    sprite: _Adventure/Roles/LavaLand/Equipment/magmagoggles.rsi
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES 
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/click.ogg
+      params:
+        maxDistance: 1
+  - type: UseDelay
+  - type: MiningScanner
+    range: 10
+  - type: Construction
+    graph: MagmaGogglesGraph
+    node: magmagoggles
+
+#crafts
+
+- type: constructionGraph
+  id: MagmaGogglesGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: magmagoggles
+      steps:
+      - tag: VolcanicGlassTag
+        icon:
+          sprite: _Adventure/Roles/LavaLand/materials/boss_drops.rsi
+          state: volcanic_glass
+        name: volcanic glass
+        doAfter: 10
+      - tag: MesonGlassesTag
+        icon:
+          sprite: Clothing/Eyes/Glasses/meson.rsi
+          state: icon
+        name: engineering goggles
+        doAfter: 10
+      - material: Magmatite
+        amount: 1
+        doAfter: 10
+      - material: Cable
+        amount: 5
+        doAfter: 10
+  - node: magmagoggles
+    entity: MagmaGoggles
+
+- type: construction
+  name: мезонные очки утилизатора
+  id: MagmaGogglesCONST
+  graph: MagmaGogglesGraph
+  startNode: start
+  targetNode: magmagoggles
+  category: construction-category-clothing
+  objectType: Item
+
+- type: constructionGraph
+  id: MagmaDustersGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: magmadusters
+      steps:
+      - tag: CharredRibTag
+        icon:
+          sprite: _Adventure/Roles/LavaLand/materials/boss_drops.rsi
+          state: charred_rib
+        name: charred rib
+        doAfter: 10
+      - material: Brass
+        amount: 6
+        doAfter: 10
+      - material: Magmatite
+        amount: 3
+        doAfter: 10
+  - node: magmadusters
+    entity: MagmaKnuckleDusters
+
+- type: construction
+  name: кастет из окаменевшего ребра
+  id: MagmaDustersCONST
+  graph: MagmaDustersGraph
+  startNode: start
+  targetNode: magmadusters
+  category: construction-category-weapons
+  objectType: Item
+
+#tags
+
+- type: Tag
+  id: VolcanicGlassTag
+
+- type: Tag
+  id: CharredRibTag
+
+- type: Tag
+  id: MesonGlassesTag
