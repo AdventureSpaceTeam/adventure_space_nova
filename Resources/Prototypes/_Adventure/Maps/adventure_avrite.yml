@@ -13,7 +13,7 @@
           mapNameTemplate: '{0} Avrite {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'SH'
+            prefixCreator: 'LV'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_courser.yml
         - type: StationJobs
