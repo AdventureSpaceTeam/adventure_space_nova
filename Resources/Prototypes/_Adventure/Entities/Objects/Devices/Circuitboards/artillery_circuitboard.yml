@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: BaseCommandContraband
+  parent: [ BaseItem, BaseCommandContraband ]
   id: ArtilleryComputerCircuitboard
   name: artillery console circuit board
   description: A circuit board of navigation system for bluespace artillery.
