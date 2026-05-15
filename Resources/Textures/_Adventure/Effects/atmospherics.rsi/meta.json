@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "https://github.com/SunChan07",
+    "copyright": "Taken from https://github.com/tgstation/tgstation at 04e43d8c1d5097fdb697addd4395fb849dd341bd",
     "size": {
         "x": 32,
         "y": 32
@@ -12,15 +12,7 @@
             "delays": [[0.1, 0.1, 0.1, 0.1, 0.1]]
         },
         {
-            "name": "bz",
-            "delays": [[0.1, 0.1, 0.1, 0.1, 0.1]]
-        },
-        {
             "name": "nitrium",
-            "delays": [[0.1, 0.1, 0.1, 0.1, 0.1]]
-        },
-        {
-            "name": "pluoxium",
             "delays": [[0.1, 0.1, 0.1, 0.1, 0.1]]
         },
         {
@@ -29,10 +21,6 @@
         },
         {
             "name": "anti_noblium",
-            "delays": [[0.1, 0.1, 0.1, 0.1, 0.1]]
-        },
-        {
-            "name": "hyper_noblium",
             "delays": [[0.1, 0.1, 0.1, 0.1, 0.1]]
         },
         {
