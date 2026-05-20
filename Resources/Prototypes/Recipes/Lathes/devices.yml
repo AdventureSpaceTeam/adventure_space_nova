@@ -140,6 +140,7 @@
     Silver: 750
     Plasma: 1500
     Uranium: 150
+    CentCommCrystal: 400 #Adventure
 
 - type: latheRecipe
   parent: ClothingBackpackHolding
