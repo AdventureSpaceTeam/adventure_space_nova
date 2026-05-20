@@ -217,9 +217,12 @@
         },
         {
             "name": "rock_andesite_west"
-        },  
+        },
         {
             "name": "rock_magma"
+        },
+        {
+            "name": "rock_bluespace"
         },
         {
             "name": "rock_gem"
