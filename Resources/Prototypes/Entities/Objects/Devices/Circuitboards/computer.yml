@@ -18,6 +18,18 @@
       chemicalComposition:
         Silicon: 20
     - type: Circuitboard
+    - type: Tag #Adv Start
+      tags:
+      - Circuitboard
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 10
+          reagents:
+          - ReagentId: ToxinTrash
+            Quantity: 5
+    - type: Edible
+      requiresSpecialDigestion: true #Adv End
 
 - type: entity
   parent: BaseComputerCircuitboard
