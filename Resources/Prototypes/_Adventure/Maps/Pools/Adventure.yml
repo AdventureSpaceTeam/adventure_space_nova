@@ -2,27 +2,31 @@
   id: AdventureMapPool
   maps:
   - AdventureAmber      #min 0  max 50
-  - AdventureAspid      #min 20 max 55
+  - AdventureAspid      #min 0  max 55
+  - AdventureAstra      #min 0  max 30
   - AdventureAvrite     #min 35 max N/A
+  - AdventureAtlas      #min 0  max 35
   - AdventureBagel      #min 30 max 120
   - AdventureBoxNew     #min 25 max 120 #rework (too big, original min 50)
   - AdventureCluster    #min 0  max 35
   - AdventureDelta      #min 30 max N/A
   - AdventureElizium    #min 0  max 25
-  - AdventureLoop       #min 25 max 70
+# - AdventureLoop       #min 25 max 70
   - AdventureMarathon   #min 25 max 70
   - AdventureMaus       #min 0  max 40
   - AdventureOmega      #min 0  max 25
+  - AdventureOutpost    #min 25 max 55
   - AdventurePacked     #min 0  max 25
   - AdventurePebble     #min 0  max N/A
 # - AdventurePlasma     #min 15 max 80 #Сломался
-  - AdventurePolaris    #min 0  max 35
+# - AdventurePolaris    #min 0  max 35
 # - AdventureRelict     #min 0  max 25
   - AdventureRipper     #min 0  max 25
+  - AdventureSaltern    #min 0  max 35
   - AdventureShipyard   #min 0  max 25
-  - AdventureSilly      #min 0  max 25
+# - AdventureSilly      #min 0  max 25
   - AdventureStar       #min 10  max 35
-  - AdventureTrain      #min 20 max 120
+  - AdventureTrain      #min 10 max 120
 # - Starquest           #min 0  max 20 # До лучших времён
 
 # original list

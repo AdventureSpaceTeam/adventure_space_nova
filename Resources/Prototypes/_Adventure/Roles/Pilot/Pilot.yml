@@ -1,0 +1,119 @@
+#Шлем пилота
+- type: entity
+  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband]
+  id: ClothingHeadHelmetPilot
+  name: шлем пилота
+  description: Вы чуствуете себя настоящим пилотом. Имеет огромный солнцезащитный визор.
+  suffix: AdvClothing
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Pilot/PilotHelmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/Pilot/PilotHelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.90
+        Heat: 0.90
+        Caustic: 0.95
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - SecurityHelmet
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+
+# Скафандр пилота     
+- type: entity
+  parent: [ClothingOuterHardsuitBase, BaseSecurityContraband]
+  id: ClothingOuterHardsuitPilotLight
+  name: скафандр пилота СБ
+  description: Лёгкая и более дорогая версия скафандра СБ. Почти не мешает движению!
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Pilot/PilotHardsuit/outerclothing.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/Pilot/PilotHardsuit/outerclothing.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.95
+        Piercing: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitPilotLight
+
+#Скафандр пилота (Шлем)
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitPilotLight
+  name: шлем скафандра пилота СБ
+  description: Лёгкая и более дорогая версия шлема скафандра СБ. Визор увеличен до комичных размеров для большего обзора.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/Pilot/PilotHardsuit/helm.rsi
+  - type: Clothing
+    sprite: _Adventure/Roles/Pilot/PilotHardsuit/helm.rsi
+  - type: PointLight
+    color: "#FFFF00"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+        Radiation: 0.90
+        Caustic: 0.90
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+    
+#Шкаф
+- type: entity
+  id: LockerPilot
+  parent: LockerBase
+  name: шкаф пилота СБ
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: pil
+    stateDoorOpen: pil_open
+    stateDoorClosed: pil_door
+  - type: AccessReader
+    access: [ [ "Security" ] ]
+
+#Шкаф пилота
+- type: entity
+  id: LockerPilotFilledHardsuit
+  suffix: Заполненный, AdvRoles, AdvMapping
+  parent: LockerPilot
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHeadHelmetPilot
+      - id: ClothingOuterHardsuitPilotLight
+      - id: MedkitCombatFilled
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingBeltUtilityFilled
+      - id: WeaponLaserGun
+      - id: WeaponLaserCarbine
+      - id: DoubleEmergencyNitrogenTankFilled
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: JetpackSecurityFilled
+      - id: BoxMagazinePistol

@@ -468,6 +468,15 @@
             "name": "paramed_open"
         },
         {
+            "name": "pil"
+        },
+        {
+            "name": "pil_door"
+        },
+        {
+            "name": "pil_open"
+        },
+        {
             "name": "pink_door"
         },
         {
