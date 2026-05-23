@@ -116,6 +116,9 @@
       interactFailureString: petting-failure-syndicate-cyborg
       interactSuccessSound:
         path: /Audio/Ambience/Objects/periodic_beep.ogg
+    - type: Damageable #Adventure
+      damageContainer: Silicon
+      damageModifierSet: AssBorg
 
 - type: entity
   id: BorgChassisSyndicateMedical
