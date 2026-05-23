@@ -330,7 +330,7 @@
       - material: Plasma
         amount: 20
       - material: CentCommCrystal
-        amount: 10
+        amount: 30
     - to: frame10
       completed:
       - !type:SpawnPrototype
@@ -963,7 +963,7 @@
       - material: Plasma
         amount: 20
       - material: CentCommCrystal
-        amount: 10
+        amount: 30
     - to: frame10
       completed:
       - !type:SpawnPrototype
