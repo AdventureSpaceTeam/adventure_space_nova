@@ -1,0 +1,70 @@
+﻿- type: gameMap
+  id: AdventureOutpost
+  mapName: 'Outpost Station'
+  mapPath: /Maps/_Adventure/Adventureoutpost.yml
+  minPlayers: 25
+  maxPlayers: 55
+  stations:
+    advOutpost:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Outpost {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'OP'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
+        - type: StationJobs
+          availableJobs:
+            # service
+            HeadOfPersonnel: [ 1, 1 ]
+            Passenger: [ -1, -1 ]
+            ServiceWorker: [ 2, 2 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 2, 2 ]
+            Chef: [ 1, 1 ]
+            Clown: [ 1, 1 ]
+            Janitor: [ 2, 2 ]
+            Mime: [ 1, 1 ]
+            Chaplain: [ 1, 1 ]
+            Librarian: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            # command
+            Captain: [ 1, 1 ]
+            IAA: [ 1, 1 ]
+            # engineering
+            ChiefEngineer: [ 1, 1 ]
+            SeniorEngineerAdv: [ 1, 1 ]
+            AtmosphericTechnician: [ 2, 2 ]
+            StationEngineer: [ 3, 3 ]
+            TechnicalAssistant: [ 2, 2 ]
+            # medical
+            ChiefMedicalOfficer: [ 1, 1 ]
+            SeniorMedicAdv: [ 1, 1 ]
+            Chemist: [ 2, 2 ]
+            MedicalDoctor: [ 3, 3 ]
+            MedicalIntern: [ 2, 2 ]
+            Paramedic: [ 1, 1 ]
+            Psychologist: [ 1, 1 ]
+            # science
+            ResearchDirector: [ 1, 1 ]
+            SeniorResearcherAdv: [ 1, 1 ]
+            Scientist: [ 3, 3 ]
+            ResearchAssistant: [ 2, 2 ]
+            Borg: [ 6, 6 ] # Adventure
+            # security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            SeniorOfficerAdv: [ 1, 1 ]
+            Detective: [ 1, 1 ]
+            SecurityOfficer: [ 4, 4 ]
+            SecurityCadet: [ 2, 2 ]
+            # supply
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 2, 2 ]
+            CargoTechnician: [ 2, 2 ]
+            # remap
+            Blueshield: [ 1, 1 ]
+            Brigmedic: [ 1, 1 ]
+            StationAi: [ 1, 1 ]
