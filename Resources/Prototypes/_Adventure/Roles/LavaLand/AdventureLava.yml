@@ -321,6 +321,12 @@
       count: 15
       minGroupSize: 1
       maxGroupSize: 1
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltBluespace
+      count: 15
+      minGroupSize: 3
+      maxGroupSize: 6
 
 - type: dungeonConfig
   id: LavaBlob

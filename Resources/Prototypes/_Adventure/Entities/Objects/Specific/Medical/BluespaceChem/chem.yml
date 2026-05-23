@@ -7,6 +7,7 @@
     Plastic: 1000
     Plasma: 250
     Silver: 50
+    CentCommCrystal: 400
 
 - type: latheRecipe
   id: BS-Jug
@@ -18,6 +19,7 @@
     Plasma: 300
     Silver: 50
     Gold: 50
+    CentCommCrystal: 300
 
 - type: latheRecipe
   id: BSPillCanister
@@ -29,6 +31,7 @@
     Plasma: 100
     Silver: 50
     Gold: 50
+    CentCommCrystal: 100
 
 - type: latheRecipe
   id: BaseBSChemistryEmptyVial
@@ -39,3 +42,4 @@
     Plastic: 200
     Plasma: 200
     Gold: 50
+    CentCommCrystal: 100

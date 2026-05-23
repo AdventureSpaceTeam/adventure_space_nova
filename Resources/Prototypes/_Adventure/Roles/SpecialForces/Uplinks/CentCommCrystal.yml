@@ -1,6 +1,7 @@
 #Created: raidgo Transferred:  depresh
 - type: entity
   name: блюспейс Кристалл
+  description: Похоже, он переливается манящей энергией.
   parent: BaseItem
   id: CentCommCrystal
   suffix: 20 БК
@@ -21,6 +22,13 @@
   - type: Currency
     price:
       CentCommCrystal: 1
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      CentCommCrystal: 100
+  - type: Tag
+    tags:
+      - RawMaterial
 
 - type: entity
   parent: CentCommCrystal
@@ -43,3 +51,155 @@
   name: Блюспейс Кристаллы
   icon: { sprite: /Textures/_Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi, state: telecrystal }
   spawn: CentCommCrystal1
+
+- type: material
+  id: CentCommCrystal
+  stackEntity: CentCommCrystal1
+  name: блюспейс кристалл
+  unit: materials-unit-piece
+  icon: { sprite: /Textures/_Adventure/Roles/SpecialForces/Uplinks/telecrystal.rsi, state: telecrystal }
+  color: "#033e6b"
+  price: 10
+
+- type: entity
+  id: WallRockBasaltBluespace
+  name: базальт
+  parent: WallRockBasalt
+  description: Рудная жила, богатая блюспейс-кристаллами.
+  suffix: Блюспейс LavaLand
+  components:
+    - type: OreVein
+      oreChance: 1.0
+      currentOre: OreBluespaceFragment
+    - type: Sprite
+      layers:
+        - state: rock_wall
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_wall_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_wall_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_wall_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_wall_west
+        - state: rock_bluespace
+          visible: false
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+    - type: PointLight
+      radius: 2
+      energy: 1.5
+      color: "#033e6b"
+
+- type: ore
+  id: OreBluespaceFragment
+  oreEntity: MaterialBluespaceFragment1
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: stack
+  id: BluespaceFragment
+  name: руда блюспейс-кристалла
+  icon: { sprite: /Textures/_Adventure/Roles/LavaLand/materials/centcomm_crystals.rsi, state: bluespace }
+  spawn: MaterialBluespaceFragment1
+  maxCount: 30
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialBluespaceFragment
+  name: руда блюспейс-кристалла
+  description: Кусок неочищенной руды.
+  suffix: LavaLand
+  components:
+  - type: Sprite
+    sprite: _Adventure/Roles/LavaLand/materials/centcomm_crystals.rsi
+    layers:
+    - state: bluespace
+  - type: Appearance
+  - type: Stack
+    stackType: BluespaceFragment
+  - type: Item
+    size: Normal
+  - type: Tag
+    tags:
+    - Ore
+  - type: PointLight
+    radius: 2
+    energy: 1.5
+    color: "#033e6b"
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      BluespaceFragment: 100
+  - type: Extractable
+    grindableSolutionName: bluespace
+  - type: SolutionContainerManager
+    solutions:
+      bluespace:
+        reagents:
+        - ReagentId: Charcoal
+          Quantity: 3
+        - ReagentId: Zinc
+          Quantity: 1
+        - ReagentId: Iron
+          Quantity: 1
+  - type: Healing
+    damageContainers:
+      - Stone
+    damage:
+      types:
+        Blunt: -10
+        Slash: -5
+        Piercing: -10
+        Heat: -15
+        Cold: -20
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+
+- type: entity
+  parent: MaterialBluespaceFragment
+  id: MaterialBluespaceFragment1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: material
+  id: BluespaceFragment
+  stackEntity: MaterialBluespaceFragment1
+  name: руда блюспейс-кристалла
+  unit: materials-unit-piece
+  icon: { sprite: _Adventure/Roles/LavaLand/materials/centcomm_crystals.rsi, state: bluespace }
+  color: "#033e6b"
+  price: 2
+
+- type: latheRecipe
+  id: CentCommCrystal
+  result: CentCommCrystal1
+  completetime: 0
+  materials:
+    BluespaceFragment: 500
+
+- type: entity
+  id: AsteroidRockBluespace
+  parent: AsteroidRock
+  description: Рудная жила, богатая блюспейс-кристаллами.
+  suffix: Блюспейс LavaLand
+  components:
+  - type: OreVein
+    currentOre: OreBluespaceFragment
+  - type: Sprite
+    layers:
+    - state: rock_asteroid
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_asteroid_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_asteroid_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_asteroid_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_asteroid_west
+    - state: rock_bluespace
+      visible: false # Adventure
+      map: [ "enum.MiningScannerVisualLayers.Overlay" ]
