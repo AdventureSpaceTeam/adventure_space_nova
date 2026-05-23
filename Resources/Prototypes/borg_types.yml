@@ -108,6 +108,10 @@
   petSuccessString: petting-success-salvage-cyborg
   petFailureString: petting-failure-salvage-cyborg
 
+  addComponents: #Adventure
+  - type: Damageable
+    damageContainer: Silicon
+    damageModifierSet: SalvBorg
 
 # Janitor borg
 - type: borgType

@@ -34,6 +34,9 @@
   - type: BorgCuffed
   - type: FlashImmunity
   - type: ShowCriminalRecordIcons
+  - type: Damageable
+    damageContainer: Silicon
+    damageModifierSet: SecBorg
 
   inventoryTemplateId: borgShort
   spriteBodyState: sec

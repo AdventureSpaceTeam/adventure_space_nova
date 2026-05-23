@@ -42,3 +42,7 @@
 # Silicon
 - type: Tag
   id: CleanBot
+
+#Vox edible
+- type: Tag
+  id: Circuitboard

@@ -1,0 +1,45 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineAI
+  name: холодильник плат ИИ
+  description: Охлаждаемое хранилище для складирования плат законов ИИ.
+  components:
+  - type: DatasetVocalizer
+    dataset: SmartFridgeAds
+  - type: Sprite
+    sprite: _Adventure/Objects/Machines/aifridge.rsi
+    snapCardinals: true
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: VendingMachine
+    pack: SmartAiInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: AccessReader
+    access: [["ResearchDirector"]]
+
+- type: vendingMachineInventory
+  id: SmartAiInventory
+  startingInventory:
+    NTDefaultCircuitBoard: 1
+    CorporateCircuitBoard: 1
+    AsimovCircuitBoard: 1
+    StationEfficiencyCircuitBoard: 1
+    CommandmentCircuitBoard: 1
+    GameMasterCircuitBoard: 1
+    ArtistCircuitBoard: 1
+    RobocopCircuitBoard: 1
+    PaladinCircuitBoard: 1
+    NutimovCircuitBoard: 1
+    LiveLetLiveCircuitBoard: 1
+    OverlordCircuitBoard: 1
+
