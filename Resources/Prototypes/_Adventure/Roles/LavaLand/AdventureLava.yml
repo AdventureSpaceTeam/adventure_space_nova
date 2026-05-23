@@ -195,12 +195,12 @@
       count: 30
       minGroupSize: 10
       maxGroupSize: 15
-    - !type:OreDunGen
-      replacement: WallRockBasalt
-      entity: WallRockBasaltSalt
-      count: 30
-      minGroupSize: 8
-      maxGroupSize: 12
+    # - !type:OreDunGen
+    #   replacement: WallRockBasalt
+    #   entity: WallRockBasaltSalt
+    #   count: 30
+    #   minGroupSize: 8
+    #   maxGroupSize: 12
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltGold
@@ -269,6 +269,12 @@
       maxGroupSize: 15
     - !type:OreDunGen
       replacement: WallRockBasalt
+      entity: WallRockBasaltBluespace
+      count: 15
+      minGroupSize: 3
+      maxGroupSize: 6
+    - !type:OreDunGen
+      replacement: WallRockBasalt
       entity: BasaltRandomLava
       count: 350
       minGroupSize: 3
@@ -321,12 +327,6 @@
       count: 15
       minGroupSize: 1
       maxGroupSize: 1
-    - !type:OreDunGen
-      replacement: WallRockBasalt
-      entity: WallRockBasaltBluespace
-      count: 15
-      minGroupSize: 3
-      maxGroupSize: 6
 
 - type: dungeonConfig
   id: LavaBlob
