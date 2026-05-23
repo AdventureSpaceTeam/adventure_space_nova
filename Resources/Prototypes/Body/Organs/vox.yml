@@ -33,6 +33,7 @@
       - PowerCage #Adventure-edit
       - PlasmaMag #Adventure-edit
       - PlasmaMagSniper #Adventure-edit
+      - Circuitboard #Adventure-edit
     isSpecialDigestibleExclusive: false
 #Adventure-edit-start
   - type: Sprite
