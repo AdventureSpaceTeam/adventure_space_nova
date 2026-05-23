@@ -9,6 +9,7 @@
       - material: Steel
         amount: 5
         doAfter: 2
+
   - node: frame1
     entity: ArtilleryConsoleFrame
     actions:
@@ -38,6 +39,7 @@
       steps:
       - tool: Screwing
         doAfter: 2
+
   - node: frame2
     actions:
     - !type:AppearanceChange
@@ -63,8 +65,9 @@
         doAfter: 1
       - tool: Prying
         doAfter: 2
+
   - node: base
-    entity: !type:BoardNodeEntity { container: board }
+    entity: ArtilleryConsole
     edges:
     - to: frame2
       completed:
