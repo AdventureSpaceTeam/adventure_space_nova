@@ -8,6 +8,10 @@
   recipes:
   - NuclearGeneratorMachineCircuitboard
   - EnergyCoreCircuitboard
+
+- type: latheRecipePack
+  id: HyperExosuitFabricator
+  recipes:
   - HyperExosuitFabricatorMachineCircuitboard
 
 - type: latheRecipePack
@@ -42,6 +46,8 @@
   id: MedAdventure
   recipes:
   - ReusableMedipen
+  - DefibrillatorCompactEmpty
+  - BodyBagStasis
 
 - type: latheRecipePack
   id: CloneFactory
@@ -105,3 +111,60 @@
   - Document51
   - Document52
   - Document53
+
+- type: latheRecipePack
+  id: ContainmentFieldGenerator
+  recipes:
+  - ContainmentFieldGeneratorFlatpack
+
+- type: latheRecipe
+  id: ContainmentFieldGeneratorFlatpack
+  result: ContainmentFieldGeneratorFlatpack
+  completetime: 4
+  materials:
+     Steel: 500
+     Glass: 1000
+
+- type: latheRecipePack
+  id: CloningSetup
+  recipes:
+  - MedicalScannerMachineCircuitboard
+  - CloningConsoleComputerCircuitboard
+  - CloningPodMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: MedicalScannerMachineCircuitboard
+  result: MedicalScannerMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: CloningConsoleComputerCircuitboard
+  result: CloningConsoleComputerCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: CloningPodMachineCircuitboard
+  result: CloningPodMachineCircuitboard
+
+- type: latheRecipePack
+  id: AdvancedTopicals
+  recipes:
+  - BrutepackAdvanced1
+  - OintmentAdvanced1
+
+- type: latheRecipe
+  id: BrutepackAdvanced1
+  result: BrutepackAdvanced1
+  completetime: 1
+  materials:
+    Steel: 250
+    Plastic: 250
+
+- type: latheRecipe
+  id: OintmentAdvanced1
+  result: OintmentAdvanced1
+  completetime: 1
+  materials:
+    Glass: 250
+    Plastic: 250

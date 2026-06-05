@@ -1,18 +1,18 @@
 # Tier 1
 
-- type: technology
-  id: SalvageWeapons
-  name: research-technology-salvage-weapons
-  icon:
-    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - WeaponProtoKineticAccelerator
-  - ShuttleGunKineticCircuitboard
-  # These are roundstart but not replenishable for salvage
+# - type: technology #Adv start
+#   id: SalvageWeapons
+#   name: research-technology-salvage-weapons
+#   icon:
+#     sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+#     state: icon
+#   discipline: Arsenal
+#   tier: 1
+#   cost: 5000
+#   recipeUnlocks:
+#   - WeaponProtoKineticAccelerator
+#   - ShuttleGunKineticCircuitboard
+#   #Adv end
 
 - type: technology
   id: DraconicMunitions
@@ -62,6 +62,7 @@
   - BoxShellTranquilizer
   - BoxBeanbag
   - WeaponDisabler
+  - WeaponHybridTaser #Adv
 
 - type: technology
   id: UraniumMunitions
@@ -157,19 +158,19 @@
   recipeUnlocks:
   - WeaponXrayCannon
 
-- type: technology
-  id: KineticModifications
-  name: research-technology-kinetic-modifications
-  icon:
-    sprite: Objects/Tools/upgrade.rsi
-    state: display
-  discipline: Arsenal
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - PKAUpgradeDamage
-  - PKAUpgradeRange
-  - PKAUpgradeFireRate
+# - type: technology #Adv start
+#   id: KineticModifications
+#   name: research-technology-kinetic-modifications
+#   icon:
+#     sprite: Objects/Tools/upgrade.rsi
+#     state: display
+#   discipline: Arsenal
+#   tier: 2
+#   cost: 7500
+#   recipeUnlocks:
+#   - PKAUpgradeDamage
+#   - PKAUpgradeRange
+#   - PKAUpgradeFireRate #Adv end
 
 - type: technology
   id: BasicShuttleArmament
@@ -190,8 +191,8 @@
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
-  technologyPrerequisites:
-  - SalvageWeapons
+  # technologyPrerequisites: #Adv
+  # - SalvageWeapons
 
 - type: technology
   id: DualWieldingTechnology

@@ -24,6 +24,7 @@
         - id: AtmosMonitoringComputerCircuitboard
         - id: PowerComputerCircuitboard
         - id: SolarControlComputerCircuitboard
+        - id: EngineeringTechFabCircuitboard
 
 - type: entity
   parent: ToteBase
@@ -49,6 +50,7 @@
         - id: IDComputerCircuitboard
         - id: FundingAllocationComputerCircuitboard
         - id: CargoRequestServiceComputerCircuitboard
+        - id: ServiceTechFabCircuitboard
 
 - type: entity
   parent: BoxStamps
@@ -92,6 +94,7 @@
         - id: SalvageJobBoardComputerCircuitboard
         - id: MailTeleporterMachineCircuitboard
         - id: SalvageShuttleConsoleCircuitboard # Adventure salvage shuttle return
+        - id: CargoTechFabCircuitboard
 
 - type: entity
   parent: BoxStamps

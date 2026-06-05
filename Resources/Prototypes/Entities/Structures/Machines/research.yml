@@ -28,7 +28,9 @@
     - Industrial
     - Arsenal
     - Experimental
+    - Salvage #Adv
     - CivilianServices
+    - Biochemical #Adv
   - type: ApcPowerReceiver
     powerLoad: 200
   - type: ExtensionCableReceiver

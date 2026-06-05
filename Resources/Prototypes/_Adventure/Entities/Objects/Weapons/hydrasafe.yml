@@ -1,0 +1,62 @@
+- type: entity
+  parent: WeaponLauncherHydra
+  id: WeaponLauncherHydraSafe
+  name: гидра
+  description: БЛУП... ПШШШШШШ...
+  suffix: Безопасная
+  components:
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+      - GrenadeCleanade
+    proto: null
+    capacity: 6
+    chambers: [ null, null, null, null, null, null ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
+  - type: Contraband
+    severity: Restricted
+    allowedJobs: [ Janitor ]
+
+- type: Tag
+  id: GrenadeCleanade
+
+- type: technology
+  id: SuperiorCleaning
+  name: research-technology-cleaning-superior
+  icon:
+    sprite: Objects/Weapons/Guns/Launchers/hydra_launcher.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - WeaponLauncherHydraSafe
+  - GrenadeCleanade
+
+- type: latheRecipe
+  id: WeaponLauncherHydraSafe
+  result: WeaponLauncherHydraSafe
+  completetime: 5
+  materials:
+    Steel: 1200
+    Plastic: 450
+    Glass: 400
+
+- type: latheRecipe
+  id: GrenadeCleanade
+  result: GrenadeCleanade
+  completetime: 2
+  materials:
+    Steel: 150
+    Plastic: 100
+    Glass: 50
+
+- type: latheRecipePack
+  id: JanitorSuperior
+  recipes:
+  - WeaponLauncherHydraSafe
+  - GrenadeCleanade

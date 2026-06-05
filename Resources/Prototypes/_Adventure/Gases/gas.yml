@@ -67,7 +67,7 @@
   gasVisbilityFactor: 1000
   color: 25aef7
   reagent: Pluoxium
-  pricePerMole: 10
+  pricePerMole: 3
 
 - type: gas
   id: Nitrium
@@ -118,7 +118,7 @@
   gasVisbilityFactor: 800
   color: 00cd0d
   reagent: ProtoNitrate
-  pricePerMole: 10
+  pricePerMole: 30
 
 - type: gas
   id: Zauker

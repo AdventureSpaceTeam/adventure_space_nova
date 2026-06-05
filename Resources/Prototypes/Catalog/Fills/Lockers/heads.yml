@@ -181,7 +181,6 @@
     - id: NTECCPU1
     - id: NukeActivator
     - id: RPD
-    - id: EnergyCoreCircuitboard
     - id: ControlModsuitAdvanced
     - id: HandheldAtmosMonitor
     # Adventure end
@@ -355,8 +354,7 @@
     - id: HoloprojectorSecurity
     - id: RubberStampHos
     - id: BoxHoSCircuitboards
-    # - id: WeaponDisabler # Adventure
-    - id: WeaponHybridTaser # Adventure
+    - id: WeaponDisabler
     - id: WantedListCartridge
     # Adventure start
     - id: HandheldCriminalMonitor

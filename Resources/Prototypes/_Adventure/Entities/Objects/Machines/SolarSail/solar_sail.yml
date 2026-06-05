@@ -166,6 +166,6 @@
     state: solar_tracker
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 7500
   recipeUnlocks:
   - SolarSailAssemblyFlatpack

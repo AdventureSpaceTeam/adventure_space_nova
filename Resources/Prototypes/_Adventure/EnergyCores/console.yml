@@ -75,9 +75,9 @@
   icon:
     sprite: _Adventure/EnergyCores/mini_core-yellow.rsi
     state: icon
-  discipline: Experimental
+  discipline: Industrial
   tier: 2
-  cost: 15000
+  cost: 10000
   recipeUnlocks:
   - EnergyCoreCircuitboard
   - EnergyCoreHM

@@ -1,0 +1,32 @@
+- type: entity
+  id: BodyBagStasis
+  parent: BodyBag
+  name: стазисный мешок для тела
+  description: Модифицированный мешок, предназначенный для хранения и транспортировки трупов и предотвращения их гниения.
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects # I guess body bags need appear above a coroner's table?
+    sprite: _Adventure/Objects/Specific/Medical/stasisbodybag.rsi
+    layers:
+    - state: bag
+      map: ["unfoldedLayer", "enum.StorageVisualLayers.Base"]
+    - state: bag_folded
+      map: ["foldedLayer"]
+      visible: false
+    - state: open_overlay
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: paper
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _Adventure/Objects/Specific/Medical/stasisbodybag.rsi
+    state: bag
+  - type: AntiRottingContainer
+
+- type: latheRecipe
+  id: BodyBagStasis
+  result: BodyBagStasis
+  completetime: 2
+  materials:
+    Steel: 100
+    Glass: 200
+    Plastic: 400

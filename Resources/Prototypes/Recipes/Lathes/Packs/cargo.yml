@@ -24,6 +24,8 @@
   - AdvancedMineralScannerEmpty
   - OreBagOfHolding
   - WeaponLaserSvalinn #Adventure
+  - Fulton #Adv
+  - FultonBeacon #Adv
 
 - type: latheRecipePack
   id: CargoBoards

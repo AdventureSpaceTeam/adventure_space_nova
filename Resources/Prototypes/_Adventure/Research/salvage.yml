@@ -1,0 +1,145 @@
+# Tier 1
+
+- type: technology
+  id: SalvageWeapons
+  name: research-technology-salvage-weapons
+  icon:
+    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+    state: icon
+  discipline: Salvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - WeaponProtoKineticAccelerator
+  - ShuttleGunKineticCircuitboard
+  - WeaponLaserSvalinn
+
+- type: technology
+  id: KineticCutter
+  name: research-technology-kinetic-cutter
+  icon:
+    sprite: _Adventure/Roles/LavaLand/Equipment/kinetic_cutter.rsi
+    state: icon
+  discipline: Salvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - WeaponProtoKineticCutter
+
+- type: technology
+  id: SalvageEquipment
+  name: research-technology-salvage-equipment
+  icon:
+    sprite: Objects/Tools/handdrill.rsi
+    state: handdrill
+  discipline: Salvage
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - MiningDrill
+  - MineralScannerEmpty
+  - OreProcessorIndustrialMachineCircuitboard
+  - ClothingShoesBootsJump
+  - Fulton
+  - FultonBeacon
+
+- type: technology
+  id: RipleyAPLU
+  name: research-technology-ripley-aplu
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: ripley
+  discipline: Salvage
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - RipleyHarness
+  - RipleyLArm
+  - RipleyRArm
+  - RipleyLLeg
+  - RipleyRLeg
+  - RipleyCentralElectronics
+  - RipleyPeripheralsElectronics
+  - MechEquipmentGrabber
+
+- type: technology
+  id: SpaceScanning
+  name: research-technology-space-scanning
+  icon:
+    sprite: Objects/Tools/handheld_mass_scanner.rsi
+    state: icon
+  discipline: Salvage
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - RadarConsoleCircuitboard
+  - HandHeldMassScanner
+
+# Tier 2
+
+- type: technology
+  id: MassExcavation
+  name: research-technology-excavation
+  icon:
+    sprite: Objects/Tools/handdrilldiamond.rsi
+    state: handdrill
+  discipline: Salvage
+  tier: 2
+  cost: 12500
+  recipeUnlocks:
+    - OreBagOfHolding
+    - MiningDrillDiamond
+    - AdvancedMineralScannerEmpty
+    - BorgModuleAdvancedMining
+
+- type: technology
+  id: KineticModifications
+  name: research-technology-kinetic-modifications
+  icon:
+    sprite: Objects/Tools/upgrade.rsi
+    state: display
+  discipline: Salvage
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - PKAUpgradeDamage
+  - PKAUpgradeRange
+  - PKAUpgradeFireRate
+
+- type: technology
+  id: KineticCutterIndustrial
+  name: research-technology-kinetic-cutter-industrial
+  icon:
+    sprite: _Adventure/Roles/LavaLand/Equipment/industrial_kinetic_cutter.rsi
+    state: icon
+  discipline: Salvage
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - WeaponProtoKineticCutterIndustrial
+
+# Tier3
+
+- type: technology
+  id: BluespaceCargoTransport
+  name: research-technology-bluespace-cargo-transport
+  icon:
+    sprite: Structures/cargo_telepad.rsi
+    state: display
+  discipline: Salvage
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - CargoTelepadMachineCircuitboard
+
+- type: technology
+  id: SuperiorExcavation
+  name: research-technology-superior-excavation
+  icon:
+    sprite: _Adventure/Objects/Weapons/superpka.rsi
+    state: base
+  discipline: Salvage
+  tier: 3
+  cost: 12500
+  recipeUnlocks:
+  - WeaponProtoKineticMachineGun

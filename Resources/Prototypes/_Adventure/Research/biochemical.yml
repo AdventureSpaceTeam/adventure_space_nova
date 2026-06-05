@@ -1,0 +1,115 @@
+# Tier 1
+
+- type: technology
+  id: BiochemicalStasis
+  name: research-technology-biochemical-stasis
+  icon:
+    sprite: Structures/Machines/stasis_bed.rsi
+    state: icon
+  discipline: Biochemical
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - StasisBedMachineCircuitboard
+  - CryoPodMachineCircuitboard
+  - CryostasisBeaker
+  - SyringeCryostasis
+
+- type: technology
+  id: CorpseTriage
+  name: research-technology-corpse-triage
+  icon:
+    sprite: Structures/Machines/Medical/biomass_reclaimer.rsi
+    state: icon
+  discipline: Biochemical
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - BiomassReclaimerMachineCircuitboard
+  - BodyBagStasis
+
+# Tier 2
+- type: technology
+  id: PortableResuscitation
+  name: research-technology-portable-resuscitation
+  icon:
+    sprite: Objects/Specific/Medical/defibsmall.rsi
+    state: icon
+  discipline: Biochemical
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - DefibrillatorCompactEmpty
+
+- type: technology
+  id: MechanizedTreatment
+  name: research-technology-mechanized-treatment
+  icon:
+    sprite: Mobs/Silicon/chassis.rsi
+    state: medical
+  discipline: Biochemical
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - BorgModuleAdvancedChemical
+  - AdvancedJetInjector
+
+- type: technology
+  id: AdvancedTopicals
+  name: research-technology-advanced-topicals
+  icon:
+    sprite: Objects/Specific/Medical/medical.rsi
+    state: medicated-suture
+  discipline: Biochemical
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - BrutepackAdvanced1
+  - OintmentAdvanced1
+
+- type: technology
+  id: LauncherSyringe
+  name: research-technology-launcher-syringe
+  icon:
+    sprite: Objects/Weapons/Guns/Cannons/syringe_gun.rsi
+    state: syringe_gun
+  discipline: Biochemical
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - LauncherSyringe
+  - MiniSyringe
+
+# Tier 3
+
+- type: technology
+  id: BluespaceChemistry
+  name: research-technology-bluespace-chemistry
+  icon:
+    sprite: Objects/Specific/Chemistry/beaker_bluespace.rsi
+    state: beakerbluespace
+  discipline: Biochemical
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - BluespaceBeaker
+  - SyringeBluespace
+  - ReusableMedipen
+  - ChemBagBlueSpace
+  - BS-Jug
+  - BSPillCanister
+  - BaseBSChemistryEmptyVial
+
+- type: technology
+  id: Cloning
+  name: research-technology-cloning
+  icon:
+    sprite: Structures/Machines/cloning.rsi
+    state: pod_0
+  discipline: Biochemical
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - MedicalScannerMachineCircuitboard
+  - CloningConsoleComputerCircuitboard
+  - CloningPodMachineCircuitboard

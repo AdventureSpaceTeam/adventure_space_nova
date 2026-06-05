@@ -82,6 +82,7 @@
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
+  - PowerCageRechargerCircuitboard #Adv
 
 - type: latheRecipePack
   parent:
@@ -141,3 +142,4 @@
   recipes:
   - WeaponDisabler
   - WeaponDisablerSMG
+  - WeaponHybridTaser #Adventure

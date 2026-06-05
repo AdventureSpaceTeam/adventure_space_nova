@@ -302,3 +302,12 @@
   materials:
     Plastic: 100
     Steel: 400
+
+- type: latheRecipe #Adv recipe
+  parent: BaseWeaponRecipeSidearm
+  id: WeaponHybridTaser
+  result: WeaponHybridTaser
+  materials:
+    Steel: 1000
+    Glass: 500
+    Plastic: 500

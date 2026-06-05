@@ -135,11 +135,11 @@ public abstract class SharedResearchSystem : EntitySystem
             var percent = (float) unlockedTierTech.Count / allTierTech.Count;
             if (percent < techDiscipline.TierPrerequisites[tier])
                 break;
-
-            if (tier >= techDiscipline.LockoutTier &&
-                component.MainDiscipline != null &&
-                techDiscipline.ID != component.MainDiscipline)
-                break;
+            // Say nay to t3 lockouts. Adventure change:
+            // if (tier >= techDiscipline.LockoutTier &&
+            //     component.MainDiscipline != null &&
+            //     techDiscipline.ID != component.MainDiscipline)
+            //     break;
             tier++;
         }
 
@@ -216,21 +216,21 @@ public abstract class SharedResearchSystem : EntitySystem
     {
         return Resolve(uid, ref component, false) && component.UnlockedTechnologies.Contains(technologyId);
     }
+    // Say nay to t3 lockouts. Adventure change:
+    // public void TrySetMainDiscipline(TechnologyPrototype prototype, EntityUid uid, TechnologyDatabaseComponent? component = null)
+    // {
+    //     if (!Resolve(uid, ref component))
+    //         return;
 
-    public void TrySetMainDiscipline(TechnologyPrototype prototype, EntityUid uid, TechnologyDatabaseComponent? component = null)
-    {
-        if (!Resolve(uid, ref component))
-            return;
+    //     var discipline = PrototypeManager.Index(prototype.Discipline);
+    //     if (prototype.Tier < discipline.LockoutTier)
+    //         return;
+    //     component.MainDiscipline = prototype.Discipline;
+    //     Dirty(uid, component);
 
-        var discipline = PrototypeManager.Index(prototype.Discipline);
-        if (prototype.Tier < discipline.LockoutTier)
-            return;
-        component.MainDiscipline = prototype.Discipline;
-        Dirty(uid, component);
-
-        var ev = new TechnologyDatabaseModifiedEvent();
-        RaiseLocalEvent(uid, ref ev);
-    }
+    //     var ev = new TechnologyDatabaseModifiedEvent();
+    //     RaiseLocalEvent(uid, ref ev);
+    // }
 
     /// <summary>
     /// Removes a technology and its recipes from a technology database.

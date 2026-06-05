@@ -27,8 +27,7 @@
   table: !type:AllSelector
     children:
     - id: FlashlightSeclite
-    # - id: WeaponDisabler # Adventure
-    # - id: WeaponTaser # Adventure
+    - id: WeaponDisabler
     - id: ClothingBeltSecurityFilled
     - id: Flash
     - id: ClothingEyesGlassesSecurity
@@ -45,7 +44,6 @@
     - id: ClothingBackpackWarden # Corvax-SecFashion
     - id: ClothingOuterCoatWardenAlt # Corvax-SecFashion
     - id: ClothingHeadHatCapWardenAlt # Corvax-SecFashion
-    - id: WeaponHybridTaser
     # Adventure end
     - id: ClothingBackpackElectropack
       amount: 2
@@ -78,8 +76,7 @@
     children:
     - id: FlashlightSeclite
       prob: 0.8
-    # - id: WeaponDisabler # Adventure
-    - id: WeaponHybridTaser # Adventure
+    - id: WeaponDisabler
     - id: ClothingUniformJumpsuitSecGrey
       prob: 0.3
     - id: ClothingHeadHelmetBasic
@@ -116,8 +113,7 @@
     children:
     # - id: ClothingEyesGlassesSecurity # Adventure
     - id: ClothingEyesHudMedSec # Adventure
-    - id: WeaponHybridTaser # Adventure
-    # - id: WeaponDisabler # Adventure
+    - id: WeaponDisabler
     - id: TrackingImplanter
       amount: 2
     - id: ClothingOuterHardsuitBrigmedic

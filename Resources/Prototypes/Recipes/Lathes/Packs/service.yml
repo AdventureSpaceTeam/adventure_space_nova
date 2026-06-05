@@ -66,3 +66,14 @@
   - ReagentGrinderIndustrialMachineCircuitboard
   - JukeboxCircuitBoard
   - DawInstrumentMachineCircuitboard
+
+#Adv start
+- type: latheRecipePack
+  id: ServiceClothing
+  recipes:
+  - ClothingShoesBootsSpeed
+  - ClothingBackpackHolding
+  - ClothingBackpackSatchelHolding
+  - ClothingBackpackDuffelHolding
+  - ClothingShoesSkates
+#Adv end
