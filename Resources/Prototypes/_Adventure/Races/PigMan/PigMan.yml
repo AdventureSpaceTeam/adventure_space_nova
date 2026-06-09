@@ -187,6 +187,8 @@
           32:
             sprite: _Adventure/Races/PigMan/Species/fat.rsi
             state: hand
+  - type: SinguloFood
+    energy: 20
 
 - type: entity
   parent: BaseSpeciesDummy
