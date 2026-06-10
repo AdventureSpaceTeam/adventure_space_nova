@@ -56,6 +56,13 @@
   - type: BatterySelfRecharger
     autoRechargeRate: 8
     autoRecharge: true
+  - type: UpgradeableGun
+    whitelist:
+      tags:
+      - PKAUpgrade
+  - type: ContainerContainer
+    containers:
+      upgrades: !type:Container
 
 - type: entity
   id: Advanced-BulletProtoCutter
@@ -102,3 +109,14 @@
         - Opaque
   - type: Ammo
     muzzleFlash: null
+
+- type: latheRecipe
+  id: WeaponProtoKineticCutterIndustrial
+  result: WeaponProtoKineticCutterIndustrial
+  categories:
+  - Weapons
+  completetime: 20
+  materials:
+    Steel: 1400
+    Glass: 500
+    Silver: 300

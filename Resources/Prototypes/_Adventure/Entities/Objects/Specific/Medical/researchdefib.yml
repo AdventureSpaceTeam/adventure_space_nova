@@ -1,0 +1,22 @@
+- type: entity
+  id: DefibrillatorCompactEmpty
+  parent: DefibrillatorCompact
+  name: компактный дефибриллятор
+  description: Теперь и в весёлом размере!
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: latheRecipe
+  id: DefibrillatorCompactEmpty
+  result: DefibrillatorCompactEmpty
+  categories:
+  - Tools
+  completetime: 5
+  materials:
+    Steel: 500
+    Glass: 200
+    Plastic: 250

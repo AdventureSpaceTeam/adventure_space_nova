@@ -139,6 +139,12 @@
   - type: SpentAmmoVisuals
     state: frag
     suffix: false
+  - type: Tag #Adv cuz hydra is way too cool to be left uncraftable.
+    tags:
+     - GrenadeCleanade
+  - type: Contraband
+    severity: Restricted
+    allowedJobs: [ Janitor ] #Adv end
 
 - type: entity
   parent: BaseGrenade

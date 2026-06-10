@@ -12,10 +12,11 @@ public sealed partial class TechnologyDatabaseComponent : Component
 {
     /// <summary>
     /// A main discipline that locks out other discipline technology past a certain tier.
+    /// Say nay to t3 lockouts. Adventure change.
     /// </summary>
-    [AutoNetworkedField]
-    [DataField("mainDiscipline", customTypeSerializer: typeof(PrototypeIdSerializer<TechDisciplinePrototype>))]
-    public string? MainDiscipline;
+    // [AutoNetworkedField]
+    // [DataField("mainDiscipline", customTypeSerializer: typeof(PrototypeIdSerializer<TechDisciplinePrototype>))]
+    // public string? MainDiscipline;
 
     [AutoNetworkedField]
     [DataField("currentTechnologyCards")]

@@ -75,7 +75,7 @@
   - TechDiskComputerCircuitboard
   - FlatpackerMachineCircuitboard
   - SheetifierMachineCircuitboard
-  - PowerCageRechargerCircuitboard
+  # - PowerCageRechargerCircuitboard #Adv Change
   - AnalysisComputerCircuitboard
   - AnomalyVesselCircuitboard
   - AnomalyVesselExperimentalCircuitboard

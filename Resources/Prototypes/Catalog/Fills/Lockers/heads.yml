@@ -181,7 +181,6 @@
     - id: NTECCPU1
     - id: NukeActivator
     - id: RPD
-    - id: EnergyCoreCircuitboard
     - id: ControlModsuitAdvanced
     - id: HandheldAtmosMonitor
     # Adventure end

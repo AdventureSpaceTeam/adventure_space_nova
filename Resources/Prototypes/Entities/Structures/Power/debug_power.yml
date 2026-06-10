@@ -153,6 +153,9 @@
   components:
   - type: BatterySelfRecharger
     autoRechargeRate: 50000
+  - type: Apc #Adv change
+    voltage: Apc
+    maxLoad: 99999999
 
 - type: entity
   id: DebugPowerReceiver

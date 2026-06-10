@@ -151,6 +151,14 @@
   materials:
     Steel: 600
 
+- type: latheRecipe #Adv recipe
+  id: ClothingShoesSkates
+  result: ClothingShoesSkates
+  completetime: 2
+  materials:
+    Steel: 300
+    Plastic: 600
+
 - type: latheRecipe
   id: ClothingShoesBootsSpeed
   result: ClothingShoesBootsSpeed

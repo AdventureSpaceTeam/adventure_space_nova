@@ -76,12 +76,34 @@
     muzzleFlashEffect:
     damage:
       types:
-        Shock: 80
+        Heat: 50
   - type: PointLight
     enabled: true
     color: "#ff22d9"
     radius: 2.0
     energy: 2.0
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.10,0.1,0.30"
+        hard: false
+        mask:
+        - Opaque
+      fly-by: &flybyfixture
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: IgnitionSource
+    ignited: true
+  - type: IgniteOnCollide
+    fireStacks: 3.5
 
 #Плазменная снайперская винтовка
 - type: entity
@@ -109,7 +131,6 @@
     quickEquip: false
     slots:
     - Back
-    - suitStorage
   - type: AmmoCounter
   - type: Gun
     fireRate: 0.5
@@ -148,10 +169,14 @@
     magState: mag
     steps: 4
     zeroVisible: true
-  - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
   - type: GunRequiresWield
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3
 
 - type: entity
   id: WeaponPlasmaSniperPrint
@@ -195,7 +220,7 @@
   materials:
      Steel: 2500
      Gold: 750
-     Uranium: 1500
+     Plasma: 700
      Plastic: 750
 
 - type: latheRecipe
@@ -205,7 +230,7 @@
   completetime: 3
   materials:
      Steel: 750
-     Uranium: 750
+     Plasma: 400
      Glass: 500
 
 # Изучение в прототипе PlasmaGun

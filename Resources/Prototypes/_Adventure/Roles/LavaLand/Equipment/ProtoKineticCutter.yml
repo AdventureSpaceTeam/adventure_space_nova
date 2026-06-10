@@ -125,3 +125,14 @@
     state: bullet
     shader: unshaded
     color: "#9943bb"
+
+- type: latheRecipe
+  id: WeaponProtoKineticCutter
+  result: WeaponProtoKineticCutter
+  categories:
+  - Weapons
+  completetime: 20
+  materials:
+    Steel: 800
+    Glass: 400
+    Silver: 50
