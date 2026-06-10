@@ -354,7 +354,8 @@
     - id: HoloprojectorSecurity
     - id: RubberStampHos
     - id: BoxHoSCircuitboards
-    - id: WeaponDisabler
+    # - id: WeaponDisabler # Adventure
+    - id: WeaponHybridTaser # Adventure
     - id: WantedListCartridge
     # Adventure start
     - id: HandheldCriminalMonitor
