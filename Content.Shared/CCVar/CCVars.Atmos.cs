@@ -8,7 +8,7 @@ public sealed partial class CCVars
     ///     Whether gas differences will move entities.
     /// </summary>
     public static readonly CVarDef<bool> SpaceWind =
-        CVarDef.Create("atmos.space_wind", false, CVar.SERVERONLY);
+        CVarDef.Create("atmos.space_wind", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Divisor from maxForce (pressureDifference * 2.25f) to force applied on objects.
@@ -57,7 +57,7 @@ public sealed partial class CCVars
     ///     Also looks weird on slow spacing for unrelated reasons. If you do want to enable this, you should probably turn on instaspacing.
     /// </summary>
     public static readonly CVarDef<bool> MonstermosRipTiles =
-        CVarDef.Create("atmos.monstermos_rip_tiles", false, CVar.SERVERONLY);
+        CVarDef.Create("atmos.monstermos_rip_tiles", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Whether explosive depressurization will cause the grid to gain an impulse.
@@ -120,7 +120,7 @@ public sealed partial class CCVars
     ///     Maximum time in milliseconds that atmos can take processing.
     /// </summary>
     public static readonly CVarDef<float> AtmosMaxProcessTime =
-        CVarDef.Create("atmos.max_process_time", 3f, CVar.SERVERONLY);
+        CVarDef.Create("atmos.max_process_time", 5f, CVar.SERVERONLY);
 
     /// <summary>
     ///     Atmos tickrate in TPS. Atmos processing will happen every 1/TPS seconds.
@@ -142,7 +142,7 @@ public sealed partial class CCVars
     ///     gases heat up and cool down 64x faster than real life.
     /// </summary>
     public static readonly CVarDef<float> AtmosHeatScale =
-        CVarDef.Create("atmos.heat_scale", 8f, CVar.SERVERONLY);
+        CVarDef.Create("atmos.heat_scale", 1.0f, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     ///     Maximum explosion radius for explosions caused by bursting a gas tank ("max caps").
@@ -177,4 +177,7 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<int> DeltaPressureParallelBatchSize =
         CVarDef.Create("atmos.delta_pressure_parallel_batch_size", 10, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GasOverlayThermalDirtyThreshold =
+        CVarDef.Create("atmos.overlay_thermal_dirty_threshold", 1, CVar.SERVERONLY);
 }

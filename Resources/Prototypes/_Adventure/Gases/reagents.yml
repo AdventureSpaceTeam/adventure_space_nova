@@ -316,7 +316,7 @@
   meltingPoint: -259.2
 
 - type: reagent
-  id: ProtoNitrate
+  id: Proto-Nitrate
   name: reagent-name-proto-nitrate
   desc: reagent-desc-proto-nitrate
   physicalDesc: reagent-physical-desc-gaseous

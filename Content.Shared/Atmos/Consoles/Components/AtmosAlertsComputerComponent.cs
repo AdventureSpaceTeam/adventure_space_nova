@@ -1,5 +1,6 @@
 using Content.Shared.Atmos.Consoles;
 using Content.Shared.Atmos.Monitor;
+using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
@@ -27,6 +28,20 @@ public sealed partial class AtmosAlertsComputerComponent : Component
     /// </summary>
     [ViewVariables, AutoNetworkedField]
     public HashSet<NetEntity> SilencedDevices = new();
+
+    // Adventure-start
+    [DataField]
+    public SoundSpecifier? BeepSound;
+
+    [DataField]
+    public TimeSpan Timer = TimeSpan.FromSeconds(5);
+
+    [DataField]
+    public TimeSpan NextBeep = TimeSpan.Zero;
+
+    [DataField, AutoNetworkedField]
+    public bool DoAtmosAlert = false;
+    // Adventure-end
 }
 
 [Serializable, NetSerializable]
@@ -77,7 +92,7 @@ public struct AtmosAlertsFocusDeviceData
     public (float, AtmosAlarmType) PressureData;
 
     /// <summary>
-    /// Moles, percentage, and related alert state, for all detected gases 
+    /// Moles, percentage, and related alert state, for all detected gases
     /// </summary>
     public Dictionary<Gas, (float, float, AtmosAlarmType)> GasData;
 
@@ -98,7 +113,7 @@ public struct AtmosAlertsFocusDeviceData
 }
 
 [Serializable, NetSerializable]
-public sealed class AtmosAlertsComputerBoundInterfaceState : BoundUserInterfaceState
+public sealed partial class AtmosAlertsComputerBoundInterfaceState : BoundUserInterfaceState // Adventure - edit добавлено partial
 {
     /// <summary>
     /// A list of all air alarms
@@ -114,6 +129,7 @@ public sealed class AtmosAlertsComputerBoundInterfaceState : BoundUserInterfaceS
     /// Data for the UI focus (if applicable)
     /// </summary>
     public AtmosAlertsFocusDeviceData? FocusData;
+
 
     /// <summary>
     /// Sends data from the server to the client to populate the atmos monitoring console UI
@@ -200,7 +216,7 @@ public sealed class AtmosAlertsComputerDeviceSilencedMessage : BoundUserInterfac
     public bool SilenceDevice = true;
 
     /// <summary>
-    /// Used to inform the server that the client has silenced alerts from the specified device to this atmos monitoring console 
+    /// Used to inform the server that the client has silenced alerts from the specified device to this atmos monitoring console
     /// </summary>
     public AtmosAlertsComputerDeviceSilencedMessage(NetEntity atmosDevice, bool silenceDevice = true)
     {
@@ -208,6 +224,14 @@ public sealed class AtmosAlertsComputerDeviceSilencedMessage : BoundUserInterfac
         SilenceDevice = silenceDevice;
     }
 }
+
+// Adventure-start
+[Serializable, NetSerializable]
+public sealed class AtmosAlertsComputerAlertSoundToggleMessage(bool enabled) : BoundUserInterfaceMessage
+{
+    public bool Enabled = enabled;
+}
+// Adventure-end
 
 /// <summary>
 /// List of all the different atmos device groups

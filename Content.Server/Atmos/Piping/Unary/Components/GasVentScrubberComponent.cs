@@ -23,7 +23,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         public string OutletName { get; set; } = "pipe";
 
         [DataField]
-        public HashSet<Gas> FilterGases = new(GasVentScrubberData.DefaultFilterGases);
+        public HashSet<Gas> FilterGases = [..GasVentScrubberData._defaultFilterGases];
 
         [DataField]
         public ScrubberPumpDirection PumpDirection { get; set; } = ScrubberPumpDirection.Scrubbing;

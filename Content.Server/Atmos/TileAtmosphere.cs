@@ -10,7 +10,7 @@ namespace Content.Server.Atmos;
 /// Use the public APIs in <see cref="AtmosphereSystem"/> instead.
 /// </summary>
 [Access(typeof(AtmosphereSystem), typeof(GasTileOverlaySystem), typeof(AtmosDebugOverlaySystem))]
-public sealed class TileAtmosphere : IGasMixtureHolder
+public sealed partial class TileAtmosphere : IGasMixtureHolder // Adventure-edit
 {
     /// <summary>
     /// The last cycle this tile's air was archived into <see cref="AirArchived"/>.
@@ -245,4 +245,31 @@ public sealed class TileAtmosphere : IGasMixtureHolder
     public TileAtmosphere()
     {
     }
+
+    // Adventure-Start
+    public void Reset()
+    {
+        Air = null;
+        AirArchived = null;
+        Array.Clear(AdjacentTiles, 0, AdjacentTiles.Length);
+        ExcitedGroup = null;
+        Hotspot = default;
+        GridIndex = EntityUid.Invalid;
+        GridIndices = default;
+        MapAtmosphere = false;
+        Space = false;
+        ArchivedCycle = 0;
+        LastShare = 0f;
+        MonstermosInfo = default;
+        CurrentCycle = 0;
+        Excited = false;
+        PressureDifference = 0f;
+        PressureDirection = AtmosDirection.Invalid;
+        PressureSpecificTarget = null;
+        MaxFireTemperatureSustained = 0f;
+        Temperature = 0f;
+        HeatCapacity = 0f;
+        AirtightData = default;
+    }
+    // Adventure-End
 }

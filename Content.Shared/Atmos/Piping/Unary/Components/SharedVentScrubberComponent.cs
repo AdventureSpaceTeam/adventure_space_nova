@@ -9,14 +9,14 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
         public bool Enabled { get; set; }
         public bool Dirty { get; set; }
         public bool IgnoreAlarms { get; set; } = false;
-        public HashSet<Gas> FilterGases { get; set; } = new(DefaultFilterGases);
+        public HashSet<Gas> FilterGases { get; set; } = new(_defaultFilterGases);
         public ScrubberPumpDirection PumpDirection { get; set; } = ScrubberPumpDirection.Scrubbing;
         public float VolumeRate { get; set; } = 200f;
         public bool WideNet { get; set; } = false;
         public bool AirAlarmPanicWireCut { get; set; }
 
-        public static HashSet<Gas> DefaultFilterGases = new()
-        {
+        public static HashSet<Gas> _defaultFilterGases =
+        [
             Gas.CarbonDioxide,
             Gas.Plasma,
             Gas.Tritium,
@@ -24,27 +24,25 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.Ammonia,
             Gas.NitrousOxide,
             Gas.Frezon,
-            // Adventure gases begin
             Gas.BZ,
-            Gas.Halon,
+            Gas.Pluoxium,
+            Gas.Hydrogen,
+            Gas.Nitrium,
             Gas.Healium,
             Gas.HyperNoblium,
-            Gas.Hydrogen,
-            Gas.Pluoxium,
-            Gas.Nitrium,
+            Gas.ProtoNitrate,
+            Gas.Zauker,
+            Gas.Halon,
             Gas.Helium,
             Gas.AntiNoblium,
-            Gas.ProtoNitrate,
-            Gas.Zauker
-            // Adventure gases end
-        };
+        ];
 
         // Presets for 'dumb' air alarm modes
 
         public static GasVentScrubberData FilterModePreset = new GasVentScrubberData
         {
             Enabled = true,
-            FilterGases = new(GasVentScrubberData.DefaultFilterGases),
+            FilterGases = new(GasVentScrubberData._defaultFilterGases),
             PumpDirection = ScrubberPumpDirection.Scrubbing,
             VolumeRate = 200f,
             WideNet = false
@@ -53,7 +51,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
         public static GasVentScrubberData WideFilterModePreset = new GasVentScrubberData
         {
             Enabled = true,
-            FilterGases = new(GasVentScrubberData.DefaultFilterGases),
+            FilterGases = new(GasVentScrubberData._defaultFilterGases),
             PumpDirection = ScrubberPumpDirection.Scrubbing,
             VolumeRate = 200f,
             WideNet = true
@@ -63,7 +61,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
         {
             Enabled = false,
             Dirty = true,
-            FilterGases = new(GasVentScrubberData.DefaultFilterGases),
+            FilterGases = new(GasVentScrubberData._defaultFilterGases),
             PumpDirection = ScrubberPumpDirection.Scrubbing,
             VolumeRate = 200f,
             WideNet = false
@@ -73,7 +71,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
         {
             Enabled = true,
             Dirty = true,
-            FilterGases = new(GasVentScrubberData.DefaultFilterGases),
+            FilterGases = new(GasVentScrubberData._defaultFilterGases),
             PumpDirection = ScrubberPumpDirection.Siphoning,
             VolumeRate = 200f,
             WideNet = true
@@ -84,7 +82,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Enabled = true,
             IgnoreAlarms = true,
             Dirty = true,
-            FilterGases = new(GasVentScrubberData.DefaultFilterGases),
+            FilterGases = new(GasVentScrubberData._defaultFilterGases),
             PumpDirection = ScrubberPumpDirection.Siphoning,
             VolumeRate = 200f,
             WideNet = false

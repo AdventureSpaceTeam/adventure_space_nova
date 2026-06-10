@@ -6,7 +6,7 @@ namespace Content.Shared.Atmos
     /// <summary>
     ///     Class to store atmos constants.
     /// </summary>
-    public static class Atmospherics
+    public static partial class Atmospherics
     {
         #region ATMOS
         /// <summary>
@@ -333,7 +333,6 @@ namespace Content.Shared.Atmos
         public const float PluoxiumOxygenRatio = 0.5f;
         public const float PluoxiumTritiumRatio = 0.01f;
         public const float PluoxiumHydrogenByproductRatio = 0.01f;
-        public const float PluoxiumFormationEnergy = 1000f;
 
         /// Nitrium Production Constants
         public const float NitriumProductionMinTemp = 1500f;
@@ -384,18 +383,7 @@ namespace Content.Shared.Atmos
         public const float PNBZaseMaxTemp = 280f;
         public const float PNBZaseConversionRate = 0.2f;
         public const float PNBZaseEnergy = 60000f;
-        /// Proto-Nitrate Reactions end
 
-        /// Nitrium Decomposition
-        public const float NitriumDecompositionMaxTemp = 343f;
-        public const float NitriumDecompositionTempDivisor = 100f;
-        public const float NitriumDecompositionRate = 1.2f;
-        public const float NitriumDecompositionEnergy = 30000f;
-
-        /// Zauker Decomposition
-        public const float ZaukerDecompositionMaxRate = 20f;
-        public const float ZaukerDecompositionEnergy = 460f;
-        ///  Adventure gases end
         #endregion
 
         /// <summary>
