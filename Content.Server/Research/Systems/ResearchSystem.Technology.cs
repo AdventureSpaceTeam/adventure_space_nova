@@ -16,7 +16,8 @@ public sealed partial class ResearchSystem
         if (!Resolve(primaryUid, ref primaryDb) || !Resolve(otherUid, ref otherDb))
             return;
 
-        primaryDb.MainDiscipline = otherDb.MainDiscipline;
+        // Say nay to t3 lockouts. Adventure change:
+        // primaryDb.MainDiscipline = otherDb.MainDiscipline;
         primaryDb.CurrentTechnologyCards = otherDb.CurrentTechnologyCards;
         primaryDb.SupportedDisciplines = otherDb.SupportedDisciplines;
         primaryDb.UnlockedTechnologies = otherDb.UnlockedTechnologies;
@@ -81,7 +82,8 @@ public sealed partial class ResearchSystem
             return false;
 
         AddTechnology(serverEnt.Value, prototype);
-        TrySetMainDiscipline(prototype, serverEnt.Value);
+        // Say nay to t3 lockouts. Adventure change:
+        // TrySetMainDiscipline(prototype, serverEnt.Value);
         ModifyServerPoints(serverEnt.Value, -prototype.Cost);
         UpdateTechnologyCards(serverEnt.Value);
 
@@ -164,7 +166,8 @@ public sealed partial class ResearchSystem
     {
         if (args.Server != null)
             return;
-        component.MainDiscipline = null;
+        // Say nay to t3 lockouts. Adventure change:
+        // component.MainDiscipline = null;
         component.CurrentTechnologyCards = new List<string>();
         component.SupportedDisciplines = new List<ProtoId<TechDisciplinePrototype>>();
         component.UnlockedTechnologies = new List<ProtoId<TechnologyPrototype>>();

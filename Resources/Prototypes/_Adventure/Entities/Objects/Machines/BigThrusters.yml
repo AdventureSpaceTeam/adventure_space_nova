@@ -114,10 +114,8 @@
   result: ThrusterBigFlatpack
   completetime: 4
   materials:
-     Steel: 4500
-     Glass: 2000
+     Steel: 3000
      Plastic: 1000
-     Silver: 500
      Plasma: 500
 
 - type: technology
@@ -128,6 +126,6 @@
     state: base
   discipline: Industrial
   tier: 2
-  cost: 10000
+  cost: 5000
   recipeUnlocks:
   - ThrusterBigFlatpack

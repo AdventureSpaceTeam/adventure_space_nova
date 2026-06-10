@@ -1,0 +1,76 @@
+- type: entity
+  name: индустриальный протокинетический ускоритель
+  id: WeaponProtoKineticMachineGun
+  parent: [BaseItem, BaseCargoContraband]
+  description: 400 000 кредитов чтобы пострелять из этой пушки? Да, деньги, потраченные не зря.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Weapons/superpka.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Item
+    size: Ginormous
+    sprite: _Adventure/Objects/Weapons/superpka.rsi
+  # - type: Sprite
+  #   sprite: Objects/Weapons/Guns/HMGs/minigun.rsi
+  #   layers:
+  #   - state: icon
+  # - type: Item
+  #   sprite: Objects/Weapons/Guns/HMGs/minigun.rsi
+  - type: Appearance
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+  - type: MultiHandedItem
+  - type: Gun
+    fireRate: 5
+    selectedMode: FullAuto
+    minAngle: -3
+    maxAngle: 3
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
+    projectileSpeed: 35
+  - type: AmmoCounter
+  - type: BasicEntityAmmoProvider
+    proto: BulletKineticMachineGun
+    capacity: 50
+    count: 50
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+    rechargeSound: null
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+
+- type: entity
+  id: BulletKineticMachineGun
+  name: kinetic bolt
+  parent: BulletKinetic
+  categories: [ HideSpawnMenu ]
+  description: Not too bad, but you still don't want to get hit by it.
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 10
+        Structural: 30
+  - type: TimedDespawn
+    lifetime: 0.3
+
+- type: latheRecipe
+  id: WeaponProtoKineticMachineGun
+  result: WeaponProtoKineticMachineGun
+  completetime: 30
+  materials:
+    Steel: 3750
+    Glass: 1200
+    Plastic: 300
+    Silver: 1200

@@ -82,6 +82,7 @@
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
+  - PowerCageRechargerCircuitboard #Adv
 
 - type: latheRecipePack
   parent:

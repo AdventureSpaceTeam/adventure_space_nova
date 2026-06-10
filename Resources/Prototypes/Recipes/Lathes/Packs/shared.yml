@@ -72,3 +72,6 @@
   - PKAUpgradeDamage
   - PKAUpgradeRange
   - PKAUpgradeFireRate
+  - WeaponProtoKineticMachineGun #Adv
+  - WeaponProtoKineticCutterIndustrial #Adv
+  - WeaponProtoKineticCutter #Adv

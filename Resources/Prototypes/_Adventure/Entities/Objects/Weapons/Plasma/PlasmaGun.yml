@@ -76,12 +76,34 @@
     muzzleFlashEffect:
     damage:
       types:
-        Shock: 12
+        Heat: 12
   - type: PointLight
     enabled: true
     color: "#ff22d9"
     radius: 2.0
     energy: 2.0
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.10,0.1,0.30"
+        hard: false
+        mask:
+        - Opaque
+      fly-by: &flybyfixture
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: IgnitionSource
+    ignited: true
+  - type: IgniteOnCollide
+    fireStacks: 0.5
 
 #Плазменная винтовка
 - type: entity
@@ -188,7 +210,7 @@
   materials:
      Steel: 2000
      Gold: 500
-     Uranium: 1000
+     Plasma: 700
      Plastic: 500
 
 - type: latheRecipe
@@ -198,7 +220,7 @@
   completetime: 3
   materials:
      Steel: 500
-     Uranium: 500
+     Plasma: 400
      Glass: 250
 
 # Изучение

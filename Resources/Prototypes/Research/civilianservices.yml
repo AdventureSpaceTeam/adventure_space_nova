@@ -13,7 +13,12 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
-  - PlantAnalyzer # Adventure
+  - HydroponicsToolMiniHoe #Adventure start
+  - HydroponicsToolScythe
+  - HydroponicsToolHatchet
+  - HydroponicsToolSpade
+  - HydroponicsToolClippers
+  - PlantAnalyzer #Adventure end
 
 - type: technology
   id: CritterMechs
@@ -82,7 +87,7 @@
   recipeUnlocks:
   - FatExtractorMachineCircuitboard
   - BiofabricatorMachineCircuitboard
-  - BiomassReclaimerMachineCircuitboard
+  # - BiomassReclaimerMachineCircuitboard #Adv removed
 
 # Tier 2
 
@@ -108,33 +113,33 @@
   - FauxTileAstroIronsand
   - FauxTileAstroIronsandBorderless
 
-- type: technology
-  id: BiochemicalStasis
-  name: research-technology-biochemical-stasis
-  icon:
-    sprite: Structures/Machines/stasis_bed.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - StasisBedMachineCircuitboard
-  - CryoPodMachineCircuitboard
-  - CryostasisBeaker
-  - SyringeCryostasis
+# - type: technology #Adv start
+#   id: BiochemicalStasis
+#   name: research-technology-biochemical-stasis
+#   icon:
+#     sprite: Structures/Machines/stasis_bed.rsi
+#     state: icon
+#   discipline: CivilianServices
+#   tier: 2
+#   cost: 7500
+#   recipeUnlocks:
+#   - StasisBedMachineCircuitboard
+#   - CryoPodMachineCircuitboard
+#   - CryostasisBeaker
+#   - SyringeCryostasis
 
-- type: technology # Merge with other T2 medical research if possible!
-  id: MechanizedTreatment
-  name: research-technology-mechanized-treatment
-  icon:
-    sprite: Mobs/Silicon/chassis.rsi
-    state: medical
-  discipline: CivilianServices
-  tier: 2
-  cost: 5000
-  recipeUnlocks:
-  - BorgModuleAdvancedTopical
-  - AdvancedJetInjector
+# - type: technology
+#   id: MechanizedTreatment
+#   name: research-technology-mechanized-treatment
+#   icon:
+#     sprite: Mobs/Silicon/chassis.rsi
+#     state: medical
+#   discipline: CivilianServices
+#   tier: 2
+#   cost: 5000
+#   recipeUnlocks:
+#   - BorgModuleAdvancedChemical
+#   - AdvancedJetInjector #Adv end
 
 - type: technology
   id: AdvancedCleaning
@@ -183,17 +188,17 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
 
-- type: technology
-  id: BluespaceCargoTransport
-  name: research-technology-bluespace-cargo-transport
-  icon:
-    sprite: Structures/cargo_telepad.rsi
-    state: display
-  discipline: CivilianServices
-  tier: 2
-  cost: 15000
-  recipeUnlocks:
-  - CargoTelepadMachineCircuitboard
+# - type: technology #Adv start
+#   id: BluespaceCargoTransport
+#   name: research-technology-bluespace-cargo-transport
+#   icon:
+#     sprite: Structures/cargo_telepad.rsi
+#     state: display
+#   discipline: CivilianServices
+#   tier: 2
+#   cost: 15000
+#   recipeUnlocks:
+#   - CargoTelepadMachineCircuitboard #Adv end
 
 - type: technology
   id: PushHorn
@@ -207,6 +212,7 @@
   recipeUnlocks:
   - PushHorn
   - BorgModuleAdvancedClowning
+  - ClothingShoesSkates #Adv
 
 # Tier 3
 
@@ -222,33 +228,49 @@
   recipeUnlocks:
   - ClothingShoesBootsSpeed
 
-- type: technology
-  id: BluespaceChemistry
-  name: research-technology-bluespace-chemistry
-  icon:
-    sprite: Objects/Specific/Chemistry/beaker_bluespace.rsi
-    state: beakerbluespace
-  discipline: CivilianServices
-  tier: 3
-  cost: 25000 #Adventure
-  recipeUnlocks:
-  - BluespaceBeaker
-  - SyringeBluespace
-  - ReusableMedipen #Adventure
-  - ChemBagBlueSpace #CyberneticGenesis
-  - BS-Jug #CyberneticGenesis
-  - BSPillCanister #CyberneticGenesis
-  - BaseBSChemistryEmptyVial #CyberneticGenesis
+#Adv start
+# - type: technology
+#   id: BluespaceChemistry
+#   name: research-technology-bluespace-chemistry
+#   icon:
+#     sprite: Objects/Specific/Chemistry/beaker_bluespace.rsi
+#     state: beakerbluespace
+#   discipline: CivilianServices
+#   tier: 3
+#   cost: 25000 #Adventure
+#   recipeUnlocks:
+#   - BluespaceBeaker
+#   - SyringeBluespace
+#   - ReusableMedipen #Adventure
+#   - ChemBagBlueSpace #CyberneticGenesis
+#   - BS-Jug #CyberneticGenesis
+#   - BSPillCanister #CyberneticGenesis
+#   - BaseBSChemistryEmptyVial #CyberneticGenesis
+
+# - type: technology
+#   id: LauncherSyringe
+#   name: research-technology-launcher-syringe
+#   icon:
+#     sprite: Objects/Weapons/Guns/Cannons/syringe_gun.rsi
+#     state: syringe_gun
+#   discipline: CivilianServices
+#   tier: 3
+#   cost: 15000
+#   recipeUnlocks:
+#   - LauncherSyringe
+#   - MiniSyringe
 
 - type: technology
-  id: LauncherSyringe
-  name: research-technology-launcher-syringe
+  id: BluespaceStorage
+  name: research-technology-bluespace-storage
   icon:
-    sprite: Objects/Weapons/Guns/Cannons/syringe_gun.rsi
-    state: syringe_gun
+    sprite: Clothing/Back/Backpacks/holding.rsi
+    state: holding
   discipline: CivilianServices
   tier: 3
   cost: 15000
   recipeUnlocks:
-  - LauncherSyringe
-  - MiniSyringe
+  - ClothingBackpackHolding
+  - ClothingBackpackSatchelHolding
+  - ClothingBackpackDuffelHolding
+#Adv end

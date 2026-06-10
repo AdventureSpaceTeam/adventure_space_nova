@@ -213,6 +213,9 @@
   - type: Battery
     maxCharge: 50000
     startingCharge: 50000
+  - type: Apc #Adv change
+    voltage: Apc
+    maxLoad: 50000
 
 - type: entity
   parent: BaseAPC
@@ -222,6 +225,9 @@
   - type: Battery
     maxCharge: 100000
     startingCharge: 100000
+  - type: Apc #Adv change
+    voltage: Apc
+    maxLoad: 100000
 
 - type: entity
   parent: BaseAPC
@@ -231,6 +237,9 @@
   - type: Battery
     maxCharge: 150000
     startingCharge: 150000
+  - type: Apc #Adv change
+    voltage: Apc
+    maxLoad: 150000
 
 - type: entity
   parent: BaseAPC
@@ -240,6 +249,9 @@
   - type: Battery
     maxCharge: 200000
     startingCharge: 200000
+  - type: Apc #Adv change
+    voltage: Apc
+    maxLoad: 200000
 
 - type: entity
   parent: BaseAPC
@@ -251,3 +263,6 @@
     startingCharge: 50000
   - type: AccessReader
     access: [["Xenoborg"]]
+  - type: Apc #Adv Change
+    voltage: Apc
+    maxLoad: 50000

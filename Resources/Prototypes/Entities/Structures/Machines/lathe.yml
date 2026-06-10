@@ -217,6 +217,7 @@
     - ChemistryPlus #CyberneticGenesis
     - AdventureEnergyCores # Adventure
     - AdventureThrusterBig # Adventure
+    - ContainmentFieldGenerator # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -276,6 +277,8 @@
     - MechBoards
     - ShuttleBoards
     - CircuitAdventureDynamic # Adventure
+    - HyperExosuitFabricator # Adventure
+    - CloningSetup # Adventure
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
@@ -487,9 +490,13 @@
     - MedicalClothingStatic
     - EmptyMedkitsStatic
     - SurgeryStatic
+    - MedicalBoardsStatic # Adventure
     dynamicPacks:
     - Chemistry
     - MedAdventure # Adventure
+    - MedicalBoards # Adventure
+    - CloningSetup # Adventure
+    - AdvancedTopicals # Adventure
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

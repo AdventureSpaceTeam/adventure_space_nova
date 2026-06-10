@@ -91,12 +91,13 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
 
         var disciplineText = Loc.GetString("research-discipline-none");
         var disciplineColor = Color.Gray;
-        if (database.MainDiscipline != null)
-        {
-            var discipline = _prototype.Index<TechDisciplinePrototype>(database.MainDiscipline);
-            disciplineText = Loc.GetString(discipline.Name);
-            disciplineColor = discipline.Color;
-        }
+        // Say nay to t3 lockouts. Adventure change:
+        // if (database.MainDiscipline != null)
+        // {
+        //     var discipline = _prototype.Index<TechDisciplinePrototype>(database.MainDiscipline);
+        //     disciplineText = Loc.GetString(discipline.Name);
+        //     disciplineColor = discipline.Color;
+        // }
 
         var msg = new FormattedMessage();
         msg.AddMarkupOrThrow(Loc.GetString("research-console-menu-main-discipline",

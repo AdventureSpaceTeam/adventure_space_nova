@@ -61,8 +61,8 @@
   - PowerDrill
   - WelderExperimental
   - JawsOfLife
-  - Fulton
-  - FultonBeacon
+  # - Fulton #Adv
+  # - FultonBeacon #Adv
 
 - type: latheRecipePack
   id: AtmosTools
