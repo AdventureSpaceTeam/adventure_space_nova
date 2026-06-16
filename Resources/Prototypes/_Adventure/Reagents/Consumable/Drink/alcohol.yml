@@ -307,3 +307,39 @@
           reagent: FirstBlizzard
           min: 15
         amount: -2000
+
+- type: reagent
+  id: Helioz
+  name: гелиос
+  parent: BaseAlcohol
+  desc: На вид как Солнце, только поменьше.
+  physicalDesc: солнечное
+  flavor: helioz
+  color: "#f0d439"
+  metamorphicSprite:
+    sprite: _Adventure/Objects/Consumable/Drinks/helioz.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 0.66
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+      - !type:AdjustTemperature
+        conditions:
+        - !type:ReagentCondition
+          reagent: Helioz
+          min: 15
+        amount: 3000
+      - !type:Flammable
+        multiplier: 0.03
+      - !type:Ignite
+        conditions:
+        - !type:ReagentCondition
+          reagent: Helioz
+          min: 30.5

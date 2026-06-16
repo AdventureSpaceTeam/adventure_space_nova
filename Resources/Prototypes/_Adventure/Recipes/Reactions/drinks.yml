@@ -149,3 +149,17 @@
       amount: 1
   products:
     RaiderRaid: 6
+
+- type: reaction
+  id: Helioz
+  reactants:
+    FourteenLoko:
+      amount: 1
+    Grog:
+      amount: 2
+    TheSunAlsoRises:
+      amount: 2
+    Hydrogen:
+      amount: 1
+  products:
+    Helioz: 6

@@ -34,3 +34,6 @@ ent-DrinkFirstBlizzard = { ent-DrinkGlass }
 ent-DrinkRaiderRaid = { ent-DrinkGlass }
     .suffix = рейдерский налёт
     .desc = { ent-DrinkGlass.desc }
+ent-DrinkHelioz = { ent-DrinkGlass }
+    .suffix = гелиос
+    .desc = { ent-DrinkGlass.desc }
