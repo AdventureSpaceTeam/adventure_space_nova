@@ -189,3 +189,19 @@
   - type: Icon
     sprite: _Adventure/Objects/Consumable/Drinks/raiderraidglass.rsi
     state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkHelioz
+  suffix: гелиос
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Helioz
+          Quantity: 30
+  - type: Icon
+    sprite: _Adventure/Objects/Consumable/Drinks/helioz.rsi
+    state: icon
