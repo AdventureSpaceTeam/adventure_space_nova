@@ -57,3 +57,8 @@
   id: raiderraid
   flavorType: Complex
   description: как удачное ограбление
+
+- type: flavor
+  id: helioz
+  flavorType: Complex
+  description: как Солнце

@@ -130,6 +130,7 @@
       - DrinkCmdFuel
       - DrinkFirstBlizzard
       - DrinkRaiderRaid
+      - DrinkHelioz
 # Adventure ends
     chance: 0.8
     offset: 0.0
