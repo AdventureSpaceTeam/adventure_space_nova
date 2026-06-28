@@ -55,6 +55,9 @@
     resistance: 2
   - type: BlockWeather
   - type: SunShadowCast
+  - type: Reactive
+    groups:
+      Acidic_Inorganic: [Touch]
 
 - type: entity
   abstract: true

@@ -587,6 +587,8 @@
       collection: FartCollection # Adventure
     Crunch:
       collection: CrunchCollection # Adventure
+    HeartBeat:
+      collection: HeartBeatCollection #Adventure
     Clap:
       collection: Claps
     ClapSingle:
@@ -630,6 +632,8 @@
       collection: TailThumpCollection # Adventure Collection
       params:
         variation: 0.125
+    HeartBeat:
+      collection: HeartBeatCollection #Adventure
     Clap:
       collection: Claps
     ClapSingle:
