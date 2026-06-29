@@ -35,6 +35,15 @@
           types:
             Heat: 2
             Poison: 1
+  reactiveEffects:
+    Acidic_Inorganic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: true
+        damage:
+          types:
+            Heat: 5
 
 - type: reagent
   id: Napalm

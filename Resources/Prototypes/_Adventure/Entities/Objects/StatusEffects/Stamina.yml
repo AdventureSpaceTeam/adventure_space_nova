@@ -1,0 +1,15 @@
+- type: entity
+  parent: StaminaModifierStatusEffect
+  id: StatusEffectPumpUpStamina
+  name: 1.2x max stamina
+  components:
+  - type: StaminaModifierStatusEffect
+    modifier: 1.2
+
+- type: entity
+  parent: StaminaModifierStatusEffect
+  id: StatusEffectBathSaltsStamina
+  name: 5x max stamina
+  components:
+  - type: StaminaModifierStatusEffect
+    modifier: 5

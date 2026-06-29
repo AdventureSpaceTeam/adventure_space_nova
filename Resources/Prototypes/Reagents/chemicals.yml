@@ -7,6 +7,13 @@
   color: "#AF14B7"
   boilingPoint: 55.5
   meltingPoint: -50.0
+  metabolisms: #Adv tweak
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1.5
 
 - type: reagent
   id: Phenol
@@ -43,7 +50,7 @@
             Poison: -1
       - !type:CleanBloodstream
         excluded: Charcoal
-        cleanseRate: 3
+        cleanseRate: 1 #Adv Change
 
 - type: reagent
   id: Ash

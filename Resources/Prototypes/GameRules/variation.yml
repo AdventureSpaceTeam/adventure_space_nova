@@ -116,6 +116,12 @@
     - Blood
     - CopperBlood
     - Slime
+    - XenoBloodAcid #Adv start
+    - SkrellBlood
+    - ResomiBlood
+    - ZerahBlood
+    - AmmoniaBlood
+    - BloodyMary #Adv end
   - quantity: 25
     weight: 1
     reagents:

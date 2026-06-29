@@ -272,7 +272,7 @@
         damage:
           types:
             Asphyxiation: -1
-            Bloodloss: -0.5
+            # Bloodloss: -0.5 #Adv tweak
       - !type:HealthChange
         conditions:
           - !type:ReagentCondition
@@ -298,7 +298,7 @@
         damage:
           types:
             Asphyxiation: -3.5
-            Bloodloss: -3
+            # Bloodloss: -3 #Adv tweak
       - !type:AdjustReagent
         conditions:
         - !type:ReagentCondition
@@ -1531,6 +1531,24 @@
       - !type:AdjustReagent
         reagent: MindbreakerToxin
         amount: -3.0
+      - !type:AdjustReagent #Adventure start
+        reagent: PumpUp
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: BathSalts
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: Mephedrone
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: Aranesp
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: Crank
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: Krokodil
+        amount: -3.0 #Adventure end
 
 - type: reagent
   id: Warfarin

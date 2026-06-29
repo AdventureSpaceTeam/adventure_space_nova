@@ -2,7 +2,7 @@
   id: SilverSulfadiazine
   name: сульфадиазин серебра
   group: Medicine
-  desc: Вещество, которое нужно наносить на кожу, восстанавливает кожу от ожогов, но вызывает интоксикацию.
+  desc: Вещество, которое нужно наносить на кожу, восстанавливая её от ожогов. Употребление внутрь вызывает интоксикацию.
   physicalDesc: шипучее
   flavor: medicine
   color: "#e9da11"
@@ -11,24 +11,9 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
             Heat: -1 # Убирает 1 ожог за унцию
-            Poison: 0.3 # Добавляет 0.3 яда за унцию
-            Cellular: 0.2 # Добавляет 0.2 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
-      - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Critical # Работает, если в крите
-        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
-        damage:
-          types:
-            Heat: -1 # Убирает 1 ожог за унцию
-            Asphyxiation: 1 # Добавляет 1 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
   metabolisms:
     Poison:
       metabolismRate : 3.00 # В секунду уходит 3 унции реагента
@@ -36,13 +21,14 @@
       - !type:HealthChange
         damage:
           types:
-            Heat: -1
+            Heat: -2
+            Poison: 0.5
 
 - type: reagent
   id: StypticPowder
   name: кровоостанавливающая пудра
   group: Medicine
-  desc: Вещество, которое нужно наносить на кожу, восстанавливает повреждения тканей, но вызывает интоксикацию.
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает повреждения тканей. Употребление внутрь вызывает интоксикацию.
   physicalDesc: едкое
   flavor: medicine
   color: "#ec9fc9"
@@ -51,41 +37,28 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
-            Piercing: -1 # Убирает 1 укол за унцию
-            Slash: -1 # Убирает 1 порез за унцию
-            Poison: 0.3 # Добавляет 0.3 яда за унцию
-            Cellular: 0.2 # Добавляет 0.2 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
-      - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Critical # Работает, если в крите
-        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
-        damage:
-          types:
-            Piercing: -1 # Убирает 1 укол за унцию
-            Slash: -1 # Убирает 1 порез за унцию
-            Asphyxiation: 1 # Добавляет 1 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
+            Slash: -0.66
+            Piercing: -0.33
+            Blunt: -0.1
   metabolisms:
     Poison:
-      metabolismRate : 3.00
+      metabolismRate: 3.00
       effects:
       - !type:HealthChange
         damage:
           types:
-            Piercing: -1 # Убирает 1 укол за унцию
-            Slash: -1 # Убирает 1 порез за унцию
+            Slash: -0.66
+            Piercing: -0.66
+            Blunt: -0.66
+            Poison: 0.5
 
 - type: reagent
   id: Synthflesh
   name: синтплоть
   group: Medicine
-  desc: Вещество, которое нужно наносить на кожу, восстанавливает механические повреждения и ожоги, но вызывает интоксикацию.
+  desc: Вещество, которое нужно наносить на кожу, восстанавливает механические повреждения и ожоги. Употребление внутрь вызывает интоксикацию.
   physicalDesc: сильно пахнущее
   flavor: medicine
   color: "#ecd3d9"
@@ -94,28 +67,12 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Alive # Работает, только пока не в крите и не мёртвый
-        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
         damage:
           types:
-            Piercing: -0.9 # Убирает 0.9 укол за унцию
-            Slash: -0.9 # Убирает 0.9 порез за унцию
-            Heat: -0.9 # Убирает 0.9 ожог за унцию
-            Poison: 0.25 # Добавляет 0.25 яда за унцию
-            Cellular: 0.1 # Добавляет 0.1 генетического урона за унцию. Добавлен как способ забалансить то, что разливаемый реагент работает даже в скафандре
-      - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Critical # Работает, если в крите
-        ignoreResistances: false # В теории все резисты, скафы и т.п снижающие урон, будут снижать и лечение
-        damage:
-          types:
-            Piercing: -0.9 # Убирает 0.9 укол за унцию
-            Slash: -0.9 # Убирает 0.9 порез за унцию
-            Heat: -0.9 # Убирает 0.9 ожог за унцию
-            Asphyxiation: 0.75 # Добавляет 0.75 асфиксии за унцию(Вместо яда, чтобы антаги не могли с лёгкостью вывести игрока из игры)
+            Piercing: -0.45
+            Slash: -1
+            Blunt: -0.15
+            Heat: -0.5
   metabolisms:
     Poison:
       metabolismRate : 0.4
@@ -123,7 +80,7 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: 1
+            Cellular: 1
 
 - type: reagent
   id: Perfluorodecalin
@@ -140,13 +97,13 @@
       - !type:HealthChange
         damage:
           types:
-            Asphyxiation: -2.5
+            Asphyxiation: -4
       - !type:HealthChange
         probability: 0.33 # Шанс 33%
         damage:
           groups:
-            Brute: -0.15
-            Burn: -0.1
+            Brute: -1
+            Burn: -1
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -154,8 +111,35 @@
           min: 4
         damage:
           types:
-            Asphyxiation: 2.5
+            Asphyxiation: 5.5
             Poison: 1
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentCondition
+          reagent: Perfluorodecalin
+          min: 4
+        type: Local
+        visualType: Large
+        messages:
+        - perfluorodecalin-effect-suffocation
+        - perfluorodecalin-effect-bradycardia
+        - perfluorodecalin-effect-echo
+        probability: 0.05
+      - !type:Emote
+        conditions:
+        - !type:ReagentCondition
+          reagent: Perfluorodecalin
+          min: 4
+        showInChat: true
+        emote: Gasp
+        probability: 0.1
+      - !type:Emote
+        conditions:
+        - !type:ReagentCondition
+          reagent: Perfluorodecalin
+          min: 4
+        emote: HeartBeat
+        probability: 1
 
 - type: reagent
   id: SyntheticBlood
@@ -182,3 +166,817 @@
             Bloodloss: -0.15
       - !type:ModifyBloodLevel #Для всех
           amount: 10
+
+- type: reagent
+  id: PentheticAcid
+  name: пентеновая кислота
+  group: Medicine
+  desc: Она же — Диэтилентриаминпентаацетат или ДТПА. Отлично выводит токсины и радионуклиды.
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#987feb"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        probability: 0.75
+        damage:
+          groups:
+            Toxin: -4
+      - !type:HealthChange
+        probability: 0.33
+        damage:
+          types:
+            Blunt: 1
+            Heat: 1
+      - !type:CleanBloodstream
+        excluded: PentheticAcid
+        cleanseRate: 2
+      - !type:GenericStatusEffect
+        key: RadiationProtection
+        component: RadiationProtection
+        time: 4
+        type: Add
+
+- type: reagent
+  id: Sarin
+  name: зарин
+  group: Toxins
+  desc: Смертельно опасное фосфорорганическое вещество замедленного действия. Поражает нервную и мышечную систему, вызывая сильные судороги, проблемы с дыханием и, как следствие, смерть от удушения.
+  physicalDesc: reagent-physical-desc-powdery
+  flavor: cold
+  color: "#55ac6c"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.5
+            Heat: 0.5
+            Cellular: 0.5
+      - !type:HealthChange
+        probability: 0.15
+        damage:
+          types:
+            Poison: 0.5
+            Cellular: 0.5
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.95
+        sprintSpeedModifier: 0.95
+      - !type:ModifyStatusEffect
+        probability: 0.25
+        effectProto: StatusEffectStunned
+        time: 0.5
+        type: Add
+      - !type:Jitter
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: StutteringAccent
+      - !type:Emote
+        showInChat: true
+        emote: Cough
+        probability: 0.1
+      - !type:Emote
+        showInChat: true
+        emote: Gasp
+        probability: 0.1
+      - !type:GenericStatusEffect
+        probability: 0.1
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 5
+
+- type: reagent
+  id: Formaldehyde
+  name: формальдегид
+  group: Medicine
+  desc: Вещество, замедляющее разложения трупа, продлевая время для реанимации. Если его проглотит живой, то вместо продления жизни, тот может получить сильнейшую анафилактическую реакцию.
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: horrible
+  color: "#7c5a4e"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.4
+      effects:
+      - !type:ReduceRotting
+        seconds: 0.5
+        conditions:
+        - !type:TemperatureCondition
+          min: 293.15
+        - !type:MobStateCondition
+          mobstate: Dead
+      - !type:AdjustReagent
+         probability: 0.1
+         reagent: Histamine
+         amount: 15
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 0.5
+        conditions:
+        - !type:ReagentCondition
+          reagent: Formaldehyde
+          min: 11
+
+
+- type: reagent
+  id: Ether
+  name: эфир
+  group: Narcotics
+  desc: Медленно усыпляющее снотворное. Самый древний анестетик. Если конечно не считать удар лопатой по голове. Хотя хорошо зафиксированные пациенты в анестезии не нуждаются.
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: acid
+  color: "#8acdd7"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.2
+      effects:
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.85
+        sprintSpeedModifier: 0.85
+      - !type:ModifyStatusEffect
+        conditions:
+        - !type:ReagentCondition
+          reagent: Ether
+          min: 11
+        effectProto: StatusEffectForcedSleeping
+        time: 1
+        delay: 40
+      - !type:Emote
+        emote: Yawn
+        showInChat: true
+        probability: 0.1
+
+- type: reagent
+  id: Menthol
+  name: ментол
+  group: Narcotics
+  desc: Вещество, создающее охлаждающий эффект на вдохе. Содержится в ментоловых сигаретах. Для любителей постепенно умирать от сердечной недостаточности, а не от рака.
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: bitter
+  color: "#c9e0c9"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.03
+      effects:
+      - !type:HealthChange
+        probability: 0.55
+        damage:
+          types:
+            Heat: -0.5
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+        - psicodine-effect-fearless
+        - psicodine-effect-anxieties-wash-away
+        - psicodine-effect-at-peace
+        probability: 0.05
+
+- type: reagent
+  id: PumpUp
+  name: насос
+  group: Narcotics
+  desc: Дешевый, доступный без химического раздатчика боевой наркотик, позволяющий получить кратковременную защиту от оглушений путем разгона биения сердца. При передозировке даёт обратный эффект сильного замедления.
+  physicalDesc: reagent-physical-desc-fizzy
+  contrabandSeverity: Minor
+  flavor: coffeeliquor
+  color: "#64a497"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectPumpUpStamina
+        time: 3
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 2
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 2
+        type: Remove
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 2
+        type: Add
+        conditions:
+        - !type:ReagentCondition
+          reagent: PumpUp
+          min: 15
+      - !type:Vomit
+        probability: 0.5
+        conditions:
+        - !type:ReagentCondition
+          reagent: PumpUp
+          min: 15
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+
+- type: reagent
+  id: BathSalts
+  name: соль для ванн
+  group: Narcotics
+  desc: Крайне опасный боевой наркотик, дающий полный иммунитет к оглушению, ценой летальной передозировки и фатального штрафа в неопытных руках. ЭПИЛЕПТИКАМ - ОСТОРОЖНО, СИЛЬНОЕ МЕРЦАНИЕ!
+  physicalDesc: reagent-physical-desc-bubbling
+  contrabandSeverity: Minor
+  flavor: hooch
+  color: "#dee7e8"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.6
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectBathSaltsStamina
+        time: 3
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 2
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 5
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        time: 1
+        conditions:
+        - !type:ReagentCondition
+          reagent: BathSalts
+          max: 19
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 2
+        sprintSpeedModifier: 2
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2.5
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        conditions:
+        - !type:ReagentCondition
+          reagent: BathSalts
+          min: 20
+      - !type:Jitter
+        conditions:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1.5
+        conditions:
+        - !type:ReagentCondition
+          reagent: BathSalts
+          min: 20
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 500
+        type: Add
+
+- type: reagent
+  id: Fliptonium
+  name: крутений
+  group: Narcotics
+  desc: Заставляет выпившего начать крутиться! При приёме внутрь объект начинает вращаться по кругу. Тем, кому не нравится крутиться, могут просто упасть и эффект сбросится.
+  physicalDesc: reagent-physical-desc-blazing
+  contrabandSeverity: Minor
+  flavor: sweet
+  color: "#944d81"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:Emote
+        emote: Flip
+        probability: 1
+
+- type: reagent
+  id: Mephedrone
+  name: мефедрон
+  group: Narcotics
+  desc: Синтетический стимулятор, имеющий внушительные допинговые показатели. Имеет такие же чрезвычайные побочные эффекты.
+  physicalDesc: reagent-physical-desc-sugary
+  contrabandSeverity: Minor
+  flavor: bitter
+  color: "#64a497"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 500
+        type: Add
+      - !type:Drunk
+        boozePower: 1000
+      - !type:Emote
+        emote: Flip
+        showInChat: false
+        probability: 1
+        conditions:
+        - !type:ReagentCondition
+          reagent: Mephedrone
+          min: 15
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 1.40
+        sprintSpeedModifier: 1.40
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDesoxyStamina
+        time: 3
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 2
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 2
+        type: Remove
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.3
+      - !type:Vomit
+        probability: 0.05
+
+- type: reagent
+  id: Atropine
+  name: атропин
+  group: Medicine
+  desc: Превосходное лекарство, которое используется для стабилизации пациентов в тяжелом критическом состоянии и лечения сердечной недостаточности.
+  physicalDesc: reagent-physical-desc-refreshing
+  flavor: medicine
+  color: "#19314e"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamageCondition
+          max: 175
+        damage:
+          types:
+            Poison: 0.8
+      - !type:AdjustReagent
+        reagent: Sarin
+        amount: -10.0
+      - !type:EvenHealthChange
+        conditions:
+        - !type:TotalDamageCondition
+          min: 125
+        damage:
+          Brute: -1.5
+          Burn: -1.5
+      - !type:HealthChange
+        conditions:
+          - !type:ReagentCondition
+            reagent: Atropine
+            min: 25
+        damage:
+          types:
+            Asphyxiation: 3
+            Poison: 1
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamageCondition
+          min: 150
+        damage:
+          types:
+            Asphyxiation: -8
+
+- type: reagent
+  id: Aranesp
+  name: аранесп
+  group: Narcotics
+  desc: Специфический боевой наркотик, который надолго задерживается в организме, предоставляя более долгий бодрящий эффект, но при неаккуратном применении медленно убивающий носителя.
+  physicalDesc: reagent-physical-desc-syrupy
+  flavor: salty
+  color: "#4b1515"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.2
+      effects:
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 1.10
+        sprintSpeedModifier: 1.10
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDesoxyStamina
+        time: 3
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 2
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 2
+        type: Remove
+      - !type:HealthChange
+        probability: 0.03
+        damage:
+          types:
+            Poison: 4
+      - !type:HealthChange
+        probability: 0.13
+        conditions:
+          - !type:ReagentCondition
+            reagent: Aranesp
+            min: 11
+        damage:
+          types:
+            Poison: 4
+      - !type:HealthChange
+        probability: 0.23
+        conditions:
+          - !type:ReagentCondition
+            reagent: Aranesp
+            min: 21
+        damage:
+          types:
+            Poison: 4
+
+- type: reagent
+  id: Crank
+  name: крэнк
+  group: Narcotics
+  desc: Уменьшает время оглушения и улучшает регенерацию выносливости за счет повышения температуры тела. Передозировка может сжечь вас дотла.
+  physicalDesc: reagent-physical-desc-roaring
+  flavor: spicy
+  color: "#a1821d"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.4
+      effects:
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 1.35
+        sprintSpeedModifier: 1.35
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDesoxyStamina
+        time: 3
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 2
+        type: Remove
+      - !type:ModifyKnockdown
+        time: 2
+        type: Remove
+      - !type:HealthChange
+        probability: 0.13
+        conditions:
+          - !type:ReagentCondition
+            reagent: Crank
+            min: 20
+        damage:
+          types:
+            Poison: 4
+            Blunt: 4
+      - !type:AdjustTemperature
+        amount: 10000
+      - !type:AdjustTemperature
+        amount: 100000
+        probability: 0.3
+        conditions:
+        - !type:ReagentCondition
+          reagent: Crank
+          min: 20
+      - !type:Emote
+        emote: Laugh
+        showInChat: true
+        probability: 0.2
+        conditions:
+        - !type:ReagentCondition
+          reagent: Crank
+          max: 20
+      - !type:Emote
+        emote: Crying
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: Crank
+          min: 20
+      - !type:Emote
+        emote: Scream
+        showInChat: true
+        probability: 0.1
+
+- type: reagent
+  id: Jestosterone
+  name: шутостерон
+  group: Toxins
+  desc: Так же известный как Гипохлорит вольфрамового азота, после того как НТ уволило химиков-шутников. Заставляет вас пищать как клоун, если хотя бы капля попадет на вашу кожу.
+  physicalDesc: смешное
+  flavor: creamy
+  color: "#d430ee"
+  slipData:
+    requiredSlipSpeed: 3.5
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Slash: 0.25
+      - !type:Emote
+        emote: Honk
+        showInChat: true
+        showInGuidebook: true
+        force: true
+        probability: 0.8
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+      - !type:Emote
+        emote: Honk
+        showInChat: true
+        showInGuidebook: true
+        force: true
+        probability: 0.2
+
+- type: reagent
+  id: Krokodil
+  name: крокодил
+  group: Narcotics
+  desc: Он же Дезоморфин. Обеспечивает чувство умиротворённости и защищённости. С потрясающей скоростью успокаивает нервы и надолго остается в кровотоке.
+  physicalDesc: reagent-physical-desc-gloopy
+  flavor: sharp
+  color: "#2177b9"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.3
+      effects:
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.85
+        sprintSpeedModifier: 0.85
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.25
+        sprintSpeedModifier: 0.25
+        conditions:
+        - !type:ReagentCondition
+          reagent: Krokodil
+          min: 6
+      - !type:HealthChange
+        probability: 0.1
+        damage:
+          types:
+            Poison: 1
+      - !type:HealthChange
+        probability: 0.05
+        damage:
+          types:
+            Poison: 1
+            Blunt: 1
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 3
+            Blunt: 5
+        conditions:
+        - !type:ReagentCondition
+          reagent: Krokodil
+          min: 20
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 30
+        type: Add
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+        - "krokodil-effect-at-peace"
+        - "krokodil-effect-losing-yourself"
+        - "krokodil-effect-calm"
+        probability: 0.1
+
+- type: reagent
+  id: ItchingPowder
+  name: зудящий порошок
+  group: Toxins
+  desc: Вызывает крайне раздражающие эффекты, а также вероятность того, что субъект будет царапать себя, нанося незначительное количество травм. Хуже того, может распасться в гистамин, от которого всё чешется ещё сильнее!
+  physicalDesc: reagent-physical-desc-powdery
+  flavor: alkaline
+  color: "#9cacb6"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:Emote
+        showInChat: true
+        emote: Scratch
+        probability: 0.4
+      - !type:Emote
+        showInChat: true
+        emote: Scream
+        probability: 0.1
+      - !type:HealthChange
+        probability: 0.2
+        damage:
+          types:
+            Slash: 0.4
+      - !type:AdjustReagent
+        probability: 0.3
+        reagent: Histamine
+        amount: 3
+
+- type: reagent
+  id: Pancuronium
+  name: панкуроний
+  group: Toxins
+  desc: Вызывает паралич мускулатуры, в том числе и дыхательной, из-за чего жертва медленно и тихо погибает. Часто применяется в качестве смертельной инъекции при казни.
+  physicalDesc: reagent-physical-desc-reasonably-metallic
+  flavor: medicine
+  color: "#356181"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectStunned
+        time: 60
+        delay: 25
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: 4
+        conditions:
+        - !type:ReagentCondition
+          reagent: Pancuronium
+          min: 3
+      - !type:Emote
+        conditions:
+        - !type:ReagentCondition
+          reagent: Pancuronium
+          min: 3
+        showInChat: true
+        emote: Gasp
+        probability: 0.1
+
+- type: reagent
+  id: Sulfonal
+  name: сульфонал
+  group: Toxins
+  desc: Токсин, временно парализующий нижние конечности своего носителя, превращая его в неходовой товар. Медленно выводится из организма.
+  physicalDesc: reagent-physical-desc-powdery
+  flavor: alkaline
+  color: "#b2563a"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.3
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+      - !type:Emote
+        showInChat: true
+        emote: Yawn
+        probability: 0.1
+      - !type:ModifyKnockdown
+        time: 1.3
+        type: Add
+        conditions:
+        - !type:ReagentCondition
+          reagent: Sulfonal
+          min: 6
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.85
+        sprintSpeedModifier: 0.85
+        conditions:
+        - !type:ReagentCondition
+          reagent: Sulfonal
+          min: 11
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.45
+        sprintSpeedModifier: 0.45
+        conditions:
+        - !type:ReagentCondition
+          reagent: Sulfonal
+          min: 16
+
+- type: reagent
+  id: Initropidril
+  name: инитропидрил
+  group: Toxins
+  desc: Опасное нестабильное вещество, которое разгоняет ваше сердце до потрясающих 350 ударов в минуту, из-за чего оно скорее всего остановится.
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: magical
+  contrabandSeverity: Syndicate
+  color: "#9944cc"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        probability: 0.33
+        damage:
+          types:
+            Poison: 17
+      - !type:ModifyStatusEffect
+        probability: 0.33
+        effectProto: StatusEffectStunned
+        time: 4
+        type: Add
+      - !type:HealthChange
+        probability: 0.1
+        damage:
+          types:
+            Asphyxiation: 15
+      - !type:Emote
+        showInChat: true
+        emote: Gasp
+        probability: 0.2
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectHemorrhage
+        time: 21
+        type: Update
+      - !type:ModifyBleed
+        amount: 0.5
+
+- type: reagent
+  id: ConcentratedInitropidril
+  name: сгущённый инитропидрил
+  group: Toxins
+  desc: Сердце заходит в дверь и говорит "Извините что без стука"...
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: magical
+  contrabandSeverity: Syndicate
+  color: "#7100b3"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        probability: 0.66
+        damage:
+          types:
+            Poison: 17
+      - !type:ModifyKnockdown
+        time: 2
+        type: Add
+      - !type:HealthChange
+        probability: 0.66
+        damage:
+          types:
+            Asphyxiation: 15
+      - !type:Emote
+        showInChat: true
+        emote: Gasp
+        probability: 0.2
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
+        type: Add
+        time: 10
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.05
+        sprintSpeedModifier: 0.05
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectHemorrhage
+        time: 21
+        type: Update
+      - !type:ModifyBleed
+        amount: 0.5
+
+- type: reagent
+  id: Necromicine
+  name: некромицин
+  group: Medicine
+  desc: Некротическое вещество второго поколения, способное излечивать клеточные повреждения даже у сгнивших тел.
+  physicalDesc: reagent-physical-desc-ionizing
+  flavor: medicine
+  color: "#821c3e"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:HealthChange
+          conditions:
+          - !type:TemperatureCondition
+            max: 150.0
+          damage:
+            types:
+             Cellular: -0.5
+             Caustic: 0.5
+
+- type: reagent
+  id: Dyalisine
+  name: диализин
+  group: Medicine
+  desc: Крепкий отрезвляющий раствор, способный быстро поставить на ноги практически любого наркомана. К сожалению, мефедроновая и фрезоновая наркомания до сих пор с трудом поддаются терапии.
+  physicalDesc: reagent-physical-desc-pungent
+  flavor: medicine
+  color: "#00c43b"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 75.0
+        type: Remove

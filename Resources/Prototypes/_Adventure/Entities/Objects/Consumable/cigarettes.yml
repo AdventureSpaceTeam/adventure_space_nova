@@ -1,0 +1,13 @@
+- type: entity
+  id: CigaretteMenthol
+  parent: Cigarette
+  name: сигарета с ментолом
+  description: Скрутка с ментолом вместо никотина.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 20
+        reagents:
+          - ReagentId: Menthol
+            Quantity: 10

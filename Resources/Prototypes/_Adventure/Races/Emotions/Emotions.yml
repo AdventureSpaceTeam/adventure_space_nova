@@ -213,3 +213,20 @@
     - квакнул
     - квакнула
     - урчит
+
+- type: soundCollection
+  id: HeartBeatCollection
+  files:
+  - /Audio/_Adventure/Voice/Emotions/heartbeat1.ogg
+
+- type: emote
+  id: HeartBeat
+  name: удар сердца
+  whitelist:
+    components:
+    - Respirator
+  blacklist:
+    components:
+    - BorgChassis
+  chatTriggers:
+    - ЧтОбЫпРяМвОоБщЕнИкТоНеМоГэТоВыВеСтИ
