@@ -10,6 +10,8 @@
     - HeartbreakerToxin
     - Honk
     - BuzzochloricBees
+    - BathSalts #Adv
+    - Mephedrone #Adv
   - quantity: 5
     weight: 1
     reagents:
@@ -34,6 +36,9 @@
     - TearGas
     - Lipolicide
     - Benzene
+    - Sarin #Adv start
+    - Aranesp
+    - Crank #Adv end
   - quantity: 5
     weight: 2
     reagents:
@@ -62,6 +67,7 @@
     - Iron
     - Bleach
     - Mannitol
+    - Krokodil #Adv
   - quantity: 10
     weight: 3
     reagents:
@@ -99,6 +105,10 @@
     - Wine
     - Coffee
     - Beer
+    - PumpUp #Adv start
+    - ItchingPowder
+    - Pancuronium
+    - Sulfonal #Adv end
   - quantity: 10
     weight: 3.5
     reagents:
@@ -121,6 +131,7 @@
     - TableSalt
     - Chlorine
     - Mercury
+    - Fliptonium #Adv
 
 - type: weightedRandomFillSolution
   id: EvilRandomFillSolution
@@ -141,3 +152,4 @@
     - Lead
     - Nocturine
     - Lexorin
+    - Initropidril #Adv

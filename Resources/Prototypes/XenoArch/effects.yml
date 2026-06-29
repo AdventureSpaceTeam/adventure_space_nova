@@ -624,6 +624,7 @@
     - VentCrud
     - WeldingFuel
     - JuiceThatMakesYouWeh
+    - Fliptonium #Adv
 
 - type: entity
   id: XenoArtifactRandomInstrumentSpawn
@@ -1027,6 +1028,7 @@
     - Kelotane
     - Dexalin
     - Omnizine
+    - Atropine #Adv
 
 - type: entity
   id: XenoArtifactFoamDangerous
@@ -1049,6 +1051,10 @@
     - ChloralHydrate
     - Mold
     - Amatoxin
+    - Mephedrone #Adv start
+    - BathSalts
+    - Sarin
+    - Krokodil #Adv end
 
 - type: entity
   id: XenoArtifactPuddleRare
@@ -1079,6 +1085,10 @@
     - Desoxyephedrine
     - Pax
     - Siderlac
+    - Dyalisine #Adv start
+    - SyntheticBlood
+    - Formaldehyde
+    - Atropine #Adv end
 
 - type: entity
   id: XenoArtifactAnomalySpawn

@@ -31,6 +31,7 @@
       - Vitamin
       - PolypyryliumOligomers
       - Charcoal
+      - Synthflesh #Adv
   # Neutral - weight: 20
     - quantity: 20
       weight: 17.5
@@ -48,6 +49,10 @@
       - MindbreakerToxin
       - Mustard
       - HorseradishSauce
+      - Crank #Adv start
+      - Krokodil
+      - ItchingPowder
+      - Sulfonal #Adv end
     - quantity: 5
       weight: 2.5
       reagents:
@@ -68,6 +73,7 @@
       - Razorium
       - Potassium
       - Phlogiston
+      - Fliptonium #Adv
     - quantity: 5
       weight: 4
       reagents:
@@ -77,6 +83,7 @@
       weight: 2.5
       reagents:
       - Nocturine
+      - Mephedrone #Adv
     - quantity: 10
       weight: 10
       reagents:
@@ -85,11 +92,16 @@
       - BuzzochloricBees
       - Amatoxin
       - Tazinide
+      - Formaldehyde #Adv
     - quantity: 5
       weight: 2.5
       reagents:
       - Lexorin
       - Lead
+      - Sarin #Adv start
+      - BathSalts
+      - Initropidril
+      - ConcentratedInitropidril #Adv end
 
 - type: entity
   name: strange pill
