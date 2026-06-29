@@ -12,7 +12,7 @@
     Chlorine:
       amount: 1
   products:
-    SilverSulfadiazine: 5
+    SilverSulfadiazine: 2
 
 - type: reaction
   id: StypticPowder
@@ -26,7 +26,7 @@
     SulfuricAcid:
       amount: 1
   products:
-    StypticPowder: 4
+    StypticPowder: 2
 
 - type: reaction
   id: Synthflesh
@@ -64,3 +64,296 @@
       amount: 1
   products:
     SyntheticBlood: 2
+
+- type: reaction
+  id: PentheticAcid
+  reactants:
+    WeldingFuel:
+      amount: 1
+    Chlorine:
+      amount: 1
+    Ammonia:
+      amount: 1
+    Vinegar:
+      amount: 1
+    Sodium:
+      amount: 1
+    Dylovene:
+      amount: 1
+  products:
+    PentheticAcid: 6
+
+- type: reaction
+  id: Sarin
+  minTemp: 310
+  reactants:
+    Acetone:
+      amount: 1
+    EZNutrient:
+      amount: 1
+    WeldingFuel:
+      amount: 1
+    Chlorine:
+      amount: 1
+    Fluorine:
+      amount: 1
+    Hydrogen:
+      amount: 1
+    Oxygen:
+      amount: 1
+    Phosphorus:
+      amount: 1
+  products:
+    Sarin: 4
+
+- type: reaction
+  id: Formaldehyde
+  minTemp: 425
+  reactants:
+    Vinegar:
+      amount: 1
+    Oxygen:
+      amount: 1
+    Silver:
+      amount: 1
+  products:
+    Formaldehyde: 3
+
+- type: reaction
+  id: Ether
+  reactants:
+    Vinegar:
+      amount: 1
+    Oxygen:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+  products:
+    Ether: 3
+
+- type: reaction
+  id: PumpUp
+  reactants:
+    Epinephrine:
+      amount: 1
+    Coffee:
+      amount: 2
+    Nicotine:
+      amount: 1
+  products:
+    PumpUp: 4
+
+- type: reaction
+  id: BathSalts
+  minTemp: 374
+  reactants:
+    SulfuricAcid:
+      amount: 1
+    Hotsauce:
+      amount: 1
+    SpaceCleaner:
+      amount: 1
+    Enzyme:
+      amount: 1
+    TableSalt:
+      amount: 1
+    Mercury:
+      amount: 1
+  products:
+    BathSalts: 6
+
+- type: reaction
+  id: Fliptonium
+  reactants:
+    Ephedrine:
+      amount: 1
+    Laughter:
+      amount: 1
+    EnergyDrink:
+      amount: 1
+  products:
+    Fliptonium: 3
+
+- type: reaction
+  id: Mephedrone
+  minTemp: 375
+  reactants:
+    BathSalts:
+      amount: 1
+    Licoxide:
+      amount: 1
+    Nitrogen:
+      amount: 1
+  products:
+    Mephedrone: 3
+
+- type: reaction
+  id: Atropine
+  reactants:
+    Ethanol:
+      amount: 1
+    Acetone:
+      amount: 1
+    Diethylamine:
+      amount: 1
+    Phenol:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+  products:
+    Atropine: 5
+
+- type: reaction
+  id: Aranesp
+  reactants:
+    Epinephrine:
+      amount: 1
+    Atropine:
+      amount: 1
+    Synaptizine:
+      amount: 1
+  products:
+    Aranesp: 3
+
+- type: reaction
+  id: Crank
+  minTemp: 374
+  reactants:
+    Diphenhydramine:
+      amount: 1
+    Ammonia:
+      amount: 1
+    Lithium:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+    WeldingFuel:
+      amount: 1
+  products:
+    Crank: 5
+
+- type: reaction
+  id: Jestosterone
+  minTemp: 374
+  reactants:
+    Blood:
+      amount: 1
+    JuiceBanana:
+      amount: 1
+    TableSalt:
+      amount: 1
+    SpaceDrugs:
+      amount: 1
+    SpaceLube:
+      amount: 1
+  products:
+    Jestosterone: 5
+
+- type: reaction
+  id: Krokodil
+  minTemp: 390
+  reactants:
+    Diphenhydramine:
+      amount: 1
+    Epinephrine:
+      amount: 1
+    SpaceCleaner:
+      amount: 1
+    Potassium:
+      amount: 1
+    Phosphorus:
+      amount: 1
+    WeldingFuel:
+      amount: 1
+  products:
+    Krokodil: 6
+
+- type: reaction
+  id: ItchingPowder
+  reactants:
+    Toxin:
+      amount: 1
+    Ammonia:
+      amount: 1
+    WeldingFuel:
+      amount: 1
+  products:
+    ItchingPowder: 3
+
+- type: reaction
+  id: Pancuronium
+  reactants:
+    MindbreakerToxin:
+      amount: 1
+    Ammonia:
+      amount: 1
+    Oil:
+      amount: 1
+  products:
+    Pancuronium: 3
+
+- type: reaction
+  id: Sulfonal
+  reactants:
+    Acetone:
+      amount: 1
+    Diethylamine:
+      amount: 1
+    Sulfur:
+      amount: 1
+  products:
+    Sulfonal: 3
+
+- type: reaction
+  id: Initropidril
+  reactants:
+    Crank:
+      amount: 1
+    Formaldehyde:
+      amount: 1
+    Krokodil:
+      amount: 1
+    BathSalts:
+      amount: 1
+    Nicotine:
+      amount: 1
+    Atropine:
+      amount: 1
+    Epinephrine:
+      amount: 1
+  products:
+    Initropidril: 3.5
+
+- type: reaction
+  id: ConcentratedInitropidril
+  minTemp: 699
+  reactants:
+    Initropidril:
+      amount: 1
+  products:
+    ConcentratedInitropidril: 0.33
+
+- type: reaction
+  id: Necromicine
+  reactants:
+    Necrosol:
+      amount: 1
+    Doxarubixadone:
+      amount: 3
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Necromicine: 3
+
+- type: reaction
+  id: Dyalisine
+  reactants:
+    Ethylredoxrazine:
+      amount: 1
+    Saline:
+      amount: 3
+    Epinephrine:
+      amount: 1
+  products:
+    Dyalisine: 3

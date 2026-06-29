@@ -248,6 +248,64 @@
   plantMetabolism:
   - !type:PlantAdjustHealth
     amount: -5
+  metabolisms: #Adv metabolism start
+    Narcotic:
+      metabolismRate: 0.03
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+        - nicotine-effect-relaxed
+        - nicotine-effect-pacification
+        - nicotine-effect-calmed-down
+        - nicotine-effect-at-peace
+        probability: 0.05
+        conditions:
+        - !type:ReagentCondition
+          reagent: Nicotine
+          max: 7
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentCondition
+          reagent: Nicotine
+          min: 7
+        type: Local
+        visualType: MediumCaution
+        messages:
+        - nicotine-effect-overdose-sweating
+        - nicotine-effect-overdose-suffocation
+        probability: 0.05
+      - !type:Jitter
+        conditions:
+        - !type:ReagentCondition
+          reagent: Nicotine
+          min: 9
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        messages: [ "nicotine-effect-overdose-heartbeat" ]
+        probability: 0.05
+        conditions:
+        - !type:ReagentCondition
+          reagent: Nicotine
+          min: 9
+      - !type:Emote
+        conditions:
+        - !type:ReagentCondition
+          reagent: Nicotine
+          min: 9
+        emote: HeartBeat
+        probability: 1
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentCondition
+          reagent: Nicotine
+          min: 9
+        type: Local
+        visualType: MediumCaution
+        messages: [ "nicotine-effect-overdose-horrible" ]
+        probability: 0.05 #Adv metabolism end
 
 # TODO: Replace these nonstandardized effects with generic brain damage
 - type: reagent

@@ -1,2 +1,5 @@
 ﻿- type: reactiveGroup
   id: Acidic_Organic
+
+- type: reactiveGroup
+  id: Acidic_Inorganic

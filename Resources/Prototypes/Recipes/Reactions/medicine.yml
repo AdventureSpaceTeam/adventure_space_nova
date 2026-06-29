@@ -54,14 +54,14 @@
   products:
     Bicaridine: 2
 
-- type: reaction
+- type: reaction #ADV Recipe tweak
   id: Cryoxadone
   reactants:
     Dexalin:
       amount: 1
-    Water:
+    Acetone:
       amount: 1
-    Oxygen:
+    Tricordrazine:
       amount: 1
   products:
     Cryoxadone: 3
