@@ -1,0 +1,3 @@
+dark-altar-cross-finding = Крест чувствует источник скверны неподалеку...
+dark-altar-produce-fel = Алтарь распространил скверну!
+dark-altar-increase-fel-radius = Алтарь расширил радиус распространения скверны!

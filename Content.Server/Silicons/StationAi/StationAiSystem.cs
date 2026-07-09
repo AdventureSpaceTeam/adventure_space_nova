@@ -37,6 +37,22 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using static Content.Server.Chat.Systems.ChatSystem;
+using Content.Server.RPSX.DarkForces.Ratvar.Righteous.Abilities.Midas;
+using Content.Shared.Silicons.Laws;
+using Content.Shared.Silicons.Borgs.Components;
+using Content.Server.Silicons.Laws;
+using Content.Shared.Radio.Components;
+using Content.Server.RPSX.DarkForces.Ratvar.Righteous.Abilities;
+using Content.Server.Audio;
+using Robust.Shared.Audio;
+using Content.Shared.RPSX.DarkForces.Ratvar.Events;
+using Content.Server.RPSX.DarkForces.Ratvar.Righteous.Progress;
+using Content.Shared.RPSX.DarkForces.Ratvar.Righteous.Roles;
+using Content.Server.Access.Systems;
+using Content.Shared.Access;
+using Content.Shared.Access.Systems;
+using System.Linq;
+using Content.Server.RPSX.DarkForces.Ratvar.Righteous.Structures.Altar;
 
 namespace Content.Server.Silicons.StationAi;
 
@@ -60,6 +76,12 @@ public sealed class StationAiSystem : SharedStationAiSystem
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly ChatSystem _chatSystem = default!;
+    [Dependency] private readonly SiliconLawSystem _siliconLawSystem = default!;
+    [Dependency] private readonly RatvarAbilitiesSystem _ratvarAbilities = default!;
+    [Dependency] private readonly ServerGlobalSoundSystem _soundSystem = default!;
+    [Dependency] private readonly RatvarAltarSystem _ratvar = default!;
 
     private readonly HashSet<Entity<StationAiCoreComponent>> _stationAiCores = new();
 
@@ -73,6 +95,9 @@ public sealed class StationAiSystem : SharedStationAiSystem
 
     private readonly ProtoId<AlertPrototype> _batteryAlert = "AiBattery";
     private readonly ProtoId<AlertPrototype> _damageAlert = "BorgHealth";
+    private readonly ProtoId<SiliconLawsetPrototype> _ratvarLaws = "Ratvar";
+    private readonly TimeSpan _midasTouchDelay = TimeSpan.FromSeconds(120);
+    private readonly SoundSpecifier _aiHackedSound = new SoundPathSpecifier("/Audio/DarkStation/ii_error.ogg");
 
     public override void Initialize()
     {
@@ -86,6 +111,8 @@ public sealed class StationAiSystem : SharedStationAiSystem
         SubscribeLocalEvent<StationAiCoreComponent, DestructionEventArgs>(OnDestruction);
         SubscribeLocalEvent<StationAiCoreComponent, DoAfterAttemptEvent<IntellicardDoAfterEvent>>(OnDoAfterAttempt);
         SubscribeLocalEvent<StationAiCoreComponent, RejuvenateEvent>(OnRejuvenate);
+        SubscribeLocalEvent<StationAiCoreComponent, MidasTargetEvent>(OnMidasEvent);
+        SubscribeLocalEvent<StationAiCoreComponent, StationAIMidasDoAfter>(OnMidasDoAfter);
 
         SubscribeLocalEvent<ExpandICChatRecipientsEvent>(OnExpandICChatRecipients);
         SubscribeLocalEvent<StationAiTurretComponent, AmmoShotEvent>(OnAmmoShot);
@@ -120,7 +147,7 @@ public sealed class StationAiSystem : SharedStationAiSystem
                 // Set the new AI brain to the 'rebooting' state
                 if (TryComp<StationAiCustomizationComponent>(aiBrain, out var customization))
                     SetStationAiState((aiBrain, customization), StationAiState.Rebooting);
-                
+
             }
 
             // Delete the new AI brain if it cannot be inserted into the core
@@ -476,4 +503,104 @@ public sealed class StationAiSystem : SharedStationAiSystem
 
         return hashSet;
     }
+
+    // RPSX Ratvar start
+    private void OnMidasEvent(EntityUid uid, StationAiCoreComponent component, MidasTargetEvent args)
+    {
+        if (!_container.TryGetContainer(uid, StationAiCoreComponent.Container, out var container) ||
+            container.Count == 0)
+        {
+            return;
+        }
+
+        var ev = new StationAIMidasDoAfter();
+        var doAfterArgs = new DoAfterArgs(
+            entManager: EntityManager,
+            user: args.User,
+            delay: _midasTouchDelay,
+            @event: ev,
+            eventTarget: uid,
+            target: uid
+        )
+        {
+            BreakOnDamage = true,
+            BreakOnMove = true,
+            MovementThreshold = 1f
+        };
+
+        _doAfter.TryStartDoAfter(doAfterArgs);
+        _chatSystem.DispatchStationAnnouncement(
+            uid,
+            "Внимание!\nПроисходит взлом ИИ\nЗащитные механизмы продержатся две минуты\nОстановите нарушителей",
+            MetaData(uid).EntityName,
+            playDefaultSound: true,
+            null,
+            Color.FromHex("#93e2ff")
+        );
+    }
+
+    private void OnMidasDoAfter(EntityUid uid, StationAiCoreComponent component, StationAIMidasDoAfter args)
+    {
+        if (args.Cancelled || args.Handled)
+            return;
+
+        if (!_container.TryGetContainer(uid, StationAiCoreComponent.Container, out var container) ||
+            container.Count == 0)
+        {
+            return;
+        }
+
+        var brain = container.ContainedEntities[0];
+        var targetMap = Transform(uid).MapID;
+
+        var borgsToConvert = new List<EntityUid>();
+        var borgs = EntityQueryEnumerator<BorgChassisComponent, TransformComponent>();
+        while (borgs.MoveNext(out var borgUid, out var borg, out var transform))
+        {
+            if (transform.MapID != targetMap)
+                continue;
+
+            if (!borg.Active)
+                continue;
+
+            borgsToConvert.Add(borgUid);
+        }
+
+        foreach (var borgUid in borgsToConvert)
+        {
+            _ratvarAbilities.ConvertBorg(borgUid);
+        }
+
+        var lawset = _siliconLawSystem.GetLawset(_ratvarLaws);
+        _siliconLawSystem.SetLaws(lawset.Laws, brain);
+        _chatSystem.DispatchStationAnnouncement(
+            uid,
+            "Новые протоколы активированы\nЛатунные механизмы активированы\nПерезагрузка завершена",
+            MetaData(uid).EntityName,
+            playDefaultSound: true,
+            null,
+            Color.FromHex("#93e2ff")
+        );
+
+        _soundSystem.DispatchStationEventMusic(uid, _aiHackedSound, Shared.Audio.StationEventMusicType.AiHacked);
+
+        var radioTransmitter = EnsureComp<IntrinsicRadioTransmitterComponent>(brain);
+        radioTransmitter.Channels.Add("Ratvar");
+
+        var activeRadio = EnsureComp<ActiveRadioComponent>(brain);
+        activeRadio.Channels.Add("Ratvar");
+
+        var progress = EntityQueryEnumerator<RatvarProgressComponent>();
+        while (progress.MoveNext(out _, out var comp))
+        {
+            comp.IsAIHacked = true;
+            comp.CurrentPower += 1500;
+        }
+        var cultists = EntityQueryEnumerator<RatvarRighteousComponent>();
+        while (cultists.MoveNext(out var cultist, out _))
+        {
+            _ratvar.UpdateAccess(cultist);
+        }
+    }
+
 }

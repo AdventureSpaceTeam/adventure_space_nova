@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "RPS-eXtended & kotcop",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "handcuff"
+        },
+        {
+            "name": "body-overlay-2",
+            "directions": 4
+        },
+        {
+            "name": "body-overlay-4",
+            "directions": 4
+        }
+    ]
+}

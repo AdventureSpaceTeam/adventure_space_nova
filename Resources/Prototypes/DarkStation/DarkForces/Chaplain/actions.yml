@@ -1,0 +1,71 @@
+﻿- type: entity
+  parent: BaseAction
+  id: ActionChaplainGreatPrayer
+  name: "Великая молитва"
+  description: Священник взывает к высшим силам, наполняя окружающее пространство благодатью
+  components:
+  - type: Action
+    useDelay: 120
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Chaplain/actions.rsi
+      state: great-prayer
+  - type: InstantAction
+    event: !type:ChaplainGreatPrayerEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionChaplainDefenceBarrier
+  name: "Барьер от темных сил"
+  description: "Создайте временный барьер от тёмных сил. Это даст вам время для перегруппировки или побега"
+  components:
+  - type: Action
+    useDelay: 180
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Chaplain/actions.rsi
+      state: barrier
+  - type: InstantAction
+    event: !type:ChaplainDefenceBarrierEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionChaplainExorcism
+  name: "Экзорцизм"
+  description: "Возвращает человека в свое настоящее тело, если он заколдован темной магией"
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 60
+    checkCanInteract: true
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Chaplain/actions.rsi
+      state: exorcism
+  - type: TargetAction
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - MobState
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+    event: !type:ChaplainStartExorcismEvent
+
+#Narsi
+- type: entity
+  parent: BaseAction
+  id: ActionChaplainNarsiExile
+  name: "Начать ритуал изгнания Нар'Си"
+  description: "Когда начнется ритуал, вокруг священника появится защитное поле от Нар'Си. Культисты и люди смогу пройти через него"
+  components:
+  - type: LimitedCharges
+    maxCharges: 1
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 10
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: shield
+  - type: InstantAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+    event: !type:ChaplainNarsiExileEvent

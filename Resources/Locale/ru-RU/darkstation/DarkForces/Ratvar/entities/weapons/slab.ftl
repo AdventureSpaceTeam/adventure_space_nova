@@ -1,0 +1,13 @@
+ent-RatvarSlab = Заводная плита
+    .desc = Инструмент праведников Ратвара.
+    .suffix = Ratvar
+ent-ActionRatvarSlabStun = Оглушение
+    .desc = Оглушает цель
+ent-ActionRatvarSlabDoors = Создание прохода
+    .desc = Открывает двери и шкафы
+ent-ActionRatvarSlabWalls = Терраформ
+    .desc = При использовании на ОБЫЧНОЙ стене, делает из неё фальшивую стену
+ent-ActionRatvarSlabTeleport = Телепортация
+    .desc = Телепортация к алтарю или видимой области
+ent-ActionRatvarSlabHidings = Сокрытие шестерней
+    .desc = Маскирует постройки праведников под кусты и шкафы

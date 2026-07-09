@@ -1,0 +1,13 @@
+ent-NarsiBaseRune = { ent-BaseRune }
+    .suffix = Narsi
+    .desc = { ent-BaseRune.desc }
+ent-NarsiOfferingRune = Руна предложения
+    .desc = { ent-NarsiBaseRune.desc }
+ent-NarsiTeleportRune = Руна телепорта
+    .desc = { ent-NarsiBaseRune.desc }
+ent-NarsiReviveRune = Руна возрождения
+    .desc = { ent-NarsiBaseRune.desc }
+ent-NarsiSummoningRune = Руна призыва
+    .desc = { ent-NarsiBaseRune.desc }
+ent-NarsiRitualRune = Руна ритуала разрыва измерений
+    .desc = { ent-NarsiBaseRune.desc }

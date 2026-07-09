@@ -59,6 +59,12 @@ public record struct RequirementCheckEvent(EntityUid MindId, MindComponent Mind,
 [ByRefEvent]
 public record struct ObjectiveAssignedEvent(EntityUid MindId, MindComponent Mind, bool Cancelled = false);
 
+[ByRefEvent]
+public record struct GroupObjectiveAfterAssignEvent(ObjectiveComponent Objective, MetaDataComponent Meta);
+
+[ByRefEvent]
+public record struct GroupObjectiveAssignedEvent(bool Cancelled = false);
+
 /// <summary>
 /// Event raised on an objective after everything has handled <see cref="ObjectiveAssignedEvent"/>.
 /// Use this to set the objective's title description or icon.

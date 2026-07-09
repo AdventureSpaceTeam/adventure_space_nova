@@ -1,0 +1,48 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "RPS-eXtended & Ynotka DS",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon",
+            "delays": [
+                [
+                    0.2,
+                    0.3,
+                    0.4
+                ]
+            ]
+        },
+        {
+            "name": "broken"
+        },
+        {
+            "name": "scabies-HEAD",
+            "directions": 4
+        },
+        {
+            "name": "scabies-BODY",
+            "directions": 4
+        },
+        {
+            "name": "scabies-LEFT-HAND",
+            "directions": 4
+        },
+        {
+            "name": "scabies-LEFT-LEG",
+            "directions": 4
+        },
+        {
+            "name": "scabies-RIGHT-HAND",
+            "directions": 4
+        },
+        {
+            "name": "scabies-RIGHT-LEG",
+            "directions": 4
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+﻿- type: construction
+  id: ChaplainCross
+  graph: ChaplainCross
+  startNode: start
+  targetNode: сhaplainCross
+  category: construction-category-misc
+  objectType: Item

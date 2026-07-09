@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "RPS-eXtended & by Dark Station Team",
+    "size": {
+        "x": 126,
+        "y": 133
+    },
+    "states": [
+        {
+            "name": "ratvar",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        }
+    ]
+}

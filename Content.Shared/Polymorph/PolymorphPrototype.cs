@@ -99,6 +99,9 @@ public sealed partial record PolymorphConfiguration
     [DataField(serverOnly: true)]
     public bool RevertOnCrit = true;
 
+    [DataField(serverOnly: true)]
+    public bool RevertOnSaint;
+
     /// <summary>
     /// Whether or not the polymorph reverts when the entity dies.
     /// </summary>

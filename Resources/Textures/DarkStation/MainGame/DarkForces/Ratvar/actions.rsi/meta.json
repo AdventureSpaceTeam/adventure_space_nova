@@ -1,0 +1,72 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "RPS-eXtended & by Dark Station Team",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "tome"
+        },
+        {
+            "name": "hierophant"
+        },
+        {
+            "name": "carve"
+        },
+        {
+            "name": "hand"
+        },
+        {
+            "name": "emp"
+        },
+        {
+            "name": "stun"
+        },
+        {
+            "name": "handcuffs"
+        },
+        {
+            "name": "slab",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "beacon"
+        },
+        {
+            "name": "cog"
+        },
+        {
+            "name": "spear"
+        },
+        {
+            "name": "midas_touch"
+        },
+        {
+            "name": "clocked_hand"
+        },
+        {
+            "name": "ratvar"
+        }
+    ]
+}

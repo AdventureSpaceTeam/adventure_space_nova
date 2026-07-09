@@ -225,5 +225,7 @@ public sealed partial class AdminVerbSystem
 
         if (HasComp<HumanoidAppearanceComponent>(args.Target)) // only humanoids can be cloned
             args.Verbs.Add(paradox);
+
+        AddDarkStationAntags(args, targetPlayer);
     }
 }

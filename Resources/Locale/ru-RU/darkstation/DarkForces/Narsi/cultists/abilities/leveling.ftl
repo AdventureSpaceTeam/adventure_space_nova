@@ -1,0 +1,2 @@
+ent-NarsiCultProgressHolder = { "" }
+    .desc = { "" }

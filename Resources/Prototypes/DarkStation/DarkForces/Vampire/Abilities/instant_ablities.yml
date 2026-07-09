@@ -1,0 +1,284 @@
+- type: entity
+  parent: BaseAction
+  id: VampireStatisticAction
+  name: Statistics
+  description: Learn about your abilities and your blood level
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 0
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_statistic
+  - type: InstantAction
+    event: !type:VampireOpenHelpDialogEvent
+      bloodCost: 0
+      
+- type: entity
+  parent: BaseAction
+  id: VampireDrinkBloodAction
+  name: Drink Blood
+  description: Drink the blood of your victim
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 0
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_drink_blood
+  - type: TargetAction
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - Body
+    sound:
+      path: /Audio/DarkStation/Narsi/enter_blood.ogg
+    event: !type:VampireDrinkBloodAblityEvent
+      bloodCost: 0
+      
+- type: entity
+  parent: BaseAction
+  id: VampireRejuvenateAction
+  name: Rejuvenation
+  description: Removes stun and restores stamina
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 0
+    checkCanInteract: false
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_rejuvinate
+  - type: InstantAction
+    sound:
+      path: /Audio/DarkStation/Narsi/summon_karp.ogg
+    event: !type:VampireRejuvenateEvent
+      bloodCost: 30
+      
+- type: entity
+  parent: BaseAction
+  id: VampireFlashAction
+  name: Flash
+  description: Stuns everyone standing right next to you
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 30
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_glare
+  - type: InstantAction
+    event: !type:VampireFlashEvent
+      bloodCost: 30
+      
+- type: entity
+  parent: BaseAction
+  id: VampireHypnosisAction
+  name: Hypnosis
+  description: Puts the victim to sleep
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 180
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_hypnotise
+  - type: TargetAction
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - Body
+    event: !type:VampireHypnosisEvent
+      bloodCost: 50
+ 
+- type: entity
+  parent: BaseAction
+  id: VampireChargeAction
+  name: Dash  
+  description: After activation, you will lunge toward the tile you clicked on
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 1
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_charge
+  - type: TargetAction
+    range: 16
+  - type: WorldTargetAction
+    sound:
+      path: /Audio/DarkStation/Narsi/wand_teleport.ogg
+    event: !type:VampireChargeEvent
+      bloodCost: 100
+      
+- type: entity
+  parent: BaseAction
+  id: VampireShapeshiftAction
+  name: Transformation
+  description: Randomly changes your body features
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 10
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_shapeshift
+  - type: InstantAction
+    sound:
+      path: /Audio/DarkStation/Narsi/wand_teleport.ogg
+    event: !type:VampireShapeshiftEvent
+      bloodCost: 100
+      
+- type: entity
+  parent: BaseAction
+  id: VampirePolymorphAction
+  name: Wings
+  description: Turns you into a bat for 1 minute
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 60
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_poly
+  - type: InstantAction
+    sound:
+      path: /Audio/DarkStation/Narsi/summonitems_generic.ogg
+    event: !type:VampirePolymorphEvent
+      bloodCost: 50
+      
+- type: entity
+  parent: BaseAction
+  id: VampireRejuvenatePlusAction
+  name: Rejuvenation+
+  description: In addition to removing stun, now also grants you short-term regeneration.
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 40
+    checkCanInteract: false
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_rejuvinate_plus
+  - type: InstantAction
+    sound:
+      path: /Audio/DarkStation/Narsi/summon_karp.ogg
+    event: !type:VampireRejuvenatePlusEvent
+      bloodCost: 50
+      
+- type: entity
+  parent: BaseAction
+  id: VampireSummonBatsAction
+  name: Children of the Night
+  description: Summons two swarms of bats that attack everyone who is not a vampire
+    or a thrall
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 180
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_bats
+  - type: InstantAction
+    event: !type:VampireSummonBatsEvent
+      bloodCost: 200
+      
+- type: entity
+  parent: BaseAction
+  id: VampireChiropteanScreechAction
+  name: Ultrasonic Screech
+  description: Stuns all humans within hearing range and breaks glass. Can stun vampire
+    thralls but not other vampires.
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 180
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_screech
+  - type: InstantAction
+    sound:
+      path: /Audio/DarkStation/creepyshriek.ogg
+    event: !type:VampireChiropteanScreechEvent
+      bloodCost: 200
+      
+- type: entity
+  parent: BaseAction
+  id: VampireEnthrallAction
+  name: Порабощение
+  description: Превращает жертву в вашего верного раба.
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 180
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_enthrall
+  - type: TargetAction
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - Body
+    event: !type:VampireEnthrallEvent
+      bloodCost: 100
+      
+- type: entity
+  parent: BaseAction
+  id: VampireFullPowerAction
+  name: Full Power
+  description: Now you are the greatest vampire! Holy water is like mineral water to you. Bullets barely tickle. But silver weapons deal significant damage.
+  components:
+  - type: Tag
+    tags:
+      - VampireAbility
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 0
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Vampire/actions.rsi
+      state: vampire_jaunt
+  - type: InstantAction
+    event: !type:VampireFullPowerEvent
+      bloodCost: 0

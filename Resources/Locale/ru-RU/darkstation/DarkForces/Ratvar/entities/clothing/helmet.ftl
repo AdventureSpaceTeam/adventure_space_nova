@@ -1,0 +1,3 @@
+ent-ClothingHeadHelmetRatvar = Медный шлем
+    .desc = Наверное он тяжелый...
+    .suffix = Ratvar

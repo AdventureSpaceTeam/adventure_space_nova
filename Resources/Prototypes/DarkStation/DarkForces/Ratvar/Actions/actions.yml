@@ -1,0 +1,41 @@
+﻿- type: entity
+  id: RatvarMidasTouch
+  name: Midas' Hand  
+  description: Midas' Hand is the first and foremost spell granted by the Lightbearer to the righteous.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    checkCanInteract: true
+    useDelay: 10
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Ratvar/actions.rsi
+      state: clocked_hand
+  - type: TargetAction
+    interactOnMiss: false
+    range: 6
+  - type: EntityTargetAction
+    canTargetSelf: false
+    event: !type:MidasTouchEvent
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+
+- type: entity
+  id: RatvarClockMagic
+  name: Enchant Item  
+  description: Allows you to choose an enchantment for an item.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    checkCanInteract: true
+    useDelay: 10
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Ratvar/actions.rsi
+      state: carve
+  - type: TargetAction
+    interactOnMiss: false
+    range: 6
+  - type: EntityTargetAction
+    canTargetSelf: false
+    event: !type:RatvarMagicEvent
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg

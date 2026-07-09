@@ -30,6 +30,10 @@
   name: Сердце серпентида
   description: Тук тук.
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Heart
   - type: Sprite
     sprite: _Adventure/Races/Insect/organs.rsi
     state: heart-off
@@ -84,7 +88,7 @@
   - type: Sprite
     sprite: _Adventure/Races/Insect/organs.rsi
     state: stomach
-  - type: Metabolizer 
+  - type: Metabolizer
     metabolizerTypes: [InsectSerpentide]
     removeEmpty: true
     groups:

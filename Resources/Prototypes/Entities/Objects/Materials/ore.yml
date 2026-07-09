@@ -280,6 +280,11 @@
     tags:
     - Ore
     - OreSilver
+  - type: SaintSilver
+    damageOnCollide:
+      types:
+        Holiness: 20
+    pushOnCollide: true
 
 - type: entity
   parent: SilverOre

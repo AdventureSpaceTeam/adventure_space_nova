@@ -1,0 +1,23 @@
+- type: radioChannel
+  id: Undead
+  name: Нежить
+  keycode: 'й'
+  frequency: 6666
+  color: "#995B98"
+  longRange: true
+
+- type: radioChannel
+  id: NarsiCult
+  name: Культ Нар'Си
+  keycode: 'э'
+  frequency: 6666
+  color: "#995B98"
+  longRange: true
+
+- type: radioChannel
+  id: Ratvar
+  name: "Праведники Ратвара"
+  keycode: 'у'
+  frequency: 3636
+  color: "#b87333"
+  longRange: true

@@ -1,0 +1,36 @@
+﻿#Ratvar
+- type: Tag
+  id: RatvarBorgModule
+
+- type: Tag
+  id: RatvarDroneUsable
+
+- type: Tag
+  id: RatvarSpawnWhitelist
+
+#Narsi
+- type: Tag
+  id: NarsiAction
+
+#Vampire
+- type: Tag
+  id: VampireAbility
+
+#BodyTags
+- type: Tag
+  id: Heart
+
+- type: Tag
+  id: Lungs
+
+- type: Tag
+  id: Stomach
+
+- type: Tag
+  id: Liver
+
+- type: Tag
+  id: Kidneys
+
+- type: Tag
+  id: Eyes

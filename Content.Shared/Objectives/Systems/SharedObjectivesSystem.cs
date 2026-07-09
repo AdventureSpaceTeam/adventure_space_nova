@@ -1,5 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.Humanoid;
 using Content.Shared.Mind;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Objectives.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -13,6 +16,7 @@ public abstract class SharedObjectivesSystem : EntitySystem
 {
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     private EntityQuery<MetaDataComponent> _metaQuery;
 
@@ -101,6 +105,35 @@ public abstract class SharedObjectivesSystem : EntitySystem
         objective = TryCreateObjective(mind.Owner, mind.Comp, proto);
         return objective != null;
     }
+
+    // RPSX Objectives Start
+    public EntityUid? TryCreateGroupObjective(string proto)
+    {
+        var uid = Spawn(proto);
+        if (!TryComp<ObjectiveComponent>(uid, out var comp))
+        {
+            Del(uid);
+            Log.Error($"Invalid objective prototype {proto}, missing ObjectiveComponent (Group)");
+            return null;
+        }
+
+        var ev = new GroupObjectiveAssignedEvent();
+        RaiseLocalEvent(uid, ref ev);
+
+        if (ev.Cancelled)
+        {
+            Log.Error($"Could not assign objective {proto} for someone");
+            Del(uid);
+            return null;
+        }
+
+        var afterEv = new GroupObjectiveAfterAssignEvent(comp, MetaData(uid));
+        RaiseLocalEvent(uid, ref afterEv);
+
+        Log.Debug($"Created objective {ToPrettyString(uid):objective}");
+        return uid;
+    }
+    // RPSX Objectives End
 
     /// <summary>
     /// Get the title, description, icon and progress of an objective using <see cref="ObjectiveGetInfoEvent"/>.

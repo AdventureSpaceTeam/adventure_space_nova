@@ -1,0 +1,285 @@
+﻿#LeaderInstantAction
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistLeaderAction
+  name: "Общий сбор"
+  description: "Призовите всех живых культистов к себе"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 300
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: allteleport
+  - type: InstantAction
+    event: !type:NarsiCultistLeaderEvent
+      speech: "Ob'ruite na'vita's"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+#instantActions
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistEmpAction
+  name: "Перегрузка"
+  description: "Используйте темную магию, чтобы вызвать перегрузку ближайших электрических приборов"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 120
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: emp
+  - type: InstantAction
+    event: !type:NarsiCultistEmpEvent
+      speech: "Ob'ruite na'vita's"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistFireArmsAction
+  name: "Огненные руки"
+  description: "Ваши руки наполняются пламенем"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 90
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: fire
+  - type: InstantAction
+    event: !type:NarsiCultistFireArmsEvent
+      speech: "Ig'nis ill'umina ma'nus mea's"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistStealthAction
+  name: "Покров тьмы"
+  description: "Станьте невидимым"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 120
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: stealth 
+  - type: InstantAction
+    event: !type:NarsiCultistInvisibilityEvent
+      speech: "Ab'sconde me in te'nebri's"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistShadowAction
+  name: "Теневое клонирование"
+  description: "Создает ваших клонов. Они ничего не делают, но запутывают противника"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 60
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: shadow
+  - type: InstantAction
+    event: !type:NarsiCultistShadowEvent
+      speech: "ec'ce te'nebra'e"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistTeleportAction
+  name: "Телепорт"
+  description: "Телепорт на случайную руну телепорта"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 120
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: teleport
+  - type: InstantAction
+    event: !type:NarsiCultistTeleportEvent
+      speech: "Ia'nua'e ad ru'ne"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistGhostAxeAction
+  name: "Призрачный топор"
+  description: "Призывает призрачный топор, который может помочь вам в критической ситуации"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 90
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: ghostaxe
+  - type: InstantAction
+    event: !type:NarsiCultistGhostWeaponEvent
+      speech: "Da mi'hi ar'ma!"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistGhostAxeRevert
+  name: "Отозвать призрачный топор"
+  description: "Отзывает призрачный топор из вашей руки"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: ghostaxe
+  - type: InstantAction
+    event: !type:NarsiCultistGhostWeaponRevertEvent
+      speech: "Net mi'hi ar'ma!"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+#EntityTargetActions
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistSilenceAction
+  name: "Безмолвие"
+  description: "Заставьте жертву замолчать"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 60
+    checkCanInteract: true
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: silence
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+        - Body
+    event: !type:NarsiCultistSilenceEvent
+      speech: "Cla'usa vermi's"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistBlindnessAction
+  name: "Слепота"
+  description: "Ослепите вашу жертву"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 60
+    checkCanInteract: true
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: blindness
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+        - Body
+    event: !type:NarsiCultistBlindnessEvent
+      speech: "ec'ce te'nebra'e"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistStunAction
+  name: "Ошеломление"
+  description: "Сбейте вашу жертву с ног"
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 60
+    checkCanInteract: true
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: stun
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+        - Body
+    event: !type:NarsiCultistStunEvent
+      speech: "Ca'dere ad are'æ"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction
+
+- type: entity
+  parent: BaseAction
+  id: NarsiCultistCuffAction
+  name: "Теневые оковы"
+  description: "Свяжите жертве руки. Необходимо иметь 1 свободную руку."
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 60
+    checkCanInteract: true
+    icon:
+      sprite: DarkStation/MainGame/DarkForces/Cult/Interface/actions.rsi
+      state: cuff
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+        - Body
+    event: !type:NarsiCultistCuffEvent
+      speech: "Li'gabis in ma'nibus vi'ctima'e"
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: Tag
+    tags:
+    - NarsiAction

@@ -30,6 +30,10 @@
   name: Сердце зераха
   description: Тук тук.
   components:
+  - type: Tag
+    tags:
+      - Meat
+      - Heart
   - type: Sprite
     sprite: _Adventure/Races/Snake/organs.rsi
     state: heart-off

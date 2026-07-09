@@ -1,0 +1,163 @@
+- type: entity
+  id: RatvarSlab
+  parent: BaseItem
+  name: "Заводная плита"
+  description: "Инструмент праведников Ратвара."
+  suffix: Ratvar
+  components:
+  - type: Sprite
+    sprite: DarkStation/MainGame/DarkForces/Ratvar/Weapons/clockwork_slab.rsi
+    layers:
+    - state: clock_slab
+  - type: Item
+    size: Small
+  - type: UserInterface
+    interfaces:
+      enum.RatvarEnchantmentUIKey.Key:
+        type: RatvarEnchantmentBUI
+  - type: GenericVisualizer
+    visuals:
+      enum.RatvarEnchantmentableVisuals.State:
+        overlay:
+          Stun: { state: clock_slab_overlay_1 }
+          Doors: { state: clock_slab_overlay_2 }
+          Walls: { state: clock_slab_overlay_3 }
+          Teleport: { state: clock_slab_overlay_4 }
+          Heal: { state: clock_slab_overlay_5 }
+          Hidings: { state: clock_slab_overlay_6 }
+  - type: RatvarSlab
+  - type: RatvarEnchantmentable
+    enchantments:
+    - action: ActionRatvarSlabStun
+      name: "Оглушение"
+      icon:
+        sprite: DarkStation/MainGame/DarkForces/Ratvar/Weapons/clockwork_slab.rsi
+        state: clock_slab_overlay_1
+      visuals: Stun
+    - action: ActionRatvarSlabDoors
+      name: "Создание прохода"
+      icon:
+        sprite: DarkStation/MainGame/DarkForces/Ratvar/Weapons/clockwork_slab.rsi
+        state: clock_slab_overlay_2
+      visuals: Doors
+    - action: ActionRatvarSlabWalls
+      name: "Терраформ"
+      icon:
+        sprite: DarkStation/MainGame/DarkForces/Ratvar/Weapons/clockwork_slab.rsi
+        state: clock_slab_overlay_3
+      visuals: Walls
+    - action: ActionRatvarSlabTeleport
+      name: "Телепортация"
+      icon:
+        sprite: DarkStation/MainGame/DarkForces/Ratvar/Weapons/clockwork_slab.rsi
+        state: clock_slab_overlay_4
+      visuals: Teleport
+    - action: ActionRatvarSlabHidings
+      name: "Сокрытие шестерней"
+      icon:
+        sprite: DarkStation/MainGame/DarkForces/Ratvar/Weapons/clockwork_slab.rsi
+        state: clock_slab_overlay_6
+      visuals: Hidings
+  - type: Appearance
+  - type: UseDelay
+    delay: 10.0
+  - type: RatvarItem
+  - type: Tool
+    qualities:
+    - RatvarScrewing
+    - RatvarAnchoring
+
+- type: entity
+  parent: BaseAction
+  id: ActionRatvarSlabStun
+  name: "Оглушение"
+  description: "Оглушает цель"
+  components:
+  - type: Action
+    itemIconStyle: BigItem
+    useDelay: 10
+    checkCanInteract: true
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - Body
+    event: !type:RatvarSlabStun
+
+- type: entity
+  parent: BaseAction
+  id: ActionRatvarSlabDoors
+  name: "Создание прохода"
+  description: "Открывает двери и шкафы"
+  components:
+  - type: Action
+    itemIconStyle: BigItem
+    useDelay: 10
+    checkCanInteract: true
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - Door
+    event: !type:RatvarSlabDoors
+
+- type: entity
+  parent: BaseAction
+  id: ActionRatvarSlabWalls
+  name: "Терраформ"
+  description: "При использовании на ОБЫЧНОЙ стене, делает из неё фальшивую стену"
+  components:
+  - type: Action
+    itemIconStyle: BigItem
+    useDelay: 30
+    checkCanInteract: true
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      tags:
+      - Wall
+    event: !type:RatvarSlabWalls
+
+- type: entity
+  parent: BaseAction
+  id: ActionRatvarSlabTeleport
+  name: "Телепортация"
+  description: "Телепортация к алтарю или видимой области"
+  components:
+  - type: Action
+    itemIconStyle: BigItem
+    useDelay: 10
+  - type: TargetAction
+    range: 16
+  - type: WorldTargetAction
+    event: !type:RatvarSlabTeleport
+
+- type: entity
+  parent: BaseAction
+  id: ActionRatvarSlabHidings
+  name: "Сокрытие шестерней"
+  description: "Маскирует постройки праведников под кусты и шкафы"
+  components:
+  - type: Action
+    itemIconStyle: BigItem
+    useDelay: 10
+    checkCanInteract: true
+  - type: TargetAction
+    range: 6
+    interactOnMiss: false
+  - type: EntityTargetAction
+    canTargetSelf: false
+    whitelist:
+      components:
+      - RatvarItem
+      - RatvarStructure
+    event: !type:RatvarSlabHidings

@@ -1,0 +1,2 @@
+ent-RatvarProgress = { "" }
+    .desc = { "" }

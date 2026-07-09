@@ -15,6 +15,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Nutrition;
 using Content.Shared.Polymorph;
 using Content.Shared.Popups;
+using Content.Shared.RPSX.DarkForces.Saint.Chaplain.Events;
 using Robust.Server.Audio;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
@@ -57,6 +58,7 @@ public sealed partial class PolymorphSystem : EntitySystem
         SubscribeLocalEvent<PolymorphedEntityComponent, BeforeFullySlicedEvent>(OnBeforeFullySliced);
         SubscribeLocalEvent<PolymorphedEntityComponent, DestructionEventArgs>(OnDestruction);
         SubscribeLocalEvent<PolymorphedEntityComponent, EntityTerminatingEvent>(OnPolymorphedTerminating);
+        SubscribeLocalEvent<PolymorphedEntityComponent, ChaplainExorcismEvent>(OnExorcism);
 
         InitializeMap();
     }
@@ -96,6 +98,14 @@ public sealed partial class PolymorphSystem : EntitySystem
                 CreatePolymorphAction(morph, ent);
             }
         }
+    }
+
+    private void OnExorcism(EntityUid uid, PolymorphedEntityComponent component, ChaplainExorcismEvent args)
+    {
+        if (!component.Configuration.RevertOnSaint)
+            return;
+
+        Revert(uid);
     }
 
     private void OnMapInit(Entity<PolymorphedEntityComponent> ent, ref MapInitEvent args)

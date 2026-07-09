@@ -137,6 +137,11 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
 #Adventure-end
+  - type: SaintSilver
+    damageOnCollide:
+      types:
+        Holiness: 20
+    pushOnCollide: true
 
 - type: entity
   parent: IngotSilver

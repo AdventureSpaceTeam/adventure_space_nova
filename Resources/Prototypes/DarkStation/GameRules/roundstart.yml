@@ -1,0 +1,152 @@
+- type: entity
+  id: PontificRule
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 15
+  - type: PontificRule
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    definitions:
+    - prefRoles: [ Pontific ]
+      max: 1
+      playerRatio: 15
+      allowNonHumans: true
+
+- type: entity
+  id: NarsiCult
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 15
+  - type: NarsiRule
+  - type: AntagSelection
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ NarsiCultist ]
+      min: 2
+      max: 3
+      playerRatio: 7
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: true
+      briefing:
+        text: narsi-cultist-briefing
+        color: CornflowerBlue
+        sound: "/Audio/DarkStation/Narsi/bloodcult.ogg"
+      startingGear: NarsiCultistGear
+      components:
+      - type: NarsiCultist
+      - type: NpcFactionMember
+        factions:
+        - NarsiCult
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - NarsiCult
+      - type: ActiveRadio
+        channels:
+        - NarsiCult
+      - type: IntrinsicRadioReceiver
+      - type: Access
+        tags:
+        - NarsiCultAccess
+      mindRoles:
+      - MindRoleNarsiCult
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleNarsiCult
+  name: Narsi Cultist Role
+  #  description: mind-role-thief-description
+  components:
+  - type: MindRole
+    antagPrototype: NarsiCultist
+    roleType: TeamAntagonist
+  - type: NarsiCultRole
+
+- type: entity
+  id: Ratvar
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 15
+  - type: RatvarRule
+  - type: AntagSelection
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ RatvarRighteous ]
+      min: 2
+      max: 3
+      playerRatio: 10
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: true
+      briefing:
+        text: ratvar-righteous-briefing
+        color: CornflowerBlue
+        sound: "/Audio/DarkStation/DarkForces/Ratvar/clockcult.ogg"
+      components:
+      - type: RatvarRighteous
+      - type: RatvarAbilities
+      - type: NpcFactionMember
+        factions:
+        - Ratvar
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - Ratvar
+      - type: ActiveRadio
+        channels:
+        - Ratvar
+      - type: IntrinsicRadioReceiver
+      mindRoles:
+      - MindRoleRatvar
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleRatvar
+  name: Ratvar Cultist Role
+  #  description: mind-role-thief-description
+  components:
+  - type: MindRole
+    antagPrototype: RatvarRighteous
+    roleType: TeamAntagonist
+  - type: RatvarRole
+
+- type: entity
+  id: Vampire
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 10
+  - type: VampireRule
+  - type: AntagSelection
+    selectionTime: IntraPlayerSpawn
+    definitions:
+    - prefRoles: [ Vampire ]
+      max: 2
+      playerRatio: 7
+      blacklist:
+        components:
+        - AntagImmune
+      lateJoinAdditional: true
+      briefing:
+        text: vampire-briefing
+        color: Plum
+        sound: "/Audio/DarkStation/DarkForces/Vampire/vampalert.ogg"
+      components:
+      - type: Vampire
+      mindRoles:
+      - MindRoleVampire
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleVampire
+  name: Vampire Role
+  #  description: mind-role-thief-description
+  components:
+  - type: MindRole
+    antagPrototype: Vampire
+    roleType: SoloAntagonist
+  - type: VampireRole

@@ -1,0 +1,76 @@
+﻿- type: entity
+  id: PontificDarkAltarKudzu
+  parent: BaseKudzu
+  name: "Осквернённые лилии"
+  description: "От них веет скверной"
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/slash.ogg"
+  - type: Sprite
+    sprite: DarkStation/MainGame/DarkForces/Pontific/kudzu.rsi
+    state: kudzu_11
+    drawdepth: Overdoors
+  - type: KudzuVisuals
+  - type: Clickable
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Holywater ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: false
+        damage:
+          types:
+            Heat: 15
+  - type: DamageContacts
+    damage:
+      types:
+        Fel: 2
+    ignoreWhitelist:
+      components:
+      - DesecratedMarker
+  - type: Kudzu
+    growthTickChance: 0.15
+    spreadChance: 0.25
+    spriteVariants: 4
+    damageRecovery:
+      types:
+        Slash: -0.5
+        Heat: -1.0
+        Cold: -1.0
+        Blunt: -0.5
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.3
+    sprintSpeedModifier: 0.3
+    ignoreWhitelist:
+      tags:
+      - DesecratedMarker

@@ -1,0 +1,9 @@
+ent-SheetBrassPlasteel = Латунь
+    .suffix = Full
+    .desc = { ent-SheetMetalBase.desc }
+ent-SheetBrassPlasteel1R = Латунь
+    .suffix = Single
+    .desc = { ent-SheetBrassPlasteel.desc }
+ent-SheetBrassPlasteelLingering = { ent-SheetBrassPlasteel }
+    .suffix = Lingering, 10
+    .desc = { ent-SheetBrassPlasteel.desc }

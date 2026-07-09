@@ -1,0 +1,16 @@
+ent-BaseNarsiObjective = { "" }
+    .desc = { "" }
+ent-NarsiKillObjective = Нар'Си требует жертву
+    .desc = Положите труп жертвы на руну предложения и активируйте ее
+ent-NarsiRitualObjective = { ent-BaseNarsiObjective }
+    .desc = Используйте алтарь Нар'Си для проведения ритуала
+ent-NarsiCreatureEggObjective = { ent-BaseNarsiObjective }
+    .desc = Постройте яйцо сущности и вырастите существо
+ent-NarsiBuildingAltarObjective = Постройте Оккультный Алтарь Нар'Си
+    .desc = Нам необходима эта постройка, для развития культа
+ent-NarsiBuildingForgeObjective = Постройте Тёмную кузню
+    .desc = Нам необходима эта постройка, для создания брони и оружия
+ent-NarsiBuildingPilonObjective = Постройте пилон
+    .desc = Чтобы не откиснуть от ран
+ent-NarsiSummonObjective = Призовите Нар'Си!
+    .desc = Пришло время призвать Нар'Си!

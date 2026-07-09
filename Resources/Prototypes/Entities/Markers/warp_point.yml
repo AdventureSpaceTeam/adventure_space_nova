@@ -6,6 +6,9 @@
   - type: WarpPoint
   - type: Sprite
     state: pink
+  - type: Tag
+    tags:
+    - RatvarSpawnWhitelist
 
 - type: entity
   id: WarpPointBeacon

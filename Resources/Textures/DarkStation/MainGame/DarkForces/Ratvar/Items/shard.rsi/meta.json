@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "RPS-eXtended & by Dark Station Team",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "shard"
+        },
+        {
+            "name": "shard_overlay_1"
+        },
+        {
+            "name": "shard_overlay_2"
+        },
+        {
+            "name": "shard_overlay_3"
+        },
+        {
+            "name": "shard_overlay_4"
+        }
+    ]
+}

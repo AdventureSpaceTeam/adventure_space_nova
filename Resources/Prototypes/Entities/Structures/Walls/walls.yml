@@ -842,6 +842,11 @@
   - type: IconSmooth
     key: walls
     base: silver
+  - type: SaintSilver
+    damageOnCollide:
+      types:
+        Holiness: 20
+    pushOnCollide: true
 
 #shuttle walls
 - type: entity

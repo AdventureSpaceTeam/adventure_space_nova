@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "RPS-eXtended & _sk1nyha_ DS",
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "dead"
+    },
+    {
+      "name": "alive",
+      "directions": 4
+    }
+  ]
+}

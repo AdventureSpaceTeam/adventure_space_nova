@@ -1,0 +1,27 @@
+{
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "RPS-eXtended & Created by DarkStation Team",
+    "version": 1,
+    "size": {
+        "x": 96,
+        "y": 96
+    },
+    "states": [
+        {
+            "name": "death-gas",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        }
+    ]
+}

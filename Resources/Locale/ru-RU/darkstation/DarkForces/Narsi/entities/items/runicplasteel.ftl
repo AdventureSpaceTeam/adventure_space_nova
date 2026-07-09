@@ -1,0 +1,12 @@
+ent-SheetRunicPlasteel = Рунический металл
+    .suffix = Full
+    .desc = { ent-SheetMetalBase.desc }
+ent-SheetRunicPlasteel1R = Рунический металл
+    .suffix = Single
+    .desc = { ent-SheetRunicPlasteel.desc }
+ent-SheetRunicPlasteelHalf = Рунический металл
+    .suffix = Half
+    .desc = { ent-SheetRunicPlasteel.desc }
+ent-SheetRunicPlasteelTen = Рунический металл
+    .suffix = Half
+    .desc = { ent-SheetRunicPlasteel.desc }
