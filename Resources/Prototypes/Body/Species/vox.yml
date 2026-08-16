@@ -374,6 +374,13 @@
     specialDigestible:
       tags:
       - Trash
+      - PowerCell #Adventure-edit
+      - PotatoBattery #Adventure-edit
+      - PowerCellSmall #Adventure-edit
+      - PowerCage #Adventure-edit
+      - PlasmaMag #Adventure-edit
+      - PlasmaMagSniper #Adventure-edit
+      - Circuitboard #Adventure-edit
     isSpecialDigestibleExclusive: false
 
 - type: entity
