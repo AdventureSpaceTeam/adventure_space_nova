@@ -21,6 +21,8 @@
     # Underwear & clothing
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "pants" ] # Adventure
+    - map: [ "brass" ] # Adventure
     - map: ["jumpsuit"]
 
     # Extremities

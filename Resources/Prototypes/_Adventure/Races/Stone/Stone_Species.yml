@@ -38,7 +38,7 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Back:
-      limit: 1
+      limit: 3
       required: true
       default: [ StoneBase ]
     enum.HumanoidVisualLayers.Chest:
