@@ -21,6 +21,7 @@
     CardBoxUno: 4 # Adventure
     PockerChipsBox: 2 # Adventure
     Shuffler: 1 # Adventure
+    Magic9Ball: 2
   contrabandInventory:
     Basketball: 1
     FoodSnackBoritos: 3

@@ -1,8 +1,7 @@
 - type: marking
   id: SkrellTailsBase
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Skrell]
+  groupWhitelist: [Skrell]
   sprites:
   - sprite: _Adventure/Races/Skrell/Species/parts.rsi
     state: tails_base
@@ -12,9 +11,7 @@
   name: Скрелл
   roundStart: true
   prototype: MobSkrell
-  sprites: MobSkrellSprites
-  markingLimits: MobSkrellMarkingLimits
-  dollPrototype: MobSkrellDummy
+  dollPrototype: AppearanceSkrell
   skinColoration: Hues
   defaultSkinTone: "#4dd7ab"
   minAge: 30
@@ -25,226 +22,191 @@
   femaleFirstNames: NamesSkrell
   naming: First
 
-- type: markingPoints
-  id: MobSkrellMarkingLimits
-  onlyWhitelisted: true
-  points:
-    Head:
-      points: 1
+- type: markingsGroup
+  parent: Undergarments
+  id: Skrell
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
       required: false
-    Chest:
-      points: 1
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
       required: false
-    Legs:
-      points: 4
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
       required: false
-    Arms:
-      points: 4
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
       required: false
-    Tail:
-      points: 1
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
       required: true
-      defaultMarkings: [ SkrellTailsBase ]
+      default: [ SkrellTailsBase ]
 
-- type: speciesBaseSprites
-  id: MobSkrellSprites
-  sprites:
-    Tail: MobHumanoidAnyMarking
-    HeadTop: MobHumanoidAnyMarking
-    Head: MobSkrellHead
-    Chest: MobSkrellTorso
-    LArm: MobSkrellLArm
-    RArm: MobSkrellRArm
-    LHand: MobSkrellLHand
-    RHand: MobSkrellRHand
-    LLeg: MobSkrellLLeg
-    RLeg: MobSkrellRLeg
-    LFoot: MobSkrellLFoot
-    RFoot: MobSkrellRFoot
-    Eyes: MobSkrellEyes
+- type: entity
+  id: OrganSkrellVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/Skrell/Species/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Skrell
 
-- type: humanoidBaseSprite
-  id: MobSkrellEyes
-  baseSprite:
+- type: entity
+  id: OrganSkrellExternal
+  abstract: true
+  parent: OrganSkrellVisual
+  components:
+  - type: Sprite
     sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: eyes
 
-- type: humanoidBaseSprite
-  id: MobSkrellHead
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobSkrellHeadMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: head_m
-
-- type: humanoidBaseSprite
-  id: MobSkrellHeadFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: head_f
-
-- type: humanoidBaseSprite
-  id: MobSkrellTorso
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseTorso, OrganSkrellExternal ]
+  id: OrganSkrellTorso
+  components:
+  - type: Sprite
     state: torso_m
+  - type: VisualOrgan
+    data:
+      state: torso_m
+    sexStateOverrides:
+      Male: torso_m
+      Female: torso_f
 
-- type: humanoidBaseSprite
-  id: MobSkrellTorsoMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: torso_m
+- type: entity
+  parent: [ OrganBaseHead, OrganSkrellExternal ]
+  id: OrganSkrellHead
+  components:
+  - type: Sprite
+    state: head_m
+  - type: VisualOrgan
+    data:
+      state: head_m
+    sexStateOverrides:
+      Male: head_m
+      Female: head_f
 
-- type: humanoidBaseSprite
-  id: MobSkrellTorsoFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: torso_f
-
-- type: humanoidBaseSprite
-  id: MobSkrellLLeg
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_leg
-
-- type: humanoidBaseSprite
-  id: MobSkrellLArm
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganSkrellExternal ]
+  id: OrganSkrellArmLeft
+  components:
+  - type: Sprite
     state: l_arm
+  - type: VisualOrgan
+    data:
+      state: l_arm
+    sexStateOverrides:
+      Male: l_arm
+      Female: l_armF
 
-- type: humanoidBaseSprite
-  id: MobSkrellLHand
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobSkrellRLeg
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_leg
-
-- type: humanoidBaseSprite
-  id: MobSkrellRArm
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseArmRight, OrganSkrellExternal ]
+  id: OrganSkrellArmRight
+  components:
+  - type: Sprite
     state: r_arm
+  - type: VisualOrgan
+    data:
+      state: r_arm
+    sexStateOverrides:
+      Male: r_arm
+      Female: r_armF
 
-- type: humanoidBaseSprite
-  id: MobSkrellRHand
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganSkrellExternal ]
+  id: OrganSkrellHandLeft
+  components:
+  - type: Sprite
+    state: l_hand
+  - type: VisualOrgan
+    data:
+      state: l_hand
+    sexStateOverrides:
+      Male: l_hand
+      Female: l_handF
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganSkrellExternal ]
+  id: OrganSkrellHandRight
+  components:
+  - type: Sprite
     state: r_hand
+  - type: VisualOrgan
+    data:
+      state: r_hand
+    sexStateOverrides:
+      Male: r_hand
+      Female: r_handF
 
-- type: humanoidBaseSprite
-  id: MobSkrellRFoot
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobSkrellLFoot
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_foot
-
-- type: humanoidBaseSprite
-  id: MobSkrellLLegMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganSkrellExternal ]
+  id: OrganSkrellLegLeft
+  components:
+  - type: Sprite
     state: l_leg
+  - type: VisualOrgan
+    data:
+      state: l_leg
+    sexStateOverrides:
+      Male: l_leg
+      Female: l_legF
 
-- type: humanoidBaseSprite
-  id: MobSkrellLArmMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_arm
-
-- type: humanoidBaseSprite
-  id: MobSkrellLHandMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_hand
-
-- type: humanoidBaseSprite
-  id: MobSkrellRLegMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseLegRight, OrganSkrellExternal ]
+  id: OrganSkrellLegRight
+  components:
+  - type: Sprite
     state: r_leg
+  - type: VisualOrgan
+    data:
+      state: r_leg
+    sexStateOverrides:
+      Male: r_leg
+      Female: r_legF
 
-- type: humanoidBaseSprite
-  id: MobSkrellRArmMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_arm
-
-- type: humanoidBaseSprite
-  id: MobSkrellRHandMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_hand
-
-- type: humanoidBaseSprite
-  id: MobSkrellRFootMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_foot
-
-- type: humanoidBaseSprite
-  id: MobSkrellLFootMale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganSkrellExternal ]
+  id: OrganSkrellFootLeft
+  components:
+  - type: Sprite
     state: l_foot
+  - type: VisualOrgan
+    data:
+      state: l_foot
+    sexStateOverrides:
+      Male: l_foot
+      Female: l_footF
 
-- type: humanoidBaseSprite
-  id: MobSkrellLLegFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_legF
-
-- type: humanoidBaseSprite
-  id: MobSkrellLArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_armF
-
-- type: humanoidBaseSprite
-  id: MobSkrellLHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_handF
-
-- type: humanoidBaseSprite
-  id: MobSkrellRLegFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_legF
-
-- type: humanoidBaseSprite
-  id: MobSkrellRArmFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_armF
-
-- type: humanoidBaseSprite
-  id: MobSkrellRHandFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_handF
-
-- type: humanoidBaseSprite
-  id: MobSkrellRFootFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: r_footF
-
-- type: humanoidBaseSprite
-  id: MobSkrellLFootFemale
-  baseSprite:
-    sprite: _Adventure/Races/Skrell/Species/parts.rsi
-    state: l_footF
+- type: entity
+  parent: [ OrganBaseFootRight, OrganSkrellExternal ]
+  id: OrganSkrellFootRight
+  components:
+  - type: Sprite
+    state: r_foot
+  - type: VisualOrgan
+    data:
+      state: r_foot
+    sexStateOverrides:
+      Male: r_foot
+      Female: r_footF

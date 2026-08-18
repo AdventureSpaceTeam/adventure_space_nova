@@ -7,7 +7,9 @@
 - type: entity
   abstract: true
   save: false
-  parent: BaseMobSpeciesOrganic
+  parent:
+  - AppearanceSkrell
+  - BaseSpeciesMobOrganic
   id: BaseMobSkrell
   name: Урист макСкрелл
   components:
@@ -86,9 +88,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
-  - type: Body
-    prototype: Skrell
-    requiredLegs: 2
   - type: Hunger
   - type: Icon
     sprite: _Adventure/Races/Skrell/Species/parts.rsi
@@ -100,28 +99,38 @@
     spawned:
     - id: FoodMeatLizard
       amount: 5
-  - type: HumanoidAppearance
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceSkrell
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidProfile
     species: Skrell
     hideLayersOnEquip:
     - HeadTop
     - Snout
+  - type: InitialBody
+    organs:
+      Torso: OrganSkrellTorso
+      Head: OrganSkrellHead
+      ArmLeft: OrganSkrellArmLeft
+      ArmRight: OrganSkrellArmRight
+      HandRight: OrganSkrellHandRight
+      HandLeft: OrganSkrellHandLeft
+      LegLeft: OrganSkrellLegLeft
+      LegRight: OrganSkrellLegRight
+      FootLeft: OrganSkrellFootLeft
+      FootRight: OrganSkrellFootRight
+      Brain: OrganSkrellBrain
+      Eyes: OrganSkrellEyes
+      Heart: OrganSkrellHeart
+      Lungs: OrganSkrellLungs
+      Stomach: OrganSkrellStomach
+      Liver: OrganSkrellLiver
+      Kidneys: OrganSkrellKidneys
   - type: Inventory
     speciesId: skrell
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female
-
-- type: entity
-  parent: BaseSpeciesDummy
-  id: MobSkrellDummy
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HumanoidAppearance
-    species: Skrell
-  - type: Inventory
     femaleDisplacements:
       jumpsuit:
         sizeMaps:

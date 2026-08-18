@@ -15,8 +15,6 @@
 /Resources/*/_Adventure/EnergyCores/ @aristophanivan
 /Content.Server/_Adventure/AdventureConfigManager.cs @aristophanivan
 
-/Content.Client/_Adventure/Administration/ @AwareFoxy
-
 /Content.Shared/_Adventure/Abilities/ @borkroman
 /Content.Server/_Adventure/Abilities/ @borkroman
 /Content.Server/_Adventure/SnakeAccent/ @borkroman

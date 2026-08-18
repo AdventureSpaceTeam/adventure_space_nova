@@ -6,28 +6,6 @@
   color: "#d9f500"
   longRange: true
 
-- type: body
-  id: Alian
-  name: "ксеноморф"
-  root: torso
-  slots:
-    torso:
-      part: TorsoAnimal
-      connections:
-      - legs
-      organs:
-        lungs: OrganAnimalLungs
-        stomach: OrganAnimalStomach
-        liver: OrganAnimalLiver
-        heart: OrganAlianHeart
-        kidneys: OrganAnimalKidneys
-    legs:
-      part: LegsAnimal
-      connections:
-      - feet
-    feet:
-      part: FeetAnimal
-
 - type: entity
   id: OrganAlianHeart
   parent: OrganAnimalHeart
@@ -225,7 +203,13 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: Body
-    prototype: Alian
+  - type: InitialBody
+    organs:
+      Lungs: OrganAnimalLungs
+      Heart: OrganAlianHeart
+      Stomach: OrganAnimalStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganAnimalKidneys
 
 #Кровь ксено
 - type: reagent
