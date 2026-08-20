@@ -147,6 +147,9 @@
     speedModifierThresholds:
       60: 0.9
       80: 0.7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 3
   - type: Speech
     speechVerb: Stone
     speechSounds: StoneSpeach
@@ -190,6 +193,7 @@
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+      - map: [ "enum.HumanoidVisualLayers.Back" ]
       - map: ["brass"]
       - map: ["pants"]
       - map: ["jumpsuit"]
@@ -212,7 +216,6 @@
       - map: [ "enum.HumanoidVisualLayers.Tail" ]
       - map: [ "mask" ]
       - map: [ "head" ]
-      - map: [ "enum.HumanoidVisualLayers.Back" ]
       - map: [ "back" ]
       - map: [ "ipc" ]
       - map: [ "pocket1" ]
