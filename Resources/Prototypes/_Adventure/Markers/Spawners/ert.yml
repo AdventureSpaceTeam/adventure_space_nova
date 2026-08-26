@@ -1,0 +1,108 @@
+# ОБР
+- type: entity
+  id: ADVERTSpawnerLeader
+  parent: BaseERTSpawner
+  suffix: Лидер
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: ertleader
+  - type: SpawnOnTrigger
+    proto: ERTADVleader
+
+- type: entity
+  id: ADVERTSpawnerJanitor
+  parent: BaseERTSpawner
+  suffix: Уборщик
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: ertjanitor
+  - type: SpawnOnTrigger
+    proto: ERTADVjanitor
+
+- type: entity
+  id: ADVERTSpawnerEngineering
+  parent: BaseERTSpawner
+  suffix: Инженер
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: ertengineer
+  - type: SpawnOnTrigger
+    proto: ERTADVengi
+
+- type: entity
+  id: ADVERTSpawnerSrcurity
+  parent: BaseERTSpawner
+  suffix: Офицер
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: ertsecurity
+  - type: SpawnOnTrigger
+    proto: ERTADVofficer
+
+- type: entity
+  id: ADVERTSpawnerMedical
+  parent: BaseERTSpawner
+  suffix: Медик
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: ertmedical
+  - type: SpawnOnTrigger
+    proto: ERTADVmedic
+
+- type: entity
+  id: ADVERTSpawnerChaplain
+  parent: BaseERTSpawner
+  suffix: Священник
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: chaplain
+  - type: SpawnOnTrigger
+    proto: ERTADVchaplain
+
+# РХБЗЗ
+
+- type: entity
+  id: ADVERTSpawnerCBURN
+  name: one-time signal CBURN spawner
+  suffix: РХБЗЗ оперативник
+  parent: BaseERTSpawner
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: cburn
+  - type: SpawnOnTrigger
+    proto: CburnoperativeADV
+
+- type: entity
+  id: ADVERTSpawnerCBURNLead
+  name: one-time signal CBURN spawner
+  suffix: РХБЗЗ лидер
+  parent: BaseERTSpawner
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Markers/jobs.rsi
+        state: cburn
+  - type: SpawnOnTrigger
+    proto: CburnoperativeleaderADV
