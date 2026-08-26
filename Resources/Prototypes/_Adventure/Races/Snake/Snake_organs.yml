@@ -23,6 +23,9 @@
     layers:
       - state: eyeball-l
       - state: eyeball-r
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/Snake/Species/parts.rsi
 
 - type: entity
   id: OrganZerahHeart

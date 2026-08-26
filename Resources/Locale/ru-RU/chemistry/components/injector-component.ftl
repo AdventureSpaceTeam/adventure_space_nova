@@ -1,7 +1,6 @@
 ﻿## UI
 
-injector-volume-transfer-label =
-    Volume: [color=white]{ $currentVolume }/{ $totalVolume }u[/color]
+injector-volume-transfer-label = Volume: [color=white]{ $currentVolume }/{ $totalVolume }u[/color]
     Mode: [color=white]{ $modeString }[/color] ([color=white]{ $transferVolume }u[/color])
 injector-draw-text = Забор
 injector-toggle-verb-text = Toggle Injector Mode
@@ -11,9 +10,8 @@ injector-component-draw-mode-name = draw
 injector-component-dynamic-mode-name = dynamic
 injector-component-mode-changed-text = Now { $mode }
 injector-invalid-injector-toggle-mode = Неверный режим
-injector-volume-label =
-    Объём: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
-    Режим: [color=white]{ $modeString }[/color] ([color=white]{ $transferVolume } ед.[/color])
+injector-volume-label = Объём: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
+    Режим: [color=white]{ $modeString }[/color]
 
 ## Entity
 
