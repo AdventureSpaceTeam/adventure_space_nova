@@ -76,7 +76,6 @@
         volume: -1
         variation: 0.05
 
-
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceFelinid
@@ -84,6 +83,8 @@
   components:
   - type: HumanoidProfile
     species: Felinid
+    hideLayersOnEquip:
+    - HeadSide
   - type: InitialBody
     organs:
       Torso: OrganFelinidTorso
@@ -96,109 +97,107 @@
       LegRight: OrganFelinidLegRight
       FootLeft: OrganFelinidFootLeft
       FootRight: OrganFelinidFootRight
-      Brain: OrganHumanBrain
+      Brain: OrganFelinidBrain
       Eyes: OrganFelinidEyes
-      Tongue: OrganHumanTongue
-      Appendix: OrganHumanAppendix
-      Ears: OrganHumanEars
-      Lungs: OrganHumanLungs
+      Tongue: OrganFelinidTongue
+      Appendix: OrganFelinidAppendix
+      Ears: OrganFelinidEars
+      Lungs: OrganFelinidLungs
       Heart: OrganFelinidHeart
       Stomach: OrganFelinidStomach
       Liver: OrganFelinidLiver
-      Kidneys: OrganHumanKidneys
+      Kidneys: OrganFelinidKidneys
   - type: Inventory
-  - type: Sprite
-    noRot: true
-    drawdepth: Mobs
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: ScaleVisuals
     scale: 0.85, 0.85
 
 - type: entity
-  id: OrganFelinidTorso
-  parent: OrganHumanTorso
+  parent: OrganBase
+  id: OrganFelinid
+  abstract: true
+  suffix: felinid
+
+- type: entity
+  parent: OrganFelinid
+  id: OrganFelinidInternal
+  abstract: true
   components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  parent: OrganFelinid
+  id: OrganFelinidExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Human/parts.rsi
   - type: VisualOrganMarkings
     markingData:
       group: Felinid
+
+- type: entity
+  id: OrganFelinidTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidHead
-  parent: OrganHumanHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
   components:
   - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+    hideableLayers:
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
 
 - type: entity
   id: OrganFelinidArmLeft
-  parent: OrganHumanArmLeft
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseArmLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidArmRight
-  parent: OrganHumanArmRight
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseArmRight, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidHandLeft
-  parent: OrganHumanHandLeft
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseHandLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidHandRight
-  parent: OrganHumanHandRight
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseHandRight, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidLegLeft
-  parent: OrganHumanLegLeft
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseLegLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidLegRight
-  parent: OrganHumanLegRight
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseLegRight, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidFootLeft
-  parent: OrganHumanFootLeft
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseFootLeft, OrganFelinidExternal]
 
 - type: entity
   id: OrganFelinidFootRight
-  parent: OrganHumanFootRight
-  components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  parent: [ OrganBaseFootRight, OrganFelinidExternal]
 
 - type: entity
   id: OrganFelinidEyes
-  parent: OrganHumanEyes
+  parent: [ OrganBaseEyes, OrganFelinidInternal, OrganFelinidExternal]
   components:
-  - type: VisualOrganMarkings
-    markingData:
-      group: Felinid
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
 
 - type: speechVerb
   id: Neco
@@ -207,3 +206,27 @@
   - мурчит
   - фыркает
   - мяукает
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganSpriteHumanInternal, OrganFelinidInternal ]
+  id: OrganFelinidBrain
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganFelinidInternal ]
+  id: OrganFelinidTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganSpriteHumanInternal, OrganFelinidInternal ]
+  id: OrganFelinidAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganSpriteHumanInternal, OrganFelinidInternal ]
+  id: OrganFelinidEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganFelinidInternal, OrganHumanMetabolizer ]
+  id: OrganFelinidLungs
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganFelinidInternal]
+  id: OrganFelinidKidneys

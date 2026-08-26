@@ -44,6 +44,11 @@
     enum.HumanoidVisualLayers.Special:
       limit: 0
       required: false
+# Adventure start
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+# Adventure end
 
 - type: entity
   parent: BaseSpeciesAppearance
@@ -141,6 +146,7 @@
     hideableLayers:
     - enum.HumanoidVisualLayers.Hair
     - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.HeadTop # Adventure
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganHumanExternal ]

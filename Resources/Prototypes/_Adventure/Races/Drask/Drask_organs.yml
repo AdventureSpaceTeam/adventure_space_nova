@@ -24,6 +24,9 @@
       - state: eyeball-l
       - state: eyeball-r
       - state: eyeball-rl
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/Drask/Species/parts.rsi
 
 - type: entity
   id: OrganDraskHeart

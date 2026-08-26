@@ -55,6 +55,9 @@
         reagents:
         - ReagentId: Water
           Quantity: 5
+  - type: VisualOrgan
+    data:
+      sprite: _Adventure/Races/Xiod/Species/parts.rsi
 
 - type: entity
   id: OrganXiodLungs
