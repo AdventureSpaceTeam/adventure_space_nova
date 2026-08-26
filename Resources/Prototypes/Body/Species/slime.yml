@@ -264,7 +264,7 @@
     maxReagents: 6
     metabolizerTypes: [ Slime ]
     stages: [ Digestion, Bloodstream, Metabolites ]
-    
+
 - type: entity
   parent: [ OrganBaseEyes, OrganSlimePersonInternal, OrganSlimePersonExternal ]
   id: OrganSlimePersonEyes
